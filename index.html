@@ -273,9 +273,90 @@
         .radio-label {
             font-weight: 500;
         }
+        
+        .bookmark-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 92, 246, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bookmark-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 20px;
+            color: #5b21b6;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bookmark-btn:hover {
+            background: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .bookmark-icon {
+            font-size: 16px;
+        }
+        
+        .bookmark-text {
+            white-space: nowrap;
+        }
+        
+        /* 为固定顶栏留出空间 */
+        body {
+            padding-top: 60px;
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .bookmark-bar {
+                padding: 6px 15px;
+            }
+            
+            .bookmark-btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+            
+            .bookmark-text {
+                display: none;
+            }
+            
+            .bookmark-icon {
+                font-size: 18px;
+            }
+            
+            body {
+                padding-top: 50px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Bookmark Bar -->
+    <div class="bookmark-bar">
+        <button id="bookmarkBtn" class="bookmark-btn">
+            <span class="bookmark-icon">⭐</span>
+            <span class="bookmark-text">お気に入りに追加</span>
+        </button>
+    </div>
+    
     <div class="container">
         <header class="header">
             <h1>🌙 月文字ジェネレーター</h1>
@@ -1371,10 +1452,43 @@
             document.getElementById('downloadTextBtn').addEventListener('click', downloadText);
             document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
             
+            // 添加收藏按钮事件监听器
+            document.getElementById('bookmarkBtn').addEventListener('click', addBookmark);
+            
             // 初始化标签和生成
             updateSliderLabel();
             updatePreview();
         });
+        
+        // 收藏功能
+        function addBookmark() {
+            const title = '月文字ジェネレーター - MojiMoon';
+            const url = 'https://mojimoon.com';
+            
+            try {
+                // 现代浏览器的处理
+                if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('Safari') > -1) {
+                    // Chrome/Safari: 显示友好的提示
+                    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                    const shortcut = isMac ? 'Cmd+D' : 'Ctrl+D';
+                    alert(`${shortcut} を押してお気に入りに追加してください🌙`);
+                } else if (window.sidebar && window.sidebar.addPanel) {
+                    // Firefox
+                    window.sidebar.addPanel(title, url, '');
+                } else if (window.external && window.external.AddFavorite) {
+                    // Internet Explorer
+                    window.external.AddFavorite(url, title);
+                } else {
+                    // 其他浏览器
+                    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                    const shortcut = isMac ? 'Cmd+D' : 'Ctrl+D';
+                    alert(`${shortcut} を押してお気に入りに追加してください`);
+                }
+            } catch (error) {
+                console.error('Bookmark error:', error);
+                alert('お気に入りに追加するには、ブラウザのメニューから操作してください。');
+            }
+        }
     </script>
 </body>
 </html>
