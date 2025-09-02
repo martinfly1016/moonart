@@ -25,6 +25,9 @@
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://martinfly1016.github.io/moonart/">
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -262,13 +265,14 @@
         </header>
         
         <div class="control-panel">
+            <h2 style="margin-bottom: 25px; font-size: 1.4rem; font-weight: 600;">設定</h2>
             <div class="form-group">
-                <label for="textInput">テキスト入力</label>
+                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">テキスト入力</h3>
                 <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
             </div>
             
             <div class="form-group">
-                <label>文字方向</label>
+                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">表示オプション</h3>
                 <div class="direction-control">
                     <label class="radio-option">
                         <input type="radio" name="textDirection" value="vertical">
@@ -286,7 +290,7 @@
             </div>
             
             <div class="form-group">
-                <label for="fontSelect">フォント</label>
+                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
                 <select id="fontSelect" class="font-select">
                     <option value="round">丸ゴシック（おすすめ）</option>
                     <option value="gothic-bold">ゴシック太字</option>
@@ -299,6 +303,7 @@
             </div>
             
             <div class="form-group">
+                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">サイズ設定</h3>
                 <label><span id="sliderLabel">高さ</span>: <span id="heightValue">20</span><span id="sliderUnit">行</span></label>
                 <div class="height-control">
                     <span>12</span>
@@ -327,6 +332,7 @@
         </div>
         
         <div class="preview-panel">
+            <h2 style="margin-bottom: 20px; font-size: 1.4rem; font-weight: 600;">プレビュー</h2>
             <div id="moonArt" class="moon-art"><!-- 生成結果がここに表示されます --></div>
             
             <!-- Debug controls (hidden for production) -->
