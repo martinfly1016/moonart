@@ -1015,7 +1015,7 @@
                     const testChar = chars[0] || '月';
                     const charMetrics = tempCtx.measureText(testChar);
                     const actualCharWidth = charMetrics.width;
-                    const targetCharWidth = targetPixelWidth * 0.85;
+                    const targetCharWidth = targetPixelWidth * 0.95;
                     const scaleFactor = targetCharWidth / actualCharWidth;
                     
                     fontSize = estimatedFontSize * scaleFactor;
