@@ -431,21 +431,18 @@
             <div class="form-group">
                 <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
                 <select id="fontSelect" class="font-select">
-                    <option value="round">丸ゴシック（おすすめ）</option>
+                    <option value="custom" selected>デフォルト</option>
                     <option value="gothic-bold">ゴシック太字</option>
                     <option value="gothic">ゴシック体</option>
-                    <option value="mincho">明朝体</option>
                     <option value="pop">POP体</option>
-                    <option value="maru">丸ゴシック</option>
-                    <option value="custom">デフォルト</option>
                 </select>
             </div>
             
             <div class="form-group">
-                <label>阈值调整: <span id="thresholdValue">8</span></label>
+                <label>阈值调整: <span id="thresholdValue">1</span></label>
                 <div class="height-control">
                     <span>1</span>
-                    <input type="range" id="thresholdSlider" class="height-slider" min="1" max="16" value="8">
+                    <input type="range" id="thresholdSlider" class="height-slider" min="1" max="16" value="1">
                     <span>16</span>
                 </div>
             </div>
@@ -1317,13 +1314,10 @@
 
         // 字体对应阈值配置
         const FONT_THRESHOLDS = {
-            'round': 5,
-            'gothic-bold': 8,
-            'gothic': 8,
-            'mincho': 1,
-            'pop': 10,
-            'maru': 8,
-            'custom': 8
+            'gothic-bold': 1,
+            'gothic': 1,
+            'pop': 1,
+            'custom': 1
         };
         
         // 初始化
@@ -1499,7 +1493,7 @@
             document.getElementById('fontSelect').addEventListener('change', (e) => {
                 // 切换字体时自动设置对应的默认阈值
                 const fontType = e.target.value;
-                const defaultThreshold = FONT_THRESHOLDS[fontType] || 8;
+                const defaultThreshold = FONT_THRESHOLDS[fontType] || 1;
                 thresholdSlider.value = defaultThreshold;
                 thresholdValue.textContent = defaultThreshold;
                 updatePreview();
