@@ -1141,8 +1141,14 @@
                 }
                 
                 if (!foundText) {
-                    const defaultMoon = reverseColor ? '🌑' : '🌕';
-                    return `${defaultMoon}${defaultMoon}${defaultMoon}\n${defaultMoon}${defaultMoon}${defaultMoon}\n${defaultMoon}${defaultMoon}${defaultMoon}`;
+                    let defaultResult = '🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕';
+                    if (reverseColor) {
+                        defaultResult = defaultResult.split('').map(char => {
+                            if (char === '\n') return char;
+                            return this.reverseMoon(char);
+                        }).join('');
+                    }
+                    return defaultResult;
                 }
                 
                 // 在文字区域内进行4x4网格处理，建立上下文信息
@@ -1219,13 +1225,8 @@
                             hasYellowAbove: hasYellowAbove
                         };
                         
-                        // 转换为月相 - 添加调试信息
+                        // 转换为月相
                         let moon = this.selectMoonWithContext(current.subGrid, neighborInfo);
-                        
-                        // 反色处理（在填充之前应用）
-                        if (reverseColor) {
-                            moon = this.reverseMoon(moon);
-                        }
                         
                         
                         currentRowOutput.push(moon);
@@ -1253,8 +1254,8 @@
                     const adjustedLines = lines.map(line => {
                         const currentWidth = line.length / 2; // 当前宽度
                         if (currentWidth < targetWidth) {
-                            // 如果当前宽度小于目标，用背景色填充（考虑反色状态）
-                            const paddingChar = reverseColor ? '🌕' : '🌑';
+                            // 如果当前宽度小于目标，用黑色背景填充
+                            const paddingChar = '🌑';
                             const padding = paddingChar.repeat(targetWidth - currentWidth);
                             return line + padding;
                         } else if (currentWidth > targetWidth) {
@@ -1264,7 +1265,17 @@
                         return line;
                     });
                     
-                    return adjustedLines.join('\n');
+                    let finalResult = adjustedLines.join('\n');
+                    
+                    // 统一的反色处理
+                    if (reverseColor) {
+                        finalResult = finalResult.split('').map(char => {
+                            if (char === '\n') return char;
+                            return this.reverseMoon(char);
+                        }).join('');
+                    }
+                    
+                    return finalResult;
                 } else {
                     // 横向模式：保持原有的高度控制逻辑
                     const heightRows = sizeParam;
@@ -1277,7 +1288,7 @@
                         
                         // 计算每行应该有多少个emoji（根据第一行）
                         const emojisPerLine = lines.length > 0 ? lines[0].length / 2 : 20;
-                        const paddingChar = reverseColor ? '🌕' : '🌑';
+                        const paddingChar = '🌑';
                         const paddingLine = paddingChar.repeat(emojisPerLine);
                         
                         // 添加顶部填充
@@ -1299,7 +1310,17 @@
                     
                     // 如果生成的行数多于要求，裁剪
                     const finalLines = lines.slice(0, heightRows);
-                    return finalLines.join('\n');
+                    let finalResult = finalLines.join('\n');
+                    
+                    // 统一的反色处理
+                    if (reverseColor) {
+                        finalResult = finalResult.split('').map(char => {
+                            if (char === '\n') return char;
+                            return this.reverseMoon(char);
+                        }).join('');
+                    }
+                    
+                    return finalResult;
                 }
             }
         }
