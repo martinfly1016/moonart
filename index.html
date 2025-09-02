@@ -418,7 +418,7 @@
                         <span class="radio-label">縦書き</span>
                     </label>
                     <label class="radio-option">
-                        <input type="radio" name="textDirection" value="horizontal" checked>
+                        <input type="radio" name="textDirection" value="horizontal">
                         <span class="radio-label">横書き</span>
                     </label>
                     <label class="radio-option">
@@ -1525,6 +1525,13 @@
                 if (bookmarkBtn) {
                     bookmarkBtn.style.display = 'none';
                 }
+            }
+            
+            // 根据设备类型设置默认方向
+            if (isMobileDevice()) {
+                document.querySelector('input[name="textDirection"][value="vertical"]').checked = true;
+            } else {
+                document.querySelector('input[name="textDirection"][value="horizontal"]').checked = true;
             }
             
             // 初始化标签和生成
