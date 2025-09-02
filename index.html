@@ -1143,7 +1143,7 @@
                 if (!foundText) {
                     let defaultResult = '🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕';
                     if (reverseColor) {
-                        defaultResult = defaultResult.split('').map(char => {
+                        defaultResult = Array.from(defaultResult).map(char => {
                             if (char === '\n') return char;
                             return this.reverseMoon(char);
                         }).join('');
@@ -1269,7 +1269,7 @@
                     
                     // 统一的反色处理
                     if (reverseColor) {
-                        finalResult = finalResult.split('').map(char => {
+                        finalResult = Array.from(finalResult).map(char => {
                             if (char === '\n') return char;
                             return this.reverseMoon(char);
                         }).join('');
@@ -1314,7 +1314,7 @@
                     
                     // 统一的反色处理
                     if (reverseColor) {
-                        finalResult = finalResult.split('').map(char => {
+                        finalResult = Array.from(finalResult).map(char => {
                             if (char === '\n') return char;
                             return this.reverseMoon(char);
                         }).join('');
