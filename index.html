@@ -442,6 +442,15 @@
             </div>
             
             <div class="form-group">
+                <label>阈值调整: <span id="thresholdValue">8</span></label>
+                <div class="height-control">
+                    <span>1</span>
+                    <input type="range" id="thresholdSlider" class="height-slider" min="1" max="16" value="8">
+                    <span>16</span>
+                </div>
+            </div>
+            
+            <div class="form-group">
                 <label><span id="sliderLabel">高さ</span>: <span id="heightValue">20</span><span id="sliderUnit">行</span></label>
                 <div class="height-control">
                     <span>10</span>
@@ -1428,7 +1437,7 @@
             const text = document.getElementById('textInput').value.trim();
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
             const fontType = document.getElementById('fontSelect').value;
-            const threshold = FONT_THRESHOLDS[fontType] || 8;
+            const threshold = parseInt(document.getElementById('thresholdSlider').value);
             const isVertical = document.querySelector('input[name="textDirection"]:checked').value === 'vertical';
             const reverseColor = document.getElementById('reverseColor').checked;
             
@@ -1473,14 +1482,28 @@
         document.addEventListener('DOMContentLoaded', () => {
             const heightSlider = document.getElementById('heightSlider');
             const heightValue = document.getElementById('heightValue');
+            const thresholdSlider = document.getElementById('thresholdSlider');
+            const thresholdValue = document.getElementById('thresholdValue');
             
             heightSlider.addEventListener('input', () => {
                 heightValue.textContent = heightSlider.value;
                 updatePreview();
             });
             
+            thresholdSlider.addEventListener('input', () => {
+                thresholdValue.textContent = thresholdSlider.value;
+                updatePreview();
+            });
+            
             document.getElementById('textInput').addEventListener('input', updatePreview);
-            document.getElementById('fontSelect').addEventListener('change', updatePreview);
+            document.getElementById('fontSelect').addEventListener('change', (e) => {
+                // 切换字体时自动设置对应的默认阈值
+                const fontType = e.target.value;
+                const defaultThreshold = FONT_THRESHOLDS[fontType] || 8;
+                thresholdSlider.value = defaultThreshold;
+                thresholdValue.textContent = defaultThreshold;
+                updatePreview();
+            });
             document.getElementById('showDebugCanvas').addEventListener('change', updatePreview);
             
             // 添加方向选择事件监听器
