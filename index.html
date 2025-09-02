@@ -432,6 +432,7 @@
                 <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
                 <select id="fontSelect" class="font-select">
                     <option value="gothic-bold" selected>ゴシック太字</option>
+                    <option value="hiragino-w8">ヒラギノ角ゴ W8</option>
                     <option value="gothic">ゴシック体</option>
                     <option value="pop">POP体</option>
                 </select>
@@ -1302,17 +1303,16 @@
         
         // 字体映射
         const FONT_FAMILIES = {
-            'round': '"ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "Arial Rounded MT Bold", sans-serif',
             'gothic-bold': '"游ゴシック Bold", "Yu Gothic Bold", "ヒラギノ角ゴ W8", "Hiragino Kaku Gothic W8", bold sans-serif',
+            'hiragino-w8': '"ヒラギノ角ゴ W8", "Hiragino Kaku Gothic W8", "ヒラギノ角ゴ W9", "Hiragino Kaku Gothic W9", sans-serif',
             'gothic': '"ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "MS Pゴシック", "MS PGothic", sans-serif',
-            'mincho': '"ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "Yu Mincho", "MS P明朝", "MS PMincho", serif',
-            'pop': '"HGP創英角ポップ体", "HGSoeiKakupoptai", "DFPOPミックス体", "Impact", bold sans-serif',
-            'maru': '"筑紫A丸ゴシック", "ヒラギノ丸ゴ Pro", "源柔ゴシック", "Meiryo", sans-serif',
+            'pop': '"HGP創英角ポップ体", "HGSoeiKakupoptai", "DFPOPミックス体", "Impact", bold sans-serif'
         };
 
         // 字体对应阈值配置
         const FONT_THRESHOLDS = {
             'gothic-bold': 6,
+            'hiragino-w8': 1,
             'gothic': 4,
             'pop': 4
         };
