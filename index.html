@@ -996,7 +996,7 @@
                 
                 // 根据排版方向计算canvas尺寸
                 const chars = Array.from(text);
-                const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['custom'];
+                const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['gothic-bold'];
                 
                 let canvasWidth, canvasHeight, fontSize;
                 
@@ -1140,7 +1140,10 @@
                     }
                 }
                 
-                if (!foundText) return '🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕';
+                if (!foundText) {
+                    const defaultMoon = reverseColor ? '🌑' : '🌕';
+                    return `${defaultMoon}${defaultMoon}${defaultMoon}\n${defaultMoon}${defaultMoon}${defaultMoon}\n${defaultMoon}${defaultMoon}${defaultMoon}`;
+                }
                 
                 // 在文字区域内进行4x4网格处理，建立上下文信息
                 let result = '';
