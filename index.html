@@ -346,7 +346,7 @@
             }
             
             .footer {
-                margin-top: 50px;
+                margin-top: 80px;
                 padding: 20px 15px;
             }
             
@@ -355,8 +355,20 @@
             }
             
             .footer-bookmark-btn {
-                font-size: 0.9rem;
-                padding: 8px 12px;
+                background: none;
+                border: none;
+                color: #fbbf24;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                text-decoration: underline;
+                padding: 0;
+                margin: 0 2px;
+                transition: color 0.2s ease;
+            }
+            
+            .footer-bookmark-btn:hover {
+                color: #f59e0b;
             }
         }
     </style>
@@ -1532,7 +1544,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 15px; font-size: 1.2rem; font-weight: 600; color: #374151;">このサイトが気に入ったら、ぜひ<button id="footerBookmarkBtn" class="footer-bookmark-btn" style="background: linear-gradient(135deg, #fbbf24, #f59e0b); border: none; border-radius: 20px; color: white; font-weight: 500; cursor: pointer; margin: 0 4px; padding: 8px 12px; font-size: 1rem; box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3); transition: all 0.2s ease;" title="お気に入りに追加">ブックマーク</button>してください</h2>
+            <h2 style="text-align: center; margin-bottom: 15px; font-size: 1.2rem; font-weight: 600; color: #374151;">このサイトが気に入ったら、ぜひ<button id="footerBookmarkBtn" class="footer-bookmark-btn" title="お気に入りに追加">ブックマーク</button>してください</h2>
         </div>
     </footer>
 </body>
