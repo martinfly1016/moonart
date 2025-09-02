@@ -6,7 +6,7 @@
     <title>月文字ジェネレーター | 月の絵文字アート作成 | 無料テキスト変換ツール - MojiMoon</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="月の絵文字を使って美しいテキストアートを生成する無料オンラインツール">
+    <meta name="description" content="日本語テキストを美しい月の絵文字アートに変換する無料オンラインツール。縦書き・横書き対応、複数フォント選択可能。月の満欠を表現したユニークなアスキーアートを作成してみませんか？">
     <meta name="keywords" content="月文字,絵文字アート,テキストアート,ジェネレーター,無料ツール">
     <meta name="author" content="月文字ジェネレーター">
     <meta name="robots" content="index,follow">
@@ -343,6 +343,20 @@
             
             body {
                 padding-top: 10px;
+            }
+            
+            .footer {
+                margin-top: 30px;
+                padding: 20px 15px;
+            }
+            
+            .footer h2 {
+                font-size: 1.1rem;
+            }
+            
+            .footer-bookmark-btn {
+                font-size: 0.9rem;
+                padding: 8px 12px;
             }
         }
     </style>
@@ -1468,6 +1482,9 @@
             // 初始化标签和生成
             updateSliderLabel();
             updatePreview();
+            
+            // 设置页脚收藏按钮
+            setupFooterBookmark();
         });
         
         // 收藏功能
@@ -1499,6 +1516,24 @@
                 alert('お気に入りに追加するには、ブラウザのメニューから操作してください。');
             }
         }
+        
+        // フッター収藏按钮事件
+        function setupFooterBookmark() {
+            const footerBookmarkBtn = document.getElementById('footerBookmarkBtn');
+            if (footerBookmarkBtn && !isMobileDevice()) {
+                footerBookmarkBtn.addEventListener('click', addBookmark);
+            } else if (footerBookmarkBtn) {
+                // 移动设备上隐藏footter中的收藏按钮
+                footerBookmarkBtn.style.display = 'none';
+            }
+        }
     </script>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 15px; font-size: 1.2rem; font-weight: 600; color: #374151;">このサイトが気に入ったら、ぜひ<button id="footerBookmarkBtn" class="footer-bookmark-btn" style="background: linear-gradient(135deg, #fbbf24, #f59e0b); border: none; border-radius: 20px; color: white; font-weight: 500; cursor: pointer; margin: 0 4px; padding: 10px 14px; font-size: 1rem; box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3); transition: all 0.2s ease;" title="お気に入りに追加">ブックマーク</button>してください</h2>
+        </div>
+    </footer>
 </body>
 </html>
