@@ -14,5 +14,9 @@ Allow: /
 # Crawl delay for politeness
 Crawl-delay: 1
 
+# Canonical domain preference
+# This robots.txt applies to the canonical domain mojimoon.com
+# For GitHub Pages domain: see canonical tags and redirects in HTML
+
 # Sitemap location
 Sitemap: https://mojimoon.com/sitemap.xml

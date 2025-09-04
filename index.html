@@ -37,6 +37,15 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mojimoon.com/">
     
+    <!-- Domain redirect script -->
+    <script>
+        (function() {
+            if (window.location.hostname === 'martinfly1016.github.io') {
+                window.location.replace('https://mojimoon.com/');
+            }
+        })();
+    </script>
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -192,19 +201,15 @@
         
         .moon-art {
             font-family: monospace;
-            font-size: 10px;
-            line-height: 1.2;
+            font-size: 12px;
+            line-height: 1.4;
+            letter-spacing: 0.2em;
             white-space: pre;
             overflow-x: auto;
             color: #fff;
             padding-top: 5px;
         }
         
-        .debug-info {
-            margin-top: 20px;
-            font-size: 12px;
-            opacity: 0.7;
-        }
         
         .action-buttons {
             display: flex;
@@ -429,21 +434,41 @@
             </div>
             
             <div class="form-group">
-                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
-                <select id="fontSelect" class="font-select">
-                    <option value="gothic-bold" selected>ゴシック太字</option>
-                    <option value="hiragino-w8">ヒラギノ角ゴ W8</option>
-                    <option value="gothic">ゴシック体</option>
-                    <option value="pop">POP体</option>
-                </select>
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="flex: 1;">
+                        <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
+                        <select id="fontSelect" class="font-select">
+                            <option value="default" selected>システム既定</option>
+                            <option value="gothic">ゴシック体</option>
+                            <option value="mincho">明朝体</option>
+                        </select>
+                    </div>
+                    <div style="flex: 1;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">0</span></label>
+                        <div class="height-control">
+                            <span>0</span>
+                            <input type="range" id="spacingSlider" class="height-slider" min="0" max="20" value="0">
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="form-group">
-                <label>阈值调整: <span id="thresholdValue">6</span></label>
+            <div class="form-group" style="display: none;">
+                <label>噪音过滤阈值: <span id="thresholdValue">8</span></label>
                 <div class="height-control">
                     <span>1</span>
-                    <input type="range" id="thresholdSlider" class="height-slider" min="1" max="16" value="6">
+                    <input type="range" id="thresholdSlider" class="height-slider" min="1" max="16" value="8">
                     <span>16</span>
+                </div>
+            </div>
+            
+            <div class="form-group" style="display: none;">
+                <label>横向粘合系数: <span id="adhesionValue">2</span></label>
+                <div class="height-control">
+                    <span>0</span>
+                    <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
+                    <span>6</span>
                 </div>
             </div>
             
@@ -489,485 +514,283 @@
             <!-- Debug canvas (hidden for production) -->
             <canvas id="debugCanvas" style="border: 1px solid #666; margin-top: 10px; background: white; display: none; max-width: 100%;"></canvas>
             
-            <!-- Debug info -->
-            <div id="debugInfo" class="debug-info"></div>
+            
         </div>
     </div>
 
     <script>
-        // 原项目的精确常量定义
+        // 简化的颜色级别：只有黑白两色
         const COLOR_LEVELS = {
             BLACK: 0,
-            GRAY1: 1, 
-            GRAY2: 2,
-            GRAY3: 3,
-            WHITE: 4,
-            SUPER_WHITE: 5
+            WHITE: 1
         };
         
-        // 精确的颜色阈值（基于原项目）- 调整减少抗锯齿影响
-        const COLOR_THRESHOLDS = [63, 127, 191, 200, 235]; // 降低白色阈值，让更多浅灰色被判定为白色
-        
-        // 简化的月相模式
-        const MOON_PHASES = ['🌑', '🌒', '🌓', '🌔', '🌕', '🌖', '🌗', '🌘'];
+        // 横向加强算法M - 模块化实现
+        class HorizontalEnhancer {
+            constructor() {
+                this.adhesionCoefficient = 2; // 默认粘合系数
+                this.gapDistanceMap = this.initGapDistanceMap();
+                
+                // 自身空缺度映射表
+                this.selfGapMap = {
+                    '🌔': 1,
+                    '🌓': 2, 
+                    '🌒': 3,
+                    '🌑': 4,
+                    '🌘': 3,
+                    '🌗': 2,
+                    '🌖': 1,
+                    '🌕': 0
+                };
+            }
+            
+            // 设置粘合系数
+            setAdhesionCoefficient(coefficient) {
+                this.adhesionCoefficient = coefficient;
+            }
+            
+            // 初始化空缺度查找表
+            initGapDistanceMap() {
+                // 基于算法定义推导的完整空缺度表
+                const map = {};
+                const moons = ['🌑', '🌘', '🌗', '🌖', '🌕', '🌔', '🌓', '🌒'];
+                
+                // 🌑与任何字符的空缺度都是-1
+                map['🌑'] = {};
+                for (const moon of moons) {
+                    map['🌑'][moon] = -1;
+                }
+                
+                // 其他月相之间的空缺度
+                const distances = {
+                    '🌘': { '🌘': 3, '🌗': 3, '🌖': 3, '🌕': 3, '🌔': 4, '🌓': 5, '🌒': 6, '🌑': -1 },
+                    '🌗': { '🌘': 2, '🌗': 2, '🌖': 2, '🌕': 2, '🌔': 3, '🌓': 4, '🌒': 5, '🌑': -1 },
+                    '🌖': { '🌘': 1, '🌗': 1, '🌖': 1, '🌕': 1, '🌔': 2, '🌓': 3, '🌒': 4, '🌑': -1 },
+                    '🌕': { '🌘': 0, '🌗': 0, '🌖': 0, '🌕': 0, '🌔': 1, '🌓': 2, '🌒': 3, '🌑': -1 },
+                    '🌔': { '🌘': 0, '🌗': 0, '🌖': 0, '🌕': 0, '🌔': 1, '🌓': 2, '🌒': 3, '🌑': -1 },
+                    '🌓': { '🌘': 0, '🌗': 0, '🌖': 0, '🌕': 0, '🌔': 1, '🌓': 2, '🌒': 3, '🌑': -1 },
+                    '🌒': { '🌘': 0, '🌗': 0, '🌖': 0, '🌕': 0, '🌔': 1, '🌓': 2, '🌒': 3, '🌑': -1 }
+                };
+                
+                return { ...map, ...distances };
+            }
+            
+            // 计算两个月相之间的空缺度
+            getGapDistance(left, right) {
+                return this.gapDistanceMap[left]?.[right] || 0;
+            }
+            
+            // 执行粘合操作 - 根据最少更换原则
+            performAdhesion(left, right) {
+                const gap = this.getGapDistance(left, right);
+                if (gap <= 0 || gap > this.adhesionCoefficient) {
+                    return [left, right];
+                }
+                
+                // 尝试各种填充方案，选择更换最少的
+                const fillOptions = [
+                    ['🌕', right], // 左边变满月
+                    [left, '🌕'],  // 右边变满月
+                    ['🌕', '🌕']   // 两边都变满月
+                ];
+                
+                // 优先选择只改变一边的方案
+                for (const [newLeft, newRight] of fillOptions) {
+                    if (this.getGapDistance(newLeft, newRight) === 0) {
+                        // 如果只需要改变一边，优先选择
+                        if (newLeft !== left && newRight === right) {
+                            return [newLeft, newRight];
+                        }
+                        if (newLeft === left && newRight !== right) {
+                            return [newLeft, newRight];
+                        }
+                    }
+                }
+                
+                // 如果必须改变两边，返回双满月
+                return ['🌕', '🌕'];
+            }
+            
+            // 自粘合操作
+            selfAdhesion(lines) {
+                const processedLines = [];
+                
+                for (let line of lines) {
+                    if (line.length === 0) {
+                        processedLines.push(line);
+                        continue;
+                    }
+                    
+                    const chars = Array.from(line);
+                    const newChars = [...chars];
+                    
+                    for (let i = 0; i < chars.length; i++) {
+                        const current = chars[i];
+                        
+                        // 跳过🌕和🌑
+                        if (current === '🌕' || current === '🌑') {
+                            continue;
+                        }
+                        
+                        // 检查左右两侧是否都是🌑（空缺度为-1）
+                        let leftIsEmpty = false, rightIsEmpty = false;
+                        
+                        if (i === 0) {
+                            leftIsEmpty = true; // 最左侧视为-1
+                        } else {
+                            leftIsEmpty = (chars[i - 1] === '🌑');
+                        }
+                        
+                        if (i === chars.length - 1) {
+                            rightIsEmpty = true; // 最右侧视为-1
+                        } else {
+                            rightIsEmpty = (chars[i + 1] === '🌑');
+                        }
+                        
+                        // 如果左右两侧都是空缺（-1），执行自粘合检查
+                        if (leftIsEmpty && rightIsEmpty) {
+                            const selfGap = this.selfGapMap[current] || 0;
+                            if (selfGap <= this.adhesionCoefficient) {
+                                newChars[i] = '🌕';
+                            }
+                        }
+                    }
+                    
+                    processedLines.push(newChars.join(''));
+                }
+                
+                return processedLines;
+            }
+            
+            // 主处理函数 - 横向加强
+            enhance(moonArtText) {
+                if (this.adhesionCoefficient === 0) {
+                    return moonArtText;
+                }
+                
+                const lines = moonArtText.split('\n');
+                const processedLines = [];
+                
+                for (let line of lines) {
+                    if (line.length === 0) {
+                        processedLines.push(line);
+                        continue;
+                    }
+                    
+                    // 将emoji字符串转换为数组（处理2字节emoji）
+                    const chars = Array.from(line);
+                    const newChars = [...chars];
+                    
+                    // 从左到右执行粘合操作
+                    for (let i = 0; i < chars.length - 1; i++) {
+                        const [newLeft, newRight] = this.performAdhesion(newChars[i], newChars[i + 1]);
+                        newChars[i] = newLeft;
+                        newChars[i + 1] = newRight;
+                    }
+                    
+                    processedLines.push(newChars.join(''));
+                }
+                
+                // 执行自粘合操作
+                const selfAdhesedLines = this.selfAdhesion(processedLines);
+                
+                // 执行去噪操作
+                return this.denoise(selfAdhesedLines);
+            }
+            
+            // 去噪操作
+            denoise(lines) {
+                const denoiseLines = [];
+                
+                for (let line of lines) {
+                    if (line.length === 0) {
+                        denoiseLines.push(line);
+                        continue;
+                    }
+                    
+                    const chars = Array.from(line);
+                    const newChars = [...chars];
+                    
+                    for (let i = 0; i < chars.length; i++) {
+                        const current = chars[i];
+                        if (current === '🌑') continue;
+                        
+                        // 检查左右两侧的空缺度
+                        let leftGap = -1, rightGap = -1;
+                        
+                        if (i > 0) {
+                            leftGap = this.getGapDistance(chars[i - 1], current);
+                        }
+                        if (i < chars.length - 1) {
+                            rightGap = this.getGapDistance(current, chars[i + 1]);
+                        }
+                        
+                        // 如果两侧空缺度都满足（大于0或等于-1）且不是🌕，认为是噪点
+                        if (current !== '🌕' && 
+                            (leftGap > 0 || leftGap === -1) && 
+                            (rightGap > 0 || rightGap === -1)) {
+                            newChars[i] = '🌑';
+                        }
+                    }
+                    
+                    denoiseLines.push(newChars.join(''));
+                }
+                
+                return denoiseLines.join('\n');
+            }
+        }
         
         class SimpleMoonGenerator {
             constructor() {
-                this.debugMode = true;
-                this.horizontalThreshold = 4; // 默认阈值
-            }
-            
-            // 方向性膨胀操作 - 主要在垂直方向填充间隙，避免横线变厚
-            dilatePixels(pixels, width, height) {
-                const result = [];
-                for (let y = 0; y < height; y++) {
-                    result[y] = [];
-                    for (let x = 0; x < width; x++) {
-                        let shouldDilate = false;
-                        
-                        // 检查垂直邻域（上下）- 主要膨胀方向
-                        const verticalNeighbors = [
-                            [y-1, x], [y+1, x]  // 上、下
-                        ];
-                        
-                        for (const [ny, nx] of verticalNeighbors) {
-                            if (ny >= 0 && ny < height && nx >= 0 && nx < width) {
-                                if (pixels[ny][nx] === COLOR_LEVELS.BLACK) {
-                                    shouldDilate = true;
-                                    break;
-                                }
-                            }
-                        }
-                        
-                        // 如果垂直方向没有黑色邻居，再检查水平方向（更严格条件）
-                        if (!shouldDilate) {
-                            const horizontalNeighbors = [
-                                [y, x-1], [y, x+1]  // 左、右
-                            ];
-                            
-                            let horizontalBlackCount = 0;
-                            for (const [ny, nx] of horizontalNeighbors) {
-                                if (ny >= 0 && ny < height && nx >= 0 && nx < width) {
-                                    if (pixels[ny][nx] === COLOR_LEVELS.BLACK) {
-                                        horizontalBlackCount++;
-                                    }
-                                }
-                            }
-                            
-                            // 只有在两侧都是黑色时才水平膨胀（避免横线变厚）
-                            shouldDilate = horizontalBlackCount >= 2;
-                        }
-                        
-                        result[y][x] = shouldDilate ? COLOR_LEVELS.BLACK : pixels[y][x];
-                    }
-                }
-                return result;
-            }
-            
-            // 闭运算 - 先膨胀后腐蚀，填充内部空隙
-            morphClose(pixels, width, height) {
-                // 膨胀操作
-                const dilated = this.dilatePixels(pixels, width, height);
+                // 基础月相模式：基于黑色像素数量的分布
+                this.moonPhases = [
+                    { emoji: '🌑', minBlack: 0, maxBlack: 0 },    // 全白/空
+                    { emoji: '🌘', minBlack: 1, maxBlack: 4 },    // 很少黑色 
+                    { emoji: '🌗', minBlack: 5, maxBlack: 8 },    // 少量黑色
+                    { emoji: '🌖', minBlack: 9, maxBlack: 12 },   // 中等黑色
+                    { emoji: '🌕', minBlack: 13, maxBlack: 16 }   // 大量黑色
+                ];
                 
-                // 腐蚀操作
-                const result = [];
-                for (let y = 0; y < height; y++) {
-                    result[y] = [];
-                    for (let x = 0; x < width; x++) {
-                        if (dilated[y][x] === COLOR_LEVELS.BLACK) {
-                            let blackNeighborCount = 0;
-                            
-                            // 检查4邻域的黑色像素数
-                            const directions = [[0,1], [0,-1], [1,0], [-1,0]];
-                            for (const [dy, dx] of directions) {
-                                const ny = y + dy;
-                                const nx = x + dx;
-                                
-                                if (ny >= 0 && ny < height && nx >= 0 && nx < width) {
-                                    if (dilated[ny][nx] === COLOR_LEVELS.BLACK) {
-                                        blackNeighborCount++;
-                                    }
-                                }
-                            }
-                            
-                            // 至少有2个黑色邻居才保持黑色
-                            result[y][x] = blackNeighborCount >= 2 ? COLOR_LEVELS.BLACK : pixels[y][x];
-                        } else {
-                            result[y][x] = dilated[y][x];
-                        }
-                    }
-                }
-                return result;
+                // 噪音过滤阈值：低于此黑色像素数量的网格将显示为背景
+                this.noiseThreshold = 1;
             }
             
-            // 后处理平滑：消除孤立点和突兀边缘
-            postProcessSmooth(pixels, width, height) {
-                const result = [];
-                for (let y = 0; y < height; y++) {
-                    result[y] = [];
-                    for (let x = 0; x < width; x++) {
-                        // 统计周围8邻域的颜色分布
-                        let blackCount = 0;
-                        let whiteCount = 0;
-                        let totalNeighbors = 0;
-                        
-                        for (let dy = -1; dy <= 1; dy++) {
-                            for (let dx = -1; dx <= 1; dx++) {
-                                const ny = y + dy;
-                                const nx = x + dx;
-                                
-                                if (ny >= 0 && ny < height && nx >= 0 && nx < width) {
-                                    const pixel = pixels[ny][nx];
-                                    if (pixel === COLOR_LEVELS.BLACK) blackCount++;
-                                    else if (pixel >= COLOR_LEVELS.WHITE) whiteCount++;
-                                    totalNeighbors++;
-                                }
-                            }
-                        }
-                        
-                        const currentPixel = pixels[y][x];
-                        
-                        // 孤立点消除：如果当前像素与大多数邻居不同，则调整
-                        if (currentPixel === COLOR_LEVELS.BLACK && blackCount < totalNeighbors * 0.3) {
-                            // 孤立黑点 → 转为背景色
-                            result[y][x] = COLOR_LEVELS.WHITE;
-                        } else if (currentPixel >= COLOR_LEVELS.WHITE && blackCount > totalNeighbors * 0.6) {
-                            // 被黑色包围的白点 → 转为黑色
-                            result[y][x] = COLOR_LEVELS.BLACK;
-                        } else {
-                            // 保持原色
-                            result[y][x] = currentPixel;
-                        }
-                    }
-                }
-                return result;
+            // 设置噪音过滤阈值
+            setNoiseThreshold(threshold) {
+                this.noiseThreshold = threshold;
             }
             
-            // 灰度值转换为颜色级别
+            // 最简单的灰度值转换：只有黑白两色
             grayToColorLevel(gray) {
-                let result;
-                if (gray <= COLOR_THRESHOLDS[0]) result = COLOR_LEVELS.BLACK;
-                else if (gray <= COLOR_THRESHOLDS[1]) result = COLOR_LEVELS.GRAY1;
-                else if (gray <= COLOR_THRESHOLDS[2]) result = COLOR_LEVELS.GRAY2;
-                else if (gray <= COLOR_THRESHOLDS[3]) result = COLOR_LEVELS.GRAY3;
-                else if (gray <= COLOR_THRESHOLDS[4]) result = COLOR_LEVELS.WHITE;
-                else result = COLOR_LEVELS.SUPER_WHITE;
-                
-                
-                return result;
+                return gray < 128 ? 0 : 1; // 0 = 黑色，1 = 白色
             }
             
-            // 检测横线模式 - 更严格的横线判断
-            isHorizontalLine(grid) {
-                let rowsWithManyBlack = 0;
-                let totalBlackPixels = 0;
-                
-                for (let y = 0; y < 4; y++) {
-                    let blackInRow = 0;
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) {
-                            blackInRow++;
-                            totalBlackPixels++;
-                        }
-                    }
-                    if (blackInRow >= 3) rowsWithManyBlack++;
-                }
-                
-                // 更严格的横线判定标准：
-                // 1. 至少有2行有多个黑色像素 AND 总黑色像素足够多
-                // 2. 或者总黑色像素非常多且水平分布广
-                const strictHorizontal = rowsWithManyBlack >= 2 && totalBlackPixels >= 10;
-                const veryDenseHorizontal = totalBlackPixels >= 12 && this.hasWideHorizontalDistribution(grid);
-                
-                return strictHorizontal || veryDenseHorizontal;
-            }
-            
-            // 检测是否有广泛的水平分布
-            hasWideHorizontalDistribution(grid) {
-                let leftBlack = 0, rightBlack = 0;
-                for (let y = 0; y < 4; y++) {
-                    for (let x = 0; x < 2; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) leftBlack++;
-                    }
-                    for (let x = 2; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) rightBlack++;
-                    }
-                }
-                // 左右两侧都有黑色像素，说明水平分布较广
-                return leftBlack >= 2 && rightBlack >= 2;
-            }
-            
-            // 检测空隙区域：主要是白色像素，可能有少量抗锯齿灰色边缘
-            isGapArea(grid) {
-                let whiteOrLightCount = 0;
-                let blackOrDarkCount = 0;
-                
-                for (let y = 0; y < 4; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        const level = grid[y][x];
-                        if (level >= COLOR_LEVELS.GRAY3) { // GRAY3及以上认为是浅色
-                            whiteOrLightCount++;
-                        } else if (level <= COLOR_LEVELS.GRAY1) { // GRAY1及以下认为是深色
-                            blackOrDarkCount++;
-                        }
-                    }
-                }
-                
-                // 空隙特征：浅色像素占绝大多数，深色像素很少（可能是抗锯齿边缘）
-                const lightRatio = whiteOrLightCount / 16;
-                const darkRatio = blackOrDarkCount / 16;
-                
-                return lightRatio >= 0.8 && darkRatio <= 0.3;
-            }
-            
-            // 检测是否是横线的上下边缘区域
-            isPotentialHorizontalArea(grid) {
-                // 检查每一行的黑色像素数，任何一行有2+就可能是横线区域
-                for (let y = 0; y < 4; y++) {
-                    let blackInRow = 0;
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) blackInRow++;
-                    }
-                    if (blackInRow >= 2) return true;
-                }
-                return false;
-            }
-            
-            // 检测横线的上边缘：黑色像素主要集中在下半部分（row 2-3）
-            isHorizontalTopEdge(grid) {
-                let topBlack = 0, bottomBlack = 0;
-                
-                // 统计上半部分（row 0-1）和下半部分（row 2-3）的黑色像素
-                for (let y = 0; y < 2; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) topBlack++;
-                    }
-                }
-                
-                for (let y = 2; y < 4; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) bottomBlack++;
-                    }
-                }
-                
-                // 下半部分黑色像素明显多于上半部分，说明是横线的上边缘
-                return bottomBlack > topBlack && bottomBlack >= 2;
-            }
-            
-            // 检测横线的下边缘：黑色像素主要集中在上半部分（row 0-1）
-            isHorizontalBottomEdge(grid) {
-                let topBlack = 0, bottomBlack = 0;
-                
-                // 统计上半部分（row 0-1）和下半部分（row 2-3）的黑色像素
-                for (let y = 0; y < 2; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) topBlack++;
-                    }
-                }
-                
-                for (let y = 2; y < 4; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) bottomBlack++;
-                    }
-                }
-                
-                // 上半部分黑色像素明显多于下半部分，说明是横线的下边缘
-                return topBlack > bottomBlack && topBlack >= 2;
-            }
-            
-            // 方向性月相选择策略
-            selectMoonWithContext(grid, neighborInfo = {}) {
-                // 优先检查：纯白色网格必须返回🌑（空隙保护机制）
-                let pureWhiteCount = 0;
-                for (let y = 0; y < 4; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        if (grid[y][x] >= COLOR_LEVELS.WHITE) {
-                            pureWhiteCount++;
-                        }
-                    }
-                }
-                
-                // 如果是纯白色或接近纯白色的网格，立即返回🌑
-                if (pureWhiteCount >= 15) { // 15/16或16/16的像素都是白色
-                    return '🌑';
-                }
-                
-                // 特殊情况：如果在两条横线之间，强制使用🌑保持分离
-                if (neighborInfo.isBetweenHorizontalLines) {
-                    return '🌑';
-                }
-                
-                // 统计黑色和白色像素数量
-                let blackCount = 0;
-                let whiteCount = 0;
-                
-                for (let y = 0; y < 4; y++) {
-                    for (let x = 0; x < 4; x++) {
-                        const level = grid[y][x];
-                        if (level === COLOR_LEVELS.BLACK) {
-                            blackCount++;
-                        } else if (level >= COLOR_LEVELS.WHITE) {
-                            whiteCount++;
-                        }
-                    }
-                }
-                
-                const blackRatio = blackCount / 16;
-                
-                
-                // 空隙保护：检查是否为空隙区域（大部分白色，少量抗锯齿边缘）
-                if (this.isGapArea(grid)) {
-                    return '🌑';
-                }
-                
-                // 检测主要笔画方向
-                const isHorizontal = this.isHorizontalLine(grid);
-                const isVertical = this.isVerticalLine(grid);
-                
-                // 实际横线：始终显示为🌕（不受阈值影响）
-                if (isHorizontal) {
-                    return '🌕';
-                }
-                
-                // 检测是否为横线的上下边缘
-                const isTopEdge = this.isHorizontalTopEdge(grid);
-                const isBottomEdge = this.isHorizontalBottomEdge(grid);
-                
-                // 横线上下边缘区域：基于可调阈值的二值化处理
-                if (isTopEdge || isBottomEdge) {
-                    // 空隙保留机制：如果上方是🌕，当前使用🌑保留空隙
-                    if (neighborInfo.hasYellowAbove) {
-                        return '🌑';
-                    }
-                    
-                    // 统计总黑色像素数
-                    let totalBlack = 0;
-                    for (let y = 0; y < 4; y++) {
-                        for (let x = 0; x < 4; x++) {
-                            if (grid[y][x] === COLOR_LEVELS.BLACK) totalBlack++;
-                        }
-                    }
-                    
-                    const edgeResult = totalBlack >= this.horizontalThreshold ? '🌕' : '🌑';
-                    return edgeResult;
-                }
-                
-                // 竖线模式：水平扫描，允许灰度渐变
-                if (isVertical) {
-                    // 计算左右半部分的黑色像素分布
-                    let leftBlack = 0, rightBlack = 0;
-                    for (let y = 0; y < 4; y++) {
-                        for (let x = 0; x < 2; x++) {
-                            if (grid[y][x] === COLOR_LEVELS.BLACK) leftBlack++;
-                        }
-                        for (let x = 2; x < 4; x++) {
-                            if (grid[y][x] === COLOR_LEVELS.BLACK) rightBlack++;
-                        }
-                    }
-                    
-                    const leftRatio = leftBlack / 8;
-                    const rightRatio = rightBlack / 8;
-                    
-                    // 竖线的水平渐变处理
-                    if (leftRatio > 0.6 && rightRatio > 0.6) return '🌕';
-                    else if (leftRatio > rightRatio + 0.25) {
-                        return leftRatio > 0.6 ? '🌗' : '🌘'; // 左边黄色
-                    } else if (rightRatio > leftRatio + 0.25) {
-                        return rightRatio > 0.6 ? '🌓' : '🌒'; // 右边黄色
-                    } else {
-                        const verticalResult = blackRatio > 0.5 ? '🌔' : '🌖';
-                        return verticalResult; // 混合情况
-                    }
-                }
-                
-                // 基于黑色像素重心位置的智能选择
-                if (blackRatio === 0) {
-                    return '🌑';
-                }
-                else if (blackRatio >= 0.8) {
-                    return '🌕';
-                }
-                else {
-                    // 计算黑色像素的重心位置
-                    let centerX = 0, centerY = 0, blackPixelCount = 0;
-                    for (let y = 0; y < 4; y++) {
-                        for (let x = 0; x < 4; x++) {
-                            if (grid[y][x] === COLOR_LEVELS.BLACK) {
-                                centerX += x;
-                                centerY += y;
-                                blackPixelCount++;
-                            }
-                        }
-                    }
-                    
-                    if (blackPixelCount === 0) return '🌑';
-                    
-                    centerX = centerX / blackPixelCount;  // 重心X坐标（0-3）
-                    centerY = centerY / blackPixelCount;  // 重心Y坐标（0-3）
-                    
-                    // 根据黑色比例和重心位置智能选择月相
-                    if (blackRatio >= 0.5) {
-                        // 需要75%黄色的月相：🌔或🌖
-                        if (centerX <= 1.5) {
-                            return '🌖'; // 黑色重心偏左 → 左边黄色
-                        } else {
-                            return '🌔'; // 黑色重心偏右 → 右边黄色  
-                        }
-                    } else if (blackRatio >= 0.25) {
-                        // 需要50%黄色的月相：🌓或🌗
-                        if (centerX <= 1.5) {
-                            return '🌗'; // 黑色重心偏左 → 左边黄色
-                        } else {
-                            return '🌓'; // 黑色重心偏右 → 右边黄色
-                        }
-                    } else if (blackRatio >= 0.1) {
-                        // 需要25%黄色的月相：🌒或🌘
-                        if (centerX <= 1.5) {
-                            return '🌘'; // 黑色重心偏左 → 左边少量黄色
-                        } else {
-                            return '🌒'; // 黑色重心偏右 → 右边少量黄色
-                        }
-                    } else {
-                        return '🌑'; // 背景
-                    }
-                }
-                
-                // 如果没有命中任何条件，这里不应该执行到
-                return '🌑';
-            }
-            
-            // 检测边缘函数
-            hasTopEdge(grid) {
-                return grid[0].some(pixel => pixel === COLOR_LEVELS.BLACK);
-            }
-            
-            hasBottomEdge(grid) {
-                return grid[3].some(pixel => pixel === COLOR_LEVELS.BLACK);
-            }
-            
-            hasLeftEdge(grid) {
-                return grid.some(row => row[0] === COLOR_LEVELS.BLACK);
-            }
-            
-            hasRightEdge(grid) {
-                return grid.some(row => row[3] === COLOR_LEVELS.BLACK);
-            }
-            
-            isVerticalLine(grid) {
-                let verticalCols = 0;
-                for (let x = 0; x < 4; x++) {
-                    let blackInCol = 0;
-                    for (let y = 0; y < 4; y++) {
-                        if (grid[y][x] === COLOR_LEVELS.BLACK) blackInCol++;
-                    }
-                    if (blackInCol >= 3) verticalCols++;
-                }
-                return verticalCols >= 2;
-            }
-
-            // 4x4网格转换为月相emoji（向后兼容）
+            // 最简单的4x4网格转月相：仅基于黑色像素数量，带噪音过滤
             gridToMoon(grid) {
-                return this.selectMoonWithContext(grid);
+                // 统计4x4网格中黑色像素（0）的数量
+                let blackCount = 0;
+                for (let y = 0; y < 4; y++) {
+                    for (let x = 0; x < 4; x++) {
+                        if (grid[y][x] === 0) { // 0 = 黑色
+                            blackCount++;
+                        }
+                    }
+                }
+                
+                // 噪音过滤：如果黑色像素数量低于阈值，显示为背景
+                if (blackCount < this.noiseThreshold) {
+                    return '🌑';
+                }
+                
+                // 根据黑色像素数量选择月相
+                for (const phase of this.moonPhases) {
+                    if (blackCount >= phase.minBlack && blackCount <= phase.maxBlack) {
+                        return phase.emoji;
+                    }
+                }
+                
+                // 默认返回满月
+                return '🌕';
             }
             
             // 月相反色处理
@@ -985,18 +808,44 @@
                 return reverseMap[emoji] || emoji;
             }
             
-            // 设置横线阈值
-            setHorizontalThreshold(threshold) {
-                this.horizontalThreshold = threshold;
+            // 应用字符间距
+            applySpacing(text, spacing) {
+                if (spacing <= 0) return text;
+                
+                const lines = text.split('\n');
+                const spacedLines = [];
+                
+                for (const line of lines) {
+                    if (line.length === 0) {
+                        spacedLines.push(line);
+                        continue;
+                    }
+                    
+                    // 在每个字符之间插入指定数量的🌑（空格）
+                    const chars = Array.from(line);
+                    const spacedChars = [];
+                    
+                    for (let i = 0; i < chars.length; i++) {
+                        spacedChars.push(chars[i]);
+                        // 除了最后一个字符，每个字符后面都添加间距
+                        if (i < chars.length - 1) {
+                            spacedChars.push('🌑'.repeat(spacing));
+                        }
+                    }
+                    
+                    spacedLines.push(spacedChars.join(''));
+                }
+                
+                return spacedLines.join('\n');
             }
             
             // 生成月文字
-            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false) {
+            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0) {
                 if (!text.trim()) return '';
                 
                 // 根据排版方向计算canvas尺寸
                 const chars = Array.from(text);
-                const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['gothic-bold'];
+                const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['default'];
                 
                 let canvasWidth, canvasHeight, fontSize;
                 
@@ -1020,28 +869,21 @@
                     
                     fontSize = estimatedFontSize * scaleFactor;
                     
-                    // Canvas尺寸基于最终字体大小
+                    // Canvas尺寸基于最终字体大小和间距
                     canvasWidth = targetPixelWidth;
-                    canvasHeight = chars.length * fontSize * 0.95 + fontSize * 0.2; // 更紧凑的高度
+                    const charHeight = fontSize * (0.95 + spacing * 0.05);
+                    canvasHeight = chars.length * charHeight + fontSize * 0.2;
                 } else {
-                    // 横向排版：保持原有逻辑
+                    // 横向排版：考虑字符间距的尺寸计算
                     const targetPixelHeight = sizeParam * 4;
                     fontSize = targetPixelHeight * 1.0;
                     
-                    // 创建临时canvas用于测量文字宽度
-                    const tempCanvas = document.createElement('canvas');
-                    const tempCtx = tempCanvas.getContext('2d');
-                    tempCtx.font = `bold ${fontSize}px ${fontFamily}`;
-                    
-                    const textMetrics = tempCtx.measureText(text);
-                    let textWidth = textMetrics.width;
-                    
-                    if (!textWidth || textWidth < fontSize) {
-                        textWidth = text.length * fontSize * 0.8;
-                    }
+                    // 计算带间距的文字宽度
+                    const charSpacing = fontSize * (1.0 + spacing * 0.05);
+                    const totalWidth = chars.length * charSpacing - (charSpacing - fontSize);
                     
                     const padding = fontSize * 0.5;
-                    canvasWidth = Math.max(textWidth + padding * 2, 100);
+                    canvasWidth = Math.max(totalWidth + padding * 2, 100);
                     canvasHeight = targetPixelHeight + 30;
                 }
                 
@@ -1070,7 +912,7 @@
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'top';
                     
-                    const charHeight = fontSize * 0.95; // 紧凑的字符间距
+                    const charHeight = fontSize * (0.95 + spacing * 0.05); // 根据spacing调整字符间距
                     const startY = fontSize * 0.1; // 从顶部开始
                     
                     chars.forEach((char, index) => {
@@ -1079,11 +921,22 @@
                         ctx.fillText(char, x, y);
                     });
                 } else {
-                    // 横向排版：保持原有逻辑
-                    ctx.textAlign = 'center';
+                    // 横向排版：逐个字符绘制以支持字符间距
+                    ctx.textAlign = 'left';
                     ctx.textBaseline = 'middle';
-                    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+                    
+                    // 计算每个字符的宽度和间距
+                    const charSpacing = fontSize * (1.0 + spacing * 0.05); // 根据spacing调整字符间距
+                    const totalWidth = chars.length * charSpacing - (charSpacing - fontSize); // 最后一个字符不需要额外间距
+                    const startX = (canvas.width - totalWidth) / 2; // 居中起始位置
+                    
+                    chars.forEach((char, index) => {
+                        const x = startX + index * charSpacing;
+                        const y = canvas.height / 2;
+                        ctx.fillText(char, x, y);
+                    });
                 }
+                
                 
                 // 获取图像数据
                 const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -1119,18 +972,13 @@
                     }
                 }
                 
-                // 暂时禁用形态学操作，观察原始效果
-                // const processedPixels = this.morphClose(pixelMatrix, canvas.width, canvas.height);
-                // const smoothedPixels = this.postProcessSmooth(processedPixels, canvas.width, canvas.height);
-                const smoothedPixels = pixelMatrix;
-                
-                // 找到处理后的文字边界
+                // 找到文字的实际边界
                 let minX = canvas.width, maxX = 0, minY = canvas.height, maxY = 0;
                 let foundText = false;
                 
                 for (let y = 0; y < canvas.height; y++) {
                     for (let x = 0; x < canvas.width; x++) {
-                        if (smoothedPixels[y][x] === COLOR_LEVELS.BLACK) {
+                        if (pixelMatrix[y][x] === 0) { // 找到黑色像素
                             minX = Math.min(minX, x);
                             maxX = Math.max(maxX, x);
                             minY = Math.min(minY, y);
@@ -1141,45 +989,31 @@
                 }
                 
                 if (!foundText) {
-                    let defaultResult = '🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕';
-                    if (reverseColor) {
-                        defaultResult = Array.from(defaultResult).map(char => {
-                            if (char === '\n') return char;
-                            return this.reverseMoon(char);
-                        }).join('');
-                    }
-                    return defaultResult;
+                    // 如果没有找到文字，返回默认结果（反色已移至外部处理）
+                    return '🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕';
                 }
                 
-                // 在文字区域内进行4x4网格处理，建立上下文信息
+                // 4x4网格处理，只处理文字区域
                 let result = '';
                 const gridSize = 4;
-                const boundaryWidth = maxX - minX + 1;
-                const boundaryHeight = maxY - minY + 1;
                 
-                // 预处理：为每个网格位置建立上下文信息
-                const gridContexts = [];
+                // 将边界对齐到4的倍数
+                const alignedMinX = Math.floor(minX / gridSize) * gridSize;
+                const alignedMinY = Math.floor(minY / gridSize) * gridSize;
+                const alignedMaxX = Math.ceil((maxX + 1) / gridSize) * gridSize - 1;
+                const alignedMaxY = Math.ceil((maxY + 1) / gridSize) * gridSize - 1;
                 
-                let alignedMinY, alignedMinX, maxGridX, maxGridY;
-                
-                if (isVertical) {
-                    // 竖向模式：使用整个Canvas宽度，高度基于文字边界
-                    alignedMinY = Math.floor(minY / gridSize) * gridSize;
-                    alignedMinX = 0; // 从Canvas左边开始
-                    maxGridX = canvas.width - 1; // 到Canvas右边结束
-                    maxGridY = maxY; // 高度基于文字实际边界
-                } else {
-                    // 横向模式：保持原有逻辑，基于文字实际边界
-                    alignedMinY = Math.floor(minY / gridSize) * gridSize;
-                    alignedMinX = Math.floor(minX / gridSize) * gridSize;
-                    maxGridX = maxX;
-                    maxGridY = maxY;
-                }
-                
-                for (let y = alignedMinY; y <= maxGridY; y += gridSize) {
-                    const rowContexts = [];
-                    for (let x = alignedMinX; x <= maxGridX; x += gridSize) {
-                        // 提取当前4x4子网格
+                // 只处理文字边界内的区域
+                let isFirstRow = true;
+                for (let y = alignedMinY; y <= alignedMaxY; y += gridSize) {
+                    // 如果不是第一行，先换行
+                    if (!isFirstRow) {
+                        result += '\n';
+                    }
+                    isFirstRow = false;
+                    
+                    for (let x = alignedMinX; x <= alignedMaxX; x += gridSize) {
+                        // 提取4x4子网格
                         const subGrid = [];
                         for (let dy = 0; dy < 4; dy++) {
                             subGrid[dy] = [];
@@ -1189,160 +1023,42 @@
                                 
                                 // 边界检查：超出canvas范围的像素设为白色
                                 if (pixelY >= 0 && pixelY < canvas.height && pixelX >= 0 && pixelX < canvas.width) {
-                                    subGrid[dy][dx] = smoothedPixels[pixelY][pixelX];
+                                    subGrid[dy][dx] = pixelMatrix[pixelY][pixelX];
                                 } else {
-                                    subGrid[dy][dx] = COLOR_LEVELS.WHITE; // 超出边界的区域设为白色
+                                    subGrid[dy][dx] = 1; // 1 = 白色
                                 }
                             }
                         }
                         
-                        // 检测当前网格是否为横线
-                        const isCurrentHorizontal = this.isHorizontalLine(subGrid);
-                        rowContexts.push({ subGrid, isHorizontal: isCurrentHorizontal });
-                    }
-                    gridContexts.push(rowContexts);
-                }
-                
-                // 生成月相，考虑上下文和上一行的输出
-                const previousRowOutput = []; // 跟踪上一行的输出
-                
-                for (let gridY = 0; gridY < gridContexts.length; gridY++) {
-                    const currentRowOutput = [];
-                    
-                    for (let gridX = 0; gridX < gridContexts[gridY].length; gridX++) {
-                        const current = gridContexts[gridY][gridX];
-                        
-                        // 检查上下邻居是否为横线
-                        const hasHorizontalAbove = gridY > 0 ? gridContexts[gridY - 1][gridX]?.isHorizontal : false;
-                        const hasHorizontalBelow = gridY < gridContexts.length - 1 ? gridContexts[gridY + 1][gridX]?.isHorizontal : false;
-                        
-                        // 检查上方是否为黄色月亮（保留空隙机制）
-                        const hasYellowAbove = gridY > 0 && previousRowOutput[gridX] === '🌕';
-                        
-                        // 构建上下文信息
-                        const neighborInfo = {
-                            isBetweenHorizontalLines: hasHorizontalAbove && hasHorizontalBelow && !current.isHorizontal,
-                            hasYellowAbove: hasYellowAbove
-                        };
-                        
-                        // 转换为月相
-                        let moon = this.selectMoonWithContext(current.subGrid, neighborInfo);
-                        
-                        
-                        currentRowOutput.push(moon);
+                        // 直接转换为月相，不考虑任何上下文
+                        let moon = this.gridToMoon(subGrid);
                         result += moon;
                     }
-                    
-                    // 更新上一行输出记录
-                    previousRowOutput.length = 0;
-                    previousRowOutput.push(...currentRowOutput);
-                    
-                    // 换行条件调整
-                    if (gridY < gridContexts.length - 1) {
-                        result += '\n';
-                    }
                 }
                 
-                // 处理最终输出，根据排版方向区分处理
-                const lines = result.split('\n');
                 
-                if (isVertical) {
-                    // 竖向模式：高度自适应，只控制宽度
-                    const targetWidth = sizeParam; // 目标宽度（每行月亮字符数）
-                    
-                    // 调整每行的宽度到目标宽度
-                    const adjustedLines = lines.map(line => {
-                        const currentWidth = line.length / 2; // 当前宽度
-                        if (currentWidth < targetWidth) {
-                            // 如果当前宽度小于目标，用黑色背景填充
-                            const paddingChar = '🌑';
-                            const padding = paddingChar.repeat(targetWidth - currentWidth);
-                            return line + padding;
-                        } else if (currentWidth > targetWidth) {
-                            // 如果当前宽度大于目标，裁剪
-                            return line.substring(0, targetWidth * 2);
-                        }
-                        return line;
-                    });
-                    
-                    let finalResult = adjustedLines.join('\n');
-                    
-                    // 统一的反色处理
-                    if (reverseColor) {
-                        finalResult = Array.from(finalResult).map(char => {
-                            if (char === '\n') return char;
-                            return this.reverseMoon(char);
-                        }).join('');
-                    }
-                    
-                    return finalResult;
-                } else {
-                    // 横向模式：保持原有的高度控制逻辑
-                    const heightRows = sizeParam;
-                    
-                    if (lines.length < heightRows) {
-                        // 计算需要填充的行数
-                        const paddingRows = heightRows - lines.length;
-                        const topPadding = Math.floor(paddingRows / 2);
-                        const bottomPadding = paddingRows - topPadding;
-                        
-                        // 计算每行应该有多少个emoji（根据第一行）
-                        const emojisPerLine = lines.length > 0 ? lines[0].length / 2 : 20;
-                        const paddingChar = '🌑';
-                        const paddingLine = paddingChar.repeat(emojisPerLine);
-                        
-                        // 添加顶部填充
-                        const finalLines = [];
-                        for (let i = 0; i < topPadding; i++) {
-                            finalLines.push(paddingLine);
-                        }
-                        
-                        // 添加实际内容
-                        finalLines.push(...lines);
-                        
-                        // 添加底部填充
-                        for (let i = 0; i < bottomPadding; i++) {
-                            finalLines.push(paddingLine);
-                        }
-                        
-                        return finalLines.join('\n');
-                    }
-                    
-                    // 如果生成的行数多于要求，裁剪
-                    const finalLines = lines.slice(0, heightRows);
-                    let finalResult = finalLines.join('\n');
-                    
-                    // 统一的反色处理
-                    if (reverseColor) {
-                        finalResult = Array.from(finalResult).map(char => {
-                            if (char === '\n') return char;
-                            return this.reverseMoon(char);
-                        }).join('');
-                    }
-                    
-                    return finalResult;
-                }
+                // 简化的输出处理：直接返回生成的结果（反色已移至外部处理）
+                return result;
             }
         }
         
         // 字体映射
         const FONT_FAMILIES = {
-            'gothic-bold': '"游ゴシック Bold", "Yu Gothic Bold", "ヒラギノ角ゴ W8", "Hiragino Kaku Gothic W8", bold sans-serif',
-            'hiragino-w8': '"ヒラギノ角ゴ W8", "Hiragino Kaku Gothic W8", "ヒラギノ角ゴ W9", "Hiragino Kaku Gothic W9", sans-serif',
-            'gothic': '"ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "MS Pゴシック", "MS PGothic", sans-serif',
-            'pop': '"HGP創英角ポップ体", "HGSoeiKakupoptai", "DFPOPミックス体", "Impact", bold sans-serif'
+            'default': 'sans-serif',
+            'gothic': '"メイリオ", "Meiryo", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "MS Pゴシック", "MS PGothic", sans-serif',
+            'mincho': '"游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS 明朝", "MS Mincho", serif'
         };
 
-        // 字体对应阈值配置
-        const FONT_THRESHOLDS = {
-            'gothic-bold': 6,
-            'hiragino-w8': 1,
-            'gothic': 4,
-            'pop': 4
+        // 字体预设配置：(噪音过滤阈值，粘合系数)
+        const FONT_CONFIGS = {
+            'default': { noiseThreshold: 8, adhesionCoefficient: 2 },
+            'gothic': { noiseThreshold: 8, adhesionCoefficient: 2 },
+            'mincho': { noiseThreshold: 4, adhesionCoefficient: 3 }
         };
         
         // 初始化
         const generator = new SimpleMoonGenerator();
+        const horizontalEnhancer = new HorizontalEnhancer();
         
         // 更新滑块标签的函数
         function updateSliderLabel() {
@@ -1417,11 +1133,8 @@
             canvas.width = lines[0].length * fontSize / 2;
             canvas.height = lines.length * lineHeight;
             
-            // 设置背景
-            ctx.fillStyle = 'white';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // 绘制月亮艺术
+            // 绘制月亮艺术（透明背景）
+            ctx.fillStyle = 'black';
             ctx.font = `${fontSize}px sans-serif`;
             ctx.textBaseline = 'top';
             
@@ -1453,6 +1166,8 @@
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
             const fontType = document.getElementById('fontSelect').value;
             const threshold = parseInt(document.getElementById('thresholdSlider').value);
+            const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
+            const spacing = parseInt(document.getElementById('spacingSlider').value);
             const isVertical = document.querySelector('input[name="textDirection"]:checked').value === 'vertical';
             const reverseColor = document.getElementById('reverseColor').checked;
             
@@ -1463,21 +1178,27 @@
             }
             
             try {
-                // 设置阈值并生成
-                generator.setHorizontalThreshold(threshold);
-                const result = generator.generate(text, sizeValue, fontType, isVertical, reverseColor);
+                // 设置噪音过滤阈值并生成基础结果（不执行反色）
+                generator.setNoiseThreshold(threshold);
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing);
+                
+                // 应用横向加强算法
+                horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
+                result = horizontalEnhancer.enhance(result);
+                
+                // 最后执行反色操作
+                if (reverseColor) {
+                    result = Array.from(result).map(char => {
+                        if (char === '\n') return char;
+                        return generator.reverseMoon(char);
+                    }).join('');
+                }
+                
                 document.getElementById('moonArt').textContent = result;
                 
                 // 显示操作按钮
                 document.getElementById('actionButtons').style.display = 'flex';
                 
-                // 调试信息
-                const charCount = result.replace(/\n/g, '').length;
-                const lineCount = result.split('\n').length;
-                const direction = isVertical ? '縦書き' : '横書き';
-                const sizeLabel = isVertical ? `幅: ${sizeValue}文字` : `高さ: ${sizeValue}行`;
-                document.getElementById('debugInfo').textContent = 
-                    `文字数: ${charCount}, 行数: ${lineCount}, ${sizeLabel}, 字体: ${fontType}, 方向: ${direction}, 阈值: ${threshold}(自動)`;
                     
             } catch (error) {
                 console.error('Generation error:', error);
@@ -1499,6 +1220,10 @@
             const heightValue = document.getElementById('heightValue');
             const thresholdSlider = document.getElementById('thresholdSlider');
             const thresholdValue = document.getElementById('thresholdValue');
+            const adhesionSlider = document.getElementById('adhesionSlider');
+            const adhesionValue = document.getElementById('adhesionValue');
+            const spacingSlider = document.getElementById('spacingSlider');
+            const spacingValue = document.getElementById('spacingValue');
             
             heightSlider.addEventListener('input', () => {
                 heightValue.textContent = heightSlider.value;
@@ -1510,13 +1235,27 @@
                 updatePreview();
             });
             
+            adhesionSlider.addEventListener('input', () => {
+                adhesionValue.textContent = adhesionSlider.value;
+                updatePreview();
+            });
+            
+            spacingSlider.addEventListener('input', () => {
+                spacingValue.textContent = spacingSlider.value;
+                updatePreview();
+            });
+            
             document.getElementById('textInput').addEventListener('input', updatePreview);
             document.getElementById('fontSelect').addEventListener('change', (e) => {
-                // 切换字体时自动设置对应的默认阈值
+                // 切换字体时自动应用预设配置
                 const fontType = e.target.value;
-                const defaultThreshold = FONT_THRESHOLDS[fontType] || 6;
-                thresholdSlider.value = defaultThreshold;
-                thresholdValue.textContent = defaultThreshold;
+                const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
+                
+                thresholdSlider.value = config.noiseThreshold;
+                thresholdValue.textContent = config.noiseThreshold;
+                adhesionSlider.value = config.adhesionCoefficient;
+                adhesionValue.textContent = config.adhesionCoefficient;
+                
                 updatePreview();
             });
             document.getElementById('showDebugCanvas').addEventListener('change', updatePreview);
@@ -1554,6 +1293,14 @@
             } else {
                 document.querySelector('input[name="textDirection"][value="horizontal"]').checked = true;
             }
+            
+            // 初始化字体预设配置
+            const defaultFontType = document.getElementById('fontSelect').value;
+            const defaultConfig = FONT_CONFIGS[defaultFontType] || FONT_CONFIGS['default'];
+            thresholdSlider.value = defaultConfig.noiseThreshold;
+            thresholdValue.textContent = defaultConfig.noiseThreshold;
+            adhesionSlider.value = defaultConfig.adhesionCoefficient;
+            adhesionValue.textContent = defaultConfig.adhesionCoefficient;
             
             // 初始化标签和生成
             updateSliderLabel();
