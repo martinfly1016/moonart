@@ -765,7 +765,7 @@
                 return gray < 128 ? 0 : 1; // 0 = 黑色，1 = 白色
             }
             
-            // 最简单的4x4网格转月相：仅基于黑色像素数量，带噪音过滤
+            // 基于像素位置分布的4x4网格转月相
             gridToMoon(grid) {
                 // 统计4x4网格中黑色像素（0）的数量
                 let blackCount = 0;
@@ -782,10 +782,36 @@
                     return '🌑';
                 }
                 
-                // 根据黑色像素数量选择月相
-                for (const phase of this.moonPhases) {
-                    if (blackCount >= phase.minBlack && blackCount <= phase.maxBlack) {
-                        return phase.emoji;
+                // 根据黑色像素数量和位置分布选择月相
+                if (blackCount === 0) {
+                    return '🌑';
+                } else if (blackCount >= 13 && blackCount <= 16) {
+                    return '🌕';
+                } else {
+                    // 计算像素重心来判断左右偏向
+                    let weightedX = 0;
+                    let totalBlack = 0;
+                    
+                    for (let y = 0; y < 4; y++) {
+                        for (let x = 0; x < 4; x++) {
+                            if (grid[y][x] === 0) { // 0 = 黑色
+                                weightedX += x;
+                                totalBlack++;
+                            }
+                        }
+                    }
+                    
+                    // 计算平均x坐标（重心位置）
+                    const centerX = totalBlack > 0 ? weightedX / totalBlack : 1.5;
+                    const isLeftBiased = centerX < 1.5; // 小于1.5表示偏左
+                    
+                    // 根据黑色像素数量和偏向选择月相
+                    if (blackCount >= 1 && blackCount <= 4) {
+                        return isLeftBiased ? '🌘' : '🌒'; // 很少黑色：左偏🌘，右偏🌒
+                    } else if (blackCount >= 5 && blackCount <= 8) {
+                        return isLeftBiased ? '🌗' : '🌓'; // 少量黑色：左偏🌗，右偏🌓
+                    } else if (blackCount >= 9 && blackCount <= 12) {
+                        return isLeftBiased ? '🌖' : '🌔'; // 中等黑色：左偏🌖，右偏🌔
                     }
                 }
                 
@@ -839,128 +865,43 @@
                 return spacedLines.join('\n');
             }
             
-            // 生成月文字
-            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0) {
-                if (!text.trim()) return '';
+            // 生成单个字符的月相
+            generateSingleChar(char, sizeParam = 20, fontType = 'custom', isVertical = true) {
+                if (!char.trim()) return [];
                 
-                // 根据排版方向计算canvas尺寸
-                const chars = Array.from(text);
                 const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['default'];
                 
-                let canvasWidth, canvasHeight, fontSize;
+                // 第一阶段：创建足够大的canvas来完整渲染字符
+                const baseFontSize = Math.max(sizeParam * 4, 40); // 确保字符足够大
+                const canvasWidth = baseFontSize * 2;   // 给字符足够的宽度空间
+                const canvasHeight = baseFontSize * 2;  // 给字符足够的高度空间
                 
-                if (isVertical) {
-                    // 竖向排版：sizeParam表示宽度（每行月亮字符数），高度自适应
-                    const targetWidthChars = sizeParam;
-                    const targetPixelWidth = targetWidthChars * 4;
-                    
-                    // 一次性计算最终字体大小
-                    const tempCanvas = document.createElement('canvas');
-                    const tempCtx = tempCanvas.getContext('2d');
-                    
-                    let estimatedFontSize = Math.max(targetPixelWidth * 0.5, 30);
-                    tempCtx.font = `bold ${estimatedFontSize}px ${fontFamily}`;
-                    
-                    const testChar = chars[0] || '月';
-                    const charMetrics = tempCtx.measureText(testChar);
-                    const actualCharWidth = charMetrics.width;
-                    const targetCharWidth = targetPixelWidth * 1.1;
-                    const scaleFactor = targetCharWidth / actualCharWidth;
-                    
-                    fontSize = estimatedFontSize * scaleFactor;
-                    
-                    // Canvas尺寸基于最终字体大小和间距
-                    canvasWidth = targetPixelWidth;
-                    const charHeight = fontSize * (0.95 + spacing * 0.05);
-                    canvasHeight = chars.length * charHeight + fontSize * 0.2;
-                } else {
-                    // 横向排版：考虑字符间距的尺寸计算
-                    const targetPixelHeight = sizeParam * 4;
-                    fontSize = targetPixelHeight * 1.0;
-                    
-                    // 计算带间距的文字宽度
-                    const charSpacing = fontSize * (1.0 + spacing * 0.05);
-                    const totalWidth = chars.length * charSpacing - (charSpacing - fontSize);
-                    
-                    const padding = fontSize * 0.5;
-                    canvasWidth = Math.max(totalWidth + padding * 2, 100);
-                    canvasHeight = targetPixelHeight + 30;
-                }
-                
-                // 创建最终canvas并设置正确尺寸
                 const canvas = document.createElement('canvas');
                 canvas.width = canvasWidth;
                 canvas.height = canvasHeight;
                 
                 const ctx = canvas.getContext('2d');
                 
-                // 验证canvas尺寸
-                const debugInfo = isVertical ? 
-                    `Canvas dimensions: ${canvas.width}x${canvas.height}, text: "${text}", chars: ${chars.length}, vertical layout` :
-                    `Canvas dimensions: ${canvas.width}x${canvas.height}, text: "${text}", horizontal layout`;
-                console.log(debugInfo);
-                
-                // 绘制文字
+                // 绘制白色背景
                 ctx.fillStyle = 'white';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
                 
+                // 绘制黑色字符
                 ctx.fillStyle = 'black';
-                ctx.font = `bold ${fontSize}px ${fontFamily}`;
+                ctx.font = `bold ${baseFontSize}px ${fontFamily}`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
                 
-                if (isVertical) {
-                    // 竖向排版：使用预计算的字体大小，直接绘制
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'top';
-                    
-                    const charHeight = fontSize * (0.95 + spacing * 0.05); // 根据spacing调整字符间距
-                    const startY = fontSize * 0.1; // 从顶部开始
-                    
-                    chars.forEach((char, index) => {
-                        const x = canvas.width / 2;
-                        const y = startY + index * charHeight;
-                        ctx.fillText(char, x, y);
-                    });
-                } else {
-                    // 横向排版：逐个字符绘制以支持字符间距
-                    ctx.textAlign = 'left';
-                    ctx.textBaseline = 'middle';
-                    
-                    // 计算每个字符的宽度和间距
-                    const charSpacing = fontSize * (1.0 + spacing * 0.05); // 根据spacing调整字符间距
-                    const totalWidth = chars.length * charSpacing - (charSpacing - fontSize); // 最后一个字符不需要额外间距
-                    const startX = (canvas.width - totalWidth) / 2; // 居中起始位置
-                    
-                    chars.forEach((char, index) => {
-                        const x = startX + index * charSpacing;
-                        const y = canvas.height / 2;
-                        ctx.fillText(char, x, y);
-                    });
-                }
+                const x = canvas.width / 2;
+                const y = canvas.height / 2;
+                ctx.fillText(char, x, y);
                 
+                console.log(`字符 "${char}" 渲染: canvas=${canvasWidth}x${canvasHeight}, fontSize=${baseFontSize}`);
                 
-                // 获取图像数据
+                // 获取图像数据并转换为像素矩阵
                 const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                
-                // 调试：显示原始canvas渲染结果
-                const debugCanvas = document.getElementById('debugCanvas');
-                const showDebug = document.getElementById('showDebugCanvas')?.checked;
-                if (debugCanvas) {
-                    if (showDebug) {
-                        debugCanvas.style.display = 'block';
-                        debugCanvas.width = canvas.width;
-                        debugCanvas.height = canvas.height;
-                        const debugCtx = debugCanvas.getContext('2d');
-                        
-                        // 清除并绘制原始canvas内容
-                        debugCtx.clearRect(0, 0, debugCanvas.width, debugCanvas.height);
-                        debugCtx.drawImage(canvas, 0, 0);
-                    } else {
-                        debugCanvas.style.display = 'none';
-                    }
-                }
-                
-                // 将图像数据转换为像素矩阵
                 const pixelMatrix = [];
+                
                 for (let y = 0; y < canvas.height; y++) {
                     pixelMatrix[y] = [];
                     for (let x = 0; x < canvas.width; x++) {
@@ -972,13 +913,13 @@
                     }
                 }
                 
-                // 找到文字的实际边界
+                // 找到字符的实际边界
                 let minX = canvas.width, maxX = 0, minY = canvas.height, maxY = 0;
                 let foundText = false;
                 
                 for (let y = 0; y < canvas.height; y++) {
                     for (let x = 0; x < canvas.width; x++) {
-                        if (pixelMatrix[y][x] === 0) { // 找到黑色像素
+                        if (pixelMatrix[y][x] === 0) {
                             minX = Math.min(minX, x);
                             maxX = Math.max(maxX, x);
                             minY = Math.min(minY, y);
@@ -989,55 +930,172 @@
                 }
                 
                 if (!foundText) {
-                    // 如果没有找到文字，返回默认结果（反色已移至外部处理）
-                    return '🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕';
+                    // 如果没找到文字，返回按目标尺寸的默认矩形
+                    if (isVertical) {
+                        // 竖向：固定宽度sizeParam，默认高度3
+                        const defaultLine = '🌕'.repeat(sizeParam);
+                        return [defaultLine, defaultLine, defaultLine];
+                    } else {
+                        // 横向：固定高度sizeParam，默认宽度3
+                        const result = [];
+                        for (let i = 0; i < sizeParam; i++) {
+                            result.push('🌕🌕🌕');
+                        }
+                        return result;
+                    }
                 }
                 
-                // 4x4网格处理，只处理文字区域
-                let result = '';
+                // 第二阶段：将字符边界映射到目标尺寸
+                const charWidth = maxX - minX + 1;
+                const charHeight = maxY - minY + 1;
+                
+                let targetPixelWidth, targetPixelHeight;
+                if (isVertical) {
+                    // 竖向：固定宽度为sizeParam*4像素，高度按比例缩放
+                    targetPixelWidth = sizeParam * 4;
+                    targetPixelHeight = Math.ceil((charHeight * targetPixelWidth) / charWidth);
+                    // 确保高度是4的倍数
+                    targetPixelHeight = Math.ceil(targetPixelHeight / 4) * 4;
+                } else {
+                    // 横向：固定高度为sizeParam*4像素，宽度按比例缩放  
+                    targetPixelHeight = sizeParam * 4;
+                    targetPixelWidth = Math.ceil((charWidth * targetPixelHeight) / charHeight);
+                    // 确保宽度是4的倍数
+                    targetPixelWidth = Math.ceil(targetPixelWidth / 4) * 4;
+                }
+                
+                console.log(`字符 "${char}" 边界: ${charWidth}x${charHeight} → 目标: ${targetPixelWidth}x${targetPixelHeight}`);
+                
+                // 第三阶段：按目标尺寸进行4x4网格扫描
                 const gridSize = 4;
+                const resultLines = [];
                 
-                // 将边界对齐到4的倍数
-                const alignedMinX = Math.floor(minX / gridSize) * gridSize;
-                const alignedMinY = Math.floor(minY / gridSize) * gridSize;
-                const alignedMaxX = Math.ceil((maxX + 1) / gridSize) * gridSize - 1;
-                const alignedMaxY = Math.ceil((maxY + 1) / gridSize) * gridSize - 1;
-                
-                // 只处理文字边界内的区域
-                let isFirstRow = true;
-                for (let y = alignedMinY; y <= alignedMaxY; y += gridSize) {
-                    // 如果不是第一行，先换行
-                    if (!isFirstRow) {
-                        result += '\n';
-                    }
-                    isFirstRow = false;
-                    
-                    for (let x = alignedMinX; x <= alignedMaxX; x += gridSize) {
+                for (let targetY = 0; targetY < targetPixelHeight; targetY += gridSize) {
+                    let line = '';
+                    for (let targetX = 0; targetX < targetPixelWidth; targetX += gridSize) {
                         // 提取4x4子网格
                         const subGrid = [];
                         for (let dy = 0; dy < 4; dy++) {
                             subGrid[dy] = [];
                             for (let dx = 0; dx < 4; dx++) {
-                                const pixelY = y + dy;
-                                const pixelX = x + dx;
+                                // 将目标坐标映射回原始字符坐标
+                                const sourceX = minX + Math.round((targetX + dx) * charWidth / targetPixelWidth);
+                                const sourceY = minY + Math.round((targetY + dy) * charHeight / targetPixelHeight);
                                 
-                                // 边界检查：超出canvas范围的像素设为白色
-                                if (pixelY >= 0 && pixelY < canvas.height && pixelX >= 0 && pixelX < canvas.width) {
-                                    subGrid[dy][dx] = pixelMatrix[pixelY][pixelX];
+                                if (sourceY >= 0 && sourceY < canvas.height && sourceX >= 0 && sourceX < canvas.width) {
+                                    subGrid[dy][dx] = pixelMatrix[sourceY][sourceX];
                                 } else {
-                                    subGrid[dy][dx] = 1; // 1 = 白色
+                                    subGrid[dy][dx] = 1; // 白色
                                 }
                             }
                         }
                         
-                        // 直接转换为月相，不考虑任何上下文
-                        let moon = this.gridToMoon(subGrid);
-                        result += moon;
+                        line += this.gridToMoon(subGrid);
+                    }
+                    resultLines.push(line);
+                }
+                
+                console.log(`字符 "${char}" 输出: ${resultLines[0]?.length || 0}列 x ${resultLines.length}行`);
+                
+                return resultLines;
+            }
+            
+            // 垂直拼接字符结果（竖向排版）- 字符从上到下排列
+            combineVertically(charResults, spacing, sizeParam) {
+                if (charResults.length === 0) return '';
+                
+                let combinedLines = [];
+                
+                for (let i = 0; i < charResults.length; i++) {
+                    const charLines = charResults[i];
+                    
+                    // 添加当前字符的所有行
+                    combinedLines.push(...charLines);
+                    
+                    // 如果不是最后一个字符，添加间距行（水平分隔）
+                    if (i < charResults.length - 1 && spacing > 0) {
+                        // 使用目标宽度sizeParam作为间距行宽度，确保与字符宽度一致
+                        const spacingLine = '🌑'.repeat(sizeParam || 10);
+                        
+                        // 添加指定数量的间距行
+                        for (let j = 0; j < spacing; j++) {
+                            combinedLines.push(spacingLine);
+                        }
                     }
                 }
                 
+                return combinedLines.join('\n');
+            }
+            
+            // 水平拼接字符结果（横向排版）
+            combineHorizontally(charResults, spacing, sizeParam) {
+                if (charResults.length === 0) return '';
                 
-                // 简化的输出处理：直接返回生成的结果（反色已移至外部处理）
+                // 找出最大行数，确保所有字符结果对齐
+                const maxLines = Math.max(...charResults.map(result => result.length));
+                
+                // 标准化所有字符结果，确保行数相等
+                const normalizedResults = charResults.map(result => {
+                    const normalized = [...result];
+                    // 横向排版时，使用目标宽度sizeParam确保填充行宽度一致
+                    const emptyLine = '🌑'.repeat(sizeParam || 10);
+                    
+                    // 用空行填充到最大行数
+                    while (normalized.length < maxLines) {
+                        normalized.push(emptyLine);
+                    }
+                    
+                    return normalized;
+                });
+                
+                const finalLines = [];
+                
+                // 逐行拼接
+                for (let lineIndex = 0; lineIndex < maxLines; lineIndex++) {
+                    let combinedLine = '';
+                    
+                    for (let charIndex = 0; charIndex < normalizedResults.length; charIndex++) {
+                        combinedLine += normalizedResults[charIndex][lineIndex];
+                        
+                        // 如果不是最后一个字符，添加间距列
+                        if (charIndex < normalizedResults.length - 1 && spacing > 0) {
+                            combinedLine += '🌑'.repeat(spacing);
+                        }
+                    }
+                    
+                    finalLines.push(combinedLine);
+                }
+                
+                return finalLines.join('\n');
+            }
+            
+            // 生成月文字（使用单字符处理架构）
+            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0) {
+                if (!text.trim()) return '';
+                
+                console.log(`单字符处理架构: text="${text}", sizeParam=${sizeParam}, isVertical=${isVertical}, spacing=${spacing}`);
+                console.log(`排版方向确认: ${isVertical ? '竖向排版（字符垂直排列）' : '横向排版（字符水平排列）'}`);
+                
+                // 将文本拆分为字符数组
+                const chars = Array.from(text);
+                
+                // 为每个字符生成月相结果
+                const charResults = chars.map(char => {
+                    return this.generateSingleChar(char, sizeParam, fontType, isVertical);
+                });
+                
+                // 根据排版方向拼接结果
+                let result;
+                if (isVertical) {
+                    // 竖向排版（縦書き）：字符从上到下排列
+                    result = this.combineVertically(charResults, spacing, sizeParam);
+                } else {
+                    // 横向排版（横書き）：字符从左到右排列
+                    result = this.combineHorizontally(charResults, spacing, sizeParam);
+                }
+                
+                console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+                
                 return result;
             }
         }
@@ -1168,7 +1226,13 @@
             const threshold = parseInt(document.getElementById('thresholdSlider').value);
             const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
             const spacing = parseInt(document.getElementById('spacingSlider').value);
-            const isVertical = document.querySelector('input[name="textDirection"]:checked').value === 'vertical';
+            
+            const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
+            console.log('updatePreview - 选中的radio按钮:', selectedRadio);
+            console.log('updatePreview - 选中的值:', selectedRadio?.value);
+            const isVertical = selectedRadio?.value === 'vertical';
+            console.log('updatePreview - 最终isVertical值:', isVertical);
+            
             const reverseColor = document.getElementById('reverseColor').checked;
             
             if (!text) {
@@ -1287,11 +1351,16 @@
                 }
             }
             
-            // 根据设备类型设置默认方向
-            if (isMobileDevice()) {
-                document.querySelector('input[name="textDirection"][value="vertical"]').checked = true;
-            } else {
-                document.querySelector('input[name="textDirection"][value="horizontal"]').checked = true;
+            // 根据设备类型设置默认方向（仅在没有选择时）
+            const currentSelection = document.querySelector('input[name="textDirection"]:checked');
+            if (!currentSelection) {
+                if (isMobileDevice()) {
+                    document.querySelector('input[name="textDirection"][value="vertical"]').checked = true;
+                } else {
+                    document.querySelector('input[name="textDirection"][value="horizontal"]').checked = true;
+                }
+                // 设置默认值后，更新标签和预览
+                updateSliderLabel();
             }
             
             // 初始化字体预设配置
@@ -1302,9 +1371,11 @@
             adhesionSlider.value = defaultConfig.adhesionCoefficient;
             adhesionValue.textContent = defaultConfig.adhesionCoefficient;
             
-            // 初始化标签和生成
-            updateSliderLabel();
-            updatePreview();
+            // 初始化标签和生成（延迟执行确保DOM状态更新）
+            setTimeout(() => {
+                updateSliderLabel();
+                updatePreview();
+            }, 0);
             
             // 设置页脚收藏按钮
             setupFooterBookmark();
