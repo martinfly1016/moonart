@@ -430,6 +430,10 @@
                         <input type="checkbox" id="reverseColor">
                         <span class="radio-label">反色</span>
                     </label>
+                    <label class="radio-option">
+                        <input type="checkbox" id="showVerticalInfo">
+                        <span class="radio-label">垂直化情報</span>
+                    </label>
                 </div>
             </div>
             
@@ -502,6 +506,15 @@
         
         <div class="preview-panel">
             <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">プレビュー</h2>
+            
+            <!-- Debug info for vertical processing -->
+            <div id="debugInfo" style="margin-bottom: 10px; font-size: 11px; color: #fbbf24; font-family: monospace; display: none;">
+                <div>垂直化処理: <span id="verticalProcessingStatus">有効</span></div>
+                <div>対象密度レベル: <span id="targetDensityLevels">中等密度</span></div>
+                <div>閾値n: <span id="thresholdN">2</span></div>
+                <div>処理モード: <span id="processingMode">中等密度（バランス重心のみ）</span></div>
+            </div>
+            
             <div id="moonArt" class="moon-art"><!-- 生成結果がここに表示されます --></div>
             
             <!-- Debug controls (hidden for production) -->
@@ -753,6 +766,9 @@
                 
                 // 噪音过滤阈值：低于此黑色像素数量的网格将显示为背景
                 this.noiseThreshold = 1;
+                
+                // 垂直化处理记录：存储被处理字符的位置和密度信息
+                this.verticalProcessingPositions = [];
             }
             
             // 设置噪音过滤阈值
@@ -765,8 +781,8 @@
                 return gray < 128 ? 0 : 1; // 0 = 黑色，1 = 白色
             }
             
-            // 基于5x5网格的新密度分级月相转换系统
-            gridToMoon(grid) {
+            // 基于5x5网格的新密度分级月相转换系统（带元数据）
+            gridToMoonWithMeta(grid) {
                 // 统计5x5网格中黑色像素（0）的数量
                 let blackCount = 0;
                 for (let y = 0; y < 5; y++) {
@@ -777,30 +793,46 @@
                     }
                 }
                 
-                // 定义密度分级系统（基于function_M.txt）
+                // 获取密度等级信息
                 const densityLevel = this.getDensityLevel(blackCount);
                 
-                // 根据密度等级选择月相
+                // 计算水平重心和偏向
+                const centerX = this.calculateHorizontalCenter(grid);
+                const bias = this.getBias(centerX);
+                
+                // 根据密度等级和偏向选择原始月相
+                let originalMoonPhase;
                 switch (densityLevel.name) {
                     case '极低密度':
-                        return '🌑';
-                    
+                        originalMoonPhase = '🌑';
+                        break;
                     case '高密度':
-                        return '🌕';
-                    
+                        originalMoonPhase = '🌕';
+                        break;
                     case '中低密度':
                     case '中等密度':
                     case '次高密度':
-                        // 计算水平重心来判断左右偏向
-                        const centerX = this.calculateHorizontalCenter(grid);
-                        const bias = this.getBias(centerX);
-                        
-                        // 根据密度等级和偏向选择月相
-                        return this.selectMoonPhase(densityLevel.name, bias);
-                    
+                        originalMoonPhase = this.selectMoonPhase(densityLevel.name, bias);
+                        break;
                     default:
-                        return '🌑';
+                        originalMoonPhase = '🌑';
                 }
+                
+                // 返回完整的元数据
+                return {
+                    originalMoonPhase: originalMoonPhase,
+                    finalMoonPhase: originalMoonPhase, // 初始时与原始月相相同
+                    densityLevel: densityLevel.name,
+                    densitySymbol: densityLevel.debugSymbol,
+                    bias: bias,
+                    blackCount: blackCount,
+                    centerX: centerX
+                };
+            }
+            
+            // 基于5x5网格的新密度分级月相转换系统（向后兼容）
+            gridToMoon(grid) {
+                return this.gridToMoonWithMeta(grid).finalMoonPhase;
             }
             
             // 获取密度等级
@@ -879,6 +911,137 @@
                     '🌘': '🌔'  // 残月 ↔ 凸月
                 };
                 return reverseMap[emoji] || emoji;
+            }
+            
+            // 垂直化处理：字符空缺度映射表
+            getCharacterVacancy(moonPhase) {
+                // 增强的字符规范化处理
+                let normalizedPhase = moonPhase.normalize('NFC').replace(/[\uFE0E\uFE0F]/g, '').trim();
+                
+                // 使用字符码点进行精确匹配
+                const vacancyMapByCodePoint = {
+                    0x1F314: 1, // 🌔
+                    0x1F313: 2, // 🌓  
+                    0x1F312: 3, // 🌒
+                    0x1F311: 4, // 🌑
+                    0x1F318: 3, // 🌘
+                    0x1F317: 2, // 🌗
+                    0x1F316: 1, // 🌖
+                    0x1F315: 0  // 🌕
+                };
+                
+                // 优先使用码点匹配
+                const codePoint = normalizedPhase.codePointAt(0);
+                if (codePoint && vacancyMapByCodePoint.hasOwnProperty(codePoint)) {
+                    return vacancyMapByCodePoint[codePoint];
+                }
+                
+                // 备用字符串匹配
+                const vacancyMap = {
+                    '🌔': 1, '🌓': 2, '🌒': 3, '🌑': 4,
+                    '🌘': 3, '🌗': 2, '🌖': 1, '🌕': 0
+                };
+                
+                return vacancyMap[normalizedPhase] || 4; // 默认为最高空缺度
+            }
+            
+            // 检查是否需要垂直化处理
+            shouldApplyVerticalProcessing(cellMeta, targetDensityLevels) {
+                return targetDensityLevels.includes(cellMeta.densityLevel) && 
+                       cellMeta.bias === 'balanced';
+            }
+            
+            // 从上到下进行垂直化处理
+            applyVerticalProcessing(gridWithMeta, targetDensityLevels, thresholdN = 2) {
+                const gridHeight = gridWithMeta.length;
+                const gridWidth = gridWithMeta[0]?.length || 0;
+                
+                // 清空之前的记录
+                this.verticalProcessingPositions = [];
+                
+                
+                
+                
+                
+                // 从第2行开始处理（第1行没有上方字符）
+                for (let row = 1; row < gridHeight; row++) {
+                    for (let col = 0; col < gridWidth; col++) {
+                        const currentCell = gridWithMeta[row][col];
+                        
+                        // 检查是否需要垂直化处理
+                        if (this.shouldApplyVerticalProcessing(currentCell, targetDensityLevels)) {
+                            // 记录被垂直化处理的位置和密度信息
+                            this.verticalProcessingPositions.push({
+                                row: row,
+                                col: col,
+                                densityLevel: currentCell.densityLevel
+                            });
+                            
+                            const aboveCell = gridWithMeta[row - 1][col];
+                            const aboveVacancy = this.getCharacterVacancy(aboveCell.finalMoonPhase);
+                            
+                            
+                            // 统一使用空缺度判断
+                            if (aboveVacancy <= thresholdN) {
+                                currentCell.finalMoonPhase = '🌑';
+                            } else {
+                                currentCell.finalMoonPhase = '🌕';
+                            }
+                            
+                        }
+                        // 不需要垂直化处理的字符保持原有finalMoonPhase不变
+                    }
+                }
+                
+                
+                return gridWithMeta;
+            }
+            
+            // 密度等级调试符号映射
+            getDensityDebugSymbol(densityLevel) {
+                const DENSITY_DEBUG_SYMBOLS = {
+                    '中等密度': '🟧',  // 橙色方块
+                    '中低密度': '🟦',  // 蓝色方块  
+                    '次高密度': '🟨',  // 黄色方块
+                    '极低密度': '⬛',  // 黑色方块
+                    '高密度': '🌕'     // 保持原样
+                };
+                return DENSITY_DEBUG_SYMBOLS[densityLevel] || '❓';
+            }
+            
+            // 应用垂直化调试符号显示
+            applyVerticalDebugSymbols(resultText) {
+                if (this.verticalProcessingPositions.length === 0) {
+                    return resultText;
+                }
+                
+                const lines = resultText.split('\n');
+                const resultLines = [...lines];
+                
+                // 遍历所有被垂直化处理的位置，替换为调试符号（显示处理状态）
+                for (const position of this.verticalProcessingPositions) {
+                    const { row, col, densityLevel } = position;
+                    
+                    if (row < resultLines.length) {
+                        const line = resultLines[row];
+                        if (col < line.length) {
+                            const originalChar = Array.from(line)[col];
+                            let debugSymbol;
+                            
+                            // 统一使用密度符号，不对处理结果做区分
+                            debugSymbol = this.getDensityDebugSymbol(densityLevel);
+                            
+                            // 替换指定位置的字符
+                            const chars = Array.from(line);
+                            chars[col] = debugSymbol;
+                            resultLines[row] = chars.join('');
+                            
+                            console.log(`调试符号替换: 位置(${row},${col}), 原字符=${originalChar}, 密度=${densityLevel} → ${debugSymbol}`);
+                        }
+                    }
+                }
+                
+                return resultLines.join('\n');
             }
             
             // 应用字符间距
@@ -1116,34 +1279,295 @@
                 return finalLines.join('\n');
             }
             
-            // 生成月文字（使用单字符处理架构）
-            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0) {
+            // 生成带元数据的单个字符
+            generateSingleCharWithMeta(char, sizeParam = 20, fontType = 'custom', isVertical = true) {
+                if (!char.trim()) return [];
+                
+                const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['default'];
+                
+                // 第一阶段：创建足够大的canvas来完整渲染字符
+                const baseFontSize = Math.max(sizeParam * 5, 50);
+                const canvasWidth = baseFontSize * 2;
+                const canvasHeight = baseFontSize * 2;
+                
+                const canvas = document.createElement('canvas');
+                canvas.width = canvasWidth;
+                canvas.height = canvasHeight;
+                
+                const ctx = canvas.getContext('2d');
+                
+                // 绘制白色背景
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // 绘制黑色字符
+                ctx.fillStyle = 'black';
+                ctx.font = `bold ${baseFontSize}px ${fontFamily}`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                const x = canvas.width / 2;
+                const y = canvas.height / 2;
+                ctx.fillText(char, x, y);
+                
+                console.log(`字符 "${char}" 渲染: canvas=${canvasWidth}x${canvasHeight}, fontSize=${baseFontSize}`);
+                
+                // 获取图像数据并转换为像素矩阵
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const pixelMatrix = [];
+                
+                for (let y = 0; y < canvas.height; y++) {
+                    pixelMatrix[y] = [];
+                    for (let x = 0; x < canvas.width; x++) {
+                        const idx = (y * canvas.width + x) * 4;
+                        const gray = 0.299 * imageData.data[idx] + 
+                                   0.587 * imageData.data[idx + 1] + 
+                                   0.114 * imageData.data[idx + 2];
+                        pixelMatrix[y][x] = this.grayToColorLevel(gray);
+                    }
+                }
+                
+                // 找到字符的实际边界
+                let minX = canvas.width, maxX = 0, minY = canvas.height, maxY = 0;
+                let foundText = false;
+                
+                for (let y = 0; y < canvas.height; y++) {
+                    for (let x = 0; x < canvas.width; x++) {
+                        if (pixelMatrix[y][x] === 0) {
+                            minX = Math.min(minX, x);
+                            maxX = Math.max(maxX, x);
+                            minY = Math.min(minY, y);
+                            maxY = Math.max(maxY, y);
+                            foundText = true;
+                        }
+                    }
+                }
+                
+                if (!foundText) {
+                    // 如果没找到文字，返回按目标尺寸的默认矩形元数据
+                    const defaultSize = isVertical ? [sizeParam, 3] : [3, sizeParam];
+                    const defaultGrid = [];
+                    for (let row = 0; row < defaultSize[1]; row++) {
+                        defaultGrid[row] = [];
+                        for (let col = 0; col < defaultSize[0]; col++) {
+                            defaultGrid[row][col] = this.gridToMoonWithMeta(Array(5).fill().map(() => Array(5).fill(0)));
+                        }
+                    }
+                    return defaultGrid;
+                }
+                
+                // 第二阶段：将字符边界映射到目标尺寸
+                const charWidth = maxX - minX + 1;
+                const charHeight = maxY - minY + 1;
+                
+                let targetPixelWidth, targetPixelHeight;
+                if (isVertical) {
+                    targetPixelWidth = sizeParam * 5;
+                    targetPixelHeight = Math.ceil((charHeight * targetPixelWidth) / charWidth);
+                    targetPixelHeight = Math.ceil(targetPixelHeight / 5) * 5;
+                } else {
+                    targetPixelHeight = sizeParam * 5;
+                    targetPixelWidth = Math.ceil((charWidth * targetPixelHeight) / charHeight);
+                    targetPixelWidth = Math.ceil(targetPixelWidth / 5) * 5;
+                }
+                
+                console.log(`字符 "${char}" 边界: ${charWidth}x${charHeight} → 目标: ${targetPixelWidth}x${targetPixelHeight}`);
+                
+                // 第三阶段：按目标尺寸进行5x5网格扫描并生成元数据
+                const gridSize = 5;
+                const metaGrid = [];
+                
+                for (let targetY = 0; targetY < targetPixelHeight; targetY += gridSize) {
+                    const metaRow = [];
+                    for (let targetX = 0; targetX < targetPixelWidth; targetX += gridSize) {
+                        // 提取5x5子网格
+                        const subGrid = [];
+                        for (let dy = 0; dy < 5; dy++) {
+                            subGrid[dy] = [];
+                            for (let dx = 0; dx < 5; dx++) {
+                                const sourceX = minX + Math.round((targetX + dx) * charWidth / targetPixelWidth);
+                                const sourceY = minY + Math.round((targetY + dy) * charHeight / targetPixelHeight);
+                                
+                                if (sourceY >= 0 && sourceY < canvas.height && sourceX >= 0 && sourceX < canvas.width) {
+                                    subGrid[dy][dx] = pixelMatrix[sourceY][sourceX];
+                                } else {
+                                    subGrid[dy][dx] = 1; // 白色
+                                }
+                            }
+                        }
+                        
+                        metaRow.push(this.gridToMoonWithMeta(subGrid));
+                    }
+                    metaGrid.push(metaRow);
+                }
+                
+                console.log(`字符 "${char}" 元数据输出: ${metaGrid[0]?.length || 0}列 x ${metaGrid.length}行`);
+                
+                return metaGrid;
+            }
+
+            // 生成月文字（使用单字符处理架构，支持垂直化处理）
+            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, showVerticalDebug = false) {
                 if (!text.trim()) return '';
                 
                 console.log(`单字符处理架构: text="${text}", sizeParam=${sizeParam}, isVertical=${isVertical}, spacing=${spacing}`);
                 console.log(`排版方向确认: ${isVertical ? '竖向排版（字符垂直排列）' : '横向排版（字符水平排列）'}`);
+                console.log(`垂直化处理: ${enableVerticalProcessing ? '启用' : '禁用'}`);
                 
                 // 将文本拆分为字符数组
                 const chars = Array.from(text);
                 
-                // 为每个字符生成月相结果
-                const charResults = chars.map(char => {
-                    return this.generateSingleChar(char, sizeParam, fontType, isVertical);
-                });
-                
-                // 根据排版方向拼接结果
-                let result;
-                if (isVertical) {
-                    // 竖向排版（縦書き）：字符从上到下排列
-                    result = this.combineVertically(charResults, spacing, sizeParam);
+                if (enableVerticalProcessing) {
+                    // 为每个字符生成带元数据的结果
+                    const charMetaResults = chars.map(char => {
+                        return this.generateSingleCharWithMeta(char, sizeParam, fontType, isVertical);
+                    });
+                    
+                    // 创建全局元数据网格用于垂直化处理
+                    let globalMetaGrid = [];
+                    let maxCharWidth = 0;
+                    
+                    if (isVertical) {
+                        // 竖向排版：字符从上到下排列
+                        for (let charIndex = 0; charIndex < charMetaResults.length; charIndex++) {
+                            const charMeta = charMetaResults[charIndex];
+                            maxCharWidth = Math.max(maxCharWidth, charMeta[0]?.length || 0);
+                            
+                            // 添加当前字符的所有行到全局网格
+                            globalMetaGrid.push(...charMeta);
+                            
+                            // 如果不是最后一个字符且需要间距，添加间距行
+                            if (charIndex < charMetaResults.length - 1 && spacing > 0) {
+                                for (let s = 0; s < spacing; s++) {
+                                    const spacingRow = [];
+                                    for (let col = 0; col < (charMeta[0]?.length || sizeParam); col++) {
+                                        spacingRow.push({
+                                            originalMoonPhase: '🌑',
+                                            finalMoonPhase: '🌑',
+                                            densityLevel: '极低密度',
+                                            densitySymbol: '⬛',
+                                            bias: 'balanced',
+                                            blackCount: 0,
+                                            centerX: 2
+                                        });
+                                    }
+                                    globalMetaGrid.push(spacingRow);
+                                }
+                            }
+                        }
+                    } else {
+                        // 横向排版：字符从左到右排列
+                        const maxLines = Math.max(...charMetaResults.map(result => result.length));
+                        
+                        // 标准化所有字符结果的行数
+                        const normalizedResults = charMetaResults.map(result => {
+                            const normalized = [...result];
+                            const charWidth = result[0]?.length || sizeParam;
+                            
+                            while (normalized.length < maxLines) {
+                                const emptyRow = [];
+                                for (let col = 0; col < charWidth; col++) {
+                                    emptyRow.push({
+                                        originalMoonPhase: '🌑',
+                                        finalMoonPhase: '🌑',
+                                        densityLevel: '极低密度',
+                                        densitySymbol: '⬛',
+                                        bias: 'balanced',
+                                        blackCount: 0,
+                                        centerX: 2
+                                    });
+                                }
+                                normalized.push(emptyRow);
+                            }
+                            
+                            return normalized;
+                        });
+                        
+                        // 逐行拼接所有字符
+                        for (let lineIndex = 0; lineIndex < maxLines; lineIndex++) {
+                            const combinedRow = [];
+                            
+                            for (let charIndex = 0; charIndex < normalizedResults.length; charIndex++) {
+                                combinedRow.push(...normalizedResults[charIndex][lineIndex]);
+                                
+                                // 如果不是最后一个字符且需要间距，添加间距列
+                                if (charIndex < normalizedResults.length - 1 && spacing > 0) {
+                                    for (let s = 0; s < spacing; s++) {
+                                        combinedRow.push({
+                                            originalMoonPhase: '🌑',
+                                            finalMoonPhase: '🌑',
+                                            densityLevel: '极低密度',
+                                            densitySymbol: '⬛',
+                                            bias: 'balanced',
+                                            blackCount: 0,
+                                            centerX: 2
+                                        });
+                                    }
+                                }
+                            }
+                            
+                            globalMetaGrid.push(combinedRow);
+                        }
+                    }
+                    
+                    console.log(`全局网格创建完成: ${globalMetaGrid[0]?.length || 0}列 x ${globalMetaGrid.length}行`);
+                    
+                    // 应用垂直化处理
+                    const targetDensityLevels = ['中等密度']; // 默认处理中等密度
+                    const thresholdN = 2; // 默认阈值
+                    
+                    globalMetaGrid = this.applyVerticalProcessing(globalMetaGrid, targetDensityLevels, thresholdN);
+                    
+                    // 验证垂直化处理的结果
+                    console.error(`🔍 验证垂直化处理结果:`);
+                    let avoidCount = 0, keepCount = 0;
+                    this.verticalProcessingPositions.forEach(pos => {
+                        if (pos.row < globalMetaGrid.length && pos.col < globalMetaGrid[pos.row].length) {
+                            const cell = globalMetaGrid[pos.row][pos.col];
+                            console.error(`验证位置(${pos.row},${pos.col}): finalMoonPhase=${cell.finalMoonPhase}, 密度=${cell.densityLevel}`);
+                            if (cell.finalMoonPhase === '🌑') {
+                                avoidCount++;
+                            } else if (cell.finalMoonPhase === '🌕') {
+                                keepCount++;
+                            }
+                        }
+                    });
+                    console.error(`📊 垂直化处理统计: 避让🌑=${avoidCount}个, 保持🌕=${keepCount}个`);
+                    
+                    // 从处理后的元数据网格提取最终月相
+                    const resultLines = globalMetaGrid.map(row => 
+                        row.map(cell => cell.finalMoonPhase).join('')
+                    );
+                    
+                    let result = resultLines.join('\n');
+                    
+                    // 如果启用调试模式，应用垂直化调试符号
+                    if (showVerticalDebug) {
+                        result = this.applyVerticalDebugSymbols(result);
+                        console.log(`垂直化调试符号已应用，共${this.verticalProcessingPositions.length}个位置`);
+                    }
+                    
+                    console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+                    
+                    return result;
+                    
                 } else {
-                    // 横向排版（横書き）：字符从左到右排列
-                    result = this.combineHorizontally(charResults, spacing, sizeParam);
+                    // 传统处理方式（无垂直化）
+                    const charResults = chars.map(char => {
+                        return this.generateSingleChar(char, sizeParam, fontType, isVertical);
+                    });
+                    
+                    // 根据排版方向拼接结果
+                    let result;
+                    if (isVertical) {
+                        result = this.combineVertically(charResults, spacing, sizeParam);
+                    } else {
+                        result = this.combineHorizontally(charResults, spacing, sizeParam);
+                    }
+                    
+                    console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+                    return result;
                 }
-                
-                console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
-                
-                return result;
             }
         }
         
@@ -1281,21 +1705,68 @@
             console.log('updatePreview - 最终isVertical值:', isVertical);
             
             const reverseColor = document.getElementById('reverseColor').checked;
+            const showVerticalInfo = document.getElementById('showVerticalInfo').checked;
             
             if (!text) {
                 document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
                 document.getElementById('actionButtons').style.display = 'none';
+                document.getElementById('debugInfo').style.display = 'none';
                 return;
             }
             
             try {
-                // 设置噪音过滤阈值并生成基础结果（不执行反色）
+                // 设置噪音过滤阈值并生成基础结果（启用垂直化处理，不执行反色）
                 generator.setNoiseThreshold(threshold);
-                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing);
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, false); // 先不显示调试信息
+                
+                // 添加垂直化处理后的调试输出
+                console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
+                console.log(`垂直化处理记录数: ${generator.verticalProcessingPositions.length}`);
+                if (generator.verticalProcessingPositions.length > 0) {
+                    console.log(`垂直化处理详情:`, generator.verticalProcessingPositions);
+                    const lines = result.split('\n');
+                    generator.verticalProcessingPositions.forEach(pos => {
+                        if (pos.row < lines.length && pos.col < lines[pos.row].length) {
+                            const char = Array.from(lines[pos.row])[pos.col];
+                            console.log(`位置(${pos.row},${pos.col}): 当前字符=${char}, 密度=${pos.densityLevel}`);
+                        }
+                    });
+                }
+                
+                // 如果启用垂直化调试信息，在横向加强算法之前显示
+                if (showVerticalInfo) {
+                    result = generator.applyVerticalDebugSymbols(result);
+                    console.log(`垂直化调试符号已应用（横向加强前），共${generator.verticalProcessingPositions.length}个位置`);
+                }
                 
                 // 应用横向加强算法
                 horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
                 result = horizontalEnhancer.enhance(result);
+                
+                // 垂直化处理的最终结果检查
+                console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
+                if (generator.verticalProcessingPositions.length > 0) {
+                    const linesFinal = result.split('\n');
+                    let moon_count = 0, black_count = 0;
+                    
+                    generator.verticalProcessingPositions.forEach(pos => {
+                        if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
+                            const charFinal = Array.from(linesFinal[pos.row])[pos.col];
+                            console.log(`最终位置(${pos.row},${pos.col}): 字符=${charFinal}, 密度=${pos.densityLevel}`);
+                            
+                            if (charFinal === '🌕') moon_count++;
+                            else if (charFinal === '🌑') black_count++;
+                        }
+                    });
+                    
+                    console.error(`📊 垂直化处理统计: 🌕=${moon_count}个, 🌑=${black_count}个`);
+                    
+                    // 检查整个结果字符串的内容统计
+                    const allChars = result.replace(/\n/g, '');
+                    const totalMoon = (allChars.match(/🌕/g) || []).length;
+                    const totalBlack = (allChars.match(/🌑/g) || []).length;
+                    console.error(`📊 整体字符统计: 总🌕=${totalMoon}个, 总🌑=${totalBlack}个`);
+                }
                 
                 // 最后执行反色操作
                 if (reverseColor) {
@@ -1307,6 +1778,13 @@
                 
                 document.getElementById('moonArt').textContent = result;
                 
+                // 显示垂直化处理调试信息
+                document.getElementById('debugInfo').style.display = 'block';
+                document.getElementById('verticalProcessingStatus').textContent = '有効';
+                document.getElementById('targetDensityLevels').textContent = '中等密度';
+                document.getElementById('thresholdN').textContent = '2';
+                document.getElementById('processingMode').textContent = '中等密度（バランス重心のみ）';
+                
                 // 显示操作按钮
                 document.getElementById('actionButtons').style.display = 'flex';
                 
@@ -1315,6 +1793,7 @@
                 console.error('Generation error:', error);
                 document.getElementById('moonArt').textContent = 'エラーが発生しました';
                 document.getElementById('actionButtons').style.display = 'none';
+                document.getElementById('debugInfo').style.display = 'none';
             }
         }
         
@@ -1381,6 +1860,9 @@
             
             // 添加反色复选框事件监听器
             document.getElementById('reverseColor').addEventListener('change', updatePreview);
+            
+            // 添加垂直化信息复选框事件监听器
+            document.getElementById('showVerticalInfo').addEventListener('change', updatePreview);
             
             // 添加按钮事件监听器
             document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
