@@ -765,58 +765,105 @@
                 return gray < 128 ? 0 : 1; // 0 = 黑色，1 = 白色
             }
             
-            // 基于像素位置分布的4x4网格转月相
+            // 基于5x5网格的新密度分级月相转换系统
             gridToMoon(grid) {
-                // 统计4x4网格中黑色像素（0）的数量
+                // 统计5x5网格中黑色像素（0）的数量
                 let blackCount = 0;
-                for (let y = 0; y < 4; y++) {
-                    for (let x = 0; x < 4; x++) {
+                for (let y = 0; y < 5; y++) {
+                    for (let x = 0; x < 5; x++) {
                         if (grid[y][x] === 0) { // 0 = 黑色
                             blackCount++;
                         }
                     }
                 }
                 
-                // 噪音过滤：如果黑色像素数量低于阈值，显示为背景
-                if (blackCount < this.noiseThreshold) {
-                    return '🌑';
+                // 定义密度分级系统（基于function_M.txt）
+                const densityLevel = this.getDensityLevel(blackCount);
+                
+                // 根据密度等级选择月相
+                switch (densityLevel.name) {
+                    case '极低密度':
+                        return '🌑';
+                    
+                    case '高密度':
+                        return '🌕';
+                    
+                    case '中低密度':
+                    case '中等密度':
+                    case '次高密度':
+                        // 计算水平重心来判断左右偏向
+                        const centerX = this.calculateHorizontalCenter(grid);
+                        const bias = this.getBias(centerX);
+                        
+                        // 根据密度等级和偏向选择月相
+                        return this.selectMoonPhase(densityLevel.name, bias);
+                    
+                    default:
+                        return '🌑';
+                }
+            }
+            
+            // 获取密度等级
+            getDensityLevel(blackCount) {
+                const densityLevels = [
+                    { name: '极低密度', minPixels: 1, maxPixels: 4, debugSymbol: '⬛' },
+                    { name: '中低密度', minPixels: 5, maxPixels: 8, debugSymbol: '🟦' },
+                    { name: '中等密度', minPixels: 9, maxPixels: 14, debugSymbol: '🟧' },
+                    { name: '次高密度', minPixels: 15, maxPixels: 21, debugSymbol: '🟨' },
+                    { name: '高密度', minPixels: 22, maxPixels: 25, debugSymbol: '无' }
+                ];
+                
+                if (blackCount === 0) {
+                    return { name: '空白', debugSymbol: '⬜' };
                 }
                 
-                // 根据黑色像素数量和位置分布选择月相
-                if (blackCount === 0) {
-                    return '🌑';
-                } else if (blackCount >= 13 && blackCount <= 16) {
-                    return '🌕';
-                } else {
-                    // 计算像素重心来判断左右偏向
-                    let weightedX = 0;
-                    let totalBlack = 0;
-                    
-                    for (let y = 0; y < 4; y++) {
-                        for (let x = 0; x < 4; x++) {
-                            if (grid[y][x] === 0) { // 0 = 黑色
-                                weightedX += x;
-                                totalBlack++;
-                            }
+                for (const level of densityLevels) {
+                    if (blackCount >= level.minPixels && blackCount <= level.maxPixels) {
+                        return level;
+                    }
+                }
+                
+                // 超出范围，默认为高密度
+                return densityLevels[4];
+            }
+            
+            // 计算5x5网格的水平重心
+            calculateHorizontalCenter(grid) {
+                let weightedX = 0;
+                let totalBlack = 0;
+                
+                for (let y = 0; y < 5; y++) {
+                    for (let x = 0; x < 5; x++) {
+                        if (grid[y][x] === 0) { // 0 = 黑色
+                            weightedX += x;
+                            totalBlack++;
                         }
                     }
-                    
-                    // 计算平均x坐标（重心位置）
-                    const centerX = totalBlack > 0 ? weightedX / totalBlack : 1.5;
-                    const isLeftBiased = centerX < 1.5; // 小于1.5表示偏左
-                    
-                    // 根据黑色像素数量和偏向选择月相
-                    if (blackCount >= 1 && blackCount <= 4) {
-                        return isLeftBiased ? '🌘' : '🌒'; // 很少黑色：左偏🌘，右偏🌒
-                    } else if (blackCount >= 5 && blackCount <= 8) {
-                        return isLeftBiased ? '🌗' : '🌓'; // 少量黑色：左偏🌗，右偏🌓
-                    } else if (blackCount >= 9 && blackCount <= 12) {
-                        return isLeftBiased ? '🌖' : '🌔'; // 中等黑色：左偏🌖，右偏🌔
-                    }
                 }
                 
-                // 默认返回满月
-                return '🌕';
+                return totalBlack > 0 ? weightedX / totalBlack : 2; // 5x5中心为2
+            }
+            
+            // 判断重心偏向
+            getBias(centerX) {
+                if (centerX < 2.0) {
+                    return 'left';
+                } else if (centerX > 3.0) {
+                    return 'right';
+                } else {
+                    return 'balanced';
+                }
+            }
+            
+            // 根据密度等级和偏向选择月相
+            selectMoonPhase(densityLevel, bias) {
+                const phaseMap = {
+                    '中低密度': { left: '🌘', right: '🌒', balanced: '🌕' },
+                    '中等密度': { left: '🌗', right: '🌓', balanced: '🌕' },
+                    '次高密度': { left: '🌖', right: '🌔', balanced: '🌕' }
+                };
+                
+                return phaseMap[densityLevel]?.[bias] || '🌕';
             }
             
             // 月相反色处理
@@ -872,7 +919,7 @@
                 const fontFamily = FONT_FAMILIES[fontType] || FONT_FAMILIES['default'];
                 
                 // 第一阶段：创建足够大的canvas来完整渲染字符
-                const baseFontSize = Math.max(sizeParam * 4, 40); // 确保字符足够大
+                const baseFontSize = Math.max(sizeParam * 5, 50); // 确保字符足够大（5x5系统）
                 const canvasWidth = baseFontSize * 2;   // 给字符足够的宽度空间
                 const canvasHeight = baseFontSize * 2;  // 给字符足够的高度空间
                 
@@ -951,33 +998,33 @@
                 
                 let targetPixelWidth, targetPixelHeight;
                 if (isVertical) {
-                    // 竖向：固定宽度为sizeParam*4像素，高度按比例缩放
-                    targetPixelWidth = sizeParam * 4;
+                    // 竖向：固定宽度为sizeParam*5像素，高度按比例缩放（5x5系统）
+                    targetPixelWidth = sizeParam * 5;
                     targetPixelHeight = Math.ceil((charHeight * targetPixelWidth) / charWidth);
-                    // 确保高度是4的倍数
-                    targetPixelHeight = Math.ceil(targetPixelHeight / 4) * 4;
+                    // 确保高度是5的倍数
+                    targetPixelHeight = Math.ceil(targetPixelHeight / 5) * 5;
                 } else {
-                    // 横向：固定高度为sizeParam*4像素，宽度按比例缩放  
-                    targetPixelHeight = sizeParam * 4;
+                    // 横向：固定高度为sizeParam*5像素，宽度按比例缩放（5x5系统）
+                    targetPixelHeight = sizeParam * 5;
                     targetPixelWidth = Math.ceil((charWidth * targetPixelHeight) / charHeight);
-                    // 确保宽度是4的倍数
-                    targetPixelWidth = Math.ceil(targetPixelWidth / 4) * 4;
+                    // 确保宽度是5的倍数
+                    targetPixelWidth = Math.ceil(targetPixelWidth / 5) * 5;
                 }
                 
                 console.log(`字符 "${char}" 边界: ${charWidth}x${charHeight} → 目标: ${targetPixelWidth}x${targetPixelHeight}`);
                 
-                // 第三阶段：按目标尺寸进行4x4网格扫描
-                const gridSize = 4;
+                // 第三阶段：按目标尺寸进行5x5网格扫描
+                const gridSize = 5;
                 const resultLines = [];
                 
                 for (let targetY = 0; targetY < targetPixelHeight; targetY += gridSize) {
                     let line = '';
                     for (let targetX = 0; targetX < targetPixelWidth; targetX += gridSize) {
-                        // 提取4x4子网格
+                        // 提取5x5子网格
                         const subGrid = [];
-                        for (let dy = 0; dy < 4; dy++) {
+                        for (let dy = 0; dy < 5; dy++) {
                             subGrid[dy] = [];
-                            for (let dx = 0; dx < 4; dx++) {
+                            for (let dx = 0; dx < 5; dx++) {
                                 // 将目标坐标映射回原始字符坐标
                                 const sourceX = minX + Math.round((targetX + dx) * charWidth / targetPixelWidth);
                                 const sourceY = minY + Math.round((targetY + dy) * charHeight / targetPixelHeight);
