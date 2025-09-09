@@ -143,7 +143,7 @@
         }
         
         .form-group {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         /* 通栏控件95%宽度 */
@@ -156,6 +156,14 @@
             display: block;
             margin-bottom: 5px;
             font-weight: 600;
+        }
+        
+        .form-group h3 {
+            margin-bottom: 5px;
+        }
+        
+        .height-control-group {
+            margin-bottom: 12px;
         }
         
         .text-input {
@@ -463,12 +471,12 @@
             }
             
             .form-group {
-                margin-bottom: 10px;
+                margin-bottom: 4px;
             }
             
             .form-group h3 {
                 font-size: 1.1rem;
-                margin-bottom: 10px;
+                margin-bottom: 3px;
             }
             
             .radio-group {
@@ -476,11 +484,15 @@
             }
             
             .action-buttons {
-                flex-direction: column;
+                gap: 5px;
+                flex-wrap: nowrap;
             }
             
             .action-btn {
-                min-width: auto;
+                min-width: 0;
+                padding: 8px 6px;
+                font-size: 12px;
+                flex: 1;
             }
             
             .upload-area {
@@ -489,6 +501,14 @@
             
             .height-control {
                 gap: 6px;
+            }
+            
+            .noise-reduction-option {
+                display: none !important;
+            }
+            
+            .height-control-group {
+                margin-bottom: 6px;
             }
             
             .dual-control-group {
@@ -618,13 +638,12 @@
             
             <!-- Text Input Tab Content -->
             <div class="tab-content active" id="textTab">
-                <h2 style="font-size: 1.2rem; margin-bottom: 15px; color: white; font-weight: 600;">Text Input & Settings</h2>
                 <div class="form-group">
                     <label for="textInput">Text Input</label>
                     <input type="text" id="textInput" class="text-input" placeholder="Enter text to convert..." maxlength="50">
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group height-control-group">
                     <h3>Height: <span id="heightValue">10</span> rows</h3>
                     <div class="height-control">
                         <span>10</span>
@@ -659,7 +678,7 @@
                             <span class="radio-label">Vertical</span>
                         </label>
                         <label class="radio-option">
-                            <input type="radio" name="direction" value="horizontal" checked>
+                            <input type="radio" name="direction" value="horizontal">
                             <span class="radio-label">Horizontal</span>
                         </label>
                     </div>
@@ -685,7 +704,6 @@
                 </div>
                 
                 <div class="form-group">
-                    <h3>Options</h3>
                     <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
                         <input type="checkbox" id="reverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
                         <label for="reverseColor" style="cursor: pointer; font-weight: 600;">Reverse Color</label>
@@ -695,7 +713,6 @@
             
             <!-- Image Input Tab Content -->
             <div class="tab-content" id="imageTab">
-                <h2 style="font-size: 1.2rem; margin-bottom: 15px; color: white; font-weight: 600;">Image Upload & Settings</h2>
                 <div class="form-group">
                     <label>Image Upload</label>
                     <div class="upload-area" id="uploadArea">
@@ -705,7 +722,7 @@
                     <input type="file" id="imageInput" class="file-input" accept="image/*">
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group height-control-group">
                     <h3>Height: <span id="imageHeightValue">60</span> rows</h3>
                     <div class="height-control">
                         <span>10</span>
@@ -714,7 +731,7 @@
                     </div>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group height-control-group">
                     <h3>Padding: <span id="imagePaddingValue">0</span></h3>
                     <div class="height-control">
                         <span>0</span>
@@ -724,13 +741,12 @@
                 </div>
                 
                 <div class="form-group">
-                    <h3>Options</h3>
                     <div style="display: flex; gap: 20px;">
                         <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
                             <input type="checkbox" id="imageReverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
                             <label for="imageReverseColor" style="cursor: pointer; font-weight: 600;">Reverse Color</label>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                        <div class="noise-reduction-option" style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
                             <input type="checkbox" id="enableDenoising" checked style="width: 18px; height: 18px; accent-color: #8b5cf6;">
                             <label for="enableDenoising" style="cursor: pointer; font-weight: 600;">Noise Reduction</label>
                         </div>
