@@ -345,7 +345,7 @@
         }
         
         .dual-control-item:first-child {
-            flex: 2;  /* 高さ控件占用更多空间 */
+            flex: 1;  /* 高さ控件与余白控件等宽 */
         }
         
         .dual-control-item:last-child {
@@ -503,11 +503,11 @@
             
             /* 移动端双列控件空间优化 */
             .dual-control-item:first-child {
-                flex: 2.2;  /* 高さ控件在移动端占用更多空间 */
+                flex: 1;  /* 高さ控件在移动端与余白控件等宽 */
             }
             
             .dual-control-item:last-child {
-                flex: 0.7;  /* 余白控件在移动端占用更少空间 */
+                flex: 1;  /* 余白控件在移动端与高さ控件等宽 */
             }
         }
         
