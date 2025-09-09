@@ -37,10 +37,6 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mojimoon.com/">
     
-    <!-- Hreflang -->
-    <link rel="alternate" href="https://mojimoon.com/" hreflang="ja">
-    <link rel="alternate" href="https://mojimoon.com/index_en.html" hreflang="en">
-    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -88,49 +84,6 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
-            position: relative;
-        }
-        
-        .guide-link {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.2s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .guide-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .lang-switcher {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.2s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .lang-switcher:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
         .control-panel {
@@ -392,16 +345,6 @@
                 margin-bottom: 5px;
             }
             
-            .guide-link {
-                font-size: 13px;
-                padding: 6px 12px;
-            }
-            
-            .lang-switcher {
-                font-size: 13px;
-                padding: 6px 12px;
-            }
-            
             .control-panel {
                 padding: 15px;
                 margin-bottom: 15px;
@@ -616,8 +559,6 @@
     <div class="container">
         <header class="header">
             <h1>🌙 月文字ジェネレーター</h1>
-            <a href="guide.html" class="guide-link">📖 使用ガイド</a>
-            <a href="index_en.html" class="lang-switcher">🌏 English</a>
         </header>
         
         <div class="control-panel">
@@ -716,14 +657,16 @@
                 </div>
                 
                 <!-- 第二行：反色（左对齐） -->
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
-                    <input type="checkbox" id="reverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
-                    <label for="reverseColor" style="cursor: pointer; font-weight: 600;">反色</label>
+                <div>
+                    <label style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                        <input type="checkbox" id="reverseColor">
+                        <span>反色</span>
+                    </label>
                 </div>
             </div>
             
             <!-- 调试参数区域 -->
-            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); display: none !important;">
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
                 <div class="debug-header" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 15px;" onclick="toggleDebugSection()">
                     <h3 style="margin: 0; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
                     <span id="debugToggleIcon" style="color: #fbbf24; font-size: 1rem; transition: transform 0.3s ease;">▶</span>
@@ -765,6 +708,13 @@
                     </div>
                     
                     <div style="margin-top: 15px;">
+                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">调试显示</h4>
+                        <div style="display: flex; gap: 20px;">
+                            <label class="radio-option">
+                                <input type="checkbox" id="showVerticalInfo">
+                                <span class="radio-label">垂直化情報</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -795,7 +745,7 @@
             <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">プレビュー</h2>
             
             <!-- Debug info for vertical processing -->
-            <div id="debugInfo" style="margin-bottom: 10px; font-size: 11px; color: #fbbf24; font-family: monospace; display: none !important;">
+            <div id="debugInfo" style="margin-bottom: 10px; font-size: 11px; color: #fbbf24; font-family: monospace; display: none;">
                 <div>垂直化処理: <span id="verticalProcessingStatus">有効</span></div>
                 <div>対象密度レベル: <span id="targetDensityLevels">中等密度</span></div>
                 <div>閾値n: <span id="thresholdN">2</span></div>
@@ -887,6 +837,7 @@
                                 ? this.applyOrderedDithering(imageData)
                                 : this.binarizeImage(imageData);
                             
+                            console.log(`图片处理完成: 原始尺寸=${img.width}x${img.height}, 目标尺寸=${finalWidth}x${finalHeight}, 灰度模式=${useGrayScale}`);
                             
                             resolve({
                                 matrix: processedMatrix,
@@ -962,6 +913,7 @@
                     result.push(row);
                 }
                 
+                console.log(`有序抖动处理完成: ${width}x${height}像素`);
                 return result;
             }
             
@@ -1448,6 +1400,42 @@
                 return DENSITY_DEBUG_SYMBOLS[densityLevel] || '❓';
             }
             
+            // 应用垂直化调试符号显示
+            applyVerticalDebugSymbols(resultText) {
+                if (this.verticalProcessingPositions.length === 0) {
+                    return resultText;
+                }
+                
+                
+                const lines = resultText.split('\n');
+                const resultLines = [...lines];
+                
+                // 遍历所有被垂直化处理的位置，替换为调试符号（显示处理状态）
+                for (const position of this.verticalProcessingPositions) {
+                    const { row, col, densityLevel } = position;
+                    
+                    if (row < resultLines.length) {
+                        const line = resultLines[row];
+                        if (col < line.length) {
+                            const originalChar = Array.from(line)[col];
+                            let debugSymbol;
+                            
+                            // 统一使用密度符号，不对处理结果做区分
+                            debugSymbol = this.getDensityDebugSymbol(densityLevel);
+                            
+                            
+                            // 替换指定位置的字符
+                            const chars = Array.from(line);
+                            chars[col] = debugSymbol;
+                            resultLines[row] = chars.join('');
+                            
+                            console.log(`调试符号替换: 位置(${row},${col}), 原字符=${originalChar}, 密度=${densityLevel} → ${debugSymbol}`);
+                        }
+                    }
+                }
+                
+                return resultLines.join('\n');
+            }
             
             // 应用字符间距
             applySpacing(text, spacing) {
@@ -1522,7 +1510,8 @@
             }
             
             // 从像素矩阵生成月文字（用于图片输入）
-            generateFromPixelMatrix(pixelMatrix, width, height, enableVerticalProcessing = true, padding = 0) {
+            generateFromPixelMatrix(pixelMatrix, width, height, enableVerticalProcessing = true, showVerticalDebug = false, padding = 0) {
+                console.log(`从像素矩阵生成月文字: ${width}x${height}像素`);
                 
                 // 清空垂直化处理记录
                 this.verticalProcessingPositions = [];
@@ -1560,6 +1549,7 @@
                     }
                 }
                 
+                console.log(`元数据网格生成完成: ${metaGrid[0]?.length || 0}列 x ${metaGrid.length}行`);
                 
                 // 应用垂直化处理（如果启用）
                 if (enableVerticalProcessing) {
@@ -1574,6 +1564,7 @@
                     const thresholdN = 2; // 默认阈值
                     
                     this.applyVerticalProcessing(metaGrid, targetDensityLevels, thresholdN);
+                    console.log(`垂直化处理完成，处理了${this.verticalProcessingPositions.length}个位置`);
                 }
                 
                 // 从元数据网格提取最终月相
@@ -1583,10 +1574,16 @@
                 
                 let result = resultLines.join('\n');
                 
+                // 应用垂直化调试符号（如果需要）
+                if (showVerticalDebug) {
+                    result = this.applyVerticalDebugSymbols(result);
+                    console.log(`垂直化调试符号已应用`);
+                }
                 
                 // 应用边距
                 if (padding > 0) {
                     result = this.applyPadding(result, padding);
+                    console.log(`边距应用完成，边距宽度: ${padding}`);
                 }
                 
                 return result;
@@ -1594,6 +1591,7 @@
             
             // 专门用于图片的简化处理流程（跳过文字优化算法）
             generateFromImage(pixelMatrix, width, height, padding = 0) {
+                console.log(`图片直接处理模式: ${width}x${height}像素`);
                 
                 const metaGrid = [];
                 const gridSize = 5;
@@ -1635,6 +1633,7 @@
                     result = this.applyPadding(result, padding);
                 }
                 
+                console.log(`图片处理完成: 输出${metaGrid.length}行`);
                 return result;
             }
             
@@ -1698,6 +1697,7 @@
                 const y = canvas.height / 2;
                 ctx.fillText(char, x, y);
                 
+                console.log(`字符 "${char}" 渲染: canvas=${canvasWidth}x${canvasHeight}, fontSize=${baseFontSize}`);
                 
                 // 获取图像数据并转换为像素矩阵
                 const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -1765,6 +1765,7 @@
                     targetPixelWidth = Math.ceil(targetPixelWidth / 5) * 5;
                 }
                 
+                console.log(`字符 "${char}" 边界: ${charWidth}x${charHeight} → 目标: ${targetPixelWidth}x${targetPixelHeight}`);
                 
                 // 第三阶段：按目标尺寸进行5x5网格扫描
                 const gridSize = 5;
@@ -1795,6 +1796,7 @@
                     resultLines.push(line);
                 }
                 
+                console.log(`字符 "${char}" 输出: ${resultLines[0]?.length || 0}列 x ${resultLines.length}行`);
                 
                 return resultLines;
             }
@@ -1899,6 +1901,7 @@
                 const y = canvas.height / 2;
                 ctx.fillText(char, x, y);
                 
+                console.log(`字符 "${char}" 渲染: canvas=${canvasWidth}x${canvasHeight}, fontSize=${baseFontSize}`);
                 
                 // 获取图像数据并转换为像素矩阵
                 const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -1959,6 +1962,7 @@
                     targetPixelWidth = Math.ceil(targetPixelWidth / 5) * 5;
                 }
                 
+                console.log(`字符 "${char}" 边界: ${charWidth}x${charHeight} → 目标: ${targetPixelWidth}x${targetPixelHeight}`);
                 
                 // 第三阶段：按目标尺寸进行5x5网格扫描并生成元数据
                 const gridSize = 5;
@@ -1988,14 +1992,18 @@
                     metaGrid.push(metaRow);
                 }
                 
+                console.log(`字符 "${char}" 元数据输出: ${metaGrid[0]?.length || 0}列 x ${metaGrid.length}行`);
                 
                 return metaGrid;
             }
 
             // 生成月文字（使用单字符处理架构，支持垂直化处理）
-            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, padding = 0) {
+            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, showVerticalDebug = false, padding = 0) {
                 if (!text.trim()) return '';
                 
+                console.log(`单字符处理架构: text="${text}", sizeParam=${sizeParam}, isVertical=${isVertical}, spacing=${spacing}`);
+                console.log(`排版方向确认: ${isVertical ? '竖向排版（字符垂直排列）' : '横向排版（字符水平排列）'}`);
+                console.log(`垂直化处理: ${enableVerticalProcessing ? '启用' : '禁用'}`);
                 
                 // 将文本拆分为字符数组
                 const chars = Array.from(text);
@@ -2093,6 +2101,7 @@
                         }
                     }
                     
+                    console.log(`全局网格创建完成: ${globalMetaGrid[0]?.length || 0}列 x ${globalMetaGrid.length}行`);
                     
                     // 从UI获取垂直化处理设置
                     const targetDensityLevels = [];
@@ -2129,6 +2138,11 @@
                     
                     let result = resultLines.join('\n');
                     
+                    // 如果启用调试模式，应用垂直化调试符号
+                    if (showVerticalDebug) {
+                        result = this.applyVerticalDebugSymbols(result);
+                        console.log(`垂直化调试符号已应用，共${this.verticalProcessingPositions.length}个位置`);
+                    }
                     
                     console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
                     
@@ -2332,6 +2346,7 @@
             console.log('updatePreview - 最终isVertical值:', isVertical);
             
             const reverseColor = document.getElementById('reverseColor').checked;
+            const showVerticalInfo = document.getElementById('showVerticalInfo').checked;
             const enableDenoising = document.getElementById('enableDenoising').checked;
             
             if (!text) {
@@ -2343,7 +2358,7 @@
             
             try {
                 // 生成基础结果（启用垂直化处理，不执行反色）
-                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding); // 先不显示调试信息
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, false, padding); // 先不显示调试信息
                 
                 // 添加垂直化处理后的调试输出
                 console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
@@ -2364,6 +2379,11 @@
                 horizontalEnhancer.setEnableDenoising(enableDenoising);
                 result = horizontalEnhancer.enhance(result);
                 
+                // 如果启用垂直化调试信息，在横向加强算法之后显示
+                if (showVerticalInfo) {
+                    result = generator.applyVerticalDebugSymbols(result);
+                    console.log(`垂直化调试符号已应用（横向加强后），共${generator.verticalProcessingPositions.length}个位置`);
+                }
                 
                 // 垂直化处理的最终结果检查
                 console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
@@ -2400,6 +2420,15 @@
                 
                 document.getElementById('moonArt').textContent = result;
                 
+                // 显示垂直化处理调试信息
+                document.getElementById('debugInfo').style.display = 'block';
+                const fontConfig = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
+                const verticalDensityLevels = fontConfig.verticalDensityLevels || [];
+                const isVerticalEnabled = verticalDensityLevels.length > 0;
+                document.getElementById('verticalProcessingStatus').textContent = isVerticalEnabled ? '有効' : '無効';
+                document.getElementById('targetDensityLevels').textContent = verticalDensityLevels.length > 0 ? verticalDensityLevels.join('、') : 'なし';
+                document.getElementById('thresholdN').textContent = '2';
+                document.getElementById('processingMode').textContent = `${fontType}預設: ${verticalDensityLevels.length > 0 ? verticalDensityLevels.join('・') : 'なし'}`;
                 
                 // 显示操作按钮
                 document.getElementById('actionButtons').style.display = 'flex';
@@ -2502,6 +2531,8 @@
             // 添加反色复选框事件监听器
             document.getElementById('reverseColor').addEventListener('change', updatePreview);
             
+            // 添加垂直化信息复选框事件监听器
+            document.getElementById('showVerticalInfo').addEventListener('change', updatePreview);
             
             // 添加垂直化处理控制复选框事件监听器
             document.getElementById('verticalMedium').addEventListener('change', updatePreview);
@@ -2561,6 +2592,23 @@
             initializeImageUpload();
         });
         
+        // 调试参数切换功能
+        function toggleDebugSection() {
+            const debugControls = document.getElementById('debugControls');
+            const debugToggleIcon = document.getElementById('debugToggleIcon');
+            
+            if (debugControls.classList.contains('expanded')) {
+                // 收起
+                debugControls.classList.remove('expanded');
+                debugToggleIcon.textContent = '▶';
+                debugToggleIcon.style.transform = 'rotate(0deg)';
+            } else {
+                // 展开
+                debugControls.classList.add('expanded');
+                debugToggleIcon.textContent = '▼';
+                debugToggleIcon.style.transform = 'rotate(90deg)';
+            }
+        }
         
         // Tab切换功能
         function initializeTabs() {
@@ -2754,7 +2802,8 @@
                 const height = parseInt(document.getElementById('heightSlider').value);
                 const padding = parseInt(document.getElementById('paddingSlider').value);
                 const reverseColor = document.getElementById('reverseColor').checked;
-                    const enableDenoising = document.getElementById('enableDenoising').checked;
+                const showVerticalInfo = document.getElementById('showVerticalInfo').checked;
+                const enableDenoising = document.getElementById('enableDenoising').checked;
                 const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
                 // 创建图片处理器
                 const imageProcessor = new ImageProcessor();

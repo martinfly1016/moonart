@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月文字ジェネレーター使用ガイド | 使い方・機能説明・Q&A - MojiMoon</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="月文字ジェネレーターの詳細な使用ガイド。基本操作から高度な機能まで、月の絵文字アート作成のすべてを解説。よくある質問と回答も掲載。">
+    <meta name="keywords" content="月文字,使い方,ガイド,絵文字アート,テキストアート,操作説明,機能説明">
+    <meta name="author" content="月文字ジェネレーター">
+    <meta name="robots" content="index,follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="月文字ジェネレーター使用ガイド">
+    <meta property="og:description" content="月の絵文字アート作成ツールの完全ガイド">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mojimoon.com/guide.html">
+    <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mojimoon">
+    <meta name="twitter:title" content="月文字ジェネレーター使用ガイド">
+    <meta name="twitter:description" content="月の絵文字アート作成ツールの使い方">
+    <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="/moon_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/moon_icon.png">
+    <link rel="apple-touch-icon" href="/moon_icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mojimoon.com/guide.html">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" href="https://mojimoon.com/guide.html" hreflang="ja">
+    <link rel="alternate" href="https://mojimoon.com/guide_en.html" hreflang="en">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "月文字ジェネレーター使用ガイド",
+        "description": "月の絵文字アート作成ツールの使い方とガイド",
+        "inLanguage": "ja",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "月文字ジェネレーター",
+            "url": "https://mojimoon.com/"
+        }
+    }
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WD9XP5ERGX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WD9XP5ERGX');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .guide-content {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .guide-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px 0;
+            color: #fbbf24;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+            padding-bottom: 5px;
+        }
+        
+        .guide-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .guide-content h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 10px 0;
+            color: #93c5fd;
+        }
+        
+        .guide-content h4 {
+            font-size: 1.1rem;
+            margin: 20px 0 8px 0;
+            color: #a7f3d0;
+        }
+        
+        .guide-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .guide-content ul, .guide-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .guide-content li {
+            margin-bottom: 8px;
+        }
+        
+        .guide-content strong {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .guide-content code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #93c5fd;
+        }
+        
+        .example-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: monospace;
+            color: #e5e7eb;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            line-height: 1.2;
+            font-size: 0.9rem;
+        }
+        
+        .example-image {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: block;
+        }
+        
+        .example-container {
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .example-image {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        .start-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 20px auto;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .start-button:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+        
+        .button-center {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            margin: 40px 0;
+        }
+        
+        .lang-switcher {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-switcher:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-content {
+                padding: 20px;
+            }
+            
+            .guide-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .start-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .lang-switcher {
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌙 月文字ジェネレーター 使用説明</h1>
+            <p>月の絵文字で作る美しいテキストアートの完全ガイド</p>
+            <a href="guide_en.html" class="lang-switcher">🌏 English</a>
+        </div>
+        
+        <div class="guide-content">
+            <h2>📖 総合概要</h2>
+            
+            <h3>月文字とは？</h3>
+            <p>月文字（つきもじ）は、月の満欠を表現する絵文字🌑🌒🌓🌔🌕🌖🌗🌘を使って作られる独特なテキストアートです。本ツールは、普通のテキストや画像を美しい月文字アートに変換する革新的なWebアプリケーションです。</p>
+            
+            <h3>本ツールの価値</h3>
+            <ul>
+                <li><strong>芸術的表現</strong>: 従来のテキストアートを超越した、月の神秘的な美しさを活用した新しい表現手法</li>
+                <li><strong>多様な用途</strong>: SNS投稿、メッセージカード、デジタルアート作品、プレゼンテーション等に活用可能</li>
+                <li><strong>無料で簡単</strong>: インストール不要、ブラウザ上で即座に利用開始</li>
+                <li><strong>高度な技術</strong>: 垂直化処理、横向加強算法など独自の最適化技術を搭載</li>
+                <li><strong>完全オリジナル</strong>: 世界初の本格的な月文字生成システム</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="https://mojimoon.com/" class="start-button">🚀 開始使用</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>🚀 基本操作ガイド</h2>
+            
+            <h3>Step 1: 入力方式の選択</h3>
+            <ol>
+                <li><strong>テキスト入力タブ</strong>: 文字から月文字を生成</li>
+                <li><strong>画像入力タブ</strong>: 画像から月文字を生成</li>
+            </ol>
+            
+            <h3>Step 2: テキスト入力の場合</h3>
+            <ol>
+                <li>「テキスト入力」タブを選択</li>
+                <li>入力フィールドに変換したいテキストを入力（例：「月文字」）</li>
+                <li>文字方向を選択：
+                    <ul>
+                        <li>縦書き（推奨）: 日本語の美しい縦書き表現</li>
+                        <li>横書き: 横向きのレイアウト</li>
+                    </ul>
+                </li>
+                <li>リアルタイムで月文字が生成されます</li>
+            </ol>
+            
+            <h3>Step 3: 画像入力の場合</h3>
+            <ol>
+                <li>「画像入力」タブを選択</li>
+                <li>画像をドラッグ&ドロップまたは「ファイルを選択」をクリック</li>
+                <li>JPG、PNG、GIF形式をサポート</li>
+                <li>自動で最適化処理され、月文字が生成されます</li>
+            </ol>
+            
+            <h3>Step 4: 結果の活用</h3>
+            <ul>
+                <li><strong>コピー</strong>: ワンクリックでクリップボードにコピー</li>
+                <li><strong>テキストダウンロード</strong>: .txtファイルとして保存</li>
+                <li><strong>画像ダウンロード</strong>: PNG画像として保存</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="https://mojimoon.com/" class="start-button">📝 今すぐ試す</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>⚙️ 詳細機能説明</h2>
+            
+            <h3>🎛️ 制御パラメータ</h3>
+            
+            <h4>高さ / 幅文字数</h4>
+            <ul>
+                <li><strong>テキストモード</strong>: 10-60行の高さ調整</li>
+                <li><strong>画像モード</strong>: 10-500行の詳細度調整</li>
+                <li><strong>推奨値</strong>: 通常利用では20-40行が最適</li>
+            </ul>
+            
+            <h4>フォント / 字體</h4>
+            <ul>
+                <li><strong>等幅</strong>: 統一された文字間隔、プログラミング風味</li>
+                <li><strong>ゴシック</strong>: モダンで読みやすい、汎用性高</li>
+                <li><strong>明朝</strong>: 伝統的で上品、和風表現に最適</li>
+                <li><strong>sans-serif</strong>: シンプルで現代的</li>
+            </ul>
+            
+            <h4>文字間隔 / 行間調整</h4>
+            <ul>
+                <li><strong>文字間隔</strong>: -2～+5ピクセルで微調整可能</li>
+                <li><strong>用途別推奨</strong>:
+                    <ul>
+                        <li>SNS投稿: 0～+1</li>
+                        <li>印刷用途: +1～+2</li>
+                        <li>モバイル表示: -1～0</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>余白 / マージン設定</h4>
+            <ul>
+                <li><strong>画像モード専用</strong>: 0-50ピクセルの枠線追加</li>
+                <li><strong>効果</strong>: アート作品としての完成度向上</li>
+                <li><strong>推奨値</strong>: 10-20ピクセル</li>
+            </ul>
+            
+            <h4>反色 / カラー反転</h4>
+            <ul>
+                <li><strong>効果</strong>: 明暗を逆転、印象的な表現</li>
+                <li><strong>用途</strong>: 暗い背景での表示、特殊効果</li>
+                <li><strong>組み合わせ</strong>: 他のパラメータとの併用で多彩な表現</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="https://mojimoon.com/" class="start-button">🎨 機能を試す</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>💡 実例集</h2>
+            
+            <h3>📝 テキスト変換例</h3>
+            
+            <div class="example-container">
+                <h4>例1: 「おはよう」</h4>
+                <div class="example-box">
+入力: おはよう
+                </div>
+                <img src="sample1.png" alt="おはよう月文字変換結果" class="example-image">
+            </div>
+            
+            <div class="example-container">
+                <h4>例2: 「love」</h4>
+                <div class="example-box">
+入力: love
+                </div>
+                <img src="sample2.png" alt="love月文字変換結果" class="example-image">
+            </div>
+            
+            <h3>🖼️ 画像変換例</h3>
+            
+            <div class="example-container">
+                <h4>例3: 犬の写真</h4>
+                <div class="example-box">
+入力: 犬の写真
+                </div>
+                <img src="sample3.png" alt="犬の写真月文字変換結果" class="example-image">
+            </div>
+            
+            <div class="button-center">
+                <a href="https://mojimoon.com/" class="start-button">🌸 自分の作品を作る</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>❓ よくある質問（Q&A）</h2>
+            
+            <h3>Q1: 生成された月文字が正しく表示されない</h3>
+            <p><strong>A:</strong> 使用しているフォントや表示環境により月の絵文字の表示が異なる場合があります。推奨環境：</p>
+            <ul>
+                <li>モダンブラウザ（Chrome, Firefox, Safari, Edge）</li>
+                <li>Unicodeフォントサポート</li>
+                <li>絵文字表示対応デバイス</li>
+            </ul>
+            
+            <h3>Q2: 生成速度が遅い場合の対処法</h3>
+            <p><strong>A:</strong> 以下の調整をお試しください：</p>
+            <ul>
+                <li>高さ設定を下げる（100行以下推奨）</li>
+                <li>ブラウザの他のタブを閉じる</li>
+                <li>画像サイズを小さくする（1MB以下推奨）</li>
+                <li>デバイスの空きメモリを確保する</li>
+            </ul>
+            
+            <h3>Q3: 商用利用は可能ですか？</h3>
+            <p><strong>A:</strong> はい、生成された月文字アートは自由にご利用いただけます：</p>
+            <ul>
+                <li>商用・非商用問わず利用可能</li>
+                <li>SNS投稿、印刷物、デジタル作品等での利用OK</li>
+                <li>クレジット表記は不要（歓迎します）</li>
+                <li>再配布や改変も自由</li>
+            </ul>
+            
+            <h3>Q4: 日本語以外の言語に対応していますか？</h3>
+            <p><strong>A:</strong> はい、多言語対応しています：</p>
+            <ul>
+                <li>英語、中国語（簡体字・繁体字）、韓国語</li>
+                <li>ヨーロッパ言語（フランス語、ドイツ語等）</li>
+                <li>記号や数字も変換可能</li>
+                <li>右から左に書く言語は調整が必要な場合あり</li>
+            </ul>
+            
+            <h3>Q5: モバイルデバイスでも利用できますか？</h3>
+            <p><strong>A:</strong> はい、モバイルフレンドリー設計です：</p>
+            <ul>
+                <li>iPhone、Androidスマートフォン対応</li>
+                <li>タブレット端末最適化済み</li>
+                <li>タッチ操作サポート</li>
+                <li>レスポンシブデザイン採用</li>
+            </ul>
+            
+            <h3>Q6: データのプライバシーはどうなっていますか？</h3>
+            <p><strong>A:</strong> プライバシーを重視しています：</p>
+            <ul>
+                <li>アップロードされた画像はブラウザ内のみで処理</li>
+                <li>サーバーへのデータ送信なし</li>
+                <li>個人情報の収集・保存なし</li>
+                <li>完全にローカル環境での動作</li>
+            </ul>
+            
+            <h3>Q7: 生成結果をSNSで共有する際のコツは？</h3>
+            <p><strong>A:</strong> SNSでの効果的な共有方法：</p>
+            <ul>
+                <li><strong>Twitter</strong>: 文字数制限に注意、画像として投稿推奨</li>
+                <li><strong>Instagram</strong>: ストーリーズでの利用が効果的</li>
+                <li><strong>Line</strong>: そのままコピペで美しく表示</li>
+                <li><strong>Discord</strong>: コードブロック（```）内に貼り付け推奨</li>
+            </ul>
+            
+            <h3>Q8: カスタムフォントを使用できますか？</h3>
+            <p><strong>A:</strong> 現在、事前に用意された4つのフォントから選択できます：</p>
+            <ul>
+                <li>より多くのフォント対応を検討中</li>
+                <li>フィードバックにより追加フォントを決定</li>
+                <li>特殊フォントリクエストは公式チャンネルまで</li>
+            </ul>
+            
+            <h3>Q9: アニメーション効果は追加予定ですか？</h3>
+            <p><strong>A:</strong> 将来のアップデートで検討中の機能：</p>
+            <ul>
+                <li>月相の動的変化アニメーション</li>
+                <li>GIFアニメーション出力</li>
+                <li>時系列での月相変化表現</li>
+                <li>ユーザーリクエストに基づく機能追加</li>
+            </ul>
+            
+            <h3>Q10: 技術的な質問やフィードバックはどこに送れば良いですか？</h3>
+            <p><strong>A:</strong> 以下の方法でお気軽にご連絡ください：</p>
+            <ul>
+                <li>GitHubリポジトリでのIssue作成</li>
+                <li>公式Twitterアカウント（@mojimoon）へのDM</li>
+                <li>メールアドレス: feedback@mojimoon.com</li>
+                <li>全てのフィードバックを開発改善に活用します</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="https://mojimoon.com/" class="start-button">🌟 月文字を始める</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <div style="text-align: center; margin: 40px 0; color: rgba(255,255,255,0.7);">
+                <p>Made with 🌙 and ❤️</p>
+                <p>© 2024 MojiMoon - 月文字ジェネレーター</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

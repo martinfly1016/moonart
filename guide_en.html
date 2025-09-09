@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Character Generator User Guide | How to Use, Features & FAQ - MojiMoon</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprehensive user guide for Moon Character Generator. Learn basic operations to advanced features, complete guide to creating moon emoji art. Includes FAQ and answers.">
+    <meta name="keywords" content="moon characters,user guide,how to use,emoji art,text art,instructions,features">
+    <meta name="author" content="Moon Character Generator">
+    <meta name="robots" content="index,follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Moon Character Generator User Guide">
+    <meta property="og:description" content="Complete guide to moon emoji art creation tool">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mojimoon.com/guide_en.html">
+    <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mojimoon">
+    <meta name="twitter:title" content="Moon Character Generator User Guide">
+    <meta name="twitter:description" content="How to use moon emoji art creation tool">
+    <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="/moon_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/moon_icon.png">
+    <link rel="apple-touch-icon" href="/moon_icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mojimoon.com/guide_en.html">
+    
+    <!-- Hreflang -->
+    <link rel="alternate" href="https://mojimoon.com/guide.html" hreflang="ja">
+    <link rel="alternate" href="https://mojimoon.com/guide_en.html" hreflang="en">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Moon Character Generator User Guide",
+        "description": "How to use moon emoji art creation tool and guide",
+        "inLanguage": "en",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Moon Character Generator",
+            "url": "https://mojimoon.com/"
+        }
+    }
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WD9XP5ERGX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WD9XP5ERGX');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .lang-switcher {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-switcher:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .guide-content {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .guide-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px 0;
+            color: #fbbf24;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+            padding-bottom: 5px;
+        }
+        
+        .guide-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .guide-content h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 10px 0;
+            color: #93c5fd;
+        }
+        
+        .guide-content h4 {
+            font-size: 1.1rem;
+            margin: 20px 0 8px 0;
+            color: #a7f3d0;
+        }
+        
+        .guide-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .guide-content ul, .guide-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .guide-content li {
+            margin-bottom: 8px;
+        }
+        
+        .guide-content strong {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .guide-content code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #93c5fd;
+        }
+        
+        .example-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: monospace;
+            color: #e5e7eb;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            line-height: 1.2;
+            font-size: 0.9rem;
+        }
+        
+        .example-image {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: block;
+        }
+        
+        .example-container {
+            text-align: center;
+        }
+        
+        .start-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 20px auto;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .start-button:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+        
+        .button-center {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-content {
+                padding: 20px;
+            }
+            
+            .guide-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .start-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .example-image {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌙 Moon Character Generator User Guide</h1>
+            <p>Complete guide to creating beautiful text art with moon emojis</p>
+            <a href="guide.html" class="lang-switcher">🌏 日本語</a>
+        </div>
+        
+        <div class="guide-content">
+            <h2>📖 Overview</h2>
+            
+            <h3>What are Moon Characters?</h3>
+            <p>Moon Characters (tsukimoji) are unique text art created using moon phase emojis 🌑🌒🌓🌔🌕🌖🌗🌘. This tool is an innovative web application that converts regular text and images into beautiful moon character art.</p>
+            
+            <h3>Value of This Tool</h3>
+            <ul>
+                <li><strong>Artistic Expression</strong>: A new expression method that transcends traditional text art, utilizing the mystical beauty of the moon</li>
+                <li><strong>Versatile Uses</strong>: Perfect for social media posts, greeting cards, digital art works, presentations, and more</li>
+                <li><strong>Free and Easy</strong>: No installation required, start using immediately in your browser</li>
+                <li><strong>Advanced Technology</strong>: Features unique optimization technologies like vertical processing and horizontal enhancement algorithms</li>
+                <li><strong>Completely Original</strong>: The world's first comprehensive moon character generation system</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="index_en.html" class="start-button">🚀 Get Started</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>🚀 Basic Operation Guide</h2>
+            
+            <h3>Step 1: Select Input Method</h3>
+            <ol>
+                <li><strong>Text Input Tab</strong>: Generate moon characters from text</li>
+                <li><strong>Image Input Tab</strong>: Generate moon characters from images</li>
+            </ol>
+            
+            <h3>Step 2: For Text Input</h3>
+            <ol>
+                <li>Select the "Text Input" tab</li>
+                <li>Enter the text you want to convert in the input field (e.g., "hello")</li>
+                <li>Choose text direction:
+                    <ul>
+                        <li>Vertical (recommended): Beautiful vertical expression for various languages</li>
+                        <li>Horizontal: Horizontal layout</li>
+                    </ul>
+                </li>
+                <li>Moon characters are generated in real-time</li>
+            </ol>
+            
+            <h3>Step 3: For Image Input</h3>
+            <ol>
+                <li>Select the "Image Input" tab</li>
+                <li>Drag and drop an image or click "Select File"</li>
+                <li>Supports JPG, PNG, GIF formats</li>
+                <li>Automatically optimized and moon characters are generated</li>
+            </ol>
+            
+            <h3>Step 4: Using Results</h3>
+            <ul>
+                <li><strong>Copy</strong>: One-click copy to clipboard</li>
+                <li><strong>Download Text</strong>: Save as .txt file</li>
+                <li><strong>Download Image</strong>: Save as PNG image</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="index_en.html" class="start-button">📝 Try It Now</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>⚙️ Detailed Feature Description</h2>
+            
+            <h3>🎛️ Control Parameters</h3>
+            
+            <h4>Height / Width Character Count</h4>
+            <ul>
+                <li><strong>Text Mode</strong>: Height adjustment from 10-60 rows</li>
+                <li><strong>Image Mode</strong>: Detail level adjustment from 10-500 rows</li>
+                <li><strong>Recommended Value</strong>: 20-40 rows for normal use</li>
+            </ul>
+            
+            <h4>Font / Style</h4>
+            <ul>
+                <li><strong>Monospace</strong>: Uniform character spacing, programming-like style</li>
+                <li><strong>Sans-serif</strong>: Modern and readable, highly versatile</li>
+                <li><strong>Serif</strong>: Traditional and elegant, perfect for formal expressions</li>
+            </ul>
+            
+            <h4>Character Spacing / Line Height Adjustment</h4>
+            <ul>
+                <li><strong>Character Spacing</strong>: Fine adjustment from -2 to +5 pixels</li>
+                <li><strong>Recommended by Use</strong>:
+                    <ul>
+                        <li>Social media posts: 0 to +1</li>
+                        <li>Printing: +1 to +2</li>
+                        <li>Mobile display: -1 to 0</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>Padding / Margin Settings</h4>
+            <ul>
+                <li><strong>Image Mode Only</strong>: Add borders from 0-50 pixels</li>
+                <li><strong>Effect</strong>: Improves completion as artwork</li>
+                <li><strong>Recommended Value</strong>: 10-20 pixels</li>
+            </ul>
+            
+            <h4>Reverse Color / Color Inversion</h4>
+            <ul>
+                <li><strong>Effect</strong>: Inverts light and dark for dramatic expression</li>
+                <li><strong>Uses</strong>: Display on dark backgrounds, special effects</li>
+                <li><strong>Combination</strong>: Diverse expressions when combined with other parameters</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="index_en.html" class="start-button">🎨 Try Features</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>💡 Examples</h2>
+            
+            <h3>📝 Text Conversion Examples</h3>
+            
+            <div class="example-container">
+                <h4>Example 1: "おはよう" (Good Morning)</h4>
+                <div class="example-box">
+Input: おはよう
+                </div>
+                <img src="sample1.png" alt="Good morning moon character conversion result" class="example-image">
+            </div>
+            
+            <div class="example-container">
+                <h4>Example 2: "love"</h4>
+                <div class="example-box">
+Input: love
+                </div>
+                <img src="sample2.png" alt="Love moon character conversion result" class="example-image">
+            </div>
+            
+            <h3>🖼️ Image Conversion Examples</h3>
+            
+            <div class="example-container">
+                <h4>Example 3: Dog Photo</h4>
+                <div class="example-box">
+Input: Dog photograph
+                </div>
+                <img src="sample3.png" alt="Dog photo moon character conversion result" class="example-image">
+            </div>
+            
+            <div class="button-center">
+                <a href="index_en.html" class="start-button">🌸 Create Your Art</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <h2>❓ Frequently Asked Questions (FAQ)</h2>
+            
+            <h3>Q1: Generated moon characters don't display correctly</h3>
+            <p><strong>A:</strong> Moon emoji display may vary depending on fonts and display environment. Recommended environment:</p>
+            <ul>
+                <li>Modern browsers (Chrome, Firefox, Safari, Edge)</li>
+                <li>Unicode font support</li>
+                <li>Emoji-compatible devices</li>
+            </ul>
+            
+            <h3>Q2: What to do when generation speed is slow</h3>
+            <p><strong>A:</strong> Try the following adjustments:</p>
+            <ul>
+                <li>Lower height setting (recommended under 100 rows)</li>
+                <li>Close other browser tabs</li>
+                <li>Reduce image size (recommended under 1MB)</li>
+                <li>Free up device memory</li>
+            </ul>
+            
+            <h3>Q3: Is commercial use allowed?</h3>
+            <p><strong>A:</strong> Yes, generated moon character art can be used freely:</p>
+            <ul>
+                <li>Available for both commercial and non-commercial use</li>
+                <li>OK for social media posts, printed materials, digital works, etc.</li>
+                <li>No credit attribution required (but appreciated)</li>
+                <li>Free redistribution and modification</li>
+            </ul>
+            
+            <h3>Q4: Does it support languages other than Japanese?</h3>
+            <p><strong>A:</strong> Yes, it supports multiple languages:</p>
+            <ul>
+                <li>English, Chinese (Simplified & Traditional), Korean</li>
+                <li>European languages (French, German, etc.)</li>
+                <li>Symbols and numbers can also be converted</li>
+                <li>Right-to-left languages may require adjustment</li>
+            </ul>
+            
+            <h3>Q5: Can it be used on mobile devices?</h3>
+            <p><strong>A:</strong> Yes, it features mobile-friendly design:</p>
+            <ul>
+                <li>Compatible with iPhone and Android smartphones</li>
+                <li>Optimized for tablets</li>
+                <li>Touch operation support</li>
+                <li>Responsive design adopted</li>
+            </ul>
+            
+            <h3>Q6: How is data privacy handled?</h3>
+            <p><strong>A:</strong> We prioritize privacy:</p>
+            <ul>
+                <li>Uploaded images processed only within browser</li>
+                <li>No data transmission to servers</li>
+                <li>No collection or storage of personal information</li>
+                <li>Operates completely in local environment</li>
+            </ul>
+            
+            <h3>Q7: Tips for sharing on social media?</h3>
+            <p><strong>A:</strong> Effective sharing methods for social media:</p>
+            <ul>
+                <li><strong>Twitter</strong>: Mind character limits, recommend posting as image</li>
+                <li><strong>Instagram</strong>: Effective use in Stories</li>
+                <li><strong>Line</strong>: Beautiful display when copying and pasting directly</li>
+                <li><strong>Discord</strong>: Recommend pasting within code blocks (```)</li>
+            </ul>
+            
+            <h3>Q8: Can custom fonts be used?</h3>
+            <p><strong>A:</strong> Currently, you can choose from 3 pre-prepared fonts:</p>
+            <ul>
+                <li>Considering support for more fonts</li>
+                <li>Additional fonts determined by feedback</li>
+                <li>Special font requests to official channels</li>
+            </ul>
+            
+            <h3>Q9: Are animation effects planned?</h3>
+            <p><strong>A:</strong> Features under consideration for future updates:</p>
+            <ul>
+                <li>Dynamic moon phase change animations</li>
+                <li>GIF animation output</li>
+                <li>Time-series moon phase change expression</li>
+                <li>Feature additions based on user requests</li>
+            </ul>
+            
+            <h3>Q10: Where can technical questions or feedback be sent?</h3>
+            <p><strong>A:</strong> Feel free to contact us through the following methods:</p>
+            <ul>
+                <li>Create issues on GitHub repository</li>
+                <li>DM to official Twitter account (@mojimoon)</li>
+                <li>Email address: feedback@mojimoon.com</li>
+                <li>All feedback is used for development improvements</li>
+            </ul>
+            
+            <div class="button-center">
+                <a href="index_en.html" class="start-button">🌟 Start Moon Characters</a>
+            </div>
+            
+            <hr class="divider">
+            
+            <div style="text-align: center; margin: 40px 0; color: rgba(255,255,255,0.7);">
+                <p>Made with 🌙 and ❤️</p>
+                <p>© 2024 MojiMoon - Moon Character Generator</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

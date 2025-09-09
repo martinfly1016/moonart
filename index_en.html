@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>月文字ジェネレーター | 月の絵文字アート作成 | 無料テキスト変換ツール - MojiMoon</title>
+    <title>Moon Character Generator | Create Moon Emoji Art | Free Text Converter - MojiMoon</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="日本語テキストを美しい月の絵文字アートに変換する無料オンラインツール。縦書き・横書き対応、複数フォント選択可能。月の満欠を表現したユニークなアスキーアートを作成してみませんか？">
-    <meta name="keywords" content="月文字,絵文字アート,テキストアート,ジェネレーター,無料ツール">
-    <meta name="author" content="月文字ジェネレーター">
+    <meta name="description" content="Free online tool to convert text and images into beautiful moon emoji art. Supports vertical and horizontal layouts, multiple fonts. Create unique ASCII art using moon phases!">
+    <meta name="keywords" content="moon characters,emoji art,text art,generator,free tool,moon phases,ASCII art">
+    <meta name="author" content="Moon Character Generator">
     <meta name="robots" content="index,follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="月文字ジェネレーター">
-    <meta property="og:description" content="テキストを月の絵文字アートに変換する無料ツール">
+    <meta property="og:title" content="Moon Character Generator">
+    <meta property="og:description" content="Convert text to moon emoji art - Free online tool">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mojimoon.com/">
+    <meta property="og:url" content="https://mojimoon.com/index_en.html">
     <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
-    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mojimoon">
-    <meta name="twitter:title" content="月文字ジェネレーター">
-    <meta name="twitter:description" content="テキストを月の絵文字アートに変換">
+    <meta name="twitter:title" content="Moon Character Generator">
+    <meta name="twitter:description" content="Convert text to moon emoji art">
     <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
     
     <!-- Favicon -->
@@ -35,7 +35,7 @@
     <link rel="apple-touch-icon" href="/moon_icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://mojimoon.com/">
+    <link rel="canonical" href="https://mojimoon.com/index_en.html">
     
     <!-- Hreflang -->
     <link rel="alternate" href="https://mojimoon.com/" hreflang="ja">
@@ -46,11 +46,11 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "月文字ジェネレーター",
-        "description": "テキストを月の絵文字アートに変換",
+        "name": "Moon Character Generator",
+        "description": "Convert text to moon emoji art",
         "applicationCategory": "UtilityApplication",
         "operatingSystem": "All",
-        "inLanguage": "ja",
+        "inLanguage": "en",
         "isAccessibleForFree": true
     }
     </script>
@@ -87,7 +87,7 @@
         
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             position: relative;
         }
         
@@ -104,6 +104,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.2s ease;
             backdrop-filter: blur(10px);
+            margin-right: 10px;
         }
         
         .guide-link:hover {
@@ -136,18 +137,18 @@
         .control-panel {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 18px;
+            margin-bottom: 15px;
             backdrop-filter: blur(10px);
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: 600;
         }
         
@@ -183,67 +184,147 @@
         
         .height-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 18px;
-            height: 18px;
-            background: #fbbf24;
+            width: 20px;
+            height: 20px;
+            background: #8b5cf6;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(251, 191, 36, 0.4);
+        }
+        
+        .form-group h3 span,
+        .control-item h3 span {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .dual-control-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .control-item h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .input-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
         
-        .height-slider::-webkit-slider-thumb:hover {
-            background: #f59e0b;
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6);
+        .tab-button.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
         }
         
-        .font-select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-area:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .upload-area.drag-over {
+            border-color: #8b5cf6;
+            background: rgba(139, 92, 246, 0.1);
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+        
+        .radio-option:hover {
             background: rgba(255, 255, 255, 0.1);
-            color: white;
-            font-size: 16px;
-            outline: none;
         }
         
-        .font-select option {
-            background: #4c1d95;
-            color: white;
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #8b5cf6;
+        }
+        
+        .radio-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #8b5cf6;
+        }
+        
+        .radio-label {
+            font-weight: 500;
+            user-select: none;
         }
         
         .generate-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #8b5cf6, #ec4899);
             border: none;
             border-radius: 10px;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
             color: white;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
         }
         
         .generate-btn:hover {
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            transform: translateY(-1px);
         }
         
-        .preview-panel {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            padding: 20px;
-            min-height: 300px;
-            width: fit-content;
-            min-width: 100%;
-            max-width: fit-content;
+        .generate-btn:disabled {
+            background: rgba(255, 255, 255, 0.2);
+            cursor: not-allowed;
+            transform: none;
         }
         
         .moon-art {
             font-family: monospace;
-            font-size: 12px;
             line-height: 1.4;
             letter-spacing: 0.1em;
             white-space: pre;
@@ -294,94 +375,31 @@
             transform: translateY(-1px);
         }
         
-        .btn-icon {
+        .hidden {
+            display: none !important;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .upload-text {
             font-size: 16px;
+            margin-bottom: 8px;
         }
         
-        .btn-text {
-            font-size: 13px;
-        }
-        
-        .copy-btn.success {
-            background: linear-gradient(135deg, #059669, #047857);
-        }
-        
-        .direction-control {
-            display: flex;
-            gap: 20px;
-            margin-top: 8px;
-        }
-        
-        .radio-option {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
+        .upload-hint {
             font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
         }
         
-        .radio-option input[type="radio"],
-        .radio-option input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            accent-color: #8b5cf6;
+        .preview-panel {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
         }
         
-        .radio-label {
-            font-weight: 500;
-        }
-        
-        /* フッタースタイル */
-        .footer {
-            margin-top: 40px;
-            padding: 20px 15px;
-        }
-        
-        .footer-bookmark-btn {
-            background: none;
-            border: none;
-            color: #fbbf24;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: underline;
-            padding: 0;
-            margin: 0 2px;
-            transition: color 0.2s ease;
-        }
-        
-        .footer-bookmark-btn:hover {
-            color: #f59e0b;
-        }
-        
-        /* 悬浮收藏按钮 */
-        .floating-bookmark {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            border: none;
-            border-radius: 25px;
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 16px;
-            gap: 6px;
-        }
-        
-        .floating-bookmark:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
-        }
-        
-        /* 移动端优化 */
         @media (max-width: 768px) {
             .header {
                 margin-bottom: 15px;
@@ -403,387 +421,287 @@
             }
             
             .control-panel {
-                padding: 15px;
-                margin-bottom: 15px;
+                padding: 12px;
+                margin-bottom: 12px;
             }
             
             .form-group {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
             
             .form-group h3 {
-                font-size: 0.9rem;
-                margin-bottom: 6px;
-            }
-            
-            .floating-bookmark {
-                display: none;
-            }
-            
-            body {
-                padding-top: 10px;
-            }
-            
-            .footer h2 {
                 font-size: 1.1rem;
+                margin-bottom: 10px;
             }
             
-            /* 移动端按钮优化 - 单行布局 */
+            .radio-group {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            
             .action-buttons {
-                gap: 5px;
-                flex-wrap: nowrap;
+                flex-direction: column;
             }
             
             .action-btn {
-                min-width: 0;
-                padding: 8px 6px;
-                font-size: 12px;
-                flex: 1;
+                min-width: auto;
             }
             
-            .btn-icon {
-                font-size: 14px;
+            .upload-area {
+                padding: 30px 15px;
             }
             
-            .btn-text {
-                font-size: 11px;
+            .height-control {
+                gap: 10px;
+            }
+            
+            .dual-control-group {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
         }
         
-        /* Tab样式 */
-        .input-tabs {
-            display: flex;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        /* 隐藏调试参数 */
+        .debug-section {
+            display: none !important;
         }
         
-        .tab-button {
-            flex: 1;
-            background: none;
-            border: none;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 12px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
+        .debug-header {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(5px);
+            color: #fbbf24;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
         
-        .tab-button.active {
-            color: white;
-            border-bottom-color: #fbbf24;
-            background: rgba(255, 255, 255, 0.05);
+        .debug-header:hover {
+            background: rgba(255, 193, 7, 0.25);
+            border-color: rgba(255, 193, 7, 0.4);
         }
         
-        .tab-button:hover {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .tab-content {
+        .debug-content {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 10px;
             display: none;
         }
         
-        .tab-content.active {
+        .debug-content.expanded {
             display: block;
         }
         
-        /* 图片上传区域样式 */
-        .image-upload-area {
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            padding: 40px 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
-            min-height: 200px;
+        .debug-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .debug-control {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            gap: 5px;
         }
         
-        .image-upload-area:hover {
-            border-color: #fbbf24;
-            background: rgba(251, 191, 36, 0.1);
+        .debug-control label {
+            font-size: 12px;
+            color: #fbbf24;
+            font-weight: 500;
         }
         
-        .image-upload-area.dragover {
-            border-color: #fbbf24;
-            background: rgba(251, 191, 36, 0.15);
-        }
-        
-        .upload-icon {
-            font-size: 3rem;
-            margin-bottom: 16px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .upload-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
+        .debug-control input, .debug-control select {
+            padding: 6px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
+            font-size: 12px;
         }
         
-        .upload-hint {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 16px;
-        }
-        
-        .upload-button {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .upload-button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
-        }
-        
-        .image-preview {
-            display: none;
-            margin-top: 16px;
-            text-align: center;
-        }
-        
-        .image-preview img {
-            max-width: 100%;
-            max-height: 200px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        
-        .image-info {
-            margin-top: 12px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .remove-image {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            padding: 6px 12px;
+        .debug-info {
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 6px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            margin-top: 8px;
-            transition: all 0.2s;
-        }
-        
-        .remove-image:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        /* 调试参数折叠样式 */
-        .debug-header:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 6px;
-            padding: 8px;
-            margin: -8px;
-        }
-        
-        .debug-controls {
-            max-height: 0;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .debug-controls.expanded {
-            max-height: 500px;
-            opacity: 1;
-            display: block !important;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 11px;
+            color: #fbbf24;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Floating Bookmark Button -->
-    <button id="bookmarkBtn" class="floating-bookmark" title="お気に入りに追加">
-        ⭐ お気に入り
+    <button id="favoriteBtn" class="favorite-btn" style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        transition: all 0.2s ease;
+        display: none;
+    ">
+        ⭐ Favorite
     </button>
     
     <div class="container">
         <header class="header">
-            <h1>🌙 月文字ジェネレーター</h1>
-            <a href="guide.html" class="guide-link">📖 使用ガイド</a>
-            <a href="index_en.html" class="lang-switcher">🌏 English</a>
+            <h1>🌙 Moon Character Generator</h1>
+            <a href="guide_en.html" class="guide-link">📖 User Guide</a>
+            <a href="index.html" class="lang-switcher">🌏 日本語</a>
         </header>
         
         <div class="control-panel">
-            <!-- 输入模式Tab -->
+            <!-- Input Mode Tabs -->
             <div class="input-tabs">
-                <button class="tab-button active" data-tab="text">テキスト入力</button>
-                <button class="tab-button" data-tab="image">画像入力</button>
+                <button class="tab-button active" data-tab="text">Text Input</button>
+                <button class="tab-button" data-tab="image">Image Input</button>
             </div>
             
-            <!-- 文字输入Tab内容 -->
+            <!-- Text Input Tab Content -->
             <div class="tab-content active" id="textTab">
                 <div class="form-group">
-                    <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
+                    <label for="textInput">Text Input</label>
+                    <input type="text" id="textInput" class="text-input" placeholder="Enter text to convert..." maxlength="50">
                 </div>
                 
                 <div class="form-group">
-                    <div class="direction-control">
+                    <h3>Height: <span id="heightValue">10</span> rows</h3>
+                    <div class="height-control">
+                        <span>10</span>
+                        <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
+                        <span>60</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Font Style</h3>
+                    <div class="radio-group">
                         <label class="radio-option">
-                            <input type="radio" name="textDirection" value="vertical">
-                            <span class="radio-label">縦書き</span>
+                            <input type="radio" name="fontType" value="monospace" checked>
+                            <span class="radio-label">Monospace</span>
                         </label>
                         <label class="radio-option">
-                            <input type="radio" name="textDirection" value="horizontal">
-                            <span class="radio-label">横書き</span>
+                            <input type="radio" name="fontType" value="sans-serif">
+                            <span class="radio-label">Sans-serif</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="fontType" value="serif">
+                            <span class="radio-label">Serif</span>
                         </label>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <div style="display: flex; gap: 20px; align-items: flex-start;">
-                        <div style="flex: 1;">
-                            <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
-                            <select id="fontSelect" class="font-select">
-                                <option value="default" selected>システム既定</option>
-                                <option value="gothic">ゴシック体</option>
-                                <option value="mincho">明朝体</option>
-                            </select>
+                    <h3>Text Direction</h3>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="direction" value="vertical">
+                            <span class="radio-label">Vertical</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="direction" value="horizontal" checked>
+                            <span class="radio-label">Horizontal</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="dual-control-group">
+                    <div class="control-item">
+                        <h3>Spacing: <span id="spacingValue">2</span></h3>
+                        <div class="height-control">
+                            <span>0</span>
+                            <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
+                            <span>10</span>
                         </div>
-                        <div style="flex: 1;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">2</span></label>
-                            <div class="height-control">
-                                <span>0</span>
-                                <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
-                                <span>10</span>
-                            </div>
+                    </div>
+                    <div class="control-item">
+                        <h3>Padding: <span id="paddingValue">0</span></h3>
+                        <div class="height-control">
+                            <span>0</span>
+                            <input type="range" id="paddingSlider" class="height-slider" min="0" max="10" value="0">
+                            <span>10</span>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Options</h3>
+                    <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                        <input type="checkbox" id="reverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
+                        <label for="reverseColor" style="cursor: pointer; font-weight: 600;">Reverse Color</label>
                     </div>
                 </div>
             </div>
             
-            <!-- 图片输入Tab内容 -->
+            <!-- Image Input Tab Content -->
             <div class="tab-content" id="imageTab">
                 <div class="form-group">
-                    <div class="image-upload-area" id="imageUploadArea">
-                        <div class="upload-icon">📁</div>
-                        <div class="upload-text">画像をアップロード</div>
-                        <div class="upload-hint">JPG, PNG, GIF ファイルをドラッグ＆ドロップまたはクリックして選択</div>
-                        <button class="upload-button" id="uploadButton">ファイルを選択</button>
-                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                    <label>Image Upload</label>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-text">📁 Click to select image or drag and drop</div>
+                        <div class="upload-hint">Supports JPG, PNG, GIF formats</div>
                     </div>
-                    <div class="image-preview" id="imagePreview">
-                        <img id="previewImg" src="" alt="プレビュー">
-                        <div class="image-info" id="imageInfo"></div>
-                        <button class="remove-image" id="removeImage">画像を削除</button>
+                    <input type="file" id="imageInput" class="file-input" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <h3>Height: <span id="imageHeightValue">60</span> rows</h3>
+                    <div class="height-control">
+                        <span>10</span>
+                        <input type="range" id="imageHeightSlider" class="height-slider" min="10" max="500" value="60">
+                        <span>500</span>
                     </div>
                 </div>
                 
-            </div>
-            
-            <!-- Tab外部通用选项 -->
-            <div class="form-group">
-                <!-- 第一行：高さ + 余白 -->
-                <div style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 15px;">
-                    <div style="flex: 1;">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
-                            <span id="sliderLabel">高さ</span>: 
-                            <span id="heightValue">10</span>
-                            <span id="sliderUnit">行</span>
-                        </label>
-                        <div class="height-control">
-                            <span>10</span>
-                            <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
-                            <span>60</span>
-                        </div>
-                    </div>
-                    <div style="flex: 1;">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
-                            余白: <span id="paddingValue">0</span>
-                        </label>
-                        <div class="height-control">
-                            <span>0</span>
-                            <input type="range" id="paddingSlider" class="height-slider" min="0" max="5" value="0">
-                            <span>5</span>
-                        </div>
+                <div class="form-group">
+                    <h3>Padding: <span id="imagePaddingValue">0</span></h3>
+                    <div class="height-control">
+                        <span>0</span>
+                        <input type="range" id="imagePaddingSlider" class="height-slider" min="0" max="10" value="0">
+                        <span>10</span>
                     </div>
                 </div>
                 
-                <!-- 第二行：反色（左对齐） -->
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
-                    <input type="checkbox" id="reverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
-                    <label for="reverseColor" style="cursor: pointer; font-weight: 600;">反色</label>
-                </div>
-            </div>
-            
-            <!-- 调试参数区域 -->
-            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); display: none !important;">
-                <div class="debug-header" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 15px;" onclick="toggleDebugSection()">
-                    <h3 style="margin: 0; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
-                    <span id="debugToggleIcon" style="color: #fbbf24; font-size: 1rem; transition: transform 0.3s ease;">▶</span>
-                </div>
-                
-                <!-- 可收起的调试控件容器 -->
-                <div id="debugControls" class="debug-controls" style="display: none; overflow: hidden; transition: all 0.3s ease;">
-                    <div class="form-group">
-                        <label>横向粘合系数: <span id="adhesionValue">2</span></label>
-                        <div class="height-control">
-                            <span>0</span>
-                            <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
-                            <span>6</span>
+                <div class="form-group">
+                    <h3>Options</h3>
+                    <div style="display: flex; gap: 20px;">
+                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                            <input type="checkbox" id="imageReverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
+                            <label for="imageReverseColor" style="cursor: pointer; font-weight: 600;">Reverse Color</label>
                         </div>
-                    </div>
-                    
-                    <div style="margin-top: 15px;">
-                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">垂直化处理</h4>
-                        <div style="display: flex; gap: 20px;">
-                            <label class="radio-option">
-                                <input type="checkbox" id="verticalMedium" checked>
-                                <span class="radio-label">中等密度</span>
-                            </label>
-                            <label class="radio-option">
-                                <input type="checkbox" id="verticalHigh" checked>
-                                <span class="radio-label">次高密度</span>
-                            </label>
+                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                            <input type="checkbox" id="enableDenoising" checked style="width: 18px; height: 18px; accent-color: #8b5cf6;">
+                            <label for="enableDenoising" style="cursor: pointer; font-weight: 600;">Noise Reduction</label>
                         </div>
-                    </div>
-                    
-                    <div style="margin-top: 15px;">
-                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">横向加强算法</h4>
-                        <div style="display: flex; gap: 20px;">
-                            <label class="radio-option">
-                                <input type="checkbox" id="enableDenoising" checked>
-                                <span class="radio-label">去噪处理</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 15px;">
                     </div>
                 </div>
             </div>
-            
-            
             
             <!-- Action Buttons -->
             <div id="actionButtons" class="action-buttons" style="display: none;">
                 <button id="copyBtn" class="action-btn copy-btn">
                     <span class="btn-icon">📋</span>
-                    <span class="btn-text">コピー</span>
+                    <span class="btn-text">Copy</span>
                 </button>
                 <button id="downloadTextBtn" class="action-btn download-btn">
                     <span class="btn-icon">📄</span>
-                    <span class="btn-text">テキストダウンロード</span>
+                    <span class="btn-text">Download Text</span>
                 </button>
                 <button id="downloadImageBtn" class="action-btn download-btn">
                     <span class="btn-icon">🖼️</span>
-                    <span class="btn-text">画像ダウンロード</span>
+                    <span class="btn-text">Download Image</span>
                 </button>
             </div>
         </div>
@@ -792,36 +710,41 @@
     <!-- Preview Panel (expandable) -->
     <div class="container" style="max-width: none; min-width: 800px; width: fit-content;">
         <div class="preview-panel">
-            <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">プレビュー</h2>
+            <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">Preview</h2>
             
             <!-- Debug info for vertical processing -->
             <div id="debugInfo" style="margin-bottom: 10px; font-size: 11px; color: #fbbf24; font-family: monospace; display: none !important;">
-                <div>垂直化処理: <span id="verticalProcessingStatus">有効</span></div>
-                <div>対象密度レベル: <span id="targetDensityLevels">中等密度</span></div>
-                <div>閾値n: <span id="thresholdN">2</span></div>
-                <div>処理モード: <span id="processingMode">中等密度（バランス重心のみ）</span></div>
+                <div>Vertical Processing: <span id="verticalProcessingStatus">Enabled</span></div>
+                <div>Target Density Levels: <span id="targetDensityLevels">Medium Density</span></div>
+                <div>Threshold n: <span id="thresholdN">2</span></div>
+                <div>Processing Mode: <span id="processingMode">Medium Density (Balance Center Only)</span></div>
             </div>
             
-            <div id="moonArt" class="moon-art"><!-- 生成結果がここに表示されます --></div>
+            <div id="moonArt" class="moon-art"><!-- Generated result will appear here --></div>
             
             <!-- Debug controls (hidden for production) -->
             <div style="margin-top: 20px; display: none;">
                 <label>
-                    <input type="checkbox" id="showDebugCanvas"> 显示原始Canvas调试
+                    <input type="checkbox" id="showDebugCanvas"> Show Original Canvas Debug
                 </label>
             </div>
             
             <!-- Debug canvas (hidden for production) -->
             <canvas id="debugCanvas" style="border: 1px solid #666; margin-top: 10px; background: white; display: none; max-width: 100%;"></canvas>
-            
-            
         </div>
     </div>
 
     <script>
-        // 全局状态管理
+        // Device detection function
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                   (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) ||
+                   window.innerWidth <= 768;
+        }
+        
+        // Global state management
         let currentInputMode = 'text'; // 'text' or 'image'
-        let lastUploadedImageSrc = null; // 保存最后上传的图片数据
+        let lastUploadedImageSrc = null; // Save last uploaded image data
         
         // 分别保存文字模式和图片模式的设置
         let textModeSettings = {
@@ -2096,10 +2019,10 @@
                     
                     // 从UI获取垂直化处理设置
                     const targetDensityLevels = [];
-                    if (document.getElementById('verticalMedium').checked) {
+                    if (document.getElementById('verticalMedium') && document.getElementById('verticalMedium').checked) {
                         targetDensityLevels.push('中等密度');
                     }
-                    if (document.getElementById('verticalHigh').checked) {
+                    if (document.getElementById('verticalHigh') && document.getElementById('verticalHigh').checked) {
                         targetDensityLevels.push('次高密度');
                     }
                     const thresholdN = 2; // 默认阈值
@@ -2170,8 +2093,9 @@
         // 字体映射
         const FONT_FAMILIES = {
             'default': 'sans-serif',
-            'gothic': '"メイリオ", "Meiryo", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", "MS Pゴシック", "MS PGothic", sans-serif',
-            'mincho': '"游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS 明朝", "MS Mincho", serif'
+            'monospace': 'monospace',
+            'sans-serif': 'sans-serif',
+            'serif': 'serif'
         };
 
         // 字体预设配置：粘合系数和垂直化处理密度级别
@@ -2180,13 +2104,17 @@
                 adhesionCoefficient: 2,
                 verticalDensityLevels: ['中等密度', '次高密度']
             },
-            'gothic': { 
+            'monospace': { 
                 adhesionCoefficient: 2,
                 verticalDensityLevels: ['中等密度', '次高密度']
             },
-            'mincho': { 
+            'sans-serif': { 
                 adhesionCoefficient: 3,
-                verticalDensityLevels: []  // 明朝体不使用垂直化处理
+                verticalDensityLevels: []  // 不使用垂直化处理
+            },
+            'serif': { 
+                adhesionCoefficient: 2,
+                verticalDensityLevels: ['中等密度', '次高密度']
             }
         };
         
@@ -2194,32 +2122,17 @@
         const generator = new SimpleMoonGenerator();
         const horizontalEnhancer = new HorizontalEnhancer();
         
-        // 更新滑块标签的函数
-        function updateSliderLabel() {
-            const isVertical = document.querySelector('input[name="textDirection"]:checked').value === 'vertical';
-            const sliderLabel = document.getElementById('sliderLabel');
-            const sliderUnit = document.getElementById('sliderUnit');
-            
-            if (isVertical) {
-                sliderLabel.textContent = '幅文字数';
-                sliderUnit.textContent = '文字';
-            } else {
-                sliderLabel.textContent = '高さ';
-                sliderUnit.textContent = '行';
-            }
-        }
-        
-        // 复制功能
+        // Copy to clipboard function
         function copyToClipboard() {
             const moonArt = document.getElementById('moonArt').textContent;
-            if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
+            if (!moonArt || moonArt.includes('Generated result will appear here')) return;
             
             navigator.clipboard.writeText(moonArt).then(() => {
                 const copyBtn = document.getElementById('copyBtn');
                 const btnText = copyBtn.querySelector('.btn-text');
                 const originalText = btnText.textContent;
                 
-                btnText.textContent = 'コピーしました！';
+                btnText.textContent = 'Copied!';
                 copyBtn.classList.add('success');
                 
                 setTimeout(() => {
@@ -2231,10 +2144,10 @@
             });
         }
         
-        // 文本下载功能
+        // Text download function
         function downloadText() {
             const moonArt = document.getElementById('moonArt').textContent;
-            if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
+            if (!moonArt || moonArt.includes('Generated result will appear here')) return;
             
             const randomId = Math.random().toString(36).substring(2, 8);
             const filename = `moon-art-${randomId}-${Date.now()}.txt`;
@@ -2250,12 +2163,12 @@
             URL.revokeObjectURL(url);
         }
         
-        // 图片下载功能
+        // Image download function
         function downloadImage() {
             const moonArt = document.getElementById('moonArt').textContent;
-            if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
+            if (!moonArt || moonArt.includes('Generated result will appear here')) return;
             
-            // 创建画布
+            // Create canvas
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
             
@@ -2263,11 +2176,11 @@
             const fontSize = 20;
             const lineHeight = fontSize;
             
-            // 计算画布尺寸
+            // Calculate canvas size
             canvas.width = lines[0].length * fontSize / 2;
             canvas.height = lines.length * lineHeight;
             
-            // 绘制月亮艺术（透明背景）
+            // Draw moon art (transparent background)
             ctx.fillStyle = 'black';
             ctx.font = `${fontSize}px sans-serif`;
             ctx.textBaseline = 'top';
@@ -2281,7 +2194,7 @@
                 }
             });
             
-            // 下载图片
+            // Download image
             const randomId = Math.random().toString(36).substring(2, 8);
             const filename = `moon-art-${randomId}-${Date.now()}.png`;
             
@@ -2295,78 +2208,78 @@
             }, 'image/png');
         }
         
-        // 统一的预览更新函数（根据当前模式调用相应的处理函数）
+        // Unified preview update function (calls appropriate processing function based on current mode)
         function updatePreview() {
-            console.log(`updatePreview - 当前模式: ${currentInputMode}`);
+            console.log(`updatePreview - Current mode: ${currentInputMode}`);
             
-            // 根据当前模式决定处理方式
+            // Decide processing method based on current mode
             if (currentInputMode === 'image' && lastUploadedImageSrc) {
-                // 图片模式：重新生成图片的月文字
-                console.log('更新图片预览');
+                // Image mode: regenerate image moon art
+                console.log('Updating image preview');
                 generateFromImage(lastUploadedImageSrc);
             } else if (currentInputMode === 'text') {
-                // 文字模式：执行原有的文字处理逻辑
-                console.log('更新文字预览');
+                // Text mode: execute original text processing logic
+                console.log('Updating text preview');
                 updateTextPreview();
             } else {
-                // 没有内容时显示提示
-                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                // No content, show prompt
+                document.getElementById('moonArt').textContent = '<!-- Generated result will appear here -->';
                 document.getElementById('actionButtons').style.display = 'none';
                 document.getElementById('debugInfo').style.display = 'none';
             }
         }
         
-        // 文字模式的预览更新
+        // Text mode preview update
         function updateTextPreview() {
             const text = document.getElementById('textInput').value.trim();
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
-            const fontType = document.getElementById('fontSelect').value;
-            const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
+            const fontType = document.querySelector('input[name="fontType"]:checked')?.value || 'monospace';
+            const adhesionCoefficient = 2; // Fixed value for English version
             const spacing = parseInt(document.getElementById('spacingSlider').value);
             const padding = parseInt(document.getElementById('paddingSlider').value);
             
-            const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
-            console.log('updatePreview - 选中的radio按钮:', selectedRadio);
-            console.log('updatePreview - 选中的值:', selectedRadio?.value);
+            const selectedRadio = document.querySelector('input[name="direction"]:checked');
+            console.log('updatePreview - Selected radio button:', selectedRadio);
+            console.log('updatePreview - Selected value:', selectedRadio?.value);
             const isVertical = selectedRadio?.value === 'vertical';
-            console.log('updatePreview - 最终isVertical值:', isVertical);
+            console.log('updatePreview - Final isVertical value:', isVertical);
             
             const reverseColor = document.getElementById('reverseColor').checked;
-            const enableDenoising = document.getElementById('enableDenoising').checked;
+            const enableDenoising = document.getElementById('enableDenoising')?.checked || true;
             
             if (!text) {
-                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                document.getElementById('moonArt').textContent = '<!-- Generated result will appear here -->';
                 document.getElementById('actionButtons').style.display = 'none';
                 document.getElementById('debugInfo').style.display = 'none';
                 return;
             }
             
             try {
-                // 生成基础结果（启用垂直化处理，不执行反色）
-                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding); // 先不显示调试信息
+                // Generate basic result (enable vertical processing, no color reversal)
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding);
                 
-                // 添加垂直化处理后的调试输出
-                console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
-                console.log(`垂直化处理记录数: ${generator.verticalProcessingPositions.length}`);
+                // Add debug output after vertical processing
+                console.log(`🔄 Vertical processing complete, preparing for horizontal enhancement algorithm`);
+                console.log(`Vertical processing record count: ${generator.verticalProcessingPositions.length}`);
                 if (generator.verticalProcessingPositions.length > 0) {
-                    console.log(`垂直化处理详情:`, generator.verticalProcessingPositions);
+                    console.log(`Vertical processing details:`, generator.verticalProcessingPositions);
                     const lines = result.split('\n');
                     generator.verticalProcessingPositions.forEach(pos => {
                         if (pos.row < lines.length && pos.col < lines[pos.row].length) {
                             const char = Array.from(lines[pos.row])[pos.col];
-                            console.log(`位置(${pos.row},${pos.col}): 当前字符=${char}, 密度=${pos.densityLevel}`);
+                            console.log(`Position(${pos.row},${pos.col}): Current character=${char}, Density=${pos.densityLevel}`);
                         }
                     });
                 }
                 
-                // 应用横向加强算法
+                // Apply horizontal enhancement algorithm
                 horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
                 horizontalEnhancer.setEnableDenoising(enableDenoising);
                 result = horizontalEnhancer.enhance(result);
                 
                 
-                // 垂直化处理的最终结果检查
-                console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
+                // Final result check for vertical processing
+                console.log(`🔍 Vertical processing final result check (no horizontal interference)`);
                 if (generator.verticalProcessingPositions.length > 0) {
                     const linesFinal = result.split('\n');
                     let moon_count = 0, black_count = 0;
@@ -2374,23 +2287,23 @@
                     generator.verticalProcessingPositions.forEach(pos => {
                         if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
                             const charFinal = Array.from(linesFinal[pos.row])[pos.col];
-                            console.log(`最终位置(${pos.row},${pos.col}): 字符=${charFinal}, 密度=${pos.densityLevel}`);
+                            console.log(`Final position(${pos.row},${pos.col}): Character=${charFinal}, Density=${pos.densityLevel}`);
                             
                             if (charFinal === '🌕') moon_count++;
                             else if (charFinal === '🌑') black_count++;
                         }
                     });
                     
-                    console.error(`📊 垂直化处理统计: 🌕=${moon_count}个, 🌑=${black_count}个`);
+                    console.error(`📊 Vertical processing statistics: 🌕=${moon_count}, 🌑=${black_count}`);
                     
-                    // 检查整个结果字符串的内容统计
+                    // Check entire result string content statistics
                     const allChars = result.replace(/\n/g, '');
                     const totalMoon = (allChars.match(/🌕/g) || []).length;
                     const totalBlack = (allChars.match(/🌑/g) || []).length;
-                    console.error(`📊 整体字符统计: 总🌕=${totalMoon}个, 总🌑=${totalBlack}个`);
+                    console.error(`📊 Overall character statistics: Total🌕=${totalMoon}, Total🌑=${totalBlack}`);
                 }
                 
-                // 最后执行反色操作
+                // Finally execute color reversal
                 if (reverseColor) {
                     result = Array.from(result).map(char => {
                         if (char === '\n') return char;
@@ -2401,20 +2314,19 @@
                 document.getElementById('moonArt').textContent = result;
                 
                 
-                // 显示操作按钮
+                // Show action buttons
                 document.getElementById('actionButtons').style.display = 'flex';
                 
                     
             } catch (error) {
                 console.error('Generation error:', error);
-                document.getElementById('moonArt').textContent = 'エラーが発生しました';
+                document.getElementById('moonArt').textContent = 'Error occurred';
                 document.getElementById('actionButtons').style.display = 'none';
                 document.getElementById('debugInfo').style.display = 'none';
             }
         }
         
-        // イベントリスナー
-        // 检测是否为移动设备
+        // Check if mobile device
         function isMobileDevice() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
                    (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) ||
@@ -2424,15 +2336,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             const heightSlider = document.getElementById('heightSlider');
             const heightValue = document.getElementById('heightValue');
-            const adhesionSlider = document.getElementById('adhesionSlider');
-            const adhesionValue = document.getElementById('adhesionValue');
             const spacingSlider = document.getElementById('spacingSlider');
             const spacingValue = document.getElementById('spacingValue');
+            const paddingSlider = document.getElementById('paddingSlider');
+            const paddingValue = document.getElementById('paddingValue');
             
+            // Height slider for text tab
             heightSlider.addEventListener('input', () => {
                 heightValue.textContent = heightSlider.value;
                 
-                // 更新对应模式的设置
+                // Update corresponding mode settings
                 if (currentInputMode === 'text') {
                     textModeSettings.height = parseInt(heightSlider.value);
                 } else {
@@ -2442,23 +2355,27 @@
                 updatePreview();
             });
             
-            adhesionSlider.addEventListener('input', () => {
-                adhesionValue.textContent = adhesionSlider.value;
+            // Image height slider
+            const imageHeightSlider = document.getElementById('imageHeightSlider');
+            const imageHeightValue = document.getElementById('imageHeightValue');
+            
+            imageHeightSlider.addEventListener('input', () => {
+                imageHeightValue.textContent = imageHeightSlider.value;
+                imageModeSettings.height = parseInt(imageHeightSlider.value);
                 updatePreview();
             });
             
+            // Spacing slider
             spacingSlider.addEventListener('input', () => {
                 spacingValue.textContent = spacingSlider.value;
                 updatePreview();
             });
             
-            const paddingSlider = document.getElementById('paddingSlider');
-            const paddingValue = document.getElementById('paddingValue');
-            
+            // Padding slider
             paddingSlider.addEventListener('input', () => {
                 paddingValue.textContent = paddingSlider.value;
                 
-                // 更新对应模式的设置
+                // Update corresponding mode settings
                 if (currentInputMode === 'text') {
                     textModeSettings.padding = parseInt(paddingSlider.value);
                 } else {
@@ -2468,101 +2385,69 @@
                 updatePreview();
             });
             
-            document.getElementById('textInput').addEventListener('input', updatePreview);
-            document.getElementById('fontSelect').addEventListener('change', (e) => {
-                // 切换字体时自动应用预设配置
-                const fontType = e.target.value;
-                const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
-                
-                // 更新粘合系数
-                adhesionSlider.value = config.adhesionCoefficient;
-                adhesionValue.textContent = config.adhesionCoefficient;
-                
-                // 更新垂直化处理复选框状态
-                document.getElementById('verticalMedium').checked = 
-                    config.verticalDensityLevels.includes('中等密度');
-                document.getElementById('verticalHigh').checked = 
-                    config.verticalDensityLevels.includes('次高密度');
-                
-                // 显示垂直化处理配置信息（在调试信息中显示）
-                console.log(`字体切换到: ${fontType}, 垂直化处理密度级别: ${config.verticalDensityLevels.join(', ') || '无'}`);
-                
+            // Image padding slider
+            const imagePaddingSlider = document.getElementById('imagePaddingSlider');
+            const imagePaddingValue = document.getElementById('imagePaddingValue');
+            
+            imagePaddingSlider.addEventListener('input', () => {
+                imagePaddingValue.textContent = imagePaddingSlider.value;
+                imageModeSettings.padding = parseInt(imagePaddingSlider.value);
                 updatePreview();
             });
-            document.getElementById('showDebugCanvas').addEventListener('change', updatePreview);
             
-            // 添加方向选择事件监听器
-            document.querySelectorAll('input[name="textDirection"]').forEach(radio => {
-                radio.addEventListener('change', () => {
-                    updateSliderLabel(); // 更新标签
-                    updatePreview(); // 重新生成
-                });
+            // Text input
+            document.getElementById('textInput').addEventListener('input', updatePreview);
+            
+            // Font selection
+            document.querySelectorAll('input[name="fontType"]').forEach(radio => {
+                radio.addEventListener('change', updatePreview);
             });
             
-            // 添加反色复选框事件监听器
+            // Direction selection
+            document.querySelectorAll('input[name="direction"]').forEach(radio => {
+                radio.addEventListener('change', updatePreview);
+            });
+            
+            // Color reversal checkboxes
             document.getElementById('reverseColor').addEventListener('change', updatePreview);
+            document.getElementById('imageReverseColor').addEventListener('change', updatePreview);
             
+            // Denoising checkbox
+            if (document.getElementById('enableDenoising')) {
+                document.getElementById('enableDenoising').addEventListener('change', updatePreview);
+            }
             
-            // 添加垂直化处理控制复选框事件监听器
-            document.getElementById('verticalMedium').addEventListener('change', updatePreview);
-            document.getElementById('verticalHigh').addEventListener('change', updatePreview);
-            
-            // 添加去噪处理控制复选框事件监听器
-            document.getElementById('enableDenoising').addEventListener('change', updatePreview);
-            
-            
-            // 添加按钮事件监听器
+            // Action buttons
             document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
             document.getElementById('downloadTextBtn').addEventListener('click', downloadText);
             document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
             
-            // 仅在桌面设备上添加收藏按钮事件监听器
-            if (!isMobileDevice()) {
-                document.getElementById('bookmarkBtn').addEventListener('click', addBookmark);
-            } else {
-                // 移动设备上完全隐藏按钮
-                const bookmarkBtn = document.getElementById('bookmarkBtn');
-                if (bookmarkBtn) {
-                    bookmarkBtn.style.display = 'none';
-                }
-            }
+            // Generate buttons
+            // Remove generate button listeners - now using real-time updates
             
-            // 根据设备类型设置默认方向（仅在没有选择时）
-            const currentSelection = document.querySelector('input[name="textDirection"]:checked');
+            // Set device-specific default direction
+            const currentSelection = document.querySelector('input[name="direction"]:checked');
             if (!currentSelection) {
                 if (isMobileDevice()) {
-                    document.querySelector('input[name="textDirection"][value="vertical"]').checked = true;
+                    document.querySelector('input[name="direction"][value="vertical"]').checked = true;
                 } else {
-                    document.querySelector('input[name="textDirection"][value="horizontal"]').checked = true;
+                    document.querySelector('input[name="direction"][value="horizontal"]').checked = true;
                 }
-                // 设置默认值后，更新标签和预览
-                updateSliderLabel();
             }
             
-            // 初始化字体预设配置
-            const defaultFontType = document.getElementById('fontSelect').value;
-            const defaultConfig = FONT_CONFIGS[defaultFontType] || FONT_CONFIGS['default'];
-            adhesionSlider.value = defaultConfig.adhesionCoefficient;
-            adhesionValue.textContent = defaultConfig.adhesionCoefficient;
-            
-            // 初始化标签和生成（延迟执行确保DOM状态更新）
-            setTimeout(() => {
-                updateSliderLabel();
-                updatePreview();
-            }, 0);
-            
-            // 设置页脚收藏按钮
-            setupFooterBookmark();
-            
-            // 初始化Tab功能
+            // Tab functionality
             initializeTabs();
             
-            // 初始化图片上传功能
+            // Image upload functionality
             initializeImageUpload();
+            
+            // Initial preview update
+            setTimeout(() => {
+                updatePreview();
+            }, 0);
         });
         
-        
-        // Tab切换功能
+        // Tab switching functionality
         function initializeTabs() {
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabContents = document.querySelectorAll('.tab-content');
@@ -2571,74 +2456,62 @@
                 button.addEventListener('click', () => {
                     const tabId = button.getAttribute('data-tab');
                     
-                    // 移除所有active类
+                    // Remove all active classes
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     tabContents.forEach(content => content.classList.remove('active'));
                     
-                    // 添加active类到当前选中的tab
+                    // Add active class to current selected tab
                     button.classList.add('active');
                     if (tabId === 'text') {
                         document.getElementById('textTab').classList.add('active');
                         
-                        // 保存图片模式的设置（如果当前是图片模式）
+                        // Save image mode settings (if currently in image mode)
                         if (currentInputMode === 'image') {
-                            imageModeSettings.height = parseInt(document.getElementById('heightSlider').value);
-                            imageModeSettings.padding = parseInt(document.getElementById('paddingSlider').value);
+                            imageModeSettings.height = parseInt(document.getElementById('imageHeightSlider').value);
+                            imageModeSettings.padding = parseInt(document.getElementById('imagePaddingSlider').value);
                         }
                         
-                        currentInputMode = 'text'; // 更新当前模式
+                        currentInputMode = 'text'; // Update current mode
                         
-                        // 文字模式：调整高さ滑块范围为10-60
+                        // Text mode: adjust height slider range to 10-60
                         const heightSlider = document.getElementById('heightSlider');
                         const heightMaxLabel = heightSlider.nextElementSibling;
                         heightSlider.max = 60;
                         heightMaxLabel.textContent = '60';
                         
-                        // 恢复文字模式的设置
+                        // Restore text mode settings
                         heightSlider.value = textModeSettings.height;
                         document.getElementById('heightValue').textContent = textModeSettings.height;
                         document.getElementById('paddingSlider').value = textModeSettings.padding;
                         document.getElementById('paddingValue').textContent = textModeSettings.padding;
                         
-                        // 如果文字输入框有内容，重新生成预览
+                        // If text input has content, regenerate preview
                         const textInput = document.getElementById('textInput').value.trim();
                         if (textInput) {
                             setTimeout(() => updatePreview(), 0);
                         } else {
-                            // 没有文字时清空预览
-                            document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                            // No text, clear preview
+                            document.getElementById('moonArt').textContent = '<!-- Generated result will appear here -->';
                             document.getElementById('debugInfo').style.display = 'none';
                             document.getElementById('actionButtons').style.display = 'none';
                         }
                     } else if (tabId === 'image') {
                         document.getElementById('imageTab').classList.add('active');
                         
-                        // 保存文字模式的设置（如果当前是文字模式）
+                        // Save text mode settings (if currently in text mode)
                         if (currentInputMode === 'text') {
                             textModeSettings.height = parseInt(document.getElementById('heightSlider').value);
                             textModeSettings.padding = parseInt(document.getElementById('paddingSlider').value);
                         }
                         
-                        currentInputMode = 'image'; // 更新当前模式
+                        currentInputMode = 'image'; // Update current mode
                         
-                        // 图片模式：调整高さ滑块范围为10-500
-                        const heightSlider = document.getElementById('heightSlider');
-                        const heightMaxLabel = heightSlider.nextElementSibling;
-                        heightSlider.max = 500;
-                        heightMaxLabel.textContent = '500';
-                        
-                        // 恢复图片模式的设置
-                        heightSlider.value = imageModeSettings.height;
-                        document.getElementById('heightValue').textContent = imageModeSettings.height;
-                        document.getElementById('paddingSlider').value = imageModeSettings.padding;
-                        document.getElementById('paddingValue').textContent = imageModeSettings.padding;
-                        
-                        // 如果有上传的图片，重新生成预览
+                        // If there's uploaded image, regenerate preview
                         if (lastUploadedImageSrc) {
                             setTimeout(() => updatePreview(), 0);
                         } else {
-                            // 没有图片时清空预览
-                            document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                            // No image, clear preview
+                            document.getElementById('moonArt').textContent = '<!-- Generated result will appear here -->';
                             document.getElementById('debugInfo').style.display = 'none';
                             document.getElementById('actionButtons').style.display = 'none';
                         }
@@ -2647,46 +2520,33 @@
             });
         }
         
-        // 图片上传功能
+        // Image upload functionality
         function initializeImageUpload() {
             const imageInput = document.getElementById('imageInput');
-            const uploadButton = document.getElementById('uploadButton');
-            const uploadArea = document.getElementById('imageUploadArea');
-            const imagePreview = document.getElementById('imagePreview');
-            const previewImg = document.getElementById('previewImg');
-            const imageInfo = document.getElementById('imageInfo');
-            const removeButton = document.getElementById('removeImage');
+            const uploadArea = document.getElementById('uploadArea');
             
-            // 点击上传按钮
-            uploadButton.addEventListener('click', () => {
+            // Click upload area
+            uploadArea.addEventListener('click', () => {
                 imageInput.click();
             });
             
-            // 点击上传区域
-            uploadArea.addEventListener('click', (e) => {
-                if (e.target === uploadArea || e.target.classList.contains('upload-icon') || 
-                    e.target.classList.contains('upload-text') || e.target.classList.contains('upload-hint')) {
-                    imageInput.click();
-                }
-            });
-            
-            // 文件选择
+            // File selection
             imageInput.addEventListener('change', handleFileSelect);
             
-            // 拖拽上传
+            // Drag and drop upload
             uploadArea.addEventListener('dragover', (e) => {
                 e.preventDefault();
-                uploadArea.classList.add('dragover');
+                uploadArea.classList.add('drag-over');
             });
             
             uploadArea.addEventListener('dragleave', (e) => {
                 e.preventDefault();
-                uploadArea.classList.remove('dragover');
+                uploadArea.classList.remove('drag-over');
             });
             
             uploadArea.addEventListener('drop', (e) => {
                 e.preventDefault();
-                uploadArea.classList.remove('dragover');
+                uploadArea.classList.remove('drag-over');
                 
                 const files = e.dataTransfer.files;
                 if (files.length > 0 && files[0].type.startsWith('image/')) {
@@ -2694,23 +2554,7 @@
                 }
             });
             
-            // 删除图片
-            removeButton.addEventListener('click', () => {
-                imageInput.value = '';
-                uploadArea.style.display = 'flex';
-                imagePreview.style.display = 'none';
-                
-                // 清空保存的图片源
-                lastUploadedImageSrc = null;
-                console.log('图片已删除，清空图片源');
-                
-                // 清空预览
-                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
-                document.getElementById('debugInfo').style.display = 'none';
-                document.getElementById('actionButtons').style.display = 'none';
-            });
-            
-            // 处理文件选择
+            // Handle file selection
             function handleFileSelect(e) {
                 const file = e.target.files[0];
                 if (file && file.type.startsWith('image/')) {
@@ -2718,23 +2562,17 @@
                 }
             }
             
-            // 处理文件
+            // Handle file
             function handleFile(file) {
                 const reader = new FileReader();
                 
                 reader.onload = (e) => {
-                    previewImg.src = e.target.result;
-                    imageInfo.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
-                    
-                    uploadArea.style.display = 'none';
-                    imagePreview.style.display = 'block';
-                    
-                    // 保存图片源并设置当前模式
+                    // Save image source and set current mode
                     lastUploadedImageSrc = e.target.result;
                     currentInputMode = 'image';
-                    console.log('图片已上传，切换到图片模式');
+                    console.log('Image uploaded, switching to image mode');
                     
-                    // 自动生成预览
+                    // Auto generate preview
                     setTimeout(() => {
                         generateFromImage(e.target.result);
                     }, 100);
@@ -2744,113 +2582,66 @@
             }
         }
         
-        // 从图片生成月文字（完整实现）
+        // Generate moon art from image (full implementation)
         async function generateFromImage(imageSrc) {
             try {
-                // 显示处理中状态
-                document.getElementById('moonArt').textContent = '処理中...';
+                // Show processing status
+                document.getElementById('moonArt').textContent = 'Processing...';
                 
-                // 获取用户设置
-                const height = parseInt(document.getElementById('heightSlider').value);
-                const padding = parseInt(document.getElementById('paddingSlider').value);
-                const reverseColor = document.getElementById('reverseColor').checked;
-                    const enableDenoising = document.getElementById('enableDenoising').checked;
-                const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
-                // 创建图片处理器
+                // Get user settings
+                const height = parseInt(document.getElementById('imageHeightSlider').value);
+                const padding = parseInt(document.getElementById('imagePaddingSlider').value);
+                const reverseColor = document.getElementById('imageReverseColor').checked;
+                const enableDenoising = document.getElementById('enableDenoising')?.checked || true;
+                const adhesionCoefficient = 2; // Fixed value
+                
+                // Create image processor
                 const imageProcessor = new ImageProcessor();
                 
-                // 处理图片（固定启用灰度处理）
+                // Process image (fixed enable grayscale processing)
                 const imageData = await imageProcessor.loadAndProcessImage(imageSrc, height, true);
                 
-                console.log(`图片数据准备完成: ${imageData.width}x${imageData.height}`);
+                console.log(`Image data ready: ${imageData.width}x${imageData.height}`);
                 
-                // 使用SimpleMoonGenerator的专门图片处理流程
+                // Use SimpleMoonGenerator's specialized image processing flow
                 const generator = new SimpleMoonGenerator();
                 
-                // 使用专门的图片处理方法（跳过文字优化算法）
+                // Use specialized image processing method (skip text optimization algorithms)
                 let result = generator.generateFromImage(
                     imageData.matrix,
                     imageData.width,
                     imageData.height,
-                    padding // 直接传入padding参数
+                    padding // Pass padding parameter directly
                 );
                 
-                console.log(`图片月文字生成完成，行数: ${result.split('\n').length}`);
+                console.log(`Image moon art generation complete, lines: ${result.split('\n').length}`);
                 
-                // 应用反色（如果需要）
+                // Apply color reversal (if needed)
                 if (reverseColor) {
                     result = result.split('\n').map(line => {
                         return Array.from(line).map(char => {
-                            // 使用现有的reverseMoon方法
+                            // Use existing reverseMoon method
                             return generator.reverseMoon(char);
                         }).join('');
                     }).join('\n');
-                    console.log(`反色处理完成`);
+                    console.log(`Color reversal complete`);
                 }
                 
-                // 显示结果
+                // Display result
                 document.getElementById('moonArt').textContent = result;
                 document.getElementById('actionButtons').style.display = 'flex';
                 
-                // 图片模式不显示调试信息（因为没有垂直化处理等文字优化）
+                // Image mode doesn't show debug info (no vertical processing etc. text optimization)
                 document.getElementById('debugInfo').style.display = 'none';
                 
-                console.log(`图片转换完成！最终结果行数: ${result.split('\n').length}`);
+                console.log(`Image conversion complete! Final result lines: ${result.split('\n').length}`);
                 
             } catch (error) {
-                console.error('图片处理失败:', error);
-                document.getElementById('moonArt').textContent = 'エラー: 画像の処理に失敗しました';
+                console.error('Image processing failed:', error);
+                document.getElementById('moonArt').textContent = 'Error: Failed to process image';
                 document.getElementById('actionButtons').style.display = 'none';
             }
         }
-        
-        // 收藏功能
-        function addBookmark() {
-            const title = '月文字ジェネレーター - MojiMoon';
-            const url = 'https://mojimoon.com';
-            
-            try {
-                // 现代浏览器的处理
-                if (navigator.userAgent.indexOf('Chrome') > -1 || navigator.userAgent.indexOf('Safari') > -1) {
-                    // Chrome/Safari: 显示友好的提示
-                    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-                    const shortcut = isMac ? 'Cmd+D' : 'Ctrl+D';
-                    alert(`${shortcut} を押してお気に入りに追加してください🌙`);
-                } else if (window.sidebar && window.sidebar.addPanel) {
-                    // Firefox
-                    window.sidebar.addPanel(title, url, '');
-                } else if (window.external && window.external.AddFavorite) {
-                    // Internet Explorer
-                    window.external.AddFavorite(url, title);
-                } else {
-                    // 其他浏览器
-                    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-                    const shortcut = isMac ? 'Cmd+D' : 'Ctrl+D';
-                    alert(`${shortcut} を押してお気に入りに追加してください`);
-                }
-            } catch (error) {
-                console.error('Bookmark error:', error);
-                alert('お気に入りに追加するには、ブラウザのメニューから操作してください。');
-            }
-        }
-        
-        // フッター収藏按钮事件
-        function setupFooterBookmark() {
-            const footerBookmarkBtn = document.getElementById('footerBookmarkBtn');
-            if (footerBookmarkBtn && !isMobileDevice()) {
-                footerBookmarkBtn.addEventListener('click', addBookmark);
-            } else if (footerBookmarkBtn) {
-                // 移动设备上隐藏footter中的收藏按钮
-                footerBookmarkBtn.style.display = 'none';
-            }
-        }
     </script>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 15px; font-size: 1.2rem; font-weight: 600; color: #374151;">このサイトが気に入ったら、ぜひ<button id="footerBookmarkBtn" class="footer-bookmark-btn" title="お気に入りに追加">ブックマーク</button>してください</h2>
-        </div>
-    </footer>
 </body>
 </html>
