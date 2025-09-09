@@ -169,7 +169,7 @@
         .height-control {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 8px;
         }
         
         .height-slider {
@@ -335,21 +335,32 @@
         /* 双列控件布局 */
         .dual-control-row {
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            width: 100%;
+            max-width: 100%;
             margin-bottom: 15px;
+            box-sizing: border-box;
+            gap: 0;
         }
         
         .dual-control-item {
-            flex: 1;
+            flex: 0 0 50%;
+            box-sizing: border-box;
         }
         
         .dual-control-item:first-child {
-            flex: 1;  /* 高さ控件与余白控件等宽 */
+            flex: 0 0 50%;
         }
         
         .dual-control-item:last-child {
-            flex: 1;    /* 余白控件占用较少空间 */
+            flex: 0 0 50%;
+        }
+        
+        /* 内部控件90%宽度，居左显示 */
+        .dual-control-item > label,
+        .dual-control-item > .height-control,
+        .dual-control-item > .font-select {
+            width: 90%;
+            margin-left: 0;
         }
         
         /* フッタースタイル */
@@ -489,25 +500,44 @@
             
             /* 双列控件移动端优化 */
             .dual-control-row {
-                gap: 8px;
+                gap: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .dual-control-item {
+                flex: 0 0 50%;
+            }
+            
+            .dual-control-item label {
+                white-space: nowrap;
+                overflow: visible;
+                text-overflow: clip;
             }
             
             .height-control {
-                gap: 8px;
+                gap: 6px;
             }
             
             .height-control span {
                 font-size: 12px;
-                min-width: 15px;
+                min-width: 10px;
             }
             
             /* 移动端双列控件空间优化 */
             .dual-control-item:first-child {
-                flex: 1;  /* 高さ控件在移动端与余白控件等宽 */
+                flex: 0 0 50%;
             }
             
             .dual-control-item:last-child {
-                flex: 1;  /* 余白控件在移动端与高さ控件等宽 */
+                flex: 0 0 50%;
+            }
+            
+            /* 移动端内部控件95%宽度 */
+            .dual-control-item > label,
+            .dual-control-item > .height-control,
+            .dual-control-item > .font-select {
+                width: 95%;
             }
         }
         
@@ -708,17 +738,17 @@
                 </div>
                 
                 <div class="form-group">
-                    <div style="display: flex; gap: 20px; align-items: flex-start;">
-                        <div style="flex: 1;">
-                            <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
+                    <div class="dual-control-row">
+                        <div class="dual-control-item">
+                            <label style="font-weight: 600; margin-bottom: 8px; display: block;">フォント選択</label>
                             <select id="fontSelect" class="font-select">
                                 <option value="default" selected>システム既定</option>
                                 <option value="gothic">ゴシック体</option>
                                 <option value="mincho">明朝体</option>
                             </select>
                         </div>
-                        <div style="flex: 1;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">2</span></label>
+                        <div class="dual-control-item">
+                            <label style="font-weight: 600; margin-bottom: 8px; display: block;">文字間隔: <span id="spacingValue">2</span></label>
                             <div class="height-control">
                                 <span>0</span>
                                 <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">

@@ -146,6 +146,12 @@
             margin-bottom: 12px;
         }
         
+        /* 通栏控件95%宽度 */
+        .form-group .height-control {
+            width: 95%;
+            margin-left: 0;
+        }
+        
         .form-group label {
             display: block;
             margin-bottom: 5px;
@@ -153,7 +159,7 @@
         }
         
         .text-input {
-            width: 100%;
+            width: 95%;
             height: 48px;
             padding: 12px;
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -161,6 +167,8 @@
             background: rgba(255, 255, 255, 0.1);
             color: white;
             font-size: 16px;
+            margin: 0 auto;
+            display: block;
         }
         
         .text-input::placeholder {
@@ -170,7 +178,17 @@
         .height-control {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 8px;
+        }
+        
+        .dual-control-group .height-control {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .dual-control-group .height-slider {
+            flex: 1;
+            min-width: 0;
         }
         
         .height-slider {
@@ -199,9 +217,24 @@
         
         .dual-control-group {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 50% 50%;
+            gap: 0;
             margin-bottom: 12px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .dual-control-group .control-item {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* 内部控件90%宽度，居左显示 */
+        .dual-control-group .control-item > h3,
+        .dual-control-group .control-item > .height-control {
+            width: 90%;
+            margin-left: 0;
         }
         
         .control-item h3 {
@@ -455,12 +488,24 @@
             }
             
             .height-control {
-                gap: 10px;
+                gap: 6px;
             }
             
             .dual-control-group {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                grid-template-columns: 50% 50%;
+                gap: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .dual-control-group .control-item {
+                width: 100%;
+            }
+            
+            /* 移动端内部控件95%宽度 */
+            .dual-control-group .control-item > h3,
+            .dual-control-group .control-item > .height-control {
+                width: 95%;
             }
         }
         
