@@ -770,11 +770,103 @@
     </div>
 
     <script>
+        // 全局状态管理
+        let currentInputMode = 'text'; // 'text' or 'image'
+        let lastUploadedImageSrc = null; // 保存最后上传的图片数据
+        
         // 简化的颜色级别：只有黑白两色
         const COLOR_LEVELS = {
             BLACK: 0,
             WHITE: 1
         };
+        
+        // 图片处理类 - 用于处理图片输入并转换为像素矩阵
+        class ImageProcessor {
+            constructor() {
+                this.threshold = 128; // 二值化阈值
+            }
+            
+            // 加载并处理图片
+            async loadAndProcessImage(imageSrc, targetHeight) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        try {
+                            // 创建canvas来处理图片
+                            const canvas = document.createElement('canvas');
+                            const ctx = canvas.getContext('2d');
+                            
+                            // 计算目标尺寸（保持宽高比）
+                            const aspectRatio = img.width / img.height;
+                            const targetPixelHeight = targetHeight * 5; // 5x5系统
+                            const targetPixelWidth = Math.round(targetPixelHeight * aspectRatio);
+                            
+                            // 确保尺寸是5的倍数
+                            const finalHeight = Math.ceil(targetPixelHeight / 5) * 5;
+                            const finalWidth = Math.ceil(targetPixelWidth / 5) * 5;
+                            
+                            // 设置canvas尺寸并绘制图片
+                            canvas.width = finalWidth;
+                            canvas.height = finalHeight;
+                            ctx.drawImage(img, 0, 0, finalWidth, finalHeight);
+                            
+                            // 获取图像数据
+                            const imageData = ctx.getImageData(0, 0, finalWidth, finalHeight);
+                            
+                            // 二值化处理
+                            const binaryMatrix = this.binarizeImage(imageData);
+                            
+                            console.log(`图片处理完成: 原始尺寸=${img.width}x${img.height}, 目标尺寸=${finalWidth}x${finalHeight}`);
+                            
+                            resolve({
+                                matrix: binaryMatrix,
+                                width: finalWidth,
+                                height: finalHeight
+                            });
+                        } catch (error) {
+                            reject(error);
+                        }
+                    };
+                    
+                    img.onerror = () => {
+                        reject(new Error('图片加载失败'));
+                    };
+                    
+                    img.src = imageSrc;
+                });
+            }
+            
+            // 二值化图像数据
+            binarizeImage(imageData) {
+                const data = imageData.data;
+                const width = imageData.width;
+                const height = imageData.height;
+                const binaryMatrix = [];
+                
+                for (let y = 0; y < height; y++) {
+                    const row = [];
+                    for (let x = 0; x < width; x++) {
+                        const idx = (y * width + x) * 4;
+                        // 计算灰度值
+                        const r = data[idx];
+                        const g = data[idx + 1];
+                        const b = data[idx + 2];
+                        const gray = 0.299 * r + 0.587 * g + 0.114 * b;
+                        
+                        // 二值化：0=黑色，1=白色
+                        row.push(gray < this.threshold ? 0 : 1);
+                    }
+                    binaryMatrix.push(row);
+                }
+                
+                return binaryMatrix;
+            }
+            
+            // 设置二值化阈值
+            setThreshold(value) {
+                this.threshold = value;
+            }
+        }
         
         // 横向加强算法M - 模块化实现
         class HorizontalEnhancer {
@@ -1360,6 +1452,86 @@
                 }
                 
                 return paddedLines.join('\n');
+            }
+            
+            // 从像素矩阵生成月文字（用于图片输入）
+            generateFromPixelMatrix(pixelMatrix, width, height, enableVerticalProcessing = true, showVerticalDebug = false, padding = 0) {
+                console.log(`从像素矩阵生成月文字: ${width}x${height}像素`);
+                
+                // 清空垂直化处理记录
+                this.verticalProcessingPositions = [];
+                
+                // 创建元数据网格
+                const metaGrid = [];
+                const gridSize = 5;
+                
+                // 按5x5网格扫描像素矩阵
+                for (let y = 0; y < height; y += gridSize) {
+                    const metaRow = [];
+                    for (let x = 0; x < width; x += gridSize) {
+                        // 提取5x5子网格
+                        const subGrid = [];
+                        for (let dy = 0; dy < gridSize; dy++) {
+                            subGrid[dy] = [];
+                            for (let dx = 0; dx < gridSize; dx++) {
+                                const py = y + dy;
+                                const px = x + dx;
+                                // 边界检查
+                                if (py < height && px < width) {
+                                    subGrid[dy][dx] = pixelMatrix[py][px];
+                                } else {
+                                    subGrid[dy][dx] = 1; // 超出边界默认为白色
+                                }
+                            }
+                        }
+                        
+                        // 将5x5网格转换为带元数据的月相
+                        const cellMeta = this.gridToMoonWithMeta(subGrid);
+                        metaRow.push(cellMeta);
+                    }
+                    if (metaRow.length > 0) {
+                        metaGrid.push(metaRow);
+                    }
+                }
+                
+                console.log(`元数据网格生成完成: ${metaGrid[0]?.length || 0}列 x ${metaGrid.length}行`);
+                
+                // 应用垂直化处理（如果启用）
+                if (enableVerticalProcessing) {
+                    // 从UI获取垂直化处理设置
+                    const targetDensityLevels = [];
+                    if (document.getElementById('verticalMedium').checked) {
+                        targetDensityLevels.push('中等密度');
+                    }
+                    if (document.getElementById('verticalHigh').checked) {
+                        targetDensityLevels.push('次高密度');
+                    }
+                    const thresholdN = 2; // 默认阈值
+                    
+                    this.applyVerticalProcessing(metaGrid, targetDensityLevels, thresholdN);
+                    console.log(`垂直化处理完成，处理了${this.verticalProcessingPositions.length}个位置`);
+                }
+                
+                // 从元数据网格提取最终月相
+                const resultLines = metaGrid.map(row => 
+                    row.map(cell => cell.finalMoonPhase).join('')
+                );
+                
+                let result = resultLines.join('\n');
+                
+                // 应用垂直化调试符号（如果需要）
+                if (showVerticalDebug) {
+                    result = this.applyVerticalDebugSymbols(result);
+                    console.log(`垂直化调试符号已应用`);
+                }
+                
+                // 应用边距
+                if (padding > 0) {
+                    result = this.applyPadding(result, padding);
+                    console.log(`边距应用完成，边距宽度: ${padding}`);
+                }
+                
+                return result;
             }
             
             // 生成单个字符的月相
@@ -2005,7 +2177,29 @@
             }, 'image/png');
         }
         
+        // 统一的预览更新函数（根据当前模式调用相应的处理函数）
         function updatePreview() {
+            console.log(`updatePreview - 当前模式: ${currentInputMode}`);
+            
+            // 根据当前模式决定处理方式
+            if (currentInputMode === 'image' && lastUploadedImageSrc) {
+                // 图片模式：重新生成图片的月文字
+                console.log('更新图片预览');
+                generateFromImage(lastUploadedImageSrc);
+            } else if (currentInputMode === 'text') {
+                // 文字模式：执行原有的文字处理逻辑
+                console.log('更新文字预览');
+                updateTextPreview();
+            } else {
+                // 没有内容时显示提示
+                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                document.getElementById('actionButtons').style.display = 'none';
+                document.getElementById('debugInfo').style.display = 'none';
+            }
+        }
+        
+        // 文字模式的预览更新
+        function updateTextPreview() {
             const text = document.getElementById('textInput').value.trim();
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
             const fontType = document.getElementById('fontSelect').value;
@@ -2284,14 +2478,32 @@
                     button.classList.add('active');
                     if (tabId === 'text') {
                         document.getElementById('textTab').classList.add('active');
+                        currentInputMode = 'text'; // 更新当前模式
+                        
+                        // 如果文字输入框有内容，重新生成预览
+                        const textInput = document.getElementById('textInput').value.trim();
+                        if (textInput) {
+                            setTimeout(() => updatePreview(), 0);
+                        } else {
+                            // 没有文字时清空预览
+                            document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                            document.getElementById('debugInfo').style.display = 'none';
+                            document.getElementById('actionButtons').style.display = 'none';
+                        }
                     } else if (tabId === 'image') {
                         document.getElementById('imageTab').classList.add('active');
+                        currentInputMode = 'image'; // 更新当前模式
+                        
+                        // 如果有上传的图片，重新生成预览
+                        if (lastUploadedImageSrc) {
+                            setTimeout(() => updatePreview(), 0);
+                        } else {
+                            // 没有图片时清空预览
+                            document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                            document.getElementById('debugInfo').style.display = 'none';
+                            document.getElementById('actionButtons').style.display = 'none';
+                        }
                     }
-                    
-                    // 清空预览区域（切换tab时）
-                    document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
-                    document.getElementById('debugInfo').style.display = 'none';
-                    document.getElementById('actionButtons').style.display = 'none';
                 });
             });
         }
@@ -2349,6 +2561,10 @@
                 uploadArea.style.display = 'flex';
                 imagePreview.style.display = 'none';
                 
+                // 清空保存的图片源
+                lastUploadedImageSrc = null;
+                console.log('图片已删除，清空图片源');
+                
                 // 清空预览
                 document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
                 document.getElementById('debugInfo').style.display = 'none';
@@ -2374,6 +2590,11 @@
                     uploadArea.style.display = 'none';
                     imagePreview.style.display = 'block';
                     
+                    // 保存图片源并设置当前模式
+                    lastUploadedImageSrc = e.target.result;
+                    currentInputMode = 'image';
+                    console.log('图片已上传，切换到图片模式');
+                    
                     // 自动生成预览
                     setTimeout(() => {
                         generateFromImage(e.target.result);
@@ -2384,13 +2605,97 @@
             }
         }
         
-        // 从图片生成月文字（临时实现，后续会完善）
-        function generateFromImage(imageSrc) {
-            // 这里暂时显示一个占位符，实际的图片处理功能后续实现
-            document.getElementById('moonArt').textContent = '🌑🌒🌓🌔🌕🌖🌗🌘\n🌘🌗🌖🌕🌔🌓🌒🌑\n🌑🌒🌓🌔🌕🌖🌗🌘';
-            document.getElementById('actionButtons').style.display = 'flex';
-            
-            console.log('图片上传成功，将来会实现图片到月文字的转换功能');
+        // 从图片生成月文字（完整实现）
+        async function generateFromImage(imageSrc) {
+            try {
+                // 显示处理中状态
+                document.getElementById('moonArt').textContent = '処理中...';
+                
+                // 获取用户设置
+                const height = parseInt(document.getElementById('heightSlider').value);
+                const padding = parseInt(document.getElementById('paddingSlider').value);
+                const reverseColor = document.getElementById('reverseColor').checked;
+                const showVerticalInfo = document.getElementById('showVerticalInfo').checked;
+                const enableDenoising = document.getElementById('enableDenoising').checked;
+                const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
+                
+                // 创建图片处理器
+                const imageProcessor = new ImageProcessor();
+                
+                // 处理图片
+                const imageData = await imageProcessor.loadAndProcessImage(imageSrc, height);
+                
+                console.log(`图片数据准备完成: ${imageData.width}x${imageData.height}`);
+                
+                // 使用SimpleMoonGenerator处理像素矩阵
+                const generator = new SimpleMoonGenerator();
+                let result = generator.generateFromPixelMatrix(
+                    imageData.matrix,
+                    imageData.width,
+                    imageData.height,
+                    true, // enableVerticalProcessing
+                    false, // showVerticalDebug（横向加强后再显示）
+                    0 // padding（横向加强后再应用）
+                );
+                
+                console.log(`初始月文字生成完成，行数: ${result.split('\n').length}`);
+                
+                // 应用横向加强算法
+                const horizontalEnhancer = new HorizontalEnhancer();
+                horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
+                horizontalEnhancer.setEnableDenoising(enableDenoising);
+                result = horizontalEnhancer.enhance(result);
+                
+                console.log(`横向加强完成`);
+                
+                // 如果启用垂直化调试信息，在横向加强算法之后显示
+                if (showVerticalInfo) {
+                    result = generator.applyVerticalDebugSymbols(result);
+                    console.log(`垂直化调试符号已应用`);
+                }
+                
+                // 应用边距（如果横向加强没有处理的话）
+                if (padding > 0) {
+                    result = generator.applyPadding(result, padding);
+                    console.log(`边距应用完成，边距宽度: ${padding}`);
+                }
+                
+                // 应用反色（如果需要）
+                if (reverseColor) {
+                    result = result.split('\n').map(line => {
+                        return Array.from(line).map(char => {
+                            // 使用现有的reverseEmoji方法
+                            return generator.reverseEmoji(char);
+                        }).join('');
+                    }).join('\n');
+                    console.log(`反色处理完成`);
+                }
+                
+                // 显示结果
+                document.getElementById('moonArt').textContent = result;
+                document.getElementById('actionButtons').style.display = 'flex';
+                
+                // 显示调试信息（如果需要）
+                const debugInfo = document.getElementById('debugInfo');
+                if (debugInfo) {
+                    debugInfo.style.display = 'block';
+                    const verticalStatus = document.getElementById('verticalProcessingStatus');
+                    if (verticalStatus) {
+                        verticalStatus.textContent = generator.verticalProcessingPositions.length > 0 ? '有効' : '無効';
+                    }
+                    const verticalCount = document.getElementById('verticalProcessingCount');
+                    if (verticalCount) {
+                        verticalCount.textContent = generator.verticalProcessingPositions.length;
+                    }
+                }
+                
+                console.log(`图片转换完成！最终结果行数: ${result.split('\n').length}`);
+                
+            } catch (error) {
+                console.error('图片处理失败:', error);
+                document.getElementById('moonArt').textContent = 'エラー: 画像の処理に失敗しました';
+                document.getElementById('actionButtons').style.display = 'none';
+            }
         }
         
         // 收藏功能
