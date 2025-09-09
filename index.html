@@ -331,6 +331,18 @@
             font-weight: 500;
         }
         
+        /* 双列控件布局 */
+        .dual-control-row {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .dual-control-item {
+            flex: 1;
+        }
+        
         /* フッタースタイル */
         .footer {
             margin-top: 40px;
@@ -403,7 +415,7 @@
             }
             
             .control-panel {
-                padding: 15px;
+                padding: 12px;
                 margin-bottom: 15px;
             }
             
@@ -459,6 +471,20 @@
             
             .moon-art {
                 font-size: 10px;
+            }
+            
+            /* 双列控件移动端优化 */
+            .dual-control-row {
+                gap: 8px;
+            }
+            
+            .height-control {
+                gap: 8px;
+            }
+            
+            .height-control span {
+                font-size: 12px;
+                min-width: 15px;
             }
         }
         
@@ -702,8 +728,8 @@
             <!-- Tab外部通用选项 -->
             <div class="form-group">
                 <!-- 第一行：高さ + 余白 -->
-                <div style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 15px;">
-                    <div style="flex: 1;">
+                <div class="dual-control-row">
+                    <div class="dual-control-item">
                         <label style="font-weight: 600; margin-bottom: 8px; display: block;">
                             <span id="sliderLabel">高さ</span>: 
                             <span id="heightValue">10</span>
@@ -715,7 +741,7 @@
                             <span>60</span>
                         </div>
                     </div>
-                    <div style="flex: 1;">
+                    <div class="dual-control-item">
                         <label style="font-weight: 600; margin-bottom: 8px; display: block;">
                             余白: <span id="paddingValue">0</span>
                         </label>
