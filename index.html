@@ -203,7 +203,7 @@
             font-family: monospace;
             font-size: 12px;
             line-height: 1.4;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.1em;
             white-space: pre;
             overflow-x: auto;
             color: #fff;
@@ -430,16 +430,12 @@
                         <input type="checkbox" id="reverseColor">
                         <span class="radio-label">反色</span>
                     </label>
-                    <label class="radio-option">
-                        <input type="checkbox" id="showVerticalInfo">
-                        <span class="radio-label">垂直化情報</span>
-                    </label>
                 </div>
             </div>
             
             <div class="form-group">
                 <div style="display: flex; gap: 20px; align-items: flex-start;">
-                    <div style="flex: 1;">
+                    <div style="flex: 0.5;">
                         <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
                         <select id="fontSelect" class="font-select">
                             <option value="default" selected>システム既定</option>
@@ -447,32 +443,22 @@
                             <option value="mincho">明朝体</option>
                         </select>
                     </div>
-                    <div style="flex: 1;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">0</span></label>
+                    <div style="flex: 0.6;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">2</span></label>
                         <div class="height-control">
                             <span>0</span>
-                            <input type="range" id="spacingSlider" class="height-slider" min="0" max="20" value="0">
-                            <span>20</span>
+                            <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
+                            <span>10</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="form-group" style="display: none;">
-                <label>噪音过滤阈值: <span id="thresholdValue">8</span></label>
-                <div class="height-control">
-                    <span>1</span>
-                    <input type="range" id="thresholdSlider" class="height-slider" min="1" max="16" value="8">
-                    <span>16</span>
-                </div>
-            </div>
-            
-            <div class="form-group" style="display: none;">
-                <label>横向粘合系数: <span id="adhesionValue">2</span></label>
-                <div class="height-control">
-                    <span>0</span>
-                    <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
-                    <span>6</span>
+                    <div style="flex: 0.6;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">余白: <span id="paddingValue">0</span></label>
+                        <div class="height-control">
+                            <span>0</span>
+                            <input type="range" id="paddingSlider" class="height-slider" min="0" max="5" value="0">
+                            <span>5</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -482,6 +468,54 @@
                     <span>10</span>
                     <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
                     <span>60</span>
+                </div>
+            </div>
+            
+            <!-- 调试参数区域 -->
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <h3 style="margin-bottom: 15px; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
+                
+                <div class="form-group">
+                    <label>横向粘合系数: <span id="adhesionValue">2</span></label>
+                    <div class="height-control">
+                        <span>0</span>
+                        <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
+                        <span>6</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">垂直化处理</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio-option">
+                            <input type="checkbox" id="verticalMedium" checked>
+                            <span class="radio-label">中等密度</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="checkbox" id="verticalHigh" checked>
+                            <span class="radio-label">次高密度</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">横向加强算法</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio-option">
+                            <input type="checkbox" id="enableDenoising" checked>
+                            <span class="radio-label">去噪处理</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">调试显示</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio-option">
+                            <input type="checkbox" id="showVerticalInfo">
+                            <span class="radio-label">垂直化情報</span>
+                        </label>
+                    </div>
                 </div>
             </div>
             
@@ -542,6 +576,7 @@
         class HorizontalEnhancer {
             constructor() {
                 this.adhesionCoefficient = 2; // 默认粘合系数
+                this.enableDenoising = true; // 默认启用去噪处理
                 this.gapDistanceMap = this.initGapDistanceMap();
                 
                 // 自身空缺度映射表
@@ -560,6 +595,11 @@
             // 设置粘合系数
             setAdhesionCoefficient(coefficient) {
                 this.adhesionCoefficient = coefficient;
+            }
+            
+            // 设置去噪开关
+            setEnableDenoising(enable) {
+                this.enableDenoising = enable;
             }
             
             // 初始化空缺度查找表
@@ -707,8 +747,12 @@
                 // 执行自粘合操作
                 const selfAdhesedLines = this.selfAdhesion(processedLines);
                 
-                // 执行去噪操作
-                return this.denoise(selfAdhesedLines);
+                // 根据开关决定是否执行去噪操作
+                if (this.enableDenoising) {
+                    return this.denoise(selfAdhesedLines);
+                } else {
+                    return selfAdhesedLines.join('\n');
+                }
             }
             
             // 去噪操作
@@ -764,16 +808,8 @@
                     { emoji: '🌕', minBlack: 13, maxBlack: 16 }   // 大量黑色
                 ];
                 
-                // 噪音过滤阈值：低于此黑色像素数量的网格将显示为背景
-                this.noiseThreshold = 1;
-                
                 // 垂直化处理记录：存储被处理字符的位置和密度信息
                 this.verticalProcessingPositions = [];
-            }
-            
-            // 设置噪音过滤阈值
-            setNoiseThreshold(threshold) {
-                this.noiseThreshold = threshold;
             }
             
             // 最简单的灰度值转换：只有黑白两色
@@ -878,9 +914,9 @@
             
             // 判断重心偏向
             getBias(centerX) {
-                if (centerX < 2.0) {
+                if (centerX < 1.8) {
                     return 'left';
-                } else if (centerX > 3.0) {
+                } else if (centerX > 2.2) {
                     return 'right';
                 } else {
                     return 'balanced';
@@ -968,8 +1004,11 @@
                     for (let col = 0; col < gridWidth; col++) {
                         const currentCell = gridWithMeta[row][col];
                         
+                        
                         // 检查是否需要垂直化处理
                         if (this.shouldApplyVerticalProcessing(currentCell, targetDensityLevels)) {
+                            
+                            
                             // 记录被垂直化处理的位置和密度信息
                             this.verticalProcessingPositions.push({
                                 row: row,
@@ -1006,6 +1045,7 @@
                     '极低密度': '⬛',  // 黑色方块
                     '高密度': '🌕'     // 保持原样
                 };
+                
                 return DENSITY_DEBUG_SYMBOLS[densityLevel] || '❓';
             }
             
@@ -1014,6 +1054,7 @@
                 if (this.verticalProcessingPositions.length === 0) {
                     return resultText;
                 }
+                
                 
                 const lines = resultText.split('\n');
                 const resultLines = [...lines];
@@ -1030,6 +1071,7 @@
                             
                             // 统一使用密度符号，不对处理结果做区分
                             debugSymbol = this.getDensityDebugSymbol(densityLevel);
+                            
                             
                             // 替换指定位置的字符
                             const chars = Array.from(line);
@@ -1073,6 +1115,47 @@
                 }
                 
                 return spacedLines.join('\n');
+            }
+            
+            // 应用边距（padding）
+            applyPadding(text, padding) {
+                if (padding <= 0) return text;
+                
+                const lines = text.split('\n');
+                if (lines.length === 0) return text;
+                
+                // 计算最大行宽
+                const maxWidth = Math.max(...lines.map(line => Array.from(line).length));
+                
+                // 创建边距字符（黑月）
+                const paddingChar = '🌑';
+                const horizontalPadding = paddingChar.repeat(padding);
+                const fullPaddingLine = paddingChar.repeat(maxWidth + 2 * padding);
+                
+                const paddedLines = [];
+                
+                // 添加上边距
+                for (let i = 0; i < padding; i++) {
+                    paddedLines.push(fullPaddingLine);
+                }
+                
+                // 添加左右边距到每一行
+                for (const line of lines) {
+                    const chars = Array.from(line);
+                    // 填充行到最大宽度
+                    while (chars.length < maxWidth) {
+                        chars.push('🌑');
+                    }
+                    const paddedLine = horizontalPadding + chars.join('') + horizontalPadding;
+                    paddedLines.push(paddedLine);
+                }
+                
+                // 添加下边距
+                for (let i = 0; i < padding; i++) {
+                    paddedLines.push(fullPaddingLine);
+                }
+                
+                return paddedLines.join('\n');
             }
             
             // 生成单个字符的月相
@@ -1407,7 +1490,7 @@
             }
 
             // 生成月文字（使用单字符处理架构，支持垂直化处理）
-            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, showVerticalDebug = false) {
+            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, showVerticalDebug = false, padding = 0) {
                 if (!text.trim()) return '';
                 
                 console.log(`单字符处理架构: text="${text}", sizeParam=${sizeParam}, isVertical=${isVertical}, spacing=${spacing}`);
@@ -1512,8 +1595,14 @@
                     
                     console.log(`全局网格创建完成: ${globalMetaGrid[0]?.length || 0}列 x ${globalMetaGrid.length}行`);
                     
-                    // 应用垂直化处理
-                    const targetDensityLevels = ['中等密度']; // 默认处理中等密度
+                    // 从UI获取垂直化处理设置
+                    const targetDensityLevels = [];
+                    if (document.getElementById('verticalMedium').checked) {
+                        targetDensityLevels.push('中等密度');
+                    }
+                    if (document.getElementById('verticalHigh').checked) {
+                        targetDensityLevels.push('次高密度');
+                    }
                     const thresholdN = 2; // 默认阈值
                     
                     globalMetaGrid = this.applyVerticalProcessing(globalMetaGrid, targetDensityLevels, thresholdN);
@@ -1549,6 +1638,12 @@
                     
                     console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
                     
+                    // 应用边距
+                    if (padding > 0) {
+                        result = this.applyPadding(result, padding);
+                        console.log(`边距应用完成，边距宽度: ${padding}`);
+                    }
+                    
                     return result;
                     
                 } else {
@@ -1566,6 +1661,13 @@
                     }
                     
                     console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+                    
+                    // 应用边距
+                    if (padding > 0) {
+                        result = this.applyPadding(result, padding);
+                        console.log(`边距应用完成，边距宽度: ${padding}`);
+                    }
+                    
                     return result;
                 }
             }
@@ -1578,11 +1680,20 @@
             'mincho': '"游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS 明朝", "MS Mincho", serif'
         };
 
-        // 字体预设配置：(噪音过滤阈值，粘合系数)
+        // 字体预设配置：粘合系数和垂直化处理密度级别
         const FONT_CONFIGS = {
-            'default': { noiseThreshold: 8, adhesionCoefficient: 2 },
-            'gothic': { noiseThreshold: 8, adhesionCoefficient: 2 },
-            'mincho': { noiseThreshold: 4, adhesionCoefficient: 3 }
+            'default': { 
+                adhesionCoefficient: 2,
+                verticalDensityLevels: ['中等密度', '次高密度']
+            },
+            'gothic': { 
+                adhesionCoefficient: 2,
+                verticalDensityLevels: ['中等密度', '次高密度']
+            },
+            'mincho': { 
+                adhesionCoefficient: 3,
+                verticalDensityLevels: []  // 明朝体不使用垂直化处理
+            }
         };
         
         // 初始化
@@ -1694,9 +1805,9 @@
             const text = document.getElementById('textInput').value.trim();
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
             const fontType = document.getElementById('fontSelect').value;
-            const threshold = parseInt(document.getElementById('thresholdSlider').value);
             const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
             const spacing = parseInt(document.getElementById('spacingSlider').value);
+            const padding = parseInt(document.getElementById('paddingSlider').value);
             
             const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
             console.log('updatePreview - 选中的radio按钮:', selectedRadio);
@@ -1706,6 +1817,7 @@
             
             const reverseColor = document.getElementById('reverseColor').checked;
             const showVerticalInfo = document.getElementById('showVerticalInfo').checked;
+            const enableDenoising = document.getElementById('enableDenoising').checked;
             
             if (!text) {
                 document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
@@ -1715,9 +1827,8 @@
             }
             
             try {
-                // 设置噪音过滤阈值并生成基础结果（启用垂直化处理，不执行反色）
-                generator.setNoiseThreshold(threshold);
-                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, false); // 先不显示调试信息
+                // 生成基础结果（启用垂直化处理，不执行反色）
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, false, padding); // 先不显示调试信息
                 
                 // 添加垂直化处理后的调试输出
                 console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
@@ -1733,15 +1844,16 @@
                     });
                 }
                 
-                // 如果启用垂直化调试信息，在横向加强算法之前显示
-                if (showVerticalInfo) {
-                    result = generator.applyVerticalDebugSymbols(result);
-                    console.log(`垂直化调试符号已应用（横向加强前），共${generator.verticalProcessingPositions.length}个位置`);
-                }
-                
                 // 应用横向加强算法
                 horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
+                horizontalEnhancer.setEnableDenoising(enableDenoising);
                 result = horizontalEnhancer.enhance(result);
+                
+                // 如果启用垂直化调试信息，在横向加强算法之后显示
+                if (showVerticalInfo) {
+                    result = generator.applyVerticalDebugSymbols(result);
+                    console.log(`垂直化调试符号已应用（横向加强后），共${generator.verticalProcessingPositions.length}个位置`);
+                }
                 
                 // 垂直化处理的最终结果检查
                 console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
@@ -1780,10 +1892,13 @@
                 
                 // 显示垂直化处理调试信息
                 document.getElementById('debugInfo').style.display = 'block';
-                document.getElementById('verticalProcessingStatus').textContent = '有効';
-                document.getElementById('targetDensityLevels').textContent = '中等密度';
+                const fontConfig = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
+                const verticalDensityLevels = fontConfig.verticalDensityLevels || [];
+                const isVerticalEnabled = verticalDensityLevels.length > 0;
+                document.getElementById('verticalProcessingStatus').textContent = isVerticalEnabled ? '有効' : '無効';
+                document.getElementById('targetDensityLevels').textContent = verticalDensityLevels.length > 0 ? verticalDensityLevels.join('、') : 'なし';
                 document.getElementById('thresholdN').textContent = '2';
-                document.getElementById('processingMode').textContent = '中等密度（バランス重心のみ）';
+                document.getElementById('processingMode').textContent = `${fontType}預設: ${verticalDensityLevels.length > 0 ? verticalDensityLevels.join('・') : 'なし'}`;
                 
                 // 显示操作按钮
                 document.getElementById('actionButtons').style.display = 'flex';
@@ -1808,8 +1923,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             const heightSlider = document.getElementById('heightSlider');
             const heightValue = document.getElementById('heightValue');
-            const thresholdSlider = document.getElementById('thresholdSlider');
-            const thresholdValue = document.getElementById('thresholdValue');
             const adhesionSlider = document.getElementById('adhesionSlider');
             const adhesionValue = document.getElementById('adhesionValue');
             const spacingSlider = document.getElementById('spacingSlider');
@@ -1817,11 +1930,6 @@
             
             heightSlider.addEventListener('input', () => {
                 heightValue.textContent = heightSlider.value;
-                updatePreview();
-            });
-            
-            thresholdSlider.addEventListener('input', () => {
-                thresholdValue.textContent = thresholdSlider.value;
                 updatePreview();
             });
             
@@ -1835,16 +1943,32 @@
                 updatePreview();
             });
             
+            const paddingSlider = document.getElementById('paddingSlider');
+            const paddingValue = document.getElementById('paddingValue');
+            
+            paddingSlider.addEventListener('input', () => {
+                paddingValue.textContent = paddingSlider.value;
+                updatePreview();
+            });
+            
             document.getElementById('textInput').addEventListener('input', updatePreview);
             document.getElementById('fontSelect').addEventListener('change', (e) => {
                 // 切换字体时自动应用预设配置
                 const fontType = e.target.value;
                 const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
                 
-                thresholdSlider.value = config.noiseThreshold;
-                thresholdValue.textContent = config.noiseThreshold;
+                // 更新粘合系数
                 adhesionSlider.value = config.adhesionCoefficient;
                 adhesionValue.textContent = config.adhesionCoefficient;
+                
+                // 更新垂直化处理复选框状态
+                document.getElementById('verticalMedium').checked = 
+                    config.verticalDensityLevels.includes('中等密度');
+                document.getElementById('verticalHigh').checked = 
+                    config.verticalDensityLevels.includes('次高密度');
+                
+                // 显示垂直化处理配置信息（在调试信息中显示）
+                console.log(`字体切换到: ${fontType}, 垂直化处理密度级别: ${config.verticalDensityLevels.join(', ') || '无'}`);
                 
                 updatePreview();
             });
@@ -1863,6 +1987,13 @@
             
             // 添加垂直化信息复选框事件监听器
             document.getElementById('showVerticalInfo').addEventListener('change', updatePreview);
+            
+            // 添加垂直化处理控制复选框事件监听器
+            document.getElementById('verticalMedium').addEventListener('change', updatePreview);
+            document.getElementById('verticalHigh').addEventListener('change', updatePreview);
+            
+            // 添加去噪处理控制复选框事件监听器
+            document.getElementById('enableDenoising').addEventListener('change', updatePreview);
             
             // 添加按钮事件监听器
             document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
@@ -1895,8 +2026,6 @@
             // 初始化字体预设配置
             const defaultFontType = document.getElementById('fontSelect').value;
             const defaultConfig = FONT_CONFIGS[defaultFontType] || FONT_CONFIGS['default'];
-            thresholdSlider.value = defaultConfig.noiseThreshold;
-            thresholdValue.textContent = defaultConfig.noiseThreshold;
             adhesionSlider.value = defaultConfig.adhesionCoefficient;
             adhesionValue.textContent = defaultConfig.adhesionCoefficient;
             
