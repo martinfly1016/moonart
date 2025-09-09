@@ -37,6 +37,15 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mojimoon.com/">
     
+    <!-- Domain redirect script -->
+    <script>
+        (function() {
+            if (window.location.hostname === 'martinfly1016.github.io') {
+                window.location.replace('https://mojimoon.com/');
+            }
+        })();
+    </script>
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -79,7 +88,6 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
         
         .header {
             text-align: center;
@@ -189,9 +197,6 @@
             border-radius: 15px;
             padding: 20px;
             min-height: 300px;
-            width: fit-content;
-            min-width: 100%;
-            max-width: fit-content;
         }
         
         .moon-art {
@@ -200,7 +205,7 @@
             line-height: 1.4;
             letter-spacing: 0.1em;
             white-space: pre;
-            width: fit-content;
+            overflow-x: auto;
             color: #fff;
             padding-top: 5px;
         }
@@ -392,162 +397,6 @@
                 font-size: 11px;
             }
         }
-        
-        /* Tab样式 */
-        .input-tabs {
-            display: flex;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .tab-button {
-            flex: 1;
-            background: none;
-            border: none;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 12px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-        
-        .tab-button.active {
-            color: white;
-            border-bottom-color: #fbbf24;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .tab-button:hover {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        /* 图片上传区域样式 */
-        .image-upload-area {
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            padding: 40px 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .image-upload-area:hover {
-            border-color: #fbbf24;
-            background: rgba(251, 191, 36, 0.1);
-        }
-        
-        .image-upload-area.dragover {
-            border-color: #fbbf24;
-            background: rgba(251, 191, 36, 0.15);
-        }
-        
-        .upload-icon {
-            font-size: 3rem;
-            margin-bottom: 16px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .upload-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: white;
-        }
-        
-        .upload-hint {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 16px;
-        }
-        
-        .upload-button {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .upload-button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
-        }
-        
-        .image-preview {
-            display: none;
-            margin-top: 16px;
-            text-align: center;
-        }
-        
-        .image-preview img {
-            max-width: 100%;
-            max-height: 200px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        
-        .image-info {
-            margin-top: 12px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .remove-image {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            margin-top: 8px;
-            transition: all 0.2s;
-        }
-        
-        .remove-image:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        /* 调试参数折叠样式 */
-        .debug-header:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 6px;
-            padding: 8px;
-            margin: -8px;
-        }
-        
-        .debug-controls {
-            max-height: 0;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .debug-controls.expanded {
-            max-height: 500px;
-            opacity: 1;
-            display: block !important;
-        }
     </style>
 </head>
 <body>
@@ -562,159 +411,96 @@
         </header>
         
         <div class="control-panel">
-            <!-- 输入模式Tab -->
-            <div class="input-tabs">
-                <button class="tab-button active" data-tab="text">テキスト入力</button>
-                <button class="tab-button" data-tab="image">画像入力</button>
-            </div>
-            
-            <!-- 文字输入Tab内容 -->
-            <div class="tab-content active" id="textTab">
-                <div class="form-group">
-                    <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
-                </div>
-                
-                <div class="form-group">
-                    <div class="direction-control">
-                        <label class="radio-option">
-                            <input type="radio" name="textDirection" value="vertical">
-                            <span class="radio-label">縦書き</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="textDirection" value="horizontal">
-                            <span class="radio-label">横書き</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <div style="display: flex; gap: 20px; align-items: flex-start;">
-                        <div style="flex: 1;">
-                            <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
-                            <select id="fontSelect" class="font-select">
-                                <option value="default" selected>システム既定</option>
-                                <option value="gothic">ゴシック体</option>
-                                <option value="mincho">明朝体</option>
-                            </select>
-                        </div>
-                        <div style="flex: 1;">
-                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">2</span></label>
-                            <div class="height-control">
-                                <span>0</span>
-                                <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
-                                <span>10</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 图片输入Tab内容 -->
-            <div class="tab-content" id="imageTab">
-                <div class="form-group">
-                    <div class="image-upload-area" id="imageUploadArea">
-                        <div class="upload-icon">📁</div>
-                        <div class="upload-text">画像をアップロード</div>
-                        <div class="upload-hint">JPG, PNG, GIF ファイルをドラッグ＆ドロップまたはクリックして選択</div>
-                        <button class="upload-button" id="uploadButton">ファイルを選択</button>
-                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
-                    </div>
-                    <div class="image-preview" id="imagePreview">
-                        <img id="previewImg" src="" alt="プレビュー">
-                        <div class="image-info" id="imageInfo"></div>
-                        <button class="remove-image" id="removeImage">画像を削除</button>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <!-- Tab外部通用选项 -->
             <div class="form-group">
-                <!-- 第一行：高さ + 余白 -->
-                <div style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 15px;">
+                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">テキスト入力</h3>
+                <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
+            </div>
+            
+            <div class="form-group">
+                <div class="direction-control">
+                    <label class="radio-option">
+                        <input type="radio" name="textDirection" value="vertical">
+                        <span class="radio-label">縦書き</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="textDirection" value="horizontal">
+                        <span class="radio-label">横書き</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="checkbox" id="reverseColor">
+                        <span class="radio-label">反色</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="checkbox" id="showVerticalInfo">
+                        <span class="radio-label">垂直化情報</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
                     <div style="flex: 1;">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
-                            <span id="sliderLabel">高さ</span>: 
-                            <span id="heightValue">10</span>
-                            <span id="sliderUnit">行</span>
-                        </label>
-                        <div class="height-control">
-                            <span>10</span>
-                            <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
-                            <span>60</span>
-                        </div>
+                        <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
+                        <select id="fontSelect" class="font-select">
+                            <option value="default" selected>システム既定</option>
+                            <option value="gothic">ゴシック体</option>
+                            <option value="mincho">明朝体</option>
+                        </select>
                     </div>
                     <div style="flex: 1;">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
-                            余白: <span id="paddingValue">0</span>
-                        </label>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">0</span></label>
                         <div class="height-control">
                             <span>0</span>
-                            <input type="range" id="paddingSlider" class="height-slider" min="0" max="5" value="0">
-                            <span>5</span>
+                            <input type="range" id="spacingSlider" class="height-slider" min="0" max="20" value="0">
+                            <span>20</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- 第二行：反色（左对齐） -->
-                <div>
-                    <label style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
-                        <input type="checkbox" id="reverseColor">
-                        <span>反色</span>
-                    </label>
+            </div>
+            
+            <div class="form-group">
+                <label><span id="sliderLabel">高さ</span>: <span id="heightValue">10</span><span id="sliderUnit">行</span></label>
+                <div class="height-control">
+                    <span>10</span>
+                    <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
+                    <span>60</span>
                 </div>
             </div>
             
             <!-- 调试参数区域 -->
             <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
-                <div class="debug-header" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 15px;" onclick="toggleDebugSection()">
-                    <h3 style="margin: 0; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
-                    <span id="debugToggleIcon" style="color: #fbbf24; font-size: 1rem; transition: transform 0.3s ease;">▶</span>
+                <h3 style="margin-bottom: 15px; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
+                
+                <div class="form-group">
+                    <label>横向粘合系数: <span id="adhesionValue">2</span></label>
+                    <div class="height-control">
+                        <span>0</span>
+                        <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
+                        <span>6</span>
+                    </div>
                 </div>
                 
-                <!-- 可收起的调试控件容器 -->
-                <div id="debugControls" class="debug-controls" style="display: none; overflow: hidden; transition: all 0.3s ease;">
-                    <div class="form-group">
-                        <label>横向粘合系数: <span id="adhesionValue">2</span></label>
-                        <div class="height-control">
-                            <span>0</span>
-                            <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
-                            <span>6</span>
-                        </div>
+                <div style="margin-top: 15px;">
+                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">垂直化处理</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio-option">
+                            <input type="checkbox" id="verticalMedium" checked>
+                            <span class="radio-label">中等密度</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="checkbox" id="verticalHigh" checked>
+                            <span class="radio-label">次高密度</span>
+                        </label>
                     </div>
-                    
-                    <div style="margin-top: 15px;">
-                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">垂直化处理</h4>
-                        <div style="display: flex; gap: 20px;">
-                            <label class="radio-option">
-                                <input type="checkbox" id="verticalMedium" checked>
-                                <span class="radio-label">中等密度</span>
-                            </label>
-                            <label class="radio-option">
-                                <input type="checkbox" id="verticalHigh" checked>
-                                <span class="radio-label">次高密度</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 15px;">
-                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">横向加强算法</h4>
-                        <div style="display: flex; gap: 20px;">
-                            <label class="radio-option">
-                                <input type="checkbox" id="enableDenoising" checked>
-                                <span class="radio-label">去噪处理</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 15px;">
-                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">调试显示</h4>
-                        <div style="display: flex; gap: 20px;">
-                            <label class="radio-option">
-                                <input type="checkbox" id="showVerticalInfo">
-                                <span class="radio-label">垂直化情報</span>
-                            </label>
-                        </div>
+                </div>
+                
+                <div style="margin-top: 15px;">
+                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">横向加强算法</h4>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio-option">
+                            <input type="checkbox" id="enableDenoising" checked>
+                            <span class="radio-label">去噪处理</span>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -737,10 +523,7 @@
                 </button>
             </div>
         </div>
-    </div>
-    
-    <!-- Preview Panel (expandable) -->
-    <div class="container" style="max-width: none; min-width: 800px; width: fit-content;">
+        
         <div class="preview-panel">
             <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">プレビュー</h2>
             
@@ -769,159 +552,11 @@
     </div>
 
     <script>
-        // 全局状态管理
-        let currentInputMode = 'text'; // 'text' or 'image'
-        let lastUploadedImageSrc = null; // 保存最后上传的图片数据
-        
-        // 分别保存文字模式和图片模式的设置
-        let textModeSettings = {
-            height: 10,
-            padding: 0
-        };
-        
-        let imageModeSettings = {
-            height: 60,
-            padding: 0
-        };
-        
         // 简化的颜色级别：只有黑白两色
         const COLOR_LEVELS = {
             BLACK: 0,
             WHITE: 1
         };
-        
-        // 图片处理类 - 用于处理图片输入并转换为像素矩阵
-        class ImageProcessor {
-            constructor() {
-                this.threshold = 128; // 二值化阈值
-                
-                // 5x5 Bayer抖动矩阵（用于灰度处理）
-                this.bayerMatrix5x5 = [
-                    [ 0, 12,  3, 15,  8],
-                    [18,  6, 21,  9, 24],
-                    [ 4, 16,  1, 13,  5],
-                    [22, 10, 19,  7, 23],
-                    [ 2, 14, 11, 20, 17]
-                ];
-            }
-            
-            // 加载并处理图片（支持灰度处理模式）
-            async loadAndProcessImage(imageSrc, targetHeight, useGrayScale = false) {
-                return new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.onload = () => {
-                        try {
-                            // 创建canvas来处理图片
-                            const canvas = document.createElement('canvas');
-                            const ctx = canvas.getContext('2d');
-                            
-                            // 计算目标尺寸（保持宽高比）
-                            const aspectRatio = img.width / img.height;
-                            const targetPixelHeight = targetHeight * 5; // 5x5系统
-                            const targetPixelWidth = Math.round(targetPixelHeight * aspectRatio);
-                            
-                            // 确保尺寸是5的倍数
-                            const finalHeight = Math.ceil(targetPixelHeight / 5) * 5;
-                            const finalWidth = Math.ceil(targetPixelWidth / 5) * 5;
-                            
-                            // 设置canvas尺寸并绘制图片
-                            canvas.width = finalWidth;
-                            canvas.height = finalHeight;
-                            ctx.drawImage(img, 0, 0, finalWidth, finalHeight);
-                            
-                            // 获取图像数据
-                            const imageData = ctx.getImageData(0, 0, finalWidth, finalHeight);
-                            
-                            // 根据模式选择处理方法
-                            const processedMatrix = useGrayScale 
-                                ? this.applyOrderedDithering(imageData)
-                                : this.binarizeImage(imageData);
-                            
-                            console.log(`图片处理完成: 原始尺寸=${img.width}x${img.height}, 目标尺寸=${finalWidth}x${finalHeight}, 灰度模式=${useGrayScale}`);
-                            
-                            resolve({
-                                matrix: processedMatrix,
-                                width: finalWidth,
-                                height: finalHeight
-                            });
-                        } catch (error) {
-                            reject(error);
-                        }
-                    };
-                    
-                    img.onerror = () => {
-                        reject(new Error('图片加载失败'));
-                    };
-                    
-                    img.src = imageSrc;
-                });
-            }
-            
-            // 二值化图像数据
-            binarizeImage(imageData) {
-                const data = imageData.data;
-                const width = imageData.width;
-                const height = imageData.height;
-                const binaryMatrix = [];
-                
-                for (let y = 0; y < height; y++) {
-                    const row = [];
-                    for (let x = 0; x < width; x++) {
-                        const idx = (y * width + x) * 4;
-                        // 计算灰度值
-                        const r = data[idx];
-                        const g = data[idx + 1];
-                        const b = data[idx + 2];
-                        const gray = 0.299 * r + 0.587 * g + 0.114 * b;
-                        
-                        // 二值化：0=黑色，1=白色
-                        row.push(gray < this.threshold ? 0 : 1);
-                    }
-                    binaryMatrix.push(row);
-                }
-                
-                return binaryMatrix;
-            }
-            
-            // 有序抖动处理（用于灰度模式）
-            applyOrderedDithering(imageData) {
-                const data = imageData.data;
-                const width = imageData.width;
-                const height = imageData.height;
-                const result = [];
-                
-                for (let y = 0; y < height; y++) {
-                    const row = [];
-                    for (let x = 0; x < width; x++) {
-                        const idx = (y * width + x) * 4;
-                        // 计算灰度值
-                        const r = data[idx];
-                        const g = data[idx + 1];
-                        const b = data[idx + 2];
-                        const gray = 0.299 * r + 0.587 * g + 0.114 * b;
-                        
-                        // 使用Bayer矩阵确定阈值
-                        const matrixSize = 5;
-                        const mx = x % matrixSize;
-                        const my = y % matrixSize;
-                        // 将矩阵值归一化到0-255范围
-                        const threshold = (this.bayerMatrix5x5[my][mx] + 1) * 255 / 26;
-                        
-                        // 根据阈值决定黑白
-                        row.push(gray > threshold ? 1 : 0);
-                    }
-                    result.push(row);
-                }
-                
-                console.log(`有序抖动处理完成: ${width}x${height}像素`);
-                return result;
-            }
-            
-            // 设置二值化阈值
-            setThreshold(value) {
-                this.threshold = value;
-            }
-        }
         
         // 横向加强算法M - 模块化实现
         class HorizontalEnhancer {
@@ -1468,204 +1103,6 @@
                 return spacedLines.join('\n');
             }
             
-            // 应用边距（padding）
-            applyPadding(text, padding) {
-                if (padding <= 0) return text;
-                
-                const lines = text.split('\n');
-                if (lines.length === 0) return text;
-                
-                // 计算最大行宽
-                const maxWidth = Math.max(...lines.map(line => Array.from(line).length));
-                
-                // 创建边距字符（黑月）
-                const paddingChar = '🌑';
-                const horizontalPadding = paddingChar.repeat(padding);
-                const fullPaddingLine = paddingChar.repeat(maxWidth + 2 * padding);
-                
-                const paddedLines = [];
-                
-                // 添加上边距
-                for (let i = 0; i < padding; i++) {
-                    paddedLines.push(fullPaddingLine);
-                }
-                
-                // 添加左右边距到每一行
-                for (const line of lines) {
-                    const chars = Array.from(line);
-                    // 填充行到最大宽度
-                    while (chars.length < maxWidth) {
-                        chars.push('🌑');
-                    }
-                    const paddedLine = horizontalPadding + chars.join('') + horizontalPadding;
-                    paddedLines.push(paddedLine);
-                }
-                
-                // 添加下边距
-                for (let i = 0; i < padding; i++) {
-                    paddedLines.push(fullPaddingLine);
-                }
-                
-                return paddedLines.join('\n');
-            }
-            
-            // 从像素矩阵生成月文字（用于图片输入）
-            generateFromPixelMatrix(pixelMatrix, width, height, enableVerticalProcessing = true, showVerticalDebug = false, padding = 0) {
-                console.log(`从像素矩阵生成月文字: ${width}x${height}像素`);
-                
-                // 清空垂直化处理记录
-                this.verticalProcessingPositions = [];
-                
-                // 创建元数据网格
-                const metaGrid = [];
-                const gridSize = 5;
-                
-                // 按5x5网格扫描像素矩阵
-                for (let y = 0; y < height; y += gridSize) {
-                    const metaRow = [];
-                    for (let x = 0; x < width; x += gridSize) {
-                        // 提取5x5子网格
-                        const subGrid = [];
-                        for (let dy = 0; dy < gridSize; dy++) {
-                            subGrid[dy] = [];
-                            for (let dx = 0; dx < gridSize; dx++) {
-                                const py = y + dy;
-                                const px = x + dx;
-                                // 边界检查
-                                if (py < height && px < width) {
-                                    subGrid[dy][dx] = pixelMatrix[py][px];
-                                } else {
-                                    subGrid[dy][dx] = 1; // 超出边界默认为白色
-                                }
-                            }
-                        }
-                        
-                        // 将5x5网格转换为带元数据的月相
-                        const cellMeta = this.gridToMoonWithMeta(subGrid);
-                        metaRow.push(cellMeta);
-                    }
-                    if (metaRow.length > 0) {
-                        metaGrid.push(metaRow);
-                    }
-                }
-                
-                console.log(`元数据网格生成完成: ${metaGrid[0]?.length || 0}列 x ${metaGrid.length}行`);
-                
-                // 应用垂直化处理（如果启用）
-                if (enableVerticalProcessing) {
-                    // 从UI获取垂直化处理设置
-                    const targetDensityLevels = [];
-                    if (document.getElementById('verticalMedium').checked) {
-                        targetDensityLevels.push('中等密度');
-                    }
-                    if (document.getElementById('verticalHigh').checked) {
-                        targetDensityLevels.push('次高密度');
-                    }
-                    const thresholdN = 2; // 默认阈值
-                    
-                    this.applyVerticalProcessing(metaGrid, targetDensityLevels, thresholdN);
-                    console.log(`垂直化处理完成，处理了${this.verticalProcessingPositions.length}个位置`);
-                }
-                
-                // 从元数据网格提取最终月相
-                const resultLines = metaGrid.map(row => 
-                    row.map(cell => cell.finalMoonPhase).join('')
-                );
-                
-                let result = resultLines.join('\n');
-                
-                // 应用垂直化调试符号（如果需要）
-                if (showVerticalDebug) {
-                    result = this.applyVerticalDebugSymbols(result);
-                    console.log(`垂直化调试符号已应用`);
-                }
-                
-                // 应用边距
-                if (padding > 0) {
-                    result = this.applyPadding(result, padding);
-                    console.log(`边距应用完成，边距宽度: ${padding}`);
-                }
-                
-                return result;
-            }
-            
-            // 专门用于图片的简化处理流程（跳过文字优化算法）
-            generateFromImage(pixelMatrix, width, height, padding = 0) {
-                console.log(`图片直接处理模式: ${width}x${height}像素`);
-                
-                const metaGrid = [];
-                const gridSize = 5;
-                
-                // 按5x5网格扫描像素矩阵
-                for (let y = 0; y < height; y += gridSize) {
-                    const metaRow = [];
-                    for (let x = 0; x < width; x += gridSize) {
-                        // 提取5x5子网格
-                        const subGrid = [];
-                        for (let dy = 0; dy < gridSize; dy++) {
-                            subGrid[dy] = [];
-                            for (let dx = 0; dx < gridSize; dx++) {
-                                const py = y + dy;
-                                const px = x + dx;
-                                if (py < height && px < width) {
-                                    subGrid[dy][dx] = pixelMatrix[py][px];
-                                } else {
-                                    subGrid[dy][dx] = 1; // 超出边界默认为白色
-                                }
-                            }
-                        }
-                        
-                        // 直接转换为月相（使用专门的图片映射逻辑）
-                        const moonPhase = this.gridToMoonForImage(subGrid);
-                        metaRow.push(moonPhase);
-                    }
-                    if (metaRow.length > 0) {
-                        metaGrid.push(metaRow);
-                    }
-                }
-                
-                // 直接生成结果字符串
-                const resultLines = metaGrid.map(row => row.join(''));
-                let result = resultLines.join('\n');
-                
-                // 仅应用边距（如果需要）
-                if (padding > 0) {
-                    result = this.applyPadding(result, padding);
-                }
-                
-                console.log(`图片处理完成: 输出${metaGrid.length}行`);
-                return result;
-            }
-            
-            // 专门用于图片的5x5网格到月相映射（8级灰度）
-            gridToMoonForImage(grid) {
-                // 统计黑色像素数量
-                let blackCount = 0;
-                for (let y = 0; y < 5; y++) {
-                    for (let x = 0; x < 5; x++) {
-                        if (grid[y][x] === 0) {
-                            blackCount++;
-                        }
-                    }
-                }
-                
-                // 更精细的灰度级别映射（8个月相对应不同密度）
-                // 0-25个黑点映射到月相
-                const ratio = blackCount / 25;
-                
-                // 根据黑色像素比例返回对应月相
-                // 注意：这里的映射是基于视觉密度，黑色越多月相越"满"
-                if (ratio === 0) return '🌑';        // 0% - 全白背景
-                else if (ratio <= 0.125) return '🌘'; // 0-12.5% - 极少黑色
-                else if (ratio <= 0.25) return '🌗';  // 12.5-25% - 少量黑色
-                else if (ratio <= 0.375) return '🌖'; // 25-37.5% - 较少黑色
-                else if (ratio <= 0.5) return '🌕';   // 37.5-50% - 中等黑色
-                else if (ratio <= 0.625) return '🌔'; // 50-62.5% - 较多黑色
-                else if (ratio <= 0.75) return '🌓';  // 62.5-75% - 大量黑色
-                else if (ratio <= 0.875) return '🌒'; // 75-87.5% - 极多黑色
-                else return '🌑';                     // 87.5-100% - 几乎全黑
-            }
-            
             // 生成单个字符的月相
             generateSingleChar(char, sizeParam = 20, fontType = 'custom', isVertical = true) {
                 if (!char.trim()) return [];
@@ -1998,7 +1435,7 @@
             }
 
             // 生成月文字（使用单字符处理架构，支持垂直化处理）
-            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, showVerticalDebug = false, padding = 0) {
+            generate(text, sizeParam = 20, fontType = 'custom', isVertical = true, reverseColor = false, spacing = 0, enableVerticalProcessing = true, showVerticalDebug = false) {
                 if (!text.trim()) return '';
                 
                 console.log(`单字符处理架构: text="${text}", sizeParam=${sizeParam}, isVertical=${isVertical}, spacing=${spacing}`);
@@ -2103,7 +1540,7 @@
                     
                     console.log(`全局网格创建完成: ${globalMetaGrid[0]?.length || 0}列 x ${globalMetaGrid.length}行`);
                     
-                    // 从UI获取垂直化处理设置
+                    // 应用垂直化处理
                     const targetDensityLevels = [];
                     if (document.getElementById('verticalMedium').checked) {
                         targetDensityLevels.push('中等密度');
@@ -2146,12 +1583,6 @@
                     
                     console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
                     
-                    // 应用边距
-                    if (padding > 0) {
-                        result = this.applyPadding(result, padding);
-                        console.log(`边距应用完成，边距宽度: ${padding}`);
-                    }
-                    
                     return result;
                     
                 } else {
@@ -2169,13 +1600,6 @@
                     }
                     
                     console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
-                    
-                    // 应用边距
-                    if (padding > 0) {
-                        result = this.applyPadding(result, padding);
-                        console.log(`边距应用完成，边距宽度: ${padding}`);
-                    }
-                    
                     return result;
                 }
             }
@@ -2188,20 +1612,11 @@
             'mincho': '"游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS 明朝", "MS Mincho", serif'
         };
 
-        // 字体预设配置：粘合系数和垂直化处理密度级别
+        // 字体预设配置：粘合系数
         const FONT_CONFIGS = {
-            'default': { 
-                adhesionCoefficient: 2,
-                verticalDensityLevels: ['中等密度', '次高密度']
-            },
-            'gothic': { 
-                adhesionCoefficient: 2,
-                verticalDensityLevels: ['中等密度', '次高密度']
-            },
-            'mincho': { 
-                adhesionCoefficient: 3,
-                verticalDensityLevels: []  // 明朝体不使用垂直化处理
-            }
+            'default': { adhesionCoefficient: 2 },
+            'gothic': { adhesionCoefficient: 2 },
+            'mincho': { adhesionCoefficient: 3 }
         };
         
         // 初始化
@@ -2309,35 +1724,12 @@
             }, 'image/png');
         }
         
-        // 统一的预览更新函数（根据当前模式调用相应的处理函数）
         function updatePreview() {
-            console.log(`updatePreview - 当前模式: ${currentInputMode}`);
-            
-            // 根据当前模式决定处理方式
-            if (currentInputMode === 'image' && lastUploadedImageSrc) {
-                // 图片模式：重新生成图片的月文字
-                console.log('更新图片预览');
-                generateFromImage(lastUploadedImageSrc);
-            } else if (currentInputMode === 'text') {
-                // 文字模式：执行原有的文字处理逻辑
-                console.log('更新文字预览');
-                updateTextPreview();
-            } else {
-                // 没有内容时显示提示
-                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
-                document.getElementById('actionButtons').style.display = 'none';
-                document.getElementById('debugInfo').style.display = 'none';
-            }
-        }
-        
-        // 文字模式的预览更新
-        function updateTextPreview() {
             const text = document.getElementById('textInput').value.trim();
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
             const fontType = document.getElementById('fontSelect').value;
             const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
             const spacing = parseInt(document.getElementById('spacingSlider').value);
-            const padding = parseInt(document.getElementById('paddingSlider').value);
             
             const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
             console.log('updatePreview - 选中的radio按钮:', selectedRadio);
@@ -2358,7 +1750,7 @@
             
             try {
                 // 生成基础结果（启用垂直化处理，不执行反色）
-                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, false, padding); // 先不显示调试信息
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, false); // 先不显示调试信息
                 
                 // 添加垂直化处理后的调试输出
                 console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
@@ -2422,13 +1814,11 @@
                 
                 // 显示垂直化处理调试信息
                 document.getElementById('debugInfo').style.display = 'block';
-                const fontConfig = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
-                const verticalDensityLevels = fontConfig.verticalDensityLevels || [];
-                const isVerticalEnabled = verticalDensityLevels.length > 0;
+                const isVerticalEnabled = targetDensityLevels.length > 0;
                 document.getElementById('verticalProcessingStatus').textContent = isVerticalEnabled ? '有効' : '無効';
-                document.getElementById('targetDensityLevels').textContent = verticalDensityLevels.length > 0 ? verticalDensityLevels.join('、') : 'なし';
+                document.getElementById('targetDensityLevels').textContent = targetDensityLevels.length > 0 ? targetDensityLevels.join('、') : 'なし';
                 document.getElementById('thresholdN').textContent = '2';
-                document.getElementById('processingMode').textContent = `${fontType}預設: ${verticalDensityLevels.length > 0 ? verticalDensityLevels.join('・') : 'なし'}`;
+                document.getElementById('processingMode').textContent = targetDensityLevels.length > 0 ? targetDensityLevels.join('・') + '（バランス重心のみ）' : 'なし';
                 
                 // 显示操作按钮
                 document.getElementById('actionButtons').style.display = 'flex';
@@ -2460,14 +1850,6 @@
             
             heightSlider.addEventListener('input', () => {
                 heightValue.textContent = heightSlider.value;
-                
-                // 更新对应模式的设置
-                if (currentInputMode === 'text') {
-                    textModeSettings.height = parseInt(heightSlider.value);
-                } else {
-                    imageModeSettings.height = parseInt(heightSlider.value);
-                }
-                
                 updatePreview();
             });
             
@@ -2481,40 +1863,14 @@
                 updatePreview();
             });
             
-            const paddingSlider = document.getElementById('paddingSlider');
-            const paddingValue = document.getElementById('paddingValue');
-            
-            paddingSlider.addEventListener('input', () => {
-                paddingValue.textContent = paddingSlider.value;
-                
-                // 更新对应模式的设置
-                if (currentInputMode === 'text') {
-                    textModeSettings.padding = parseInt(paddingSlider.value);
-                } else {
-                    imageModeSettings.padding = parseInt(paddingSlider.value);
-                }
-                
-                updatePreview();
-            });
-            
             document.getElementById('textInput').addEventListener('input', updatePreview);
             document.getElementById('fontSelect').addEventListener('change', (e) => {
                 // 切换字体时自动应用预设配置
                 const fontType = e.target.value;
                 const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
                 
-                // 更新粘合系数
                 adhesionSlider.value = config.adhesionCoefficient;
                 adhesionValue.textContent = config.adhesionCoefficient;
-                
-                // 更新垂直化处理复选框状态
-                document.getElementById('verticalMedium').checked = 
-                    config.verticalDensityLevels.includes('中等密度');
-                document.getElementById('verticalHigh').checked = 
-                    config.verticalDensityLevels.includes('次高密度');
-                
-                // 显示垂直化处理配置信息（在调试信息中显示）
-                console.log(`字体切换到: ${fontType}, 垂直化处理密度级别: ${config.verticalDensityLevels.join(', ') || '无'}`);
                 
                 updatePreview();
             });
@@ -2540,7 +1896,6 @@
             
             // 添加去噪处理控制复选框事件监听器
             document.getElementById('enableDenoising').addEventListener('change', updatePreview);
-            
             
             // 添加按钮事件监听器
             document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
@@ -2584,274 +1939,7 @@
             
             // 设置页脚收藏按钮
             setupFooterBookmark();
-            
-            // 初始化Tab功能
-            initializeTabs();
-            
-            // 初始化图片上传功能
-            initializeImageUpload();
         });
-        
-        // 调试参数切换功能
-        function toggleDebugSection() {
-            const debugControls = document.getElementById('debugControls');
-            const debugToggleIcon = document.getElementById('debugToggleIcon');
-            
-            if (debugControls.classList.contains('expanded')) {
-                // 收起
-                debugControls.classList.remove('expanded');
-                debugToggleIcon.textContent = '▶';
-                debugToggleIcon.style.transform = 'rotate(0deg)';
-            } else {
-                // 展开
-                debugControls.classList.add('expanded');
-                debugToggleIcon.textContent = '▼';
-                debugToggleIcon.style.transform = 'rotate(90deg)';
-            }
-        }
-        
-        // Tab切换功能
-        function initializeTabs() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const tabId = button.getAttribute('data-tab');
-                    
-                    // 移除所有active类
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // 添加active类到当前选中的tab
-                    button.classList.add('active');
-                    if (tabId === 'text') {
-                        document.getElementById('textTab').classList.add('active');
-                        
-                        // 保存图片模式的设置（如果当前是图片模式）
-                        if (currentInputMode === 'image') {
-                            imageModeSettings.height = parseInt(document.getElementById('heightSlider').value);
-                            imageModeSettings.padding = parseInt(document.getElementById('paddingSlider').value);
-                        }
-                        
-                        currentInputMode = 'text'; // 更新当前模式
-                        
-                        // 文字模式：调整高さ滑块范围为10-60
-                        const heightSlider = document.getElementById('heightSlider');
-                        const heightMaxLabel = heightSlider.nextElementSibling;
-                        heightSlider.max = 60;
-                        heightMaxLabel.textContent = '60';
-                        
-                        // 恢复文字模式的设置
-                        heightSlider.value = textModeSettings.height;
-                        document.getElementById('heightValue').textContent = textModeSettings.height;
-                        document.getElementById('paddingSlider').value = textModeSettings.padding;
-                        document.getElementById('paddingValue').textContent = textModeSettings.padding;
-                        
-                        // 如果文字输入框有内容，重新生成预览
-                        const textInput = document.getElementById('textInput').value.trim();
-                        if (textInput) {
-                            setTimeout(() => updatePreview(), 0);
-                        } else {
-                            // 没有文字时清空预览
-                            document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
-                            document.getElementById('debugInfo').style.display = 'none';
-                            document.getElementById('actionButtons').style.display = 'none';
-                        }
-                    } else if (tabId === 'image') {
-                        document.getElementById('imageTab').classList.add('active');
-                        
-                        // 保存文字模式的设置（如果当前是文字模式）
-                        if (currentInputMode === 'text') {
-                            textModeSettings.height = parseInt(document.getElementById('heightSlider').value);
-                            textModeSettings.padding = parseInt(document.getElementById('paddingSlider').value);
-                        }
-                        
-                        currentInputMode = 'image'; // 更新当前模式
-                        
-                        // 图片模式：调整高さ滑块范围为10-500
-                        const heightSlider = document.getElementById('heightSlider');
-                        const heightMaxLabel = heightSlider.nextElementSibling;
-                        heightSlider.max = 500;
-                        heightMaxLabel.textContent = '500';
-                        
-                        // 恢复图片模式的设置
-                        heightSlider.value = imageModeSettings.height;
-                        document.getElementById('heightValue').textContent = imageModeSettings.height;
-                        document.getElementById('paddingSlider').value = imageModeSettings.padding;
-                        document.getElementById('paddingValue').textContent = imageModeSettings.padding;
-                        
-                        // 如果有上传的图片，重新生成预览
-                        if (lastUploadedImageSrc) {
-                            setTimeout(() => updatePreview(), 0);
-                        } else {
-                            // 没有图片时清空预览
-                            document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
-                            document.getElementById('debugInfo').style.display = 'none';
-                            document.getElementById('actionButtons').style.display = 'none';
-                        }
-                    }
-                });
-            });
-        }
-        
-        // 图片上传功能
-        function initializeImageUpload() {
-            const imageInput = document.getElementById('imageInput');
-            const uploadButton = document.getElementById('uploadButton');
-            const uploadArea = document.getElementById('imageUploadArea');
-            const imagePreview = document.getElementById('imagePreview');
-            const previewImg = document.getElementById('previewImg');
-            const imageInfo = document.getElementById('imageInfo');
-            const removeButton = document.getElementById('removeImage');
-            
-            // 点击上传按钮
-            uploadButton.addEventListener('click', () => {
-                imageInput.click();
-            });
-            
-            // 点击上传区域
-            uploadArea.addEventListener('click', (e) => {
-                if (e.target === uploadArea || e.target.classList.contains('upload-icon') || 
-                    e.target.classList.contains('upload-text') || e.target.classList.contains('upload-hint')) {
-                    imageInput.click();
-                }
-            });
-            
-            // 文件选择
-            imageInput.addEventListener('change', handleFileSelect);
-            
-            // 拖拽上传
-            uploadArea.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                uploadArea.classList.add('dragover');
-            });
-            
-            uploadArea.addEventListener('dragleave', (e) => {
-                e.preventDefault();
-                uploadArea.classList.remove('dragover');
-            });
-            
-            uploadArea.addEventListener('drop', (e) => {
-                e.preventDefault();
-                uploadArea.classList.remove('dragover');
-                
-                const files = e.dataTransfer.files;
-                if (files.length > 0 && files[0].type.startsWith('image/')) {
-                    handleFile(files[0]);
-                }
-            });
-            
-            // 删除图片
-            removeButton.addEventListener('click', () => {
-                imageInput.value = '';
-                uploadArea.style.display = 'flex';
-                imagePreview.style.display = 'none';
-                
-                // 清空保存的图片源
-                lastUploadedImageSrc = null;
-                console.log('图片已删除，清空图片源');
-                
-                // 清空预览
-                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
-                document.getElementById('debugInfo').style.display = 'none';
-                document.getElementById('actionButtons').style.display = 'none';
-            });
-            
-            // 处理文件选择
-            function handleFileSelect(e) {
-                const file = e.target.files[0];
-                if (file && file.type.startsWith('image/')) {
-                    handleFile(file);
-                }
-            }
-            
-            // 处理文件
-            function handleFile(file) {
-                const reader = new FileReader();
-                
-                reader.onload = (e) => {
-                    previewImg.src = e.target.result;
-                    imageInfo.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
-                    
-                    uploadArea.style.display = 'none';
-                    imagePreview.style.display = 'block';
-                    
-                    // 保存图片源并设置当前模式
-                    lastUploadedImageSrc = e.target.result;
-                    currentInputMode = 'image';
-                    console.log('图片已上传，切换到图片模式');
-                    
-                    // 自动生成预览
-                    setTimeout(() => {
-                        generateFromImage(e.target.result);
-                    }, 100);
-                };
-                
-                reader.readAsDataURL(file);
-            }
-        }
-        
-        // 从图片生成月文字（完整实现）
-        async function generateFromImage(imageSrc) {
-            try {
-                // 显示处理中状态
-                document.getElementById('moonArt').textContent = '処理中...';
-                
-                // 获取用户设置
-                const height = parseInt(document.getElementById('heightSlider').value);
-                const padding = parseInt(document.getElementById('paddingSlider').value);
-                const reverseColor = document.getElementById('reverseColor').checked;
-                const showVerticalInfo = document.getElementById('showVerticalInfo').checked;
-                const enableDenoising = document.getElementById('enableDenoising').checked;
-                const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
-                // 创建图片处理器
-                const imageProcessor = new ImageProcessor();
-                
-                // 处理图片（固定启用灰度处理）
-                const imageData = await imageProcessor.loadAndProcessImage(imageSrc, height, true);
-                
-                console.log(`图片数据准备完成: ${imageData.width}x${imageData.height}`);
-                
-                // 使用SimpleMoonGenerator的专门图片处理流程
-                const generator = new SimpleMoonGenerator();
-                
-                // 使用专门的图片处理方法（跳过文字优化算法）
-                let result = generator.generateFromImage(
-                    imageData.matrix,
-                    imageData.width,
-                    imageData.height,
-                    padding // 直接传入padding参数
-                );
-                
-                console.log(`图片月文字生成完成，行数: ${result.split('\n').length}`);
-                
-                // 应用反色（如果需要）
-                if (reverseColor) {
-                    result = result.split('\n').map(line => {
-                        return Array.from(line).map(char => {
-                            // 使用现有的reverseMoon方法
-                            return generator.reverseMoon(char);
-                        }).join('');
-                    }).join('\n');
-                    console.log(`反色处理完成`);
-                }
-                
-                // 显示结果
-                document.getElementById('moonArt').textContent = result;
-                document.getElementById('actionButtons').style.display = 'flex';
-                
-                // 图片模式不显示调试信息（因为没有垂直化处理等文字优化）
-                document.getElementById('debugInfo').style.display = 'none';
-                
-                console.log(`图片转换完成！最终结果行数: ${result.split('\n').length}`);
-                
-            } catch (error) {
-                console.error('图片处理失败:', error);
-                document.getElementById('moonArt').textContent = 'エラー: 画像の処理に失敗しました';
-                document.getElementById('actionButtons').style.display = 'none';
-            }
-        }
         
         // 收藏功能
         function addBookmark() {
