@@ -199,7 +199,7 @@
         
         .dual-control-group {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
             margin-bottom: 12px;
         }
@@ -398,6 +398,9 @@
             border-radius: 15px;
             padding: 20px;
             backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
         }
         
         @media (max-width: 768px) {
@@ -457,7 +460,7 @@
             }
             
             .dual-control-group {
-                grid-template-columns: 1fr;
+                grid-template-columns: 2.2fr 0.7fr;
                 gap: 10px;
             }
         }
@@ -708,7 +711,7 @@
     </div>
     
     <!-- Preview Panel (expandable) -->
-    <div class="container" style="max-width: none; min-width: 800px; width: fit-content;">
+    <div class="container">
         <div class="preview-panel">
             <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">Preview</h2>
             
