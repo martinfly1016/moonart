@@ -397,6 +397,162 @@
                 font-size: 11px;
             }
         }
+        
+        /* Tab样式 */
+        .input-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .tab-button {
+            flex: 1;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-button.active {
+            color: white;
+            border-bottom-color: #fbbf24;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .tab-button:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* 图片上传区域样式 */
+        .image-upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-upload-area:hover {
+            border-color: #fbbf24;
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        .image-upload-area.dragover {
+            border-color: #fbbf24;
+            background: rgba(251, 191, 36, 0.15);
+        }
+        
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .upload-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: white;
+        }
+        
+        .upload-hint {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 16px;
+        }
+        
+        .upload-button {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .upload-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+        }
+        
+        .image-preview {
+            display: none;
+            margin-top: 16px;
+            text-align: center;
+        }
+        
+        .image-preview img {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-info {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .remove-image {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: all 0.2s;
+        }
+        
+        .remove-image:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* 调试参数折叠样式 */
+        .debug-header:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            padding: 8px;
+            margin: -8px;
+        }
+        
+        .debug-controls {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .debug-controls.expanded {
+            max-height: 500px;
+            opacity: 1;
+            display: block !important;
+        }
     </style>
 </head>
 <body>
@@ -411,48 +567,91 @@
         </header>
         
         <div class="control-panel">
-            <div class="form-group">
-                <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">テキスト入力</h3>
-                <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
+            <!-- 输入模式Tab -->
+            <div class="input-tabs">
+                <button class="tab-button active" data-tab="text">テキスト入力</button>
+                <button class="tab-button" data-tab="image">画像入力</button>
             </div>
             
-            <div class="form-group">
-                <div class="direction-control">
-                    <label class="radio-option">
-                        <input type="radio" name="textDirection" value="vertical">
-                        <span class="radio-label">縦書き</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="textDirection" value="horizontal">
-                        <span class="radio-label">横書き</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="checkbox" id="reverseColor">
-                        <span class="radio-label">反色</span>
-                    </label>
+            <!-- 文字输入Tab内容 -->
+            <div class="tab-content active" id="textTab">
+                <div class="form-group">
+                    <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
+                </div>
+                
+                <div class="form-group">
+                    <div class="direction-control">
+                        <label class="radio-option">
+                            <input type="radio" name="textDirection" value="vertical">
+                            <span class="radio-label">縦書き</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="textDirection" value="horizontal">
+                            <span class="radio-label">横書き</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div style="display: flex; gap: 20px; align-items: flex-start;">
+                        <div style="flex: 1;">
+                            <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
+                            <select id="fontSelect" class="font-select">
+                                <option value="default" selected>システム既定</option>
+                                <option value="gothic">ゴシック体</option>
+                                <option value="mincho">明朝体</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">2</span></label>
+                            <div class="height-control">
+                                <span>0</span>
+                                <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
+                                <span>10</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="form-group">
-                <div style="display: flex; gap: 20px; align-items: flex-start;">
-                    <div style="flex: 0.5;">
-                        <h3 style="margin-bottom: 8px; font-size: 1rem; font-weight: 600;">フォント選択</h3>
-                        <select id="fontSelect" class="font-select">
-                            <option value="default" selected>システム既定</option>
-                            <option value="gothic">ゴシック体</option>
-                            <option value="mincho">明朝体</option>
-                        </select>
+            <!-- 图片输入Tab内容 -->
+            <div class="tab-content" id="imageTab">
+                <div class="form-group">
+                    <div class="image-upload-area" id="imageUploadArea">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">画像をアップロード</div>
+                        <div class="upload-hint">JPG, PNG, GIF ファイルをドラッグ＆ドロップまたはクリックして選択</div>
+                        <button class="upload-button" id="uploadButton">ファイルを選択</button>
+                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
                     </div>
-                    <div style="flex: 0.6;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">文字間隔: <span id="spacingValue">2</span></label>
+                    <div class="image-preview" id="imagePreview">
+                        <img id="previewImg" src="" alt="プレビュー">
+                        <div class="image-info" id="imageInfo"></div>
+                        <button class="remove-image" id="removeImage">画像を削除</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab外部通用选项 -->
+            <div class="form-group">
+                <!-- 第一行：高さ + 余白 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start; margin-bottom: 15px;">
+                    <div style="flex: 1;">
+                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
+                            <span id="sliderLabel">高さ</span>: 
+                            <span id="heightValue">10</span>
+                            <span id="sliderUnit">行</span>
+                        </label>
                         <div class="height-control">
-                            <span>0</span>
-                            <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
                             <span>10</span>
+                            <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
+                            <span>60</span>
                         </div>
                     </div>
-                    <div style="flex: 0.6;">
-                        <label style="display: block; margin-bottom: 8px; font-weight: 600;">余白: <span id="paddingValue">0</span></label>
+                    <div style="flex: 1;">
+                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
+                            余白: <span id="paddingValue">0</span>
+                        </label>
                         <div class="height-control">
                             <span>0</span>
                             <input type="range" id="paddingSlider" class="height-slider" min="0" max="5" value="0">
@@ -460,61 +659,66 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="form-group">
-                <label><span id="sliderLabel">高さ</span>: <span id="heightValue">10</span><span id="sliderUnit">行</span></label>
-                <div class="height-control">
-                    <span>10</span>
-                    <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
-                    <span>60</span>
+                
+                <!-- 第二行：反色（左对齐） -->
+                <div>
+                    <label style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                        <input type="checkbox" id="reverseColor">
+                        <span>反色</span>
+                    </label>
                 </div>
             </div>
             
             <!-- 调试参数区域 -->
             <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
-                <h3 style="margin-bottom: 15px; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
-                
-                <div class="form-group">
-                    <label>横向粘合系数: <span id="adhesionValue">2</span></label>
-                    <div class="height-control">
-                        <span>0</span>
-                        <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
-                        <span>6</span>
-                    </div>
+                <div class="debug-header" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 15px;" onclick="toggleDebugSection()">
+                    <h3 style="margin: 0; font-size: 1rem; font-weight: 600; color: #fbbf24;">调试参数</h3>
+                    <span id="debugToggleIcon" style="color: #fbbf24; font-size: 1rem; transition: transform 0.3s ease;">▶</span>
                 </div>
                 
-                <div style="margin-top: 15px;">
-                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">垂直化处理</h4>
-                    <div style="display: flex; gap: 20px;">
-                        <label class="radio-option">
-                            <input type="checkbox" id="verticalMedium" checked>
-                            <span class="radio-label">中等密度</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="checkbox" id="verticalHigh" checked>
-                            <span class="radio-label">次高密度</span>
-                        </label>
+                <!-- 可收起的调试控件容器 -->
+                <div id="debugControls" class="debug-controls" style="display: none; overflow: hidden; transition: all 0.3s ease;">
+                    <div class="form-group">
+                        <label>横向粘合系数: <span id="adhesionValue">2</span></label>
+                        <div class="height-control">
+                            <span>0</span>
+                            <input type="range" id="adhesionSlider" class="height-slider" min="0" max="6" value="2">
+                            <span>6</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div style="margin-top: 15px;">
-                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">横向加强算法</h4>
-                    <div style="display: flex; gap: 20px;">
-                        <label class="radio-option">
-                            <input type="checkbox" id="enableDenoising" checked>
-                            <span class="radio-label">去噪处理</span>
-                        </label>
+                    
+                    <div style="margin-top: 15px;">
+                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">垂直化处理</h4>
+                        <div style="display: flex; gap: 20px;">
+                            <label class="radio-option">
+                                <input type="checkbox" id="verticalMedium" checked>
+                                <span class="radio-label">中等密度</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="checkbox" id="verticalHigh" checked>
+                                <span class="radio-label">次高密度</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
-                
-                <div style="margin-top: 15px;">
-                    <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">调试显示</h4>
-                    <div style="display: flex; gap: 20px;">
-                        <label class="radio-option">
-                            <input type="checkbox" id="showVerticalInfo">
-                            <span class="radio-label">垂直化情報</span>
-                        </label>
+                    
+                    <div style="margin-top: 15px;">
+                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">横向加强算法</h4>
+                        <div style="display: flex; gap: 20px;">
+                            <label class="radio-option">
+                                <input type="checkbox" id="enableDenoising" checked>
+                                <span class="radio-label">去噪处理</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 15px;">
+                        <h4 style="margin-bottom: 10px; font-size: 0.9rem; font-weight: 600;">调试显示</h4>
+                        <div style="display: flex; gap: 20px;">
+                            <label class="radio-option">
+                                <input type="checkbox" id="showVerticalInfo">
+                                <span class="radio-label">垂直化情報</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2037,7 +2241,157 @@
             
             // 设置页脚收藏按钮
             setupFooterBookmark();
+            
+            // 初始化Tab功能
+            initializeTabs();
+            
+            // 初始化图片上传功能
+            initializeImageUpload();
         });
+        
+        // 调试参数切换功能
+        function toggleDebugSection() {
+            const debugControls = document.getElementById('debugControls');
+            const debugToggleIcon = document.getElementById('debugToggleIcon');
+            
+            if (debugControls.classList.contains('expanded')) {
+                // 收起
+                debugControls.classList.remove('expanded');
+                debugToggleIcon.textContent = '▶';
+                debugToggleIcon.style.transform = 'rotate(0deg)';
+            } else {
+                // 展开
+                debugControls.classList.add('expanded');
+                debugToggleIcon.textContent = '▼';
+                debugToggleIcon.style.transform = 'rotate(90deg)';
+            }
+        }
+        
+        // Tab切换功能
+        function initializeTabs() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    
+                    // 移除所有active类
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // 添加active类到当前选中的tab
+                    button.classList.add('active');
+                    if (tabId === 'text') {
+                        document.getElementById('textTab').classList.add('active');
+                    } else if (tabId === 'image') {
+                        document.getElementById('imageTab').classList.add('active');
+                    }
+                    
+                    // 清空预览区域（切换tab时）
+                    document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                    document.getElementById('debugInfo').style.display = 'none';
+                    document.getElementById('actionButtons').style.display = 'none';
+                });
+            });
+        }
+        
+        // 图片上传功能
+        function initializeImageUpload() {
+            const imageInput = document.getElementById('imageInput');
+            const uploadButton = document.getElementById('uploadButton');
+            const uploadArea = document.getElementById('imageUploadArea');
+            const imagePreview = document.getElementById('imagePreview');
+            const previewImg = document.getElementById('previewImg');
+            const imageInfo = document.getElementById('imageInfo');
+            const removeButton = document.getElementById('removeImage');
+            
+            // 点击上传按钮
+            uploadButton.addEventListener('click', () => {
+                imageInput.click();
+            });
+            
+            // 点击上传区域
+            uploadArea.addEventListener('click', (e) => {
+                if (e.target === uploadArea || e.target.classList.contains('upload-icon') || 
+                    e.target.classList.contains('upload-text') || e.target.classList.contains('upload-hint')) {
+                    imageInput.click();
+                }
+            });
+            
+            // 文件选择
+            imageInput.addEventListener('change', handleFileSelect);
+            
+            // 拖拽上传
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+            
+            uploadArea.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0 && files[0].type.startsWith('image/')) {
+                    handleFile(files[0]);
+                }
+            });
+            
+            // 删除图片
+            removeButton.addEventListener('click', () => {
+                imageInput.value = '';
+                uploadArea.style.display = 'flex';
+                imagePreview.style.display = 'none';
+                
+                // 清空预览
+                document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
+                document.getElementById('debugInfo').style.display = 'none';
+                document.getElementById('actionButtons').style.display = 'none';
+            });
+            
+            // 处理文件选择
+            function handleFileSelect(e) {
+                const file = e.target.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    handleFile(file);
+                }
+            }
+            
+            // 处理文件
+            function handleFile(file) {
+                const reader = new FileReader();
+                
+                reader.onload = (e) => {
+                    previewImg.src = e.target.result;
+                    imageInfo.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+                    
+                    uploadArea.style.display = 'none';
+                    imagePreview.style.display = 'block';
+                    
+                    // 自动生成预览
+                    setTimeout(() => {
+                        generateFromImage(e.target.result);
+                    }, 100);
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        // 从图片生成月文字（临时实现，后续会完善）
+        function generateFromImage(imageSrc) {
+            // 这里暂时显示一个占位符，实际的图片处理功能后续实现
+            document.getElementById('moonArt').textContent = '🌑🌒🌓🌔🌕🌖🌗🌘\n🌘🌗🌖🌕🌔🌓🌒🌑\n🌑🌒🌓🌔🌕🌖🌗🌘';
+            document.getElementById('actionButtons').style.display = 'flex';
+            
+            console.log('图片上传成功，将来会实现图片到月文字的转换功能');
+        }
         
         // 收藏功能
         function addBookmark() {
