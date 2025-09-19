@@ -2642,8 +2642,8 @@
                 updatePreview();
             }, 0);
             
-            // 设置页脚收藏按钮
-            setupFooterBookmark();
+            // 设置页脚链接
+            setupFooterLinks();
             
             // 初始化Tab功能
             initializeTabs();
@@ -2925,22 +2925,34 @@
             }
         }
         
-        // フッター収藏按钮事件
-        function setupFooterBookmark() {
-            const footerBookmarkBtn = document.getElementById('footerBookmarkBtn');
-            if (footerBookmarkBtn && !isMobileDevice()) {
-                footerBookmarkBtn.addEventListener('click', addBookmark);
-            } else if (footerBookmarkBtn) {
-                // 移动设备上隐藏footter中的收藏按钮
-                footerBookmarkBtn.style.display = 'none';
-            }
+        // フッター関連コンテンツリンクのホバーエフェクト
+        function setupFooterLinks() {
+            const footerLinks = document.querySelectorAll('.footer a');
+            footerLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
         }
     </script>
     
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 15px; font-size: 1.2rem; font-weight: 600; color: #374151;">このサイトが気に入ったら、ぜひ<button id="footerBookmarkBtn" class="footer-bookmark-btn" title="お気に入りに追加">ブックマーク</button>してください</h2>
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 1.3rem; font-weight: 600; color: #374151;">📚 関連コンテンツ</h2>
+            <div style="text-align: center; padding: 10px 0;">
+                <a href="line.html" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #10b981, #059669); color: white; text-decoration: none; border-radius: 8px; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; margin: 5px;">
+                    📱 LINE月文字完全活用ガイド
+                </a>
+                <a href="guide.html" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; text-decoration: none; border-radius: 8px; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; margin: 5px;">
+                    📖 使用ガイド
+                </a>
+            </div>
         </div>
     </footer>
 </body>
