@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>月文字ジェネレーター | 月の絵文字アート作成 | 無料テキスト変換ツール - MojiMoon</title>
+    <title>LINE月文字ジェネレーター | LINE専用テキスト変換 - MojiMoon</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="日本語テキストを美しい月の絵文字アートに変換する無料オンラインツール。縦書き・横書き対応、複数フォント選択可能。月の満欠を表現したユニークなアスキーアートを作成してみませんか？">
-    <meta name="keywords" content="月文字,絵文字アート,テキストアート,ジェネレーター,無料ツール">
+    <meta name="description" content="LINE専用の月文字ジェネレーター。10文字幅固定でLINEメッセージに最適化。縦書き月文字を簡単作成、コピーしてLINEで送信できます。無料で今すぐ使えます。">
+    <meta name="keywords" content="LINE,月文字,LINE絵文字,LINEアート,LINE専用,月文字ジェネレーター,縦書き,10文字幅,LINEメッセージ,絵文字アート">
     <meta name="author" content="月文字ジェネレーター">
     <meta name="robots" content="index,follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="月文字ジェネレーター">
-    <meta property="og:description" content="テキストを月の絵文字アートに変換する無料ツール">
+    <meta property="og:title" content="LINE月文字ジェネレーター | LINE専用テキスト変換">
+    <meta property="og:description" content="LINE専用の月文字ジェネレーター。10文字幅固定でLINEメッセージに最適化。縦書き月文字を簡単作成。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mojimoon.com/">
+    <meta property="og:url" content="https://mojimoon.com/line_input.html">
     <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
     <meta property="og:locale" content="ja_JP">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mojimoon">
-    <meta name="twitter:title" content="月文字ジェネレーター">
-    <meta name="twitter:description" content="テキストを月の絵文字アートに変換">
+    <meta name="twitter:title" content="LINE月文字ジェネレーター | LINE専用テキスト変換">
+    <meta name="twitter:description" content="LINE専用の月文字ジェネレーター。10文字幅固定でLINEメッセージに最適化。">
     <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
     
     <!-- Favicon -->
@@ -35,19 +35,16 @@
     <link rel="apple-touch-icon" href="/moon_icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://mojimoon.com/">
-    
-    <!-- Hreflang -->
-    <link rel="alternate" href="https://mojimoon.com/" hreflang="ja">
-    <link rel="alternate" href="https://mojimoon.com/index_en.html" hreflang="en">
-    
+    <link rel="canonical" href="https://mojimoon.com/line_input.html">
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "月文字ジェネレーター",
-        "description": "テキストを月の絵文字アートに変換",
+        "name": "LINE月文字ジェネレーター",
+        "description": "LINE専用の月文字ジェネレーター。10文字幅固定でLINEメッセージに最適化。",
+        "url": "https://mojimoon.com/line_input.html",
         "applicationCategory": "UtilityApplication",
         "operatingSystem": "All",
         "inLanguage": "ja",
@@ -696,6 +693,56 @@
             opacity: 1;
             display: block !important;
         }
+
+        /* LINE message bubble styling */
+        .preview-panel {
+            background: #7C8D96;
+        }
+
+        .line-bubble-container {
+            display: flex;
+            justify-content: flex-start;
+            margin: 10px 0;
+        }
+
+        .line-bubble {
+            background: #00B900;
+            border-radius: 10px;
+            padding: 12px 15px;
+            max-width: 80%;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .line-bubble::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 8px 8px 0;
+            border-color: transparent #00B900 transparent transparent;
+        }
+
+        .show-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .show-more-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -706,36 +753,22 @@
     
     <div class="container">
         <header class="header">
-            <h1>🌙 月文字ジェネレーター</h1>
-            <a href="guide.html" class="guide-link">📖 使用ガイド</a>
-            <a href="index_en.html" class="lang-switcher">🌏 English</a>
+            <h1>📱 LINE月文字ジェネレーター</h1>
+            <a href="index.html" class="guide-link">← 通常版に戻る</a>
+            <a href="line.html" class="guide-link">📖 LINE使用ガイド</a>
         </header>
         
         <div class="control-panel">
-            <!-- 输入模式Tab -->
-            <div class="input-tabs">
-                <button class="tab-button active" data-tab="text">テキスト入力</button>
-                <button class="tab-button" data-tab="image">画像入力</button>
-            </div>
+            <!-- LINE専用：テキスト入力のみ -->
             
             <!-- 文字输入Tab内容 -->
             <div class="tab-content active" id="textTab">
                 <div class="form-group">
-                    <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
+                    <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="ねえ">
                 </div>
                 
-                <div class="form-group">
-                    <div class="direction-control">
-                        <label class="radio-option">
-                            <input type="radio" name="textDirection" value="vertical">
-                            <span class="radio-label">縦書き</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="textDirection" value="horizontal">
-                            <span class="radio-label">横書き</span>
-                        </label>
-                    </div>
-                </div>
+                <!-- LINE専用：縦書き固定 -->
+                <input type="radio" name="textDirection" value="vertical" checked style="display:none;">
                 
                 <div class="form-group">
                     <div class="dual-control-row">
@@ -759,60 +792,24 @@
                 </div>
             </div>
             
-            <!-- 图片输入Tab内容 -->
-            <div class="tab-content" id="imageTab">
-                <div class="form-group">
-                    <div class="image-upload-area" id="imageUploadArea">
-                        <div class="upload-icon">📁</div>
-                        <div class="upload-text">画像をアップロード</div>
-                        <div class="upload-hint">JPG, PNG, GIF ファイルをドラッグ＆ドロップまたはクリックして選択</div>
-                        <button class="upload-button" id="uploadButton">ファイルを選択</button>
-                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
-                    </div>
-                    <div class="image-preview" id="imagePreview">
-                        <img id="previewImg" src="" alt="プレビュー">
-                        <div class="image-info" id="imageInfo"></div>
-                        <button class="remove-image" id="removeImage">画像を削除</button>
-                    </div>
-                </div>
-                
-            </div>
-            
             <!-- Tab外部通用选项 -->
-            <div class="form-group">
-                <!-- 第一行：高さ + 余白 -->
-                <div class="dual-control-row">
-                    <div class="dual-control-item">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
-                            <span id="sliderLabel">高さ</span>: 
-                            <span id="heightValue">10</span>
-                            <span id="sliderUnit">行</span>
-                        </label>
-                        <div class="height-control">
-                            <span>10</span>
-                            <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
-                            <span>60</span>
-                        </div>
-                    </div>
-                    <div class="dual-control-item">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block;">
-                            余白: <span id="paddingValue">0</span>
-                        </label>
-                        <div class="height-control">
-                            <span>0</span>
-                            <input type="range" id="paddingSlider" class="height-slider" min="0" max="5" value="0">
-                            <span>5</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 第二行：反色（左对齐） -->
+            <div class="form-group" style="display:none;">
+                <!-- LINE専用固定値：幅10文字、余白0 -->
+                <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
+                <span id="heightValue">10</span>
+                <span id="sliderLabel">幅文字数</span>
+                <span id="sliderUnit">文字</span>
+                <input type="range" id="paddingSlider" class="height-slider" min="0" max="5" value="0">
+                <span id="paddingValue">0</span>
+            </div>
+
+            <!-- 第二行：反色（左対齐） -->
                 <div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
                     <input type="checkbox" id="reverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
                     <label for="reverseColor" style="cursor: pointer; font-weight: 600;">反色</label>
                 </div>
             </div>
-            
+
             <!-- 调试参数区域 -->
             <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); display: none !important;">
                 <div class="debug-header" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; margin-bottom: 15px;" onclick="toggleDebugSection()">
@@ -872,16 +869,13 @@
                     <span class="btn-icon">📄</span>
                     <span class="btn-text">テキストダウンロード</span>
                 </button>
-                <button id="downloadImageBtn" class="action-btn download-btn">
-                    <span class="btn-icon">🖼️</span>
-                    <span class="btn-text">画像ダウンロード</span>
-                </button>
+
             </div>
         </div>
     </div>
     
     <!-- Preview Panel (expandable) -->
-    <div class="container">
+    <div class="container" style="margin-top: 20px;">
         <div class="preview-panel">
             <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">プレビュー</h2>
             
@@ -893,7 +887,12 @@
                 <div>処理モード: <span id="processingMode">中等密度（バランス重心のみ）</span></div>
             </div>
             
-            <div id="moonArt" class="moon-art"><!-- 生成結果がここに表示されます --></div>
+            <div class="line-bubble-container">
+                <div class="line-bubble">
+                    <div id="moonArt" class="moon-art"><!-- 生成結果がここに表示されます --></div>
+                    <button id="showMoreBtn" class="show-more-btn" style="display: none;">すべて表示</button>
+                </div>
+            </div>
             
             <!-- Debug controls (hidden for production) -->
             <div style="margin-top: 20px; display: none;">
@@ -2409,15 +2408,19 @@
         
         // 文字模式的预览更新
         function updateTextPreview() {
+            console.log('=== updateTextPreview 开始执行 ===');
             const text = document.getElementById('textInput').value.trim();
+            console.log('1. 输入文本:', text);
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
+            console.log('2. 宽度值:', sizeValue);
             const fontType = document.getElementById('fontSelect').value;
+            console.log('3. 字体类型:', fontType);
             const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
             const spacing = parseInt(document.getElementById('spacingSlider').value);
             const padding = parseInt(document.getElementById('paddingSlider').value);
-            
+
             const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
-            console.log('updatePreview - 选中的radio按钮:', selectedRadio);
+            console.log('4. 选中的radio按钮:', selectedRadio);
             console.log('updatePreview - 选中的值:', selectedRadio?.value);
             const isVertical = selectedRadio?.value === 'vertical';
             console.log('updatePreview - 最终isVertical值:', isVertical);
@@ -2605,7 +2608,8 @@
             // 添加按钮事件监听器
             document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
             document.getElementById('downloadTextBtn').addEventListener('click', downloadText);
-            document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
+            // LINE版：downloadImageBtn已删除
+            // document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
             
             // 仅在桌面设备上添加收藏按钮事件监听器
             if (!isMobileDevice()) {
@@ -2639,8 +2643,14 @@
             // 初始化标签和生成（延迟执行确保DOM状态更新）
             setTimeout(() => {
                 updateSliderLabel();
-                updatePreview();
-            }, 0);
+                // LINE専用：确保文本模式并生成预览
+                currentInputMode = 'text';
+                const textInput = document.getElementById('textInput');
+                if (textInput && textInput.value.trim()) {
+                    console.log('初始化生成预览，文本:', textInput.value);
+                    updateTextPreview();
+                }
+            }, 100);
             
             // 设置页脚链接
             setupFooterLinks();
@@ -2939,6 +2949,65 @@
                 });
             });
         }
+
+        // LINE専用：88行制限機能
+        let lineIsExpanded = false;
+        let lineFullMoonArt = '';
+
+        // updateTextPreviewを拡張して88行制限を追加
+        const _origUpdateTextPreview = updateTextPreview;
+        updateTextPreview = function() {
+            console.log('updateTextPreview called');
+            _origUpdateTextPreview();
+
+            // 88行制限処理
+            setTimeout(() => {
+                const moonArtElement = document.getElementById('moonArt');
+                const moonArt = moonArtElement ? moonArtElement.textContent : '';
+
+                if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) {
+                    const showMoreBtn = document.getElementById('showMoreBtn');
+                    if (showMoreBtn) showMoreBtn.style.display = 'none';
+                    return;
+                }
+
+                lineFullMoonArt = moonArt;
+                const lines = moonArt.split('\n');
+                const showMoreBtn = document.getElementById('showMoreBtn');
+
+                if (!showMoreBtn) return;
+
+                if (lines.length > 89) {
+                    if (!lineIsExpanded) {
+                        const truncated = lines.slice(0, 89).join('\n');
+                        moonArtElement.textContent = truncated;
+                        showMoreBtn.style.display = 'inline-block';
+                        showMoreBtn.textContent = 'すべて表示 (' + lines.length + '行)';
+                    } else {
+                        moonArtElement.textContent = lineFullMoonArt;
+                        showMoreBtn.style.display = 'inline-block';
+                        showMoreBtn.textContent = '折りたたむ';
+                    }
+                } else {
+                    showMoreBtn.style.display = 'none';
+                }
+            }, 100);
+        };
+
+        // Show more/less toggle
+        document.getElementById('showMoreBtn').addEventListener('click', () => {
+            lineIsExpanded = !lineIsExpanded;
+            const moonArtElement = document.getElementById('moonArt');
+            if (lineIsExpanded) {
+                moonArtElement.textContent = lineFullMoonArt;
+                document.getElementById('showMoreBtn').textContent = '折りたたむ';
+            } else {
+                const lines = lineFullMoonArt.split('\n');
+                const truncated = lines.slice(0, 89).join('\n');
+                moonArtElement.textContent = truncated;
+                document.getElementById('showMoreBtn').textContent = 'すべて表示 (' + lines.length + '行)';
+            }
+        });
     </script>
     
     <!-- Footer -->
