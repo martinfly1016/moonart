@@ -2307,7 +2307,8 @@
         
         // 复制功能
         function copyToClipboard() {
-            const moonArt = document.getElementById('moonArt').textContent;
+            // LINE専用：完全版が存在する場合は完全版をコピー、存在しない場合は表示内容をコピー
+            const moonArt = window.lineFullMoonArt || document.getElementById('moonArt').textContent;
             if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
             
             navigator.clipboard.writeText(moonArt).then(() => {
@@ -2327,9 +2328,10 @@
             });
         }
         
-        // 文本下载功能
+        // 文本ダウンロード機能
         function downloadText() {
-            const moonArt = document.getElementById('moonArt').textContent;
+            // LINE専用：完全版が存在する場合は完全版をダウンロード、存在しない場合は表示内容をダウンロード
+            const moonArt = window.lineFullMoonArt || document.getElementById('moonArt').textContent;
             if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
             
             const randomId = Math.random().toString(36).substring(2, 8);
