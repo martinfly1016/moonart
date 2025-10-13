@@ -909,6 +909,9 @@
     </div>
 
     <script>
+        // デバッグフラグ
+        const DEBUG = false;
+
         // 全局状态管理
         let currentInputMode = 'text'; // 'text' or 'image'
         let lastUploadedImageSrc = null; // 保存最后上传的图片数据
@@ -2195,22 +2198,24 @@
                     const thresholdN = 2; // 默认阈值
                     
                     globalMetaGrid = this.applyVerticalProcessing(globalMetaGrid, targetDensityLevels, thresholdN);
-                    
+
                     // 验证垂直化处理的结果
-                    console.error(`🔍 验证垂直化处理结果:`);
-                    let avoidCount = 0, keepCount = 0;
-                    this.verticalProcessingPositions.forEach(pos => {
-                        if (pos.row < globalMetaGrid.length && pos.col < globalMetaGrid[pos.row].length) {
-                            const cell = globalMetaGrid[pos.row][pos.col];
-                            console.error(`验证位置(${pos.row},${pos.col}): finalMoonPhase=${cell.finalMoonPhase}, 密度=${cell.densityLevel}`);
-                            if (cell.finalMoonPhase === '🌑') {
-                                avoidCount++;
-                            } else if (cell.finalMoonPhase === '🌕') {
-                                keepCount++;
+                    if (DEBUG) {
+                        console.error(`🔍 验证垂直化処理結果:`);
+                        let avoidCount = 0, keepCount = 0;
+                        this.verticalProcessingPositions.forEach(pos => {
+                            if (pos.row < globalMetaGrid.length && pos.col < globalMetaGrid[pos.row].length) {
+                                const cell = globalMetaGrid[pos.row][pos.col];
+                                console.error(`验证位置(${pos.row},${pos.col}): finalMoonPhase=${cell.finalMoonPhase}, 密度=${cell.densityLevel}`);
+                                if (cell.finalMoonPhase === '🌑') {
+                                    avoidCount++;
+                                } else if (cell.finalMoonPhase === '🌕') {
+                                    keepCount++;
+                                }
                             }
-                        }
-                    });
-                    console.error(`📊 垂直化处理统计: 避让🌑=${avoidCount}个, 保持🌕=${keepCount}个`);
+                        });
+                        console.error(`📊 垂直化処理統計: 避让🌑=${avoidCount}个, 保持🌕=${keepCount}个`);
+                    }
                     
                     // 从处理后的元数据网格提取最终月相
                     const resultLines = globalMetaGrid.map(row => 
@@ -2218,9 +2223,10 @@
                     );
                     
                     let result = resultLines.join('\n');
-                    
-                    
-                    console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+
+                    if (DEBUG) {
+                        console.log(`垂直化処理完成，字符数: ${chars.length}, 結果行数: ${result.split('\n').length}`);
+                    }
                     
                     // 应用边距
                     if (padding > 0) {
@@ -2406,24 +2412,36 @@
             }
         }
         
-        // 文字模式的预览更新
+        // 文字モードのプレビュー更新
         function updateTextPreview() {
-            console.log('=== updateTextPreview 开始执行 ===');
+            if (DEBUG) {
+                console.log('=== updateTextPreview 開始執行 ===');
+            }
             const text = document.getElementById('textInput').value.trim();
-            console.log('1. 输入文本:', text);
+            if (DEBUG) {
+                console.log('1. 輸入文本:', text);
+            }
             const sizeValue = parseInt(document.getElementById('heightSlider').value);
-            console.log('2. 宽度值:', sizeValue);
+            if (DEBUG) {
+                console.log('2. 寬度值:', sizeValue);
+            }
             const fontType = document.getElementById('fontSelect').value;
-            console.log('3. 字体类型:', fontType);
+            if (DEBUG) {
+                console.log('3. 字體類型:', fontType);
+            }
             const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
             const spacing = parseInt(document.getElementById('spacingSlider').value);
             const padding = parseInt(document.getElementById('paddingSlider').value);
 
             const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
-            console.log('4. 选中的radio按钮:', selectedRadio);
-            console.log('updatePreview - 选中的值:', selectedRadio?.value);
+            if (DEBUG) {
+                console.log('4. 選中的radio按鈕:', selectedRadio);
+                console.log('updatePreview - 選中的值:', selectedRadio?.value);
+            }
             const isVertical = selectedRadio?.value === 'vertical';
-            console.log('updatePreview - 最终isVertical值:', isVertical);
+            if (DEBUG) {
+                console.log('updatePreview - 最終isVertical值:', isVertical);
+            }
             
             const reverseColor = document.getElementById('reverseColor').checked;
             const enableDenoising = document.getElementById('enableDenoising').checked;
@@ -2436,21 +2454,23 @@
             }
             
             try {
-                // 生成基础结果（启用垂直化处理，不执行反色）
-                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding); // 先不显示调试信息
-                
-                // 添加垂直化处理后的调试输出
-                console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
-                console.log(`垂直化处理记录数: ${generator.verticalProcessingPositions.length}`);
-                if (generator.verticalProcessingPositions.length > 0) {
-                    console.log(`垂直化处理详情:`, generator.verticalProcessingPositions);
-                    const lines = result.split('\n');
-                    generator.verticalProcessingPositions.forEach(pos => {
-                        if (pos.row < lines.length && pos.col < lines[pos.row].length) {
-                            const char = Array.from(lines[pos.row])[pos.col];
-                            console.log(`位置(${pos.row},${pos.col}): 当前字符=${char}, 密度=${pos.densityLevel}`);
-                        }
-                    });
+                // 生成基础结果（启用垂直化処理，不执行反色）
+                let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding); // 先不显示調試信息
+
+                // 添加垂直化処理後的調試輸出
+                if (DEBUG) {
+                    console.log(`🔄 垂直化処理完成，準備進行橫向加強算法`);
+                    console.log(`垂直化処理記錄數: ${generator.verticalProcessingPositions.length}`);
+                    if (generator.verticalProcessingPositions.length > 0) {
+                        console.log(`垂直化処理詳情:`, generator.verticalProcessingPositions);
+                        const lines = result.split('\n');
+                        generator.verticalProcessingPositions.forEach(pos => {
+                            if (pos.row < lines.length && pos.col < lines[pos.row].length) {
+                                const char = Array.from(lines[pos.row])[pos.col];
+                                console.log(`位置(${pos.row},${pos.col}): 當前字符=${char}, 密度=${pos.densityLevel}`);
+                            }
+                        });
+                    }
                 }
                 
                 // 应用横向加强算法
@@ -2458,30 +2478,32 @@
                 horizontalEnhancer.setEnableDenoising(enableDenoising);
                 result = horizontalEnhancer.enhance(result);
                 
-                
-                // 垂直化处理的最终结果检查
-                console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
-                if (generator.verticalProcessingPositions.length > 0) {
-                    const linesFinal = result.split('\n');
-                    let moon_count = 0, black_count = 0;
-                    
-                    generator.verticalProcessingPositions.forEach(pos => {
-                        if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
-                            const charFinal = Array.from(linesFinal[pos.row])[pos.col];
-                            console.log(`最终位置(${pos.row},${pos.col}): 字符=${charFinal}, 密度=${pos.densityLevel}`);
-                            
-                            if (charFinal === '🌕') moon_count++;
-                            else if (charFinal === '🌑') black_count++;
-                        }
-                    });
-                    
-                    console.error(`📊 垂直化处理统计: 🌕=${moon_count}个, 🌑=${black_count}个`);
-                    
-                    // 检查整个结果字符串的内容统计
-                    const allChars = result.replace(/\n/g, '');
-                    const totalMoon = (allChars.match(/🌕/g) || []).length;
-                    const totalBlack = (allChars.match(/🌑/g) || []).length;
-                    console.error(`📊 整体字符统计: 总🌕=${totalMoon}个, 总🌑=${totalBlack}个`);
+
+                // 垂直化処理の最終結果チェック
+                if (DEBUG) {
+                    console.log(`🔍 垂直化処理最終結果檢查（無橫向干擾）`);
+                    if (generator.verticalProcessingPositions.length > 0) {
+                        const linesFinal = result.split('\n');
+                        let moon_count = 0, black_count = 0;
+
+                        generator.verticalProcessingPositions.forEach(pos => {
+                            if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
+                                const charFinal = Array.from(linesFinal[pos.row])[pos.col];
+                                console.log(`最終位置(${pos.row},${pos.col}): 字符=${charFinal}, 密度=${pos.densityLevel}`);
+
+                                if (charFinal === '🌕') moon_count++;
+                                else if (charFinal === '🌑') black_count++;
+                            }
+                        });
+
+                        console.error(`📊 垂直化処理統計: 🌕=${moon_count}個, 🌑=${black_count}個`);
+
+                        // 檢查整個結果字符串的內容統計
+                        const allChars = result.replace(/\n/g, '');
+                        const totalMoon = (allChars.match(/🌕/g) || []).length;
+                        const totalBlack = (allChars.match(/🌑/g) || []).length;
+                        console.error(`📊 整體字符統計: 總🌕=${totalMoon}個, 總🌑=${totalBlack}個`);
+                    }
                 }
                 
                 // 最后执行反色操作
@@ -2493,8 +2515,44 @@
                 }
                 
                 document.getElementById('moonArt').textContent = result;
-                
-                
+
+                // LINE専用：88行制限処理
+                const moonArtElement = document.getElementById('moonArt');
+                const lines = result.split('\n');
+                const showMoreBtn = document.getElementById('showMoreBtn');
+
+                if (DEBUG) {
+                    console.log('LINE専用: 88行チェック - 行数:', lines.length);
+                }
+
+                if (showMoreBtn) {
+                    if (lines.length > 88) {
+                        if (DEBUG) {
+                            console.log('LINE専用: 88行を超えました。切り詰めます。');
+                        }
+                        // 初期化時は常に折りたたむ
+                        if (!window.lineIsExpanded) {
+                            window.lineFullMoonArt = result; // 完全版を保存
+                            const truncated = lines.slice(0, 88).join('\n');
+                            moonArtElement.textContent = truncated;
+                            showMoreBtn.style.display = 'inline-block';
+                            showMoreBtn.textContent = 'すべて表示 (' + lines.length + '行)';
+                        } else {
+                            // 展開状態の場合は全文表示
+                            window.lineFullMoonArt = result;
+                            showMoreBtn.style.display = 'inline-block';
+                            showMoreBtn.textContent = '折りたたむ';
+                        }
+                    } else {
+                        if (DEBUG) {
+                            console.log('LINE専用: 88行以内です。ボタンを非表示にします。');
+                        }
+                        showMoreBtn.style.display = 'none';
+                        window.lineIsExpanded = false;
+                        window.lineFullMoonArt = '';
+                    }
+                }
+
                 // 显示操作按钮
                 document.getElementById('actionButtons').style.display = 'flex';
                 
@@ -2561,9 +2619,15 @@
                 
                 updatePreview();
             });
-            
-            document.getElementById('textInput').addEventListener('input', updatePreview);
-            document.getElementById('fontSelect').addEventListener('change', (e) => {
+
+            const textInput = document.getElementById('textInput');
+            if (textInput) {
+                textInput.addEventListener('input', updatePreview);
+            }
+
+            const fontSelect = document.getElementById('fontSelect');
+            if (fontSelect) {
+                fontSelect.addEventListener('change', (e) => {
                 // 切换字体时自动应用预设配置
                 const fontType = e.target.value;
                 const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
@@ -2578,12 +2642,18 @@
                 document.getElementById('verticalHigh').checked = 
                     config.verticalDensityLevels.includes('次高密度');
                 
-                // 显示垂直化处理配置信息（在调试信息中显示）
-                console.log(`字体切换到: ${fontType}, 垂直化处理密度级别: ${config.verticalDensityLevels.join(', ') || '无'}`);
-                
-                updatePreview();
-            });
-            document.getElementById('showDebugCanvas').addEventListener('change', updatePreview);
+                    // 顯示垂直化処理配置信息（在調試信息中顯示）
+                    if (DEBUG) {
+                        console.log(`字體切換到: ${fontType}, 垂直化処理密度級別: ${config.verticalDensityLevels.join(', ') || '無'}`);
+                    }
+
+                    updatePreview();
+                });
+            }
+            const showDebugCanvas = document.getElementById('showDebugCanvas');
+            if (showDebugCanvas) {
+                showDebugCanvas.addEventListener('change', updatePreview);
+            }
             
             // 添加方向选择事件监听器
             document.querySelectorAll('input[name="textDirection"]').forEach(radio => {
@@ -2594,26 +2664,43 @@
             });
             
             // 添加反色复选框事件监听器
-            document.getElementById('reverseColor').addEventListener('change', updatePreview);
-            
-            
+            const reverseColor = document.getElementById('reverseColor');
+            if (reverseColor) {
+                reverseColor.addEventListener('change', updatePreview);
+            }
+
             // 添加垂直化处理控制复选框事件监听器
-            document.getElementById('verticalMedium').addEventListener('change', updatePreview);
-            document.getElementById('verticalHigh').addEventListener('change', updatePreview);
-            
+            const verticalMedium = document.getElementById('verticalMedium');
+            const verticalHigh = document.getElementById('verticalHigh');
+            if (verticalMedium) verticalMedium.addEventListener('change', updatePreview);
+            if (verticalHigh) verticalHigh.addEventListener('change', updatePreview);
+
             // 添加去噪处理控制复选框事件监听器
-            document.getElementById('enableDenoising').addEventListener('change', updatePreview);
+            const enableDenoising = document.getElementById('enableDenoising');
+            if (enableDenoising) {
+                enableDenoising.addEventListener('change', updatePreview);
+            }
             
-            
-            // 添加按钮事件监听器
-            document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
-            document.getElementById('downloadTextBtn').addEventListener('click', downloadText);
+
+            // 添加按鈕事件監聽器
+            const copyBtn = document.getElementById('copyBtn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', copyToClipboard);
+            }
+
+            const downloadTextBtn = document.getElementById('downloadTextBtn');
+            if (downloadTextBtn) {
+                downloadTextBtn.addEventListener('click', downloadText);
+            }
             // LINE版：downloadImageBtn已删除
             // document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
             
-            // 仅在桌面设备上添加收藏按钮事件监听器
+            // 仅在桌面設備上添加收藏按鈕事件監聽器
             if (!isMobileDevice()) {
-                document.getElementById('bookmarkBtn').addEventListener('click', addBookmark);
+                const bookmarkBtn = document.getElementById('bookmarkBtn');
+                if (bookmarkBtn) {
+                    bookmarkBtn.addEventListener('click', addBookmark);
+                }
             } else {
                 // 移动设备上完全隐藏按钮
                 const bookmarkBtn = document.getElementById('bookmarkBtn');
@@ -2647,7 +2734,9 @@
                 currentInputMode = 'text';
                 const textInput = document.getElementById('textInput');
                 if (textInput && textInput.value.trim()) {
-                    console.log('初始化生成预览，文本:', textInput.value);
+                    if (DEBUG) {
+                        console.log('初始化生成預覽，文本:', textInput.value);
+                    }
                     updateTextPreview();
                 }
             }, 100);
@@ -2660,6 +2749,44 @@
             
             // 初始化图片上传功能
             initializeImageUpload();
+
+            // LINE専用：88行制限機能 - 初期化
+            window.lineIsExpanded = false;
+            window.lineFullMoonArt = '';
+
+            // LINE専用：すべて表示ボタンのイベントリスナー
+            const showMoreBtn = document.getElementById('showMoreBtn');
+            if (showMoreBtn) {
+                showMoreBtn.addEventListener('click', () => {
+                    if (DEBUG) {
+                        console.log('LINE専用: ボタンがクリックされました');
+                    }
+                    window.lineIsExpanded = !window.lineIsExpanded;
+                    const moonArtElement = document.getElementById('moonArt');
+
+                    if (window.lineIsExpanded) {
+                        // 展開：全文表示
+                        moonArtElement.textContent = window.lineFullMoonArt;
+                        showMoreBtn.textContent = '折りたたむ';
+                        if (DEBUG) {
+                            console.log('LINE専用: 展開しました');
+                        }
+                    } else {
+                        // 折りたたみ：88行のみ表示
+                        const lines = window.lineFullMoonArt.split('\n');
+                        const truncated = lines.slice(0, 88).join('\n');
+                        moonArtElement.textContent = truncated;
+                        showMoreBtn.textContent = 'すべて表示 (' + lines.length + '行)';
+                        if (DEBUG) {
+                            console.log('LINE専用: 折りたたみました - 88行表示');
+                        }
+                    }
+                });
+            } else {
+                if (DEBUG) {
+                    console.error('LINE専用: showMoreBtn が見つかりません (event listener)');
+                }
+            }
         });
         
         
@@ -2757,8 +2884,13 @@
             const previewImg = document.getElementById('previewImg');
             const imageInfo = document.getElementById('imageInfo');
             const removeButton = document.getElementById('removeImage');
-            
-            // 点击上传按钮
+
+            // LINE版不支持圖片上傳，檢查元素是否存在
+            if (!imageInput || !uploadButton || !uploadArea || !imagePreview || !removeButton) {
+                return; // 元素不存在，直接返回
+            }
+
+            // 點擊上傳按鈕
             uploadButton.addEventListener('click', () => {
                 imageInput.click();
             });
@@ -2949,65 +3081,6 @@
                 });
             });
         }
-
-        // LINE専用：88行制限機能
-        let lineIsExpanded = false;
-        let lineFullMoonArt = '';
-
-        // updateTextPreviewを拡張して88行制限を追加
-        const _origUpdateTextPreview = updateTextPreview;
-        updateTextPreview = function() {
-            console.log('updateTextPreview called');
-            _origUpdateTextPreview();
-
-            // 88行制限処理
-            setTimeout(() => {
-                const moonArtElement = document.getElementById('moonArt');
-                const moonArt = moonArtElement ? moonArtElement.textContent : '';
-
-                if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) {
-                    const showMoreBtn = document.getElementById('showMoreBtn');
-                    if (showMoreBtn) showMoreBtn.style.display = 'none';
-                    return;
-                }
-
-                lineFullMoonArt = moonArt;
-                const lines = moonArt.split('\n');
-                const showMoreBtn = document.getElementById('showMoreBtn');
-
-                if (!showMoreBtn) return;
-
-                if (lines.length > 89) {
-                    if (!lineIsExpanded) {
-                        const truncated = lines.slice(0, 89).join('\n');
-                        moonArtElement.textContent = truncated;
-                        showMoreBtn.style.display = 'inline-block';
-                        showMoreBtn.textContent = 'すべて表示 (' + lines.length + '行)';
-                    } else {
-                        moonArtElement.textContent = lineFullMoonArt;
-                        showMoreBtn.style.display = 'inline-block';
-                        showMoreBtn.textContent = '折りたたむ';
-                    }
-                } else {
-                    showMoreBtn.style.display = 'none';
-                }
-            }, 100);
-        };
-
-        // Show more/less toggle
-        document.getElementById('showMoreBtn').addEventListener('click', () => {
-            lineIsExpanded = !lineIsExpanded;
-            const moonArtElement = document.getElementById('moonArt');
-            if (lineIsExpanded) {
-                moonArtElement.textContent = lineFullMoonArt;
-                document.getElementById('showMoreBtn').textContent = '折りたたむ';
-            } else {
-                const lines = lineFullMoonArt.split('\n');
-                const truncated = lines.slice(0, 89).join('\n');
-                moonArtElement.textContent = truncated;
-                document.getElementById('showMoreBtn').textContent = 'すべて表示 (' + lines.length + '行)';
-            }
-        });
     </script>
     
     <!-- Footer -->
