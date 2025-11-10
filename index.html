@@ -2198,12 +2198,12 @@
                     globalMetaGrid = this.applyVerticalProcessing(globalMetaGrid, targetDensityLevels, thresholdN);
                     
                     // 验证垂直化处理的结果
-                    console.error(`🔍 验证垂直化处理结果:`);
+                    // console.error(`🔍 验证垂直化处理结果:`);
                     let avoidCount = 0, keepCount = 0;
                     this.verticalProcessingPositions.forEach(pos => {
                         if (pos.row < globalMetaGrid.length && pos.col < globalMetaGrid[pos.row].length) {
                             const cell = globalMetaGrid[pos.row][pos.col];
-                            console.error(`验证位置(${pos.row},${pos.col}): finalMoonPhase=${cell.finalMoonPhase}, 密度=${cell.densityLevel}`);
+                            // console.error(`验证位置(${pos.row},${pos.col}): finalMoonPhase=${cell.finalMoonPhase}, 密度=${cell.densityLevel}`);
                             if (cell.finalMoonPhase === '🌑') {
                                 avoidCount++;
                             } else if (cell.finalMoonPhase === '🌕') {
@@ -2211,7 +2211,7 @@
                             }
                         }
                     });
-                    console.error(`📊 垂直化处理统计: 避让🌑=${avoidCount}个, 保持🌕=${keepCount}个`);
+                    // console.error(`📊 垂直化处理统计: 避让🌑=${avoidCount}个, 保持🌕=${keepCount}个`);
                     
                     // 从处理后的元数据网格提取最终月相
                     const resultLines = globalMetaGrid.map(row => 
@@ -2221,12 +2221,12 @@
                     let result = resultLines.join('\n');
                     
                     
-                    console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+                    // console.log(`垂直化处理完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
                     
                     // 应用边距
                     if (padding > 0) {
                         result = this.applyPadding(result, padding);
-                        console.log(`边距应用完成，边距宽度: ${padding}`);
+                        // console.log(`边距应用完成，边距宽度: ${padding}`);
                     }
                     
                     return result;
@@ -2245,12 +2245,12 @@
                         result = this.combineHorizontally(charResults, spacing, sizeParam);
                     }
                     
-                    console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
+                    // console.log(`单字符生成完成，字符数: ${chars.length}, 结果行数: ${result.split('\n').length}`);
                     
                     // 应用边距
                     if (padding > 0) {
                         result = this.applyPadding(result, padding);
-                        console.log(`边距应用完成，边距宽度: ${padding}`);
+                        // console.log(`边距应用完成，边距宽度: ${padding}`);
                     }
                     
                     return result;
@@ -2318,7 +2318,7 @@
                     copyBtn.classList.remove('success');
                 }, 2000);
             }).catch(err => {
-                console.error('Copy failed:', err);
+                // console.error('Copy failed:', err);
             });
         }
         
@@ -2388,16 +2388,16 @@
         
         // 统一的预览更新函数（根据当前模式调用相应的处理函数）
         function updatePreview() {
-            console.log(`updatePreview - 当前模式: ${currentInputMode}`);
+            // console.log(`updatePreview - 当前模式: ${currentInputMode}`);
             
             // 根据当前模式决定处理方式
             if (currentInputMode === 'image' && lastUploadedImageSrc) {
                 // 图片模式：重新生成图片的月文字
-                console.log('更新图片预览');
+                // console.log('更新图片预览');
                 generateFromImage(lastUploadedImageSrc);
             } else if (currentInputMode === 'text') {
                 // 文字模式：执行原有的文字处理逻辑
-                console.log('更新文字预览');
+                // console.log('更新文字预览');
                 updateTextPreview();
             } else {
                 // 没有内容时显示提示
@@ -2417,10 +2417,10 @@
             const padding = parseInt(document.getElementById('paddingSlider').value);
             
             const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
-            console.log('updatePreview - 选中的radio按钮:', selectedRadio);
-            console.log('updatePreview - 选中的值:', selectedRadio?.value);
+            // console.log('updatePreview - 选中的radio按钮:', selectedRadio);
+            // console.log('updatePreview - 选中的值:', selectedRadio?.value);
             const isVertical = selectedRadio?.value === 'vertical';
-            console.log('updatePreview - 最终isVertical值:', isVertical);
+            // console.log('updatePreview - 最终isVertical值:', isVertical);
             
             const reverseColor = document.getElementById('reverseColor').checked;
             const enableDenoising = document.getElementById('enableDenoising').checked;
@@ -2437,15 +2437,15 @@
                 let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding); // 先不显示调试信息
                 
                 // 添加垂直化处理后的调试输出
-                console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
-                console.log(`垂直化处理记录数: ${generator.verticalProcessingPositions.length}`);
+                // console.log(`🔄 垂直化处理完成，准备进行横向加强算法`);
+                // console.log(`垂直化处理记录数: ${generator.verticalProcessingPositions.length}`);
                 if (generator.verticalProcessingPositions.length > 0) {
-                    console.log(`垂直化处理详情:`, generator.verticalProcessingPositions);
+                    // console.log(`垂直化处理详情:`, generator.verticalProcessingPositions);
                     const lines = result.split('\n');
                     generator.verticalProcessingPositions.forEach(pos => {
                         if (pos.row < lines.length && pos.col < lines[pos.row].length) {
                             const char = Array.from(lines[pos.row])[pos.col];
-                            console.log(`位置(${pos.row},${pos.col}): 当前字符=${char}, 密度=${pos.densityLevel}`);
+                            // console.log(`位置(${pos.row},${pos.col}): 当前字符=${char}, 密度=${pos.densityLevel}`);
                         }
                     });
                 }
@@ -2457,7 +2457,7 @@
                 
                 
                 // 垂直化处理的最终结果检查
-                console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
+                // console.log(`🔍 垂直化处理最终结果检查（无横向干扰）`);
                 if (generator.verticalProcessingPositions.length > 0) {
                     const linesFinal = result.split('\n');
                     let moon_count = 0, black_count = 0;
@@ -2465,20 +2465,20 @@
                     generator.verticalProcessingPositions.forEach(pos => {
                         if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
                             const charFinal = Array.from(linesFinal[pos.row])[pos.col];
-                            console.log(`最终位置(${pos.row},${pos.col}): 字符=${charFinal}, 密度=${pos.densityLevel}`);
+                            // console.log(`最终位置(${pos.row},${pos.col}): 字符=${charFinal}, 密度=${pos.densityLevel}`);
                             
                             if (charFinal === '🌕') moon_count++;
                             else if (charFinal === '🌑') black_count++;
                         }
                     });
                     
-                    console.error(`📊 垂直化处理统计: 🌕=${moon_count}个, 🌑=${black_count}个`);
+                    // console.error(`📊 垂直化处理统计: 🌕=${moon_count}个, 🌑=${black_count}个`);
                     
                     // 检查整个结果字符串的内容统计
                     const allChars = result.replace(/\n/g, '');
                     const totalMoon = (allChars.match(/🌕/g) || []).length;
                     const totalBlack = (allChars.match(/🌑/g) || []).length;
-                    console.error(`📊 整体字符统计: 总🌕=${totalMoon}个, 总🌑=${totalBlack}个`);
+                    // console.error(`📊 整体字符统计: 总🌕=${totalMoon}个, 总🌑=${totalBlack}个`);
                 }
                 
                 // 最后执行反色操作
@@ -2497,14 +2497,39 @@
                 
                     
             } catch (error) {
-                console.error('Generation error:', error);
+                // console.error('Generation error:', error);
                 document.getElementById('moonArt').textContent = 'エラーが発生しました';
                 document.getElementById('actionButtons').style.display = 'none';
                 document.getElementById('debugInfo').style.display = 'none';
             }
         }
-        
+
         // イベントリスナー
+        // 防抖函数 - 用于文本输入等高频事件
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // 节流函数 - 用于滑块等连续事件
+        function throttle(func, limit) {
+            let inThrottle;
+            return function(...args) {
+                if (!inThrottle) {
+                    func(...args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
         // 检测是否为移动设备
         function isMobileDevice() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
@@ -2520,46 +2545,54 @@
             const spacingSlider = document.getElementById('spacingSlider');
             const spacingValue = document.getElementById('spacingValue');
             
-            heightSlider.addEventListener('input', () => {
+            const updateHeightPreview = throttle(() => {
                 heightValue.textContent = heightSlider.value;
-                
+
                 // 更新对应模式的设置
                 if (currentInputMode === 'text') {
                     textModeSettings.height = parseInt(heightSlider.value);
                 } else {
                     imageModeSettings.height = parseInt(heightSlider.value);
                 }
-                
+
                 updatePreview();
-            });
+            }, 100);
+
+            heightSlider.addEventListener('input', updateHeightPreview);
             
-            adhesionSlider.addEventListener('input', () => {
+            const updateAdhesionPreview = throttle(() => {
                 adhesionValue.textContent = adhesionSlider.value;
                 updatePreview();
-            });
+            }, 100);
+
+            adhesionSlider.addEventListener('input', updateAdhesionPreview);
             
-            spacingSlider.addEventListener('input', () => {
+            const updateSpacingPreview = throttle(() => {
                 spacingValue.textContent = spacingSlider.value;
                 updatePreview();
-            });
+            }, 100);
+
+            spacingSlider.addEventListener('input', updateSpacingPreview);
             
             const paddingSlider = document.getElementById('paddingSlider');
             const paddingValue = document.getElementById('paddingValue');
             
-            paddingSlider.addEventListener('input', () => {
+            const updatePaddingPreview = throttle(() => {
                 paddingValue.textContent = paddingSlider.value;
-                
+
                 // 更新对应模式的设置
                 if (currentInputMode === 'text') {
                     textModeSettings.padding = parseInt(paddingSlider.value);
                 } else {
                     imageModeSettings.padding = parseInt(paddingSlider.value);
                 }
-                
+
                 updatePreview();
-            });
+            }, 100);
+
+            paddingSlider.addEventListener('input', updatePaddingPreview);
             
-            document.getElementById('textInput').addEventListener('input', updatePreview);
+            document.getElementById('textInput').addEventListener('input', debounce(updatePreview, 300));
             document.getElementById('fontSelect').addEventListener('change', (e) => {
                 // 切换字体时自动应用预设配置
                 const fontType = e.target.value;
@@ -2576,7 +2609,7 @@
                     config.verticalDensityLevels.includes('次高密度');
                 
                 // 显示垂直化处理配置信息（在调试信息中显示）
-                console.log(`字体切换到: ${fontType}, 垂直化处理密度级别: ${config.verticalDensityLevels.join(', ') || '无'}`);
+                // console.log(`字体切换到: ${fontType}, 垂直化处理密度级别: ${config.verticalDensityLevels.join(', ') || '无'}`);
                 
                 updatePreview();
             });
@@ -2694,7 +2727,7 @@
                         // 如果文字输入框有内容，重新生成预览
                         const textInput = document.getElementById('textInput').value.trim();
                         if (textInput) {
-                            setTimeout(() => updatePreview(), 0);
+                            updatePreview();
                         } else {
                             // 没有文字时清空预览
                             document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
@@ -2726,7 +2759,7 @@
                         
                         // 如果有上传的图片，重新生成预览
                         if (lastUploadedImageSrc) {
-                            setTimeout(() => updatePreview(), 0);
+                            updatePreview();
                         } else {
                             // 没有图片时清空预览
                             document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
@@ -2793,7 +2826,7 @@
                 
                 // 清空保存的图片源
                 lastUploadedImageSrc = null;
-                console.log('图片已删除，清空图片源');
+                // console.log('图片已删除，清空图片源');
                 
                 // 清空预览
                 document.getElementById('moonArt').textContent = '<!-- 入力してください -->';
@@ -2823,7 +2856,7 @@
                     // 保存图片源并设置当前模式
                     lastUploadedImageSrc = e.target.result;
                     currentInputMode = 'image';
-                    console.log('图片已上传，切换到图片模式');
+                    // console.log('图片已上传，切换到图片模式');
                     
                     // 自动生成预览
                     setTimeout(() => {
@@ -2853,7 +2886,7 @@
                 // 处理图片（固定启用灰度处理）
                 const imageData = await imageProcessor.loadAndProcessImage(imageSrc, height, true);
                 
-                console.log(`图片数据准备完成: ${imageData.width}x${imageData.height}`);
+                // console.log(`图片数据准备完成: ${imageData.width}x${imageData.height}`);
                 
                 // 使用SimpleMoonGenerator的专门图片处理流程
                 const generator = new SimpleMoonGenerator();
@@ -2866,7 +2899,7 @@
                     padding // 直接传入padding参数
                 );
                 
-                console.log(`图片月文字生成完成，行数: ${result.split('\n').length}`);
+                // console.log(`图片月文字生成完成，行数: ${result.split('\n').length}`);
                 
                 // 应用反色（如果需要）
                 if (reverseColor) {
@@ -2876,7 +2909,7 @@
                             return generator.reverseMoon(char);
                         }).join('');
                     }).join('\n');
-                    console.log(`反色处理完成`);
+                    // console.log(`反色处理完成`);
                 }
                 
                 // 显示结果
@@ -2886,10 +2919,10 @@
                 // 图片模式不显示调试信息（因为没有垂直化处理等文字优化）
                 document.getElementById('debugInfo').style.display = 'none';
                 
-                console.log(`图片转换完成！最终结果行数: ${result.split('\n').length}`);
+                // console.log(`图片转换完成！最终结果行数: ${result.split('\n').length}`);
                 
             } catch (error) {
-                console.error('图片处理失败:', error);
+                // console.error('图片处理失败:', error);
                 document.getElementById('moonArt').textContent = 'エラー: 画像の処理に失敗しました';
                 document.getElementById('actionButtons').style.display = 'none';
             }
@@ -2920,7 +2953,7 @@
                     alert(`${shortcut} を押してお気に入りに追加してください`);
                 }
             } catch (error) {
-                console.error('Bookmark error:', error);
+                // console.error('Bookmark error:', error);
                 alert('お気に入りに追加するには、ブラウザのメニューから操作してください。');
             }
         }
