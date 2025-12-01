@@ -90,7 +90,43 @@
             margin-bottom: 30px;
             position: relative;
         }
-        
+
+        /* 桌面端header布局：标题+banner并排 */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header-left {
+            flex-shrink: 0;
+        }
+
+        /* 广告banner样式 */
+        .ad-banner {
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .ad-banner a {
+            display: block;
+        }
+
+        .ad-banner img {
+            display: block;
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* 移动端底部导航（桌面端隐藏） */
+        .mobile-footer-nav {
+            display: none;
+        }
+
         .guide-link {
             display: inline-block;
             margin-top: 10px;
@@ -415,20 +451,53 @@
         
         /* 移动端优化 */
         @media (max-width: 768px) {
+            /* 移动端header：标题+banner并排 */
+            .header-content {
+                flex-direction: row;
+                gap: 10px;
+                justify-content: flex-start;
+            }
+
+            .header-left {
+                flex: 1;
+                text-align: left;
+            }
+
+            /* 移动端隐藏header内的导航按钮 */
+            .header-left .guide-link,
+            .header-left .lang-switcher {
+                display: none;
+            }
+
+            /* 移动端banner尺寸 */
+            .ad-banner img {
+                height: 65px;
+            }
+
             .header {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
-            
+
             .header h1 {
-                font-size: 1.5rem;
-                margin-bottom: 5px;
+                font-size: 1rem;
+                margin-bottom: 0;
+                white-space: nowrap;
             }
-            
+
+            /* 移动端底部导航按钮样式 */
+            .mobile-footer-nav {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 20px;
+                padding: 15px 0;
+            }
+
             .guide-link {
                 font-size: 13px;
                 padding: 6px 12px;
             }
-            
+
             .lang-switcher {
                 font-size: 13px;
                 padding: 6px 12px;
@@ -706,9 +775,19 @@
     
     <div class="container">
         <header class="header">
-            <h1>🌙 月文字ジェネレーター</h1>
-            <a href="guide.html" class="guide-link">📖 使用ガイド</a>
-            <a href="index_en.html" class="lang-switcher">🌏 English</a>
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>🌙 月文字ジェネレーター</h1>
+                    <a href="guide.html" class="guide-link">📖 使用ガイド</a>
+                    <a href="index_en.html" class="lang-switcher">🌏 English</a>
+                </div>
+                <!-- 广告banner（桌面端和移动端共用） -->
+                <div class="ad-banner">
+                    <a href="https://www.genhub.jp" target="_blank" rel="noopener noreferrer sponsored">
+                        <img src="banner.jpg" alt="広告">
+                    </a>
+                </div>
+            </div>
         </header>
         
         <div class="control-panel">
@@ -2974,6 +3053,12 @@
         }
     </script>
     
+    <!-- 移动端底部导航按钮 -->
+    <div class="mobile-footer-nav">
+        <a href="guide.html" class="guide-link">📖 使用ガイド</a>
+        <a href="index_en.html" class="lang-switcher">🌏 English</a>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
