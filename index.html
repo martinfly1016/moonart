@@ -91,6 +91,10 @@
             position: relative;
         }
 
+        .header h1 {
+            font-size: 1.8rem;
+        }
+
         /* 桌面端header布局：标题+banner并排 */
         .header-content {
             display: flex;
@@ -108,7 +112,6 @@
             flex-shrink: 0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .ad-banner a {
@@ -117,7 +120,7 @@
 
         .ad-banner img {
             display: block;
-            height: 80px;
+            height: 100px;
             width: auto;
             object-fit: contain;
         }
@@ -451,15 +454,14 @@
         
         /* 移动端优化 */
         @media (max-width: 768px) {
-            /* 移动端header：标题+banner并排 */
+            /* 移动端header：标题在上，banner在下 */
             .header-content {
-                flex-direction: row;
-                gap: 10px;
-                justify-content: flex-start;
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
             }
 
             .header-left {
-                flex: 1;
                 text-align: left;
             }
 
@@ -469,9 +471,18 @@
                 display: none;
             }
 
-            /* 移动端banner尺寸 */
+            /* 移动端banner居中，无阴影 */
+            .ad-banner {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                box-shadow: none;
+            }
+
             .ad-banner img {
-                height: 65px;
+                height: auto;
+                width: 100%;
+                max-width: 280px;
             }
 
             .header {
@@ -479,7 +490,7 @@
             }
 
             .header h1 {
-                font-size: 1rem;
+                font-size: 0.95rem;
                 margin-bottom: 0;
                 white-space: nowrap;
             }
