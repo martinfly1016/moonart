@@ -638,6 +638,10 @@ display: block !important;
 .btn-green{background:linear-gradient(135deg,#10b981,#059669)}
 .btn-blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
 .friend-link{color:#6b7280;text-decoration:none;margin:0 8px}
+.embed-mode .header,.embed-mode .ad-banner,.embed-mode .floating-bookmark,.embed-mode .mobile-footer-nav,.embed-mode .footer{display:none!important}
+.embed-mode .control-panel > *:not(#actionButtons){display:none!important}
+.artemis-link{display:inline-block;padding:6px 14px;margin:0 8px;border-radius:999px;background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#1a1f3a!important;font-weight:700;text-decoration:none;font-size:14px;animation:artemis-pulse 2s infinite}
+@keyframes artemis-pulse{0%{box-shadow:0 0 0 0 rgba(251,191,36,.6)}70%{box-shadow:0 0 0 8px rgba(251,191,36,0)}100%{box-shadow:0 0 0 0 rgba(251,191,36,0)}}
 </style>
 </head>
 <body>
@@ -649,6 +653,7 @@ display: block !important;
 <div class="header-content">
 <div class="header-left">
 <h1>🌙 月文字ジェネレーター</h1>
+<a href="artemis.html" class="artemis-link">🚀 Artemis II 特集</a>
 <a href="guide.html" class="guide-link">📖 使用ガイド</a>
 <a href="index_en.html" class="lang-switcher">🌏 English</a>
 </div>
@@ -1979,6 +1984,16 @@ updatePreview();
 }, 100);
 paddingSlider.addEventListener('input', updatePaddingPreview);
 document.getElementById('textInput').addEventListener('input', debounce(updatePreview, 300));
+const urlParams = new URLSearchParams(location.search);
+const presetText = urlParams.get('text');
+if (presetText) {
+const textInputEl = document.getElementById('textInput');
+textInputEl.value = presetText;
+textInputEl.dispatchEvent(new Event('input'));
+}
+if (urlParams.get('embed') === '1') {
+document.body.classList.add('embed-mode');
+}
 document.getElementById('fontSelect').addEventListener('change', (e) => {
 const fontType = e.target.value;
 const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
