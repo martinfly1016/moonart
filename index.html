@@ -19,12 +19,12 @@
 <meta name="twitter:title" content="月文字ジェネレーター">
 <meta name="twitter:description" content="テキストを月の絵文字アートに変換">
 <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
 <link rel="icon" type="image/png" sizes="32x32" href="/moon_icon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/moon_icon.png">
 <link rel="apple-touch-icon" href="/moon_icon.png">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://beads.mojimoon.com">
 <link rel="canonical" href="https://mojimoon.com/">
 <link rel="alternate" href="https://mojimoon.com/" hreflang="ja">
 <link rel="alternate" href="https://mojimoon.com/index_en.html" hreflang="en">
@@ -445,7 +445,8 @@ flex-wrap: nowrap;
 }
 .action-btn {
 min-width: 0;
-padding: 8px 6px;
+padding: 12px 8px;
+min-height: 44px;
 font-size: 12px;
 flex: 1;
 }
@@ -637,7 +638,10 @@ display: block !important;
 .btn-cyan{background:linear-gradient(135deg,#06B6D4,#0891B2)}
 .btn-green{background:linear-gradient(135deg,#10b981,#059669)}
 .btn-blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
-.friend-link{color:#6b7280;text-decoration:none;margin:0 8px}
+.friend-link{color:#4b5563;text-decoration:none;margin:0 8px}
+.moon-art.loading{position:relative;min-height:60px}
+.moon-art.loading::after{content:'';position:absolute;top:50%;left:50%;width:32px;height:32px;margin:-16px 0 0 -16px;border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1;border-radius:50%;animation:moon-spin .8s linear infinite}
+@keyframes moon-spin{to{transform:rotate(360deg)}}
 .embed-mode .header,.embed-mode .ad-banner,.embed-mode .floating-bookmark,.embed-mode .mobile-footer-nav,.embed-mode .footer{display:none!important}
 .embed-mode .control-panel > *:not(#actionButtons){display:none!important}
 .artemis-link{display:inline-block;padding:6px 14px;margin:0 8px;border-radius:999px;background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#1a1f3a!important;font-weight:700;text-decoration:none;font-size:14px;animation:artemis-pulse 2s infinite}
@@ -659,7 +663,7 @@ display: block !important;
 </div>
 <div class="ad-banner">
 <a href="https://beads.mojimoon.com/index.html">
-<img src="https://beads.mojimoon.com/banner_400x100.png" alt="Beads">
+<img src="https://beads.mojimoon.com/banner_400x100.png" alt="Beads" width="400" height="100" decoding="async">
 </a>
 </div>
 </div>
@@ -811,19 +815,7 @@ display: block !important;
 <div class="container">
 <div class="preview-panel">
 <h2 style="margin-bottom: 8px; font-size: 12px; font-weight: 600;">プレビュー</h2>
-<div id="debugInfo" style="margin-bottom: 10px; font-size: 11px; color: #fbbf24; font-family: monospace; display: none !important;">
-<div>垂直化処理: <span id="verticalProcessingStatus">有効</span></div>
-<div>対象密度レベル: <span id="targetDensityLevels">中等密度</span></div>
-<div>閾値n: <span id="thresholdN">2</span></div>
-<div>処理モード: <span id="processingMode">中等密度（バランス重心のみ）</span></div>
-</div>
-<div id="moonArt" class="moon-art"></div>
-<div style="margin-top: 20px; display: none;">
-<label>
-<input type="checkbox" id="showDebugCanvas"> 显示原始Canvas调试
-</label>
-</div>
-<canvas id="debugCanvas" style="border: 1px solid #666; margin-top: 10px; background: white; display: none; max-width: 100%;"></canvas>
+<div id="moonArt" class="moon-art" role="img" aria-live="polite" aria-label="月文字プレビュー"></div>
 </div>
 </div>
 <script>
@@ -1342,10 +1334,10 @@ metaGrid.push(metaRow);
 }
 if (enableVerticalProcessing) {
 const targetDensityLevels = [];
-if (document.getElementById('verticalMedium').checked) {
+if ($.verticalMedium.checked) {
 targetDensityLevels.push('中等密度');
 }
-if (document.getElementById('verticalHigh').checked) {
+if ($.verticalHigh.checked) {
 targetDensityLevels.push('次高密度');
 }
 const thresholdN = 2; 
@@ -1711,10 +1703,10 @@ globalMetaGrid.push(combinedRow);
 }
 }
 const targetDensityLevels = [];
-if (document.getElementById('verticalMedium').checked) {
+if ($.verticalMedium.checked) {
 targetDensityLevels.push('中等密度');
 }
-if (document.getElementById('verticalHigh').checked) {
+if ($.verticalHigh.checked) {
 targetDensityLevels.push('次高密度');
 }
 const thresholdN = 2; 
@@ -1776,36 +1768,33 @@ verticalDensityLevels: []
 };
 const generator = new SimpleMoonGenerator();
 const horizontalEnhancer = new HorizontalEnhancer();
+const $ = {};
 function updateSliderLabel() {
-const isVertical = document.querySelector('input[name="textDirection"]:checked').value === 'vertical';
-const sliderLabel = document.getElementById('sliderLabel');
-const sliderUnit = document.getElementById('sliderUnit');
+const isVertical = $.textDirectionChecked().value === 'vertical';
 if (isVertical) {
-sliderLabel.textContent = '幅文字数';
-sliderUnit.textContent = '文字';
+$.sliderLabel.textContent = '幅文字数';
+$.sliderUnit.textContent = '文字';
 } else {
-sliderLabel.textContent = '高さ';
-sliderUnit.textContent = '行';
+$.sliderLabel.textContent = '高さ';
+$.sliderUnit.textContent = '行';
 }
 }
 function copyToClipboard() {
-const moonArt = document.getElementById('moonArt').textContent;
+const moonArt = $.moonArt.textContent;
 if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
 navigator.clipboard.writeText(moonArt).then(() => {
-const copyBtn = document.getElementById('copyBtn');
-const btnText = copyBtn.querySelector('.btn-text');
-const originalText = btnText.textContent;
-btnText.textContent = 'コピーしました！';
-copyBtn.classList.add('success');
+const originalText = $.copyBtnText.textContent;
+$.copyBtnText.textContent = 'コピーしました！';
+$.copyBtn.classList.add('success');
 setTimeout(() => {
-btnText.textContent = originalText;
-copyBtn.classList.remove('success');
+$.copyBtnText.textContent = originalText;
+$.copyBtn.classList.remove('success');
 }, 2000);
 }).catch(err => {
 });
 }
 function downloadText() {
-const moonArt = document.getElementById('moonArt').textContent;
+const moonArt = $.moonArt.textContent;
 if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
 const randomId = Math.random().toString(36).substring(2, 8);
 const filename = `moon-art-${randomId}-${Date.now()}.txt`;
@@ -1818,7 +1807,7 @@ link.click();
 URL.revokeObjectURL(url);
 }
 function downloadImage() {
-const moonArt = document.getElementById('moonArt').textContent;
+const moonArt = $.moonArt.textContent;
 if (!moonArt || moonArt.includes('入力してください') || moonArt.includes('エラー')) return;
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
@@ -1855,67 +1844,42 @@ generateFromImage(lastUploadedImageSrc);
 } else if (currentInputMode === 'text') {
 updateTextPreview();
 } else {
-document.getElementById('moonArt').textContent = '';
-document.getElementById('actionButtons').style.display = 'none';
-document.getElementById('debugInfo').style.display = 'none';
+$.moonArt.textContent = '';
+$.actionButtons.style.display = 'none';
 }
 }
 function updateTextPreview() {
-const text = document.getElementById('textInput').value.trim();
-const sizeValue = parseInt(document.getElementById('heightSlider').value);
-const fontType = document.getElementById('fontSelect').value;
-const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
-const spacing = parseInt(document.getElementById('spacingSlider').value);
-const padding = parseInt(document.getElementById('paddingSlider').value);
-const selectedRadio = document.querySelector('input[name="textDirection"]:checked');
+const text = $.textInput.value.trim();
+const sizeValue = parseInt($.heightSlider.value);
+const fontType = $.fontSelect.value;
+const adhesionCoefficient = parseInt($.adhesionSlider.value);
+const spacing = parseInt($.spacingSlider.value);
+const padding = parseInt($.paddingSlider.value);
+const selectedRadio = $.textDirectionChecked();
 const isVertical = selectedRadio?.value === 'vertical';
-const reverseColor = document.getElementById('reverseColor').checked;
-const enableDenoising = document.getElementById('enableDenoising').checked;
+const reverseColor = $.reverseColor.checked;
+const enableDenoising = $.enableDenoising.checked;
 if (!text) {
-document.getElementById('moonArt').textContent = '';
-document.getElementById('actionButtons').style.display = 'none';
-document.getElementById('debugInfo').style.display = 'none';
+$.moonArt.textContent = '';
+$.actionButtons.style.display = 'none';
 return;
 }
 try {
-let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding); 
-if (generator.verticalProcessingPositions.length > 0) {
-const lines = result.split('\n');
-generator.verticalProcessingPositions.forEach(pos => {
-if (pos.row < lines.length && pos.col < lines[pos.row].length) {
-const char = Array.from(lines[pos.row])[pos.col];
-}
-});
-}
+let result = generator.generate(text, sizeValue, fontType, isVertical, false, spacing, true, padding);
 horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
 horizontalEnhancer.setEnableDenoising(enableDenoising);
 result = horizontalEnhancer.enhance(result);
-if (generator.verticalProcessingPositions.length > 0) {
-const linesFinal = result.split('\n');
-let moon_count = 0, black_count = 0;
-generator.verticalProcessingPositions.forEach(pos => {
-if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
-const charFinal = Array.from(linesFinal[pos.row])[pos.col];
-if (charFinal === '🌕') moon_count++;
-else if (charFinal === '🌑') black_count++;
-}
-});
-const allChars = result.replace(/\n/g, '');
-const totalMoon = (allChars.match(/🌕/g) || []).length;
-const totalBlack = (allChars.match(/🌑/g) || []).length;
-}
 if (reverseColor) {
 result = Array.from(result).map(char => {
 if (char === '\n') return char;
 return generator.reverseMoon(char);
 }).join('');
 }
-document.getElementById('moonArt').textContent = result;
-document.getElementById('actionButtons').style.display = 'flex';
+$.moonArt.textContent = result;
+$.actionButtons.style.display = 'flex';
 } catch (error) {
-document.getElementById('moonArt').textContent = 'エラーが発生しました';
-document.getElementById('actionButtons').style.display = 'none';
-document.getElementById('debugInfo').style.display = 'none';
+$.moonArt.textContent = `エラーが発生しました: ${error.message || '不明なエラー'}`;
+$.actionButtons.style.display = 'none';
 }
 }
 function debounce(func, wait) {
@@ -1945,78 +1909,100 @@ return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(nav
 window.innerWidth <= 768;
 }
 document.addEventListener('DOMContentLoaded', () => {
-const heightSlider = document.getElementById('heightSlider');
-const heightValue = document.getElementById('heightValue');
-const adhesionSlider = document.getElementById('adhesionSlider');
-const adhesionValue = document.getElementById('adhesionValue');
-const spacingSlider = document.getElementById('spacingSlider');
-const spacingValue = document.getElementById('spacingValue');
+$.textInput = document.getElementById('textInput');
+$.heightSlider = document.getElementById('heightSlider');
+$.heightValue = document.getElementById('heightValue');
+$.fontSelect = document.getElementById('fontSelect');
+$.adhesionSlider = document.getElementById('adhesionSlider');
+$.adhesionValue = document.getElementById('adhesionValue');
+$.spacingSlider = document.getElementById('spacingSlider');
+$.spacingValue = document.getElementById('spacingValue');
+$.paddingSlider = document.getElementById('paddingSlider');
+$.paddingValue = document.getElementById('paddingValue');
+$.reverseColor = document.getElementById('reverseColor');
+$.enableDenoising = document.getElementById('enableDenoising');
+$.verticalMedium = document.getElementById('verticalMedium');
+$.verticalHigh = document.getElementById('verticalHigh');
+$.moonArt = document.getElementById('moonArt');
+$.actionButtons = document.getElementById('actionButtons');
+$.copyBtn = document.getElementById('copyBtn');
+$.copyBtnText = $.copyBtn.querySelector('.btn-text');
+$.sliderLabel = document.getElementById('sliderLabel');
+$.sliderUnit = document.getElementById('sliderUnit');
+$.textDirectionRadios = document.getElementsByName('textDirection');
+$.textDirectionChecked = () => {
+for (const r of $.textDirectionRadios) if (r.checked) return r;
+return null;
+};
 const updateHeightPreview = throttle(() => {
-heightValue.textContent = heightSlider.value;
+$.heightValue.textContent = $.heightSlider.value;
 if (currentInputMode === 'text') {
-textModeSettings.height = parseInt(heightSlider.value);
+textModeSettings.height = parseInt($.heightSlider.value);
 } else {
-imageModeSettings.height = parseInt(heightSlider.value);
+imageModeSettings.height = parseInt($.heightSlider.value);
 }
 updatePreview();
 }, 100);
-heightSlider.addEventListener('input', updateHeightPreview);
+$.heightSlider.addEventListener('input', updateHeightPreview);
 const updateAdhesionPreview = throttle(() => {
-adhesionValue.textContent = adhesionSlider.value;
+$.adhesionValue.textContent = $.adhesionSlider.value;
 updatePreview();
 }, 100);
-adhesionSlider.addEventListener('input', updateAdhesionPreview);
+$.adhesionSlider.addEventListener('input', updateAdhesionPreview);
 const updateSpacingPreview = throttle(() => {
-spacingValue.textContent = spacingSlider.value;
+$.spacingValue.textContent = $.spacingSlider.value;
 updatePreview();
 }, 100);
-spacingSlider.addEventListener('input', updateSpacingPreview);
-const paddingSlider = document.getElementById('paddingSlider');
-const paddingValue = document.getElementById('paddingValue');
+$.spacingSlider.addEventListener('input', updateSpacingPreview);
 const updatePaddingPreview = throttle(() => {
-paddingValue.textContent = paddingSlider.value;
+$.paddingValue.textContent = $.paddingSlider.value;
 if (currentInputMode === 'text') {
-textModeSettings.padding = parseInt(paddingSlider.value);
+textModeSettings.padding = parseInt($.paddingSlider.value);
 } else {
-imageModeSettings.padding = parseInt(paddingSlider.value);
+imageModeSettings.padding = parseInt($.paddingSlider.value);
 }
 updatePreview();
 }, 100);
-paddingSlider.addEventListener('input', updatePaddingPreview);
-document.getElementById('textInput').addEventListener('input', debounce(updatePreview, 300));
+$.paddingSlider.addEventListener('input', updatePaddingPreview);
+let isComposing = false;
+$.textInput.addEventListener('compositionstart', () => { isComposing = true; });
+$.textInput.addEventListener('compositionend', () => {
+isComposing = false;
+updatePreview();
+});
+const debouncedPreview = debounce(updatePreview, 300);
+$.textInput.addEventListener('input', () => {
+if (!isComposing) debouncedPreview();
+});
 const urlParams = new URLSearchParams(location.search);
 const presetText = urlParams.get('text');
 if (presetText) {
-const textInputEl = document.getElementById('textInput');
-textInputEl.value = presetText;
-textInputEl.dispatchEvent(new Event('input'));
+$.textInput.value = presetText;
+$.textInput.dispatchEvent(new Event('input'));
 }
 if (urlParams.get('embed') === '1') {
 document.body.classList.add('embed-mode');
 }
-document.getElementById('fontSelect').addEventListener('change', (e) => {
+$.fontSelect.addEventListener('change', (e) => {
 const fontType = e.target.value;
 const config = FONT_CONFIGS[fontType] || FONT_CONFIGS['default'];
-adhesionSlider.value = config.adhesionCoefficient;
-adhesionValue.textContent = config.adhesionCoefficient;
-document.getElementById('verticalMedium').checked = 
-config.verticalDensityLevels.includes('中等密度');
-document.getElementById('verticalHigh').checked = 
-config.verticalDensityLevels.includes('次高密度');
+$.adhesionSlider.value = config.adhesionCoefficient;
+$.adhesionValue.textContent = config.adhesionCoefficient;
+$.verticalMedium.checked = config.verticalDensityLevels.includes('中等密度');
+$.verticalHigh.checked = config.verticalDensityLevels.includes('次高密度');
 updatePreview();
 });
-document.getElementById('showDebugCanvas').addEventListener('change', updatePreview);
-document.querySelectorAll('input[name="textDirection"]').forEach(radio => {
-radio.addEventListener('change', () => {
-updateSliderLabel(); 
-updatePreview(); 
+for (const r of $.textDirectionRadios) {
+r.addEventListener('change', () => {
+updateSliderLabel();
+updatePreview();
 });
-});
-document.getElementById('reverseColor').addEventListener('change', updatePreview);
-document.getElementById('verticalMedium').addEventListener('change', updatePreview);
-document.getElementById('verticalHigh').addEventListener('change', updatePreview);
-document.getElementById('enableDenoising').addEventListener('change', updatePreview);
-document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
+}
+$.reverseColor.addEventListener('change', updatePreview);
+$.verticalMedium.addEventListener('change', updatePreview);
+$.verticalHigh.addEventListener('change', updatePreview);
+$.enableDenoising.addEventListener('change', updatePreview);
+$.copyBtn.addEventListener('click', copyToClipboard);
 document.getElementById('downloadTextBtn').addEventListener('click', downloadText);
 document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
 if (!isMobileDevice()) {
@@ -2027,8 +2013,7 @@ if (bookmarkBtn) {
 bookmarkBtn.style.display = 'none';
 }
 }
-const currentSelection = document.querySelector('input[name="textDirection"]:checked');
-if (!currentSelection) {
+if (!$.textDirectionChecked()) {
 if (isMobileDevice()) {
 document.querySelector('input[name="textDirection"][value="vertical"]').checked = true;
 } else {
@@ -2036,10 +2021,9 @@ document.querySelector('input[name="textDirection"][value="horizontal"]').checke
 }
 updateSliderLabel();
 }
-const defaultFontType = document.getElementById('fontSelect').value;
-const defaultConfig = FONT_CONFIGS[defaultFontType] || FONT_CONFIGS['default'];
-adhesionSlider.value = defaultConfig.adhesionCoefficient;
-adhesionValue.textContent = defaultConfig.adhesionCoefficient;
+const defaultConfig = FONT_CONFIGS[$.fontSelect.value] || FONT_CONFIGS['default'];
+$.adhesionSlider.value = defaultConfig.adhesionCoefficient;
+$.adhesionValue.textContent = defaultConfig.adhesionCoefficient;
 setTimeout(() => {
 updateSliderLabel();
 updatePreview();
@@ -2051,6 +2035,9 @@ initializeImageUpload();
 function initializeTabs() {
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');
+const textTab = document.getElementById('textTab');
+const imageTab = document.getElementById('imageTab');
+const heightMaxLabel = $.heightSlider.nextElementSibling;
 tabButtons.forEach(button => {
 button.addEventListener('click', () => {
 const tabId = button.getAttribute('data-tab');
@@ -2058,49 +2045,42 @@ tabButtons.forEach(btn => btn.classList.remove('active'));
 tabContents.forEach(content => content.classList.remove('active'));
 button.classList.add('active');
 if (tabId === 'text') {
-document.getElementById('textTab').classList.add('active');
+textTab.classList.add('active');
 if (currentInputMode === 'image') {
-imageModeSettings.height = parseInt(document.getElementById('heightSlider').value);
-imageModeSettings.padding = parseInt(document.getElementById('paddingSlider').value);
+imageModeSettings.height = parseInt($.heightSlider.value);
+imageModeSettings.padding = parseInt($.paddingSlider.value);
 }
-currentInputMode = 'text'; 
-const heightSlider = document.getElementById('heightSlider');
-const heightMaxLabel = heightSlider.nextElementSibling;
-heightSlider.max = 60;
+currentInputMode = 'text';
+$.heightSlider.max = 60;
 heightMaxLabel.textContent = '60';
-heightSlider.value = textModeSettings.height;
-document.getElementById('heightValue').textContent = textModeSettings.height;
-document.getElementById('paddingSlider').value = textModeSettings.padding;
-document.getElementById('paddingValue').textContent = textModeSettings.padding;
-const textInput = document.getElementById('textInput').value.trim();
-if (textInput) {
+$.heightSlider.value = textModeSettings.height;
+$.heightValue.textContent = textModeSettings.height;
+$.paddingSlider.value = textModeSettings.padding;
+$.paddingValue.textContent = textModeSettings.padding;
+if ($.textInput.value.trim()) {
 updatePreview();
 } else {
-document.getElementById('moonArt').textContent = '';
-document.getElementById('debugInfo').style.display = 'none';
-document.getElementById('actionButtons').style.display = 'none';
+$.moonArt.textContent = '';
+$.actionButtons.style.display = 'none';
 }
 } else if (tabId === 'image') {
-document.getElementById('imageTab').classList.add('active');
+imageTab.classList.add('active');
 if (currentInputMode === 'text') {
-textModeSettings.height = parseInt(document.getElementById('heightSlider').value);
-textModeSettings.padding = parseInt(document.getElementById('paddingSlider').value);
+textModeSettings.height = parseInt($.heightSlider.value);
+textModeSettings.padding = parseInt($.paddingSlider.value);
 }
-currentInputMode = 'image'; 
-const heightSlider = document.getElementById('heightSlider');
-const heightMaxLabel = heightSlider.nextElementSibling;
-heightSlider.max = 500;
+currentInputMode = 'image';
+$.heightSlider.max = 500;
 heightMaxLabel.textContent = '500';
-heightSlider.value = imageModeSettings.height;
-document.getElementById('heightValue').textContent = imageModeSettings.height;
-document.getElementById('paddingSlider').value = imageModeSettings.padding;
-document.getElementById('paddingValue').textContent = imageModeSettings.padding;
+$.heightSlider.value = imageModeSettings.height;
+$.heightValue.textContent = imageModeSettings.height;
+$.paddingSlider.value = imageModeSettings.padding;
+$.paddingValue.textContent = imageModeSettings.padding;
 if (lastUploadedImageSrc) {
 updatePreview();
 } else {
-document.getElementById('moonArt').textContent = '';
-document.getElementById('debugInfo').style.display = 'none';
-document.getElementById('actionButtons').style.display = 'none';
+$.moonArt.textContent = '';
+$.actionButtons.style.display = 'none';
 }
 }
 });
@@ -2145,9 +2125,8 @@ imageInput.value = '';
 uploadArea.style.display = 'flex';
 imagePreview.style.display = 'none';
 lastUploadedImageSrc = null;
-document.getElementById('moonArt').textContent = '';
-document.getElementById('debugInfo').style.display = 'none';
-document.getElementById('actionButtons').style.display = 'none';
+$.moonArt.textContent = '';
+$.actionButtons.style.display = 'none';
 });
 function handleFileSelect(e) {
 const file = e.target.files[0];
@@ -2156,29 +2135,44 @@ handleFile(file);
 }
 }
 function handleFile(file) {
+const MAX_BYTES = 5 * 1024 * 1024;
+const MAX_DIM = 4096;
+if (file.size > MAX_BYTES) {
+alert('画像サイズが大きすぎます（5MB以下にしてください）');
+return;
+}
 const reader = new FileReader();
 reader.onload = (e) => {
+const img = new Image();
+img.onload = () => {
+if (img.width > MAX_DIM || img.height > MAX_DIM) {
+alert(`画像の解像度が大きすぎます（最大 ${MAX_DIM}×${MAX_DIM}px）`);
+return;
+}
 previewImg.src = e.target.result;
 imageInfo.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
 uploadArea.style.display = 'none';
 imagePreview.style.display = 'block';
 lastUploadedImageSrc = e.target.result;
 currentInputMode = 'image';
-setTimeout(() => {
-generateFromImage(e.target.result);
-}, 100);
+setTimeout(() => generateFromImage(e.target.result), 100);
 };
+img.onerror = () => alert('画像の読み込みに失敗しました');
+img.src = e.target.result;
+};
+reader.onerror = () => alert('ファイルの読み込みに失敗しました');
 reader.readAsDataURL(file);
 }
 }
 async function generateFromImage(imageSrc) {
+$.moonArt.classList.add('loading');
 try {
-document.getElementById('moonArt').textContent = '処理中...';
-const height = parseInt(document.getElementById('heightSlider').value);
-const padding = parseInt(document.getElementById('paddingSlider').value);
-const reverseColor = document.getElementById('reverseColor').checked;
-const enableDenoising = document.getElementById('enableDenoising').checked;
-const adhesionCoefficient = parseInt(document.getElementById('adhesionSlider').value);
+$.moonArt.textContent = '処理中...';
+const height = parseInt($.heightSlider.value);
+const padding = parseInt($.paddingSlider.value);
+const reverseColor = $.reverseColor.checked;
+const enableDenoising = $.enableDenoising.checked;
+const adhesionCoefficient = parseInt($.adhesionSlider.value);
 const imageProcessor = new ImageProcessor();
 const imageData = await imageProcessor.loadAndProcessImage(imageSrc, height, true);
 const generator = new SimpleMoonGenerator();
@@ -2186,7 +2180,7 @@ let result = generator.generateFromImage(
 imageData.matrix,
 imageData.width,
 imageData.height,
-padding 
+padding
 );
 if (reverseColor) {
 result = result.split('\n').map(line => {
@@ -2195,12 +2189,13 @@ return generator.reverseMoon(char);
 }).join('');
 }).join('\n');
 }
-document.getElementById('moonArt').textContent = result;
-document.getElementById('actionButtons').style.display = 'flex';
-document.getElementById('debugInfo').style.display = 'none';
+$.moonArt.textContent = result;
+$.actionButtons.style.display = 'flex';
 } catch (error) {
-document.getElementById('moonArt').textContent = 'エラー: 画像の処理に失敗しました';
-document.getElementById('actionButtons').style.display = 'none';
+$.moonArt.textContent = `エラー: 画像の処理に失敗しました（${error.message || '不明'}）`;
+$.actionButtons.style.display = 'none';
+} finally {
+$.moonArt.classList.remove('loading');
 }
 }
 function addBookmark() {
@@ -2256,7 +2251,7 @@ this.style.boxShadow = 'none';
 📖 使用ガイド
 </a>
 </div>
-<p style="text-align: center; margin-top: 30px; font-size: 0.85rem; color: #9ca3af;">
+<p style="text-align: center; margin-top: 30px; font-size: 0.85rem; color: #6b7280;">
 友情リンク:
 <a href="https://kidsai.art/" target="_blank" rel="noopener" class="friend-link">kidsai</a> - 子ども向けAIお絵描き |
 <a href="https://prompta.jp/" target="_blank" rel="noopener" class="friend-link">prompta</a> - AIプロンプト共有 |
