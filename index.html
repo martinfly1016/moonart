@@ -82,17 +82,64 @@ gap: 20px;
 flex-shrink: 0;
 }
 .ad-banner {
-flex-shrink: 0;
+flex: 1;
+max-width: 520px;
+}
+.tool-nav {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 8px;
+}
+.tool-nav a {
+display: flex;
+align-items: center;
+gap: 8px;
+min-height: 44px;
+padding: 9px 12px;
+border-radius: 10px;
+background: rgba(255, 255, 255, 0.12);
+border: 1px solid rgba(255, 255, 255, 0.22);
+color: white;
+text-decoration: none;
+font-size: 13px;
+font-weight: 700;
+line-height: 1.25;
+transition: all 0.2s ease;
+backdrop-filter: blur(10px);
+}
+.tool-nav a:hover {
+background: rgba(255, 255, 255, 0.2);
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.tool-nav-icon {
+width: 24px;
+height: 24px;
+display: grid;
+place-items: center;
+flex: 0 0 auto;
 border-radius: 8px;
+background: rgba(255, 255, 255, 0.16);
+font-size: 14px;
+}
+.tool-nav-text {
+min-width: 0;
+}
+.tool-nav-title {
+display: block;
+white-space: nowrap;
 overflow: hidden;
+text-overflow: ellipsis;
 }
-.ad-banner a {
+.tool-nav-sub {
 display: block;
-}
-.ad-banner img {
-display: block;
-height: auto;
-width: auto;
+margin-top: 1px;
+color: rgba(255, 255, 255, 0.7);
+font-size: 11px;
+font-weight: 600;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 .mobile-footer-nav {
 display: none;
@@ -387,14 +434,20 @@ display: none;
 }
 .ad-banner {
 width: 100%;
-display: flex;
-justify-content: center;
 box-shadow: none;
+max-width: none;
 }
-.ad-banner img {
-height: auto;
+.tool-nav {
 width: 100%;
-max-width: 280px;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.tool-nav a {
+min-height: 40px;
+padding: 8px 9px;
+font-size: 12px;
+}
+.tool-nav-sub {
+display: none;
 }
 .header {
 margin-bottom: 10px;
@@ -638,6 +691,8 @@ display: block !important;
 .btn-cyan{background:linear-gradient(135deg,#06B6D4,#0891B2)}
 .btn-green{background:linear-gradient(135deg,#10b981,#059669)}
 .btn-blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
+.btn-purple{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+.btn-orange{background:linear-gradient(135deg,#f97316,#c2410c)}
 .friend-link{color:#fde68a;text-decoration:none;margin:0 8px;font-weight:600}
 .friend-link:hover{color:#fff;text-decoration:underline}
 .moon-art.loading{position:relative;min-height:60px}
@@ -663,9 +718,24 @@ display: block !important;
 <a href="index_en.html" class="lang-switcher">🌏 English</a>
 </div>
 <div class="ad-banner">
-<a href="https://beads.mojimoon.com/index.html">
-<img src="https://beads.mojimoon.com/banner_400x100.png" alt="Beads" width="400" height="100" decoding="async">
+<nav class="tool-nav" aria-label="MojiMoon文字ツール">
+<a href="emoji-copy/">
+<span class="tool-nav-icon">😊</span>
+<span class="tool-nav-text"><span class="tool-nav-title">絵文字コピペ</span><span class="tool-nav-sub">可愛い絵文字をコピー</span></span>
 </a>
+<a href="special-characters/">
+<span class="tool-nav-icon">✦</span>
+<span class="tool-nav-text"><span class="tool-nav-title">特殊文字</span><span class="tool-nav-sub">記号・ハート・矢印</span></span>
+</a>
+<a href="emoji-combinations/">
+<span class="tool-nav-icon">🎀</span>
+<span class="tool-nav-text"><span class="tool-nav-title">絵文字組み合わせ</span><span class="tool-nav-sub">SNSテンプレを作成</span></span>
+</a>
+<a href="https://beads.mojimoon.com/index.html">
+<span class="tool-nav-icon">▦</span>
+<span class="tool-nav-text"><span class="tool-nav-title">ビーズ図案</span><span class="tool-nav-sub">アイロンビーズ作成</span></span>
+</a>
+</nav>
 </div>
 </div>
 </header>
@@ -2250,6 +2320,15 @@ this.style.boxShadow = 'none';
 </a>
 <a href="guide.html" class="btn-footer btn-blue">
 📖 使用ガイド
+</a>
+<a href="emoji-copy/" class="btn-footer btn-purple">
+😊 絵文字コピペ
+</a>
+<a href="special-characters/" class="btn-footer btn-orange">
+✦ 特殊文字コピペ
+</a>
+<a href="emoji-combinations/" class="btn-footer btn-green">
+🎀 絵文字組み合わせ
 </a>
 </div>
 <p style="text-align: center; margin-top: 30px; font-size: 0.85rem; color: #e5e7eb;">
