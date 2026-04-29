@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moon Emoji Art Generator | Free Text Converter</title>
-<meta name="description" content="Free online tool to convert text and images into beautiful moon emoji art. Supports vertical and horizontal layouts, multiple fonts. Create unique ASCII art using moon phases!">
-<meta name="keywords" content="moon characters,emoji art,text art,generator,free tool,moon phases,ASCII art">
+<title>Moon Emoji Text Generator | Create Moon Character Art Online - MojiMoon</title>
+<meta name="description" content="Create moon emoji text art from words or images with MojiMoon. Free online moon character generator for Discord, social media posts, greeting cards, bios, and chat messages.">
+<meta name="keywords" content="moon emoji text generator,moon character generator,moon text art,moon emoji art,text to emoji art,emoji ASCII art,Discord text art">
 <meta name="author" content="Moon Character Generator">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Moon Character Generator">
-<meta property="og:description" content="Convert text to moon emoji art - Free online tool">
+<meta property="og:title" content="Moon Emoji Text Generator - MojiMoon">
+<meta property="og:description" content="Turn text and images into moon emoji character art for social media, Discord, LINE, cards, and chat messages.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mojimoon.com/index_en.html">
 <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@mojimoon">
-<meta name="twitter:title" content="Moon Character Generator">
-<meta name="twitter:description" content="Convert text to moon emoji art">
+<meta name="twitter:title" content="Moon Emoji Text Generator - MojiMoon">
+<meta name="twitter:description" content="Create moon emoji text art from words or images online.">
 <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -32,12 +32,26 @@
 {
 "@context": "https://schema.org",
 "@type": "WebApplication",
-"name": "Moon Character Generator",
-"description": "Convert text to moon emoji art",
+"name": "MojiMoon Moon Emoji Text Generator",
+"alternateName": ["Moon Character Generator", "Moon Emoji Art Generator"],
+"url": "https://mojimoon.com/index_en.html",
+"description": "Create moon emoji text art from words or images for social media, Discord, greeting cards, bios, and chat messages.",
 "applicationCategory": "UtilityApplication",
 "operatingSystem": "All",
 "inLanguage": "en",
-"isAccessibleForFree": true
+"isAccessibleForFree": true,
+"featureList": [
+"Text to moon emoji art",
+"Image to moon emoji art",
+"Vertical and horizontal text layouts",
+"Copy moon emoji text to clipboard",
+"Download moon emoji art as text or image"
+],
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+}
 }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WD9XP5ERGX"></script>
@@ -117,6 +131,66 @@ backdrop-filter: blur(10px);
 }
 .form-group {
 margin-bottom: 8px;
+}
+.settings-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 12px;
+margin-top: 12px;
+}
+.setting-card {
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: 10px;
+padding: 12px;
+min-width: 0;
+}
+.setting-card-wide {
+grid-column: 1 / -1;
+}
+.setting-title {
+display: flex;
+align-items: baseline;
+justify-content: space-between;
+gap: 8px;
+font-size: 0.92rem;
+font-weight: 700;
+margin-bottom: 10px;
+color: white;
+}
+.setting-value {
+color: #fbbf24;
+font-weight: 800;
+white-space: nowrap;
+}
+.range-row {
+display: grid;
+grid-template-columns: auto minmax(0, 1fr) auto;
+align-items: center;
+gap: 8px;
+}
+.range-row span {
+font-size: 13px;
+color: rgba(255, 255, 255, 0.86);
+}
+.choice-row {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+.choice-row.segmented {
+display: grid;
+width: 100%;
+}
+.choice-row.segmented .radio-option {
+justify-content: center;
+min-width: 0;
+}
+.choice-row.font-options {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.choice-row.direction-options {
+grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .form-group .height-control {
 width: 95%;
@@ -259,12 +333,19 @@ display: flex;
 align-items: center;
 gap: 8px;
 cursor: pointer;
-padding: 8px 12px;
-border-radius: 6px;
+padding: 8px 10px;
+border-radius: 999px;
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.12);
 transition: background 0.2s ease;
 }
 .radio-option:hover {
-background: rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.16);
+}
+.radio-option:has(input:checked) {
+background: rgba(139, 92, 246, 0.28);
+border-color: rgba(255, 255, 255, 0.28);
+box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .radio-option input[type="radio"] {
 width: 18px;
@@ -278,8 +359,21 @@ accent-color: #8b5cf6;
 }
 .radio-label {
 font-weight: 500;
-font-size: 0.9rem;
+font-size: 0.86rem;
 user-select: none;
+white-space: nowrap;
+}
+.toggle-option {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+font-weight: 700;
+}
+.toggle-option input {
+width: 18px;
+height: 18px;
+accent-color: #8b5cf6;
 }
 .generate-btn {
 width: 100%;
@@ -434,6 +528,19 @@ width: 100%;
 .dual-control-group .control-item > .height-control {
 width: 95%;
 }
+.settings-grid {
+grid-template-columns: 1fr;
+gap: 10px;
+}
+.setting-card {
+padding: 10px;
+}
+.choice-row {
+gap: 6px;
+}
+.radio-option {
+padding: 7px 9px;
+}
 }
 .debug-section {
 display: none !important;
@@ -504,10 +611,127 @@ margin-bottom: 10px;
 .btn-green{background:linear-gradient(135deg,#10b981,#059669)}
 .btn-blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
 .friend-link{color:#6b7280;text-decoration:none;margin:0 8px}
-.embed-mode .header,.embed-mode .favorite-btn{display:none!important}
+.hero-copy {
+max-width: 680px;
+margin: 8px auto 0;
+color: rgba(255, 255, 255, 0.86);
+font-size: 15px;
+line-height: 1.6;
+}
+.sample-strip {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 8px;
+margin: 14px 0 0;
+}
+.sample-chip {
+border: 1px solid rgba(255, 255, 255, 0.24);
+background: rgba(255, 255, 255, 0.12);
+color: white;
+border-radius: 999px;
+padding: 7px 12px;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+.sample-chip:hover {
+background: rgba(255, 255, 255, 0.22);
+transform: translateY(-1px);
+}
+.seo-content {
+margin-top: 28px;
+background: rgba(255, 255, 255, 0.12);
+border: 1px solid rgba(255, 255, 255, 0.16);
+border-radius: 15px;
+padding: 26px;
+backdrop-filter: blur(10px);
+line-height: 1.7;
+}
+.seo-content h2 {
+font-size: 1.35rem;
+margin: 24px 0 10px;
+color: #fff7ed;
+}
+.seo-content h2:first-child {
+margin-top: 0;
+}
+.seo-content h3 {
+font-size: 1rem;
+margin: 18px 0 6px;
+color: #fde68a;
+}
+.seo-content p,
+.seo-content li {
+color: rgba(255, 255, 255, 0.9);
+font-size: 15px;
+}
+.seo-content ul,
+.seo-content ol {
+padding-left: 22px;
+margin: 8px 0 0;
+}
+.seo-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 14px;
+margin-top: 14px;
+}
+.seo-card {
+background: rgba(0, 0, 0, 0.18);
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 10px;
+padding: 14px;
+}
+.related-links {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 12px;
+}
+.related-links a,
+.site-footer a {
+color: #fde68a;
+font-weight: 700;
+text-decoration: none;
+}
+.related-links a:hover,
+.site-footer a:hover {
+color: white;
+text-decoration: underline;
+}
+.site-footer {
+margin: 26px auto 0;
+padding: 22px 0 8px;
+text-align: center;
+color: rgba(255, 255, 255, 0.82);
+font-size: 14px;
+}
+.embed-mode .header,.embed-mode .favorite-btn,.embed-mode .seo-content,.embed-mode .site-footer{display:none!important}
 .embed-mode .control-panel > *:not(#actionButtons){display:none!important}
 .artemis-link{display:inline-block;padding:6px 14px;margin:0 8px;border-radius:999px;background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#1a1f3a!important;font-weight:700;text-decoration:none;font-size:14px;animation:artemis-pulse 2s infinite}
 @keyframes artemis-pulse{0%{box-shadow:0 0 0 0 rgba(251,191,36,.6)}70%{box-shadow:0 0 0 8px rgba(251,191,36,0)}100%{box-shadow:0 0 0 0 rgba(251,191,36,0)}}
+@media (max-width: 768px) {
+.hero-copy {
+font-size: 14px;
+}
+.sample-strip {
+justify-content: flex-start;
+overflow-x: auto;
+flex-wrap: nowrap;
+padding-bottom: 4px;
+}
+.sample-chip {
+flex: 0 0 auto;
+}
+.seo-content {
+padding: 18px;
+}
+.seo-grid {
+grid-template-columns: 1fr;
+}
+}
 </style>
 </head>
 <body>
@@ -531,10 +755,17 @@ display: none;
 </button>
 <div class="container">
 <header class="header">
-<h1>🌙 Moon Character Generator</h1>
+<h1>🌙 Moon Emoji Text Generator</h1>
+<p class="hero-copy">Turn words or images into moon emoji art you can copy into Discord, social media posts, bios, greeting cards, and chat messages.</p>
 <a href="artemis_en.html" class="artemis-link">🚀 Artemis II Special</a>
 <a href="guide_en.html" class="guide-link">📖 User Guide</a>
 <a href="https://mojimoon.com/" class="lang-switcher">🌏 日本語</a>
+<div class="sample-strip" aria-label="Example moon emoji text ideas">
+<button type="button" class="sample-chip" data-sample="MOON">MOON</button>
+<button type="button" class="sample-chip" data-sample="GOOD NIGHT">GOOD NIGHT</button>
+<button type="button" class="sample-chip" data-sample="LOVE">LOVE</button>
+<button type="button" class="sample-chip" data-sample="TO THE MOON">TO THE MOON</button>
+</div>
 </header>
 <div class="control-panel">
 <div class="input-tabs">
@@ -544,19 +775,20 @@ display: none;
 <div class="tab-content active" id="textTab">
 <div class="form-group">
 <label for="textInput">Text Input</label>
-<input type="text" id="textInput" class="text-input" placeholder="Enter text to convert..." maxlength="50">
+<input type="text" id="textInput" class="text-input" placeholder="Enter text to convert..." value="MOON" maxlength="50">
 </div>
-<div class="form-group height-control-group">
-<h3>Height: <span id="heightValue">10</span> rows</h3>
-<div class="height-control">
+<div class="settings-grid">
+<div class="setting-card setting-card-wide">
+<div class="setting-title">Height <span class="setting-value"><span id="heightValue">10</span> rows</span></div>
+<div class="range-row">
 <span>10</span>
 <input type="range" id="heightSlider" class="height-slider" min="10" max="60" value="10">
 <span>60</span>
 </div>
 </div>
-<div class="form-group">
-<h3>Font Style</h3>
-<div class="radio-group">
+<div class="setting-card">
+<div class="setting-title">Font Style</div>
+<div class="choice-row segmented font-options">
 <label class="radio-option">
 <input type="radio" name="fontType" value="monospace" checked>
 <span class="radio-label">Monospace</span>
@@ -571,9 +803,9 @@ display: none;
 </label>
 </div>
 </div>
-<div class="form-group">
-<h3>Text Direction</h3>
-<div class="radio-group">
+<div class="setting-card">
+<div class="setting-title">Text Direction</div>
+<div class="choice-row segmented direction-options">
 <label class="radio-option">
 <input type="radio" name="direction" value="vertical">
 <span class="radio-label">Vertical</span>
@@ -584,28 +816,27 @@ display: none;
 </label>
 </div>
 </div>
-<div class="dual-control-group">
-<div class="control-item">
-<h3>Spacing: <span id="spacingValue">2</span></h3>
-<div class="height-control">
+<div class="setting-card">
+<div class="setting-title">Spacing <span class="setting-value" id="spacingValue">2</span></div>
+<div class="range-row">
 <span>0</span>
 <input type="range" id="spacingSlider" class="height-slider" min="0" max="10" value="2">
 <span>10</span>
 </div>
 </div>
-<div class="control-item">
-<h3>Padding: <span id="paddingValue">0</span></h3>
-<div class="height-control">
+<div class="setting-card">
+<div class="setting-title">Padding <span class="setting-value" id="paddingValue">0</span></div>
+<div class="range-row">
 <span>0</span>
 <input type="range" id="paddingSlider" class="height-slider" min="0" max="10" value="0">
 <span>10</span>
 </div>
 </div>
-</div>
-<div class="form-group">
-<div style="display: flex; align-items: center; gap: 8px; font-weight: 600;">
-<input type="checkbox" id="reverseColor" style="width: 18px; height: 18px; accent-color: #8b5cf6;">
-<label for="reverseColor" style="cursor: pointer; font-weight: 600;">Reverse Color</label>
+<div class="setting-card setting-card-wide">
+<label class="toggle-option" for="reverseColor">
+<input type="checkbox" id="reverseColor">
+<span>Reverse Color</span>
+</label>
 </div>
 </div>
 </div>
@@ -681,6 +912,53 @@ display: none;
 <canvas id="debugCanvas" style="border: 1px solid #666; margin-top: 10px; background: white; display: none; max-width: 100%;"></canvas>
 </div>
 </div>
+<section class="container seo-content" aria-label="About the moon emoji text generator">
+<h2>What is a moon emoji text generator?</h2>
+<p>MojiMoon is a free moon emoji text generator that converts normal text into character art made from moon phase emojis. Instead of using plain ASCII symbols, it builds each letter with moons such as 🌑, 🌒, 🌓, 🌔, and 🌕 so the result feels soft, visual, and easy to paste into modern chat apps.</p>
+
+<h2>How to create moon emoji text</h2>
+<ol>
+<li>Type a word, name, greeting, or short phrase into the text box.</li>
+<li>Choose vertical or horizontal layout, then adjust height, spacing, padding, and font style.</li>
+<li>Use Copy to paste the moon text into Discord, X, Instagram, LINE, or any message app.</li>
+<li>Switch to Image Input when you want to turn a simple picture or icon into moon emoji art.</li>
+</ol>
+
+<h2>Where to use moon emoji art</h2>
+<div class="seo-grid">
+<div class="seo-card">
+<h3>Social posts</h3>
+<p>Create standout moon text for X, Instagram captions, profile bios, and short announcements.</p>
+</div>
+<div class="seo-card">
+<h3>Chat messages</h3>
+<p>Paste moon emoji art into Discord, LINE, Slack, or group chats when plain text feels too flat.</p>
+</div>
+<div class="seo-card">
+<h3>Cards and greetings</h3>
+<p>Make good-night messages, birthday notes, seasonal greetings, or romantic text art.</p>
+</div>
+</div>
+
+<h2>Text and image to moon emoji art</h2>
+<p>The text mode draws each character on a canvas, samples the shape, and maps the result to moon phase emojis. The image mode reads the brightness of an uploaded picture and turns it into a moon emoji pattern. For the cleanest result, use short words, bold shapes, and simple high-contrast images.</p>
+
+<h2>Moon emoji text FAQ</h2>
+<h3>What is moon character art?</h3>
+<p>Moon character art is text art built from moon phase emojis. It works like ASCII art, but the visual texture comes from different moon shapes instead of punctuation marks.</p>
+<h3>Can I use the generated moon emoji text for free?</h3>
+<p>Yes. The generator is free to use, and the output is plain emoji text that you can copy into personal posts, messages, bios, and greetings.</p>
+<h3>Why does my moon text look different in each app?</h3>
+<p>Every platform renders emoji with its own font and spacing. If the art looks too wide or tall, try reducing the height, switching direction, or adding padding before copying it again.</p>
+<h3>What phrases work best?</h3>
+<p>Short phrases such as MOON, LOVE, GOOD NIGHT, HELLO, or TO THE MOON usually look cleaner than long sentences because each character has more room to stay readable.</p>
+
+<h2>More MojiMoon tools and guides</h2>
+<p>Learn the full workflow in the <a href="guide_en.html">Moon Character Generator User Guide</a>, try space-themed prompts on the <a href="artemis_en.html">Artemis II moon text page</a>, or visit the <a href="https://mojimoon.com/">Japanese moon character generator</a>.</p>
+</section>
+<footer class="container site-footer">
+<p>MojiMoon: free moon emoji text art for messages, social profiles, and creative posts.</p>
+</footer>
 <script>
 function isMobileDevice() {
 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
@@ -1579,20 +1857,6 @@ targetDensityLevels.push('次高密度');
 }
 const thresholdN = 2; // 默认阈值
 globalMetaGrid = this.applyVerticalProcessing(globalMetaGrid, targetDensityLevels, thresholdN);
-console.error(`🔍 验证垂直化处理结果:`);
-let avoidCount = 0, keepCount = 0;
-this.verticalProcessingPositions.forEach(pos => {
-if (pos.row < globalMetaGrid.length && pos.col < globalMetaGrid[pos.row].length) {
-const cell = globalMetaGrid[pos.row][pos.col];
-console.error(`验证位置(${pos.row},${pos.col}): finalMoonPhase=${cell.finalMoonPhase}, 密度=${cell.densityLevel}`);
-if (cell.finalMoonPhase === '🌑') {
-avoidCount++;
-} else if (cell.finalMoonPhase === '🌕') {
-keepCount++;
-}
-}
-});
-console.error(`📊 垂直化处理统计: 避让🌑=${avoidCount}个, 保持🌕=${keepCount}个`);
 const resultLines = globalMetaGrid.map(row => 
 row.map(cell => cell.finalMoonPhase).join('')
 );
@@ -1657,9 +1921,7 @@ setTimeout(() => {
 btnText.textContent = originalText;
 copyBtn.classList.remove('success');
 }, 2000);
-}).catch(err => {
-console.error('Copy failed:', err);
-});
+}).catch(() => {});
 }
 function downloadText() {
 const moonArt = document.getElementById('moonArt').textContent;
@@ -1727,7 +1989,7 @@ const padding = parseInt(document.getElementById('paddingSlider').value);
 const selectedRadio = document.querySelector('input[name="direction"]:checked');
 const isVertical = selectedRadio?.value === 'vertical';
 const reverseColor = document.getElementById('reverseColor').checked;
-const enableDenoising = document.getElementById('enableDenoising')?.checked || true;
+const enableDenoising = document.getElementById('enableDenoising')?.checked ?? true;
 if (!text) {
 document.getElementById('moonArt').textContent = '';
 document.getElementById('actionButtons').style.display = 'none';
@@ -1747,22 +2009,6 @@ const char = Array.from(lines[pos.row])[pos.col];
 horizontalEnhancer.setAdhesionCoefficient(adhesionCoefficient);
 horizontalEnhancer.setEnableDenoising(enableDenoising);
 result = horizontalEnhancer.enhance(result);
-if (generator.verticalProcessingPositions.length > 0) {
-const linesFinal = result.split('\n');
-let moon_count = 0, black_count = 0;
-generator.verticalProcessingPositions.forEach(pos => {
-if (pos.row < linesFinal.length && pos.col < linesFinal[pos.row].length) {
-const charFinal = Array.from(linesFinal[pos.row])[pos.col];
-if (charFinal === '🌕') moon_count++;
-else if (charFinal === '🌑') black_count++;
-}
-});
-console.error(`📊 Vertical processing statistics: 🌕=${moon_count}, 🌑=${black_count}`);
-const allChars = result.replace(/\n/g, '');
-const totalMoon = (allChars.match(/🌕/g) || []).length;
-const totalBlack = (allChars.match(/🌑/g) || []).length;
-console.error(`📊 Overall character statistics: Total🌕=${totalMoon}, Total🌑=${totalBlack}`);
-}
 if (reverseColor) {
 result = Array.from(result).map(char => {
 if (char === '\n') return char;
@@ -1772,7 +2018,6 @@ return generator.reverseMoon(char);
 document.getElementById('moonArt').textContent = result;
 document.getElementById('actionButtons').style.display = 'flex';
 } catch (error) {
-console.error('Generation error:', error);
 document.getElementById('moonArt').textContent = 'Error occurred';
 document.getElementById('actionButtons').style.display = 'none';
 document.getElementById('debugInfo').style.display = 'none';
@@ -1848,6 +2093,19 @@ document.getElementById('imageReverseColor').addEventListener('change', updatePr
 if (document.getElementById('enableDenoising')) {
 document.getElementById('enableDenoising').addEventListener('change', updatePreview);
 }
+document.querySelectorAll('.sample-chip').forEach(button => {
+button.addEventListener('click', () => {
+const sample = button.getAttribute('data-sample') || '';
+const textInput = document.getElementById('textInput');
+textInput.value = sample;
+currentInputMode = 'text';
+document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+document.querySelector('.tab-button[data-tab="text"]').classList.add('active');
+document.getElementById('textTab').classList.add('active');
+updatePreview();
+});
+});
 document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
 document.getElementById('downloadTextBtn').addEventListener('click', downloadText);
 document.getElementById('downloadImageBtn').addEventListener('click', downloadImage);
@@ -1962,7 +2220,7 @@ document.getElementById('moonArt').textContent = 'Processing...';
 const height = parseInt(document.getElementById('imageHeightSlider').value);
 const padding = parseInt(document.getElementById('imagePaddingSlider').value);
 const reverseColor = document.getElementById('imageReverseColor').checked;
-const enableDenoising = document.getElementById('enableDenoising')?.checked || true;
+const enableDenoising = document.getElementById('enableDenoising')?.checked ?? true;
 const adhesionCoefficient = 2; // Fixed value
 const imageProcessor = new ImageProcessor();
 const imageData = await imageProcessor.loadAndProcessImage(imageSrc, height, true);
@@ -1984,7 +2242,6 @@ document.getElementById('moonArt').textContent = result;
 document.getElementById('actionButtons').style.display = 'flex';
 document.getElementById('debugInfo').style.display = 'none';
 } catch (error) {
-console.error('Image processing failed:', error);
 document.getElementById('moonArt').textContent = 'Error: Failed to process image';
 document.getElementById('actionButtons').style.display = 'none';
 }
