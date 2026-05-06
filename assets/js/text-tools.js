@@ -12,7 +12,10 @@
   const recentList = document.querySelector('[data-recent]');
   const toast = document.querySelector('[data-toast]');
   const storageKey = `mojimoon:${data.slug}:recent`;
-  let activeCategory = data.categories[0]?.id || 'all';
+  const configuredCategory = document.body.dataset.defaultCategory;
+  let activeCategory = data.categories.some((category) => category.id === configuredCategory)
+    ? configuredCategory
+    : data.categories[0]?.id || 'all';
 
   function normalize(value) {
     return String(value || '').toLowerCase().trim();
