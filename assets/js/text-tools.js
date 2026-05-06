@@ -11,11 +11,17 @@
   const clearDraft = document.querySelector('[data-clear-draft]');
   const recentList = document.querySelector('[data-recent]');
   const toast = document.querySelector('[data-toast]');
+  const pagination = document.createElement('div');
   const storageKey = `mojimoon:${data.slug}:recent`;
   const configuredCategory = document.body.dataset.defaultCategory;
+  const pageSize = Number(data.pageSize || 48);
+  let currentPage = 1;
   let activeCategory = data.categories.some((category) => category.id === configuredCategory)
     ? configuredCategory
     : data.categories[0]?.id || 'all';
+  pagination.className = 'pagination';
+  pagination.setAttribute('data-pagination', '');
+  grid.after(pagination);
 
   function normalize(value) {
     return String(value || '').toLowerCase().trim();
@@ -85,19 +91,46 @@
     return activeCategory === 'all' || item.category === activeCategory || (item.tags || []).includes(activeCategory);
   }
 
-  function renderGrid() {
+  function filteredItems() {
     const query = normalize(searchInput.value);
-    const items = data.items.filter((item) => categoryMatches(item) && itemMatches(item, query));
-    if (!items.length) {
-      grid.innerHTML = '<div class="no-results">該当するアイテムがありません。別の言葉で検索してください。</div>';
+    return data.items.filter((item) => categoryMatches(item) && itemMatches(item, query));
+  }
+
+  function renderPagination(totalItems) {
+    const totalPages = Math.ceil(totalItems / pageSize);
+    if (totalPages <= 1) {
+      pagination.innerHTML = '';
       return;
     }
-    grid.innerHTML = items.map((item) => `
+    const pages = [];
+    for (let page = 1; page <= totalPages; page += 1) {
+      pages.push(`<button class="page-btn${page === currentPage ? ' active' : ''}" type="button" data-page="${page}"${page === currentPage ? ' aria-current="page"' : ''}>${page}</button>`);
+    }
+    pagination.innerHTML = `
+      <button class="page-btn" type="button" data-page-prev ${currentPage === 1 ? 'disabled' : ''}>前へ</button>
+      ${pages.join('')}
+      <button class="page-btn" type="button" data-page-next ${currentPage === totalPages ? 'disabled' : ''}>次へ</button>
+      <span class="page-count">${totalItems}件中 ${(currentPage - 1) * pageSize + 1}-${Math.min(currentPage * pageSize, totalItems)}件</span>
+    `;
+  }
+
+  function renderGrid() {
+    const items = filteredItems();
+    if (!items.length) {
+      grid.innerHTML = '<div class="no-results">該当するアイテムがありません。別の言葉で検索してください。</div>';
+      renderPagination(0);
+      return;
+    }
+    const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const pageItems = items.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+    grid.innerHTML = pageItems.map((item) => `
       <button class="copy-card" type="button" data-copy="${encodeURIComponent(item.value)}" data-label="${item.label || ''}">
         <span class="copy-value">${item.value}</span>
         <span class="copy-label">${item.label || 'クリックで追加'}</span>
       </button>
     `).join('');
+    renderPagination(items.length);
   }
 
   function renderRecent() {
@@ -115,7 +148,19 @@
     const button = event.target.closest('[data-tab]');
     if (!button) return;
     activeCategory = button.dataset.tab;
+    currentPage = 1;
     renderTabs();
+    renderGrid();
+  });
+
+  pagination.addEventListener('click', (event) => {
+    const prev = event.target.closest('[data-page-prev]');
+    const next = event.target.closest('[data-page-next]');
+    const pageButton = event.target.closest('[data-page]');
+    const totalPages = Math.max(1, Math.ceil(filteredItems().length / pageSize));
+    if (prev && currentPage > 1) currentPage -= 1;
+    if (next && currentPage < totalPages) currentPage += 1;
+    if (pageButton) currentPage = Number(pageButton.dataset.page);
     renderGrid();
   });
 
@@ -134,7 +179,10 @@
     appendToDraft(decodeURIComponent(button.dataset.recentCopy));
   });
 
-  searchInput.addEventListener('input', renderGrid);
+  searchInput.addEventListener('input', () => {
+    currentPage = 1;
+    renderGrid();
+  });
 
   clearSearch.addEventListener('click', () => {
     searchInput.value = '';
