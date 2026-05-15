@@ -7,11 +7,13 @@
   const searchInput = document.querySelector('[data-search]');
   const clearSearch = document.querySelector('[data-clear-search]');
   const draft = document.querySelector('[data-draft]');
+  const composer = draft?.closest('.composer');
   const copyDraft = document.querySelector('[data-copy-draft]');
   const clearDraft = document.querySelector('[data-clear-draft]');
   const recentList = document.querySelector('[data-recent]');
   const toast = document.querySelector('[data-toast]');
   const pagination = document.createElement('div');
+  const mobileQuery = window.matchMedia('(max-width: 760px)');
   const storageKey = `mojimoon:${data.slug}:recent`;
   const configuredCategory = document.body.dataset.defaultCategory;
   const pageSize = Number(data.pageSize || 48);
@@ -47,6 +49,70 @@
     showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 1400);
   }
 
+  function draftCount() {
+    return draft.value.trim().length;
+  }
+
+  function updateComposerState() {
+    if (!composerSheetCount) return;
+    const count = draftCount();
+    composerSheetCount.textContent = count ? `${count}文字` : '空';
+    composerSheetCount.classList.toggle('has-content', count > 0);
+    composerSheetCopy.disabled = count === 0;
+  }
+
+  let composerSheetCount;
+  let composerSheetCopy;
+  let composerSheetAction;
+
+  function setComposerOpen(open) {
+    document.body.classList.toggle('composer-open', open);
+    if (!composerSheetToggle) return;
+    composerSheetToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (composerSheetAction) composerSheetAction.textContent = open ? '閉じる' : '開く';
+  }
+
+  let composerSheetToggle;
+
+  function setupMobileComposer() {
+    if (!draft || !copyDraft || !composer) return;
+    document.body.classList.add('has-mobile-composer');
+
+    const body = document.createElement('div');
+    body.className = 'composer-body';
+    while (composer.firstChild) body.appendChild(composer.firstChild);
+
+    const bar = document.createElement('div');
+    bar.className = 'composer-sheet-bar';
+    bar.innerHTML = `
+      <button class="composer-sheet-toggle" type="button" aria-expanded="false">
+        <span class="sheet-grip" aria-hidden="true"></span>
+        <span class="sheet-title">コピー草稿</span>
+        <span class="sheet-count">空</span>
+        <span class="sheet-action">開く</span>
+      </button>
+      <button class="sheet-copy-btn" type="button" disabled>コピー</button>
+    `;
+
+    composer.append(bar, body);
+    composerSheetToggle = bar.querySelector('.composer-sheet-toggle');
+    composerSheetCount = bar.querySelector('.sheet-count');
+    composerSheetCopy = bar.querySelector('.sheet-copy-btn');
+    composerSheetAction = bar.querySelector('.sheet-action');
+
+    composerSheetToggle.addEventListener('click', () => {
+      setComposerOpen(!document.body.classList.contains('composer-open'));
+    });
+    composerSheetCopy.addEventListener('click', () => {
+      copyText(draft.value.trim());
+      if (draft.value.trim()) remember(draft.value.trim());
+    });
+    draft.addEventListener('focus', () => {
+      if (mobileQuery.matches) setComposerOpen(true);
+    });
+    updateComposerState();
+  }
+
   async function copyText(text) {
     if (!text) return;
     try {
@@ -72,6 +138,9 @@
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
     draft.value = `${draft.value}${spacer}${text}`.trimStart();
     draft.dispatchEvent(new Event('input'));
+    if (mobileQuery.matches) {
+      setComposerOpen(false);
+    }
   }
 
   function renderTabs() {
@@ -193,13 +262,18 @@
   copyDraft.addEventListener('click', () => {
     copyText(draft.value.trim());
     if (draft.value.trim()) remember(draft.value.trim());
+    updateComposerState();
   });
 
   clearDraft.addEventListener('click', () => {
     draft.value = '';
     draft.focus();
+    updateComposerState();
   });
 
+  draft.addEventListener('input', updateComposerState);
+
+  setupMobileComposer();
   renderTabs();
   renderGrid();
   renderRecent();

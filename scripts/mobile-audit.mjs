@@ -228,6 +228,7 @@ async function auditPage(session, baseUrl, page, device) {
           width: Math.round(rect.width),
           height: Math.round(rect.height)
         }));
+      const composerSheet = document.querySelector('.composer-sheet-bar');
       return {
         title: document.title,
         viewportWidth,
@@ -235,6 +236,7 @@ async function auditPage(session, baseUrl, page, device) {
         scrollWidth,
         scrollHeight: document.documentElement.scrollHeight,
         pageOverflow,
+        mobileComposer: Boolean(composerSheet && getComputedStyle(composerSheet).display !== 'none'),
         overflow,
         tapIssues
       };
@@ -261,12 +263,12 @@ function renderReport(results) {
     '',
     '## Summary',
     '',
-    '| Page | Device | Size | Height | Overflow | Tap issues | Screenshot |',
-    '| --- | --- | --- | ---: | ---: | ---: | --- |'
+    '| Page | Device | Size | Height | Composer | Overflow | Tap issues | Screenshot |',
+    '| --- | --- | --- | ---: | --- | ---: | ---: | --- |'
   ];
 
   for (const item of results) {
-    lines.push(`| ${item.page} | ${item.device} | ${item.viewportWidth}x${item.viewportHeight} | ${item.scrollHeight} | ${item.overflow.length} | ${item.tapIssues.length} | ${item.screenshot} |`);
+    lines.push(`| ${item.page} | ${item.device} | ${item.viewportWidth}x${item.viewportHeight} | ${item.scrollHeight} | ${item.mobileComposer ? 'sheet' : '-'} | ${item.overflow.length} | ${item.tapIssues.length} | ${item.screenshot} |`);
   }
 
   lines.push('', '## Details', '');
@@ -274,6 +276,7 @@ function renderReport(results) {
     lines.push(`### ${item.page} - ${item.device}`, '');
     lines.push(`- Title: ${item.title}`);
     lines.push(`- Scroll: ${item.scrollWidth} x ${item.scrollHeight}`);
+    lines.push(`- Mobile composer: ${item.mobileComposer ? 'sheet visible' : 'not detected'}`);
     lines.push(`- Screenshot: ${item.screenshot}`);
     lines.push(`- Horizontal overflow: ${item.overflow.length ? 'needs review' : 'ok'}`);
     if (item.overflow.length) {
