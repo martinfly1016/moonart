@@ -15,6 +15,7 @@
   const pagination = document.createElement('div');
   const mobileQuery = window.matchMedia('(max-width: 760px)');
   const storageKey = `mojimoon:${data.slug}:recent`;
+  const recentLimit = Number(data.recentLimit || 12);
   const configuredCategory = document.body.dataset.defaultCategory;
   const pageSize = Number(data.pageSize || 48);
   let currentPage = 1;
@@ -31,14 +32,14 @@
 
   function getRecent() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey) || '[]');
+      return JSON.parse(localStorage.getItem(storageKey) || '[]').slice(0, recentLimit);
     } catch (error) {
       return [];
     }
   }
 
   function setRecent(value) {
-    localStorage.setItem(storageKey, JSON.stringify(value.slice(0, 20)));
+    localStorage.setItem(storageKey, JSON.stringify(value.slice(0, recentLimit)));
   }
 
   function showToast(message) {
@@ -47,6 +48,30 @@
     toast.classList.add('show');
     window.clearTimeout(showToast.timer);
     showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 1400);
+  }
+
+  function flashCopyButton(button) {
+    if (!button || button.disabled) return;
+    const original = button.dataset.originalText || button.textContent;
+    button.dataset.originalText = original;
+    button.textContent = 'コピー済み';
+    button.classList.add('copied');
+    window.clearTimeout(button.copyTimer);
+    button.copyTimer = window.setTimeout(() => {
+      button.textContent = original;
+      button.classList.remove('copied');
+    }, 1200);
+  }
+
+  function copyDraftText(button) {
+    const text = draft.value.trim();
+    if (!text) {
+      showToast('コピーする内容がありません');
+      return;
+    }
+    copyText(text);
+    remember(text);
+    flashCopyButton(button);
   }
 
   function draftCount() {
@@ -108,8 +133,7 @@
       setComposerOpen(!document.body.classList.contains('composer-open'));
     });
     composerSheetCopy.addEventListener('click', () => {
-      copyText(draft.value.trim());
-      if (draft.value.trim()) remember(draft.value.trim());
+      copyDraftText(composerSheetCopy);
     });
     draft.addEventListener('focus', () => {
       if (mobileQuery.matches) setComposerOpen(true);
@@ -212,9 +236,17 @@
       recentList.innerHTML = '';
       return;
     }
-    recentList.innerHTML = recent.map((item) => `
+    recentList.innerHTML = `
+      <div class="recent-list-head">
+        <span>最近使ったもの</span>
+        <button class="recent-clear" type="button" data-clear-recent>履歴を消去</button>
+      </div>
+      <div class="recent-chip-grid">
+        ${recent.map((item) => `
       <button class="recent-chip" type="button" data-recent-copy="${encodeURIComponent(item)}">${item}</button>
-    `).join('');
+        `).join('')}
+      </div>
+    `;
   }
 
   tabList.addEventListener('click', (event) => {
@@ -247,6 +279,13 @@
   });
 
   recentList.addEventListener('click', (event) => {
+    const clearRecent = event.target.closest('[data-clear-recent]');
+    if (clearRecent) {
+      setRecent([]);
+      renderRecent();
+      showToast('履歴を消去しました');
+      return;
+    }
     const button = event.target.closest('[data-recent-copy]');
     if (!button) return;
     appendToDraft(decodeURIComponent(button.dataset.recentCopy));
@@ -264,8 +303,7 @@
   });
 
   copyDraft.addEventListener('click', () => {
-    copyText(draft.value.trim());
-    if (draft.value.trim()) remember(draft.value.trim());
+    copyDraftText(copyDraft);
     updateComposerState();
   });
 
@@ -276,6 +314,15 @@
   });
 
   draft.addEventListener('input', updateComposerState);
+
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', (event) => {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, { passive: false });
 
   setupMobileComposer();
   renderTabs();
