@@ -268,8 +268,8 @@ a {
 }
 
 .page-btn {
-  min-width: 38px;
-  height: 36px;
+  min-width: 44px;
+  height: 40px;
   padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 8px;

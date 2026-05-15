@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "gsc": "node scripts/gsc-report.mjs",
+    "mobile:audit": "node scripts/mobile-audit.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
