@@ -64,12 +64,15 @@
   let composerSheetCount;
   let composerSheetCopy;
   let composerSheetAction;
+  let composerSheetIcon;
 
   function setComposerOpen(open) {
     document.body.classList.toggle('composer-open', open);
     if (!composerSheetToggle) return;
     composerSheetToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    composerSheetToggle.setAttribute('aria-label', open ? 'コピー草稿を閉じる' : 'コピー草稿を開く');
     if (composerSheetAction) composerSheetAction.textContent = open ? '閉じる' : '開く';
+    if (composerSheetIcon) composerSheetIcon.textContent = open ? '⌄' : '⌃';
   }
 
   let composerSheetToggle;
@@ -85,8 +88,8 @@
     const bar = document.createElement('div');
     bar.className = 'composer-sheet-bar';
     bar.innerHTML = `
-      <button class="composer-sheet-toggle" type="button" aria-expanded="false">
-        <span class="sheet-grip" aria-hidden="true"></span>
+      <button class="composer-sheet-toggle" type="button" aria-expanded="false" aria-label="コピー草稿を開く">
+        <span class="sheet-icon" aria-hidden="true">⌃</span>
         <span class="sheet-title">コピー草稿</span>
         <span class="sheet-count">空</span>
         <span class="sheet-action">開く</span>
@@ -99,6 +102,7 @@
     composerSheetCount = bar.querySelector('.sheet-count');
     composerSheetCopy = bar.querySelector('.sheet-copy-btn');
     composerSheetAction = bar.querySelector('.sheet-action');
+    composerSheetIcon = bar.querySelector('.sheet-icon');
 
     composerSheetToggle.addEventListener('click', () => {
       setComposerOpen(!document.body.classList.contains('composer-open'));

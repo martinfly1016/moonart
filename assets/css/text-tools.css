@@ -643,11 +643,17 @@ a {
     cursor: pointer;
   }
 
-  .sheet-grip {
-    width: 32px;
-    height: 4px;
+  .sheet-icon {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
     border-radius: 999px;
-    background: #c7cedb;
+    background: var(--surface-soft);
+    color: var(--primary);
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 900;
   }
 
   .sheet-title,
