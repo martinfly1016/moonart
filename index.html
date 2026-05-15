@@ -87,7 +87,7 @@ max-width: 520px;
 }
 .tool-nav {
 display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 gap: 8px;
 }
 .tool-nav a {
@@ -722,6 +722,10 @@ display: block !important;
 <a href="emoji-copy/">
 <span class="tool-nav-icon">😊</span>
 <span class="tool-nav-text"><span class="tool-nav-title">絵文字コピペ</span><span class="tool-nav-sub">可愛い絵文字をコピー</span></span>
+</a>
+<a href="kaomoji/">
+<span class="tool-nav-icon">☺</span>
+<span class="tool-nav-text"><span class="tool-nav-title">顔文字コピペ</span><span class="tool-nav-sub">可愛い顔文字をコピー</span></span>
 </a>
 <a href="special-characters/">
 <span class="tool-nav-icon">✦</span>
@@ -2323,6 +2327,9 @@ this.style.boxShadow = 'none';
 </a>
 <a href="emoji-copy/" class="btn-footer btn-purple">
 😊 絵文字コピペ
+</a>
+<a href="kaomoji/" class="btn-footer btn-blue">
+(*´˘`*) 顔文字コピペ
 </a>
 <a href="special-characters/" class="btn-footer btn-orange">
 ✦ 特殊文字コピペ
