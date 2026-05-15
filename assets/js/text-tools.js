@@ -138,11 +138,11 @@
     renderRecent();
   }
 
-  function appendToDraft(text) {
+  function appendToDraft(text, options = {}) {
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
     draft.value = `${draft.value}${spacer}${text}`.trimStart();
     draft.dispatchEvent(new Event('input'));
-    if (mobileQuery.matches) {
+    if (mobileQuery.matches && options.collapseMobile) {
       setComposerOpen(false);
     }
   }
@@ -241,7 +241,7 @@
     const button = event.target.closest('[data-copy]');
     if (!button) return;
     const value = decodeURIComponent(button.dataset.copy);
-    appendToDraft(value);
+    appendToDraft(value, { collapseMobile: true });
     remember(value);
     showToast('草稿に追加しました');
   });
