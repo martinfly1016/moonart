@@ -135,6 +135,13 @@
     const body = document.createElement('div');
     body.className = 'composer-body';
     while (composer.firstChild) body.appendChild(composer.firstChild);
+    const buttonRow = copyDraft.closest('.button-row');
+    if (buttonRow) {
+      const editor = document.createElement('div');
+      editor.className = 'draft-editor';
+      body.insertBefore(editor, draft);
+      editor.append(draft, draftMeta, buttonRow);
+    }
 
     const bar = document.createElement('div');
     bar.className = 'composer-sheet-bar';
