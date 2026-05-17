@@ -12,8 +12,11 @@ dist
 dist-ssr
 reports/ga/
 reports/gsc/
+reports/daily/
+reports/daily-test/
 reports/mobile-audit/
 reports/site-metrics/
+.secret
 .secrets/
 *.local
 
@@ -27,3 +30,4 @@ reports/site-metrics/
 *.njsproj
 *.sln
 *.sw?
+.vercel

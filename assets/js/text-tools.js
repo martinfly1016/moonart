@@ -18,6 +18,9 @@
   const recentLimit = Number(data.recentLimit || 12);
   const configuredCategory = document.body.dataset.defaultCategory;
   const pageSize = Number(data.pageSize || 48);
+  const draftMaxLength = Number(data.draftMaxLength || 0);
+  let quickFilterWrap;
+  let draftMeta;
   let currentPage = 1;
   let activeCategory = data.categories.some((category) => category.id === configuredCategory)
     ? configuredCategory
@@ -25,6 +28,7 @@
   pagination.className = 'pagination';
   pagination.setAttribute('data-pagination', '');
   grid.after(pagination);
+  if (draftMaxLength && draft) draft.maxLength = draftMaxLength;
 
   function normalize(value) {
     return String(value || '').toLowerCase().trim();
@@ -50,6 +54,15 @@
     showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 1400);
   }
 
+  function trackToolEvent(name, params = {}) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', name, {
+      tool_slug: data.slug,
+      page_path: window.location.pathname,
+      ...params
+    });
+  }
+
   function flashCopyButton(button) {
     if (!button || button.disabled) return;
     const original = button.dataset.originalText || button.textContent;
@@ -71,6 +84,10 @@
     }
     copyText(text);
     remember(text);
+    trackToolEvent('tool_copy', {
+      draft_length: text.length,
+      source: button?.classList.contains('sheet-copy-btn') ? 'mobile_sheet' : 'composer'
+    });
     flashCopyButton(button);
   }
 
@@ -79,8 +96,12 @@
   }
 
   function updateComposerState() {
-    if (!composerSheetCount) return;
     const count = draftCount();
+    if (draftMeta) {
+      draftMeta.textContent = draftMaxLength ? `${count}/${draftMaxLength}文字` : `${count}文字`;
+      draftMeta.classList.toggle('is-full', Boolean(draftMaxLength && count >= draftMaxLength));
+    }
+    if (!composerSheetCount) return;
     composerSheetCount.textContent = count ? `${count}文字` : '空';
     composerSheetCount.classList.toggle('has-content', count > 0);
     composerSheetCopy.disabled = count === 0;
@@ -105,6 +126,11 @@
   function setupMobileComposer() {
     if (!draft || !copyDraft || !composer) return;
     document.body.classList.add('has-mobile-composer');
+    if (!draftMeta) {
+      draftMeta = document.createElement('div');
+      draftMeta.className = 'draft-meta';
+      draft.after(draftMeta);
+    }
 
     const body = document.createElement('div');
     body.className = 'composer-body';
@@ -164,11 +190,29 @@
 
   function appendToDraft(text, options = {}) {
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
-    draft.value = `${draft.value}${spacer}${text}`.trimStart();
-    draft.dispatchEvent(new Event('input'));
-    if (mobileQuery.matches && options.collapseMobile) {
-      setComposerOpen(false);
+    const nextValue = `${draft.value}${spacer}${text}`.trimStart();
+    if (draftMaxLength && nextValue.length > draftMaxLength) {
+      showToast(`${draftMaxLength}文字まで追加できます`);
+      return;
     }
+    draft.value = nextValue;
+    draft.dispatchEvent(new Event('input'));
+    trackToolEvent('draft_add', {
+      item_label: options.label || '',
+      item_category: options.category || activeCategory,
+      item_length: text.length,
+      source: options.source || 'grid'
+    });
+  }
+
+  function renderQuickFilters() {
+    if (!data.quickFilters?.length || !searchInput) return;
+    quickFilterWrap = document.createElement('div');
+    quickFilterWrap.className = 'quick-filter-row';
+    quickFilterWrap.innerHTML = data.quickFilters.map((item) => `
+      <button class="quick-filter" type="button" data-quick-query="${item.query}">${item.label}</button>
+    `).join('');
+    searchInput.closest('.search-row')?.after(quickFilterWrap);
   }
 
   function renderTabs() {
@@ -181,7 +225,7 @@
   function itemMatches(item, query) {
     if (!query) return true;
     const haystack = [item.value, item.label, ...(item.tags || [])].map(normalize).join(' ');
-    return haystack.includes(query);
+    return query.split(/\s+/).every((token) => haystack.includes(token));
   }
 
   function categoryMatches(item) {
@@ -256,6 +300,9 @@
     currentPage = 1;
     renderTabs();
     renderGrid();
+    trackToolEvent('category_select', {
+      category: activeCategory
+    });
   });
 
   pagination.addEventListener('click', (event) => {
@@ -273,7 +320,11 @@
     const button = event.target.closest('[data-copy]');
     if (!button) return;
     const value = decodeURIComponent(button.dataset.copy);
-    appendToDraft(value, { collapseMobile: true });
+    appendToDraft(value, {
+      label: button.dataset.label || '',
+      category: activeCategory,
+      source: 'grid'
+    });
     remember(value);
     showToast('草稿に追加しました');
   });
@@ -283,17 +334,31 @@
     if (clearRecent) {
       setRecent([]);
       renderRecent();
+      trackToolEvent('draft_clear_history');
       showToast('履歴を消去しました');
       return;
     }
     const button = event.target.closest('[data-recent-copy]');
     if (!button) return;
-    appendToDraft(decodeURIComponent(button.dataset.recentCopy));
+    appendToDraft(decodeURIComponent(button.dataset.recentCopy), {
+      source: 'recent',
+      category: activeCategory
+    });
   });
 
   searchInput.addEventListener('input', () => {
     currentPage = 1;
     renderGrid();
+    window.clearTimeout(searchInput.trackTimer);
+    searchInput.trackTimer = window.setTimeout(() => {
+      const query = searchInput.value.trim();
+      if (query) {
+        trackToolEvent('tool_search', {
+          query_length: query.length,
+          category: activeCategory
+        });
+      }
+    }, 800);
   });
 
   clearSearch.addEventListener('click', () => {
@@ -311,6 +376,7 @@
     draft.value = '';
     draft.focus();
     updateComposerState();
+    trackToolEvent('draft_clear');
   });
 
   draft.addEventListener('input', updateComposerState);
@@ -325,6 +391,18 @@
   }, { passive: false });
 
   setupMobileComposer();
+  renderQuickFilters();
+  quickFilterWrap?.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-quick-query]');
+    if (!button) return;
+    searchInput.value = button.dataset.quickQuery;
+    currentPage = 1;
+    renderGrid();
+    trackToolEvent('quick_filter_select', {
+      query_length: searchInput.value.length,
+      category: activeCategory
+    });
+  });
   renderTabs();
   renderGrid();
   renderRecent();

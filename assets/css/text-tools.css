@@ -183,7 +183,6 @@ a {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
-  border-bottom: 1px solid var(--line);
 }
 
 .search-input,
@@ -210,6 +209,38 @@ a {
   color: var(--muted);
   font-weight: 700;
   cursor: pointer;
+}
+
+.quick-filter-row {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px 14px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  scrollbar-width: none;
+}
+
+.quick-filter-row::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-filter {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.quick-filter:active {
+  transform: scale(0.98);
 }
 
 .item-grid {
@@ -317,6 +348,18 @@ a {
   resize: vertical;
   padding: 12px;
   line-height: 1.7;
+}
+
+.draft-meta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.draft-meta.is-full {
+  color: var(--accent);
 }
 
 .button-row {
@@ -474,6 +517,24 @@ a {
   background: var(--surface-soft);
 }
 
+.seo-callout {
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  background: #eef2ff;
+}
+
+.seo-callout strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--primary-dark);
+}
+
+.seo-callout p {
+  margin: 0;
+}
+
 .seo-section p,
 .seo-section li {
   color: #3f4a5f;
@@ -618,14 +679,26 @@ a {
   .search-row {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
+    padding: 12px;
   }
 
   .clear-search {
     padding: 0 12px;
   }
 
+  .quick-filter-row {
+    padding: 0 12px 12px;
+    gap: 7px;
+  }
+
+  .quick-filter {
+    min-height: 38px;
+    padding: 0 13px;
+  }
+
   .item-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 12px;
   }
 
   .copy-value {
@@ -748,6 +821,7 @@ a {
   .draft-input {
     min-height: 136px;
     max-height: 34vh;
+    font-size: 16px;
   }
 
   .hint {
@@ -773,5 +847,20 @@ a {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .seo-section,
+  .related-tools {
+    margin-top: 16px;
+    padding: 18px;
+  }
+
+  .seo-section h2,
+  .related-tools h2 {
+    font-size: 1.24rem;
+  }
+
+  .seo-callout {
+    padding: 14px;
   }
 }

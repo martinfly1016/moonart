@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moon Emoji Text Generator | Create Moon Character Art Online - MojiMoon</title>
-<meta name="description" content="Create moon emoji text art from words or images with MojiMoon. Free online moon character generator for Discord, social media posts, greeting cards, bios, and chat messages.">
+<title>Moon Emoji Text Generator | Moon Text Copy and Paste - MojiMoon</title>
+<meta name="description" content="Create moon emoji text, moon text art, and moon emoji copy-and-paste designs from words or images. Free moon character generator for Discord, Instagram bios, TikTok captions, cards, and chat.">
 <meta name="keywords" content="moon emoji text generator,moon character generator,moon text art,moon emoji art,text to emoji art,emoji ASCII art,Discord text art">
 <meta name="author" content="Moon Character Generator">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Moon Emoji Text Generator - MojiMoon">
-<meta property="og:description" content="Turn text and images into moon emoji character art for social media, Discord, LINE, cards, and chat messages.">
+<meta property="og:title" content="Moon Emoji Text Generator | Moon Text Copy and Paste">
+<meta property="og:description" content="Turn text and images into moon emoji text art for Discord, Instagram bios, TikTok captions, cards, and chat messages.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mojimoon.com/index_en.html">
 <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@mojimoon">
-<meta name="twitter:title" content="Moon Emoji Text Generator - MojiMoon">
+<meta name="twitter:title" content="Moon Emoji Text Generator | Moon Text Copy and Paste">
 <meta name="twitter:description" content="Create moon emoji text art from words or images online.">
 <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -238,11 +238,16 @@ min-width: 0;
 }
 .height-slider {
 flex: 1;
-height: 6px;
-background: rgba(255, 255, 255, 0.2);
+height: 36px;
+background: transparent;
 border-radius: 3px;
 outline: none;
 -webkit-appearance: none;
+}
+.height-slider::-webkit-slider-runnable-track {
+height: 6px;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 3px;
 }
 .height-slider::-webkit-slider-thumb {
 -webkit-appearance: none;
@@ -338,6 +343,8 @@ display: flex;
 align-items: center;
 gap: 8px;
 cursor: pointer;
+position: relative;
+min-height: 40px;
 padding: 8px 10px;
 border-radius: 999px;
 background: rgba(255, 255, 255, 0.08);
@@ -353,9 +360,28 @@ border-color: rgba(255, 255, 255, 0.28);
 box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .radio-option input[type="radio"] {
-width: 18px;
-height: 18px;
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+margin: 0;
+opacity: 0;
 accent-color: #8b5cf6;
+}
+.radio-label::before {
+content: "";
+display: inline-block;
+width: 12px;
+height: 12px;
+margin-right: 6px;
+border-radius: 999px;
+background: #fff;
+vertical-align: -1px;
+box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+}
+.radio-option:has(input:checked) .radio-label::before {
+background: #8b5cf6;
+box-shadow: inset 0 0 0 3px #fff;
 }
 .radio-option input[type="checkbox"] {
 width: 18px;
@@ -374,11 +400,32 @@ align-items: center;
 gap: 8px;
 cursor: pointer;
 font-weight: 700;
+position: relative;
+min-height: 40px;
 }
 .toggle-option input {
-width: 18px;
-height: 18px;
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+margin: 0;
+opacity: 0;
 accent-color: #8b5cf6;
+}
+.toggle-option span::before {
+content: "";
+display: inline-block;
+width: 16px;
+height: 16px;
+margin-right: 8px;
+border-radius: 4px;
+background: #fff;
+vertical-align: -3px;
+box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+}
+.toggle-option input:checked + span::before {
+background: #8b5cf6;
+box-shadow: inset 0 0 0 3px #fff;
 }
 .generate-btn {
 width: 100%;
@@ -635,7 +682,8 @@ border: 1px solid rgba(255, 255, 255, 0.24);
 background: rgba(255, 255, 255, 0.12);
 color: white;
 border-radius: 999px;
-padding: 7px 12px;
+min-height: 40px;
+padding: 8px 13px;
 font-size: 13px;
 font-weight: 600;
 cursor: pointer;
@@ -920,6 +968,7 @@ display: none;
 <section class="container seo-content" aria-label="About the moon emoji text generator">
 <h2>What is a moon emoji text generator?</h2>
 <p>MojiMoon is a free moon emoji text generator that converts normal text into character art made from moon phase emojis. Instead of using plain ASCII symbols, it builds each letter with moons such as 🌑, 🌒, 🌓, 🌔, and 🌕 so the result feels soft, visual, and easy to paste into modern chat apps.</p>
+<p>If you are searching for moon emoji text, moon text copy and paste, or a moon text art generator, this page is built for that exact workflow: type a short word, preview the moon character art, adjust the layout, and copy the finished emoji text without installing an app.</p>
 
 <h2>How to create moon emoji text</h2>
 <ol>
@@ -945,8 +994,26 @@ display: none;
 </div>
 </div>
 
+<h2>Moon text copy and paste examples</h2>
+<p>Short phrases usually produce the cleanest moon emoji text. Try names, usernames, short greetings, or profile words before moving to longer messages.</p>
+<div class="seo-grid">
+<div class="seo-card">
+<h3>Discord and chat</h3>
+<p>Use phrases like MOON, GG, LOVE, HELLO, or GOOD NIGHT for server messages, welcome notes, and playful chat replies.</p>
+</div>
+<div class="seo-card">
+<h3>Instagram and TikTok bios</h3>
+<p>Create compact moon text for names, aesthetic bios, creator handles, and short profile lines that need a visual accent.</p>
+</div>
+<div class="seo-card">
+<h3>Greeting cards</h3>
+<p>Make moon emoji art for birthday wishes, good-night notes, seasonal cards, and romantic messages.</p>
+</div>
+</div>
+
 <h2>Text and image to moon emoji art</h2>
 <p>The text mode draws each character on a canvas, samples the shape, and maps the result to moon phase emojis. The image mode reads the brightness of an uploaded picture and turns it into a moon emoji pattern. For the cleanest result, use short words, bold shapes, and simple high-contrast images.</p>
+<p>For mobile users, keep the generated art narrow enough to fit the app where you plan to paste it. If the design wraps awkwardly, reduce the height, switch between vertical and horizontal direction, or use a shorter phrase.</p>
 
 <h2>Moon emoji text FAQ</h2>
 <h3>What is moon character art?</h3>
@@ -957,6 +1024,10 @@ display: none;
 <p>Every platform renders emoji with its own font and spacing. If the art looks too wide or tall, try reducing the height, switching direction, or adding padding before copying it again.</p>
 <h3>What phrases work best?</h3>
 <p>Short phrases such as MOON, LOVE, GOOD NIGHT, HELLO, or TO THE MOON usually look cleaner than long sentences because each character has more room to stay readable.</p>
+<h3>Can I make moon text from an image?</h3>
+<p>Yes. Use the Image Input tab to upload a simple picture, logo shape, or icon. High-contrast images with clear edges work better than detailed photos.</p>
+<h3>Is this the same as moon emoji copy and paste?</h3>
+<p>It is related, but more flexible. A normal moon emoji copy-and-paste list gives you individual moon symbols. MojiMoon turns your own text or image into a larger moon emoji art pattern that you can still copy and paste as text.</p>
 
 <h2>More MojiMoon tools and guides</h2>
 <p>Learn the full workflow in the <a href="guide_en.html">Moon Character Generator User Guide</a>, try space-themed prompts on the <a href="artemis_en.html">Artemis II moon text page</a>, visit the <a href="https://mojimoon.com/">Japanese moon character generator</a>, or explore Japanese text tools for <a href="emoji-copy/">emoji copy and paste</a>, <a href="kaomoji/">kaomoji copy and paste</a>, <a href="special-characters/">special characters</a>, and <a href="emoji-combinations/">emoji combinations</a>.</p>
@@ -1913,10 +1984,23 @@ verticalDensityLevels: ['中等密度', '次高密度']
 };
 const generator = new SimpleMoonGenerator();
 const horizontalEnhancer = new HorizontalEnhancer();
+function trackMoonToolEvent(name, params = {}) {
+if (typeof window.gtag !== 'function') return;
+window.gtag('event', name, {
+tool_slug: 'moon-emoji-text',
+page_path: window.location.pathname,
+input_mode: currentInputMode,
+...params
+});
+}
 function copyToClipboard() {
 const moonArt = document.getElementById('moonArt').textContent;
 if (!moonArt || moonArt.includes('Generated result will appear here')) return;
 navigator.clipboard.writeText(moonArt).then(() => {
+trackMoonToolEvent('tool_copy', {
+draft_length: moonArt.length,
+source: 'moon_generator'
+});
 const copyBtn = document.getElementById('copyBtn');
 const btnText = copyBtn.querySelector('.btn-text');
 const originalText = btnText.textContent;
@@ -1931,6 +2015,10 @@ copyBtn.classList.remove('success');
 function downloadText() {
 const moonArt = document.getElementById('moonArt').textContent;
 if (!moonArt || moonArt.includes('Generated result will appear here')) return;
+trackMoonToolEvent('tool_download', {
+format: 'text',
+draft_length: moonArt.length
+});
 const randomId = Math.random().toString(36).substring(2, 8);
 const filename = `moon-art-${randomId}-${Date.now()}.txt`;
 const blob = new Blob([moonArt], { type: 'text/plain;charset=utf-8' });
@@ -1944,6 +2032,10 @@ URL.revokeObjectURL(url);
 function downloadImage() {
 const moonArt = document.getElementById('moonArt').textContent;
 if (!moonArt || moonArt.includes('Generated result will appear here')) return;
+trackMoonToolEvent('tool_download', {
+format: 'image',
+draft_length: moonArt.length
+});
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 const lines = moonArt.split('\n');
@@ -2101,6 +2193,9 @@ document.getElementById('enableDenoising').addEventListener('change', updatePrev
 document.querySelectorAll('.sample-chip').forEach(button => {
 button.addEventListener('click', () => {
 const sample = button.getAttribute('data-sample') || '';
+trackMoonToolEvent('sample_select', {
+sample
+});
 const textInput = document.getElementById('textInput');
 textInput.value = sample;
 currentInputMode = 'text';
@@ -2134,6 +2229,9 @@ const tabContents = document.querySelectorAll('.tab-content');
 tabButtons.forEach(button => {
 button.addEventListener('click', () => {
 const tabId = button.getAttribute('data-tab');
+trackMoonToolEvent('tool_mode_select', {
+mode: tabId
+});
 tabButtons.forEach(btn => btn.classList.remove('active'));
 tabContents.forEach(content => content.classList.remove('active'));
 button.classList.add('active');

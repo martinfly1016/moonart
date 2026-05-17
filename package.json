@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/vercel-build.mjs",
     "lint": "eslint .",
     "gsc": "node scripts/gsc-report.mjs",
     "ga": "node scripts/ga-report.mjs",
+    "daily:report": "node scripts/daily-report.mjs",
     "site:metrics": "node scripts/site-metrics.mjs",
     "mobile:audit": "node scripts/mobile-audit.mjs",
     "preview": "vite preview"
