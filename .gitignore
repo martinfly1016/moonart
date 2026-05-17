@@ -10,7 +10,11 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+reports/ga/
+reports/gsc/
 reports/mobile-audit/
+reports/site-metrics/
+.secrets/
 *.local
 
 # Editor directories and files
