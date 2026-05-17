@@ -1,5 +1,16 @@
 window.MojiMoonToolData = {
   slug: 'kaomoji',
+  draftMaxLength: 220,
+  quickFilters: [
+    { label: '可愛い', query: '可愛い' },
+    { label: '量産型', query: '量産型' },
+    { label: '猫', query: 'cat' },
+    { label: 'うさぎ', query: 'rabbit' },
+    { label: '泣く', query: '悲しい 可愛い' },
+    { label: '恋愛', query: '恋愛' },
+    { label: '照れ', query: '照れ' },
+    { label: 'おやすみ', query: 'おやすみ' }
+  ],
   categories: [
     { id: 'all', label: 'すべて' },
     { id: 'kawaii', label: '可愛い' },

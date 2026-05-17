@@ -1,5 +1,16 @@
 window.MojiMoonToolData = {
   slug: 'special-characters',
+  draftMaxLength: 200,
+  quickFilters: [
+    { label: 'ハート', query: 'ハート' },
+    { label: '可愛い', query: '可愛い' },
+    { label: '韓国風', query: '韓国' },
+    { label: 'キラキラ', query: 'キラキラ' },
+    { label: '星', query: '星' },
+    { label: 'ライン', query: 'ライン' },
+    { label: '括弧', query: '括弧' },
+    { label: '矢印', query: '矢印' }
+  ],
   categories: [
     { id: 'all', label: 'すべて' },
     { id: 'heart', label: 'ハート' },

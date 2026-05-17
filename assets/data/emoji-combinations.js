@@ -1,5 +1,16 @@
 window.MojiMoonToolData = {
   slug: 'emoji-combinations',
+  draftMaxLength: 220,
+  quickFilters: [
+    { label: '可愛い', query: '可愛い' },
+    { label: '白・透明感', query: '白 透明感' },
+    { label: 'ピンク', query: 'ピンク' },
+    { label: 'ハート', query: 'ハート' },
+    { label: 'プロフィール', query: 'プロフィール' },
+    { label: 'インスタ', query: 'インスタ' },
+    { label: '誕生日', query: '誕生日' },
+    { label: '推し活', query: '推し活' }
+  ],
   categories: [
     { id: 'all', label: 'すべて' },
     { id: 'kawaii', label: '可愛い' },
