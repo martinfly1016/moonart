@@ -13,6 +13,7 @@
   const downloadButton = root.querySelector('[data-download-png]');
   const resetButton = root.querySelector('[data-reset-maker]');
   const fileStatus = root.querySelector('[data-file-status]');
+  const presetButtons = Array.from(root.querySelectorAll('[data-preset]'));
   const toast = document.querySelector('[data-toast]');
   const ctx = canvas.getContext('2d');
   const defaultState = {
@@ -125,7 +126,15 @@
     });
 
     charCount.textContent = String(textInput.value.length);
+    updatePresetState();
     updateFileStatus();
+  }
+
+  function updatePresetState() {
+    const current = `${textColor.value.toLowerCase()},${bgColor.value.toLowerCase()}`;
+    presetButtons.forEach((button) => {
+      button.classList.toggle('is-active', button.dataset.preset.toLowerCase() === current && !transparentBg.checked);
+    });
   }
 
   function updateFileStatus() {

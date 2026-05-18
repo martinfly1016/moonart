@@ -99,11 +99,10 @@
 
 .template-row button,
 .preset-row button {
+  position: relative;
   min-height: 38px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: var(--surface-soft);
-  color: var(--primary-dark);
   padding: 0 13px;
   font: inherit;
   font-size: 13px;
@@ -111,10 +110,47 @@
   cursor: pointer;
 }
 
-.template-row button:hover,
-.preset-row button:hover {
+.template-row button {
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+}
+
+.preset-row button {
+  min-width: 82px;
+  background: var(--preset-bg, var(--surface-soft));
+  color: var(--preset-fg, var(--primary-dark));
+  border-color: color-mix(in srgb, var(--preset-bg, #e0e7ff) 82%, #111827);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.26);
+}
+
+.template-row button:hover {
   border-color: #a5b4fc;
   background: #fff;
+}
+
+.preset-row button:hover {
+  background: var(--preset-bg, #fff);
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
+
+.preset-row button.is-active {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.38),
+    0 0 0 3px color-mix(in srgb, var(--preset-bg, #4f46e5) 24%, transparent);
+}
+
+.preset-row button.is-active::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translateY(-50%);
+  opacity: 0.82;
 }
 
 .control-grid,

@@ -29,7 +29,7 @@
   </script>
   <script src="/assets/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/assets/css/text-tools.css">
-  <link rel="stylesheet" href="/assets/css/slack-emoji-generator.css?v=20260518-corners">
+  <link rel="stylesheet" href="/assets/css/slack-emoji-generator.css?v=20260518-presets">
 </head>
 <body class="slack-emoji-body">
   <div class="tool-shell slack-emoji-page">
@@ -106,11 +106,11 @@
           </div>
 
           <div class="preset-row" aria-label="配色プリセット">
-            <button type="button" data-preset="#ffffff,#4f46e5">Slack</button>
-            <button type="button" data-preset="#ffffff,#ec4899">ピンク</button>
-            <button type="button" data-preset="#172033,#fef3c7">クリーム</button>
-            <button type="button" data-preset="#ffffff,#059669">承認</button>
-            <button type="button" data-preset="#172033,#e0f2fe">水色</button>
+            <button type="button" data-preset="#ffffff,#4f46e5" style="--preset-fg: #ffffff; --preset-bg: #4f46e5;">Slack</button>
+            <button type="button" data-preset="#ffffff,#ec4899" style="--preset-fg: #ffffff; --preset-bg: #ec4899;">ピンク</button>
+            <button type="button" data-preset="#172033,#fef3c7" style="--preset-fg: #172033; --preset-bg: #fef3c7;">クリーム</button>
+            <button type="button" data-preset="#ffffff,#059669" style="--preset-fg: #ffffff; --preset-bg: #059669;">承認</button>
+            <button type="button" data-preset="#172033,#e0f2fe" style="--preset-fg: #172033; --preset-bg: #e0f2fe;">水色</button>
           </div>
 
           <label class="toggle-row">
@@ -188,6 +188,6 @@
     </footer>
   </div>
   <div class="toast" data-toast></div>
-  <script src="/assets/js/slack-emoji-generator.js?v=20260518-no-stroke"></script>
+  <script src="/assets/js/slack-emoji-generator.js?v=20260518-presets"></script>
 </body>
 </html>
