@@ -786,8 +786,9 @@ grid-template-columns: 1fr;
 }
 }
 </style>
+<link rel="stylesheet" href="/assets/css/moon-tool-unified.css">
 </head>
-<body>
+<body class="moon-tool-page">
 <button id="favoriteBtn" class="favorite-btn" style="
 position: fixed;
 top: 20px;
@@ -808,18 +809,38 @@ display: none;
 </button>
 <div class="container">
 <header class="header">
-<h1>🌙 Moon Emoji Text Generator</h1>
-<p class="hero-copy">Turn words or images into moon emoji art you can copy into Discord, social media posts, bios, greeting cards, and chat messages.</p>
-<a href="artemis_en.html" class="artemis-link">🚀 Artemis II Special</a>
-<a href="guide_en.html" class="guide-link">📖 User Guide</a>
-<a href="https://mojimoon.com/" class="lang-switcher">🌏 日本語</a>
+<div class="site-header-inner">
+<div class="moon-brand-group">
+<a class="brand" href="/index_en.html"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+<a href="/" class="header-lang-switch">日本語</a>
+</div>
+<nav class="site-nav" aria-label="MojiMoon text tools">
+<a href="/index_en.html" aria-current="page">Moon Text</a>
+<a href="/emoji-copy/">Emoji Copy</a>
+<a href="/en/kaomoji/">Kaomoji</a>
+<a href="/special-characters/">Special Characters</a>
+<a href="/emoji-combinations/">Emoji Combos</a>
+<a href="/slack-emoji-generator/">Slack Emoji</a>
+</nav>
+</div>
+</header>
+<section class="moon-hero">
+<div class="moon-hero-inner">
+<p class="eyebrow">Moon Emoji Text Generator</p>
+<h1>Turn words or images into moon emoji text art.</h1>
+<p class="hero-copy">Create moon emoji text you can copy into Discord, social media posts, bios, greeting cards, and chat messages. Adjust height, font, direction, spacing, and padding without changing the underlying generator.</p>
+<div class="moon-hero-actions">
+<a href="/artemis_en.html" class="artemis-link">🚀 Artemis II Special</a>
+<a href="/guide_en.html" class="guide-link">📖 User Guide</a>
+</div>
 <div class="sample-strip" aria-label="Example moon emoji text ideas">
 <button type="button" class="sample-chip" data-sample="MOON">MOON</button>
 <button type="button" class="sample-chip" data-sample="GOOD NIGHT">GOOD NIGHT</button>
 <button type="button" class="sample-chip" data-sample="LOVE">LOVE</button>
 <button type="button" class="sample-chip" data-sample="TO THE MOON">TO THE MOON</button>
 </div>
-</header>
+</div>
+</section>
 <div class="control-panel">
 <div class="input-tabs">
 <button class="tab-button active" data-tab="text">Text Input</button>

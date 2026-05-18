@@ -60,6 +60,13 @@ a {
   letter-spacing: 0;
 }
 
+.brand-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
 .brand-mark {
   width: 34px;
   height: 34px;
@@ -88,6 +95,25 @@ a {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.header-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.header-lang-switch:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
