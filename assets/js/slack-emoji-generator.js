@@ -55,8 +55,9 @@
   }
 
   function getFontWeight(fontKey) {
-    if (fontKey === 'mincho') return '800';
-    return '900';
+    if (fontKey === 'bold') return '900';
+    if (fontKey === 'mincho') return '700';
+    return '800';
   }
 
   function normalizeLines(value) {
