@@ -239,14 +239,16 @@ body.moon-tool-page {
 }
 
 .moon-tool-page .action-buttons {
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
 .moon-tool-page .action-btn {
-  flex: 1 1 180px;
+  flex: none;
   min-width: 0;
   border-radius: 8px;
+  white-space: normal;
 }
 
 .moon-tool-page .seo-content h2,
@@ -323,6 +325,11 @@ body.moon-tool-page {
   }
 
   .moon-tool-page .action-btn {
-    flex-basis: 100%;
+    flex: none;
+    min-height: 44px;
+    padding: 0 8px;
+    font-size: 12px;
+    white-space: normal;
   }
+
 }
