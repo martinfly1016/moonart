@@ -1,6 +1,31 @@
 (function () {
   const data = window.MojiMoonToolData;
   if (!data) return;
+  const ui = {
+    copied: 'コピー済み',
+    emptyDraft: 'コピーする内容がありません',
+    openDraft: 'コピー草稿を開く',
+    closeDraft: 'コピー草稿を閉じる',
+    draftTitle: 'コピー草稿',
+    emptyCount: '空',
+    open: '開く',
+    close: '閉じる',
+    copy: 'コピー',
+    copiedToast: 'コピーしました',
+    draftLimit: (limit) => `${limit}文字まで追加できます`,
+    noResults: '該当するアイテムがありません。別の言葉で検索してください。',
+    fallbackLabel: 'クリックで追加',
+    previous: '前へ',
+    next: '次へ',
+    pageCount: (total, start, end) => `${total}件中 ${start}-${end}件`,
+    recentTitle: '最近使ったもの',
+    clearRecent: '履歴を消去',
+    clearRecentToast: '履歴を消去しました',
+    addedToast: '草稿に追加しました',
+    charCount: (count) => `${count}文字`,
+    charLimitCount: (count, limit) => `${count}/${limit}文字`,
+    ...(data.ui || {})
+  };
 
   const tabList = document.querySelector('[data-tabs]');
   const grid = document.querySelector('[data-grid]');
@@ -67,7 +92,7 @@
     if (!button || button.disabled) return;
     const original = button.dataset.originalText || button.textContent;
     button.dataset.originalText = original;
-    button.textContent = 'コピー済み';
+    button.textContent = ui.copied;
     button.classList.add('copied');
     window.clearTimeout(button.copyTimer);
     button.copyTimer = window.setTimeout(() => {
@@ -79,7 +104,7 @@
   function copyDraftText(button) {
     const text = draft.value.trim();
     if (!text) {
-      showToast('コピーする内容がありません');
+      showToast(ui.emptyDraft);
       return;
     }
     copyText(text);
@@ -98,11 +123,11 @@
   function updateComposerState() {
     const count = draftCount();
     if (draftMeta) {
-      draftMeta.textContent = draftMaxLength ? `${count}/${draftMaxLength}文字` : `${count}文字`;
+      draftMeta.textContent = draftMaxLength ? ui.charLimitCount(count, draftMaxLength) : ui.charCount(count);
       draftMeta.classList.toggle('is-full', Boolean(draftMaxLength && count >= draftMaxLength));
     }
     if (!composerSheetCount) return;
-    composerSheetCount.textContent = count ? `${count}文字` : '空';
+    composerSheetCount.textContent = count ? ui.charCount(count) : ui.emptyCount;
     composerSheetCount.classList.toggle('has-content', count > 0);
     composerSheetCopy.disabled = count === 0;
   }
@@ -116,8 +141,8 @@
     document.body.classList.toggle('composer-open', open);
     if (!composerSheetToggle) return;
     composerSheetToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    composerSheetToggle.setAttribute('aria-label', open ? 'コピー草稿を閉じる' : 'コピー草稿を開く');
-    if (composerSheetAction) composerSheetAction.textContent = open ? '閉じる' : '開く';
+    composerSheetToggle.setAttribute('aria-label', open ? ui.closeDraft : ui.openDraft);
+    if (composerSheetAction) composerSheetAction.textContent = open ? ui.close : ui.open;
     if (composerSheetIcon) composerSheetIcon.textContent = open ? '⌄' : '⌃';
   }
 
@@ -146,13 +171,13 @@
     const bar = document.createElement('div');
     bar.className = 'composer-sheet-bar';
     bar.innerHTML = `
-      <button class="composer-sheet-toggle" type="button" aria-expanded="false" aria-label="コピー草稿を開く">
+      <button class="composer-sheet-toggle" type="button" aria-expanded="false" aria-label="${ui.openDraft}">
         <span class="sheet-icon" aria-hidden="true">⌃</span>
-        <span class="sheet-title">コピー草稿</span>
-        <span class="sheet-count">空</span>
-        <span class="sheet-action">開く</span>
+        <span class="sheet-title">${ui.draftTitle}</span>
+        <span class="sheet-count">${ui.emptyCount}</span>
+        <span class="sheet-action">${ui.open}</span>
       </button>
-      <button class="sheet-copy-btn" type="button" disabled>コピー</button>
+      <button class="sheet-copy-btn" type="button" disabled>${ui.copy}</button>
     `;
 
     composer.append(bar, body);
@@ -178,13 +203,13 @@
     if (!text) return;
     try {
       await navigator.clipboard.writeText(text);
-      showToast('コピーしました');
+      showToast(ui.copiedToast);
     } catch (error) {
       draft.value = text;
       draft.focus();
       draft.select();
       document.execCommand('copy');
-      showToast('コピーしました');
+      showToast(ui.copiedToast);
     }
   }
 
@@ -199,7 +224,7 @@
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
     const nextValue = `${draft.value}${spacer}${text}`.trimStart();
     if (draftMaxLength && nextValue.length > draftMaxLength) {
-      showToast(`${draftMaxLength}文字まで追加できます`);
+      showToast(ui.draftLimit(draftMaxLength));
       return;
     }
     draft.value = nextValue;
@@ -255,17 +280,17 @@
       pages.push(`<button class="page-btn${page === currentPage ? ' active' : ''}" type="button" data-page="${page}"${page === currentPage ? ' aria-current="page"' : ''}>${page}</button>`);
     }
     pagination.innerHTML = `
-      <button class="page-btn" type="button" data-page-prev ${currentPage === 1 ? 'disabled' : ''}>前へ</button>
+      <button class="page-btn" type="button" data-page-prev ${currentPage === 1 ? 'disabled' : ''}>${ui.previous}</button>
       ${pages.join('')}
-      <button class="page-btn" type="button" data-page-next ${currentPage === totalPages ? 'disabled' : ''}>次へ</button>
-      <span class="page-count">${totalItems}件中 ${(currentPage - 1) * pageSize + 1}-${Math.min(currentPage * pageSize, totalItems)}件</span>
+      <button class="page-btn" type="button" data-page-next ${currentPage === totalPages ? 'disabled' : ''}>${ui.next}</button>
+      <span class="page-count">${ui.pageCount(totalItems, (currentPage - 1) * pageSize + 1, Math.min(currentPage * pageSize, totalItems))}</span>
     `;
   }
 
   function renderGrid() {
     const items = filteredItems();
     if (!items.length) {
-      grid.innerHTML = '<div class="no-results">該当するアイテムがありません。別の言葉で検索してください。</div>';
+      grid.innerHTML = `<div class="no-results">${ui.noResults}</div>`;
       renderPagination(0);
       return;
     }
@@ -275,7 +300,7 @@
     grid.innerHTML = pageItems.map((item) => `
       <button class="copy-card" type="button" data-copy="${encodeURIComponent(item.value)}" data-label="${item.label || ''}">
         <span class="copy-value">${item.value}</span>
-        <span class="copy-label">${item.label || 'クリックで追加'}</span>
+        <span class="copy-label">${item.label || ui.fallbackLabel}</span>
       </button>
     `).join('');
     renderPagination(items.length);
@@ -289,8 +314,8 @@
     }
     recentList.innerHTML = `
       <div class="recent-list-head">
-        <span>最近使ったもの</span>
-        <button class="recent-clear" type="button" data-clear-recent>履歴を消去</button>
+        <span>${ui.recentTitle}</span>
+        <button class="recent-clear" type="button" data-clear-recent>${ui.clearRecent}</button>
       </div>
       <div class="recent-chip-grid">
         ${recent.map((item) => `
@@ -333,7 +358,7 @@
       source: 'grid'
     });
     remember(value);
-    showToast('草稿に追加しました');
+    showToast(ui.addedToast);
   });
 
   recentList.addEventListener('click', (event) => {
@@ -342,7 +367,7 @@
       setRecent([]);
       renderRecent();
       trackToolEvent('draft_clear_history');
-      showToast('履歴を消去しました');
+      showToast(ui.clearRecentToast);
       return;
     }
     const button = event.target.closest('[data-recent-copy]');

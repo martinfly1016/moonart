@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mojimoon.com/</loc>
     <lastmod>2025-09-09</lastmod>
@@ -74,7 +75,19 @@
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/kaomoji/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/kaomoji/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/kaomoji/"/>
     <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/en/kaomoji/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/kaomoji/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/kaomoji/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/kaomoji/"/>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
