@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slack Emoji Generator - Make Custom Text Emoji PNGs | MojiMoon</title>
+  <meta name="description" content="Create custom Slack emoji and text reaction stamps for free. Type a word, choose colors and fonts, preview the square PNG, then download it for Slack.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/en/slack-emoji-generator/">
+  <link rel="alternate" hreflang="ja" href="https://mojimoon.com/slack-emoji-generator/">
+  <link rel="alternate" hreflang="en" href="https://mojimoon.com/en/slack-emoji-generator/">
+  <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/slack-emoji-generator/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="Slack Emoji Generator | MojiMoon">
+  <meta property="og:description" content="Make custom Slack text emoji as PNG files with colors, fonts, templates, and transparent backgrounds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/en/slack-emoji-generator/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Slack Emoji Generator",
+    "url": "https://mojimoon.com/en/slack-emoji-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "description": "A free tool for creating custom Slack emoji and text reaction PNGs."
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/slack-emoji-generator.css?v=20260518-presets">
+</head>
+<body class="slack-emoji-body">
+  <div class="tool-shell slack-emoji-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/index_en.html"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+          <a class="header-lang-switch" href="/slack-emoji-generator/">日本語</a>
+        </div>
+        <nav class="site-nav" aria-label="Text tools">
+          <a href="/index_en.html">Moon Text</a>
+          <a href="/en/emoji-copy/">Emoji Copy</a>
+          <a href="/en/kaomoji/">Kaomoji</a>
+          <a href="/en/special-characters/">Special Characters</a>
+          <a href="/en/emoji-combinations/">Emoji Combos</a>
+          <a href="/en/slack-emoji-generator/" aria-current="page">Slack Emoji</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero slack-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Slack Emoji Generator</p>
+        <h1>Make custom Slack emoji from text.</h1>
+        <p class="hero-copy">Create readable Slack reaction emoji, approval stamps, and status labels. Pick a template, adjust colors and fonts, preview the square PNG, then download it for your workspace.</p>
+      </div>
+    </section>
+
+    <main class="emoji-maker-wrap" aria-label="Slack emoji maker">
+      <section class="emoji-maker" data-slack-emoji-maker>
+        <div class="maker-panel maker-controls">
+          <div class="control-block">
+            <label for="emoji-text">Text</label>
+            <textarea id="emoji-text" data-emoji-text maxlength="18" rows="2" placeholder="Example: OK">OK</textarea>
+            <div class="input-help"><span data-char-count>2</span>/18 characters. Short text is easier to read in Slack.</div>
+          </div>
+
+          <div class="template-row" aria-label="Slack emoji templates">
+            <button type="button" data-template="OK">OK</button>
+            <button type="button" data-template="LGTM">LGTM</button>
+            <button type="button" data-template="YES">YES</button>
+            <button type="button" data-template="NO">NO</button>
+            <button type="button" data-template="DONE">DONE</button>
+            <button type="button" data-template="REVIEW">REVIEW</button>
+            <button type="button" data-template="THANKS">THANKS</button>
+            <button type="button" data-template="SHIP">SHIP</button>
+          </div>
+
+          <div class="control-grid">
+            <div class="control-block">
+              <label for="emoji-font">Font</label>
+              <select id="emoji-font" data-font-family>
+                <option value="system">Sans</option>
+                <option value="rounded">Rounded</option>
+                <option value="mincho">Serif</option>
+                <option value="bold">Bold</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="emoji-size">Output size</label>
+              <select id="emoji-size" data-export-size>
+                <option value="128">128 x 128</option>
+                <option value="512">512 x 512</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="color-grid">
+            <div class="control-block">
+              <label for="text-color">Text color</label>
+              <input id="text-color" type="color" value="#ffffff" data-text-color>
+            </div>
+            <div class="control-block">
+              <label for="bg-color">Background color</label>
+              <input id="bg-color" type="color" value="#4f46e5" data-bg-color>
+            </div>
+          </div>
+
+          <div class="preset-row" aria-label="Color presets">
+            <button type="button" data-preset="#ffffff,#4f46e5" style="--preset-fg: #ffffff; --preset-bg: #4f46e5;">Slack</button>
+            <button type="button" data-preset="#ffffff,#ec4899" style="--preset-fg: #ffffff; --preset-bg: #ec4899;">Pink</button>
+            <button type="button" data-preset="#172033,#fef3c7" style="--preset-fg: #172033; --preset-bg: #fef3c7;">Cream</button>
+            <button type="button" data-preset="#ffffff,#059669" style="--preset-fg: #ffffff; --preset-bg: #059669;">Approved</button>
+            <button type="button" data-preset="#172033,#e0f2fe" style="--preset-fg: #172033; --preset-bg: #e0f2fe;">Light blue</button>
+            <button type="button" data-preset="#064e3b,#a7f3d0" style="--preset-fg: #064e3b; --preset-bg: #a7f3d0;">Mint</button>
+            <button type="button" data-preset="#4c1d95,#ede9fe" style="--preset-fg: #4c1d95; --preset-bg: #ede9fe;">Lavender</button>
+            <button type="button" data-preset="#ffffff,#1d4ed8" style="--preset-fg: #ffffff; --preset-bg: #1d4ed8;">Navy</button>
+            <button type="button" data-preset="#ffffff,#f43f5e" style="--preset-fg: #ffffff; --preset-bg: #f43f5e;">Coral</button>
+          </div>
+
+          <label class="toggle-row">
+            <input type="checkbox" data-transparent-bg>
+            <span>Transparent background</span>
+          </label>
+
+          <div class="button-row maker-actions">
+            <button class="primary-btn" type="button" data-download-png>Download PNG</button>
+            <button class="secondary-btn" type="button" data-reset-maker>Reset</button>
+          </div>
+        </div>
+
+        <div class="maker-panel preview-panel">
+          <h2>Preview</h2>
+          <div class="preview-stage">
+            <canvas width="128" height="128" data-preview-canvas aria-label="Generated Slack emoji preview"></canvas>
+          </div>
+          <p class="file-status" data-file-status>PNG preview is ready.</p>
+          <p class="slack-note">Slack recommends square custom emoji images under 128KB, ideally with a transparent background. Your workspace settings may limit who can add custom emoji.</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="seo-section">
+      <h2>Create Slack reaction emoji for free</h2>
+      <p>MojiMoon's Slack Emoji Generator turns short words into square PNG images for custom Slack emoji. It works well for team reactions such as OK, LGTM, DONE, REVIEW, THANKS, SHIP, approval labels, and short status stamps.</p>
+      <div class="category-links" aria-label="Related text tools">
+        <a href="/en/emoji-copy/">Copy emoji</a>
+        <a href="/en/emoji-combinations/">Emoji combinations</a>
+        <a href="/en/special-characters/">Special characters</a>
+        <a href="/en/kaomoji/">Kaomoji</a>
+      </div>
+
+      <h2>How to make a Slack emoji</h2>
+      <ol>
+        <li>Type the text you want to turn into a custom emoji.</li>
+        <li>Choose a font, text color, background color, and transparent background setting.</li>
+        <li>Check the preview and download the PNG.</li>
+        <li>Add the image from Slack's custom emoji menu.</li>
+      </ol>
+
+      <h2>Popular Slack emoji templates</h2>
+      <div class="seo-grid">
+        <div class="seo-card"><strong>Status</strong><p>Create labels like REVIEW, WIP, DONE, HOLD, or SHIP for project updates.</p></div>
+        <div class="seo-card"><strong>Approval</strong><p>Make OK, YES, NO, LGTM, APPROVED, and BLOCKED reactions for team workflows.</p></div>
+        <div class="seo-card"><strong>Friendly replies</strong><p>Use THANKS, NICE, WOW, or GREAT to make everyday chat reactions easier to scan.</p></div>
+      </div>
+    </section>
+
+    <section class="related-tools">
+      <h2>Related tools</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/en/emoji-copy/"><strong>Emoji Copy</strong><span>Find individual emoji for messages and profiles.</span></a>
+        <a class="related-card" href="/en/special-characters/"><strong>Special Characters</strong><span>Copy symbols and decorative text for custom emoji.</span></a>
+        <a class="related-card" href="/en/emoji-combinations/"><strong>Emoji Combos</strong><span>Browse ready-made emoji templates for social posts.</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - free tools for text, emoji, kaomoji, and Slack reactions. <a href="/guide_en.html">Moon Text Guide</a></p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script>
+    window.SlackEmojiConfig = {
+      defaultText: 'OK',
+      messages: {
+        fileStatus: (kb) => `Current PNG estimate: ${kb}KB`,
+        downloaded: 'PNG downloaded'
+      }
+    };
+  </script>
+  <script src="/assets/js/slack-emoji-generator.js?v=20260519-en"></script>
+</body>
+</html>

@@ -49,6 +49,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
+  min-width: 0;
 }
 
 .brand {
@@ -83,6 +84,7 @@ a {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .site-nav a {
@@ -662,6 +664,7 @@ a {
 
   .site-nav {
     width: 100%;
+    max-width: 100%;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 6px;
@@ -682,6 +685,8 @@ a {
   }
 
   .hero-inner {
+    width: 100%;
+    max-width: 100%;
     padding: 26px 16px 22px;
   }
 
@@ -690,14 +695,20 @@ a {
   }
 
   .hero h1 {
+    width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
     font-size: 1.78rem;
     line-height: 1.22;
+    overflow-wrap: anywhere;
   }
 
   .hero-copy {
+    width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.62;
+    overflow-wrap: anywhere;
   }
 
   .tool-wrap {

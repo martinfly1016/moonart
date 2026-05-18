@@ -16,8 +16,14 @@
   const presetButtons = Array.from(root.querySelectorAll('[data-preset]'));
   const toast = document.querySelector('[data-toast]');
   const ctx = canvas.getContext('2d');
+  const config = window.SlackEmojiConfig || {};
+  const messages = {
+    fileStatus: (kb) => `現在のPNG目安: ${kb}KB`,
+    downloaded: 'PNGをダウンロードしました',
+    ...(config.messages || {})
+  };
   const defaultState = {
-    text: '確認中',
+    text: config.defaultText || '確認中',
     font: 'system',
     size: '128',
     textColor: '#ffffff',
@@ -142,7 +148,7 @@
     canvas.toBlob((blob) => {
       if (!blob) return;
       const kb = Math.max(1, Math.round(blob.size / 1024));
-      fileStatus.textContent = `現在のPNG目安: ${kb}KB`;
+      fileStatus.textContent = messages.fileStatus(kb);
       fileStatus.classList.toggle('is-warning', blob.size > 128 * 1024);
       fileStatus.classList.toggle('is-good', blob.size <= 128 * 1024);
     }, 'image/png');
@@ -169,7 +175,7 @@
         transparent_background: transparentBg.checked,
         file_kb: Math.round(blob.size / 1024)
       });
-      showToast('PNGをダウンロードしました');
+      showToast(messages.downloaded);
     }, 'image/png');
   }
 
