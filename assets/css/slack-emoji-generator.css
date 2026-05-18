@@ -1,0 +1,292 @@
+.slack-emoji-page {
+  --slack-green: #2eb67d;
+  --slack-blue: #36c5f0;
+  --slack-red: #e01e5a;
+  --slack-yellow: #ecb22e;
+}
+
+.slack-emoji-body {
+  overflow-x: hidden;
+}
+
+.slack-hero {
+  background:
+    linear-gradient(135deg, rgba(20, 24, 39, 0.96), rgba(43, 49, 87, 0.94)),
+    radial-gradient(circle at 20% 10%, rgba(54, 197, 240, 0.35), transparent 32%),
+    radial-gradient(circle at 80% 15%, rgba(236, 178, 46, 0.32), transparent 28%);
+}
+
+.emoji-maker-wrap {
+  max-width: 1180px;
+  margin: -16px auto 0;
+  padding: 0 20px 48px;
+}
+
+.emoji-maker {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.maker-panel {
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.maker-controls {
+  padding: 18px;
+}
+
+.control-block {
+  min-width: 0;
+}
+
+.control-block label,
+.toggle-row {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.control-block textarea,
+.control-block select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+.control-block textarea {
+  min-height: 86px;
+  padding: 12px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.control-block select {
+  height: 44px;
+  padding: 0 12px;
+}
+
+.input-help,
+.slack-note,
+.file-status {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.input-help {
+  margin-top: 6px;
+}
+
+.template-row,
+.preset-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.template-row button,
+.preset-row button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+  padding: 0 13px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.template-row button:hover,
+.preset-row button:hover {
+  border-color: #a5b4fc;
+  background: #fff;
+}
+
+.control-grid,
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.color-grid input[type="color"] {
+  width: 100%;
+  height: 44px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.toggle-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.toggle-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.maker-actions {
+  max-width: 420px;
+  margin-top: 18px;
+}
+
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+  text-align: center;
+}
+
+.preview-panel h2 {
+  align-self: stretch;
+  margin: 0 0 14px;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.preview-stage {
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(45deg, #e5e7eb 25%, transparent 25%),
+    linear-gradient(-45deg, #e5e7eb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e5e7eb 75%),
+    linear-gradient(-45deg, transparent 75%, #e5e7eb 75%);
+  background-color: #fff;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  background-size: 20px 20px;
+}
+
+.preview-stage canvas {
+  width: 192px;
+  height: 192px;
+  image-rendering: auto;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+}
+
+.file-status {
+  min-height: 22px;
+  margin: 14px 0 0;
+  font-weight: 800;
+}
+
+.file-status.is-warning {
+  color: var(--accent);
+}
+
+.file-status.is-good {
+  color: var(--success);
+}
+
+.slack-note {
+  margin: 10px 0 0;
+  text-align: left;
+}
+
+@media (max-width: 880px) {
+  .emoji-maker {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-panel {
+    order: -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .slack-emoji-page .hero-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slack-emoji-page .hero h1,
+  .slack-emoji-page .hero-copy {
+    overflow-wrap: anywhere;
+  }
+
+  .emoji-maker-wrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: hidden;
+  }
+
+  .emoji-maker,
+  .maker-panel {
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+  }
+
+  .maker-controls,
+  .preview-panel {
+    padding: 14px;
+  }
+
+  .control-grid,
+  .color-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template-row,
+  .preset-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .template-row::-webkit-scrollbar,
+  .preset-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .template-row button,
+  .preset-row button {
+    flex: 0 0 auto;
+  }
+
+  .maker-actions {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .preview-stage {
+    width: min(100%, 240px);
+  }
+
+  .preview-stage canvas {
+    width: 176px;
+    height: 176px;
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slack絵文字ジェネレーター - スタンプ・リアクション絵文字を無料作成 | MojiMoon</title>
+  <meta name="description" content="Slackで使えるカスタム絵文字・スタンプを無料で作成。文字を入力して、色・フォント・背景を選ぶだけで、リアクション絵文字や文字スタンプを簡単に生成できます。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/slack-emoji-generator/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="Slack絵文字ジェネレーター | MojiMoon">
+  <meta property="og:description" content="Slack用のカスタム絵文字・文字スタンプを無料で簡単作成。PNGでダウンロードして、そのままSlackに追加できます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/slack-emoji-generator/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Slack絵文字ジェネレーター",
+    "url": "https://mojimoon.com/slack-emoji-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "description": "Slack用のカスタム絵文字・文字スタンプをPNGで作成できる無料ツールです。"
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/slack-emoji-generator.css">
+</head>
+<body class="slack-emoji-body">
+  <div class="tool-shell slack-emoji-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+        <nav class="site-nav" aria-label="文字ツール">
+          <a href="/">月文字</a>
+          <a href="/emoji-copy/">絵文字コピペ</a>
+          <a href="/kaomoji/">顔文字</a>
+          <a href="/special-characters/">特殊文字</a>
+          <a href="/emoji-combinations/">絵文字組み合わせ</a>
+          <a href="/slack-emoji-generator/" aria-current="page">Slack絵文字</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero slack-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Slack Emoji Generator</p>
+        <h1>Slack絵文字ジェネレーター</h1>
+        <p class="hero-copy">かわいいSlack絵文字を、文字だけでかんたん作成。文字色・背景・フォントを選んで、カスタム絵文字やリアクション用のPNGをダウンロードできます。</p>
+      </div>
+    </section>
+
+    <main class="emoji-maker-wrap" aria-label="Slack絵文字作成ツール">
+      <section class="emoji-maker" data-slack-emoji-maker>
+        <div class="maker-panel maker-controls">
+          <div class="control-block">
+            <label for="emoji-text">テキスト</label>
+            <textarea id="emoji-text" data-emoji-text maxlength="18" rows="2" placeholder="例: 確認中">確認中</textarea>
+            <div class="input-help"><span data-char-count>3</span>/18文字。Slackでは短い文字ほど読みやすくなります。</div>
+          </div>
+
+          <div class="template-row" aria-label="Slack絵文字テンプレート">
+            <button type="button" data-template="了解">了解</button>
+            <button type="button" data-template="確認中">確認中</button>
+            <button type="button" data-template="対応済み">対応済み</button>
+            <button type="button" data-template="承認">承認</button>
+            <button type="button" data-template="LGTM">LGTM</button>
+            <button type="button" data-template="OK">OK</button>
+            <button type="button" data-template="NG">NG</button>
+            <button type="button" data-template="感謝">感謝</button>
+          </div>
+
+          <div class="control-grid">
+            <div class="control-block">
+              <label for="emoji-font">フォント</label>
+              <select id="emoji-font" data-font-family>
+                <option value="system">ゴシック</option>
+                <option value="rounded">丸文字</option>
+                <option value="mincho">明朝</option>
+                <option value="bold">太字</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="emoji-size">出力サイズ</label>
+              <select id="emoji-size" data-export-size>
+                <option value="128">128 x 128</option>
+                <option value="512">512 x 512</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="color-grid">
+            <div class="control-block">
+              <label for="text-color">文字色</label>
+              <input id="text-color" type="color" value="#ffffff" data-text-color>
+            </div>
+            <div class="control-block">
+              <label for="bg-color">背景色</label>
+              <input id="bg-color" type="color" value="#4f46e5" data-bg-color>
+            </div>
+          </div>
+
+          <div class="preset-row" aria-label="配色プリセット">
+            <button type="button" data-preset="#ffffff,#4f46e5">Slack</button>
+            <button type="button" data-preset="#ffffff,#ec4899">ピンク</button>
+            <button type="button" data-preset="#172033,#fef3c7">クリーム</button>
+            <button type="button" data-preset="#ffffff,#059669">承認</button>
+            <button type="button" data-preset="#172033,#e0f2fe">水色</button>
+          </div>
+
+          <label class="toggle-row">
+            <input type="checkbox" data-transparent-bg>
+            <span>透過背景にする</span>
+          </label>
+
+          <div class="button-row maker-actions">
+            <button class="primary-btn" type="button" data-download-png>PNGダウンロード</button>
+            <button class="secondary-btn" type="button" data-reset-maker>リセット</button>
+          </div>
+        </div>
+
+        <div class="maker-panel preview-panel">
+          <h2>プレビュー</h2>
+          <div class="preview-stage">
+            <canvas width="128" height="128" data-preview-canvas aria-label="生成されるSlack絵文字のプレビュー"></canvas>
+          </div>
+          <p class="file-status" data-file-status>PNGを生成できます。</p>
+          <p class="slack-note">Slack公式ヘルプでは、背景が透明な128KB以下の正方形画像が推奨されています。ワークスペース設定によって追加権限が制限される場合があります。</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="seo-section">
+      <h2>Slack用スタンプを無料で作成</h2>
+      <p>MojiMoonのSlack絵文字ジェネレーターは、短い文字をSlackのカスタム絵文字やリアクション絵文字として使いやすい正方形PNGに変換する無料ツールです。日本語の「了解」「確認中」「対応済み」や、英字の「LGTM」「OK」など、仕事のチャットでよく使う文字スタンプをすぐに作れます。</p>
+      <div class="category-links" aria-label="関連する文字ツール">
+        <a href="/emoji-copy/">絵文字をコピーする</a>
+        <a href="/emoji-combinations/">かわいい絵文字組み合わせを見る</a>
+        <a href="/special-characters/">特殊文字を探す</a>
+        <a href="/kaomoji/">顔文字をコピーする</a>
+      </div>
+
+      <h2>Slack絵文字の作り方</h2>
+      <ol>
+        <li>作りたい文字を入力します。</li>
+        <li>フォント、文字色、背景色、透過背景を選びます。</li>
+        <li>プレビューを確認してPNGをダウンロードします。</li>
+        <li>Slackの絵文字メニューからカスタム絵文字として追加します。</li>
+      </ol>
+
+      <h2>すぐ使えるSlack絵文字テンプレート</h2>
+      <div class="seo-grid">
+        <div class="seo-card"><strong>確認・進行</strong><p>了解、確認中、対応中、対応済み、要確認など、仕事のリアクションに使いやすい文字スタンプを作れます。</p></div>
+        <div class="seo-card"><strong>承認・レビュー</strong><p>承認、OK、NG、LGTM、レビュー中など、チームの確認フローに合わせたSlack絵文字を作成できます。</p></div>
+        <div class="seo-card"><strong>感謝・リアクション</strong><p>ありがとう、感謝、おつかれさま、最高など、会話をやわらかくするカスタム絵文字にも使えます。</p></div>
+      </div>
+
+      <h2>Slackに絵文字を追加する方法</h2>
+      <p>Slackのメッセージ入力欄で絵文字メニューを開き、「絵文字を追加する」から画像をアップロードして名前を付けると、ワークスペースのカスタム絵文字として使えるようになります。ワークスペースの設定によっては、オーナーや管理者だけが追加できる場合があります。</p>
+
+      <h2>よくある質問</h2>
+      <h3>Slack絵文字の推奨サイズは？</h3>
+      <p>Slackでは正方形の画像が使われます。このツールでは128 x 128 PNGを標準にしています。大きめの素材として使いたい場合は512 x 512も選べます。</p>
+      <h3>透過PNGに対応していますか？</h3>
+      <p>はい。透過背景をオンにすると背景なしのPNGを書き出せます。文字色だけで見え方が決まるため、濃い色の文字を選ぶと扱いやすくなります。</p>
+      <h3>スマホでも作れますか？</h3>
+      <p>スマホのブラウザでも作成できます。Slackへの追加操作は、ワークスペースの設定やSlackアプリの対応状況によって手順が変わることがあります。</p>
+      <h3>DiscordやLINEでも使えますか？</h3>
+      <p>PNG画像として保存できるため他のサービスでも使える場合がありますが、このページはSlackのカスタム絵文字向けに作っています。各サービスのサイズやファイル形式の条件を確認してください。</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/emoji-copy/"><strong>絵文字コピペ</strong><span>単体の可愛い絵文字を探す。</span></a>
+        <a class="related-card" href="/special-characters/"><strong>特殊文字コピペ</strong><span>装飾文字や記号をSlack絵文字にする。</span></a>
+        <a class="related-card" href="/emoji-combinations/"><strong>絵文字組み合わせ</strong><span>SNS向けの絵文字テンプレを探す。</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。 <a href="/guide.html">月文字ガイド</a></p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script src="/assets/js/slack-emoji-generator.js"></script>
+</body>
+</html>

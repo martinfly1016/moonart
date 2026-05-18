@@ -163,6 +163,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mojimoon.com/slack-emoji-generator/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://beads.mojimoon.com/index.html</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
