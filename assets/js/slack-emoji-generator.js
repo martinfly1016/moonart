@@ -121,9 +121,6 @@
     const startY = size / 2 - ((lines.length - 1) * lineHeight) / 2;
     lines.forEach((line, index) => {
       const y = startY + index * lineHeight;
-      ctx.strokeStyle = transparentBg.checked ? 'rgba(255,255,255,0.72)' : 'rgba(0,0,0,0.18)';
-      ctx.lineWidth = Math.max(2, size * 0.025);
-      ctx.strokeText(line, size / 2, y);
       ctx.fillText(line, size / 2, y);
     });
 
