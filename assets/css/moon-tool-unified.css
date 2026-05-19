@@ -267,15 +267,101 @@ body.moon-tool-page {
 .moon-tool-page .footer {
   background: transparent;
   color: #657083;
+  margin-top: 26px;
+  padding: 0 16px 34px;
 }
 
-.moon-tool-page .footer h2 {
+.moon-tool-page .footer .container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.moon-tool-page .footer-title {
   color: #172033 !important;
+  text-align: center;
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.moon-tool-page .footer-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .moon-tool-page .btn-footer {
+  min-width: 0;
+  min-height: 54px;
+  margin: 0;
+  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff !important;
+  color: #172033 !important;
+  border: 1px solid #dfe5f2;
   border-radius: 8px;
   box-shadow: none;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.moon-tool-page .btn-footer:hover {
+  border-color: #a5b4fc;
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  text-decoration: none;
+}
+
+.moon-tool-page .friend-links {
+  max-width: 640px;
+  margin: 22px auto 0;
+  text-align: center;
+  color: #8a94a6;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.moon-tool-page .friend-link {
+  color: #657083;
+  font-weight: 800;
+}
+
+.moon-tool-page .friend-link:hover {
+  color: #3730a3;
+}
+
+.moon-tool-page .mobile-footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px auto 34px;
+  padding: 0 16px;
+}
+
+.moon-tool-page .mobile-footer-nav .guide-link,
+.moon-tool-page .mobile-footer-nav .lang-switcher {
+  min-width: 132px;
+  min-height: 42px;
+  justify-content: center;
+  background: #fff !important;
+  color: #172033 !important;
+  border: 1px solid #dfe5f2;
+  font-weight: 800;
+}
+
+.moon-tool-page .mobile-footer-nav .guide-link:hover,
+.moon-tool-page .mobile-footer-nav .lang-switcher:hover {
+  background: #eef2ff !important;
+  color: #3730a3 !important;
+  text-decoration: none;
 }
 
 @media (max-width: 760px) {
@@ -330,6 +416,26 @@ body.moon-tool-page {
     padding: 0 8px;
     font-size: 12px;
     white-space: normal;
+  }
+
+  .moon-tool-page .footer {
+    margin-top: 22px;
+    padding-bottom: 28px;
+  }
+
+  .moon-tool-page .footer-link-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .moon-tool-page .btn-footer {
+    min-height: 48px;
+    padding: 10px 14px;
+  }
+
+  .moon-tool-page .friend-links {
+    margin-top: 18px;
+    font-size: 12px;
   }
 
 }
