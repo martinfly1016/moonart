@@ -76,7 +76,9 @@
     { label: 'Stars', query: 'star' },
     { label: 'Lines', query: 'line divider' },
     { label: 'Brackets', query: 'bracket' },
-    { label: 'Arrows', query: 'arrow' }
+    { label: 'Arrows', query: 'arrow' },
+    { label: 'Bio', query: 'bio profile divider' },
+    { label: 'Numbers', query: 'number circled' }
   ];
   data.categories = data.categories.map((category) => ({
     ...category,

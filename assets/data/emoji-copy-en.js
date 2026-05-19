@@ -82,7 +82,9 @@
     { label: 'Hearts', query: 'heart love' },
     { label: 'Sparkles', query: 'sparkle star' },
     { label: 'Faces', query: 'face smile' },
-    { label: 'Instagram', query: 'instagram profile' }
+    { label: 'Instagram', query: 'instagram profile' },
+    { label: 'Bio', query: 'bio name profile' },
+    { label: 'Discord', query: 'discord chat reaction' }
   ];
   data.categories = data.categories.map((category) => ({
     ...category,

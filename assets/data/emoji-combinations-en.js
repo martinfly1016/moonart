@@ -68,8 +68,10 @@
     { label: 'Pink', query: 'pink' },
     { label: 'Hearts', query: 'heart love' },
     { label: 'Bio', query: 'bio profile instagram' },
+    { label: 'Caption', query: 'caption post message' },
     { label: 'Birthday', query: 'birthday' },
-    { label: 'Seasonal', query: 'spring summer autumn winter' }
+    { label: 'Seasonal', query: 'spring summer autumn winter' },
+    { label: 'Fan', query: 'fan profile name' }
   ];
   data.categories = data.categories.map((category) => ({
     ...category,
