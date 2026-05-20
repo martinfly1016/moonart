@@ -594,6 +594,7 @@ a {
     min-width: 0;
     width: 100%;
     overflow: hidden;
+    min-height: 48px;
     border: 0;
     background: transparent;
     color: var(--ink);
@@ -681,4 +682,3 @@ a {
     grid-template-columns: 1fr;
   }
 }
-    min-height: 48px;
