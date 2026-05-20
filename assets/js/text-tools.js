@@ -46,6 +46,7 @@
   const draftMaxLength = Number(data.draftMaxLength || 0);
   let quickFilterWrap;
   let draftMeta;
+  let mobileDraftSheet;
   let currentPage = 1;
   let activeCategory = data.categories.some((category) => category.id === configuredCategory)
     ? configuredCategory
@@ -126,76 +127,23 @@
       draftMeta.textContent = draftMaxLength ? ui.charLimitCount(count, draftMaxLength) : ui.charCount(count);
       draftMeta.classList.toggle('is-full', Boolean(draftMaxLength && count >= draftMaxLength));
     }
-    if (!composerSheetCount) return;
-    composerSheetCount.textContent = count ? ui.charCount(count) : ui.emptyCount;
-    composerSheetCount.classList.toggle('has-content', count > 0);
-    composerSheetCopy.disabled = count === 0;
+    mobileDraftSheet?.update();
   }
-
-  let composerSheetCount;
-  let composerSheetCopy;
-  let composerSheetAction;
-  let composerSheetIcon;
-
-  function setComposerOpen(open) {
-    document.body.classList.toggle('composer-open', open);
-    if (!composerSheetToggle) return;
-    composerSheetToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    composerSheetToggle.setAttribute('aria-label', open ? ui.closeDraft : ui.openDraft);
-    if (composerSheetAction) composerSheetAction.textContent = open ? ui.close : ui.open;
-    if (composerSheetIcon) composerSheetIcon.textContent = open ? '⌄' : '⌃';
-  }
-
-  let composerSheetToggle;
 
   function setupMobileComposer() {
     if (!draft || !copyDraft || !composer) return;
-    document.body.classList.add('has-mobile-composer');
-    if (!draftMeta) {
-      draftMeta = document.createElement('div');
-      draftMeta.className = 'draft-meta';
-      draft.after(draftMeta);
-    }
-
-    const body = document.createElement('div');
-    body.className = 'composer-body';
-    while (composer.firstChild) body.appendChild(composer.firstChild);
-    const buttonRow = copyDraft.closest('.button-row');
-    if (buttonRow) {
-      const editor = document.createElement('div');
-      editor.className = 'draft-editor';
-      body.insertBefore(editor, draft);
-      editor.append(draft, draftMeta, buttonRow);
-    }
-
-    const bar = document.createElement('div');
-    bar.className = 'composer-sheet-bar';
-    bar.innerHTML = `
-      <button class="composer-sheet-toggle" type="button" aria-expanded="false" aria-label="${ui.openDraft}">
-        <span class="sheet-icon" aria-hidden="true">⌃</span>
-        <span class="sheet-title">${ui.draftTitle}</span>
-        <span class="sheet-count">${ui.emptyCount}</span>
-        <span class="sheet-action">${ui.open}</span>
-      </button>
-      <button class="sheet-copy-btn" type="button" disabled>${ui.copy}</button>
-    `;
-
-    composer.append(bar, body);
-    composerSheetToggle = bar.querySelector('.composer-sheet-toggle');
-    composerSheetCount = bar.querySelector('.sheet-count');
-    composerSheetCopy = bar.querySelector('.sheet-copy-btn');
-    composerSheetAction = bar.querySelector('.sheet-action');
-    composerSheetIcon = bar.querySelector('.sheet-icon');
-
-    composerSheetToggle.addEventListener('click', () => {
-      setComposerOpen(!document.body.classList.contains('composer-open'));
+    mobileDraftSheet = window.MojiMoonMobileDraftSheet?.setup({
+      root: composer,
+      draft,
+      copyButton: copyDraft,
+      draftMeta,
+      mobileQuery,
+      maxLength: draftMaxLength,
+      labels: ui,
+      getCount: draftCount,
+      onCopy: copyDraftText
     });
-    composerSheetCopy.addEventListener('click', () => {
-      copyDraftText(composerSheetCopy);
-    });
-    draft.addEventListener('focus', () => {
-      if (mobileQuery.matches) setComposerOpen(true);
-    });
+    if (mobileDraftSheet?.draftMeta) draftMeta = mobileDraftSheet.draftMeta;
     updateComposerState();
   }
 

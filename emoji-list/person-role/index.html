@@ -75,25 +75,17 @@
 
       <aside class="draft-panel" aria-label="コピー草稿">
         <h2>コピー草稿</h2>
-        <textarea data-emoji-draft placeholder="絵文字をタップするとここに追加されます"></textarea>
+        <textarea data-emoji-draft maxlength="160" placeholder="絵文字をクリックするとここに追加されます"></textarea>
+        <div class="draft-meta" data-draft-meta>0/160文字</div>
         <div class="draft-actions">
           <button type="button" data-copy-draft>コピー</button>
           <button type="button" data-clear-draft>消去</button>
         </div>
-        <p class="draft-hint">複数の絵文字を選んでから、まとめてコピーできます。カードの「コピー」は単体コピー、「草稿へ」は連続選択向きです。</p>
+        <p class="draft-hint">絵文字カードをクリックすると草稿に追加されます。完成したらまとめてコピーできます。</p>
+        <div class="recent-list" data-recent aria-label="最近使った絵文字"></div>
       </aside>
     </div>
   </main>
-
-  <div class="mobile-draft-bar">
-    <button class="mobile-toggle" type="button" data-mobile-toggle>
-      <span class="sheet-icon" aria-hidden="true">⌃</span>
-      <span class="sheet-title">コピー草稿</span>
-      <span data-mobile-count class="mobile-count">空</span>
-      <span class="sheet-action">開く</span>
-    </button>
-    <button class="mobile-copy sheet-copy-btn" type="button" data-mobile-copy disabled>コピー</button>
-  </div>
 
   <section class="seo-section">
     <h2>仕事と役割の絵文字とは</h2>
@@ -121,6 +113,7 @@
   </footer>
   <div class="toast" data-toast></div>
   <script src="/assets/data/emoji-list-person-role.js"></script>
+  <script src="/assets/js/mobile-draft-sheet.js"></script>
   <script src="/assets/js/emoji-list.js"></script>
 </body>
 </html>

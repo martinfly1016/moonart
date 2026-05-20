@@ -11,16 +11,15 @@
   const draft = document.querySelector('[data-emoji-draft]');
   const copyDraft = document.querySelector('[data-copy-draft]');
   const clearDraft = document.querySelector('[data-clear-draft]');
+  const draftMeta = document.querySelector('[data-draft-meta]');
   const toast = document.querySelector('[data-toast]');
   const count = document.querySelector('[data-result-count]');
-  const mobileCopy = document.querySelector('[data-mobile-copy]');
-  const mobileCount = document.querySelector('[data-mobile-count]');
-  const mobileToggle = document.querySelector('[data-mobile-toggle]');
-  const mobileBar = document.querySelector('.mobile-draft-bar');
+  const recentList = document.querySelector('[data-recent]');
   const draftPanel = document.querySelector('.draft-panel');
-  const mobileAction = mobileToggle?.querySelector('.sheet-action');
-  const mobileIcon = mobileToggle?.querySelector('.sheet-icon');
+  const mobileQuery = window.matchMedia('(max-width: 860px)');
   const storageKey = `mojimoon:${data.slug}:recent`;
+  const draftMaxLength = Number(draft?.getAttribute('maxlength') || data.draftMaxLength || 160);
+  let mobileDraftSheet;
 
   let activeCategory = 'all';
   let activeTone = '';
@@ -95,29 +94,81 @@
     showToast('コピーしました');
   }
 
+  function copyDraftText(button) {
+    const text = draft.value.trim();
+    if (!text) {
+      showToast('コピーする内容がありません');
+      return;
+    }
+    copyText(text);
+    remember(text);
+    if (button) {
+      const original = button.dataset.originalText || button.textContent;
+      button.dataset.originalText = original;
+      button.textContent = 'コピー済み';
+      window.clearTimeout(button.copyTimer);
+      button.copyTimer = window.setTimeout(() => {
+        button.textContent = original;
+      }, 1200);
+    }
+  }
+
   function remember(value) {
     try {
       const recent = JSON.parse(localStorage.getItem(storageKey) || '[]').filter((item) => item !== value);
       recent.unshift(value);
-      localStorage.setItem(storageKey, JSON.stringify(recent.slice(0, 20)));
+      localStorage.setItem(storageKey, JSON.stringify(recent.slice(0, 12)));
+      renderRecent();
     } catch (error) {
       // localStorage may be unavailable in private browsing.
     }
   }
 
   function updateDraftState() {
-    const length = draft.value.trim().length;
-    if (mobileCount) mobileCount.textContent = length ? `${length}文字` : '空';
-    mobileCount?.classList.toggle('has-content', length > 0);
-    if (mobileCopy) mobileCopy.disabled = length === 0;
+    const hasContent = draft.value.trim().length > 0;
+    if (copyDraft) copyDraft.disabled = !hasContent;
+    mobileDraftSheet?.update();
   }
 
   function addToDraft(value) {
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
-    draft.value = `${draft.value}${spacer}${value}`.trimStart();
+    const nextValue = `${draft.value}${spacer}${value}`.trimStart();
+    if (nextValue.length > draftMaxLength) {
+      showToast(`${draftMaxLength}文字以内にしてください`);
+      return;
+    }
+    draft.value = nextValue;
     draft.dispatchEvent(new Event('input'));
     remember(value);
     showToast('草稿に追加しました');
+  }
+
+  function getRecent() {
+    try {
+      return JSON.parse(localStorage.getItem(storageKey) || '[]').slice(0, 12);
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function renderRecent() {
+    if (!recentList) return;
+    const recent = getRecent();
+    if (!recent.length) {
+      recentList.innerHTML = '';
+      return;
+    }
+    recentList.innerHTML = `
+      <div class="recent-list-head">
+        <span>最近使ったもの</span>
+        <button class="recent-clear" type="button" data-clear-recent>履歴を消去</button>
+      </div>
+      <div class="recent-chip-grid">
+        ${recent.map((item) => `
+          <button class="recent-chip" type="button" data-recent-add="${encodeURIComponent(item)}">${item}</button>
+        `).join('')}
+      </div>
+    `;
   }
 
   function renderTabs() {
@@ -215,29 +266,41 @@
     if (addButton) addToDraft(decodeURIComponent(addButton.dataset.add));
   });
 
-  copyDraft?.addEventListener('click', () => copyText(draft.value.trim()));
-  mobileCopy?.addEventListener('click', () => copyText(draft.value.trim()));
+  copyDraft?.addEventListener('click', () => copyDraftText(copyDraft));
   clearDraft?.addEventListener('click', () => {
     draft.value = '';
     draft.focus();
-    updateDraftState();
+    draft.dispatchEvent(new Event('input'));
   });
   draft?.addEventListener('input', updateDraftState);
-  mobileToggle?.addEventListener('click', () => {
-    const open = !document.body.classList.contains('draft-open');
-    document.body.classList.toggle('draft-open', open);
-    mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    mobileToggle.setAttribute('aria-label', open ? 'コピー草稿を閉じる' : 'コピー草稿を開く');
-    if (mobileAction) mobileAction.textContent = open ? '閉じる' : '開く';
-    if (mobileIcon) mobileIcon.textContent = open ? '⌄' : '⌃';
+  recentList?.addEventListener('click', (event) => {
+    const clearRecent = event.target.closest('[data-clear-recent]');
+    if (clearRecent) {
+      localStorage.setItem(storageKey, '[]');
+      renderRecent();
+      showToast('履歴を消去しました');
+      return;
+    }
+    const recentButton = event.target.closest('[data-recent-add]');
+    if (recentButton) addToDraft(decodeURIComponent(recentButton.dataset.recentAdd));
   });
 
-  document.body.classList.add('has-emoji-draft');
-  if (draftPanel && mobileBar) draftPanel.prepend(mobileBar);
+  mobileDraftSheet = window.MojiMoonMobileDraftSheet?.setup({
+    root: draftPanel,
+    draft,
+    copyButton: copyDraft,
+    draftMeta,
+    actions: copyDraft?.closest('.draft-actions'),
+    mobileQuery,
+    maxLength: draftMaxLength,
+    getCount: () => draft.value.trim().length,
+    onCopy: copyDraftText
+  });
 
   renderTabs();
   renderTones();
   renderQuickFilters();
   renderGrid();
+  renderRecent();
   updateDraftState();
 })();

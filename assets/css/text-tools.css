@@ -769,17 +769,17 @@ a {
 
   .composer-sheet-bar {
     min-height: 64px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 8px;
-    align-items: center;
-    padding: 8px 10px 8px 14px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 8px 98px 8px 14px;
     border-bottom: 1px solid #d6deeb;
     background: rgba(241, 245, 249, 0.97);
     backdrop-filter: blur(14px);
   }
 
   .composer-sheet-toggle {
+    width: 100%;
     min-width: 0;
     min-height: 48px;
     display: grid;
@@ -835,9 +835,14 @@ a {
   }
 
   .sheet-copy-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     min-width: 0;
     min-height: 44px;
-    padding: 0 14px;
+    width: 78px;
+    padding: 0 10px;
     border: 0;
     border-radius: 12px;
     background: var(--primary);
