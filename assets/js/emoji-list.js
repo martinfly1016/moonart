@@ -16,6 +16,8 @@
   const mobileCopy = document.querySelector('[data-mobile-copy]');
   const mobileCount = document.querySelector('[data-mobile-count]');
   const mobileToggle = document.querySelector('[data-mobile-toggle]');
+  const mobileBar = document.querySelector('.mobile-draft-bar');
+  const draftPanel = document.querySelector('.draft-panel');
   const storageKey = `mojimoon:${data.slug}:recent`;
 
   let activeCategory = 'all';
@@ -223,6 +225,7 @@
   });
 
   document.body.classList.add('has-emoji-draft');
+  if (draftPanel && mobileBar) draftPanel.prepend(mobileBar);
 
   renderTabs();
   renderTones();
