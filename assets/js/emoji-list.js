@@ -222,6 +222,8 @@
     document.body.classList.toggle('draft-open');
   });
 
+  document.body.classList.add('has-emoji-draft');
+
   renderTabs();
   renderTones();
   renderQuickFilters();
