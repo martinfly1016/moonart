@@ -18,6 +18,8 @@
   const mobileToggle = document.querySelector('[data-mobile-toggle]');
   const mobileBar = document.querySelector('.mobile-draft-bar');
   const draftPanel = document.querySelector('.draft-panel');
+  const mobileAction = mobileToggle?.querySelector('.sheet-action');
+  const mobileIcon = mobileToggle?.querySelector('.sheet-icon');
   const storageKey = `mojimoon:${data.slug}:recent`;
 
   let activeCategory = 'all';
@@ -106,6 +108,7 @@
   function updateDraftState() {
     const length = draft.value.trim().length;
     if (mobileCount) mobileCount.textContent = length ? `${length}文字` : '空';
+    mobileCount?.classList.toggle('has-content', length > 0);
     if (mobileCopy) mobileCopy.disabled = length === 0;
   }
 
@@ -221,7 +224,12 @@
   });
   draft?.addEventListener('input', updateDraftState);
   mobileToggle?.addEventListener('click', () => {
-    document.body.classList.toggle('draft-open');
+    const open = !document.body.classList.contains('draft-open');
+    document.body.classList.toggle('draft-open', open);
+    mobileToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mobileToggle.setAttribute('aria-label', open ? 'コピー草稿を閉じる' : 'コピー草稿を開く');
+    if (mobileAction) mobileAction.textContent = open ? '閉じる' : '開く';
+    if (mobileIcon) mobileIcon.textContent = open ? '⌄' : '⌃';
   });
 
   document.body.classList.add('has-emoji-draft');

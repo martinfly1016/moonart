@@ -547,7 +547,9 @@ a {
   .draft-panel {
     position: fixed;
     left: 10px;
-    right: 10px;
+    right: auto;
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
     bottom: max(10px, env(safe-area-inset-bottom));
     top: auto;
     z-index: 30;
@@ -568,9 +570,10 @@ a {
 
   .mobile-draft-bar {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 92px;
+    grid-template-columns: minmax(0, 1fr) 78px;
     gap: 8px;
     align-items: center;
+    overflow: hidden;
     min-height: 64px;
     padding: 8px 10px 8px 14px;
     border-bottom: 1px solid #d6deeb;
@@ -580,20 +583,43 @@ a {
 
   .mobile-toggle {
     min-width: 0;
-    width: 100%;
-    overflow: hidden;
     min-height: 48px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 8px;
+    align-items: center;
     border: 0;
     background: transparent;
     color: var(--ink);
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: start;
-    align-items: center;
-    gap: 8px;
+    padding: 0;
     font: inherit;
     font-weight: 800;
     text-align: left;
+    cursor: pointer;
+  }
+
+  .sheet-icon {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: var(--primary);
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  .sheet-title,
+  .mobile-count,
+  .sheet-action {
+    white-space: nowrap;
+  }
+
+  .sheet-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .mobile-count {
@@ -602,10 +628,22 @@ a {
     font-size: 12px;
   }
 
+  .mobile-count.has-content {
+    color: var(--success);
+  }
+
+  .sheet-action {
+    color: var(--primary);
+    font-size: 13px;
+  }
+
   .mobile-copy {
+    justify-self: end;
     min-height: 44px;
-    min-width: 92px;
-    padding: 0 14px;
+    width: 78px;
+    min-width: 0;
+    padding: 0 10px;
+    border: 0;
     border-radius: 12px;
   }
 
@@ -616,8 +654,7 @@ a {
   }
 
   .draft-panel h2 {
-    margin: 0 0 10px;
-    font-size: 1rem;
+    display: none;
   }
 
   .draft-panel textarea {
@@ -635,7 +672,7 @@ a {
     display: flex;
     justify-content: flex-end;
     gap: 7px;
-    margin: -46px 22px 0;
+    margin: -46px 22px 0 0;
     position: relative;
   }
 
