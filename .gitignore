@@ -16,6 +16,7 @@ reports/daily/
 reports/daily-test/
 reports/mobile-audit/
 reports/site-metrics/
+reports/recent-pages/
 .secret
 .secrets/
 *.local

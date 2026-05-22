@@ -11,6 +11,7 @@
     "ga": "node scripts/ga-report.mjs",
     "daily:report": "node scripts/daily-report.mjs",
     "site:metrics": "node scripts/site-metrics.mjs",
+    "monitor:recent-pages": "node scripts/recent-pages-monitor.mjs",
     "mobile:audit": "node scripts/mobile-audit.mjs",
     "preview": "vite preview"
   },

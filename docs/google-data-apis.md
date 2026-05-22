@@ -92,6 +92,37 @@ This writes GSC and GA reports under:
 reports/site-metrics/<end-date-or-latest>/
 ```
 
+## Recent Page Monitor
+
+Use this after shipping new page clusters. It tracks the current emoji-copy topic pages in both Japanese and English by default:
+
+```bash
+npm run monitor:recent-pages -- --days 28
+```
+
+The monitor writes Markdown, JSON, and CSV under:
+
+```text
+reports/recent-pages/<end-date>/
+```
+
+It combines:
+
+- GSC clicks, impressions, CTR, average position, and top visible queries per page.
+- GA4 page views, active users, sessions, engaged sessions, engagement rate, and landing-page sessions.
+
+To monitor a custom page set:
+
+```bash
+npm run monitor:recent-pages -- --pages /emoji-copy/tear/,/en/emoji-copy/tear/
+```
+
+For a reusable page set, pass a JSON file:
+
+```bash
+npm run monitor:recent-pages -- --page-file docs/recent-pages.json
+```
+
 ## Notes
 
 - GSC defaults to `sc-domain:mojimoon.com`.
