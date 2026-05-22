@@ -42,6 +42,7 @@
   const storageKey = `mojimoon:${data.slug}:recent`;
   const recentLimit = Number(data.recentLimit || 12);
   const configuredCategory = document.body.dataset.defaultCategory;
+  const configuredQuery = document.body.dataset.defaultQuery || '';
   const pageSize = Number(data.pageSize || 48);
   const draftMaxLength = Number(data.draftMaxLength || 0);
   let quickFilterWrap;
@@ -55,6 +56,7 @@
   pagination.setAttribute('data-pagination', '');
   grid.after(pagination);
   if (draftMaxLength && draft) draft.maxLength = draftMaxLength;
+  if (configuredQuery && searchInput) searchInput.value = configuredQuery;
 
   function normalize(value) {
     return String(value || '').toLowerCase().trim();
