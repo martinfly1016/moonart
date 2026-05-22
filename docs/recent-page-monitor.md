@@ -1,5 +1,7 @@
 # Recent Page Monitor
 
+This monitor supports the ongoing [Beyond Lets-Emoji](./beyond-lets-emoji.md) project.
+
 This monitor tracks newly shipped page clusters with both Google Search Console and GA4.
 
 Default tracked set:
