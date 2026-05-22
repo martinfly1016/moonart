@@ -140,7 +140,8 @@
     clearRecentToast: 'History cleared',
     addedToast: 'Added to draft',
     charCount: (count) => `${count} chars`,
-    charLimitCount: (count, limit) => `${count}/${limit} chars`
+    charLimitCount: (count, limit) => `${count}/${limit} chars`,
+    seoToggleLabel: 'Read more'
   };
   data.quickFilters = [
     { label: 'Cute', query: 'cute kawaii' },

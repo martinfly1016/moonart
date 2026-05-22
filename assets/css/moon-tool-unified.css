@@ -16,7 +16,7 @@ body.moon-tool-page {
   display: none !important;
 }
 
-.moon-tool-page > .container:first-of-type {
+.moon-tool-page > div.container:first-of-type {
   max-width: none;
   padding: 0;
 }
@@ -162,6 +162,7 @@ body.moon-tool-page {
 .moon-tool-page .control-panel,
 .moon-tool-page .preview-panel,
 .moon-tool-page .seo-content {
+  width: calc(100% - 40px);
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
@@ -262,6 +263,65 @@ body.moon-tool-page {
 .moon-tool-page .seo-card {
   background: #fff;
   border-color: #dfe5f2;
+}
+
+.moon-tool-page .seo-content {
+  margin-top: 28px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.moon-tool-page .seo-details {
+  display: block;
+}
+
+.moon-tool-page .seo-details summary {
+  min-height: 64px;
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  color: #172033;
+  font-size: 1.08rem;
+  font-weight: 900;
+  list-style: none;
+}
+
+.moon-tool-page .seo-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.moon-tool-page .seo-details summary::before {
+  content: "+";
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-weight: 900;
+}
+
+.moon-tool-page .seo-details[open] summary::before {
+  content: "-";
+}
+
+.moon-tool-page .seo-summary-action {
+  grid-column: 3;
+  grid-row: 1;
+  color: #4f46e5;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.moon-tool-page .seo-details-body {
+  padding: 0 22px 22px;
+  border-top: 1px solid #dfe5f2;
 }
 
 .moon-tool-page .footer {
@@ -406,8 +466,23 @@ body.moon-tool-page {
   .moon-tool-page .control-panel,
   .moon-tool-page .preview-panel,
   .moon-tool-page .seo-content {
+    width: calc(100% - 24px);
     margin-left: 12px;
     margin-right: 12px;
+  }
+
+  .moon-tool-page .seo-details summary {
+    min-height: 58px;
+    padding: 15px 16px;
+    font-size: 1rem;
+  }
+
+  .moon-tool-page .seo-summary-action {
+    display: none;
+  }
+
+  .moon-tool-page .seo-details-body {
+    padding: 0 16px 18px;
   }
 
   .moon-tool-page .action-btn {

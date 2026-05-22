@@ -275,6 +275,28 @@
     `;
   }
 
+  function setupCollapsibleSeo() {
+    const section = document.querySelector('.seo-section');
+    if (!section || section.dataset.collapsibleReady === 'true') return;
+    section.dataset.collapsibleReady = 'true';
+    const firstHeading = section.querySelector('h2');
+    const summaryText = firstHeading?.textContent?.trim() || 'このページの詳しい説明';
+    const details = document.createElement('details');
+    details.className = 'seo-details';
+    const summary = document.createElement('summary');
+    const title = document.createElement('span');
+    title.textContent = summaryText;
+    const action = document.createElement('span');
+    action.className = 'seo-summary-action';
+    action.textContent = data.ui?.seoToggleLabel || '詳しく見る';
+    summary.append(title, action);
+    const body = document.createElement('div');
+    body.className = 'seo-details-body';
+    while (section.firstChild) body.appendChild(section.firstChild);
+    details.append(summary, body);
+    section.appendChild(details);
+  }
+
   tabList.addEventListener('click', (event) => {
     const button = event.target.closest('[data-tab]');
     if (!button) return;
@@ -388,4 +410,5 @@
   renderTabs();
   renderGrid();
   renderRecent();
+  setupCollapsibleSeo();
 })();
