@@ -178,6 +178,10 @@ See:
 - `docs/beyond-lets-emoji.md`
 - `docs/recent-page-monitor.md`
 
+Latest research pass:
+
+- `docs/semrush-opportunity-research-2026-05-23.md`
+
 ## Candidate Exploration Backlog
 
 Next Semrush passes should investigate:
