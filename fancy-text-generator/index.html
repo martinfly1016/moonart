@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おしゃれ文字変換・フォント変換 | コピペできる可愛い文字 - MojiMoon</title>
+  <meta name="description" content="普通の文字を、おしゃれ文字・かわいい文字・小さい文字・丸文字・逆さ文字に変換してコピペできる無料ツール。Instagram、X、LINE、Discordの名前やプロフィールに使えます。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/fancy-text-generator/">
+  <link rel="alternate" hreflang="ja" href="https://mojimoon.com/fancy-text-generator/">
+  <link rel="alternate" hreflang="en" href="https://mojimoon.com/en/fancy-text-generator/">
+  <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/fancy-text-generator/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="おしゃれ文字変換・フォント変換 | MojiMoon">
+  <meta property="og:description" content="入力した文字を、小さい文字、丸文字、逆さ文字、太字、筆記体風、全角文字に変換してコピーできます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/fancy-text-generator/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "おしゃれ文字変換",
+    "url": "https://mojimoon.com/fancy-text-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "description": "普通の文字をUnicodeのおしゃれ文字、小さい文字、丸文字、逆さ文字、太字、全角文字に変換してコピーできる無料ツールです。"
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/fancy-text-generator.css">
+</head>
+<body class="fancy-text-body">
+  <div class="tool-shell fancy-text-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+          <a class="header-lang-switch" href="/en/fancy-text-generator/">English</a>
+        </div>
+        <nav class="site-nav" aria-label="文字ツール">
+          <a href="/">月文字</a>
+          <a href="/fancy-text-generator/" aria-current="page">おしゃれ文字</a>
+          <a href="/emoji-copy/">絵文字コピペ</a>
+          <a href="/emoji-list/">絵文字一覧</a>
+          <a href="/kaomoji/">顔文字</a>
+          <a href="/special-characters/">特殊文字</a>
+          <a href="/emoji-combinations/">絵文字組み合わせ</a>
+          <a href="/slack-emoji-generator/">Slack絵文字</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero fancy-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Fancy Text Generator</p>
+        <h1>おしゃれ文字変換で、名前やプロフィールをすぐ可愛く。</h1>
+        <p class="hero-copy">入力した文字を、小さい文字、丸文字、逆さ文字、太字、筆記体風、全角文字、かわいい囲み文字にリアルタイム変換。コピーしてInstagram、X、LINE、Discordで使えます。</p>
+        <div class="hero-preview-strip" aria-label="変換サンプル">
+          <span>ＭｏｊｉＭｏｏｎ</span>
+          <span>ᴹᵒʲⁱᴹᵒᵒⁿ</span>
+          <span>♡ 今日もかわいい ♡</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="fancy-wrap">
+      <section class="fancy-app" data-fancy-text-generator aria-label="おしゃれ文字変換ツール">
+        <div class="fancy-input-panel">
+          <div class="fancy-label-row">
+            <label for="fancy-input">変換する文字</label>
+            <span class="fancy-count" data-fancy-count>0/80</span>
+          </div>
+          <div class="fancy-input-shell">
+            <textarea id="fancy-input" class="fancy-input" data-fancy-input maxlength="80" rows="3" placeholder="名前、プロフィール、一言を入力">今日もかわいい</textarea>
+            <button class="clear-input-btn" type="button" data-clear-input>クリア</button>
+          </div>
+          <div class="sample-row" aria-label="サンプル文字">
+            <button type="button" data-sample="今日もかわいい">今日もかわいい</button>
+            <button type="button" data-sample="Moon girl">Moon girl</button>
+            <button type="button" data-sample="推ししか勝たん">推ししか勝たん</button>
+            <button type="button" data-sample="LOVE 123">LOVE 123</button>
+          </div>
+        </div>
+
+        <p class="unicode-note">出力はUnicode文字です。フォントファイルのインストールは不要ですが、アプリや端末によって一部の文字の見た目が変わる場合があります。</p>
+
+        <div class="style-tabs" data-style-tabs></div>
+        <div class="fancy-results-head">
+          <h2>変換結果</h2>
+          <span data-result-count>0 styles</span>
+        </div>
+        <div class="fancy-results" data-fancy-results></div>
+        <div class="fancy-recent" data-fancy-recent hidden></div>
+      </section>
+    </main>
+
+    <section class="seo-section">
+      <h2>おしゃれ文字変換とは</h2>
+      <p>おしゃれ文字変換は、入力した普通のテキストをUnicodeの装飾文字に変換してコピーできるツールです。小さい文字、丸文字、逆さ文字、太字、筆記体風、全角文字、かわいい囲み文字などを、SNSの名前やプロフィールに合わせて選べます。</p>
+      <p>ここで作る文字は画像ではなくテキストです。Instagram、X、LINE、Discord、TikTokなどに貼り付けやすく、プロフィール名、自己紹介、投稿の見出し、ステータスメッセージの雰囲気をすばやく変えられます。</p>
+      <div class="category-links" aria-label="関連する文字ツール">
+        <a href="/special-characters/">特殊文字コピペ</a>
+        <a href="/kaomoji/">顔文字コピペ</a>
+        <a href="/emoji-copy/">絵文字コピペ</a>
+        <a href="/emoji-combinations/">絵文字組み合わせ</a>
+        <a href="/slack-emoji-generator/">Slack絵文字ジェネレーター</a>
+      </div>
+
+      <h2>使いやすい変換タイプ</h2>
+      <div class="seo-grid">
+        <div class="seo-card"><strong>小さい文字</strong><p>上付き文字や小さめ英字は、名前のサブタイトル、プロフィールの一言、Discord名の装飾に向いています。</p></div>
+        <div class="seo-card"><strong>丸文字・囲み文字</strong><p>丸で囲まれた英数字や、かわいい括弧付きの文字は、やわらかい雰囲気の名前デコに使いやすいです。</p></div>
+        <div class="seo-card"><strong>逆さ文字</strong><p>逆さ文字は投稿やチャットのネタ、短いステータス、目を止めたい一言に向いています。</p></div>
+      </div>
+
+      <h2>特殊文字コピペとの違い</h2>
+      <p><a href="/special-characters/">特殊文字コピペ</a>は、ハート、星、矢印、ラインなどの記号を選んでコピーする素材集です。このページは、ユーザーが入力した名前や文章そのものを変換するジェネレーターです。記号で飾りたいときは特殊文字、言葉自体を変えたいときはおしゃれ文字変換が向いています。</p>
+
+      <h2>よくある質問</h2>
+      <h3>これはフォント変換ですか？</h3>
+      <p>一般的にはフォント変換と呼ばれることがありますが、実際にはUnicode文字への変換です。フォントファイルを作るツールではありません。</p>
+      <h3>InstagramやLINEで使えますか？</h3>
+      <p>多くのSNSやメッセージアプリで貼り付けて使えます。ただし、アプリや端末によって一部の文字の表示が変わる場合があります。</p>
+      <h3>日本語も変換できますか？</h3>
+      <p>日本語は太字や筆記体のような英字向け変換には対応しませんが、ハート囲み、キラキラ囲み、スペース入り、月フレームなどの装飾スタイルで使えます。</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/special-characters/"><strong>特殊文字コピペ</strong><span>ハート、星、矢印、ラインをコピー。</span></a>
+        <a class="related-card" href="/kaomoji/"><strong>顔文字コピペ</strong><span>かわいい顔文字を気分別に探す。</span></a>
+        <a class="related-card" href="/emoji-combinations/"><strong>絵文字組み合わせ</strong><span>SNS向けの絵文字セットをコピー。</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。 <a href="/guide.html">月文字ガイド</a></p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script>
+    window.MojiMoonFancyTextConfig = {
+      lang: 'ja',
+      slug: 'fancy-text-generator',
+      maxLength: 80,
+      categories: [
+        { id: 'popular', label: '人気' },
+        { id: 'cute', label: 'かわいい' },
+        { id: 'small', label: '小さい文字' },
+        { id: 'bold', label: '太字・斜体' },
+        { id: 'bubble', label: '丸文字' },
+        { id: 'upside', label: '逆さ文字' },
+        { id: 'gothic', label: 'ゴシック・筆記体' },
+        { id: 'aesthetic', label: '全角・装飾' },
+        { id: 'favorites', label: 'お気に入り' }
+      ],
+      ui: {
+        copy: 'コピー',
+        copied: 'コピー済み',
+        copiedToast: 'コピーしました',
+        empty: '文字を入力すると変換結果が表示されます。',
+        noResults: 'このタブに表示できるスタイルがありません。',
+        favoritesEmpty: 'お気に入りにしたスタイルがここに表示されます。',
+        favorite: 'お気に入りに追加',
+        removeFavorite: 'お気に入りから外す',
+        recentTitle: '最近コピーした文字',
+        clearRecent: '履歴を消去',
+        clear: 'クリア',
+        outputCount: (value) => `${value}件`,
+        chars: (value, limit) => `${value}/${limit}文字`
+      }
+    };
+  </script>
+  <script src="/assets/js/fancy-text-generator.js"></script>
+</body>
+</html>

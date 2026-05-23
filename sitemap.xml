@@ -206,6 +206,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://mojimoon.com/fancy-text-generator/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/fancy-text-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/fancy-text-generator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/fancy-text-generator/"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/en/fancy-text-generator/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/fancy-text-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/fancy-text-generator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/fancy-text-generator/"/>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://mojimoon.com/kaomoji/kawaii/</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
