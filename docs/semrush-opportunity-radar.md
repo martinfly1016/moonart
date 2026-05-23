@@ -29,6 +29,10 @@ Primary Semrush inputs:
 - related questions and phrase-match queries
 - country/language splits, especially US and JP
 
+Access runbook:
+
+- `docs/semrush-access-runbook.md`
+
 Competitor/source buckets:
 
 - emoji reference and emoji copy sites
