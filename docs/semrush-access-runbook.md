@@ -4,6 +4,12 @@ Use this runbook when Semrush access through `sem.3ue.co` expires.
 
 Do not store usernames, passwords, cookies, tokens, or account secrets in this repository.
 
+For remote sessions, prefer the Codex right-side preview browser. See:
+
+```text
+docs/in-app-browser-runbook.md
+```
+
 ## Login Flow
 
 1. Open Chrome.
