@@ -4,6 +4,8 @@ Beyond Lets-Emoji is the ongoing MojiMoon project for building a better emoji co
 
 The goal is not to copy lets-emoji.com text. The goal is to learn from its topic coverage and then present each topic as a faster, more useful, mobile-first copy experience.
 
+This project sits inside the broader [Semrush Opportunity Radar](./semrush-opportunity-radar.md), which continuously researches other tool-type search opportunities that can be integrated into MojiMoon.
+
 ## Principles
 
 - Tool first, article second.
