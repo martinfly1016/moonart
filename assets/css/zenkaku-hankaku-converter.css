@@ -1,0 +1,696 @@
+.zenkaku-page {
+  --zen-blue: #2563eb;
+  --zen-blue-dark: #1d4ed8;
+  --zen-teal: #0f766e;
+  --zen-amber: #d97706;
+  --zen-rose: #be123c;
+  --zen-ink: #172033;
+}
+
+.zenkaku-body {
+  padding-bottom: 0;
+}
+
+.zenkaku-body .toast {
+  z-index: 45;
+}
+
+.zen-hero {
+  background:
+    linear-gradient(135deg, rgba(20, 24, 39, 0.97), rgba(37, 99, 235, 0.9)),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.48), rgba(217, 119, 6, 0.28));
+}
+
+.zen-hero h1,
+.zen-hero .hero-copy {
+  max-width: min(860px, calc(100vw - 32px));
+  overflow-wrap: anywhere;
+}
+
+.zen-preview-strip {
+  width: min(100%, 900px, calc(100vw - 32px));
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.zen-preview-strip span {
+  min-width: 0;
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  overflow: hidden;
+  text-align: center;
+}
+
+.zen-wrap {
+  max-width: 1180px;
+  margin: -16px auto 0;
+  padding: 0 20px 48px;
+}
+
+.zen-app {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  align-items: start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.zen-workspace {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.zen-presets {
+  display: flex;
+  gap: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+  background: #f9fbff;
+  scrollbar-width: none;
+}
+
+.zen-presets::-webkit-scrollbar {
+  display: none;
+}
+
+.zen-preset {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.zen-preset:hover {
+  border-color: #93c5fd;
+  color: var(--zen-blue);
+}
+
+.zen-preset.active {
+  border-color: var(--zen-blue);
+  background: var(--zen-blue);
+  color: #fff;
+}
+
+.zen-editor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px;
+  background: #fbfcff;
+}
+
+.zen-panel {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.zen-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.zen-label-row label,
+.zen-label-row span:first-child {
+  color: var(--zen-ink);
+  font-weight: 900;
+}
+
+.zen-stat {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.zen-textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 210px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.65;
+  resize: vertical;
+}
+
+.zen-textarea:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.16);
+  border-color: #60a5fa;
+}
+
+.zen-output {
+  background: #f8fafc;
+}
+
+.zen-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.zen-secondary,
+.zen-copy {
+  min-width: 0;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.zen-secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+}
+
+.zen-secondary:hover:not(:disabled) {
+  border-color: #99f6e4;
+  color: var(--zen-teal);
+}
+
+.zen-copy {
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+}
+
+.zen-copy:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.zen-copy:disabled,
+.zen-secondary:disabled {
+  background: #e4e8f2;
+  color: #8a94a6;
+  cursor: not-allowed;
+}
+
+.zen-copy.copied,
+.zen-recent-latest.copied,
+.zen-recent-chips button.copied {
+  background: var(--success);
+  color: #fff;
+}
+
+.zen-samples {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.zen-samples::-webkit-scrollbar {
+  display: none;
+}
+
+.zen-samples button {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ecfeff;
+  color: #155e75;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.zen-samples button:hover {
+  border-color: #67e8f9;
+  background: #fff;
+}
+
+.zen-status-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 16px 16px;
+  background: #fbfcff;
+}
+
+.zen-status {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.zen-status strong {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.zen-status span {
+  display: block;
+  margin-top: 4px;
+  color: var(--zen-ink);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.zen-options {
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+.zen-options summary {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: var(--zen-ink);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.zen-option-grid {
+  display: grid;
+  gap: 10px;
+  padding: 0 16px 16px;
+}
+
+.zen-option-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.zen-option-row strong {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.zen-segments {
+  min-width: 0;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.zen-segments button {
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.zen-segments button.active {
+  border-color: var(--zen-teal);
+  background: #ccfbf1;
+  color: #134e4a;
+}
+
+.zen-note {
+  margin: 0;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+  background: #fff7ed;
+  color: #7c2d12;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.zen-recent {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  position: sticky;
+  top: 14px;
+  z-index: 30;
+  width: auto;
+  max-height: calc(100vh - 28px);
+  margin: 16px 16px 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.zen-recent[hidden] {
+  display: none;
+}
+
+.zen-recent:not(.is-open) .zen-recent-body {
+  display: none;
+}
+
+.zen-recent-bar {
+  min-height: 64px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px 8px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #f9fbff;
+}
+
+.zen-recent-toggle {
+  min-width: 0;
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.zen-recent-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: var(--zen-blue);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.zen-recent-title,
+.zen-recent-count,
+.zen-recent-action {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.zen-recent-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zen-recent-count {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.zen-recent-action {
+  color: var(--primary);
+  font-size: 13px;
+  display: none;
+}
+
+.zen-recent-latest {
+  min-width: 0;
+  min-height: 44px;
+  width: 92px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.zen-recent-latest:disabled {
+  background: #e4e8f2;
+  color: #8a94a6;
+  cursor: not-allowed;
+}
+
+.zen-recent-body {
+  max-height: calc(100vh - 92px);
+  overflow-y: auto;
+  padding: 12px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.zen-recent-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.zen-recent-head button {
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.zen-recent-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.zen-recent-chips button {
+  flex: 0 1 auto;
+  max-width: min(310px, 75vw);
+  min-height: 36px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--text);
+  font: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.zen-recent-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.zen-use-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.zen-use-card {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.zen-use-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.zen-use-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 920px) {
+  .zen-app {
+    grid-template-columns: minmax(0, 1fr) 300px;
+  }
+
+  .zen-editor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .zenkaku-body {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .zen-app {
+    display: block;
+  }
+
+  .zen-wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .zen-hero {
+    overflow: hidden;
+  }
+
+  .zen-hero .hero-inner {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .zen-hero h1,
+  .zen-hero .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .zen-preview-strip {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .zen-preview-strip span {
+    min-height: 44px;
+  }
+
+  .zen-presets {
+    padding: 12px;
+  }
+
+  .zen-editor-grid {
+    padding: 12px;
+  }
+
+  .zen-textarea {
+    min-height: 170px;
+  }
+
+  .zen-status-row {
+    grid-template-columns: 1fr;
+    padding: 0 12px 12px;
+  }
+
+  .zen-options summary,
+  .zen-note {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .zen-option-grid {
+    padding: 0 12px 12px;
+  }
+
+  .zen-option-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .zen-use-list {
+    grid-template-columns: 1fr;
+  }
+
+  .zen-recent {
+    position: fixed;
+    grid-column: auto;
+    grid-row: auto;
+    left: 10px;
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    top: auto;
+    width: auto;
+    max-height: min(54vh, 430px);
+    margin: 0;
+    border-color: #d6deeb;
+    border-radius: 18px;
+    background: #eef2f7;
+    box-shadow: 0 -18px 45px rgba(15, 23, 42, 0.18);
+    transition: transform 0.22s ease;
+    transform: translateY(calc(100% - 64px));
+  }
+
+  .zen-recent.is-open {
+    transform: translateY(0);
+  }
+
+  .zen-recent-bar {
+    border-bottom-color: #d6deeb;
+    background: rgba(241, 245, 249, 0.97);
+    backdrop-filter: blur(14px);
+    padding: 8px 9px 8px 12px;
+    gap: 8px;
+  }
+
+  .zen-recent-count {
+    display: none;
+  }
+
+  .zen-recent-action {
+    display: inline;
+  }
+
+  .zen-recent-latest {
+    width: 86px;
+  }
+
+  .zen-recent-body {
+    max-height: calc(min(54vh, 430px) - 64px);
+    background: #eef2f7;
+  }
+}
+
+@media (max-width: 520px) {
+  .zen-actions {
+    grid-template-columns: 1fr;
+  }
+}

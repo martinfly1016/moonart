@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全角・半角変換ツール | 英数字・カタカナ・記号を無料変換 - MojiMoon</title>
+  <meta name="description" content="全角から半角、半角から全角へリアルタイム変換できる無料ツール。英数字、カタカナ、記号、スペースを個別に選べます。フォーム入力、Excel、CSVの表記ゆれ整理に便利です。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/zenkaku-hankaku-converter/">
+  <link rel="alternate" hreflang="ja" href="https://mojimoon.com/zenkaku-hankaku-converter/">
+  <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/zenkaku-hankaku-converter/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="全角・半角変換ツール | MojiMoon">
+  <meta property="og:description" content="英数字・カタカナ・記号・スペースをリアルタイムで全角半角変換。コピーしてすぐ使えます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/zenkaku-hankaku-converter/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "全角・半角変換ツール",
+    "url": "https://mojimoon.com/zenkaku-hankaku-converter/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "description": "英数字、カタカナ、記号、スペースを全角から半角、半角から全角へ変換できる無料ツールです。"
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/zenkaku-hankaku-converter.css">
+</head>
+<body class="zenkaku-body">
+  <div class="tool-shell zenkaku-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+        </div>
+        <nav class="site-nav" aria-label="文字ツール">
+          <a href="/">月文字</a>
+          <a href="/fancy-text-generator/">おしゃれ文字</a>
+          <a href="/zenkaku-hankaku-converter/" aria-current="page">全角半角変換</a>
+          <a href="/emoji-copy/">絵文字コピペ</a>
+          <a href="/emoji-list/">絵文字一覧</a>
+          <a href="/kaomoji/">顔文字</a>
+          <a href="/special-characters/">特殊文字</a>
+          <a href="/emoji-combinations/">絵文字組み合わせ</a>
+          <a href="/slack-emoji-generator/">Slack絵文字</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero zen-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Zenkaku Hankaku Converter</p>
+        <h1>全角・半角変換ツール</h1>
+        <p class="hero-copy">英数字、カタカナ、記号、スペースをリアルタイムで変換。フォーム入力、Excel、CSV、原稿の表記ゆれをコピー前にすばやく整えられます。</p>
+        <div class="zen-preview-strip" aria-label="変換サンプル">
+          <span>ＡＢＣ１２３ → ABC123</span>
+          <span>ﾊﾝｶｸｶﾅ → ハンカクカナ</span>
+          <span>ｱｲﾃﾑ 価格￥１０００ → アイテム 価格¥1000</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="zen-wrap">
+      <section class="zen-app" data-zenkaku-converter aria-label="全角・半角変換ツール">
+        <div class="zen-workspace">
+          <div class="zen-presets" aria-label="変換プリセット">
+            <button class="zen-preset" type="button" data-preset="form">フォーム入力向け</button>
+            <button class="zen-preset" type="button" data-preset="toHalf">全角 → 半角</button>
+            <button class="zen-preset" type="button" data-preset="toFull">半角 → 全角</button>
+            <button class="zen-preset" type="button" data-preset="alnumHalf">英数字だけ半角</button>
+            <button class="zen-preset" type="button" data-preset="kanaFull">カナだけ全角</button>
+            <button class="zen-preset" type="button" data-preset="hiragana">すべてひらがな</button>
+            <button class="zen-preset" type="button" data-preset="katakana">すべてカタカナ</button>
+          </div>
+
+          <div class="zen-editor-grid">
+            <div class="zen-panel">
+              <div class="zen-label-row">
+                <label for="zen-input">変換するテキスト</label>
+                <span class="zen-stat" data-stat-input>0文字</span>
+              </div>
+              <textarea id="zen-input" class="zen-textarea" data-zen-input rows="8" placeholder="例：ＡＢＣ１２３、ﾊﾝｶｸｶﾅ、全角スペースを含む文章">ＡＢＣ１２３ ﾊﾝｶｸｶﾅ　価格￥１０００</textarea>
+              <div class="zen-samples" aria-label="サンプル">
+                <button type="button" data-sample="ＡＢＣ１２３ ﾊﾝｶｸｶﾅ　価格￥１０００">フォーム用</button>
+                <button type="button" data-sample="〒１００－０００１ 東京都千代田区１－１">住所</button>
+                <button type="button" data-sample="ｶﾀｶﾅとカタカナが混在しています">カナ混在</button>
+                <button type="button" data-sample="Excel　CSV　ＩＤ：００１２３">Excel</button>
+              </div>
+            </div>
+
+            <div class="zen-panel">
+              <div class="zen-label-row">
+                <span>変換結果</span>
+                <span class="zen-stat" data-stat-output>0文字</span>
+              </div>
+              <textarea class="zen-textarea zen-output" data-zen-output rows="8" readonly></textarea>
+              <div class="zen-actions">
+                <button class="zen-secondary" type="button" data-clear-input>クリア</button>
+                <button class="zen-secondary" type="button" data-swap-output>結果を入力へ</button>
+                <button class="zen-copy" type="button" data-copy-output>コピー</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="zen-status-row" aria-label="変換ステータス">
+            <div class="zen-status"><strong>入力</strong><span data-stat-input>0文字</span></div>
+            <div class="zen-status"><strong>出力</strong><span data-stat-output>0文字</span></div>
+            <div class="zen-status"><strong>変更</strong><span data-stat-changed>変更なし</span></div>
+          </div>
+
+          <details class="zen-options">
+            <summary>詳細設定</summary>
+            <div class="zen-option-grid">
+              <div class="zen-option-row">
+                <strong>英字</strong>
+                <div class="zen-segments">
+                  <button type="button" data-option="letters" data-value="keep">そのまま</button>
+                  <button type="button" data-option="letters" data-value="half">半角</button>
+                  <button type="button" data-option="letters" data-value="full">全角</button>
+                </div>
+              </div>
+              <div class="zen-option-row">
+                <strong>数字</strong>
+                <div class="zen-segments">
+                  <button type="button" data-option="numbers" data-value="keep">そのまま</button>
+                  <button type="button" data-option="numbers" data-value="half">半角</button>
+                  <button type="button" data-option="numbers" data-value="full">全角</button>
+                </div>
+              </div>
+              <div class="zen-option-row">
+                <strong>記号</strong>
+                <div class="zen-segments">
+                  <button type="button" data-option="symbols" data-value="keep">そのまま</button>
+                  <button type="button" data-option="symbols" data-value="half">半角</button>
+                  <button type="button" data-option="symbols" data-value="full">全角</button>
+                </div>
+              </div>
+              <div class="zen-option-row">
+                <strong>スペース</strong>
+                <div class="zen-segments">
+                  <button type="button" data-option="spaces" data-value="keep">そのまま</button>
+                  <button type="button" data-option="spaces" data-value="half">半角</button>
+                  <button type="button" data-option="spaces" data-value="full">全角</button>
+                </div>
+              </div>
+              <div class="zen-option-row">
+                <strong>カタカナ幅</strong>
+                <div class="zen-segments">
+                  <button type="button" data-option="katakana" data-value="keep">そのまま</button>
+                  <button type="button" data-option="katakana" data-value="half">半角</button>
+                  <button type="button" data-option="katakana" data-value="full">全角</button>
+                </div>
+              </div>
+              <div class="zen-option-row">
+                <strong>かな種別</strong>
+                <div class="zen-segments">
+                  <button type="button" data-option="kana" data-value="keep">そのまま</button>
+                  <button type="button" data-option="kana" data-value="hiragana">ひらがな</button>
+                  <button type="button" data-option="kana" data-value="katakana">カタカナ</button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <p class="zen-note">すべてブラウザ内で処理されます。入力したテキストはサーバーに送信されません。</p>
+        </div>
+
+        <aside class="zen-recent" data-zen-recent hidden></aside>
+      </section>
+    </main>
+
+    <section class="seo-section">
+      <h2>全角・半角変換でできること</h2>
+      <p>このツールは、全角英数字、半角英数字、全角カタカナ、半角カタカナ、記号、スペースをまとめて変換できます。日本語フォームの入力指定、ExcelやCSVのデータ整理、原稿の表記ゆれ修正に向いています。</p>
+      <div class="zen-use-list">
+        <div class="zen-use-card"><strong>フォーム入力</strong><p>「英数字は半角」「フリガナは全角カナ」などの指定に合わせて、送信前のテキストを整えられます。</p></div>
+        <div class="zen-use-card"><strong>Excel・CSV</strong><p>ID、電話番号、郵便番号、商品名に混ざった全角数字や半角カナをまとめて正規化できます。</p></div>
+        <div class="zen-use-card"><strong>原稿・校正</strong><p>全角スペース、記号、英数字の表記ゆれを確認しながら、コピーしてすぐ貼り付けられます。</p></div>
+      </div>
+
+      <h2>使い方</h2>
+      <p>テキストを貼り付けると、選択中のプリセットに合わせて変換結果が自動で表示されます。よく使う場合は「フォーム入力向け」「全角 → 半角」「半角 → 全角」から選び、細かく調整したい場合は詳細設定で文字種ごとに指定してください。</p>
+
+      <h2>よくある質問</h2>
+      <h3>半角カタカナの濁点も変換できますか？</h3>
+      <p>はい。たとえば「ﾊﾞ」は全角カタカナの「バ」に変換されます。逆に全角カタカナを半角にする場合も、濁点・半濁点を含めて変換します。</p>
+      <h3>全角スペースも変換できますか？</h3>
+      <p>はい。詳細設定の「スペース」で、全角スペースを半角スペースへ、または半角スペースを全角スペースへ変換できます。</p>
+      <h3>ExcelのASC関数やJIS関数との違いは？</h3>
+      <p>Excelの関数はシート内で便利ですが、このツールでは英字、数字、記号、スペース、カタカナ幅を個別に選べます。Excelに貼る前のテキスト整理にも使えます。</p>
+      <h3>入力したテキストは保存されますか？</h3>
+      <p>変換処理はブラウザ内で完結します。コピー履歴はこの端末のブラウザにだけ保存され、履歴を消去できます。</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/fancy-text-generator/"><strong>おしゃれ文字変換</strong><span>SNS向けのかわいい文字に変換。</span></a>
+        <a class="related-card" href="/special-characters/"><strong>特殊文字コピペ</strong><span>ハート、星、矢印、ラインをコピー。</span></a>
+        <a class="related-card" href="/emoji-copy/"><strong>絵文字コピペ</strong><span>カテゴリ別に絵文字を探してコピー。</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。 <a href="/guide.html">月文字ガイド</a></p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script src="/assets/js/zenkaku-hankaku-converter.js"></script>
+</body>
+</html>
