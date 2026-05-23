@@ -27,6 +27,13 @@
     favorite: 'Favorite style',
     removeFavorite: 'Remove favorite',
     recentTitle: 'Recently copied',
+    recentEmpty: 'Copied text will appear here.',
+    recentCount: (value) => `${value} saved`,
+    openRecent: 'Open recently copied text',
+    closeRecent: 'Close recently copied text',
+    open: 'Open',
+    close: 'Close',
+    copyLatest: 'Copy latest',
     clearRecent: 'Clear',
     clear: 'Clear',
     chars: (value, limit) => `${value}/${limit}`,
@@ -50,6 +57,8 @@
   let activeCategory = categories[0]?.id || 'popular';
   let favorites = readStoredList(favoriteKey);
   let recent = readStoredList(recentKey);
+  const desktopQuery = window.matchMedia('(min-width: 721px)');
+  let recentOpen = desktopQuery.matches;
   let inputTrackTimer;
 
   const superscriptMap = {
@@ -638,11 +647,48 @@
   function renderRecent() {
     if (!recentWrap) return;
     recentWrap.innerHTML = '';
+    recentWrap.hidden = false;
+    recentWrap.classList.toggle('is-open', recentOpen);
+    recentWrap.classList.toggle('is-empty', !recent.length);
+    recentWrap.setAttribute('aria-label', ui.recentTitle);
+
+    const bar = document.createElement('div');
+    bar.className = 'fancy-recent-bar';
+
+    const toggle = document.createElement('button');
+    toggle.className = 'fancy-recent-toggle';
+    toggle.type = 'button';
+    toggle.dataset.toggleRecent = '';
+    toggle.setAttribute('aria-expanded', recentOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', recentOpen ? ui.closeRecent : ui.openRecent);
+    toggle.innerHTML = `
+      <span class="fancy-recent-icon" aria-hidden="true">${recentOpen ? '⌄' : '⌃'}</span>
+      <span class="fancy-recent-title">${ui.recentTitle}</span>
+      <span class="fancy-recent-count">${recent.length ? ui.recentCount(recent.length) : ui.recentEmpty}</span>
+      <span class="fancy-recent-action">${recentOpen ? ui.close : ui.open}</span>
+    `;
+
+    const latest = document.createElement('button');
+    latest.className = 'fancy-recent-latest';
+    latest.type = 'button';
+    latest.dataset.copyLatest = '';
+    latest.disabled = !recent.length;
+    latest.textContent = ui.copyLatest;
+    if (recent[0]) latest.dataset.recentValue = recent[0];
+    bar.append(toggle, latest);
+
+    const body = document.createElement('div');
+    body.className = 'fancy-recent-body';
+
     if (!recent.length) {
-      recentWrap.hidden = true;
+      const empty = document.createElement('p');
+      empty.className = 'fancy-recent-empty';
+      empty.textContent = ui.recentEmpty;
+      body.appendChild(empty);
+      recentWrap.append(bar, body);
       return;
     }
-    recentWrap.hidden = false;
+
     const head = document.createElement('div');
     head.className = 'fancy-recent-head';
     const title = document.createElement('strong');
@@ -662,7 +708,8 @@
       chip.textContent = item;
       chips.appendChild(chip);
     });
-    recentWrap.append(head, chips);
+    body.append(head, chips);
+    recentWrap.append(bar, body);
   }
 
   function toggleFavorite(styleId) {
@@ -709,14 +756,21 @@
   });
 
   recentWrap?.addEventListener('click', (event) => {
+    if (event.target.closest('[data-toggle-recent]')) {
+      recentOpen = !recentOpen;
+      renderRecent();
+      track('recent_panel_toggle', { open: recentOpen });
+      return;
+    }
     if (event.target.closest('[data-clear-recent]')) {
       recent = [];
       writeStoredList(recentKey, recent);
+      recentOpen = false;
       renderRecent();
       track('draft_clear_history');
       return;
     }
-    const button = event.target.closest('[data-recent-value]');
+    const button = event.target.closest('[data-recent-value], [data-copy-latest]');
     if (!button) return;
     copyText(button.dataset.recentValue, button);
     track('recent_copy', { output_length: button.dataset.recentValue.length });
@@ -737,6 +791,11 @@
     input.value = '';
     input.dispatchEvent(new Event('input'));
     input.focus();
+  });
+
+  desktopQuery.addEventListener('change', (event) => {
+    recentOpen = event.matches;
+    renderRecent();
   });
 
   setupSamples();
