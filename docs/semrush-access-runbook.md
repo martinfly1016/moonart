@@ -10,9 +10,17 @@ For remote sessions, prefer the Codex right-side preview browser. See:
 docs/in-app-browser-runbook.md
 ```
 
+## Browser Research Principles
+
+- Prefer DOM/text extraction over screenshots for keyword metrics and page data.
+- Use screenshots only when DOM/text extraction is unavailable or when a visual layout check is truly needed.
+- Reuse one research tab for keyword pages instead of opening a new tab for every query.
+- Close temporary research tabs when they are no longer needed.
+- Do not keep duplicate Semrush sessions open across Chrome and the Codex in-app browser.
+
 ## Login Flow
 
-1. Open Chrome.
+1. Open the available browser surface. Prefer the Codex in-app browser when it is available; otherwise use Chrome.
 2. Go to:
 
 ```text
