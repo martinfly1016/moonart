@@ -26,12 +26,20 @@ Emoji copy topic pages:
 - `/emoji-copy/tear/`
 - `/emoji-copy/smile/`
 - `/emoji-copy/hand-sign/`
+- `/emoji-copy/flower/`
+- `/emoji-copy/star/`
+- `/emoji-copy/thank-you/`
+- `/emoji-copy/sorry/`
 - `/en/emoji-copy/heart/`
 - `/en/emoji-copy/kawaii/`
 - `/en/emoji-copy/sparkle/`
 - `/en/emoji-copy/tear/`
 - `/en/emoji-copy/smile/`
 - `/en/emoji-copy/hand-sign/`
+- `/en/emoji-copy/flower/`
+- `/en/emoji-copy/star/`
+- `/en/emoji-copy/thank-you/`
+- `/en/emoji-copy/sorry/`
 
 Shared experience:
 
@@ -89,10 +97,8 @@ Useful signals:
 
 High priority:
 
-- `flower emoji copy` / `花絵文字コピペ`
-- `star emoji copy` / `星・月絵文字コピペ`
-- `bowing / sorry emoji` / `謝る・土下座絵文字`
-- `thank you emoji` / `ありがとう絵文字`
+- Expand winning topic pages with query-specific copy after GSC data appears.
+- Add internal links from related tools to the strongest new topics.
 
 Medium priority:
 

@@ -12,12 +12,20 @@ Default tracked set:
 - `/emoji-copy/tear/`
 - `/emoji-copy/smile/`
 - `/emoji-copy/hand-sign/`
+- `/emoji-copy/flower/`
+- `/emoji-copy/star/`
+- `/emoji-copy/thank-you/`
+- `/emoji-copy/sorry/`
 - `/en/emoji-copy/heart/`
 - `/en/emoji-copy/kawaii/`
 - `/en/emoji-copy/sparkle/`
 - `/en/emoji-copy/tear/`
 - `/en/emoji-copy/smile/`
 - `/en/emoji-copy/hand-sign/`
+- `/en/emoji-copy/flower/`
+- `/en/emoji-copy/star/`
+- `/en/emoji-copy/thank-you/`
+- `/en/emoji-copy/sorry/`
 
 Run:
 

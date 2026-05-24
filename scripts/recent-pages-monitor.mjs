@@ -27,12 +27,20 @@ const DEFAULT_PAGES = [
   { path: '/emoji-copy/tear/', label: 'Tear emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/smile/', label: 'Smile emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/hand-sign/', label: 'Hand sign emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/flower/', label: 'Flower emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/star/', label: 'Star emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/thank-you/', label: 'Thank you emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/sorry/', label: 'Sorry emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/heart/', label: 'Heart emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/kawaii/', label: 'Cute emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/sparkle/', label: 'Sparkle emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/tear/', label: 'Tear emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/smile/', label: 'Smile emoji', locale: 'en', group: 'emoji-copy-topic' },
-  { path: '/en/emoji-copy/hand-sign/', label: 'Hand sign emoji', locale: 'en', group: 'emoji-copy-topic' }
+  { path: '/en/emoji-copy/hand-sign/', label: 'Hand sign emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/flower/', label: 'Flower emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/star/', label: 'Star emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/thank-you/', label: 'Thank you emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/sorry/', label: 'Sorry emoji', locale: 'en', group: 'emoji-copy-topic' }
 ];
 
 function printHelp() {
