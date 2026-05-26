@@ -29,6 +29,38 @@
     "description": "英数字、カタカナ、記号、スペースを全角から半角、半角から全角へ変換できる無料ツールです。"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "半角カタカナの濁点も変換できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい。半角カタカナの濁点・半濁点を含めて全角カタカナへ変換できます。全角カタカナを半角に戻す変換にも対応しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "全角スペースも変換できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい。詳細設定のスペース項目で、全角スペースを半角スペースへ、または半角スペースを全角スペースへ変換できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ExcelのASC関数やJIS関数との違いは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excel関数はシート内の変換に便利ですが、このツールでは英字、数字、記号、スペース、カタカナ幅を個別に選び、貼り付け前の文章をブラウザ上で整えられます。"
+        }
+      }
+    ]
+  }
+  </script>
   <script src="/assets/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/assets/css/text-tools.css">
   <link rel="stylesheet" href="/assets/css/zenkaku-hankaku-converter.css">
@@ -187,6 +219,20 @@
 
       <h2>使い方</h2>
       <p>テキストを貼り付けると、選択中のプリセットに合わせて変換結果が自動で表示されます。よく使う場合は「フォーム入力向け」「全角 → 半角」「半角 → 全角」から選び、細かく調整したい場合は詳細設定で文字種ごとに指定してください。</p>
+
+      <h2>用途別の変換例</h2>
+      <div class="zen-use-list">
+        <div class="zen-use-card"><strong>会員登録フォーム</strong><p>「ＡＢＣ１２３」や「０９０－１２３４－５６７８」のように全角で入力された英数字を、送信前に半角へ整えます。</p></div>
+        <div class="zen-use-card"><strong>住所・氏名データ</strong><p>郵便番号、番地、フリガナに混ざった全角数字や半角カナを、CSVへ貼る前にそろえられます。</p></div>
+        <div class="zen-use-card"><strong>SNS・原稿整理</strong><p>全角スペース、記号、カタカナ幅を確認しながら、読みやすい表記に統一できます。</p></div>
+      </div>
+
+      <div class="category-links">
+        <a href="/fancy-text-generator/">おしゃれ文字変換</a>
+        <a href="/special-characters/">特殊文字コピペ</a>
+        <a href="/emoji-copy/">絵文字コピペ</a>
+        <a href="/slack-emoji-generator/">Slack絵文字ジェネレーター</a>
+      </div>
 
       <h2>よくある質問</h2>
       <h3>半角カタカナの濁点も変換できますか？</h3>

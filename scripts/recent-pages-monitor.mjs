@@ -21,6 +21,9 @@ const DEFAULT_GSC_TOKEN = path.join('.secrets', 'google-oauth-token.json');
 const DEFAULT_GA_TOKEN = path.join('.secrets', 'google-analytics-token.json');
 
 const DEFAULT_PAGES = [
+  { path: '/zenkaku-hankaku-converter/', label: 'Zenkaku hankaku converter', locale: 'ja', group: 'gsc-indexing-followup' },
+  { path: '/emoji-list/', label: 'Emoji list', locale: 'ja', group: 'gsc-indexing-followup' },
+  { path: '/kaomoji/love/', label: 'Love kaomoji', locale: 'ja', group: 'gsc-indexing-followup' },
   { path: '/emoji-copy/heart/', label: 'Heart emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/kawaii/', label: 'Kawaii emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/sparkle/', label: 'Sparkle emoji', locale: 'ja', group: 'emoji-copy-topic' },

@@ -6,6 +6,9 @@ This monitor tracks newly shipped page clusters with both Google Search Console 
 
 Default tracked set:
 
+- `/zenkaku-hankaku-converter/`
+- `/emoji-list/`
+- `/kaomoji/love/`
 - `/emoji-copy/heart/`
 - `/emoji-copy/kawaii/`
 - `/emoji-copy/sparkle/`
