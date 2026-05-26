@@ -31,6 +31,9 @@ const DEFAULT_PAGES = [
   { path: '/emoji-copy/star/', label: 'Star emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/thank-you/', label: 'Thank you emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/sorry/', label: 'Sorry emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/warning/', label: 'Warning emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/birthday/', label: 'Birthday emoji', locale: 'ja', group: 'emoji-copy-topic' },
+  { path: '/emoji-copy/good-night/', label: 'Good night emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/heart/', label: 'Heart emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/kawaii/', label: 'Cute emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/sparkle/', label: 'Sparkle emoji', locale: 'en', group: 'emoji-copy-topic' },
@@ -40,7 +43,10 @@ const DEFAULT_PAGES = [
   { path: '/en/emoji-copy/flower/', label: 'Flower emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/star/', label: 'Star emoji', locale: 'en', group: 'emoji-copy-topic' },
   { path: '/en/emoji-copy/thank-you/', label: 'Thank you emoji', locale: 'en', group: 'emoji-copy-topic' },
-  { path: '/en/emoji-copy/sorry/', label: 'Sorry emoji', locale: 'en', group: 'emoji-copy-topic' }
+  { path: '/en/emoji-copy/sorry/', label: 'Sorry emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/warning/', label: 'Warning emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/birthday/', label: 'Birthday emoji', locale: 'en', group: 'emoji-copy-topic' },
+  { path: '/en/emoji-copy/good-night/', label: 'Good night emoji', locale: 'en', group: 'emoji-copy-topic' }
 ];
 
 function printHelp() {

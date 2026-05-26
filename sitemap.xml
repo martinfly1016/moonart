@@ -248,6 +248,60 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mojimoon.com/emoji-copy/warning/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/emoji-copy/warning/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/emoji-copy/warning/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/emoji-copy/warning/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/en/emoji-copy/warning/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/emoji-copy/warning/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/emoji-copy/warning/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/emoji-copy/warning/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/emoji-copy/birthday/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/emoji-copy/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/emoji-copy/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/emoji-copy/birthday/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/en/emoji-copy/birthday/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/emoji-copy/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/emoji-copy/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/emoji-copy/birthday/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/emoji-copy/good-night/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/emoji-copy/good-night/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/emoji-copy/good-night/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/emoji-copy/good-night/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/en/emoji-copy/good-night/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/emoji-copy/good-night/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mojimoon.com/en/emoji-copy/good-night/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/emoji-copy/good-night/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mojimoon.com/emoji-list/</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>

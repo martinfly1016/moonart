@@ -16,6 +16,9 @@ Default tracked set:
 - `/emoji-copy/star/`
 - `/emoji-copy/thank-you/`
 - `/emoji-copy/sorry/`
+- `/emoji-copy/warning/`
+- `/emoji-copy/birthday/`
+- `/emoji-copy/good-night/`
 - `/en/emoji-copy/heart/`
 - `/en/emoji-copy/kawaii/`
 - `/en/emoji-copy/sparkle/`
@@ -26,6 +29,9 @@ Default tracked set:
 - `/en/emoji-copy/star/`
 - `/en/emoji-copy/thank-you/`
 - `/en/emoji-copy/sorry/`
+- `/en/emoji-copy/warning/`
+- `/en/emoji-copy/birthday/`
+- `/en/emoji-copy/good-night/`
 
 Run:
 

@@ -30,6 +30,9 @@ Emoji copy topic pages:
 - `/emoji-copy/star/`
 - `/emoji-copy/thank-you/`
 - `/emoji-copy/sorry/`
+- `/emoji-copy/warning/`
+- `/emoji-copy/birthday/`
+- `/emoji-copy/good-night/`
 - `/en/emoji-copy/heart/`
 - `/en/emoji-copy/kawaii/`
 - `/en/emoji-copy/sparkle/`
@@ -40,6 +43,9 @@ Emoji copy topic pages:
 - `/en/emoji-copy/star/`
 - `/en/emoji-copy/thank-you/`
 - `/en/emoji-copy/sorry/`
+- `/en/emoji-copy/warning/`
+- `/en/emoji-copy/birthday/`
+- `/en/emoji-copy/good-night/`
 
 Shared experience:
 
@@ -102,10 +108,7 @@ High priority:
 
 Medium priority:
 
-- `warning emoji` / `警告マーク絵文字`
-- `flag emoji` / `国旗絵文字`
-- `birthday emoji` / `誕生日絵文字`
-- `good night emoji` / `おやすみ絵文字`
+- `flag emoji` / `国旗絵文字` needs a fuller country/region data model before shipping.
 
 Content direction:
 

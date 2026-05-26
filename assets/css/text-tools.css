@@ -246,9 +246,10 @@ a {
 
 .quick-filter-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 0 14px 14px;
-  overflow-x: auto;
+  overflow-x: visible;
   border-bottom: 1px solid var(--line);
   background: #fff;
   scrollbar-width: none;
@@ -612,8 +613,9 @@ a {
 
 .topic-nav-inner {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
+  overflow-x: visible;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -818,6 +820,8 @@ a {
   }
 
   .topic-nav-inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding: 8px;
   }
 
@@ -832,6 +836,8 @@ a {
   }
 
   .quick-filter-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding: 0 12px 12px;
     gap: 7px;
   }
