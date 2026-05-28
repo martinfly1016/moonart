@@ -83,17 +83,19 @@
   .site-nav {
     width: 100%;
     max-width: 100%;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    gap: 6px;
+    display: grid !important;
+    grid-template-columns: repeat(3, max-content);
+    align-items: center;
+    justify-content: start !important;
+    gap: 5px;
     padding-bottom: 0 !important;
   }
 
   .site-nav > a,
   .site-nav summary {
-    min-height: 40px;
-    padding: 8px 11px;
-    font-size: 13px;
+    min-height: 38px;
+    padding: 7px 7px;
+    font-size: 12px;
   }
 
   .site-nav .nav-menu {
