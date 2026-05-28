@@ -21,6 +21,12 @@
     recentTitle: '最近使ったもの',
     clearRecent: '履歴を消去',
     clearRecentToast: '履歴を消去しました',
+    favoriteTitle: '保存した組み合わせ',
+    favoriteDraft: '保存',
+    favoriteEmpty: '保存する内容がありません',
+    favoriteSavedToast: '保存しました',
+    clearFavorites: '保存を消去',
+    clearFavoritesToast: '保存を消去しました',
     addedToast: '草稿に追加しました',
     charCount: (count) => `${count}文字`,
     charLimitCount: (count, limit) => `${count}/${limit}文字`,
@@ -40,13 +46,19 @@
   const pagination = document.createElement('div');
   const mobileQuery = window.matchMedia('(max-width: 760px)');
   const storageKey = `mojimoon:${data.slug}:recent`;
+  const globalRecentKey = 'mojimoon:copy:recent';
+  const favoritesKey = 'mojimoon:copy:favorites';
   const recentLimit = Number(data.recentLimit || 12);
+  const favoritesLimit = Number(data.favoritesLimit || 24);
+  const useGlobalRecent = Boolean(data.useGlobalRecent);
+  const enableFavorites = Boolean(data.enableFavorites);
   const configuredCategory = document.body.dataset.defaultCategory;
   const configuredQuery = document.body.dataset.defaultQuery || '';
   const pageSize = Number(data.pageSize || 48);
   const draftMaxLength = Number(data.draftMaxLength || 0);
   let quickFilterWrap;
   let draftMeta;
+  let favoriteDraft;
   let mobileDraftSheet;
   let currentPage = 1;
   let activeCategory = data.categories.some((category) => category.id === configuredCategory)
@@ -62,9 +74,31 @@
     return String(value || '').toLowerCase().trim();
   }
 
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, (character) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[character]));
+  }
+
   function getRecent() {
+    return getStoredList(storageKey, recentLimit);
+  }
+
+  function getGlobalRecent() {
+    return getStoredList(globalRecentKey, recentLimit);
+  }
+
+  function getFavorites() {
+    return getStoredList(favoritesKey, favoritesLimit);
+  }
+
+  function getStoredList(key, limit) {
     try {
-      return JSON.parse(localStorage.getItem(storageKey) || '[]').slice(0, recentLimit);
+      return JSON.parse(localStorage.getItem(key) || '[]').slice(0, limit);
     } catch (error) {
       return [];
     }
@@ -72,6 +106,14 @@
 
   function setRecent(value) {
     localStorage.setItem(storageKey, JSON.stringify(value.slice(0, recentLimit)));
+  }
+
+  function setGlobalRecent(value) {
+    localStorage.setItem(globalRecentKey, JSON.stringify(value.slice(0, recentLimit)));
+  }
+
+  function setFavorites(value) {
+    localStorage.setItem(favoritesKey, JSON.stringify(value.slice(0, favoritesLimit)));
   }
 
   function showToast(message) {
@@ -167,7 +209,27 @@
     const recent = getRecent().filter((item) => item !== text);
     recent.unshift(text);
     setRecent(recent);
+    const globalRecent = getGlobalRecent().filter((item) => item !== text);
+    globalRecent.unshift(text);
+    setGlobalRecent(globalRecent);
     renderRecent();
+  }
+
+  function saveDraftFavorite() {
+    const text = draft.value.trim();
+    if (!text) {
+      showToast(ui.favoriteEmpty);
+      return;
+    }
+    const favorites = getFavorites().filter((item) => item !== text);
+    favorites.unshift(text);
+    setFavorites(favorites);
+    renderRecent();
+    trackToolEvent('draft_favorite', {
+      draft_length: text.length,
+      source: 'composer'
+    });
+    showToast(ui.favoriteSavedToast);
   }
 
   function appendToDraft(text, options = {}) {
@@ -257,22 +319,49 @@
   }
 
   function renderRecent() {
-    const recent = getRecent();
-    if (!recent.length) {
+    const recent = useGlobalRecent ? getGlobalRecent() : getRecent();
+    const favorites = enableFavorites ? getFavorites() : [];
+    if (!recent.length && !favorites.length) {
       recentList.innerHTML = '';
       return;
     }
     recentList.innerHTML = `
+      ${favorites.length ? `
+      <div class="recent-list-head">
+        <span>${ui.favoriteTitle}</span>
+        <button class="recent-clear" type="button" data-clear-favorites>${ui.clearFavorites}</button>
+      </div>
+      <div class="recent-chip-grid favorite-chip-grid">
+        ${favorites.map((item) => `
+      <button class="recent-chip favorite-chip" type="button" data-favorite-copy="${encodeURIComponent(item)}">${escapeHtml(item)}</button>
+        `).join('')}
+      </div>
+      ` : ''}
+      ${recent.length ? `
       <div class="recent-list-head">
         <span>${ui.recentTitle}</span>
         <button class="recent-clear" type="button" data-clear-recent>${ui.clearRecent}</button>
       </div>
       <div class="recent-chip-grid">
         ${recent.map((item) => `
-      <button class="recent-chip" type="button" data-recent-copy="${encodeURIComponent(item)}">${item}</button>
+      <button class="recent-chip" type="button" data-recent-copy="${encodeURIComponent(item)}">${escapeHtml(item)}</button>
         `).join('')}
       </div>
+      ` : ''}
     `;
+  }
+
+  function setupFavorites() {
+    if (!enableFavorites || !draft || !copyDraft) return;
+    const row = copyDraft.closest('.button-row');
+    if (!row) return;
+    row.classList.add('has-favorite');
+    favoriteDraft = document.createElement('button');
+    favoriteDraft.className = 'secondary-btn favorite-draft-btn';
+    favoriteDraft.type = 'button';
+    favoriteDraft.dataset.favoriteDraft = '';
+    favoriteDraft.textContent = ui.favoriteDraft;
+    row.appendChild(favoriteDraft);
   }
 
   function setupCollapsibleSeo() {
@@ -334,12 +423,29 @@
   });
 
   recentList.addEventListener('click', (event) => {
+    const clearFavorites = event.target.closest('[data-clear-favorites]');
+    if (clearFavorites) {
+      setFavorites([]);
+      renderRecent();
+      trackToolEvent('favorites_clear');
+      showToast(ui.clearFavoritesToast);
+      return;
+    }
     const clearRecent = event.target.closest('[data-clear-recent]');
     if (clearRecent) {
-      setRecent([]);
+      if (useGlobalRecent) setGlobalRecent([]);
+      else setRecent([]);
       renderRecent();
       trackToolEvent('draft_clear_history');
       showToast(ui.clearRecentToast);
+      return;
+    }
+    const favoriteButton = event.target.closest('[data-favorite-copy]');
+    if (favoriteButton) {
+      appendToDraft(decodeURIComponent(favoriteButton.dataset.favoriteCopy), {
+        source: 'favorite',
+        category: activeCategory
+      });
       return;
     }
     const button = event.target.closest('[data-recent-copy]');
@@ -382,6 +488,9 @@
     updateComposerState();
     trackToolEvent('draft_clear');
   });
+
+  setupFavorites();
+  favoriteDraft?.addEventListener('click', saveDraftFavorite);
 
   draft.addEventListener('input', updateComposerState);
 

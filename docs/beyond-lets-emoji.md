@@ -6,6 +6,34 @@ The goal is not to copy lets-emoji.com text. The goal is to learn from its topic
 
 This project sits inside the broader [Semrush Opportunity Radar](./semrush-opportunity-radar.md), which continuously researches other tool-type search opportunities that can be integrated into MojiMoon.
 
+## Reference Competitors
+
+These sites are reference targets for Beyond Lets-Emoji because they prove that blog-style pages can win large Japanese search traffic in emoji, kaomoji, special character, and SNS decoration queries.
+
+Reference URLs to track:
+
+- `https://hatarakitakunai.blog/`
+- `https://hatarakitakunai.blog/post-sitemap.xml`
+- `https://hatarakitakunai.blog/feed/`
+- `https://hatarakitakunai.blog/kaomoji_souko/`
+- `https://hatarakitakunai.blog/yumekawa/`
+- `https://hatarakitakunai.blog/cute_set/`
+- `https://fasme.asia/lifestyle/culture/tokusyumozi-fasme4941/`
+
+Why they matter:
+
+- `hatarakitakunai.blog` is a focused long-tail content library for kaomoji, ASCII art, symbols, and "ryosangata otaku" cute aesthetics. Its public Yoast sitemap exposes hundreds of post URLs, and the RSS feed shows continued 2026 publishing.
+- `hatarakitakunai.blog` pages use a repeatable formula: topic-specific title, short intro, visible item count, many copyable items, related posts, and a storage/history utility.
+- `fasme.asia` is broader lifestyle media, but its special-character page ranks with a single large editorial roundup covering cute kaomoji, symbols, divider lines, arrows, hearts, stars, ribbons, flowers, message symbols, and color-based iPhone emoji combinations.
+- Public Semrush snapshots show both domains receiving large Japan-heavy organic traffic from terms that overlap MojiMoon's target set, including `可愛い 絵文字`, `絵文字 コピペ`, `絵文字 キラキラ`, `顔 文字 かわいい`, and `可愛い 顔 文字`.
+
+MojiMoon response:
+
+- Do not copy their collections verbatim.
+- Beat blog pages with an actual copy workflow: search, filter, card actions, draft composer, recent history, mobile bottom sheet, and cross-links between emoji, kaomoji, special characters, and combinations.
+- Use their successful topics as demand signals, then create structured tool pages and original curated datasets.
+- Track their sitemaps/RSS monthly to catch new topic patterns early.
+
 ## Principles
 
 - Tool first, article second.
@@ -55,6 +83,18 @@ Shared experience:
 - mobile bottom copy draft sheet
 - recent history
 - sitemap + hreflang
+
+Kawaii copy workspace:
+
+- `/kawaii-copy/`
+- `/kawaii-copy/yumekawa/`
+- `/kawaii-copy/name-frame/`
+- `/kawaii-copy/divider-line/`
+- `/kawaii-copy/ribbon/`
+- `/kawaii-copy/ryosangata-otaku/`
+- `/kawaii-copy/food/`
+
+This batch intentionally ships Japanese pages first because the newly added reference competitors and demand signals are Japan-heavy. The workspace adds a cross-tool copy flow for face marks, symbols, dividers, name frames, emoji combinations, global recent history, and saved drafts.
 
 ## Measurement
 

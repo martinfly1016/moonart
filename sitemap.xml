@@ -302,6 +302,50 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mojimoon.com/kawaii-copy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/kawaii-copy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/kawaii-copy/"/>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kawaii-copy/yumekawa/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kawaii-copy/name-frame/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kawaii-copy/divider-line/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kawaii-copy/ribbon/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kawaii-copy/ryosangata-otaku/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kawaii-copy/food/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mojimoon.com/emoji-list/</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>

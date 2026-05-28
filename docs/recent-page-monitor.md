@@ -9,6 +9,13 @@ Default tracked set:
 - `/zenkaku-hankaku-converter/`
 - `/emoji-list/`
 - `/kaomoji/love/`
+- `/kawaii-copy/`
+- `/kawaii-copy/yumekawa/`
+- `/kawaii-copy/name-frame/`
+- `/kawaii-copy/divider-line/`
+- `/kawaii-copy/ribbon/`
+- `/kawaii-copy/ryosangata-otaku/`
+- `/kawaii-copy/food/`
 - `/emoji-copy/heart/`
 - `/emoji-copy/kawaii/`
 - `/emoji-copy/sparkle/`
