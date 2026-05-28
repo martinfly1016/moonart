@@ -6350,6 +6350,5384 @@
           "description": "案内文を整える。"
         }
       ]
+    },
+    {
+      "slug": "special-characters-flower",
+      "path": "/special-characters/flower/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "花特殊文字コピペ | 花・春・かわいい記号をコピー - MojiMoon",
+      "description": "花特殊文字コピペをコピーできる無料ツール。花、春、可愛い、プロフィール、装飾に使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "花特殊文字コピペ | 花・春・かわいい記号をコピー",
+      "ogDescription": "花に合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Flower Symbols Copy",
+      "h1": "花特殊文字コピペ",
+      "hero": "花、春、ふんわりしたプロフィールに使いやすい特殊文字を集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "花特殊文字ツール",
+      "searchPlaceholder": "花、春、可愛い、プロフィール、装飾などで検索",
+      "draftPlaceholder": "花特殊文字をクリックするとここに追加されます",
+      "composerHint": "花の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った花特殊文字",
+      "categories": [
+        {
+          "id": "basic",
+          "label": "花"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "line",
+          "label": "ライン"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "花",
+          "query": "花"
+        },
+        {
+          "label": "春",
+          "query": "春"
+        },
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "インスタ",
+          "query": "インスタ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "basic",
+          "tags": [
+            "花",
+            "春",
+            "特殊文字"
+          ],
+          "items": [
+            {
+              "value": "✿",
+              "label": "花記号 1",
+              "tags": []
+            },
+            {
+              "value": "❀",
+              "label": "花記号 2",
+              "tags": []
+            },
+            {
+              "value": "❁",
+              "label": "花記号 3",
+              "tags": []
+            },
+            {
+              "value": "❃",
+              "label": "花記号 4",
+              "tags": []
+            },
+            {
+              "value": "❊",
+              "label": "花記号 5",
+              "tags": []
+            },
+            {
+              "value": "❋",
+              "label": "花記号 6",
+              "tags": []
+            },
+            {
+              "value": "✾",
+              "label": "花記号 7",
+              "tags": []
+            },
+            {
+              "value": "✽",
+              "label": "花記号 8",
+              "tags": []
+            },
+            {
+              "value": "✼",
+              "label": "花記号 9",
+              "tags": []
+            },
+            {
+              "value": "✻",
+              "label": "花記号 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "花",
+            "可愛い"
+          ],
+          "items": [
+            {
+              "value": "ꕤ",
+              "label": "可愛い花 1",
+              "tags": []
+            },
+            {
+              "value": "ꕥ",
+              "label": "可愛い花 2",
+              "tags": []
+            },
+            {
+              "value": "𓆸",
+              "label": "可愛い花 3",
+              "tags": []
+            },
+            {
+              "value": "𓇬",
+              "label": "可愛い花 4",
+              "tags": []
+            },
+            {
+              "value": "𓇢",
+              "label": "可愛い花 5",
+              "tags": []
+            },
+            {
+              "value": "𓍯",
+              "label": "可愛い花 6",
+              "tags": []
+            },
+            {
+              "value": "𓋜",
+              "label": "可愛い花 7",
+              "tags": []
+            },
+            {
+              "value": "❦",
+              "label": "可愛い花 8",
+              "tags": []
+            },
+            {
+              "value": "❧",
+              "label": "可愛い花 9",
+              "tags": []
+            },
+            {
+              "value": "❀𓂃",
+              "label": "可愛い花 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "line",
+          "tags": [
+            "花",
+            "ライン"
+          ],
+          "items": [
+            {
+              "value": "𓍯𓂃",
+              "label": "花ライン 1",
+              "tags": []
+            },
+            {
+              "value": "ꕤ*.ﾟ",
+              "label": "花ライン 2",
+              "tags": []
+            },
+            {
+              "value": "✿꙳",
+              "label": "花ライン 3",
+              "tags": []
+            },
+            {
+              "value": "❁⃘*.ﾟ",
+              "label": "花ライン 4",
+              "tags": []
+            },
+            {
+              "value": "𑁍ࠬܓ",
+              "label": "花ライン 5",
+              "tags": []
+            },
+            {
+              "value": "❀.*･ﾟ",
+              "label": "花ライン 6",
+              "tags": []
+            },
+            {
+              "value": "✽.｡.:*",
+              "label": "花ライン 7",
+              "tags": []
+            },
+            {
+              "value": "ꕤ୭*",
+              "label": "花ライン 8",
+              "tags": []
+            },
+            {
+              "value": "𓇬𓂃",
+              "label": "花ライン 9",
+              "tags": []
+            },
+            {
+              "value": "𓆸 𓈒𓏸",
+              "label": "花ライン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "花",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "name ✿",
+              "label": "花プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "bio ꕤ",
+              "label": "花プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "flower mood 𓍯",
+              "label": "花プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "profile 𓂃❀",
+              "label": "花プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "spring note ❁",
+              "label": "花プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "diary ✿𓂃",
+              "label": "花プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "推し花 ❀",
+              "label": "花プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "花の気分 ✽",
+              "label": "花プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "かわいい花 ꕤ",
+              "label": "花プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "春のメモ 𓇬",
+              "label": "花プロフィール 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "花特殊文字コピペの使い方",
+        "paragraphs": [
+          "花特殊文字コピペは、春の投稿、かわいいプロフィール、名前デコに使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "花の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "profile 𓂃❀",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "spring note ❁",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "name ✿",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "星・キラキラ特殊文字",
+            "href": "/special-characters/star/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          },
+          {
+            "label": "かわいいコピペ総合",
+            "href": "/kawaii-copy/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "花特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "星・キラキラ特殊文字",
+          "href": "/special-characters/star/",
+          "description": "花と合わせやすい光の記号。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "花やリボンと合わせる。"
+        },
+        {
+          "title": "リボン記号",
+          "href": "/kawaii-copy/ribbon/",
+          "description": "量産型プロフィールに使う。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-ribbon",
+      "path": "/special-characters/ribbon/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "リボン特殊文字コピペ | リボン・量産型・かわいい記号をコピー - MojiMoon",
+      "description": "リボン特殊文字コピペをコピーできる無料ツール。リボン、量産型、可愛い、ハート、プロフィールに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "リボン特殊文字コピペ | リボン・量産型・かわいい記号をコピー",
+      "ogDescription": "リボンに合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Ribbon Symbols Copy",
+      "h1": "リボン特殊文字コピペ",
+      "hero": "リボン風、量産型、推し活プロフィールに使いやすい特殊文字を集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "リボン特殊文字ツール",
+      "searchPlaceholder": "リボン、量産型、可愛い、ハート、プロフィールなどで検索",
+      "draftPlaceholder": "リボン特殊文字をクリックするとここに追加されます",
+      "composerHint": "リボンの候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使ったリボン特殊文字",
+      "categories": [
+        {
+          "id": "basic",
+          "label": "リボン"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "line",
+          "label": "ライン"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "リボン",
+          "query": "リボン"
+        },
+        {
+          "label": "量産型",
+          "query": "量産型"
+        },
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        },
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "推し活",
+          "query": "推し活"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "basic",
+          "tags": [
+            "リボン",
+            "特殊文字"
+          ],
+          "items": [
+            {
+              "value": "୨୧",
+              "label": "リボン記号 1",
+              "tags": []
+            },
+            {
+              "value": "୨ৎ",
+              "label": "リボン記号 2",
+              "tags": []
+            },
+            {
+              "value": "ꔫ",
+              "label": "リボン記号 3",
+              "tags": []
+            },
+            {
+              "value": "⋈",
+              "label": "リボン記号 4",
+              "tags": []
+            },
+            {
+              "value": "ʚɞ",
+              "label": "リボン記号 5",
+              "tags": []
+            },
+            {
+              "value": "ʚ♡ɞ",
+              "label": "リボン記号 6",
+              "tags": []
+            },
+            {
+              "value": "꒰ঌ ໒꒱",
+              "label": "リボン記号 7",
+              "tags": []
+            },
+            {
+              "value": "꒰ა ໒꒱",
+              "label": "リボン記号 8",
+              "tags": []
+            },
+            {
+              "value": "˗ˏˋ ୨୧ ˎˊ˗",
+              "label": "リボン記号 9",
+              "tags": []
+            },
+            {
+              "value": "ꕤ୭*",
+              "label": "リボン記号 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "リボン",
+            "可愛い"
+          ],
+          "items": [
+            {
+              "value": "♡୨୧♡",
+              "label": "可愛いリボン 1",
+              "tags": []
+            },
+            {
+              "value": "୨୧⑅*",
+              "label": "可愛いリボン 2",
+              "tags": []
+            },
+            {
+              "value": "₊˚୨୧˚₊",
+              "label": "可愛いリボン 3",
+              "tags": []
+            },
+            {
+              "value": "୨୧ 𓂃",
+              "label": "可愛いリボン 4",
+              "tags": []
+            },
+            {
+              "value": "𓂃 ୨୧",
+              "label": "可愛いリボン 5",
+              "tags": []
+            },
+            {
+              "value": "୨୧⋆｡˚",
+              "label": "可愛いリボン 6",
+              "tags": []
+            },
+            {
+              "value": "꒰ ୨୧ ꒱",
+              "label": "可愛いリボン 7",
+              "tags": []
+            },
+            {
+              "value": "୨୧♡୨୧",
+              "label": "可愛いリボン 8",
+              "tags": []
+            },
+            {
+              "value": "୨ৎ˚₊",
+              "label": "可愛いリボン 9",
+              "tags": []
+            },
+            {
+              "value": "ʚ ୨୧ ɞ",
+              "label": "可愛いリボン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "line",
+          "tags": [
+            "リボン",
+            "ライン"
+          ],
+          "items": [
+            {
+              "value": "୨୧ ┈┈ ୨୧",
+              "label": "リボンライン 1",
+              "tags": []
+            },
+            {
+              "value": "୨୧ 𓂃 ୨୧",
+              "label": "リボンライン 2",
+              "tags": []
+            },
+            {
+              "value": "♡ ୨୧ ♡",
+              "label": "リボンライン 3",
+              "tags": []
+            },
+            {
+              "value": "୨୧ ୨୧ ୨୧",
+              "label": "リボンライン 4",
+              "tags": []
+            },
+            {
+              "value": "₊˚୨୧˚₊ 𓂃",
+              "label": "リボンライン 5",
+              "tags": []
+            },
+            {
+              "value": "꒰ ୨୧ ꒱ 𓈒𓏸",
+              "label": "リボンライン 6",
+              "tags": []
+            },
+            {
+              "value": "୨୧ *⑅",
+              "label": "リボンライン 7",
+              "tags": []
+            },
+            {
+              "value": "𓂃 ୨ৎ 𓂃",
+              "label": "リボンライン 8",
+              "tags": []
+            },
+            {
+              "value": "୨୧⋆｡˚✩",
+              "label": "リボンライン 9",
+              "tags": []
+            },
+            {
+              "value": "ʚ♡ɞ 𓂃",
+              "label": "リボンライン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "リボン",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "name ୨୧",
+              "label": "リボンプロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "推し ୨୧",
+              "label": "リボンプロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃୨୧",
+              "label": "リボンプロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "ribbon mood ୨ৎ",
+              "label": "リボンプロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "かわいい ʚ♡ɞ",
+              "label": "リボンプロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "量産型 ୨୧",
+              "label": "リボンプロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "profile ꒰ ୨୧ ꒱",
+              "label": "リボンプロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "link ୨୧ →",
+              "label": "リボンプロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "sweet ୨୧",
+              "label": "リボンプロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "fan account ୨୧",
+              "label": "リボンプロフィール 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "リボン特殊文字コピペの使い方",
+        "paragraphs": [
+          "リボン特殊文字コピペは、量産型プロフィール、推し活の名前デコ、かわいい区切りに使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "リボンの雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "name ୨୧",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "bio 𓂃୨୧",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "୨୧ ┈┈ ୨୧",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "かわいいコピペ",
+            "href": "/kawaii-copy/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          },
+          {
+            "label": "ハート特殊文字",
+            "href": "/special-characters/heart/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "リボン特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "かわいいコピペ総合",
+          "href": "/kawaii-copy/",
+          "description": "リボン以外の装飾も探す。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "リボンと合うピンク系。"
+        },
+        {
+          "title": "ハート特殊文字",
+          "href": "/special-characters/heart/",
+          "description": "リボンと合わせる定番。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-line",
+      "path": "/special-characters/line/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "ライン特殊文字コピペ | 区切り線・おしゃれラインをコピー - MojiMoon",
+      "description": "ライン特殊文字コピペをコピーできる無料ツール。ライン、区切り線、プロフィール、おしゃれ、見出しに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "ライン特殊文字コピペ | 区切り線・おしゃれラインをコピー",
+      "ogDescription": "ラインに合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Decorative Lines Copy",
+      "h1": "ライン特殊文字コピペ",
+      "hero": "プロフィールや投稿文を整える区切り線、点線、波線、ゆるい装飾ラインを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "ライン特殊文字ツール",
+      "searchPlaceholder": "ライン、区切り線、プロフィール、おしゃれ、見出しなどで検索",
+      "draftPlaceholder": "ライン特殊文字をクリックするとここに追加されます",
+      "composerHint": "ラインの候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使ったライン特殊文字",
+      "categories": [
+        {
+          "id": "simple",
+          "label": "シンプル"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "soft",
+          "label": "余白"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "ライン",
+          "query": "ライン"
+        },
+        {
+          "label": "区切り",
+          "query": "区切り"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "インスタ",
+          "query": "インスタ"
+        },
+        {
+          "label": "おしゃれ",
+          "query": "おしゃれ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "simple",
+          "tags": [
+            "ライン",
+            "区切り"
+          ],
+          "items": [
+            {
+              "value": "𓂃",
+              "label": "シンプルライン 1",
+              "tags": []
+            },
+            {
+              "value": "𓈒𓏸",
+              "label": "シンプルライン 2",
+              "tags": []
+            },
+            {
+              "value": "┈┈",
+              "label": "シンプルライン 3",
+              "tags": []
+            },
+            {
+              "value": "────",
+              "label": "シンプルライン 4",
+              "tags": []
+            },
+            {
+              "value": "━━━━",
+              "label": "シンプルライン 5",
+              "tags": []
+            },
+            {
+              "value": "﹏﹏",
+              "label": "シンプルライン 6",
+              "tags": []
+            },
+            {
+              "value": "〜〜",
+              "label": "シンプルライン 7",
+              "tags": []
+            },
+            {
+              "value": "⌇",
+              "label": "シンプルライン 8",
+              "tags": []
+            },
+            {
+              "value": "╌╌",
+              "label": "シンプルライン 9",
+              "tags": []
+            },
+            {
+              "value": "····",
+              "label": "シンプルライン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "ライン",
+            "可愛い"
+          ],
+          "items": [
+            {
+              "value": "୨୧ ┈┈ ୨୧",
+              "label": "可愛いライン 1",
+              "tags": []
+            },
+            {
+              "value": "♡ ┈┈ ♡",
+              "label": "可愛いライン 2",
+              "tags": []
+            },
+            {
+              "value": "✦ ━━ ✦",
+              "label": "可愛いライン 3",
+              "tags": []
+            },
+            {
+              "value": "𓂃꙳⋆",
+              "label": "可愛いライン 4",
+              "tags": []
+            },
+            {
+              "value": "₊˚⊹ 𓂃",
+              "label": "可愛いライン 5",
+              "tags": []
+            },
+            {
+              "value": "ꕤ*.ﾟ",
+              "label": "可愛いライン 6",
+              "tags": []
+            },
+            {
+              "value": "𓍯𓂃",
+              "label": "可愛いライン 7",
+              "tags": []
+            },
+            {
+              "value": "꒰ঌ ໒꒱",
+              "label": "可愛いライン 8",
+              "tags": []
+            },
+            {
+              "value": "ʚ♡ɞ",
+              "label": "可愛いライン 9",
+              "tags": []
+            },
+            {
+              "value": "⋆｡˚✩",
+              "label": "可愛いライン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "soft",
+          "tags": [
+            "ライン",
+            "余白"
+          ],
+          "items": [
+            {
+              "value": "𓂃 𓈒𓏸",
+              "label": "余白ライン 1",
+              "tags": []
+            },
+            {
+              "value": "☁︎ 𓂃 ˚｡",
+              "label": "余白ライン 2",
+              "tags": []
+            },
+            {
+              "value": "⊹ ࣪ ˖",
+              "label": "余白ライン 3",
+              "tags": []
+            },
+            {
+              "value": "༘⋆",
+              "label": "余白ライン 4",
+              "tags": []
+            },
+            {
+              "value": "˗ˏˋ ´ˎ˗",
+              "label": "余白ライン 5",
+              "tags": []
+            },
+            {
+              "value": "⋆｡˚ ☁︎ ˚｡⋆",
+              "label": "余白ライン 6",
+              "tags": []
+            },
+            {
+              "value": "₊˚ෆ",
+              "label": "余白ライン 7",
+              "tags": []
+            },
+            {
+              "value": "𓆩 𓆪",
+              "label": "余白ライン 8",
+              "tags": []
+            },
+            {
+              "value": "⟡ ݁₊ .",
+              "label": "余白ライン 9",
+              "tags": []
+            },
+            {
+              "value": "ꔛ",
+              "label": "余白ライン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "ライン",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "about me 𓂃",
+              "label": "プロフィールライン 1",
+              "tags": []
+            },
+            {
+              "value": "profile ┈┈",
+              "label": "プロフィールライン 2",
+              "tags": []
+            },
+            {
+              "value": "link → 𓂃",
+              "label": "プロフィールライン 3",
+              "tags": []
+            },
+            {
+              "value": "new post 𓈒𓏸",
+              "label": "プロフィールライン 4",
+              "tags": []
+            },
+            {
+              "value": "daily log ───",
+              "label": "プロフィールライン 5",
+              "tags": []
+            },
+            {
+              "value": "推し活 ୨୧",
+              "label": "プロフィールライン 6",
+              "tags": []
+            },
+            {
+              "value": "name 𓂃 𓈒𓏸",
+              "label": "プロフィールライン 7",
+              "tags": []
+            },
+            {
+              "value": "bio ﹏﹏",
+              "label": "プロフィールライン 8",
+              "tags": []
+            },
+            {
+              "value": "memo 〜〜",
+              "label": "プロフィールライン 9",
+              "tags": []
+            },
+            {
+              "value": "notice ╌╌",
+              "label": "プロフィールライン 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "ライン特殊文字コピペの使い方",
+        "paragraphs": [
+          "ライン特殊文字コピペは、投稿文の区切り、プロフィール見出し、リンク案内に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "ラインの雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "about me 𓂃",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "୨୧ ┈┈ ୨୧",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "link → 𓂃",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "括弧特殊文字",
+            "href": "/special-characters/bracket/"
+          },
+          {
+            "label": "かわいいコピペ",
+            "href": "/kawaii-copy/"
+          },
+          {
+            "label": "絵文字組み合わせ",
+            "href": "/emoji-combinations/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "ライン特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "括弧特殊文字",
+          "href": "/special-characters/bracket/",
+          "description": "見出しを囲んで整える。"
+        },
+        {
+          "title": "名前フレーム",
+          "href": "/kawaii-copy/name-frame/",
+          "description": "名前デコを作る。"
+        },
+        {
+          "title": "絵文字組み合わせ",
+          "href": "/emoji-combinations/",
+          "description": "絵文字と一緒に使う。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-bracket",
+      "path": "/special-characters/bracket/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "括弧特殊文字コピペ | かわいい括弧・囲み文字をコピー - MojiMoon",
+      "description": "括弧特殊文字コピペをコピーできる無料ツール。括弧、囲み、名前、プロフィール、可愛いに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "括弧特殊文字コピペ | かわいい括弧・囲み文字をコピー",
+      "ogDescription": "括弧に合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Bracket Symbols Copy",
+      "h1": "括弧特殊文字コピペ",
+      "hero": "名前、推し名、見出しを囲んで整えるかわいい括弧や装飾フレームを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "括弧特殊文字ツール",
+      "searchPlaceholder": "括弧、囲み、名前、プロフィール、可愛いなどで検索",
+      "draftPlaceholder": "括弧特殊文字をクリックするとここに追加されます",
+      "composerHint": "括弧の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った括弧特殊文字",
+      "categories": [
+        {
+          "id": "basic",
+          "label": "定番"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "name",
+          "label": "名前"
+        },
+        {
+          "id": "line",
+          "label": "ライン"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "括弧",
+          "query": "括弧"
+        },
+        {
+          "label": "囲み",
+          "query": "囲み"
+        },
+        {
+          "label": "名前",
+          "query": "名前"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "basic",
+          "tags": [
+            "括弧",
+            "定番"
+          ],
+          "items": [
+            {
+              "value": "【】",
+              "label": "定番括弧 1",
+              "tags": []
+            },
+            {
+              "value": "〖〗",
+              "label": "定番括弧 2",
+              "tags": []
+            },
+            {
+              "value": "《》",
+              "label": "定番括弧 3",
+              "tags": []
+            },
+            {
+              "value": "〈〉",
+              "label": "定番括弧 4",
+              "tags": []
+            },
+            {
+              "value": "「」",
+              "label": "定番括弧 5",
+              "tags": []
+            },
+            {
+              "value": "『』",
+              "label": "定番括弧 6",
+              "tags": []
+            },
+            {
+              "value": "〔〕",
+              "label": "定番括弧 7",
+              "tags": []
+            },
+            {
+              "value": "（）",
+              "label": "定番括弧 8",
+              "tags": []
+            },
+            {
+              "value": "［］",
+              "label": "定番括弧 9",
+              "tags": []
+            },
+            {
+              "value": "｛｝",
+              "label": "定番括弧 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "括弧",
+            "可愛い"
+          ],
+          "items": [
+            {
+              "value": "꒰ ꒱",
+              "label": "可愛い括弧 1",
+              "tags": []
+            },
+            {
+              "value": "₍ ₎",
+              "label": "可愛い括弧 2",
+              "tags": []
+            },
+            {
+              "value": "⁽ ⁾",
+              "label": "可愛い括弧 3",
+              "tags": []
+            },
+            {
+              "value": "◜ ◝",
+              "label": "可愛い括弧 4",
+              "tags": []
+            },
+            {
+              "value": "◟ ◞",
+              "label": "可愛い括弧 5",
+              "tags": []
+            },
+            {
+              "value": "⸜ ⸝",
+              "label": "可愛い括弧 6",
+              "tags": []
+            },
+            {
+              "value": "⟬ ⟭",
+              "label": "可愛い括弧 7",
+              "tags": []
+            },
+            {
+              "value": "⦅ ⦆",
+              "label": "可愛い括弧 8",
+              "tags": []
+            },
+            {
+              "value": "⟦ ⟧",
+              "label": "可愛い括弧 9",
+              "tags": []
+            },
+            {
+              "value": "⌜ ⌟",
+              "label": "可愛い括弧 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "name",
+          "tags": [
+            "括弧",
+            "名前"
+          ],
+          "items": [
+            {
+              "value": "【name】",
+              "label": "名前括弧 1",
+              "tags": []
+            },
+            {
+              "value": "〖推し〗",
+              "label": "名前括弧 2",
+              "tags": []
+            },
+            {
+              "value": "꒰ name ꒱",
+              "label": "名前括弧 3",
+              "tags": []
+            },
+            {
+              "value": "⸜ name ⸝",
+              "label": "名前括弧 4",
+              "tags": []
+            },
+            {
+              "value": "〈 profile 〉",
+              "label": "名前括弧 5",
+              "tags": []
+            },
+            {
+              "value": "《 memo 》",
+              "label": "名前括弧 6",
+              "tags": []
+            },
+            {
+              "value": "「お知らせ」",
+              "label": "名前括弧 7",
+              "tags": []
+            },
+            {
+              "value": "『new』",
+              "label": "名前括弧 8",
+              "tags": []
+            },
+            {
+              "value": "₍ᐢ. .ᐢ₎",
+              "label": "名前括弧 9",
+              "tags": []
+            },
+            {
+              "value": "◜title◝",
+              "label": "名前括弧 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "line",
+          "tags": [
+            "括弧",
+            "ライン"
+          ],
+          "items": [
+            {
+              "value": "【 𓂃 】",
+              "label": "装飾括弧 1",
+              "tags": []
+            },
+            {
+              "value": "꒰ 𓈒𓏸 ꒱",
+              "label": "装飾括弧 2",
+              "tags": []
+            },
+            {
+              "value": "〖 ୨୧ 〗",
+              "label": "装飾括弧 3",
+              "tags": []
+            },
+            {
+              "value": "〈 ✦ 〉",
+              "label": "装飾括弧 4",
+              "tags": []
+            },
+            {
+              "value": "《 ♡ 》",
+              "label": "装飾括弧 5",
+              "tags": []
+            },
+            {
+              "value": "⸜ ୨୧ ⸝",
+              "label": "装飾括弧 6",
+              "tags": []
+            },
+            {
+              "value": "⌜ ┈┈ ⌟",
+              "label": "装飾括弧 7",
+              "tags": []
+            },
+            {
+              "value": "◜ ♡ ◝",
+              "label": "装飾括弧 8",
+              "tags": []
+            },
+            {
+              "value": "⟬ ✧ ⟭",
+              "label": "装飾括弧 9",
+              "tags": []
+            },
+            {
+              "value": "［ link ］",
+              "label": "装飾括弧 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "括弧特殊文字コピペの使い方",
+        "paragraphs": [
+          "括弧特殊文字コピペは、名前フレーム、見出しの囲み、プロフィール装飾に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "括弧の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "꒰ name ꒱",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "〖推し〗",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "【 𓂃 】",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "ライン特殊文字",
+            "href": "/special-characters/line/"
+          },
+          {
+            "label": "名前フレーム",
+            "href": "/kawaii-copy/name-frame/"
+          },
+          {
+            "label": "おしゃれ文字",
+            "href": "/fancy-text-generator/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "括弧特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "ライン特殊文字",
+          "href": "/special-characters/line/",
+          "description": "括弧と合わせる区切り線。"
+        },
+        {
+          "title": "名前フレーム",
+          "href": "/kawaii-copy/name-frame/",
+          "description": "名前デコをまとめて作る。"
+        },
+        {
+          "title": "おしゃれ文字変換",
+          "href": "/fancy-text-generator/",
+          "description": "中に入れる文字を変換。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-crown",
+      "path": "/special-characters/crown/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "王冠特殊文字コピペ | 王冠・高級感・推し記号をコピー - MojiMoon",
+      "description": "王冠特殊文字コピペをコピーできる無料ツール。王冠、クラウン、推し、高級感、プロフィールに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "王冠特殊文字コピペ | 王冠・高級感・推し記号をコピー",
+      "ogDescription": "王冠に合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Crown Symbols Copy",
+      "h1": "王冠特殊文字コピペ",
+      "hero": "王冠、クラウン、きらっとした高級感を出せる特殊文字を集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "王冠特殊文字ツール",
+      "searchPlaceholder": "王冠、クラウン、推し、高級感、プロフィールなどで検索",
+      "draftPlaceholder": "王冠特殊文字をクリックするとここに追加されます",
+      "composerHint": "王冠の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った王冠特殊文字",
+      "categories": [
+        {
+          "id": "crown",
+          "label": "王冠"
+        },
+        {
+          "id": "royal",
+          "label": "上品"
+        },
+        {
+          "id": "rank",
+          "label": "順位"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "王冠",
+          "query": "王冠"
+        },
+        {
+          "label": "推し",
+          "query": "推し"
+        },
+        {
+          "label": "高級感",
+          "query": "高級感"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "キラキラ",
+          "query": "キラキラ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "crown",
+          "tags": [
+            "王冠",
+            "特殊文字"
+          ],
+          "items": [
+            {
+              "value": "♔",
+              "label": "王冠記号 1",
+              "tags": []
+            },
+            {
+              "value": "♕",
+              "label": "王冠記号 2",
+              "tags": []
+            },
+            {
+              "value": "♚",
+              "label": "王冠記号 3",
+              "tags": []
+            },
+            {
+              "value": "♛",
+              "label": "王冠記号 4",
+              "tags": []
+            },
+            {
+              "value": "♖",
+              "label": "王冠記号 5",
+              "tags": []
+            },
+            {
+              "value": "♜",
+              "label": "王冠記号 6",
+              "tags": []
+            },
+            {
+              "value": "⚜",
+              "label": "王冠記号 7",
+              "tags": []
+            },
+            {
+              "value": "✦",
+              "label": "王冠記号 8",
+              "tags": []
+            },
+            {
+              "value": "✧",
+              "label": "王冠記号 9",
+              "tags": []
+            },
+            {
+              "value": "◇",
+              "label": "王冠記号 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "royal",
+          "tags": [
+            "王冠",
+            "上品"
+          ],
+          "items": [
+            {
+              "value": "♔𓂃",
+              "label": "上品王冠 1",
+              "tags": []
+            },
+            {
+              "value": "✦♔✦",
+              "label": "上品王冠 2",
+              "tags": []
+            },
+            {
+              "value": "♕ 𓈒𓏸",
+              "label": "上品王冠 3",
+              "tags": []
+            },
+            {
+              "value": "⚜︎",
+              "label": "上品王冠 4",
+              "tags": []
+            },
+            {
+              "value": "◇◆◇",
+              "label": "上品王冠 5",
+              "tags": []
+            },
+            {
+              "value": "✧ royal",
+              "label": "上品王冠 6",
+              "tags": []
+            },
+            {
+              "value": "king ♔",
+              "label": "上品王冠 7",
+              "tags": []
+            },
+            {
+              "value": "queen ♕",
+              "label": "上品王冠 8",
+              "tags": []
+            },
+            {
+              "value": "prince ♔",
+              "label": "上品王冠 9",
+              "tags": []
+            },
+            {
+              "value": "princess ♕",
+              "label": "上品王冠 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "rank",
+          "tags": [
+            "王冠",
+            "ランキング"
+          ],
+          "items": [
+            {
+              "value": "No.1 ♔",
+              "label": "ランキング王冠 1",
+              "tags": []
+            },
+            {
+              "value": "rank ♕",
+              "label": "ランキング王冠 2",
+              "tags": []
+            },
+            {
+              "value": "1st ✦",
+              "label": "ランキング王冠 3",
+              "tags": []
+            },
+            {
+              "value": "top ♛",
+              "label": "ランキング王冠 4",
+              "tags": []
+            },
+            {
+              "value": "winner ♔",
+              "label": "ランキング王冠 5",
+              "tags": []
+            },
+            {
+              "value": "best ✧",
+              "label": "ランキング王冠 6",
+              "tags": []
+            },
+            {
+              "value": "推しNo.1 ♔",
+              "label": "ランキング王冠 7",
+              "tags": []
+            },
+            {
+              "value": "favorite ♕",
+              "label": "ランキング王冠 8",
+              "tags": []
+            },
+            {
+              "value": "special ♛",
+              "label": "ランキング王冠 9",
+              "tags": []
+            },
+            {
+              "value": "legend ♔",
+              "label": "ランキング王冠 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "王冠",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "name ♔",
+              "label": "王冠プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "profile ♕",
+              "label": "王冠プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "推し ♔",
+              "label": "王冠プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "bio ✦♔",
+              "label": "王冠プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "royal mood ♕",
+              "label": "王冠プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "queen day ♕",
+              "label": "王冠プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "king mood ♔",
+              "label": "王冠プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "my crown ♛",
+              "label": "王冠プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "♔ name ♔",
+              "label": "王冠プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "♕ fan account",
+              "label": "王冠プロフィール 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "王冠特殊文字コピペの使い方",
+        "paragraphs": [
+          "王冠特殊文字コピペは、推し活プロフィール、ランキング表記、高級感のある名前デコに使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "王冠の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "推しNo.1 ♔",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "name ♔",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "✦♔✦",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "星・キラキラ特殊文字",
+            "href": "/special-characters/star/"
+          },
+          {
+            "label": "推し活かわいいコピペ",
+            "href": "/kawaii-copy/ryosangata-otaku/"
+          },
+          {
+            "label": "黒系絵文字組み合わせ",
+            "href": "/emoji-combinations/black/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "王冠特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "星・キラキラ特殊文字",
+          "href": "/special-characters/star/",
+          "description": "王冠と合わせる光。"
+        },
+        {
+          "title": "推し活コピペ",
+          "href": "/kawaii-copy/ryosangata-otaku/",
+          "description": "推しプロフィールを作る。"
+        },
+        {
+          "title": "黒系絵文字組み合わせ",
+          "href": "/emoji-combinations/black/",
+          "description": "上品な黒系テンプレ。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-music",
+      "path": "/special-characters/music/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "音符特殊文字コピペ | 音符・歌・BGM記号をコピー - MojiMoon",
+      "description": "音符特殊文字コピペをコピーできる無料ツール。音符、音楽、歌、BGM、プロフィールに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "音符特殊文字コピペ | 音符・歌・BGM記号をコピー",
+      "ogDescription": "音符に合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Music Symbols Copy",
+      "h1": "音符特殊文字コピペ",
+      "hero": "音楽、BGM、歌、ライブ投稿に使いやすい音符の特殊文字を集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "音符特殊文字ツール",
+      "searchPlaceholder": "音符、音楽、歌、BGM、プロフィールなどで検索",
+      "draftPlaceholder": "音符特殊文字をクリックするとここに追加されます",
+      "composerHint": "音符の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った音符特殊文字",
+      "categories": [
+        {
+          "id": "note",
+          "label": "音符"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "line",
+          "label": "ライン"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "音符",
+          "query": "音符"
+        },
+        {
+          "label": "音楽",
+          "query": "音楽"
+        },
+        {
+          "label": "歌",
+          "query": "歌"
+        },
+        {
+          "label": "BGM",
+          "query": "BGM"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "note",
+          "tags": [
+            "音符",
+            "音楽"
+          ],
+          "items": [
+            {
+              "value": "♪",
+              "label": "音符 1",
+              "tags": []
+            },
+            {
+              "value": "♫",
+              "label": "音符 2",
+              "tags": []
+            },
+            {
+              "value": "♬",
+              "label": "音符 3",
+              "tags": []
+            },
+            {
+              "value": "♩",
+              "label": "音符 4",
+              "tags": []
+            },
+            {
+              "value": "♭",
+              "label": "音符 5",
+              "tags": []
+            },
+            {
+              "value": "♮",
+              "label": "音符 6",
+              "tags": []
+            },
+            {
+              "value": "♯",
+              "label": "音符 7",
+              "tags": []
+            },
+            {
+              "value": "𝄞",
+              "label": "音符 8",
+              "tags": []
+            },
+            {
+              "value": "𝄢",
+              "label": "音符 9",
+              "tags": []
+            },
+            {
+              "value": "°♪",
+              "label": "音符 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "音符",
+            "可愛い"
+          ],
+          "items": [
+            {
+              "value": "♪𓂃",
+              "label": "可愛い音符 1",
+              "tags": []
+            },
+            {
+              "value": "♫♡",
+              "label": "可愛い音符 2",
+              "tags": []
+            },
+            {
+              "value": "♬⋆｡˚",
+              "label": "可愛い音符 3",
+              "tags": []
+            },
+            {
+              "value": "♪₊˚",
+              "label": "可愛い音符 4",
+              "tags": []
+            },
+            {
+              "value": "♡♪",
+              "label": "可愛い音符 5",
+              "tags": []
+            },
+            {
+              "value": "♪꒰ ꒱",
+              "label": "可愛い音符 6",
+              "tags": []
+            },
+            {
+              "value": "♬ 𓈒𓏸",
+              "label": "可愛い音符 7",
+              "tags": []
+            },
+            {
+              "value": "music ♪",
+              "label": "可愛い音符 8",
+              "tags": []
+            },
+            {
+              "value": "song ♫",
+              "label": "可愛い音符 9",
+              "tags": []
+            },
+            {
+              "value": "BGM ♬",
+              "label": "可愛い音符 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "line",
+          "tags": [
+            "音符",
+            "ライン"
+          ],
+          "items": [
+            {
+              "value": "♪ ┈┈ ♪",
+              "label": "音符ライン 1",
+              "tags": []
+            },
+            {
+              "value": "♫ 𓂃 ♫",
+              "label": "音符ライン 2",
+              "tags": []
+            },
+            {
+              "value": "♬⋆｡˚✩",
+              "label": "音符ライン 3",
+              "tags": []
+            },
+            {
+              "value": "♪♪♪",
+              "label": "音符ライン 4",
+              "tags": []
+            },
+            {
+              "value": "♩ ♫ ♬",
+              "label": "音符ライン 5",
+              "tags": []
+            },
+            {
+              "value": "₊˚♪˚₊",
+              "label": "音符ライン 6",
+              "tags": []
+            },
+            {
+              "value": "♡ ♪ ♡",
+              "label": "音符ライン 7",
+              "tags": []
+            },
+            {
+              "value": "𓂃 music ♪",
+              "label": "音符ライン 8",
+              "tags": []
+            },
+            {
+              "value": "BGM 𓈒𓏸",
+              "label": "音符ライン 9",
+              "tags": []
+            },
+            {
+              "value": "sound on ♫",
+              "label": "音符ライン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "音符",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "music mood ♪",
+              "label": "音楽プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "song diary ♫",
+              "label": "音楽プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "BGM memo ♬",
+              "label": "音楽プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "推し曲 ♪",
+              "label": "音楽プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "playlist ♫",
+              "label": "音楽プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "live report ♬",
+              "label": "音楽プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "music on ♪",
+              "label": "音楽プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "now playing ♫",
+              "label": "音楽プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "my song ♬",
+              "label": "音楽プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "音楽の時間 ♪",
+              "label": "音楽プロフィール 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "音符特殊文字コピペの使い方",
+        "paragraphs": [
+          "音符特殊文字コピペは、音楽プロフィール、歌詞っぽい投稿、BGM紹介に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "音符の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "music mood ♪",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "♪ ┈┈ ♪",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "now playing ♫",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "絵文字組み合わせ",
+            "href": "/emoji-combinations/"
+          },
+          {
+            "label": "星・キラキラ特殊文字",
+            "href": "/special-characters/star/"
+          },
+          {
+            "label": "おしゃれ文字",
+            "href": "/fancy-text-generator/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "音符特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "絵文字組み合わせ",
+          "href": "/emoji-combinations/",
+          "description": "音楽絵文字と一緒に使う。"
+        },
+        {
+          "title": "星・キラキラ特殊文字",
+          "href": "/special-characters/star/",
+          "description": "ライブ感を足す。"
+        },
+        {
+          "title": "おしゃれ文字変換",
+          "href": "/fancy-text-generator/",
+          "description": "英字プロフィールを整える。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-check",
+      "path": "/special-characters/check/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "チェック特殊文字コピペ | チェックマーク・OK記号をコピー - MojiMoon",
+      "description": "チェック特殊文字コピペをコピーできる無料ツール。チェック、OK、確認、リスト、記号に使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "チェック特殊文字コピペ | チェックマーク・OK記号をコピー",
+      "ogDescription": "チェックに合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Check Symbols Copy",
+      "h1": "チェック特殊文字コピペ",
+      "hero": "チェックマーク、OK、完了、リストに使いやすい記号を集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "チェック特殊文字ツール",
+      "searchPlaceholder": "チェック、OK、確認、リスト、記号などで検索",
+      "draftPlaceholder": "チェック特殊文字をクリックするとここに追加されます",
+      "composerHint": "チェックの候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使ったチェック特殊文字",
+      "categories": [
+        {
+          "id": "check",
+          "label": "チェック"
+        },
+        {
+          "id": "circle",
+          "label": "丸印"
+        },
+        {
+          "id": "cross",
+          "label": "バツ"
+        },
+        {
+          "id": "text",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "チェック",
+          "query": "チェック"
+        },
+        {
+          "label": "OK",
+          "query": "OK"
+        },
+        {
+          "label": "確認",
+          "query": "確認"
+        },
+        {
+          "label": "リスト",
+          "query": "リスト"
+        },
+        {
+          "label": "仕事",
+          "query": "仕事"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "check",
+          "tags": [
+            "チェック",
+            "OK"
+          ],
+          "items": [
+            {
+              "value": "✓",
+              "label": "チェック 1",
+              "tags": []
+            },
+            {
+              "value": "✔",
+              "label": "チェック 2",
+              "tags": []
+            },
+            {
+              "value": "✔︎",
+              "label": "チェック 3",
+              "tags": []
+            },
+            {
+              "value": "☑",
+              "label": "チェック 4",
+              "tags": []
+            },
+            {
+              "value": "☑︎",
+              "label": "チェック 5",
+              "tags": []
+            },
+            {
+              "value": "✅",
+              "label": "チェック 6",
+              "tags": []
+            },
+            {
+              "value": "🗸",
+              "label": "チェック 7",
+              "tags": []
+            },
+            {
+              "value": "✓✓",
+              "label": "チェック 8",
+              "tags": []
+            },
+            {
+              "value": "✔✔",
+              "label": "チェック 9",
+              "tags": []
+            },
+            {
+              "value": "OK ✓",
+              "label": "チェック 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "circle",
+          "tags": [
+            "丸印",
+            "確認"
+          ],
+          "items": [
+            {
+              "value": "○",
+              "label": "丸印 1",
+              "tags": []
+            },
+            {
+              "value": "◎",
+              "label": "丸印 2",
+              "tags": []
+            },
+            {
+              "value": "●",
+              "label": "丸印 3",
+              "tags": []
+            },
+            {
+              "value": "◯",
+              "label": "丸印 4",
+              "tags": []
+            },
+            {
+              "value": "◉",
+              "label": "丸印 5",
+              "tags": []
+            },
+            {
+              "value": "◌",
+              "label": "丸印 6",
+              "tags": []
+            },
+            {
+              "value": "◍",
+              "label": "丸印 7",
+              "tags": []
+            },
+            {
+              "value": "◐",
+              "label": "丸印 8",
+              "tags": []
+            },
+            {
+              "value": "◑",
+              "label": "丸印 9",
+              "tags": []
+            },
+            {
+              "value": "◒",
+              "label": "丸印 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cross",
+          "tags": [
+            "バツ",
+            "確認"
+          ],
+          "items": [
+            {
+              "value": "✗",
+              "label": "バツ印 1",
+              "tags": []
+            },
+            {
+              "value": "✘",
+              "label": "バツ印 2",
+              "tags": []
+            },
+            {
+              "value": "✕",
+              "label": "バツ印 3",
+              "tags": []
+            },
+            {
+              "value": "×",
+              "label": "バツ印 4",
+              "tags": []
+            },
+            {
+              "value": "☓",
+              "label": "バツ印 5",
+              "tags": []
+            },
+            {
+              "value": "✖",
+              "label": "バツ印 6",
+              "tags": []
+            },
+            {
+              "value": "NG ✗",
+              "label": "バツ印 7",
+              "tags": []
+            },
+            {
+              "value": "NO ×",
+              "label": "バツ印 8",
+              "tags": []
+            },
+            {
+              "value": "cancel ✘",
+              "label": "バツ印 9",
+              "tags": []
+            },
+            {
+              "value": "あとで △",
+              "label": "バツ印 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "text",
+          "tags": [
+            "チェック",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "確認済み ✓",
+              "label": "チェック短文 1",
+              "tags": []
+            },
+            {
+              "value": "完了 ✔",
+              "label": "チェック短文 2",
+              "tags": []
+            },
+            {
+              "value": "OKです ☑",
+              "label": "チェック短文 3",
+              "tags": []
+            },
+            {
+              "value": "チェック中 ○",
+              "label": "チェック短文 4",
+              "tags": []
+            },
+            {
+              "value": "対応済み ✔︎",
+              "label": "チェック短文 5",
+              "tags": []
+            },
+            {
+              "value": "あとで確認 △",
+              "label": "チェック短文 6",
+              "tags": []
+            },
+            {
+              "value": "未対応 ×",
+              "label": "チェック短文 7",
+              "tags": []
+            },
+            {
+              "value": "メモ ✓",
+              "label": "チェック短文 8",
+              "tags": []
+            },
+            {
+              "value": "list ✔",
+              "label": "チェック短文 9",
+              "tags": []
+            },
+            {
+              "value": "done ✓",
+              "label": "チェック短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "チェック特殊文字コピペの使い方",
+        "paragraphs": [
+          "チェック特殊文字コピペは、ToDoリスト、確認メッセージ、案内文に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "チェックの雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "確認済み ✓",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "完了 ✔",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "OKです ☑",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "矢印特殊文字",
+            "href": "/special-characters/arrow/"
+          },
+          {
+            "label": "番号特殊文字",
+            "href": "/special-characters/number/"
+          },
+          {
+            "label": "全角半角変換",
+            "href": "/zenkaku-hankaku-converter/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "チェック特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "矢印特殊文字",
+          "href": "/special-characters/arrow/",
+          "description": "案内文に使う。"
+        },
+        {
+          "title": "番号特殊文字",
+          "href": "/special-characters/number/",
+          "description": "リスト番号を作る。"
+        },
+        {
+          "title": "全角半角変換",
+          "href": "/zenkaku-hankaku-converter/",
+          "description": "表記を整える。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-number",
+      "path": "/special-characters/number/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "title": "番号特殊文字コピペ | 丸数字・番号記号をコピー - MojiMoon",
+      "description": "番号特殊文字コピペをコピーできる無料ツール。番号、丸数字、リスト、数字、プロフィールに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "番号特殊文字コピペ | 丸数字・番号記号をコピー",
+      "ogDescription": "番号に合う特殊文字をまとめてコピーできます。",
+      "eyebrow": "Number Symbols Copy",
+      "h1": "番号特殊文字コピペ",
+      "hero": "丸数字、黒丸数字、番号付きリストに使いやすい特殊文字を集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "番号特殊文字ツール",
+      "searchPlaceholder": "番号、丸数字、リスト、数字、プロフィールなどで検索",
+      "draftPlaceholder": "番号特殊文字をクリックするとここに追加されます",
+      "composerHint": "番号の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った番号特殊文字",
+      "categories": [
+        {
+          "id": "circle",
+          "label": "丸数字"
+        },
+        {
+          "id": "black",
+          "label": "黒丸"
+        },
+        {
+          "id": "roman",
+          "label": "ローマ"
+        },
+        {
+          "id": "text",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "番号",
+          "query": "番号"
+        },
+        {
+          "label": "丸数字",
+          "query": "丸数字"
+        },
+        {
+          "label": "リスト",
+          "query": "リスト"
+        },
+        {
+          "label": "数字",
+          "query": "数字"
+        },
+        {
+          "label": "黒丸",
+          "query": "黒丸"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "circle",
+          "tags": [
+            "丸数字",
+            "番号"
+          ],
+          "items": [
+            {
+              "value": "①",
+              "label": "丸数字 1",
+              "tags": []
+            },
+            {
+              "value": "②",
+              "label": "丸数字 2",
+              "tags": []
+            },
+            {
+              "value": "③",
+              "label": "丸数字 3",
+              "tags": []
+            },
+            {
+              "value": "④",
+              "label": "丸数字 4",
+              "tags": []
+            },
+            {
+              "value": "⑤",
+              "label": "丸数字 5",
+              "tags": []
+            },
+            {
+              "value": "⑥",
+              "label": "丸数字 6",
+              "tags": []
+            },
+            {
+              "value": "⑦",
+              "label": "丸数字 7",
+              "tags": []
+            },
+            {
+              "value": "⑧",
+              "label": "丸数字 8",
+              "tags": []
+            },
+            {
+              "value": "⑨",
+              "label": "丸数字 9",
+              "tags": []
+            },
+            {
+              "value": "⑩",
+              "label": "丸数字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "black",
+          "tags": [
+            "黒丸数字",
+            "番号"
+          ],
+          "items": [
+            {
+              "value": "❶",
+              "label": "黒丸数字 1",
+              "tags": []
+            },
+            {
+              "value": "❷",
+              "label": "黒丸数字 2",
+              "tags": []
+            },
+            {
+              "value": "❸",
+              "label": "黒丸数字 3",
+              "tags": []
+            },
+            {
+              "value": "❹",
+              "label": "黒丸数字 4",
+              "tags": []
+            },
+            {
+              "value": "❺",
+              "label": "黒丸数字 5",
+              "tags": []
+            },
+            {
+              "value": "❻",
+              "label": "黒丸数字 6",
+              "tags": []
+            },
+            {
+              "value": "❼",
+              "label": "黒丸数字 7",
+              "tags": []
+            },
+            {
+              "value": "❽",
+              "label": "黒丸数字 8",
+              "tags": []
+            },
+            {
+              "value": "❾",
+              "label": "黒丸数字 9",
+              "tags": []
+            },
+            {
+              "value": "❿",
+              "label": "黒丸数字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "roman",
+          "tags": [
+            "ローマ数字",
+            "番号"
+          ],
+          "items": [
+            {
+              "value": "Ⅰ",
+              "label": "ローマ数字 1",
+              "tags": []
+            },
+            {
+              "value": "Ⅱ",
+              "label": "ローマ数字 2",
+              "tags": []
+            },
+            {
+              "value": "Ⅲ",
+              "label": "ローマ数字 3",
+              "tags": []
+            },
+            {
+              "value": "Ⅳ",
+              "label": "ローマ数字 4",
+              "tags": []
+            },
+            {
+              "value": "Ⅴ",
+              "label": "ローマ数字 5",
+              "tags": []
+            },
+            {
+              "value": "Ⅵ",
+              "label": "ローマ数字 6",
+              "tags": []
+            },
+            {
+              "value": "Ⅶ",
+              "label": "ローマ数字 7",
+              "tags": []
+            },
+            {
+              "value": "Ⅷ",
+              "label": "ローマ数字 8",
+              "tags": []
+            },
+            {
+              "value": "Ⅸ",
+              "label": "ローマ数字 9",
+              "tags": []
+            },
+            {
+              "value": "Ⅹ",
+              "label": "ローマ数字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "text",
+          "tags": [
+            "番号",
+            "リスト"
+          ],
+          "items": [
+            {
+              "value": "① profile",
+              "label": "番号短文 1",
+              "tags": []
+            },
+            {
+              "value": "② link",
+              "label": "番号短文 2",
+              "tags": []
+            },
+            {
+              "value": "③ memo",
+              "label": "番号短文 3",
+              "tags": []
+            },
+            {
+              "value": "No.1 ❶",
+              "label": "番号短文 4",
+              "tags": []
+            },
+            {
+              "value": "step ①",
+              "label": "番号短文 5",
+              "tags": []
+            },
+            {
+              "value": "rank Ⅰ",
+              "label": "番号短文 6",
+              "tags": []
+            },
+            {
+              "value": "list ❶",
+              "label": "番号短文 7",
+              "tags": []
+            },
+            {
+              "value": "推し①",
+              "label": "番号短文 8",
+              "tags": []
+            },
+            {
+              "value": "予定②",
+              "label": "番号短文 9",
+              "tags": []
+            },
+            {
+              "value": "メモ③",
+              "label": "番号短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "番号特殊文字コピペの使い方",
+        "paragraphs": [
+          "番号特殊文字コピペは、ランキング、手順リスト、プロフィール項目に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "番号の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "step ①",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "No.1 ❶",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "① profile",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "チェック特殊文字",
+            "href": "/special-characters/check/"
+          },
+          {
+            "label": "矢印特殊文字",
+            "href": "/special-characters/arrow/"
+          },
+          {
+            "label": "括弧特殊文字",
+            "href": "/special-characters/bracket/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "番号特殊文字はどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "チェック特殊文字",
+          "href": "/special-characters/check/",
+          "description": "リスト確認に使う。"
+        },
+        {
+          "title": "矢印特殊文字",
+          "href": "/special-characters/arrow/",
+          "description": "手順案内を作る。"
+        },
+        {
+          "title": "括弧特殊文字",
+          "href": "/special-characters/bracket/",
+          "description": "番号を囲んで整える。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-blue",
+      "path": "/emoji-combinations/blue/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "青系絵文字の組み合わせ | 水色・青・透明感テンプレをコピー - MojiMoon",
+      "description": "青系絵文字の組み合わせをコピーできる無料ツール。青、水色、透明感、海、プロフィールに使いやすい絵文字組み合わせを検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "青系絵文字の組み合わせ | 水色・青・透明感テンプレをコピー",
+      "ogDescription": "青系に合う絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Blue Emoji Combinations",
+      "h1": "青系絵文字組み合わせコピペ",
+      "hero": "青、水色、透明感、海っぽい雰囲気に合う絵文字の組み合わせを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "青系絵文字組み合わせツール",
+      "searchPlaceholder": "青、水色、透明感、海、プロフィールなどで検索",
+      "draftPlaceholder": "青系絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "青系の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った青系絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "blue",
+          "label": "青"
+        },
+        {
+          "id": "water",
+          "label": "水色"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "青",
+          "query": "青"
+        },
+        {
+          "label": "水色",
+          "query": "水色"
+        },
+        {
+          "label": "透明感",
+          "query": "透明感"
+        },
+        {
+          "label": "海",
+          "query": "海"
+        },
+        {
+          "label": "インスタ",
+          "query": "インスタ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "blue",
+          "tags": [
+            "青",
+            "水色"
+          ],
+          "items": [
+            {
+              "value": "🫧🦋💎",
+              "label": "青系 1",
+              "tags": []
+            },
+            {
+              "value": "💙🦋✨",
+              "label": "青系 2",
+              "tags": []
+            },
+            {
+              "value": "🩵☁️🫧",
+              "label": "青系 3",
+              "tags": []
+            },
+            {
+              "value": "💎🫧🤍",
+              "label": "青系 4",
+              "tags": []
+            },
+            {
+              "value": "🦋💙𓂃",
+              "label": "青系 5",
+              "tags": []
+            },
+            {
+              "value": "🩵🐬🌊",
+              "label": "青系 6",
+              "tags": []
+            },
+            {
+              "value": "💙☁️🪽",
+              "label": "青系 7",
+              "tags": []
+            },
+            {
+              "value": "🫧💠✨",
+              "label": "青系 8",
+              "tags": []
+            },
+            {
+              "value": "🩵🫶🏻🫧",
+              "label": "青系 9",
+              "tags": []
+            },
+            {
+              "value": "💙 𓂃 𓈒𓏸",
+              "label": "青系 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "water",
+          "tags": [
+            "青",
+            "海",
+            "夏"
+          ],
+          "items": [
+            {
+              "value": "🌊🐚🫧",
+              "label": "水色 1",
+              "tags": []
+            },
+            {
+              "value": "🐬🩵🌊",
+              "label": "水色 2",
+              "tags": []
+            },
+            {
+              "value": "🫧🌧️☁️",
+              "label": "水色 3",
+              "tags": []
+            },
+            {
+              "value": "💧🩵✨",
+              "label": "水色 4",
+              "tags": []
+            },
+            {
+              "value": "sea mood 🌊🫧",
+              "label": "水色 5",
+              "tags": []
+            },
+            {
+              "value": "summer blue 🐬💙",
+              "label": "水色 6",
+              "tags": []
+            },
+            {
+              "value": "rain day ☔️🩵",
+              "label": "水色 7",
+              "tags": []
+            },
+            {
+              "value": "aqua note 🫧💎",
+              "label": "水色 8",
+              "tags": []
+            },
+            {
+              "value": "ocean 𓂃🌊",
+              "label": "水色 9",
+              "tags": []
+            },
+            {
+              "value": "blue sky ☁️🩵",
+              "label": "水色 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "青",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "profile 🩵🫧",
+              "label": "青プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃💙",
+              "label": "青プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "blue mood 🦋",
+              "label": "青プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "link → 🩵",
+              "label": "青プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "about me 🫧",
+              "label": "青プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "透明感 🩵☁️",
+              "label": "青プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "水色プロフィール 💎",
+              "label": "青プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "推し色 💙✨",
+              "label": "青プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "photo diary 🦋📷",
+              "label": "青プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "soft blue ☁️🩵",
+              "label": "青プロフィール 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "青",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "ありがとう 🩵",
+              "label": "青短文 1",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま 🫧",
+              "label": "青短文 2",
+              "tags": []
+            },
+            {
+              "value": "good night 💙🌙",
+              "label": "青短文 3",
+              "tags": []
+            },
+            {
+              "value": "new post 🦋✨",
+              "label": "青短文 4",
+              "tags": []
+            },
+            {
+              "value": "take care ☁️🩵",
+              "label": "青短文 5",
+              "tags": []
+            },
+            {
+              "value": "happy day 💎",
+              "label": "青短文 6",
+              "tags": []
+            },
+            {
+              "value": "cool mood 💙",
+              "label": "青短文 7",
+              "tags": []
+            },
+            {
+              "value": "dreamy 🫧",
+              "label": "青短文 8",
+              "tags": []
+            },
+            {
+              "value": "夏の気分 🌊",
+              "label": "青短文 9",
+              "tags": []
+            },
+            {
+              "value": "青空メモ 🩵",
+              "label": "青短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "青系絵文字の組み合わせの使い方",
+        "paragraphs": [
+          "青系絵文字の組み合わせは、透明感プロフィール、夏や海の投稿、落ち着いた名前デコに使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "青系の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "profile 🩵🫧",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "sea mood 🌊🫧",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "blue mood 🦋",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "白系絵文字組み合わせ",
+            "href": "/emoji-combinations/white/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          },
+          {
+            "label": "星・キラキラ特殊文字",
+            "href": "/special-characters/star/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "青系絵文字組み合わせはどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "白系絵文字組み合わせ",
+          "href": "/emoji-combinations/white/",
+          "description": "透明感を強める。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "色違いで探す。"
+        },
+        {
+          "title": "花特殊文字",
+          "href": "/special-characters/flower/",
+          "description": "青い投稿に余白を足す。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-black",
+      "path": "/emoji-combinations/black/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "黒系絵文字の組み合わせ | 黒・モノトーン・かっこいいテンプレをコピー - MojiMoon",
+      "description": "黒系絵文字の組み合わせをコピーできる無料ツール。黒、モノトーン、かっこいい、プロフィール、ハートに使いやすい絵文字組み合わせを検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "黒系絵文字の組み合わせ | 黒・モノトーン・かっこいいテンプレをコピー",
+      "ogDescription": "黒系に合う絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Black Emoji Combinations",
+      "h1": "黒系絵文字組み合わせコピペ",
+      "hero": "黒、モノトーン、かっこいい雰囲気に合う絵文字の組み合わせを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "黒系絵文字組み合わせツール",
+      "searchPlaceholder": "黒、モノトーン、かっこいい、プロフィール、ハートなどで検索",
+      "draftPlaceholder": "黒系絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "黒系の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った黒系絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "black",
+          "label": "黒"
+        },
+        {
+          "id": "cool",
+          "label": "クール"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "黒",
+          "query": "黒"
+        },
+        {
+          "label": "モノトーン",
+          "query": "モノトーン"
+        },
+        {
+          "label": "かっこいい",
+          "query": "かっこいい"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "ハート",
+          "query": "ハート"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "black",
+          "tags": [
+            "黒",
+            "モノトーン"
+          ],
+          "items": [
+            {
+              "value": "🖤⚫✨",
+              "label": "黒系 1",
+              "tags": []
+            },
+            {
+              "value": "🖤♟️☁️",
+              "label": "黒系 2",
+              "tags": []
+            },
+            {
+              "value": "⚫🤍🖤",
+              "label": "黒系 3",
+              "tags": []
+            },
+            {
+              "value": "🕯️🖤🌙",
+              "label": "黒系 4",
+              "tags": []
+            },
+            {
+              "value": "🖤 𓂃 ✦",
+              "label": "黒系 5",
+              "tags": []
+            },
+            {
+              "value": "♠️🖤♣️",
+              "label": "黒系 6",
+              "tags": []
+            },
+            {
+              "value": "🖤🪽✨",
+              "label": "黒系 7",
+              "tags": []
+            },
+            {
+              "value": "🖤☕️📷",
+              "label": "黒系 8",
+              "tags": []
+            },
+            {
+              "value": "⚫ 𓈒𓏸",
+              "label": "黒系 9",
+              "tags": []
+            },
+            {
+              "value": "black mood 🖤",
+              "label": "黒系 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cool",
+          "tags": [
+            "黒",
+            "かっこいい"
+          ],
+          "items": [
+            {
+              "value": "dark mode 🖤",
+              "label": "クール黒 1",
+              "tags": []
+            },
+            {
+              "value": "cool day ⚫",
+              "label": "クール黒 2",
+              "tags": []
+            },
+            {
+              "value": "midnight 🌙🖤",
+              "label": "クール黒 3",
+              "tags": []
+            },
+            {
+              "value": "noir 𓂃🖤",
+              "label": "クール黒 4",
+              "tags": []
+            },
+            {
+              "value": "simple black ♠️",
+              "label": "クール黒 5",
+              "tags": []
+            },
+            {
+              "value": "street mood 🖤",
+              "label": "クール黒 6",
+              "tags": []
+            },
+            {
+              "value": "black line ✦",
+              "label": "クール黒 7",
+              "tags": []
+            },
+            {
+              "value": "silent night 🕯️",
+              "label": "クール黒 8",
+              "tags": []
+            },
+            {
+              "value": "mode: black ⚫",
+              "label": "クール黒 9",
+              "tags": []
+            },
+            {
+              "value": "monotone 🤍🖤",
+              "label": "クール黒 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "黒",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "profile 🖤",
+              "label": "黒プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃⚫",
+              "label": "黒プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "name ♠️",
+              "label": "黒プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "link → 🖤",
+              "label": "黒プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "about me ⚫",
+              "label": "黒プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "推し色 🖤✨",
+              "label": "黒プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "black profile ✦",
+              "label": "黒プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "photo diary 📷🖤",
+              "label": "黒プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "music mood 🎧🖤",
+              "label": "黒プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "simple bio 🤍🖤",
+              "label": "黒プロフィール 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "黒",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "ありがとう 🖤",
+              "label": "黒短文 1",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま ⚫",
+              "label": "黒短文 2",
+              "tags": []
+            },
+            {
+              "value": "good night 🖤🌙",
+              "label": "黒短文 3",
+              "tags": []
+            },
+            {
+              "value": "new post 📷🖤",
+              "label": "黒短文 4",
+              "tags": []
+            },
+            {
+              "value": "take care 🕯️",
+              "label": "黒短文 5",
+              "tags": []
+            },
+            {
+              "value": "cool mood ⚫",
+              "label": "黒短文 6",
+              "tags": []
+            },
+            {
+              "value": "today 🖤",
+              "label": "黒短文 7",
+              "tags": []
+            },
+            {
+              "value": "my favorite ♠️",
+              "label": "黒短文 8",
+              "tags": []
+            },
+            {
+              "value": "black note ✦",
+              "label": "黒短文 9",
+              "tags": []
+            },
+            {
+              "value": "静かな夜 🖤",
+              "label": "黒短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "黒系絵文字の組み合わせの使い方",
+        "paragraphs": [
+          "黒系絵文字の組み合わせは、モノトーンプロフィール、クールな投稿、推し色の名前デコに使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "黒系の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "profile 🖤",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "dark mode 🖤",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "midnight 🌙🖤",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "王冠特殊文字",
+            "href": "/special-characters/crown/"
+          },
+          {
+            "label": "白系絵文字組み合わせ",
+            "href": "/emoji-combinations/white/"
+          },
+          {
+            "label": "ハート絵文字",
+            "href": "/emoji-copy/heart/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "黒系絵文字組み合わせはどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "王冠特殊文字",
+          "href": "/special-characters/crown/",
+          "description": "黒系に高級感を足す。"
+        },
+        {
+          "title": "白系絵文字組み合わせ",
+          "href": "/emoji-combinations/white/",
+          "description": "モノトーンで合わせる。"
+        },
+        {
+          "title": "ハート絵文字",
+          "href": "/emoji-copy/heart/",
+          "description": "黒ハート以外も探す。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-purple",
+      "path": "/emoji-combinations/purple/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "紫系絵文字の組み合わせ | 紫・夢かわ・神秘的テンプレをコピー - MojiMoon",
+      "description": "紫系絵文字の組み合わせをコピーできる無料ツール。紫、夢かわ、魔法、推し活、プロフィールに使いやすい絵文字組み合わせを検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "紫系絵文字の組み合わせ | 紫・夢かわ・神秘的テンプレをコピー",
+      "ogDescription": "紫系に合う絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Purple Emoji Combinations",
+      "h1": "紫系絵文字組み合わせコピペ",
+      "hero": "紫、夢かわ、魔法っぽい雰囲気に合う絵文字の組み合わせを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "紫系絵文字組み合わせツール",
+      "searchPlaceholder": "紫、夢かわ、魔法、推し活、プロフィールなどで検索",
+      "draftPlaceholder": "紫系絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "紫系の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った紫系絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "purple",
+          "label": "紫"
+        },
+        {
+          "id": "dreamy",
+          "label": "夢かわ"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "紫",
+          "query": "紫"
+        },
+        {
+          "label": "夢かわ",
+          "query": "夢かわ"
+        },
+        {
+          "label": "魔法",
+          "query": "魔法"
+        },
+        {
+          "label": "推し活",
+          "query": "推し活"
+        },
+        {
+          "label": "インスタ",
+          "query": "インスタ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "purple",
+          "tags": [
+            "紫",
+            "推し色"
+          ],
+          "items": [
+            {
+              "value": "💜🔮✨",
+              "label": "紫系 1",
+              "tags": []
+            },
+            {
+              "value": "🪻💜🫧",
+              "label": "紫系 2",
+              "tags": []
+            },
+            {
+              "value": "☂️💜🌙",
+              "label": "紫系 3",
+              "tags": []
+            },
+            {
+              "value": "💜🦋✨",
+              "label": "紫系 4",
+              "tags": []
+            },
+            {
+              "value": "🔮🌙💜",
+              "label": "紫系 5",
+              "tags": []
+            },
+            {
+              "value": "💜 𓂃 ✦",
+              "label": "紫系 6",
+              "tags": []
+            },
+            {
+              "value": "🍇💜🫶🏻",
+              "label": "紫系 7",
+              "tags": []
+            },
+            {
+              "value": "🪄💜✨",
+              "label": "紫系 8",
+              "tags": []
+            },
+            {
+              "value": "💜☁️🪽",
+              "label": "紫系 9",
+              "tags": []
+            },
+            {
+              "value": "purple mood 💜",
+              "label": "紫系 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "dreamy",
+          "tags": [
+            "紫",
+            "夢かわ"
+          ],
+          "items": [
+            {
+              "value": "dreamy 💜☁️",
+              "label": "夢かわ紫 1",
+              "tags": []
+            },
+            {
+              "value": "magic night 🔮🌙",
+              "label": "夢かわ紫 2",
+              "tags": []
+            },
+            {
+              "value": "yumekawa 💜🪽",
+              "label": "夢かわ紫 3",
+              "tags": []
+            },
+            {
+              "value": "moon spell 🌙✨",
+              "label": "夢かわ紫 4",
+              "tags": []
+            },
+            {
+              "value": "fairy mood 🪄💜",
+              "label": "夢かわ紫 5",
+              "tags": []
+            },
+            {
+              "value": "lavender 🪻☁️",
+              "label": "夢かわ紫 6",
+              "tags": []
+            },
+            {
+              "value": "soft purple 💜",
+              "label": "夢かわ紫 7",
+              "tags": []
+            },
+            {
+              "value": "twilight 🔮✨",
+              "label": "夢かわ紫 8",
+              "tags": []
+            },
+            {
+              "value": "夢かわ 💜🫧",
+              "label": "夢かわ紫 9",
+              "tags": []
+            },
+            {
+              "value": "魔法の時間 🪄",
+              "label": "夢かわ紫 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "紫",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "profile 💜",
+              "label": "紫プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃🔮",
+              "label": "紫プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "name 🪻",
+              "label": "紫プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "link → 💜",
+              "label": "紫プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "about me ☂️",
+              "label": "紫プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "推し色 💜✨",
+              "label": "紫プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "purple profile ✦",
+              "label": "紫プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "fan account 💜",
+              "label": "紫プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "moon child 🌙💜",
+              "label": "紫プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "lavender bio 🪻",
+              "label": "紫プロフィール 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "紫",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "ありがとう 💜",
+              "label": "紫短文 1",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま 🔮",
+              "label": "紫短文 2",
+              "tags": []
+            },
+            {
+              "value": "good night 💜🌙",
+              "label": "紫短文 3",
+              "tags": []
+            },
+            {
+              "value": "new post 🪻✨",
+              "label": "紫短文 4",
+              "tags": []
+            },
+            {
+              "value": "take care ☁️💜",
+              "label": "紫短文 5",
+              "tags": []
+            },
+            {
+              "value": "happy day 💜",
+              "label": "紫短文 6",
+              "tags": []
+            },
+            {
+              "value": "magic mood 🔮",
+              "label": "紫短文 7",
+              "tags": []
+            },
+            {
+              "value": "dreamy note 💜",
+              "label": "紫短文 8",
+              "tags": []
+            },
+            {
+              "value": "推し活 💜",
+              "label": "紫短文 9",
+              "tags": []
+            },
+            {
+              "value": "夜のメモ 🌙",
+              "label": "紫短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "紫系絵文字の組み合わせの使い方",
+        "paragraphs": [
+          "紫系絵文字の組み合わせは、夢かわプロフィール、推し色投稿、夜や魔法の雰囲気に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "紫系の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "profile 💜",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "magic night 🔮🌙",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "推し色 💜✨",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "ゆめかわコピペ",
+            "href": "/kawaii-copy/yumekawa/"
+          },
+          {
+            "label": "星・キラキラ特殊文字",
+            "href": "/special-characters/star/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "紫系絵文字組み合わせはどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "ゆめかわコピペ",
+          "href": "/kawaii-copy/yumekawa/",
+          "description": "夢かわ素材をまとめて探す。"
+        },
+        {
+          "title": "星・キラキラ特殊文字",
+          "href": "/special-characters/star/",
+          "description": "魔法感を足す。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "甘い色違い。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-love",
+      "path": "/emoji-combinations/love/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "恋愛絵文字の組み合わせ | 恋愛・ハート・好きテンプレをコピー - MojiMoon",
+      "description": "恋愛絵文字の組み合わせをコピーできる無料ツール。恋愛、ハート、好き、カップル、メッセージに使いやすい絵文字組み合わせを検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "恋愛絵文字の組み合わせ | 恋愛・ハート・好きテンプレをコピー",
+      "ogDescription": "恋愛に合う絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Love Emoji Combinations",
+      "h1": "恋愛絵文字組み合わせコピペ",
+      "hero": "好き、きゅん、ありがとう、恋愛メッセージに使いやすい絵文字の組み合わせを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "恋愛絵文字組み合わせツール",
+      "searchPlaceholder": "恋愛、ハート、好き、カップル、メッセージなどで検索",
+      "draftPlaceholder": "恋愛絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "恋愛の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った恋愛絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "heart",
+          "label": "ハート"
+        },
+        {
+          "id": "message",
+          "label": "メッセージ"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        },
+        {
+          "id": "sweet",
+          "label": "甘い"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "恋愛",
+          "query": "恋愛"
+        },
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "好き",
+          "query": "好き"
+        },
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        },
+        {
+          "label": "推し活",
+          "query": "推し活"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "heart",
+          "tags": [
+            "恋愛",
+            "ハート"
+          ],
+          "items": [
+            {
+              "value": "💗🫶🏻✨",
+              "label": "恋愛ハート 1",
+              "tags": []
+            },
+            {
+              "value": "💌𓂃♡",
+              "label": "恋愛ハート 2",
+              "tags": []
+            },
+            {
+              "value": "🩷💞🫶🏻",
+              "label": "恋愛ハート 3",
+              "tags": []
+            },
+            {
+              "value": "❤️‍🔥✨",
+              "label": "恋愛ハート 4",
+              "tags": []
+            },
+            {
+              "value": "💘 𝑦𝑜𝑢",
+              "label": "恋愛ハート 5",
+              "tags": []
+            },
+            {
+              "value": "🤍♡🫧",
+              "label": "恋愛ハート 6",
+              "tags": []
+            },
+            {
+              "value": "💞 𝑙𝑜𝑣𝑒 𓂃",
+              "label": "恋愛ハート 7",
+              "tags": []
+            },
+            {
+              "value": "♡ 𝓁𝑜𝓋𝑒 ♡",
+              "label": "恋愛ハート 8",
+              "tags": []
+            },
+            {
+              "value": "🫰🏻💗推し",
+              "label": "恋愛ハート 9",
+              "tags": []
+            },
+            {
+              "value": "💗 ୨୧ 🎀",
+              "label": "恋愛ハート 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "恋愛",
+            "メッセージ"
+          ],
+          "items": [
+            {
+              "value": "だいすき 💗",
+              "label": "恋愛短文 1",
+              "tags": []
+            },
+            {
+              "value": "ありがとう 🫶🏻",
+              "label": "恋愛短文 2",
+              "tags": []
+            },
+            {
+              "value": "love you ♡",
+              "label": "恋愛短文 3",
+              "tags": []
+            },
+            {
+              "value": "miss you 💌",
+              "label": "恋愛短文 4",
+              "tags": []
+            },
+            {
+              "value": "きゅんです 🩷",
+              "label": "恋愛短文 5",
+              "tags": []
+            },
+            {
+              "value": "好きだよ 💞",
+              "label": "恋愛短文 6",
+              "tags": []
+            },
+            {
+              "value": "いつもありがとう ♡",
+              "label": "恋愛短文 7",
+              "tags": []
+            },
+            {
+              "value": "sending love 💗",
+              "label": "恋愛短文 8",
+              "tags": []
+            },
+            {
+              "value": "for you 💌",
+              "label": "恋愛短文 9",
+              "tags": []
+            },
+            {
+              "value": "sweet heart 🩷",
+              "label": "恋愛短文 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "恋愛",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "profile ♡",
+              "label": "恋愛プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃💗",
+              "label": "恋愛プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "推ししか勝たん 🫶🏻💗",
+              "label": "恋愛プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "love note 💌",
+              "label": "恋愛プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "fan account 🫶🏻✨",
+              "label": "恋愛プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "my favorite 💗",
+              "label": "恋愛プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "推し色 💗✨",
+              "label": "恋愛プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "heart mood ♡",
+              "label": "恋愛プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "link → 💌",
+              "label": "恋愛プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "about love ♡",
+              "label": "恋愛プロフィール 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "sweet",
+          "tags": [
+            "恋愛",
+            "甘い"
+          ],
+          "items": [
+            {
+              "value": "🍓💗🎀",
+              "label": "甘い恋愛 1",
+              "tags": []
+            },
+            {
+              "value": "🍒💋💗",
+              "label": "甘い恋愛 2",
+              "tags": []
+            },
+            {
+              "value": "🎀🩷🍰",
+              "label": "甘い恋愛 3",
+              "tags": []
+            },
+            {
+              "value": "🌷🍒💞",
+              "label": "甘い恋愛 4",
+              "tags": []
+            },
+            {
+              "value": "sweet pink 🍰🩷",
+              "label": "甘い恋愛 5",
+              "tags": []
+            },
+            {
+              "value": "ribbon day 🎀☕️",
+              "label": "甘い恋愛 6",
+              "tags": []
+            },
+            {
+              "value": "🐰💗🍓",
+              "label": "甘い恋愛 7",
+              "tags": []
+            },
+            {
+              "value": "💌💘♡",
+              "label": "甘い恋愛 8",
+              "tags": []
+            },
+            {
+              "value": "🩷🍒🎀",
+              "label": "甘い恋愛 9",
+              "tags": []
+            },
+            {
+              "value": "🌷🩷🍰",
+              "label": "甘い恋愛 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "恋愛絵文字の組み合わせの使い方",
+        "paragraphs": [
+          "恋愛絵文字の組み合わせは、恋愛メッセージ、好きの返信、推し活投稿に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "恋愛の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "だいすき 💗",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "love you ♡",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "推ししか勝たん 🫶🏻💗",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "ハート絵文字",
+            "href": "/emoji-copy/heart/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          },
+          {
+            "label": "照れる顔文字",
+            "href": "/kaomoji/shy/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "恋愛絵文字組み合わせはどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "ハート絵文字",
+          "href": "/emoji-copy/heart/",
+          "description": "単体ハートを探す。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "甘いピンク系。"
+        },
+        {
+          "title": "照れる顔文字",
+          "href": "/kaomoji/shy/",
+          "description": "恋愛返信に添える。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-birthday",
+      "path": "/emoji-combinations/birthday/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "誕生日絵文字の組み合わせ | 誕生日・お祝いテンプレをコピー - MojiMoon",
+      "description": "誕生日絵文字の組み合わせをコピーできる無料ツール。誕生日、お祝い、ケーキ、プレゼント、メッセージに使いやすい絵文字組み合わせを検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "誕生日絵文字の組み合わせ | 誕生日・お祝いテンプレをコピー",
+      "ogDescription": "誕生日に合う絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Birthday Emoji Combinations",
+      "h1": "誕生日絵文字組み合わせコピペ",
+      "hero": "誕生日、お祝い、ケーキ、プレゼントに使いやすい絵文字の組み合わせを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "誕生日絵文字組み合わせツール",
+      "searchPlaceholder": "誕生日、お祝い、ケーキ、プレゼント、メッセージなどで検索",
+      "draftPlaceholder": "誕生日絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "誕生日の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った誕生日絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "cake",
+          "label": "ケーキ"
+        },
+        {
+          "id": "party",
+          "label": "パーティ"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        },
+        {
+          "id": "profile",
+          "label": "投稿"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "誕生日",
+          "query": "誕生日"
+        },
+        {
+          "label": "お祝い",
+          "query": "お祝い"
+        },
+        {
+          "label": "ケーキ",
+          "query": "ケーキ"
+        },
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        },
+        {
+          "label": "友達",
+          "query": "友達"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "cake",
+          "tags": [
+            "誕生日",
+            "ケーキ"
+          ],
+          "items": [
+            {
+              "value": "🎂💗🎀",
+              "label": "誕生日ケーキ 1",
+              "tags": []
+            },
+            {
+              "value": "🎂✨🎉",
+              "label": "誕生日ケーキ 2",
+              "tags": []
+            },
+            {
+              "value": "🍰🕯️💗",
+              "label": "誕生日ケーキ 3",
+              "tags": []
+            },
+            {
+              "value": "🎂🤍🫧",
+              "label": "誕生日ケーキ 4",
+              "tags": []
+            },
+            {
+              "value": "🧁🎀✨",
+              "label": "誕生日ケーキ 5",
+              "tags": []
+            },
+            {
+              "value": "🍰💐💗",
+              "label": "誕生日ケーキ 6",
+              "tags": []
+            },
+            {
+              "value": "🎂 ୨୧ 🎁",
+              "label": "誕生日ケーキ 7",
+              "tags": []
+            },
+            {
+              "value": "birthday cake 🎂",
+              "label": "誕生日ケーキ 8",
+              "tags": []
+            },
+            {
+              "value": "sweet birthday 🍰",
+              "label": "誕生日ケーキ 9",
+              "tags": []
+            },
+            {
+              "value": "cake day 🎂✨",
+              "label": "誕生日ケーキ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "party",
+          "tags": [
+            "誕生日",
+            "お祝い"
+          ],
+          "items": [
+            {
+              "value": "🎉🎂✨",
+              "label": "誕生日パーティ 1",
+              "tags": []
+            },
+            {
+              "value": "🎁🎈💗",
+              "label": "誕生日パーティ 2",
+              "tags": []
+            },
+            {
+              "value": "🥳🎉🎂",
+              "label": "誕生日パーティ 3",
+              "tags": []
+            },
+            {
+              "value": "🎈💐✨",
+              "label": "誕生日パーティ 4",
+              "tags": []
+            },
+            {
+              "value": "🎊🤍🎁",
+              "label": "誕生日パーティ 5",
+              "tags": []
+            },
+            {
+              "value": "party time 🎉",
+              "label": "誕生日パーティ 6",
+              "tags": []
+            },
+            {
+              "value": "happy day 🥳",
+              "label": "誕生日パーティ 7",
+              "tags": []
+            },
+            {
+              "value": "celebrate 🎊",
+              "label": "誕生日パーティ 8",
+              "tags": []
+            },
+            {
+              "value": "お祝い 🎉✨",
+              "label": "誕生日パーティ 9",
+              "tags": []
+            },
+            {
+              "value": "birthday party 🎈",
+              "label": "誕生日パーティ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "誕生日",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "happy birthday 🎂💗",
+              "label": "誕生日短文 1",
+              "tags": []
+            },
+            {
+              "value": "お誕生日おめでとう 🎉",
+              "label": "誕生日短文 2",
+              "tags": []
+            },
+            {
+              "value": "素敵な一年に ✨",
+              "label": "誕生日短文 3",
+              "tags": []
+            },
+            {
+              "value": "いつもありがとう 💐",
+              "label": "誕生日短文 4",
+              "tags": []
+            },
+            {
+              "value": "大好きだよ 🎂",
+              "label": "誕生日短文 5",
+              "tags": []
+            },
+            {
+              "value": "おめでとう 🥳",
+              "label": "誕生日短文 6",
+              "tags": []
+            },
+            {
+              "value": "birthday wish 💌",
+              "label": "誕生日短文 7",
+              "tags": []
+            },
+            {
+              "value": "for you 🎁",
+              "label": "誕生日短文 8",
+              "tags": []
+            },
+            {
+              "value": "happy day 🎈",
+              "label": "誕生日短文 9",
+              "tags": []
+            },
+            {
+              "value": "お祝いメッセージ 💗",
+              "label": "誕生日短文 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "誕生日",
+            "投稿"
+          ],
+          "items": [
+            {
+              "value": "birthday post 🎂",
+              "label": "誕生日投稿 1",
+              "tags": []
+            },
+            {
+              "value": "new post 🎉📷",
+              "label": "誕生日投稿 2",
+              "tags": []
+            },
+            {
+              "value": "birthday photo 🎈",
+              "label": "誕生日投稿 3",
+              "tags": []
+            },
+            {
+              "value": "today is my day 🎂",
+              "label": "誕生日投稿 4",
+              "tags": []
+            },
+            {
+              "value": "party log 🎊",
+              "label": "誕生日投稿 5",
+              "tags": []
+            },
+            {
+              "value": "cake memo 🍰",
+              "label": "誕生日投稿 6",
+              "tags": []
+            },
+            {
+              "value": "friend birthday 💐",
+              "label": "誕生日投稿 7",
+              "tags": []
+            },
+            {
+              "value": "推し誕生日 🎂✨",
+              "label": "誕生日投稿 8",
+              "tags": []
+            },
+            {
+              "value": "birthday mood 🎁",
+              "label": "誕生日投稿 9",
+              "tags": []
+            },
+            {
+              "value": "special day 🥳",
+              "label": "誕生日投稿 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "誕生日絵文字の組み合わせの使い方",
+        "paragraphs": [
+          "誕生日絵文字の組み合わせは、誕生日メッセージ、お祝い投稿、友達への返信に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "誕生日の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "happy birthday 🎂💗",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "お誕生日おめでとう 🎉",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "推し誕生日 🎂✨",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "誕生日絵文字",
+            "href": "/emoji-copy/birthday/"
+          },
+          {
+            "label": "ありがとう絵文字",
+            "href": "/emoji-copy/thank-you/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "誕生日絵文字組み合わせはどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "誕生日絵文字",
+          "href": "/emoji-copy/birthday/",
+          "description": "単体の誕生日絵文字を探す。"
+        },
+        {
+          "title": "ありがとう絵文字",
+          "href": "/emoji-copy/thank-you/",
+          "description": "お礼メッセージに使う。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "甘いお祝いテンプレ。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-green",
+      "path": "/emoji-combinations/green/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "緑系絵文字の組み合わせ | 緑・自然・ナチュラルテンプレをコピー - MojiMoon",
+      "description": "緑系絵文字の組み合わせをコピーできる無料ツール。緑、自然、ナチュラル、植物、プロフィールに使いやすい絵文字組み合わせを検索して、SNSやLINEにそのまま貼り付けられます。",
+      "ogTitle": "緑系絵文字の組み合わせ | 緑・自然・ナチュラルテンプレをコピー",
+      "ogDescription": "緑系に合う絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Green Emoji Combinations",
+      "h1": "緑系絵文字組み合わせコピペ",
+      "hero": "緑、自然、植物、ナチュラルな雰囲気に合う絵文字の組み合わせを集めました。 気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "toolLabel": "緑系絵文字組み合わせツール",
+      "searchPlaceholder": "緑、自然、ナチュラル、植物、プロフィールなどで検索",
+      "draftPlaceholder": "緑系絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "緑系の候補を複数追加して、プロフィールや投稿文に合う並びへ整えられます。",
+      "recentLabel": "最近使った緑系絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "green",
+          "label": "緑"
+        },
+        {
+          "id": "nature",
+          "label": "自然"
+        },
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "緑",
+          "query": "緑"
+        },
+        {
+          "label": "自然",
+          "query": "自然"
+        },
+        {
+          "label": "植物",
+          "query": "植物"
+        },
+        {
+          "label": "カフェ",
+          "query": "カフェ"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "green",
+          "tags": [
+            "緑",
+            "自然"
+          ],
+          "items": [
+            {
+              "value": "🌿💚✨",
+              "label": "緑系 1",
+              "tags": []
+            },
+            {
+              "value": "🍀🤍🌿",
+              "label": "緑系 2",
+              "tags": []
+            },
+            {
+              "value": "🌱🫧💚",
+              "label": "緑系 3",
+              "tags": []
+            },
+            {
+              "value": "🥝🌿🤍",
+              "label": "緑系 4",
+              "tags": []
+            },
+            {
+              "value": "💚 𓂃 𓈒𓏸",
+              "label": "緑系 5",
+              "tags": []
+            },
+            {
+              "value": "🌵💚☀️",
+              "label": "緑系 6",
+              "tags": []
+            },
+            {
+              "value": "🍃🫧🌿",
+              "label": "緑系 7",
+              "tags": []
+            },
+            {
+              "value": "🫒🤍🌿",
+              "label": "緑系 8",
+              "tags": []
+            },
+            {
+              "value": "green mood 🌿",
+              "label": "緑系 9",
+              "tags": []
+            },
+            {
+              "value": "natural 💚",
+              "label": "緑系 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "nature",
+          "tags": [
+            "緑",
+            "植物"
+          ],
+          "items": [
+            {
+              "value": "🌿☕️📖",
+              "label": "自然 1",
+              "tags": []
+            },
+            {
+              "value": "🍀✨🤍",
+              "label": "自然 2",
+              "tags": []
+            },
+            {
+              "value": "🌱☁️🫧",
+              "label": "自然 3",
+              "tags": []
+            },
+            {
+              "value": "🌲🤍🌙",
+              "label": "自然 4",
+              "tags": []
+            },
+            {
+              "value": "leaf day 🍃",
+              "label": "自然 5",
+              "tags": []
+            },
+            {
+              "value": "garden note 🌿",
+              "label": "自然 6",
+              "tags": []
+            },
+            {
+              "value": "plant mood 🪴",
+              "label": "自然 7",
+              "tags": []
+            },
+            {
+              "value": "morning green 🌱",
+              "label": "自然 8",
+              "tags": []
+            },
+            {
+              "value": "forest 🌲✨",
+              "label": "自然 9",
+              "tags": []
+            },
+            {
+              "value": "herb tea 🌿☕️",
+              "label": "自然 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "緑",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "profile 🌿",
+              "label": "緑プロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃💚",
+              "label": "緑プロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "name 🍀",
+              "label": "緑プロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "link → 🌱",
+              "label": "緑プロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "about me 🌿",
+              "label": "緑プロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "green profile ✨",
+              "label": "緑プロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "cafe log 🌿☕️",
+              "label": "緑プロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "plant diary 🪴",
+              "label": "緑プロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "natural bio 🍃",
+              "label": "緑プロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "slow life 🌱",
+              "label": "緑プロフィール 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "緑",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "ありがとう 🌿",
+              "label": "緑短文 1",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま 🍀",
+              "label": "緑短文 2",
+              "tags": []
+            },
+            {
+              "value": "good morning 🌱",
+              "label": "緑短文 3",
+              "tags": []
+            },
+            {
+              "value": "new post 🌿📷",
+              "label": "緑短文 4",
+              "tags": []
+            },
+            {
+              "value": "take care 🍃",
+              "label": "緑短文 5",
+              "tags": []
+            },
+            {
+              "value": "happy day 💚",
+              "label": "緑短文 6",
+              "tags": []
+            },
+            {
+              "value": "slow day 🌱",
+              "label": "緑短文 7",
+              "tags": []
+            },
+            {
+              "value": "カフェ時間 ☕️🌿",
+              "label": "緑短文 8",
+              "tags": []
+            },
+            {
+              "value": "自然の気分 🍀",
+              "label": "緑短文 9",
+              "tags": []
+            },
+            {
+              "value": "今日のメモ 🌿",
+              "label": "緑短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "緑系絵文字の組み合わせの使い方",
+        "paragraphs": [
+          "緑系絵文字の組み合わせは、自然派プロフィール、カフェ投稿、落ち着いた日記に使いやすい素材です。長い文章よりも、短い記号や絵文字の並びを1つ添えるだけで雰囲気を変えられます。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。プロフィールでは短めに、投稿文では区切りや文末に置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "緑系の雰囲気を名前や自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              },
+              {
+                "title": "LINE・短文返信",
+                "body": "短いメッセージの文末に1つ置くと、気持ちやトーンをやわらかく伝えられます。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "見出し、区切り、投稿の最後に使うと、写真や文章の雰囲気に合わせた装飾になります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "profile 🌿",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "green mood 🌿",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              },
+              {
+                "title": "good morning 🌱",
+                "body": "そのまま貼り付けたり、名前や推し名を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "花特殊文字",
+            "href": "/special-characters/flower/"
+          },
+          {
+            "label": "フードかわいいコピペ",
+            "href": "/kawaii-copy/food/"
+          },
+          {
+            "label": "白系絵文字組み合わせ",
+            "href": "/emoji-combinations/white/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "緑系絵文字組み合わせはどこで使えますか？",
+          "answer": "SNSプロフィール、LINEの名前、投稿文、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "花特殊文字",
+          "href": "/special-characters/flower/",
+          "description": "自然系に花を足す。"
+        },
+        {
+          "title": "フードかわいいコピペ",
+          "href": "/kawaii-copy/food/",
+          "description": "カフェ投稿に使う。"
+        },
+        {
+          "title": "白系絵文字組み合わせ",
+          "href": "/emoji-combinations/white/",
+          "description": "透明感を足す。"
+        }
+      ]
     }
   ]
 }
