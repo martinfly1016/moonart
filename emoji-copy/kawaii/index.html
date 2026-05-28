@@ -19,10 +19,32 @@
   <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
   <script src="/assets/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
 </head>
 <body data-default-category="kawaii">
   <div class="tool-shell">
-    <header class="site-header"><div class="site-header-inner"><div class="brand-group"><a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a><a class="header-lang-switch" href="/en/emoji-copy/">English</a></div><nav class="site-nav" aria-label="文字ツール"><a href="/">月文字</a><a href="/emoji-copy/" aria-current="page">絵文字コピペ</a><a href="/emoji-list/">絵文字一覧</a><a href="/kaomoji/">顔文字</a><a href="/special-characters/">特殊文字</a><a href="/emoji-combinations/">絵文字組み合わせ</a></nav></div></header>
+    <header class="site-header"><div class="site-header-inner"><div class="brand-group"><a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a><a class="header-lang-switch" href="/en/emoji-copy/">English</a></div><nav class="site-nav" aria-label="文字ツール">
+<a href="/">月文字</a>
+<details class="nav-menu">
+<summary>文字変換</summary>
+<div class="nav-menu-panel">
+<a href="/fancy-text-generator/">おしゃれ文字</a>
+<a href="/zenkaku-hankaku-converter/">全角半角変換</a>
+</div>
+</details>
+<details class="nav-menu nav-menu-wide">
+<summary aria-current="page">絵文字・コピペ</summary>
+<div class="nav-menu-panel">
+<a href="/kawaii-copy/">かわいいコピペ</a>
+<a href="/emoji-copy/" aria-current="page">絵文字コピペ</a>
+<a href="/emoji-list/">絵文字一覧</a>
+<a href="/kaomoji/">顔文字</a>
+<a href="/special-characters/">特殊文字</a>
+<a href="/emoji-combinations/">絵文字組み合わせ</a>
+<a href="/slack-emoji-generator/">Slack絵文字</a>
+</div>
+</details>
+</nav></div></header>
     <section class="hero"><div class="hero-inner"><p class="eyebrow">Kawaii Emoji Copy</p><h1>可愛い絵文字コピペ</h1><p class="hero-copy">リボン、白系、透明感、韓国風、ピンク系など、プロフィールや投稿文に使いやすい可愛い絵文字を集めました。クリックで草稿に追加し、iPhone、Instagram、X、LINEに貼り付けやすい形でまとめてコピーできます。</p></div></section>
     <nav class="topic-nav" aria-label="人気の絵文字テーマ"><div class="topic-nav-inner"><a href="/emoji-copy/heart/">ハート</a><a href="/emoji-copy/flower/">花</a><a href="/emoji-copy/star/">星・月</a><a href="/emoji-copy/birthday/">誕生日</a><a href="/emoji-copy/good-night/">おやすみ</a><a href="/emoji-copy/warning/">警告</a><a href="/emoji-copy/tear/">涙・泣く</a><a href="/emoji-copy/smile/">笑顔</a><a href="/emoji-copy/hand-sign/">手・お願い</a><a href="/emoji-copy/thank-you/">ありがとう</a><a href="/emoji-copy/sorry/">謝る</a><a href="/emoji-copy/sparkle/">キラキラ</a><a href="/emoji-copy/kawaii/" aria-current="page">可愛い</a><a href="/emoji-list/">意味から探す</a></div></nav>
     <main class="tool-wrap"><div class="tool-app"><section class="workspace" aria-label="可愛い絵文字コピペツール"><div class="tool-tabs" data-tabs></div><div class="search-row"><input class="search-input" type="search" data-search placeholder="リボン、白、韓国、透明感などで検索"><button class="clear-search" type="button" data-clear-search>クリア</button></div><div class="item-grid" data-grid></div></section><aside class="composer" aria-label="コピー草稿"><h2>コピー草稿</h2><textarea class="draft-input" data-draft placeholder="可愛い絵文字をクリックするとここに追加されます"></textarea><div class="button-row"><button class="primary-btn" type="button" data-copy-draft>コピー</button><button class="secondary-btn" type="button" data-clear-draft>消去</button></div><p class="hint">気に入った絵文字を複数追加して、名前デコやプロフィール文を作れます。</p><div class="recent-list" data-recent aria-label="最近使った可愛い絵文字"></div></aside></div></main>

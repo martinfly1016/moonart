@@ -64,6 +64,7 @@
   <script src="/assets/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/assets/css/text-tools.css">
   <link rel="stylesheet" href="/assets/css/zenkaku-hankaku-converter.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
 </head>
 <body class="zenkaku-body">
   <div class="tool-shell zenkaku-page">
@@ -73,16 +74,27 @@
           <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
         </div>
         <nav class="site-nav" aria-label="文字ツール">
-          <a href="/">月文字</a>
-          <a href="/fancy-text-generator/">おしゃれ文字</a>
-          <a href="/zenkaku-hankaku-converter/" aria-current="page">全角半角変換</a>
-          <a href="/emoji-copy/">絵文字コピペ</a>
-          <a href="/emoji-list/">絵文字一覧</a>
-          <a href="/kaomoji/">顔文字</a>
-          <a href="/special-characters/">特殊文字</a>
-          <a href="/emoji-combinations/">絵文字組み合わせ</a>
-          <a href="/slack-emoji-generator/">Slack絵文字</a>
-        </nav>
+<a href="/">月文字</a>
+<details class="nav-menu">
+<summary aria-current="page">文字変換</summary>
+<div class="nav-menu-panel">
+<a href="/fancy-text-generator/">おしゃれ文字</a>
+<a href="/zenkaku-hankaku-converter/" aria-current="page">全角半角変換</a>
+</div>
+</details>
+<details class="nav-menu nav-menu-wide">
+<summary>絵文字・コピペ</summary>
+<div class="nav-menu-panel">
+<a href="/kawaii-copy/">かわいいコピペ</a>
+<a href="/emoji-copy/">絵文字コピペ</a>
+<a href="/emoji-list/">絵文字一覧</a>
+<a href="/kaomoji/">顔文字</a>
+<a href="/special-characters/">特殊文字</a>
+<a href="/emoji-combinations/">絵文字組み合わせ</a>
+<a href="/slack-emoji-generator/">Slack絵文字</a>
+</div>
+</details>
+</nav>
       </div>
     </header>
 

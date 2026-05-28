@@ -704,6 +704,7 @@ display: block !important;
 @keyframes artemis-pulse{0%{box-shadow:0 0 0 0 rgba(251,191,36,.6)}70%{box-shadow:0 0 0 8px rgba(251,191,36,0)}100%{box-shadow:0 0 0 0 rgba(251,191,36,0)}}
 </style>
 <link rel="stylesheet" href="/assets/css/moon-tool-unified.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
 </head>
 <body class="moon-tool-page">
 <button id="bookmarkBtn" class="floating-bookmark" title="お気に入りに追加">
@@ -716,10 +717,18 @@ display: block !important;
 <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
 <a href="/index_en.html" class="header-lang-switch">English</a>
 </div>
-<nav class="site-nav" aria-label="MojiMoon文字ツール">
+<nav class="site-nav" aria-label="文字ツール">
 <a href="/" aria-current="page">月文字</a>
+<details class="nav-menu">
+<summary>文字変換</summary>
+<div class="nav-menu-panel">
 <a href="/fancy-text-generator/">おしゃれ文字</a>
 <a href="/zenkaku-hankaku-converter/">全角半角変換</a>
+</div>
+</details>
+<details class="nav-menu nav-menu-wide">
+<summary>絵文字・コピペ</summary>
+<div class="nav-menu-panel">
 <a href="/kawaii-copy/">かわいいコピペ</a>
 <a href="/emoji-copy/">絵文字コピペ</a>
 <a href="/emoji-list/">絵文字一覧</a>
@@ -727,6 +736,8 @@ display: block !important;
 <a href="/special-characters/">特殊文字</a>
 <a href="/emoji-combinations/">絵文字組み合わせ</a>
 <a href="/slack-emoji-generator/">Slack絵文字</a>
+</div>
+</details>
 </nav>
 </div>
 </header>
