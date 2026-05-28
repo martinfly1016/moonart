@@ -13,6 +13,7 @@ const skipNames = new Set([
   '.secret',
   '.secrets',
   '.vercel',
+  '_content',
   'api',
   'dist',
   'docs',

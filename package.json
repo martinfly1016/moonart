@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/vercel-build.mjs",
+    "generate:content": "node scripts/generate-content-pages.mjs",
+    "check:content": "node scripts/generate-content-pages.mjs --check",
+    "build": "node scripts/generate-content-pages.mjs --check && node scripts/vercel-build.mjs",
     "lint": "eslint .",
     "gsc": "node scripts/gsc-report.mjs",
     "ga": "node scripts/ga-report.mjs",

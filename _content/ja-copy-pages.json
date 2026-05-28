@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-05-28",
+  "defaults": {
+    "draftMaxLength": 220,
+    "pageSize": 48,
+    "changefreq": "weekly",
+    "priority": "0.75"
+  },
+  "pages": [
+    {
+      "slug": "kaomoji-shy",
+      "path": "/kaomoji/shy/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "title": "照れる顔文字コピペ | 恥ずかしい・もじもじ・照れ笑い顔文字 - MojiMoon",
+      "description": "照れる顔文字をコピーできる無料ツール。恥ずかしい、もじもじ、照れ笑い、きゅん、褒められた時の反応に使いやすい顔文字をまとめて検索できます。",
+      "ogTitle": "照れる顔文字コピペ | 恥ずかしい・もじもじ顔文字",
+      "ogDescription": "照れた反応、恥ずかしい返信、きゅんとした気持ちに使える顔文字をコピーできます。",
+      "eyebrow": "Shy Kaomoji Copy",
+      "h1": "照れる顔文字コピペ",
+      "hero": "恥ずかしい、もじもじ、照れ笑い、きゅんとした反応に使える顔文字を集めました。LINEやSNSの短い返信にそのまま貼り付けられます。",
+      "toolLabel": "照れる顔文字コピペツール",
+      "searchPlaceholder": "照れ、恥ずかしい、きゅん、もじもじ、恋愛などで検索",
+      "draftPlaceholder": "照れる顔文字をクリックするとここに追加されます",
+      "composerHint": "照れ顔文字を複数組み合わせて、返信の甘さや控えめさを調整できます。",
+      "recentLabel": "最近使った照れる顔文字",
+      "categories": [
+        { "id": "soft", "label": "やわらか" },
+        { "id": "love", "label": "恋愛" },
+        { "id": "hide", "label": "顔隠し" },
+        { "id": "reply", "label": "返信" }
+      ],
+      "quickFilters": [
+        { "label": "可愛い", "query": "可愛い" },
+        { "label": "恋愛", "query": "恋愛" },
+        { "label": "恥ずかしい", "query": "恥ずかしい" },
+        { "label": "きゅん", "query": "きゅん" },
+        { "label": "LINE", "query": "LINE" }
+      ],
+      "itemGroups": [
+        {
+          "category": "soft",
+          "tags": ["照れ", "可愛い", "返信"],
+          "items": [
+            { "value": "(⸝⸝ᵕᴗᵕ⸝⸝)", "label": "やわらか照れ" },
+            { "value": "(⸝⸝⸝- -⸝⸝⸝)", "label": "もじもじ" },
+            { "value": "(´,,•ω•,,)", "label": "ほんのり照れ" },
+            { "value": "(⁄ ⁄•⁄ω⁄•⁄ ⁄)", "label": "恥ずかしい" },
+            { "value": "(///ω///)", "label": "照れ顔" },
+            { "value": "(⸝⸝> ̫ <⸝⸝)", "label": "きゅん照れ" },
+            { "value": "( ˶°⌓°˶)", "label": "照れ驚き" },
+            { "value": "(〃ω〃)", "label": "赤面" },
+            { "value": "(｡･･｡)", "label": "控えめ照れ" },
+            { "value": "(〃▽〃)", "label": "照れ笑い" }
+          ]
+        },
+        {
+          "category": "love",
+          "tags": ["照れ", "恋愛", "きゅん"],
+          "items": [
+            { "value": "(´,,•ω•,,)♡", "label": "恋の照れ" },
+            { "value": "(灬º‿º灬)♡", "label": "ときめき" },
+            { "value": "(♡˙︶˙♡)", "label": "きゅん" },
+            { "value": "(*´˘`*)♡", "label": "好きの照れ" },
+            { "value": "( ˶ˊᵕˋ)੭♡", "label": "やさしい好き" },
+            { "value": "(｡･ω･｡)ﾉ♡", "label": "軽い好意" },
+            { "value": "(๑♡⌓♡๑)", "label": "一目惚れ" },
+            { "value": "(´｡• ᵕ •｡`) ♡", "label": "ふんわり恋愛" },
+            { "value": "(ღ˘⌣˘ღ)", "label": "幸せな照れ" },
+            { "value": "(๑′ᴗ‵๑)♡", "label": "にこにこ好き" }
+          ]
+        },
+        {
+          "category": "hide",
+          "tags": ["照れ", "顔隠し", "恥ずかしい"],
+          "items": [
+            { "value": "(〃ﾉωﾉ)", "label": "顔隠し" },
+            { "value": "(/ω＼)", "label": "見ないで" },
+            { "value": "(つω`*)", "label": "照れ隠し" },
+            { "value": "(*ﾉωﾉ)", "label": "恥ずかしい" },
+            { "value": "(*/▽＼*)", "label": "照れ笑い隠し" },
+            { "value": "(／-＼*)", "label": "赤面隠し" },
+            { "value": "(ฅωฅ*)", "label": "猫みたいな照れ" },
+            { "value": "(//ω//)", "label": "照れ照れ" },
+            { "value": "(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)", "label": "真っ赤" },
+            { "value": "(｡>﹏<｡)", "label": "お願い照れ" }
+          ]
+        },
+        {
+          "category": "reply",
+          "tags": ["照れ", "LINE", "返信", "SNS"],
+          "items": [
+            { "value": "ありがとう(⸝⸝ᵕᴗᵕ⸝⸝)", "label": "ありがとう返信" },
+            { "value": "うれしい(〃▽〃)", "label": "うれしい返信" },
+            { "value": "照れる(///ω///)", "label": "照れる一言" },
+            { "value": "そんなことないよ(/ω＼)", "label": "褒められた時" },
+            { "value": "えへへ(*´˘`*)♡", "label": "えへへ" },
+            { "value": "ちょっと恥ずかしい(〃ﾉωﾉ)", "label": "恥ずかしい文" },
+            { "value": "きゅんです(♡˙︶˙♡)", "label": "きゅん返信" },
+            { "value": "照れちゃう(⸝⸝> ̫ <⸝⸝)", "label": "照れちゃう" },
+            { "value": "うれしすぎる(〃▽〃)", "label": "うれしい照れ" },
+            { "value": "内緒だよ(ฅωฅ*)", "label": "内緒の照れ" }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "照れる顔文字の使い分け",
+        "paragraphs": [
+          "照れる顔文字は、褒められた時、好きな気持ちを伝えたい時、少し恥ずかしい返信をやわらかく見せたい時に使いやすい顔文字です。",
+          "短いLINE返信では顔文字を1つだけ添えると自然です。恋愛寄りにしたい時はハートつき、控えめにしたい時は顔隠し系や小さめの表情を選ぶと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              { "title": "褒められた時", "body": "ありがとう、うれしい、そんなことないよの後ろに短い照れ顔文字を添えると、素直な反応に見えます。" },
+              { "title": "恋愛メッセージ", "body": "ハートつきの照れ顔文字は、好き、きゅん、会いたいなどの短い言葉と相性が良いです。" },
+              { "title": "SNS投稿", "body": "プロフィールや投稿文では長い顔文字を入れすぎず、1つだけ置くとスマホでも読みやすくなります。" }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              { "title": "ありがとう(⸝⸝ᵕᴗᵕ⸝⸝)", "body": "感謝と照れを同時に伝えたい返信に使えます。" },
+              { "title": "そんなことないよ(/ω＼)", "body": "褒められた時の軽い照れ隠しに向いています。" },
+              { "title": "きゅんです(♡˙︶˙♡)", "body": "恋愛や推し活の短いリアクションに使いやすい形です。" }
+            ]
+          }
+        ],
+        "links": [
+          { "label": "恋愛顔文字", "href": "/kaomoji/love/" },
+          { "label": "可愛い顔文字", "href": "/kaomoji/kawaii/" },
+          { "label": "ハート絵文字", "href": "/emoji-copy/heart/" },
+          { "label": "ハート特殊文字", "href": "/special-characters/heart/" }
+        ]
+      },
+      "faq": [
+        { "question": "照れる顔文字はどんな時に使えますか？", "answer": "褒められた時、好きな気持ちを伝える時、恥ずかしい返信をやわらかくしたい時に使えます。" },
+        { "question": "重く見えない照れ顔文字はありますか？", "answer": "短い顔文字や顔隠し系がおすすめです。長いハートつきの顔文字は、親しい相手や推し活投稿に向いています。" },
+        { "question": "LINEで使うなら何個くらいが自然ですか？", "answer": "短い返信では1個だけ添えると自然です。複数使う場合は草稿欄で並びを確認してからコピーできます。" }
+      ],
+      "related": [
+        { "title": "恋愛顔文字", "href": "/kaomoji/love/", "description": "好き・きゅん・ハグの顔文字。" },
+        { "title": "可愛い顔文字", "href": "/kaomoji/kawaii/", "description": "量産型やゆるい顔文字。" },
+        { "title": "ハート絵文字", "href": "/emoji-copy/heart/", "description": "照れた返信にハートを足す。" }
+      ]
+    },
+    {
+      "slug": "kaomoji-sleepy",
+      "path": "/kaomoji/sleepy/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "title": "眠い顔文字コピペ | おやすみ・寝る・うとうと顔文字 - MojiMoon",
+      "description": "眠い顔文字をコピーできる無料ツール。おやすみ、寝る、うとうと、ねむねむ、布団、夜の返信に使いやすい顔文字をまとめて検索できます。",
+      "ogTitle": "眠い顔文字コピペ | おやすみ・寝る顔文字",
+      "ogDescription": "おやすみ、眠い、寝落ち、うとうとした気分に使える顔文字をコピーできます。",
+      "eyebrow": "Sleepy Kaomoji Copy",
+      "h1": "眠い顔文字コピペ",
+      "hero": "おやすみ、ねむねむ、うとうと、寝落ちしそうな時に使える顔文字を集めました。LINEの夜の返信やSNSの日記にそのまま使えます。",
+      "toolLabel": "眠い顔文字コピペツール",
+      "searchPlaceholder": "眠い、おやすみ、寝る、うとうと、布団などで検索",
+      "draftPlaceholder": "眠い顔文字をクリックするとここに追加されます",
+      "composerHint": "おやすみ文や夜の返信に合わせて、眠い顔文字を草稿で組み合わせられます。",
+      "recentLabel": "最近使った眠い顔文字",
+      "categories": [
+        { "id": "sleepy", "label": "眠い" },
+        { "id": "goodnight", "label": "おやすみ" },
+        { "id": "bed", "label": "布団" },
+        { "id": "cute", "label": "可愛い" }
+      ],
+      "quickFilters": [
+        { "label": "おやすみ", "query": "おやすみ" },
+        { "label": "うとうと", "query": "うとうと" },
+        { "label": "布団", "query": "布団" },
+        { "label": "可愛い", "query": "可愛い" },
+        { "label": "LINE", "query": "LINE" }
+      ],
+      "itemGroups": [
+        {
+          "category": "sleepy",
+          "tags": ["眠い", "うとうと", "夜"],
+          "items": [
+            { "value": "(っ ̫ -˘)", "label": "ねむい" },
+            { "value": "(｡ρω-｡)", "label": "ねむねむ" },
+            { "value": "(๑ᵕ⌓ᵕ̤)", "label": "うとうと" },
+            { "value": "(っ﹏-) .｡", "label": "眠たい" },
+            { "value": "(-_-)zzz", "label": "寝る" },
+            { "value": "(´-ωก`)", "label": "眠そう" },
+            { "value": "(｡-ω-)zzz", "label": "すやすや" },
+            { "value": "( ˘ω˘ ) ｽﾔｧ", "label": "すやぁ" },
+            { "value": "(∪｡∪)｡｡｡zzz", "label": "うとうと寝る" },
+            { "value": "(¦3ꇤ[▓▓]", "label": "寝落ち" }
+            ,
+            { "value": "(´-﹃-`)Zｚ…", "label": "寝落ち寸前" },
+            { "value": "(๑-﹏-๑)Zzz", "label": "眠くて限界" }
+          ]
+        },
+        {
+          "category": "goodnight",
+          "tags": ["おやすみ", "夜", "LINE"],
+          "items": [
+            { "value": "おやすみ( ˘ω˘ )", "label": "おやすみ" },
+            { "value": "おやすみなさい(｡-ω-)zzz", "label": "丁寧なおやすみ" },
+            { "value": "また明日(っ ̫ -˘)", "label": "また明日" },
+            { "value": "寝ます(¦3[▓▓]", "label": "寝ます" },
+            { "value": "今日はもう眠い(｡ρω-｡)", "label": "眠い一言" },
+            { "value": "そろそろ寝るね( ˘ω˘ )", "label": "寝るね" },
+            { "value": "いい夢みてね( ˘͈ ᵕ ˘͈ )", "label": "いい夢" },
+            { "value": "おつかれさま(っ ̫ -˘)", "label": "夜のおつかれ" },
+            { "value": "返信は明日するね(｡ρω-｡)", "label": "明日返信" },
+            { "value": "もう寝落ちしそう(¦3ꇤ[▓▓]", "label": "寝落ち連絡" }
+          ]
+        },
+        {
+          "category": "bed",
+          "tags": ["眠い", "布団", "寝る"],
+          "items": [
+            { "value": "(¦3[▓▓]", "label": "布団" },
+            { "value": "[▓▓]ε¦)", "label": "布団に入る" },
+            { "value": "(:3[____]", "label": "ベッド" },
+            { "value": "(:3っ)っ -=三[布団]", "label": "布団へ移動" },
+            { "value": "(¦3ꇤ[▓▓]", "label": "熟睡" },
+            { "value": "(¦3冫 ﾉ)ﾉ", "label": "起きられない" },
+            { "value": "(＿ ＿*) Z z z", "label": "机で寝る" },
+            { "value": "( ᵕᴗᵕ )*･☪︎·̩͙", "label": "月と眠り" },
+            { "value": "[▓▓]ꇤε¦)", "label": "布団で熟睡" },
+            { "value": "(:3っ⌒つ", "label": "ごろ寝" }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": ["眠い", "可愛い", "動物"],
+          "items": [
+            { "value": "(ᐡ- ﻌ -ᐡ)", "label": "ねむい犬" },
+            { "value": "(ᐡᴗ ̫ ᴗᐡ)", "label": "おやすみ犬" },
+            { "value": "(=^-ω-^=)", "label": "眠い猫" },
+            { "value": "(₍ᐢ- ̫-ᐢ₎)", "label": "眠いうさぎ" },
+            { "value": "( ˘꒳˘ )", "label": "穏やかな眠り" },
+            { "value": "(⸝⸝- ̫ -⸝⸝)", "label": "かわいい眠い" },
+            { "value": "(๑-﹏-๑)", "label": "眠くてしょんぼり" },
+            { "value": "( ˘͈ ᵕ ˘͈ )", "label": "やさしいおやすみ" },
+            { "value": "(ᐢ ᵕ ᐢ)zzz", "label": "眠いうさぎ風" }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "眠い顔文字の使い分け",
+        "paragraphs": [
+          "眠い顔文字は、おやすみの挨拶、寝落ちしそうな返信、夜の日記投稿に使いやすい顔文字です。",
+          "短いメッセージでは「おやすみ」の後ろに1つだけ添えると自然です。布団系の顔文字はかわいく見えますが、長くなりやすいためプロフィールよりもチャット向きです。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              { "title": "夜のLINE", "body": "おやすみ、また明日、そろそろ寝るねの文末に短い眠い顔文字を添えるとやわらかい返信になります。" },
+              { "title": "寝落ちしそうな時", "body": "布団系やzzz系の顔文字を使うと、眠さやゆるい雰囲気が伝わりやすくなります。" },
+              { "title": "SNSの日記", "body": "月や絵文字と合わせると、夜の投稿やおやすみ投稿の雰囲気を作れます。" }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              { "title": "おやすみ( ˘ω˘ )", "body": "短く自然な夜の挨拶に使えます。" },
+              { "title": "そろそろ寝るね(っ ̫ -˘)", "body": "LINEの会話をやわらかく終えたい時に向いています。" },
+              { "title": "寝ます(¦3[▓▓]", "body": "布団に入る感じをかわいく伝えられます。" }
+            ]
+          }
+        ],
+        "links": [
+          { "label": "おやすみ絵文字", "href": "/emoji-copy/good-night/" },
+          { "label": "星・月絵文字", "href": "/emoji-copy/star/" },
+          { "label": "可愛い顔文字", "href": "/kaomoji/kawaii/" },
+          { "label": "白系絵文字組み合わせ", "href": "/emoji-combinations/white/" }
+        ]
+      },
+      "faq": [
+        { "question": "眠い顔文字はどんな場面で使えますか？", "answer": "おやすみの挨拶、寝落ちしそうな返信、夜の日記投稿、疲れた時のリアクションに使えます。" },
+        { "question": "LINEで自然に見える眠い顔文字は？", "answer": "短い顔文字がおすすめです。おやすみ、また明日、寝るねの後ろに1つ添えると読みやすくなります。" },
+        { "question": "おやすみ絵文字と一緒に使えますか？", "answer": "使えます。月や星の絵文字と合わせると、夜らしい雰囲気を作れます。" }
+      ],
+      "related": [
+        { "title": "おやすみ絵文字", "href": "/emoji-copy/good-night/", "description": "月や眠りの絵文字をコピー。" },
+        { "title": "星・月絵文字", "href": "/emoji-copy/star/", "description": "夜の投稿に合う絵文字。" },
+        { "title": "白系組み合わせ", "href": "/emoji-combinations/white/", "description": "やわらかい夜の雰囲気。" }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-pink",
+      "path": "/emoji-combinations/pink/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "ピンク絵文字の組み合わせ | 可愛い・リボン・ハート系をコピー - MojiMoon",
+      "description": "ピンク絵文字の組み合わせをコピーできる無料ツール。ハート、リボン、いちご、花、量産型、推し活、Instagramプロフィール向けの可愛いテンプレをまとめています。",
+      "ogTitle": "ピンク絵文字の組み合わせ | 可愛いテンプレをコピー",
+      "ogDescription": "ピンク、リボン、ハート、いちご系の絵文字組み合わせをコピーできます。",
+      "eyebrow": "Pink Emoji Combinations",
+      "h1": "ピンク絵文字の組み合わせ",
+      "hero": "ピンクハート、リボン、いちご、花、量産型っぽい雰囲気に合う絵文字の組み合わせを集めました。プロフィールや投稿文にそのまま使えます。",
+      "toolLabel": "ピンク絵文字組み合わせツール",
+      "searchPlaceholder": "ピンク、リボン、ハート、いちご、推し活などで検索",
+      "draftPlaceholder": "ピンク系の組み合わせをクリックするとここに追加されます",
+      "composerHint": "テンプレを草稿に追加して、名前や推し名を足してからコピーできます。",
+      "recentLabel": "最近使ったピンク絵文字組み合わせ",
+      "categories": [
+        { "id": "heart", "label": "ハート" },
+        { "id": "ribbon", "label": "リボン" },
+        { "id": "profile", "label": "プロフィール" },
+        { "id": "sweet", "label": "甘い" }
+      ],
+      "quickFilters": [
+        { "label": "ハート", "query": "ハート" },
+        { "label": "リボン", "query": "リボン" },
+        { "label": "量産型", "query": "量産型" },
+        { "label": "推し活", "query": "推し活" },
+        { "label": "インスタ", "query": "インスタ" }
+      ],
+      "itemGroups": [
+        {
+          "category": "heart",
+          "tags": ["ピンク", "ハート", "可愛い"],
+          "items": [
+            { "value": "🎀💗🫶🏻", "label": "ピンク可愛い" },
+            { "value": "🩷🫶🏻🎀", "label": "ピンクきゅん" },
+            { "value": "💗🌸🫶🏻", "label": "春きゅん" },
+            { "value": "🩷💞🫶🏻", "label": "恋ピンク" },
+            { "value": "💌💘♡", "label": "恋の手紙" },
+            { "value": "💗 ୨୧ 🎀", "label": "ハートリボン" },
+            { "value": "♡ thank you 💐", "label": "感謝ハート" },
+            { "value": "💞 𝑙𝑜𝑣𝑒 𓂃", "label": "ラブライン" },
+            { "value": "🫰🏻💗推し", "label": "推しハート" },
+            { "value": "love note 💌🩷", "label": "恋のメモ英字" }
+          ]
+        },
+        {
+          "category": "ribbon",
+          "tags": ["ピンク", "リボン", "量産型"],
+          "items": [
+            { "value": "🎀🩷𓂃", "label": "ピンクリボン余白" },
+            { "value": "🩰🎀💞", "label": "バレエピンク" },
+            { "value": "🌷🩰🎀", "label": "淡いピンク" },
+            { "value": "💞🪞🎀", "label": "ピンクミラー" },
+            { "value": "🎂💗🎀", "label": "誕生日ピンク" },
+            { "value": "୨୧ sweet ୨୧", "label": "スイート" },
+            { "value": "꒰🎀꒱❤ ꒰🎀꒱❤", "label": "リボン連続" },
+            { "value": "🎀 𝒄𝒖𝒕𝒆 𓂃", "label": "リボン英字" },
+            { "value": "ribbon day 🎀☕️", "label": "リボンの日" },
+            { "value": "soft girl 🎀🤍", "label": "ソフトガール" }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": ["ピンク", "プロフィール", "インスタ", "推し活"],
+          "items": [
+            { "value": "推し色 💗🫶🏻✨", "label": "推し色" },
+            { "value": "推ししか勝たん 🫶🏻💗", "label": "推し活一言" },
+            { "value": "fan account 🫶🏻✨", "label": "ファンアカ英字" },
+            { "value": "new post 🎀📷", "label": "ピンク投稿告知" },
+            { "value": "profile 𓂃🎀", "label": "プロフィールピンク" },
+            { "value": "bio 𓂃🎀 link →", "label": "プロフィール案内" },
+            { "value": "follow me 🩷🫧", "label": "フォロー案内" },
+            { "value": "pink mood 🎀✨", "label": "ピンクムード英字" }
+          ]
+        },
+        {
+          "category": "sweet",
+          "tags": ["ピンク", "甘い", "いちご", "花"],
+          "items": [
+            { "value": "🍓🧁💗", "label": "いちごスイーツ" },
+            { "value": "🎀🩷🍰", "label": "ピンクケーキ" },
+            { "value": "🌷🍒💞", "label": "甘いピンク" },
+            { "value": "🍒💋💗", "label": "チェリー恋" },
+            { "value": "🍓 ୨୧ 🧁", "label": "いちごリボン" },
+            { "value": "sweet pink 🍰🩷", "label": "甘いピンク英字" },
+            { "value": "sweet moment 🍰🎀", "label": "甘い瞬間" },
+            { "value": "🌸🍓🎀", "label": "花といちご" },
+            { "value": "🐰💗🍓", "label": "うさぎピンク" },
+            { "value": "💗🌷🎀", "label": "花リボン" },
+            { "value": "🩷🍒🎀", "label": "チェリーリボン" },
+            { "value": "🌷🩷🍰", "label": "花ケーキ" }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "ピンク絵文字の組み合わせを作るコツ",
+        "paragraphs": [
+          "ピンク絵文字の組み合わせは、ハート、リボン、いちご、花を中心にすると可愛い雰囲気を作りやすくなります。",
+          "プロフィールでは短めに、投稿文では文末や区切りに使うと自然です。推し活で使う場合は、推し色のハートや名前を草稿に足して整えると見やすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "用途別おすすめ",
+            "cards": [
+              { "title": "Instagramプロフィール", "body": "名前や自己紹介の近くに短いピンク系テンプレを置くと、やわらかい印象になります。" },
+              { "title": "推し活", "body": "推し名、ピンクハート、リボンを合わせると、量産型やかわいいプロフィールに使いやすいです。" },
+              { "title": "誕生日・お祝い", "body": "ケーキ、花、ハートを組み合わせると、明るく甘いメッセージになります。" }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              { "title": "推し色 💗🫶🏻✨", "body": "推し活プロフィールや投稿文の文末に使いやすい短いテンプレです。" },
+              { "title": "sweet pink 🍰🩷", "body": "スイーツ投稿やかわいい日記に合わせやすい英字入りテンプレです。" },
+              { "title": "profile 𓂃🎀", "body": "プロフィール欄の見出しやリンク案内に使えます。" }
+            ]
+          }
+        ],
+        "links": [
+          { "label": "可愛い絵文字組み合わせ", "href": "/emoji-combinations/kawaii/" },
+          { "label": "白系絵文字組み合わせ", "href": "/emoji-combinations/white/" },
+          { "label": "ハート絵文字", "href": "/emoji-copy/heart/" },
+          { "label": "リボン記号", "href": "/kawaii-copy/ribbon/" }
+        ]
+      },
+      "faq": [
+        { "question": "ピンク絵文字の組み合わせはどこで使えますか？", "answer": "Instagramプロフィール、LINEの名前、推し活投稿、誕生日メッセージ、かわいい日記投稿などで使えます。" },
+        { "question": "ピンク系を大人っぽく見せるには？", "answer": "絵文字を少なめにして、白系や短い英字を合わせると甘すぎない印象になります。" },
+        { "question": "推し活プロフィールにも使えますか？", "answer": "使えます。推し名やメンバーカラーに近いハートを草稿に足してからコピーすると整えやすいです。" }
+      ],
+      "related": [
+        { "title": "可愛い絵文字組み合わせ", "href": "/emoji-combinations/kawaii/", "description": "全体のかわいいテンプレ。" },
+        { "title": "ハート絵文字", "href": "/emoji-copy/heart/", "description": "ピンクハートを単体で探す。" },
+        { "title": "リボン記号", "href": "/kawaii-copy/ribbon/", "description": "量産型プロフィールに使う。" }
+      ]
+    }
+  ]
+}
