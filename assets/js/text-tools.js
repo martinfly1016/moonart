@@ -28,6 +28,7 @@
     clearFavorites: '保存を消去',
     clearFavoritesToast: '保存を消去しました',
     addedToast: '草稿に追加しました',
+    cardCopiedToast: 'コピーしました。草稿にも追加しました',
     charCount: (count) => `${count}文字`,
     charLimitCount: (count, limit) => `${count}/${limit}文字`,
     ...(data.ui || {})
@@ -46,6 +47,7 @@
   const pagination = document.createElement('div');
   const mobileQuery = window.matchMedia('(max-width: 760px)');
   const storageKey = `mojimoon:${data.slug}:recent`;
+  const draftKey = data.draftStorageKey || 'mojimoon:copy:draft';
   const globalRecentKey = 'mojimoon:copy:recent';
   const favoritesKey = 'mojimoon:copy:favorites';
   const recentLimit = Number(data.recentLimit || 12);
@@ -96,6 +98,14 @@
     return getStoredList(favoritesKey, favoritesLimit);
   }
 
+  function getStoredDraft() {
+    try {
+      return localStorage.getItem(draftKey) || '';
+    } catch (error) {
+      return '';
+    }
+  }
+
   function getStoredList(key, limit) {
     try {
       return JSON.parse(localStorage.getItem(key) || '[]').slice(0, limit);
@@ -114,6 +124,15 @@
 
   function setFavorites(value) {
     localStorage.setItem(favoritesKey, JSON.stringify(value.slice(0, favoritesLimit)));
+  }
+
+  function persistDraft() {
+    if (!draft) return;
+    try {
+      localStorage.setItem(draftKey, draft.value);
+    } catch (error) {
+      // Ignore storage quota/privacy mode failures; copying should still work.
+    }
   }
 
   function showToast(message) {
@@ -146,13 +165,13 @@
     }, 1200);
   }
 
-  function copyDraftText(button) {
+  async function copyDraftText(button) {
     const text = draft.value.trim();
     if (!text) {
       showToast(ui.emptyDraft);
       return;
     }
-    copyText(text);
+    await copyText(text);
     remember(text);
     trackToolEvent('tool_copy', {
       draft_length: text.length,
@@ -191,17 +210,23 @@
     updateComposerState();
   }
 
-  async function copyText(text) {
+  async function copyText(text, options = {}) {
     if (!text) return;
     try {
       await navigator.clipboard.writeText(text);
-      showToast(ui.copiedToast);
+      if (!options.silent) showToast(ui.copiedToast);
     } catch (error) {
-      draft.value = text;
-      draft.focus();
-      draft.select();
+      const fallback = document.createElement('textarea');
+      fallback.value = text;
+      fallback.setAttribute('readonly', '');
+      fallback.style.position = 'fixed';
+      fallback.style.left = '-9999px';
+      fallback.style.top = '0';
+      document.body.appendChild(fallback);
+      fallback.select();
       document.execCommand('copy');
-      showToast(ui.copiedToast);
+      fallback.remove();
+      if (!options.silent) showToast(ui.copiedToast);
     }
   }
 
@@ -236,8 +261,8 @@
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
     const nextValue = `${draft.value}${spacer}${text}`.trimStart();
     if (draftMaxLength && nextValue.length > draftMaxLength) {
-      showToast(ui.draftLimit(draftMaxLength));
-      return;
+      if (!options.silentLimit) showToast(ui.draftLimit(draftMaxLength));
+      return false;
     }
     draft.value = nextValue;
     draft.dispatchEvent(new Event('input'));
@@ -247,6 +272,24 @@
       item_length: text.length,
       source: options.source || 'grid'
     });
+    return true;
+  }
+
+  async function copyItem(text, options = {}) {
+    const addedToDraft = appendToDraft(text, {
+      ...options,
+      silentLimit: true
+    });
+    remember(text);
+    await copyText(text, { silent: true });
+    trackToolEvent('tool_copy', {
+      item_label: options.label || '',
+      item_category: options.category || activeCategory,
+      item_length: text.length,
+      source: options.source || 'grid'
+    });
+    if (options.button) flashCopyButton(options.button);
+    showToast(addedToDraft ? ui.cardCopiedToast : ui.copiedToast);
   }
 
   function renderQuickFilters() {
@@ -409,20 +452,19 @@
     renderGrid();
   });
 
-  grid.addEventListener('click', (event) => {
+  grid.addEventListener('click', async (event) => {
     const button = event.target.closest('[data-copy]');
     if (!button) return;
     const value = decodeURIComponent(button.dataset.copy);
-    appendToDraft(value, {
+    await copyItem(value, {
       label: button.dataset.label || '',
       category: activeCategory,
-      source: 'grid'
+      source: 'grid',
+      button
     });
-    remember(value);
-    showToast(ui.addedToast);
   });
 
-  recentList.addEventListener('click', (event) => {
+  recentList.addEventListener('click', async (event) => {
     const clearFavorites = event.target.closest('[data-clear-favorites]');
     if (clearFavorites) {
       setFavorites([]);
@@ -442,17 +484,19 @@
     }
     const favoriteButton = event.target.closest('[data-favorite-copy]');
     if (favoriteButton) {
-      appendToDraft(decodeURIComponent(favoriteButton.dataset.favoriteCopy), {
+      await copyItem(decodeURIComponent(favoriteButton.dataset.favoriteCopy), {
         source: 'favorite',
-        category: activeCategory
+        category: activeCategory,
+        button: favoriteButton
       });
       return;
     }
     const button = event.target.closest('[data-recent-copy]');
     if (!button) return;
-    appendToDraft(decodeURIComponent(button.dataset.recentCopy), {
+    await copyItem(decodeURIComponent(button.dataset.recentCopy), {
       source: 'recent',
-      category: activeCategory
+      category: activeCategory,
+      button
     });
   });
 
@@ -477,14 +521,15 @@
     renderGrid();
   });
 
-  copyDraft.addEventListener('click', () => {
-    copyDraftText(copyDraft);
+  copyDraft.addEventListener('click', async () => {
+    await copyDraftText(copyDraft);
     updateComposerState();
   });
 
   clearDraft.addEventListener('click', () => {
     draft.value = '';
     draft.focus();
+    persistDraft();
     updateComposerState();
     trackToolEvent('draft_clear');
   });
@@ -492,7 +537,10 @@
   setupFavorites();
   favoriteDraft?.addEventListener('click', saveDraftFavorite);
 
-  draft.addEventListener('input', updateComposerState);
+  draft.addEventListener('input', () => {
+    persistDraft();
+    updateComposerState();
+  });
 
   let lastTouchEnd = 0;
   document.addEventListener('touchend', (event) => {
@@ -504,6 +552,11 @@
   }, { passive: false });
 
   setupMobileComposer();
+  const storedDraft = getStoredDraft();
+  if (storedDraft && !draft.value) {
+    draft.value = storedDraft;
+    updateComposerState();
+  }
   renderQuickFilters();
   quickFilterWrap?.addEventListener('click', (event) => {
     const button = event.target.closest('[data-quick-query]');
