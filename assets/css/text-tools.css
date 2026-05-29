@@ -825,6 +825,7 @@ a {
   }
 
   .tool-wrap {
+    margin-top: 0;
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -863,7 +864,7 @@ a {
   }
 
   .item-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     padding: 12px;
   }
 
