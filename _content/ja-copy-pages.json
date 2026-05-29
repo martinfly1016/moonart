@@ -11728,6 +11728,4626 @@
           "description": "透明感を足す。"
         }
       ]
+    },
+    {
+      "slug": "emoji-copy-good-morning",
+      "path": "/emoji-copy/good-morning/",
+      "family": "emoji-copy",
+      "navCurrent": "emoji-copy",
+      "lastmod": "2026-05-29",
+      "title": "おはよう絵文字コピペ | 朝の挨拶・LINE返信に使える絵文字 - MojiMoon",
+      "description": "おはよう絵文字をコピーできる無料ツール。おはよう、朝、挨拶、LINE、太陽に使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "おはよう絵文字コピペ | 朝の挨拶・LINE返信に使える絵文字",
+      "ogDescription": "おはように使いやすい絵文字をまとめてコピーできます。",
+      "eyebrow": "Good Morning Emoji Copy",
+      "h1": "おはよう絵文字コピペ",
+      "hero": "おはよう、朝の挨拶、学校や仕事前のLINEに使いやすい絵文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "おはよう絵文字ツール",
+      "searchPlaceholder": "おはよう、朝、挨拶、LINE、太陽などで検索",
+      "draftPlaceholder": "おはよう絵文字をクリックするとここに追加されます",
+      "composerHint": "おはようの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったおはよう絵文字",
+      "categories": [
+        {
+          "id": "morning",
+          "label": "朝"
+        },
+        {
+          "id": "sun",
+          "label": "太陽"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "おはよう",
+          "query": "おはよう"
+        },
+        {
+          "label": "朝",
+          "query": "朝"
+        },
+        {
+          "label": "太陽",
+          "query": "太陽"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        },
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "morning",
+          "tags": [
+            "おはよう",
+            "朝"
+          ],
+          "items": [
+            {
+              "value": "☀️",
+              "label": "朝の絵文字 1",
+              "tags": []
+            },
+            {
+              "value": "🌅",
+              "label": "朝の絵文字 2",
+              "tags": []
+            },
+            {
+              "value": "🌄",
+              "label": "朝の絵文字 3",
+              "tags": []
+            },
+            {
+              "value": "🌤️",
+              "label": "朝の絵文字 4",
+              "tags": []
+            },
+            {
+              "value": "🌞",
+              "label": "朝の絵文字 5",
+              "tags": []
+            },
+            {
+              "value": "🌻",
+              "label": "朝の絵文字 6",
+              "tags": []
+            },
+            {
+              "value": "🌿",
+              "label": "朝の絵文字 7",
+              "tags": []
+            },
+            {
+              "value": "🍞",
+              "label": "朝の絵文字 8",
+              "tags": []
+            },
+            {
+              "value": "☕️",
+              "label": "朝の絵文字 9",
+              "tags": []
+            },
+            {
+              "value": "🥐",
+              "label": "朝の絵文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "sun",
+          "tags": [
+            "太陽",
+            "明るい"
+          ],
+          "items": [
+            {
+              "value": "☀️✨",
+              "label": "太陽おはよう 1",
+              "tags": []
+            },
+            {
+              "value": "🌞✨",
+              "label": "太陽おはよう 2",
+              "tags": []
+            },
+            {
+              "value": "🌅☁️",
+              "label": "太陽おはよう 3",
+              "tags": []
+            },
+            {
+              "value": "🌤️🫧",
+              "label": "太陽おはよう 4",
+              "tags": []
+            },
+            {
+              "value": "☀️🌿",
+              "label": "太陽おはよう 5",
+              "tags": []
+            },
+            {
+              "value": "🌻☀️",
+              "label": "太陽おはよう 6",
+              "tags": []
+            },
+            {
+              "value": "☕️☀️",
+              "label": "太陽おはよう 7",
+              "tags": []
+            },
+            {
+              "value": "🍞☕️",
+              "label": "太陽おはよう 8",
+              "tags": []
+            },
+            {
+              "value": "🥐☀️",
+              "label": "太陽おはよう 9",
+              "tags": []
+            },
+            {
+              "value": "morning ☀️",
+              "label": "太陽おはよう 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "可愛い",
+            "朝"
+          ],
+          "items": [
+            {
+              "value": "🐰☀️",
+              "label": "可愛い朝 1",
+              "tags": []
+            },
+            {
+              "value": "🐻☕️",
+              "label": "可愛い朝 2",
+              "tags": []
+            },
+            {
+              "value": "🐱🌞",
+              "label": "可愛い朝 3",
+              "tags": []
+            },
+            {
+              "value": "🫧☀️",
+              "label": "可愛い朝 4",
+              "tags": []
+            },
+            {
+              "value": "🤍☁️☀️",
+              "label": "可愛い朝 5",
+              "tags": []
+            },
+            {
+              "value": "🌷☀️",
+              "label": "可愛い朝 6",
+              "tags": []
+            },
+            {
+              "value": "🍯☕️",
+              "label": "可愛い朝 7",
+              "tags": []
+            },
+            {
+              "value": "🧸🌤️",
+              "label": "可愛い朝 8",
+              "tags": []
+            },
+            {
+              "value": "🪽☀️",
+              "label": "可愛い朝 9",
+              "tags": []
+            },
+            {
+              "value": "🌼🌞",
+              "label": "可愛い朝 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "おはよう",
+            "LINE"
+          ],
+          "items": [
+            {
+              "value": "おはよう ☀️",
+              "label": "おはよう短文 1",
+              "tags": []
+            },
+            {
+              "value": "おはよー 🌞",
+              "label": "おはよう短文 2",
+              "tags": []
+            },
+            {
+              "value": "今日もよろしく 🌿",
+              "label": "おはよう短文 3",
+              "tags": []
+            },
+            {
+              "value": "いい朝 ☕️",
+              "label": "おはよう短文 4",
+              "tags": []
+            },
+            {
+              "value": "朝だよ 🌅",
+              "label": "おはよう短文 5",
+              "tags": []
+            },
+            {
+              "value": "がんばろう ☀️",
+              "label": "おはよう短文 6",
+              "tags": []
+            },
+            {
+              "value": "good morning 🌤️",
+              "label": "おはよう短文 7",
+              "tags": []
+            },
+            {
+              "value": "morning mood ☕️",
+              "label": "おはよう短文 8",
+              "tags": []
+            },
+            {
+              "value": "朝活 🌿✨",
+              "label": "おはよう短文 9",
+              "tags": []
+            },
+            {
+              "value": "いってらっしゃい ☀️",
+              "label": "おはよう短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "おはよう絵文字コピペの使い方",
+        "paragraphs": [
+          "おはよう絵文字は、朝の挨拶、LINEの一言返信、朝活や日記投稿に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "おはようの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "おはよう ☀️",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "今日もよろしく 🌿",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "good morning 🌤️",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "おはよう顔文字",
+            "href": "/kaomoji/good-morning/"
+          },
+          {
+            "label": "緑系絵文字組み合わせ",
+            "href": "/emoji-combinations/green/"
+          },
+          {
+            "label": "花特殊文字",
+            "href": "/special-characters/flower/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "おはよう絵文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "おはよう顔文字",
+          "href": "/kaomoji/good-morning/",
+          "description": "朝の挨拶を顔文字で。"
+        },
+        {
+          "title": "緑系絵文字組み合わせ",
+          "href": "/emoji-combinations/green/",
+          "description": "朝や自然の雰囲気に。"
+        },
+        {
+          "title": "花特殊文字",
+          "href": "/special-characters/flower/",
+          "description": "春の朝投稿に合わせる。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-copy-otsukaresama",
+      "path": "/emoji-copy/otsukaresama/",
+      "family": "emoji-copy",
+      "navCurrent": "emoji-copy",
+      "lastmod": "2026-05-29",
+      "title": "お疲れ様絵文字コピペ | 仕事終わり・労いメッセージに使える絵文字 - MojiMoon",
+      "description": "お疲れ様絵文字をコピーできる無料ツール。お疲れ様、おつかれ、仕事、労い、LINEに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "お疲れ様絵文字コピペ | 仕事終わり・労いメッセージに使える絵文字",
+      "ogDescription": "お疲れ様に使いやすい絵文字をまとめてコピーできます。",
+      "eyebrow": "Otsukaresama Emoji Copy",
+      "h1": "お疲れ様絵文字コピペ",
+      "hero": "お疲れ様、おつかれ、がんばったねの返信に使いやすい絵文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "お疲れ様絵文字ツール",
+      "searchPlaceholder": "お疲れ様、おつかれ、仕事、労い、LINEなどで検索",
+      "draftPlaceholder": "お疲れ様絵文字をクリックするとここに追加されます",
+      "composerHint": "お疲れ様の候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったお疲れ様絵文字",
+      "categories": [
+        {
+          "id": "work",
+          "label": "仕事"
+        },
+        {
+          "id": "care",
+          "label": "労い"
+        },
+        {
+          "id": "drink",
+          "label": "休憩"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "お疲れ様",
+          "query": "お疲れ様"
+        },
+        {
+          "label": "仕事",
+          "query": "仕事"
+        },
+        {
+          "label": "労い",
+          "query": "労い"
+        },
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "work",
+          "tags": [
+            "仕事",
+            "お疲れ様"
+          ],
+          "items": [
+            {
+              "value": "💼",
+              "label": "仕事絵文字 1",
+              "tags": []
+            },
+            {
+              "value": "📝",
+              "label": "仕事絵文字 2",
+              "tags": []
+            },
+            {
+              "value": "📚",
+              "label": "仕事絵文字 3",
+              "tags": []
+            },
+            {
+              "value": "💻",
+              "label": "仕事絵文字 4",
+              "tags": []
+            },
+            {
+              "value": "☕️",
+              "label": "仕事絵文字 5",
+              "tags": []
+            },
+            {
+              "value": "🕯️",
+              "label": "仕事絵文字 6",
+              "tags": []
+            },
+            {
+              "value": "🌙",
+              "label": "仕事絵文字 7",
+              "tags": []
+            },
+            {
+              "value": "✨",
+              "label": "仕事絵文字 8",
+              "tags": []
+            },
+            {
+              "value": "🙌",
+              "label": "仕事絵文字 9",
+              "tags": []
+            },
+            {
+              "value": "👏",
+              "label": "仕事絵文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "care",
+          "tags": [
+            "労い",
+            "やさしい"
+          ],
+          "items": [
+            {
+              "value": "🤍",
+              "label": "労い絵文字 1",
+              "tags": []
+            },
+            {
+              "value": "🫶🏻",
+              "label": "労い絵文字 2",
+              "tags": []
+            },
+            {
+              "value": "💐",
+              "label": "労い絵文字 3",
+              "tags": []
+            },
+            {
+              "value": "🍀",
+              "label": "労い絵文字 4",
+              "tags": []
+            },
+            {
+              "value": "☁️",
+              "label": "労い絵文字 5",
+              "tags": []
+            },
+            {
+              "value": "🧸",
+              "label": "労い絵文字 6",
+              "tags": []
+            },
+            {
+              "value": "🌿",
+              "label": "労い絵文字 7",
+              "tags": []
+            },
+            {
+              "value": "🫧",
+              "label": "労い絵文字 8",
+              "tags": []
+            },
+            {
+              "value": "💛",
+              "label": "労い絵文字 9",
+              "tags": []
+            },
+            {
+              "value": "🥹",
+              "label": "労い絵文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "drink",
+          "tags": [
+            "休憩",
+            "カフェ"
+          ],
+          "items": [
+            {
+              "value": "☕️✨",
+              "label": "休憩絵文字 1",
+              "tags": []
+            },
+            {
+              "value": "🍵🌿",
+              "label": "休憩絵文字 2",
+              "tags": []
+            },
+            {
+              "value": "🥤🫧",
+              "label": "休憩絵文字 3",
+              "tags": []
+            },
+            {
+              "value": "🍰☕️",
+              "label": "休憩絵文字 4",
+              "tags": []
+            },
+            {
+              "value": "🛁🌙",
+              "label": "休憩絵文字 5",
+              "tags": []
+            },
+            {
+              "value": "🧺🌿",
+              "label": "休憩絵文字 6",
+              "tags": []
+            },
+            {
+              "value": "📖☕️",
+              "label": "休憩絵文字 7",
+              "tags": []
+            },
+            {
+              "value": "🍫🤍",
+              "label": "休憩絵文字 8",
+              "tags": []
+            },
+            {
+              "value": "tea time 🍵",
+              "label": "休憩絵文字 9",
+              "tags": []
+            },
+            {
+              "value": "coffee break ☕️",
+              "label": "休憩絵文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "お疲れ様",
+            "LINE"
+          ],
+          "items": [
+            {
+              "value": "お疲れ様 ☕️",
+              "label": "お疲れ様短文 1",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま 🤍",
+              "label": "お疲れ様短文 2",
+              "tags": []
+            },
+            {
+              "value": "今日もがんばったね ✨",
+              "label": "お疲れ様短文 3",
+              "tags": []
+            },
+            {
+              "value": "ゆっくり休んで 🌙",
+              "label": "お疲れ様短文 4",
+              "tags": []
+            },
+            {
+              "value": "ありがとう 💐",
+              "label": "お疲れ様短文 5",
+              "tags": []
+            },
+            {
+              "value": "無理しないで 🍀",
+              "label": "お疲れ様短文 6",
+              "tags": []
+            },
+            {
+              "value": "おつかれー 🙌",
+              "label": "お疲れ様短文 7",
+              "tags": []
+            },
+            {
+              "value": "よくがんばった 👏",
+              "label": "お疲れ様短文 8",
+              "tags": []
+            },
+            {
+              "value": "take care ☁️",
+              "label": "お疲れ様短文 9",
+              "tags": []
+            },
+            {
+              "value": "休憩しよ ☕️",
+              "label": "お疲れ様短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "お疲れ様絵文字コピペの使い方",
+        "paragraphs": [
+          "お疲れ様絵文字は、仕事終わりの返信、友達への労い、ありがとうの一言に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "お疲れ様の一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "お疲れ様 ☕️",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "ゆっくり休んで 🌙",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "今日もがんばったね ✨",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "お疲れ様顔文字",
+            "href": "/kaomoji/otsukaresama/"
+          },
+          {
+            "label": "ありがとう絵文字組み合わせ",
+            "href": "/emoji-combinations/thank-you/"
+          },
+          {
+            "label": "チェック特殊文字",
+            "href": "/special-characters/check/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "お疲れ様絵文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "お疲れ様顔文字",
+          "href": "/kaomoji/otsukaresama/",
+          "description": "労いを顔文字で。"
+        },
+        {
+          "title": "ありがとう絵文字組み合わせ",
+          "href": "/emoji-combinations/thank-you/",
+          "description": "感謝の文を作る。"
+        },
+        {
+          "title": "チェック特殊文字",
+          "href": "/special-characters/check/",
+          "description": "仕事メモに使う。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-copy-congratulations",
+      "path": "/emoji-copy/congratulations/",
+      "family": "emoji-copy",
+      "navCurrent": "emoji-copy",
+      "lastmod": "2026-05-29",
+      "title": "お祝い絵文字コピペ | おめでとう・祝福メッセージに使える絵文字 - MojiMoon",
+      "description": "お祝い絵文字をコピーできる無料ツール。お祝い、おめでとう、祝福、合格、誕生日に使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "お祝い絵文字コピペ | おめでとう・祝福メッセージに使える絵文字",
+      "ogDescription": "お祝いに使いやすい絵文字をまとめてコピーできます。",
+      "eyebrow": "Congratulations Emoji Copy",
+      "h1": "お祝い絵文字コピペ",
+      "hero": "おめでとう、合格、誕生日、記念日の祝福に使いやすい絵文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "お祝い絵文字ツール",
+      "searchPlaceholder": "お祝い、おめでとう、祝福、合格、誕生日などで検索",
+      "draftPlaceholder": "お祝い絵文字をクリックするとここに追加されます",
+      "composerHint": "お祝いの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったお祝い絵文字",
+      "categories": [
+        {
+          "id": "party",
+          "label": "お祝い"
+        },
+        {
+          "id": "flower",
+          "label": "花"
+        },
+        {
+          "id": "gift",
+          "label": "ギフト"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "お祝い",
+          "query": "お祝い"
+        },
+        {
+          "label": "おめでとう",
+          "query": "おめでとう"
+        },
+        {
+          "label": "誕生日",
+          "query": "誕生日"
+        },
+        {
+          "label": "花",
+          "query": "花"
+        },
+        {
+          "label": "キラキラ",
+          "query": "キラキラ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "party",
+          "tags": [
+            "お祝い",
+            "おめでとう"
+          ],
+          "items": [
+            {
+              "value": "🎉",
+              "label": "お祝い絵文字 1",
+              "tags": []
+            },
+            {
+              "value": "🎊",
+              "label": "お祝い絵文字 2",
+              "tags": []
+            },
+            {
+              "value": "🥳",
+              "label": "お祝い絵文字 3",
+              "tags": []
+            },
+            {
+              "value": "✨",
+              "label": "お祝い絵文字 4",
+              "tags": []
+            },
+            {
+              "value": "👏",
+              "label": "お祝い絵文字 5",
+              "tags": []
+            },
+            {
+              "value": "🙌",
+              "label": "お祝い絵文字 6",
+              "tags": []
+            },
+            {
+              "value": "🌟",
+              "label": "お祝い絵文字 7",
+              "tags": []
+            },
+            {
+              "value": "💫",
+              "label": "お祝い絵文字 8",
+              "tags": []
+            },
+            {
+              "value": "🏆",
+              "label": "お祝い絵文字 9",
+              "tags": []
+            },
+            {
+              "value": "🥂",
+              "label": "お祝い絵文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "flower",
+          "tags": [
+            "花",
+            "祝福"
+          ],
+          "items": [
+            {
+              "value": "💐",
+              "label": "花祝い 1",
+              "tags": []
+            },
+            {
+              "value": "🌸",
+              "label": "花祝い 2",
+              "tags": []
+            },
+            {
+              "value": "🌷",
+              "label": "花祝い 3",
+              "tags": []
+            },
+            {
+              "value": "🌹",
+              "label": "花祝い 4",
+              "tags": []
+            },
+            {
+              "value": "🌼",
+              "label": "花祝い 5",
+              "tags": []
+            },
+            {
+              "value": "🌻",
+              "label": "花祝い 6",
+              "tags": []
+            },
+            {
+              "value": "🪻",
+              "label": "花祝い 7",
+              "tags": []
+            },
+            {
+              "value": "🌺",
+              "label": "花祝い 8",
+              "tags": []
+            },
+            {
+              "value": "💮",
+              "label": "花祝い 9",
+              "tags": []
+            },
+            {
+              "value": "🏵️",
+              "label": "花祝い 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "gift",
+          "tags": [
+            "ギフト",
+            "誕生日"
+          ],
+          "items": [
+            {
+              "value": "🎁",
+              "label": "ギフト祝い 1",
+              "tags": []
+            },
+            {
+              "value": "🎂",
+              "label": "ギフト祝い 2",
+              "tags": []
+            },
+            {
+              "value": "🍰",
+              "label": "ギフト祝い 3",
+              "tags": []
+            },
+            {
+              "value": "🕯️",
+              "label": "ギフト祝い 4",
+              "tags": []
+            },
+            {
+              "value": "💌",
+              "label": "ギフト祝い 5",
+              "tags": []
+            },
+            {
+              "value": "💝",
+              "label": "ギフト祝い 6",
+              "tags": []
+            },
+            {
+              "value": "🎈",
+              "label": "ギフト祝い 7",
+              "tags": []
+            },
+            {
+              "value": "🧁",
+              "label": "ギフト祝い 8",
+              "tags": []
+            },
+            {
+              "value": "🍾",
+              "label": "ギフト祝い 9",
+              "tags": []
+            },
+            {
+              "value": "🎀",
+              "label": "ギフト祝い 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "おめでとう",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "おめでとう 🎉",
+              "label": "お祝い短文 1",
+              "tags": []
+            },
+            {
+              "value": "お祝い 💐",
+              "label": "お祝い短文 2",
+              "tags": []
+            },
+            {
+              "value": "すごいね ✨",
+              "label": "お祝い短文 3",
+              "tags": []
+            },
+            {
+              "value": "合格おめでとう 🌸",
+              "label": "お祝い短文 4",
+              "tags": []
+            },
+            {
+              "value": "Happy day 🎊",
+              "label": "お祝い短文 5",
+              "tags": []
+            },
+            {
+              "value": "congrats 🥳",
+              "label": "お祝い短文 6",
+              "tags": []
+            },
+            {
+              "value": "よかったね 👏",
+              "label": "お祝い短文 7",
+              "tags": []
+            },
+            {
+              "value": "記念日 💝",
+              "label": "お祝い短文 8",
+              "tags": []
+            },
+            {
+              "value": "おめでとうございます 🎁",
+              "label": "お祝い短文 9",
+              "tags": []
+            },
+            {
+              "value": "最高の日 🌟",
+              "label": "お祝い短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "お祝い絵文字コピペの使い方",
+        "paragraphs": [
+          "お祝い絵文字は、おめでとうメッセージ、誕生日や合格祝い、明るい投稿文に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "お祝いの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "おめでとう 🎉",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "合格おめでとう 🌸",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "congrats 🥳",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "誕生日絵文字",
+            "href": "/emoji-copy/birthday/"
+          },
+          {
+            "label": "誕生日絵文字組み合わせ",
+            "href": "/emoji-combinations/birthday/"
+          },
+          {
+            "label": "花特殊文字",
+            "href": "/special-characters/flower/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "お祝い絵文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "誕生日絵文字",
+          "href": "/emoji-copy/birthday/",
+          "description": "誕生日祝いに。"
+        },
+        {
+          "title": "誕生日絵文字組み合わせ",
+          "href": "/emoji-combinations/birthday/",
+          "description": "お祝いテンプレを探す。"
+        },
+        {
+          "title": "花特殊文字",
+          "href": "/special-characters/flower/",
+          "description": "祝福文に花を足す。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-copy-love",
+      "path": "/emoji-copy/love/",
+      "family": "emoji-copy",
+      "navCurrent": "emoji-copy",
+      "lastmod": "2026-05-29",
+      "title": "好き絵文字コピペ | 恋愛・好き・ハート絵文字をコピー - MojiMoon",
+      "description": "好き絵文字をコピーできる無料ツール。好き、恋愛、ハート、推し、カップルに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "好き絵文字コピペ | 恋愛・好き・ハート絵文字をコピー",
+      "ogDescription": "好きに使いやすい絵文字をまとめてコピーできます。",
+      "eyebrow": "Love Emoji Copy",
+      "h1": "好き絵文字コピペ",
+      "hero": "好き、だいすき、恋愛、推し活のメッセージに使いやすい絵文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "好き絵文字ツール",
+      "searchPlaceholder": "好き、恋愛、ハート、推し、カップルなどで検索",
+      "draftPlaceholder": "好き絵文字をクリックするとここに追加されます",
+      "composerHint": "好きの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使った好き絵文字",
+      "categories": [
+        {
+          "id": "heart",
+          "label": "ハート"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "couple",
+          "label": "恋愛"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "好き",
+          "query": "好き"
+        },
+        {
+          "label": "恋愛",
+          "query": "恋愛"
+        },
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "推し",
+          "query": "推し"
+        },
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "heart",
+          "tags": [
+            "ハート",
+            "恋愛"
+          ],
+          "items": [
+            {
+              "value": "❤️",
+              "label": "好きハート 1",
+              "tags": []
+            },
+            {
+              "value": "🩷",
+              "label": "好きハート 2",
+              "tags": []
+            },
+            {
+              "value": "💗",
+              "label": "好きハート 3",
+              "tags": []
+            },
+            {
+              "value": "💖",
+              "label": "好きハート 4",
+              "tags": []
+            },
+            {
+              "value": "💘",
+              "label": "好きハート 5",
+              "tags": []
+            },
+            {
+              "value": "💝",
+              "label": "好きハート 6",
+              "tags": []
+            },
+            {
+              "value": "💞",
+              "label": "好きハート 7",
+              "tags": []
+            },
+            {
+              "value": "💕",
+              "label": "好きハート 8",
+              "tags": []
+            },
+            {
+              "value": "💓",
+              "label": "好きハート 9",
+              "tags": []
+            },
+            {
+              "value": "🫶🏻",
+              "label": "好きハート 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "可愛い",
+            "好き"
+          ],
+          "items": [
+            {
+              "value": "🎀",
+              "label": "可愛い好き 1",
+              "tags": []
+            },
+            {
+              "value": "🌷",
+              "label": "可愛い好き 2",
+              "tags": []
+            },
+            {
+              "value": "💐",
+              "label": "可愛い好き 3",
+              "tags": []
+            },
+            {
+              "value": "🍓",
+              "label": "可愛い好き 4",
+              "tags": []
+            },
+            {
+              "value": "🐰",
+              "label": "可愛い好き 5",
+              "tags": []
+            },
+            {
+              "value": "🧸",
+              "label": "可愛い好き 6",
+              "tags": []
+            },
+            {
+              "value": "🪽",
+              "label": "可愛い好き 7",
+              "tags": []
+            },
+            {
+              "value": "✨",
+              "label": "可愛い好き 8",
+              "tags": []
+            },
+            {
+              "value": "🫧",
+              "label": "可愛い好き 9",
+              "tags": []
+            },
+            {
+              "value": "💌",
+              "label": "可愛い好き 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "couple",
+          "tags": [
+            "恋愛",
+            "カップル"
+          ],
+          "items": [
+            {
+              "value": "💑",
+              "label": "恋愛絵文字 1",
+              "tags": []
+            },
+            {
+              "value": "👩‍❤️‍👨",
+              "label": "恋愛絵文字 2",
+              "tags": []
+            },
+            {
+              "value": "👩‍❤️‍👩",
+              "label": "恋愛絵文字 3",
+              "tags": []
+            },
+            {
+              "value": "👨‍❤️‍👨",
+              "label": "恋愛絵文字 4",
+              "tags": []
+            },
+            {
+              "value": "💏",
+              "label": "恋愛絵文字 5",
+              "tags": []
+            },
+            {
+              "value": "❤️‍🔥",
+              "label": "恋愛絵文字 6",
+              "tags": []
+            },
+            {
+              "value": "💋",
+              "label": "恋愛絵文字 7",
+              "tags": []
+            },
+            {
+              "value": "🫰🏻",
+              "label": "恋愛絵文字 8",
+              "tags": []
+            },
+            {
+              "value": "🥰",
+              "label": "恋愛絵文字 9",
+              "tags": []
+            },
+            {
+              "value": "😍",
+              "label": "恋愛絵文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "好き",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "だいすき 💗",
+              "label": "好き短文 1",
+              "tags": []
+            },
+            {
+              "value": "好きだよ 🩷",
+              "label": "好き短文 2",
+              "tags": []
+            },
+            {
+              "value": "love you ❤️",
+              "label": "好き短文 3",
+              "tags": []
+            },
+            {
+              "value": "きゅん 🫶🏻",
+              "label": "好き短文 4",
+              "tags": []
+            },
+            {
+              "value": "推ししか勝たん 💘",
+              "label": "好き短文 5",
+              "tags": []
+            },
+            {
+              "value": "ありがとう 💞",
+              "label": "好き短文 6",
+              "tags": []
+            },
+            {
+              "value": "会いたい 💌",
+              "label": "好き短文 7",
+              "tags": []
+            },
+            {
+              "value": "照れる 🎀",
+              "label": "好き短文 8",
+              "tags": []
+            },
+            {
+              "value": "my love 💖",
+              "label": "好き短文 9",
+              "tags": []
+            },
+            {
+              "value": "for you 💝",
+              "label": "好き短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "好き絵文字コピペの使い方",
+        "paragraphs": [
+          "好き絵文字は、好きの一言、恋愛メッセージ、推し活投稿に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "好きの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "だいすき 💗",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "love you ❤️",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "推ししか勝たん 💘",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "恋愛絵文字組み合わせ",
+            "href": "/emoji-combinations/love/"
+          },
+          {
+            "label": "照れる顔文字",
+            "href": "/kaomoji/shy/"
+          },
+          {
+            "label": "ハート絵文字",
+            "href": "/emoji-copy/heart/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "好き絵文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "恋愛絵文字組み合わせ",
+          "href": "/emoji-combinations/love/",
+          "description": "恋愛テンプレを探す。"
+        },
+        {
+          "title": "照れる顔文字",
+          "href": "/kaomoji/shy/",
+          "description": "好きの返信に添える。"
+        },
+        {
+          "title": "ハート絵文字",
+          "href": "/emoji-copy/heart/",
+          "description": "ハートを単体で探す。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-thank-you",
+      "path": "/emoji-combinations/thank-you/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "lastmod": "2026-05-29",
+      "title": "ありがとう絵文字組み合わせコピペ | 感謝メッセージテンプレをコピー - MojiMoon",
+      "description": "ありがとう絵文字の組み合わせをコピーできる無料ツール。ありがとう、感謝、お礼、LINE、メッセージに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "ありがとう絵文字組み合わせコピペ | 感謝メッセージテンプレをコピー",
+      "ogDescription": "ありがとうに使いやすい絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Thank You Emoji Combinations",
+      "h1": "ありがとう絵文字組み合わせコピペ",
+      "hero": "ありがとう、助かった、感謝を伝える短い絵文字組み合わせを集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "ありがとう絵文字組み合わせツール",
+      "searchPlaceholder": "ありがとう、感謝、お礼、LINE、メッセージなどで検索",
+      "draftPlaceholder": "ありがとう絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "ありがとうの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったありがとう絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "thanks",
+          "label": "感謝"
+        },
+        {
+          "id": "flower",
+          "label": "花"
+        },
+        {
+          "id": "soft",
+          "label": "やさしい"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        },
+        {
+          "label": "感謝",
+          "query": "感謝"
+        },
+        {
+          "label": "お礼",
+          "query": "お礼"
+        },
+        {
+          "label": "花",
+          "query": "花"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "thanks",
+          "tags": [
+            "ありがとう",
+            "感謝"
+          ],
+          "items": [
+            {
+              "value": "ありがとう 🫶🏻🤍",
+              "label": "感謝 1",
+              "tags": []
+            },
+            {
+              "value": "thank you 💐",
+              "label": "感謝 2",
+              "tags": []
+            },
+            {
+              "value": "thanks ✨",
+              "label": "感謝 3",
+              "tags": []
+            },
+            {
+              "value": "感謝です 💌",
+              "label": "感謝 4",
+              "tags": []
+            },
+            {
+              "value": "助かったよ 🙏",
+              "label": "感謝 5",
+              "tags": []
+            },
+            {
+              "value": "いつもありがとう 🌷",
+              "label": "感謝 6",
+              "tags": []
+            },
+            {
+              "value": "ありがとう ☁️🤍",
+              "label": "感謝 7",
+              "tags": []
+            },
+            {
+              "value": "thank you so much 🫧",
+              "label": "感謝 8",
+              "tags": []
+            },
+            {
+              "value": "感謝いっぱい 💗",
+              "label": "感謝 9",
+              "tags": []
+            },
+            {
+              "value": "ありがとね 🫶🏻",
+              "label": "感謝 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "flower",
+          "tags": [
+            "花",
+            "ありがとう"
+          ],
+          "items": [
+            {
+              "value": "💐🤍✨",
+              "label": "花の感謝 1",
+              "tags": []
+            },
+            {
+              "value": "🌷💌🤍",
+              "label": "花の感謝 2",
+              "tags": []
+            },
+            {
+              "value": "🌸🫶🏻✨",
+              "label": "花の感謝 3",
+              "tags": []
+            },
+            {
+              "value": "🌼☁️💗",
+              "label": "花の感謝 4",
+              "tags": []
+            },
+            {
+              "value": "🪻🤍🫧",
+              "label": "花の感謝 5",
+              "tags": []
+            },
+            {
+              "value": "💐 𓂃 ♡",
+              "label": "花の感謝 6",
+              "tags": []
+            },
+            {
+              "value": "flower thanks 🌷",
+              "label": "花の感謝 7",
+              "tags": []
+            },
+            {
+              "value": "感謝の花 💐",
+              "label": "花の感謝 8",
+              "tags": []
+            },
+            {
+              "value": "ありがとう 🌸",
+              "label": "花の感謝 9",
+              "tags": []
+            },
+            {
+              "value": "お礼 💐✨",
+              "label": "花の感謝 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "soft",
+          "tags": [
+            "やさしい",
+            "LINE"
+          ],
+          "items": [
+            {
+              "value": "🤍🫧☁️",
+              "label": "やさしい感謝 1",
+              "tags": []
+            },
+            {
+              "value": "🧸🤍💌",
+              "label": "やさしい感謝 2",
+              "tags": []
+            },
+            {
+              "value": "☕️🤍✨",
+              "label": "やさしい感謝 3",
+              "tags": []
+            },
+            {
+              "value": "🍀🫶🏻",
+              "label": "やさしい感謝 4",
+              "tags": []
+            },
+            {
+              "value": "🪽🤍𓂃",
+              "label": "やさしい感謝 5",
+              "tags": []
+            },
+            {
+              "value": "soft thanks ☁️",
+              "label": "やさしい感謝 6",
+              "tags": []
+            },
+            {
+              "value": "take care 🤍",
+              "label": "やさしい感謝 7",
+              "tags": []
+            },
+            {
+              "value": "やさしい気持ち 🫧",
+              "label": "やさしい感謝 8",
+              "tags": []
+            },
+            {
+              "value": "ほんとにありがとう 🤍",
+              "label": "やさしい感謝 9",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま ☕️",
+              "label": "やさしい感謝 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "短文",
+            "お礼"
+          ],
+          "items": [
+            {
+              "value": "本当にありがとう 💐",
+              "label": "ありがとう短文 1",
+              "tags": []
+            },
+            {
+              "value": "助かりました 🙏✨",
+              "label": "ありがとう短文 2",
+              "tags": []
+            },
+            {
+              "value": "うれしいです 🫶🏻",
+              "label": "ありがとう短文 3",
+              "tags": []
+            },
+            {
+              "value": "感謝してます 🤍",
+              "label": "ありがとう短文 4",
+              "tags": []
+            },
+            {
+              "value": "またよろしくね 🌷",
+              "label": "ありがとう短文 5",
+              "tags": []
+            },
+            {
+              "value": "thanks a lot 💌",
+              "label": "ありがとう短文 6",
+              "tags": []
+            },
+            {
+              "value": "ありがとうメモ 𓂃",
+              "label": "ありがとう短文 7",
+              "tags": []
+            },
+            {
+              "value": "お礼の気持ち 💗",
+              "label": "ありがとう短文 8",
+              "tags": []
+            },
+            {
+              "value": "今日もありがとう ☕️",
+              "label": "ありがとう短文 9",
+              "tags": []
+            },
+            {
+              "value": "thankful day ✨",
+              "label": "ありがとう短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "ありがとう絵文字組み合わせコピペの使い方",
+        "paragraphs": [
+          "ありがとう絵文字組み合わせは、お礼メッセージ、仕事や友達への返信、感謝投稿に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "ありがとうの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "本当にありがとう 💐",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "助かりました 🙏✨",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "thank you 💐",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "ありがとう絵文字",
+            "href": "/emoji-copy/thank-you/"
+          },
+          {
+            "label": "ありがとう顔文字",
+            "href": "/kaomoji/thank-you/"
+          },
+          {
+            "label": "花特殊文字",
+            "href": "/special-characters/flower/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "ありがとう絵文字組み合わせはどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "ありがとう絵文字",
+          "href": "/emoji-copy/thank-you/",
+          "description": "単体の感謝絵文字。"
+        },
+        {
+          "title": "ありがとう顔文字",
+          "href": "/kaomoji/thank-you/",
+          "description": "やわらかいお礼返信。"
+        },
+        {
+          "title": "花特殊文字",
+          "href": "/special-characters/flower/",
+          "description": "お礼文に花を足す。"
+        }
+      ]
+    },
+    {
+      "slug": "emoji-combinations-good-night",
+      "path": "/emoji-combinations/good-night/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "lastmod": "2026-05-29",
+      "title": "おやすみ絵文字組み合わせコピペ | 夜・月・眠りテンプレをコピー - MojiMoon",
+      "description": "おやすみ絵文字の組み合わせをコピーできる無料ツール。おやすみ、夜、月、眠い、LINEに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "おやすみ絵文字組み合わせコピペ | 夜・月・眠りテンプレをコピー",
+      "ogDescription": "おやすみに使いやすい絵文字組み合わせをまとめてコピーできます。",
+      "eyebrow": "Good Night Emoji Combinations",
+      "h1": "おやすみ絵文字組み合わせコピペ",
+      "hero": "おやすみ、寝るね、夜の投稿に使いやすい月や雲の絵文字組み合わせを集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "おやすみ絵文字組み合わせツール",
+      "searchPlaceholder": "おやすみ、夜、月、眠い、LINEなどで検索",
+      "draftPlaceholder": "おやすみ絵文字組み合わせをクリックするとここに追加されます",
+      "composerHint": "おやすみの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったおやすみ絵文字組み合わせ",
+      "categories": [
+        {
+          "id": "moon",
+          "label": "月"
+        },
+        {
+          "id": "sleep",
+          "label": "眠り"
+        },
+        {
+          "id": "white",
+          "label": "白系"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "おやすみ",
+          "query": "おやすみ"
+        },
+        {
+          "label": "夜",
+          "query": "夜"
+        },
+        {
+          "label": "月",
+          "query": "月"
+        },
+        {
+          "label": "眠い",
+          "query": "眠い"
+        },
+        {
+          "label": "白系",
+          "query": "白系"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "moon",
+          "tags": [
+            "月",
+            "夜"
+          ],
+          "items": [
+            {
+              "value": "🌙☁️🤍",
+              "label": "月おやすみ 1",
+              "tags": []
+            },
+            {
+              "value": "☾ 𓂃 🫧",
+              "label": "月おやすみ 2",
+              "tags": []
+            },
+            {
+              "value": "🌙✨🪽",
+              "label": "月おやすみ 3",
+              "tags": []
+            },
+            {
+              "value": "☁️🌙💤",
+              "label": "月おやすみ 4",
+              "tags": []
+            },
+            {
+              "value": "🤍🌙𓈒𓏸",
+              "label": "月おやすみ 5",
+              "tags": []
+            },
+            {
+              "value": "moon mood 🌙",
+              "label": "月おやすみ 6",
+              "tags": []
+            },
+            {
+              "value": "night sky ✨",
+              "label": "月おやすみ 7",
+              "tags": []
+            },
+            {
+              "value": "月の夜 🌙",
+              "label": "月おやすみ 8",
+              "tags": []
+            },
+            {
+              "value": "good night ☁️🌙",
+              "label": "月おやすみ 9",
+              "tags": []
+            },
+            {
+              "value": "dreamy night 🤍",
+              "label": "月おやすみ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "sleep",
+          "tags": [
+            "眠い",
+            "おやすみ"
+          ],
+          "items": [
+            {
+              "value": "😴🌙",
+              "label": "眠り 1",
+              "tags": []
+            },
+            {
+              "value": "💤☁️",
+              "label": "眠り 2",
+              "tags": []
+            },
+            {
+              "value": "🛌🌙",
+              "label": "眠り 3",
+              "tags": []
+            },
+            {
+              "value": "🧸💤",
+              "label": "眠り 4",
+              "tags": []
+            },
+            {
+              "value": "🐑☁️",
+              "label": "眠り 5",
+              "tags": []
+            },
+            {
+              "value": "sleepy 💤",
+              "label": "眠り 6",
+              "tags": []
+            },
+            {
+              "value": "寝るね 🌙",
+              "label": "眠り 7",
+              "tags": []
+            },
+            {
+              "value": "夢で会おう 💭",
+              "label": "眠り 8",
+              "tags": []
+            },
+            {
+              "value": "おふとん 🛌",
+              "label": "眠り 9",
+              "tags": []
+            },
+            {
+              "value": "zzz ☁️",
+              "label": "眠り 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "white",
+          "tags": [
+            "白系",
+            "透明感"
+          ],
+          "items": [
+            {
+              "value": "🤍☁️𓂃",
+              "label": "白系おやすみ 1",
+              "tags": []
+            },
+            {
+              "value": "☁️🫧🌙",
+              "label": "白系おやすみ 2",
+              "tags": []
+            },
+            {
+              "value": "🪽🤍☽",
+              "label": "白系おやすみ 3",
+              "tags": []
+            },
+            {
+              "value": "⋆｡˚ ☁︎ ˚｡⋆",
+              "label": "白系おやすみ 4",
+              "tags": []
+            },
+            {
+              "value": "🦢☁️🤍",
+              "label": "白系おやすみ 5",
+              "tags": []
+            },
+            {
+              "value": "white night 🤍",
+              "label": "白系おやすみ 6",
+              "tags": []
+            },
+            {
+              "value": "soft night ☁️",
+              "label": "白系おやすみ 7",
+              "tags": []
+            },
+            {
+              "value": "透明感 🌙🫧",
+              "label": "白系おやすみ 8",
+              "tags": []
+            },
+            {
+              "value": "夜の白 🤍",
+              "label": "白系おやすみ 9",
+              "tags": []
+            },
+            {
+              "value": "dream cloud ☁️",
+              "label": "白系おやすみ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "短文",
+            "LINE"
+          ],
+          "items": [
+            {
+              "value": "おやすみ 🌙",
+              "label": "おやすみ短文 1",
+              "tags": []
+            },
+            {
+              "value": "また明日 ☁️",
+              "label": "おやすみ短文 2",
+              "tags": []
+            },
+            {
+              "value": "そろそろ寝るね 💤",
+              "label": "おやすみ短文 3",
+              "tags": []
+            },
+            {
+              "value": "いい夢を 🤍",
+              "label": "おやすみ短文 4",
+              "tags": []
+            },
+            {
+              "value": "good night 🌙",
+              "label": "おやすみ短文 5",
+              "tags": []
+            },
+            {
+              "value": "sweet dreams ☁️",
+              "label": "おやすみ短文 6",
+              "tags": []
+            },
+            {
+              "value": "寝ます 🛌",
+              "label": "おやすみ短文 7",
+              "tags": []
+            },
+            {
+              "value": "夜のメモ 🌙",
+              "label": "おやすみ短文 8",
+              "tags": []
+            },
+            {
+              "value": "今日もありがとう 🤍",
+              "label": "おやすみ短文 9",
+              "tags": []
+            },
+            {
+              "value": "ゆっくり休んで 💤",
+              "label": "おやすみ短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "おやすみ絵文字組み合わせコピペの使い方",
+        "paragraphs": [
+          "おやすみ絵文字組み合わせは、夜の挨拶、寝る前のLINE、おやすみ投稿に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "おやすみの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "おやすみ 🌙",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "また明日 ☁️",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "sweet dreams ☁️",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "おやすみ絵文字",
+            "href": "/emoji-copy/good-night/"
+          },
+          {
+            "label": "おやすみ顔文字",
+            "href": "/kaomoji/good-night/"
+          },
+          {
+            "label": "白系絵文字組み合わせ",
+            "href": "/emoji-combinations/white/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "おやすみ絵文字組み合わせはどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "おやすみ絵文字",
+          "href": "/emoji-copy/good-night/",
+          "description": "単体の夜絵文字。"
+        },
+        {
+          "title": "おやすみ顔文字",
+          "href": "/kaomoji/good-night/",
+          "description": "眠い返信に使う。"
+        },
+        {
+          "title": "白系絵文字組み合わせ",
+          "href": "/emoji-combinations/white/",
+          "description": "透明感ある夜に。"
+        }
+      ]
+    },
+    {
+      "slug": "kaomoji-good-morning",
+      "path": "/kaomoji/good-morning/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "lastmod": "2026-05-29",
+      "title": "おはよう顔文字コピペ | 朝の挨拶・LINE返信に使える顔文字 - MojiMoon",
+      "description": "おはよう顔文字をコピーできる無料ツール。おはよう、朝、挨拶、LINE、元気に使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "おはよう顔文字コピペ | 朝の挨拶・LINE返信に使える顔文字",
+      "ogDescription": "おはように使いやすい顔文字をまとめてコピーできます。",
+      "eyebrow": "Good Morning Kaomoji Copy",
+      "h1": "おはよう顔文字コピペ",
+      "hero": "おはよう、今日もよろしく、朝のLINEに使いやすい顔文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "おはよう顔文字ツール",
+      "searchPlaceholder": "おはよう、朝、挨拶、LINE、元気などで検索",
+      "draftPlaceholder": "おはよう顔文字をクリックするとここに追加されます",
+      "composerHint": "おはようの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったおはよう顔文字",
+      "categories": [
+        {
+          "id": "basic",
+          "label": "定番"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "genki",
+          "label": "元気"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "おはよう",
+          "query": "おはよう"
+        },
+        {
+          "label": "朝",
+          "query": "朝"
+        },
+        {
+          "label": "挨拶",
+          "query": "挨拶"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        },
+        {
+          "label": "元気",
+          "query": "元気"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "basic",
+          "tags": [
+            "おはよう",
+            "朝"
+          ],
+          "items": [
+            {
+              "value": "(｡･ω･)ﾉﾞ",
+              "label": "おはよう顔文字 1",
+              "tags": []
+            },
+            {
+              "value": "( ´ ▽ ` )ﾉ",
+              "label": "おはよう顔文字 2",
+              "tags": []
+            },
+            {
+              "value": "(*´▽`*)ﾉ",
+              "label": "おはよう顔文字 3",
+              "tags": []
+            },
+            {
+              "value": "( ᵕᴗᵕ )*･☪︎·̩͙",
+              "label": "おはよう顔文字 4",
+              "tags": []
+            },
+            {
+              "value": "(๑˃̵ᴗ˂̵)و",
+              "label": "おはよう顔文字 5",
+              "tags": []
+            },
+            {
+              "value": "(｡･∀･)ﾉﾞ",
+              "label": "おはよう顔文字 6",
+              "tags": []
+            },
+            {
+              "value": "(ฅ’ω’ฅ)",
+              "label": "おはよう顔文字 7",
+              "tags": []
+            },
+            {
+              "value": "( *ˊᵕˋ)ﾉ",
+              "label": "おはよう顔文字 8",
+              "tags": []
+            },
+            {
+              "value": "( ੭ ˙ᗜ˙ )੭",
+              "label": "おはよう顔文字 9",
+              "tags": []
+            },
+            {
+              "value": "(｡•̀ᴗ-)✧",
+              "label": "おはよう顔文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "可愛い",
+            "朝"
+          ],
+          "items": [
+            {
+              "value": "(˶ᵔ ᵕ ᵔ˶)",
+              "label": "可愛いおはよう 1",
+              "tags": []
+            },
+            {
+              "value": "(๑>◡<๑)",
+              "label": "可愛いおはよう 2",
+              "tags": []
+            },
+            {
+              "value": "(っ˘ω˘ς )",
+              "label": "可愛いおはよう 3",
+              "tags": []
+            },
+            {
+              "value": "( ´,,•ω•,,`)",
+              "label": "可愛いおはよう 4",
+              "tags": []
+            },
+            {
+              "value": "(♡˙︶˙♡)",
+              "label": "可愛いおはよう 5",
+              "tags": []
+            },
+            {
+              "value": "(ᐢ ᵕ ᐢ)",
+              "label": "可愛いおはよう 6",
+              "tags": []
+            },
+            {
+              "value": "(๑˘︶˘๑)",
+              "label": "可愛いおはよう 7",
+              "tags": []
+            },
+            {
+              "value": "(⸝⸝ᵕᴗᵕ⸝⸝)",
+              "label": "可愛いおはよう 8",
+              "tags": []
+            },
+            {
+              "value": "(｡•ᴗ•｡)♡",
+              "label": "可愛いおはよう 9",
+              "tags": []
+            },
+            {
+              "value": "(*ฅ́˘ฅ̀*)",
+              "label": "可愛いおはよう 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "genki",
+          "tags": [
+            "元気",
+            "挨拶"
+          ],
+          "items": [
+            {
+              "value": "٩(ˊᗜˋ*)و",
+              "label": "元気おはよう 1",
+              "tags": []
+            },
+            {
+              "value": "٩(｡•ω•｡)و",
+              "label": "元気おはよう 2",
+              "tags": []
+            },
+            {
+              "value": "(ง ˙˘˙ )ว",
+              "label": "元気おはよう 3",
+              "tags": []
+            },
+            {
+              "value": "୧( ˵ ° ~ ° ˵ )୨",
+              "label": "元気おはよう 4",
+              "tags": []
+            },
+            {
+              "value": "(๑•̀ㅂ•́)و✧",
+              "label": "元気おはよう 5",
+              "tags": []
+            },
+            {
+              "value": "(ง •̀ω•́)ง",
+              "label": "元気おはよう 6",
+              "tags": []
+            },
+            {
+              "value": "٩( ᐛ )و",
+              "label": "元気おはよう 7",
+              "tags": []
+            },
+            {
+              "value": "(๑•̀ㅁ•́ฅ✧",
+              "label": "元気おはよう 8",
+              "tags": []
+            },
+            {
+              "value": "ᕙ( ˙꒳˙ )ᕗ",
+              "label": "元気おはよう 9",
+              "tags": []
+            },
+            {
+              "value": "(๑و•̀ω•́)و",
+              "label": "元気おはよう 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "LINE",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "おはよう(｡･ω･)ﾉﾞ",
+              "label": "おはよう短文 1",
+              "tags": []
+            },
+            {
+              "value": "おはよー(*´▽`*)ﾉ",
+              "label": "おはよう短文 2",
+              "tags": []
+            },
+            {
+              "value": "今日もよろしく(๑˃̵ᴗ˂̵)و",
+              "label": "おはよう短文 3",
+              "tags": []
+            },
+            {
+              "value": "朝だよ( *ˊᵕˋ)ﾉ",
+              "label": "おはよう短文 4",
+              "tags": []
+            },
+            {
+              "value": "がんばろう٩(ˊᗜˋ*)و",
+              "label": "おはよう短文 5",
+              "tags": []
+            },
+            {
+              "value": "いってらっしゃい(｡•̀ᴗ-)✧",
+              "label": "おはよう短文 6",
+              "tags": []
+            },
+            {
+              "value": "いい朝(˶ᵔ ᵕ ᵔ˶)",
+              "label": "おはよう短文 7",
+              "tags": []
+            },
+            {
+              "value": "起きたよ(ฅ’ω’ฅ)",
+              "label": "おはよう短文 8",
+              "tags": []
+            },
+            {
+              "value": "おはようございます( ´ ▽ ` )ﾉ",
+              "label": "おはよう短文 9",
+              "tags": []
+            },
+            {
+              "value": "今日も元気に(ง •̀ω•́)ง",
+              "label": "おはよう短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "おはよう顔文字コピペの使い方",
+        "paragraphs": [
+          "おはよう顔文字は、朝の挨拶、LINEの一言返信、学校や仕事前のメッセージに使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "おはようの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "おはよう(｡･ω･)ﾉﾞ",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "今日もよろしく(๑˃̵ᴗ˂̵)و",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "がんばろう٩(ˊᗜˋ*)و",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "おはよう絵文字",
+            "href": "/emoji-copy/good-morning/"
+          },
+          {
+            "label": "挨拶顔文字",
+            "href": "/kaomoji/hello/"
+          },
+          {
+            "label": "緑系絵文字組み合わせ",
+            "href": "/emoji-combinations/green/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "おはよう顔文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "おはよう絵文字",
+          "href": "/emoji-copy/good-morning/",
+          "description": "朝の絵文字を探す。"
+        },
+        {
+          "title": "挨拶顔文字",
+          "href": "/kaomoji/hello/",
+          "description": "こんにちはにも使う。"
+        },
+        {
+          "title": "緑系絵文字組み合わせ",
+          "href": "/emoji-combinations/green/",
+          "description": "朝の自然感を足す。"
+        }
+      ]
+    },
+    {
+      "slug": "kaomoji-otsukaresama",
+      "path": "/kaomoji/otsukaresama/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "lastmod": "2026-05-29",
+      "title": "お疲れ様顔文字コピペ | 労い・仕事終わりに使える顔文字 - MojiMoon",
+      "description": "お疲れ様顔文字をコピーできる無料ツール。お疲れ様、おつかれ、労い、仕事、LINEに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "お疲れ様顔文字コピペ | 労い・仕事終わりに使える顔文字",
+      "ogDescription": "お疲れ様に使いやすい顔文字をまとめてコピーできます。",
+      "eyebrow": "Otsukaresama Kaomoji Copy",
+      "h1": "お疲れ様顔文字コピペ",
+      "hero": "お疲れ様、おつかれ、ゆっくり休んでの返信に使いやすい顔文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "お疲れ様顔文字ツール",
+      "searchPlaceholder": "お疲れ様、おつかれ、労い、仕事、LINEなどで検索",
+      "draftPlaceholder": "お疲れ様顔文字をクリックするとここに追加されます",
+      "composerHint": "お疲れ様の候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったお疲れ様顔文字",
+      "categories": [
+        {
+          "id": "basic",
+          "label": "定番"
+        },
+        {
+          "id": "soft",
+          "label": "やさしい"
+        },
+        {
+          "id": "work",
+          "label": "仕事"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "お疲れ様",
+          "query": "お疲れ様"
+        },
+        {
+          "label": "仕事",
+          "query": "仕事"
+        },
+        {
+          "label": "労い",
+          "query": "労い"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        },
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "basic",
+          "tags": [
+            "お疲れ様",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "( ´ ▽ ` )ﾉ",
+              "label": "お疲れ様顔文字 1",
+              "tags": []
+            },
+            {
+              "value": "(*´︶`*)ﾉ",
+              "label": "お疲れ様顔文字 2",
+              "tags": []
+            },
+            {
+              "value": "(｡･ω･｡)ﾉ",
+              "label": "お疲れ様顔文字 3",
+              "tags": []
+            },
+            {
+              "value": "(๑˘ ˘๑)*.。",
+              "label": "お疲れ様顔文字 4",
+              "tags": []
+            },
+            {
+              "value": "( ᵕᴗᵕ )",
+              "label": "お疲れ様顔文字 5",
+              "tags": []
+            },
+            {
+              "value": "(*´꒳`*)",
+              "label": "お疲れ様顔文字 6",
+              "tags": []
+            },
+            {
+              "value": "(｡•ᴗ•｡)",
+              "label": "お疲れ様顔文字 7",
+              "tags": []
+            },
+            {
+              "value": "( ˘ω˘ )",
+              "label": "お疲れ様顔文字 8",
+              "tags": []
+            },
+            {
+              "value": "(o´▽`o)ﾉ",
+              "label": "お疲れ様顔文字 9",
+              "tags": []
+            },
+            {
+              "value": "(๑•᎑•๑)",
+              "label": "お疲れ様顔文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "soft",
+          "tags": [
+            "やさしい",
+            "労い"
+          ],
+          "items": [
+            {
+              "value": "(っ´ω`)ﾉ(╥ω╥)",
+              "label": "やさしいお疲れ 1",
+              "tags": []
+            },
+            {
+              "value": "( T_T)＼(^-^ )",
+              "label": "やさしいお疲れ 2",
+              "tags": []
+            },
+            {
+              "value": "(｡-ω-ヾ(>᎑<`๑)",
+              "label": "やさしいお疲れ 3",
+              "tags": []
+            },
+            {
+              "value": "( *´꒳`*)੭⁾⁾",
+              "label": "やさしいお疲れ 4",
+              "tags": []
+            },
+            {
+              "value": "(｡･ᴗ･)_🍵",
+              "label": "やさしいお疲れ 5",
+              "tags": []
+            },
+            {
+              "value": "( *ˊᵕˋ)_旦",
+              "label": "やさしいお疲れ 6",
+              "tags": []
+            },
+            {
+              "value": "(っ´ω`c)",
+              "label": "やさしいお疲れ 7",
+              "tags": []
+            },
+            {
+              "value": "( ˊᵕˋ )♡",
+              "label": "やさしいお疲れ 8",
+              "tags": []
+            },
+            {
+              "value": "( ´･･)ﾉ(._.`)",
+              "label": "やさしいお疲れ 9",
+              "tags": []
+            },
+            {
+              "value": "(๑´•ω•)۶”",
+              "label": "やさしいお疲れ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "work",
+          "tags": [
+            "仕事",
+            "休憩"
+          ],
+          "items": [
+            {
+              "value": "_(:3 」∠)_",
+              "label": "仕事お疲れ 1",
+              "tags": []
+            },
+            {
+              "value": "(¦3[▓▓]",
+              "label": "仕事お疲れ 2",
+              "tags": []
+            },
+            {
+              "value": "( ˘ω˘ )ｽﾔｧ",
+              "label": "仕事お疲れ 3",
+              "tags": []
+            },
+            {
+              "value": "(๑-﹏-๑)",
+              "label": "仕事お疲れ 4",
+              "tags": []
+            },
+            {
+              "value": "(；´∀｀)",
+              "label": "仕事お疲れ 5",
+              "tags": []
+            },
+            {
+              "value": "(｡ŏ﹏ŏ)",
+              "label": "仕事お疲れ 6",
+              "tags": []
+            },
+            {
+              "value": "(疲´･ω･`)",
+              "label": "仕事お疲れ 7",
+              "tags": []
+            },
+            {
+              "value": "(o_ _)o",
+              "label": "仕事お疲れ 8",
+              "tags": []
+            },
+            {
+              "value": "( ´Д｀)=3",
+              "label": "仕事お疲れ 9",
+              "tags": []
+            },
+            {
+              "value": "(｀･ω･´)ゞ",
+              "label": "仕事お疲れ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "LINE",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "お疲れ様( ´ ▽ ` )ﾉ",
+              "label": "お疲れ様短文 1",
+              "tags": []
+            },
+            {
+              "value": "おつかれさま(*´︶`*)ﾉ",
+              "label": "お疲れ様短文 2",
+              "tags": []
+            },
+            {
+              "value": "今日もがんばったね(๑•᎑•๑)",
+              "label": "お疲れ様短文 3",
+              "tags": []
+            },
+            {
+              "value": "ゆっくり休んで( ˘ω˘ )",
+              "label": "お疲れ様短文 4",
+              "tags": []
+            },
+            {
+              "value": "無理しないで( *ˊᵕˋ)_旦",
+              "label": "お疲れ様短文 5",
+              "tags": []
+            },
+            {
+              "value": "ありがとう(｡•ᴗ•｡)",
+              "label": "お疲れ様短文 6",
+              "tags": []
+            },
+            {
+              "value": "よくがんばった(｀･ω･´)ゞ",
+              "label": "お疲れ様短文 7",
+              "tags": []
+            },
+            {
+              "value": "休憩しよ(｡･ᴗ･)_🍵",
+              "label": "お疲れ様短文 8",
+              "tags": []
+            },
+            {
+              "value": "おつかれー(o´▽`o)ﾉ",
+              "label": "お疲れ様短文 9",
+              "tags": []
+            },
+            {
+              "value": "また明日( ᵕᴗᵕ )",
+              "label": "お疲れ様短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "お疲れ様顔文字コピペの使い方",
+        "paragraphs": [
+          "お疲れ様顔文字は、仕事終わりの返信、友達への労い、がんばった人への一言に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "お疲れ様の一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "お疲れ様( ´ ▽ ` )ﾉ",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "ゆっくり休んで( ˘ω˘ )",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "無理しないで( *ˊᵕˋ)_旦",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "お疲れ様絵文字",
+            "href": "/emoji-copy/otsukaresama/"
+          },
+          {
+            "label": "ありがとう顔文字",
+            "href": "/kaomoji/thank-you/"
+          },
+          {
+            "label": "チェック特殊文字",
+            "href": "/special-characters/check/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "お疲れ様顔文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "お疲れ様絵文字",
+          "href": "/emoji-copy/otsukaresama/",
+          "description": "労い絵文字を探す。"
+        },
+        {
+          "title": "ありがとう顔文字",
+          "href": "/kaomoji/thank-you/",
+          "description": "感謝も一緒に伝える。"
+        },
+        {
+          "title": "チェック特殊文字",
+          "href": "/special-characters/check/",
+          "description": "仕事メモにも使う。"
+        }
+      ]
+    },
+    {
+      "slug": "kaomoji-good-night",
+      "path": "/kaomoji/good-night/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "lastmod": "2026-05-29",
+      "title": "おやすみ顔文字コピペ | 眠い・夜の挨拶に使える顔文字 - MojiMoon",
+      "description": "おやすみ顔文字をコピーできる無料ツール。おやすみ、眠い、夜、寝る、LINEに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "おやすみ顔文字コピペ | 眠い・夜の挨拶に使える顔文字",
+      "ogDescription": "おやすみに使いやすい顔文字をまとめてコピーできます。",
+      "eyebrow": "Good Night Kaomoji Copy",
+      "h1": "おやすみ顔文字コピペ",
+      "hero": "おやすみ、眠い、そろそろ寝るねの返信に使いやすい顔文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "おやすみ顔文字ツール",
+      "searchPlaceholder": "おやすみ、眠い、夜、寝る、LINEなどで検索",
+      "draftPlaceholder": "おやすみ顔文字をクリックするとここに追加されます",
+      "composerHint": "おやすみの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったおやすみ顔文字",
+      "categories": [
+        {
+          "id": "basic",
+          "label": "定番"
+        },
+        {
+          "id": "sleepy",
+          "label": "眠い"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        },
+        {
+          "id": "message",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "おやすみ",
+          "query": "おやすみ"
+        },
+        {
+          "label": "眠い",
+          "query": "眠い"
+        },
+        {
+          "label": "夜",
+          "query": "夜"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        },
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "basic",
+          "tags": [
+            "おやすみ",
+            "夜"
+          ],
+          "items": [
+            {
+              "value": "( ˘ω˘ )",
+              "label": "おやすみ顔文字 1",
+              "tags": []
+            },
+            {
+              "value": "(¦3[▓▓]",
+              "label": "おやすみ顔文字 2",
+              "tags": []
+            },
+            {
+              "value": "(っ ̫ -˘)",
+              "label": "おやすみ顔文字 3",
+              "tags": []
+            },
+            {
+              "value": "(｡ρω-｡)",
+              "label": "おやすみ顔文字 4",
+              "tags": []
+            },
+            {
+              "value": "( -ω-)zzz",
+              "label": "おやすみ顔文字 5",
+              "tags": []
+            },
+            {
+              "value": "( ˘꒳˘ )",
+              "label": "おやすみ顔文字 6",
+              "tags": []
+            },
+            {
+              "value": "(。-ω-)zzz",
+              "label": "おやすみ顔文字 7",
+              "tags": []
+            },
+            {
+              "value": "(ᐡᴗ ̫ ᴗᐡ)",
+              "label": "おやすみ顔文字 8",
+              "tags": []
+            },
+            {
+              "value": "( ˊ꒳ˋ ) ᐝ",
+              "label": "おやすみ顔文字 9",
+              "tags": []
+            },
+            {
+              "value": "(ρω*)ﾉ",
+              "label": "おやすみ顔文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "sleepy",
+          "tags": [
+            "眠い",
+            "寝る"
+          ],
+          "items": [
+            {
+              "value": "(_ _).｡o○",
+              "label": "眠い顔文字 1",
+              "tags": []
+            },
+            {
+              "value": "(｡-_-｡)zzz",
+              "label": "眠い顔文字 2",
+              "tags": []
+            },
+            {
+              "value": "(⊃ωｰ`).｡oO",
+              "label": "眠い顔文字 3",
+              "tags": []
+            },
+            {
+              "value": "(ง ˘ω˘ )ว",
+              "label": "眠い顔文字 4",
+              "tags": []
+            },
+            {
+              "value": "(๑-﹏-๑)zzz",
+              "label": "眠い顔文字 5",
+              "tags": []
+            },
+            {
+              "value": "( ᵕᴗᵕ )*･☪︎·̩͙",
+              "label": "眠い顔文字 6",
+              "tags": []
+            },
+            {
+              "value": "( ˘༥˘ )",
+              "label": "眠い顔文字 7",
+              "tags": []
+            },
+            {
+              "value": "(つㅁ•,,))ﾟﾟﾟ",
+              "label": "眠い顔文字 8",
+              "tags": []
+            },
+            {
+              "value": "(ᐢ ᵕ ᐢ)zzz",
+              "label": "眠い顔文字 9",
+              "tags": []
+            },
+            {
+              "value": "( ˘꒳​˘ )",
+              "label": "眠い顔文字 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "可愛い",
+            "夜"
+          ],
+          "items": [
+            {
+              "value": "(っ˘ω˘ς )",
+              "label": "可愛いおやすみ 1",
+              "tags": []
+            },
+            {
+              "value": "(⸝⸝ᵕᴗᵕ⸝⸝)",
+              "label": "可愛いおやすみ 2",
+              "tags": []
+            },
+            {
+              "value": "(๑˘︶˘๑)",
+              "label": "可愛いおやすみ 3",
+              "tags": []
+            },
+            {
+              "value": "(｡•ᴗ-)_✧",
+              "label": "可愛いおやすみ 4",
+              "tags": []
+            },
+            {
+              "value": "(ฅ˘ω˘ฅ)",
+              "label": "可愛いおやすみ 5",
+              "tags": []
+            },
+            {
+              "value": "( ˶˘꒳˘˵ )",
+              "label": "可愛いおやすみ 6",
+              "tags": []
+            },
+            {
+              "value": "(ᐡ ̳ᴗ ̫ ᴗ ̳ᐡ)",
+              "label": "可愛いおやすみ 7",
+              "tags": []
+            },
+            {
+              "value": "( ˘͈ ᵕ ˘͈ )",
+              "label": "可愛いおやすみ 8",
+              "tags": []
+            },
+            {
+              "value": "(ᐢᴗ͈ ̫ ᴗ͈ᐢ)",
+              "label": "可愛いおやすみ 9",
+              "tags": []
+            },
+            {
+              "value": "(๑ᵕ⌓ᵕ̤)",
+              "label": "可愛いおやすみ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "message",
+          "tags": [
+            "LINE",
+            "短文"
+          ],
+          "items": [
+            {
+              "value": "おやすみ( ˘ω˘ )",
+              "label": "おやすみ短文 1",
+              "tags": []
+            },
+            {
+              "value": "また明日(ρω*)ﾉ",
+              "label": "おやすみ短文 2",
+              "tags": []
+            },
+            {
+              "value": "そろそろ寝るね(っ ̫ -˘)",
+              "label": "おやすみ短文 3",
+              "tags": []
+            },
+            {
+              "value": "いい夢を(๑˘︶˘๑)",
+              "label": "おやすみ短文 4",
+              "tags": []
+            },
+            {
+              "value": "寝ます(¦3[▓▓]",
+              "label": "おやすみ短文 5",
+              "tags": []
+            },
+            {
+              "value": "眠い(｡ρω-｡)",
+              "label": "おやすみ短文 6",
+              "tags": []
+            },
+            {
+              "value": "おふとんへ(_ _).｡o○",
+              "label": "おやすみ短文 7",
+              "tags": []
+            },
+            {
+              "value": "ゆっくり休んで( ˊ꒳ˋ )",
+              "label": "おやすみ短文 8",
+              "tags": []
+            },
+            {
+              "value": "今日もありがとう( ᵕᴗᵕ )",
+              "label": "おやすみ短文 9",
+              "tags": []
+            },
+            {
+              "value": "good night( ˘꒳˘ )",
+              "label": "おやすみ短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "おやすみ顔文字コピペの使い方",
+        "paragraphs": [
+          "おやすみ顔文字は、夜の挨拶、寝る前のLINE、眠いリアクションに使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "おやすみの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "おやすみ( ˘ω˘ )",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "そろそろ寝るね(っ ̫ -˘)",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "また明日(ρω*)ﾉ",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "おやすみ絵文字",
+            "href": "/emoji-copy/good-night/"
+          },
+          {
+            "label": "おやすみ絵文字組み合わせ",
+            "href": "/emoji-combinations/good-night/"
+          },
+          {
+            "label": "眠い顔文字",
+            "href": "/kaomoji/sleepy/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "おやすみ顔文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "おやすみ絵文字",
+          "href": "/emoji-copy/good-night/",
+          "description": "月や眠りの絵文字。"
+        },
+        {
+          "title": "おやすみ絵文字組み合わせ",
+          "href": "/emoji-combinations/good-night/",
+          "description": "夜のテンプレを探す。"
+        },
+        {
+          "title": "眠い顔文字",
+          "href": "/kaomoji/sleepy/",
+          "description": "眠いリアクションに。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-instagram",
+      "path": "/special-characters/instagram/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "lastmod": "2026-05-29",
+      "title": "インスタ特殊文字コピペ | プロフィール装飾・リンク案内に使える記号 - MojiMoon",
+      "description": "インスタ特殊文字をコピーできる無料ツール。インスタ、プロフィール、リンク、おしゃれ、記号に使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "インスタ特殊文字コピペ | プロフィール装飾・リンク案内に使える記号",
+      "ogDescription": "インスタに使いやすい特殊文字をまとめてコピーできます。",
+      "eyebrow": "Instagram Symbols Copy",
+      "h1": "インスタ特殊文字コピペ",
+      "hero": "Instagramのプロフィール、リンク案内、ハイライト名を整えやすい特殊文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "インスタ特殊文字ツール",
+      "searchPlaceholder": "インスタ、プロフィール、リンク、おしゃれ、記号などで検索",
+      "draftPlaceholder": "インスタ特殊文字をクリックするとここに追加されます",
+      "composerHint": "インスタの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使ったインスタ特殊文字",
+      "categories": [
+        {
+          "id": "profile",
+          "label": "プロフィール"
+        },
+        {
+          "id": "link",
+          "label": "リンク"
+        },
+        {
+          "id": "line",
+          "label": "区切り"
+        },
+        {
+          "id": "cute",
+          "label": "可愛い"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "インスタ",
+          "query": "インスタ"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "リンク",
+          "query": "リンク"
+        },
+        {
+          "label": "おしゃれ",
+          "query": "おしゃれ"
+        },
+        {
+          "label": "区切り",
+          "query": "区切り"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "profile",
+          "tags": [
+            "インスタ",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "profile 𓂃",
+              "label": "インスタプロフィール 1",
+              "tags": []
+            },
+            {
+              "value": "about me 𓈒𓏸",
+              "label": "インスタプロフィール 2",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃♡",
+              "label": "インスタプロフィール 3",
+              "tags": []
+            },
+            {
+              "value": "name ✦",
+              "label": "インスタプロフィール 4",
+              "tags": []
+            },
+            {
+              "value": "daily 𓂃☕️",
+              "label": "インスタプロフィール 5",
+              "tags": []
+            },
+            {
+              "value": "photo diary 📷",
+              "label": "インスタプロフィール 6",
+              "tags": []
+            },
+            {
+              "value": "my mood ⊹",
+              "label": "インスタプロフィール 7",
+              "tags": []
+            },
+            {
+              "value": "favorite ୨୧",
+              "label": "インスタプロフィール 8",
+              "tags": []
+            },
+            {
+              "value": "me 𓂃🤍",
+              "label": "インスタプロフィール 9",
+              "tags": []
+            },
+            {
+              "value": "𝑚𝑦 𝑑𝑎𝑖𝑙𝑦",
+              "label": "インスタプロフィール 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "link",
+          "tags": [
+            "リンク",
+            "案内"
+          ],
+          "items": [
+            {
+              "value": "link →",
+              "label": "リンク案内 1",
+              "tags": []
+            },
+            {
+              "value": "link below ↴",
+              "label": "リンク案内 2",
+              "tags": []
+            },
+            {
+              "value": "tap here ⇢",
+              "label": "リンク案内 3",
+              "tags": []
+            },
+            {
+              "value": "more ↪",
+              "label": "リンク案内 4",
+              "tags": []
+            },
+            {
+              "value": "profile link 🔗",
+              "label": "リンク案内 5",
+              "tags": []
+            },
+            {
+              "value": "DM open 💌",
+              "label": "リンク案内 6",
+              "tags": []
+            },
+            {
+              "value": "shop →",
+              "label": "リンク案内 7",
+              "tags": []
+            },
+            {
+              "value": "blog ↳",
+              "label": "リンク案内 8",
+              "tags": []
+            },
+            {
+              "value": "follow me ⇢",
+              "label": "リンク案内 9",
+              "tags": []
+            },
+            {
+              "value": "new post →",
+              "label": "リンク案内 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "line",
+          "tags": [
+            "区切り",
+            "ライン"
+          ],
+          "items": [
+            {
+              "value": "𓂃 𓈒𓏸",
+              "label": "インスタ区切り 1",
+              "tags": []
+            },
+            {
+              "value": "────",
+              "label": "インスタ区切り 2",
+              "tags": []
+            },
+            {
+              "value": "┈┈",
+              "label": "インスタ区切り 3",
+              "tags": []
+            },
+            {
+              "value": "﹏﹏",
+              "label": "インスタ区切り 4",
+              "tags": []
+            },
+            {
+              "value": "୨୧ ┈┈ ୨୧",
+              "label": "インスタ区切り 5",
+              "tags": []
+            },
+            {
+              "value": "♡ ┈┈ ♡",
+              "label": "インスタ区切り 6",
+              "tags": []
+            },
+            {
+              "value": "✦ ━━ ✦",
+              "label": "インスタ区切り 7",
+              "tags": []
+            },
+            {
+              "value": "˗ˏˋ ´ˎ˗",
+              "label": "インスタ区切り 8",
+              "tags": []
+            },
+            {
+              "value": "⊹ ࣪ ˖",
+              "label": "インスタ区切り 9",
+              "tags": []
+            },
+            {
+              "value": "⋆｡˚ ☁︎ ˚｡⋆",
+              "label": "インスタ区切り 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "cute",
+          "tags": [
+            "可愛い",
+            "おしゃれ"
+          ],
+          "items": [
+            {
+              "value": "♡",
+              "label": "インスタ記号 1",
+              "tags": []
+            },
+            {
+              "value": "✦",
+              "label": "インスタ記号 2",
+              "tags": []
+            },
+            {
+              "value": "✧",
+              "label": "インスタ記号 3",
+              "tags": []
+            },
+            {
+              "value": "୨୧",
+              "label": "インスタ記号 4",
+              "tags": []
+            },
+            {
+              "value": "꒰ ꒱",
+              "label": "インスタ記号 5",
+              "tags": []
+            },
+            {
+              "value": "ʚ♡ɞ",
+              "label": "インスタ記号 6",
+              "tags": []
+            },
+            {
+              "value": "₊˚⊹",
+              "label": "インスタ記号 7",
+              "tags": []
+            },
+            {
+              "value": "𓆩 𓆪",
+              "label": "インスタ記号 8",
+              "tags": []
+            },
+            {
+              "value": "ꕤ",
+              "label": "インスタ記号 9",
+              "tags": []
+            },
+            {
+              "value": "𓍯",
+              "label": "インスタ記号 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "インスタ特殊文字コピペの使い方",
+        "paragraphs": [
+          "インスタ特殊文字は、Instagramプロフィール、リンク案内、ハイライト名に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "インスタの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "profile 𓂃",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "link below ↴",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "୨୧ ┈┈ ୨୧",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "名前デコ特殊文字",
+            "href": "/special-characters/name-decoration/"
+          },
+          {
+            "label": "ライン特殊文字",
+            "href": "/special-characters/line/"
+          },
+          {
+            "label": "かわいいコピペ",
+            "href": "/kawaii-copy/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "インスタ特殊文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "名前デコ特殊文字",
+          "href": "/special-characters/name-decoration/",
+          "description": "名前やIDを飾る。"
+        },
+        {
+          "title": "ライン特殊文字",
+          "href": "/special-characters/line/",
+          "description": "プロフィールを区切る。"
+        },
+        {
+          "title": "かわいいコピペ",
+          "href": "/kawaii-copy/",
+          "description": "プロフィール素材をまとめる。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-name-decoration",
+      "path": "/special-characters/name-decoration/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "lastmod": "2026-05-29",
+      "title": "名前デコ特殊文字コピペ | 名前・推し名・プロフィール装飾をコピー - MojiMoon",
+      "description": "名前デコ特殊文字をコピーできる無料ツール。名前デコ、名前、プロフィール、推し、装飾に使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "名前デコ特殊文字コピペ | 名前・推し名・プロフィール装飾をコピー",
+      "ogDescription": "名前デコに使いやすい特殊文字をまとめてコピーできます。",
+      "eyebrow": "Name Decoration Symbols Copy",
+      "h1": "名前デコ特殊文字コピペ",
+      "hero": "名前、推し名、プロフィール見出しをかわいく囲める特殊文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "名前デコ特殊文字ツール",
+      "searchPlaceholder": "名前デコ、名前、プロフィール、推し、装飾などで検索",
+      "draftPlaceholder": "名前デコ特殊文字をクリックするとここに追加されます",
+      "composerHint": "名前デコの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使った名前デコ特殊文字",
+      "categories": [
+        {
+          "id": "frame",
+          "label": "フレーム"
+        },
+        {
+          "id": "ribbon",
+          "label": "リボン"
+        },
+        {
+          "id": "bracket",
+          "label": "括弧"
+        },
+        {
+          "id": "profile",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "名前",
+          "query": "名前"
+        },
+        {
+          "label": "プロフィール",
+          "query": "プロフィール"
+        },
+        {
+          "label": "推し",
+          "query": "推し"
+        },
+        {
+          "label": "リボン",
+          "query": "リボン"
+        },
+        {
+          "label": "括弧",
+          "query": "括弧"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "frame",
+          "tags": [
+            "名前",
+            "フレーム"
+          ],
+          "items": [
+            {
+              "value": "♡ name ♡",
+              "label": "名前フレーム 1",
+              "tags": []
+            },
+            {
+              "value": "✦ name ✦",
+              "label": "名前フレーム 2",
+              "tags": []
+            },
+            {
+              "value": "୨୧ name ୨୧",
+              "label": "名前フレーム 3",
+              "tags": []
+            },
+            {
+              "value": "꒰ name ꒱",
+              "label": "名前フレーム 4",
+              "tags": []
+            },
+            {
+              "value": "ʚ name ɞ",
+              "label": "名前フレーム 5",
+              "tags": []
+            },
+            {
+              "value": "【 name 】",
+              "label": "名前フレーム 6",
+              "tags": []
+            },
+            {
+              "value": "〖 name 〗",
+              "label": "名前フレーム 7",
+              "tags": []
+            },
+            {
+              "value": "〈 name 〉",
+              "label": "名前フレーム 8",
+              "tags": []
+            },
+            {
+              "value": "𓂃 name 𓈒𓏸",
+              "label": "名前フレーム 9",
+              "tags": []
+            },
+            {
+              "value": "name 𓂃♡",
+              "label": "名前フレーム 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "ribbon",
+          "tags": [
+            "リボン",
+            "名前"
+          ],
+          "items": [
+            {
+              "value": "୨୧",
+              "label": "名前リボン 1",
+              "tags": []
+            },
+            {
+              "value": "୨ৎ",
+              "label": "名前リボン 2",
+              "tags": []
+            },
+            {
+              "value": "♡୨୧♡",
+              "label": "名前リボン 3",
+              "tags": []
+            },
+            {
+              "value": "₊˚୨୧˚₊",
+              "label": "名前リボン 4",
+              "tags": []
+            },
+            {
+              "value": "୨୧ 𓂃",
+              "label": "名前リボン 5",
+              "tags": []
+            },
+            {
+              "value": "𓂃 ୨୧",
+              "label": "名前リボン 6",
+              "tags": []
+            },
+            {
+              "value": "꒰ ୨୧ ꒱",
+              "label": "名前リボン 7",
+              "tags": []
+            },
+            {
+              "value": "ʚ♡ɞ",
+              "label": "名前リボン 8",
+              "tags": []
+            },
+            {
+              "value": "୨୧⋆｡˚",
+              "label": "名前リボン 9",
+              "tags": []
+            },
+            {
+              "value": "୨ৎ˚₊",
+              "label": "名前リボン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "bracket",
+          "tags": [
+            "括弧",
+            "囲み"
+          ],
+          "items": [
+            {
+              "value": "【】",
+              "label": "名前括弧 1",
+              "tags": []
+            },
+            {
+              "value": "〖〗",
+              "label": "名前括弧 2",
+              "tags": []
+            },
+            {
+              "value": "《》",
+              "label": "名前括弧 3",
+              "tags": []
+            },
+            {
+              "value": "〈〉",
+              "label": "名前括弧 4",
+              "tags": []
+            },
+            {
+              "value": "「」",
+              "label": "名前括弧 5",
+              "tags": []
+            },
+            {
+              "value": "『』",
+              "label": "名前括弧 6",
+              "tags": []
+            },
+            {
+              "value": "꒰ ꒱",
+              "label": "名前括弧 7",
+              "tags": []
+            },
+            {
+              "value": "⸜ ⸝",
+              "label": "名前括弧 8",
+              "tags": []
+            },
+            {
+              "value": "◜ ◝",
+              "label": "名前括弧 9",
+              "tags": []
+            },
+            {
+              "value": "₍ ₎",
+              "label": "名前括弧 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "プロフィール",
+            "推し"
+          ],
+          "items": [
+            {
+              "value": "推し ୨୧",
+              "label": "名前デコ短文 1",
+              "tags": []
+            },
+            {
+              "value": "fan account ♡",
+              "label": "名前デコ短文 2",
+              "tags": []
+            },
+            {
+              "value": "profile ✦",
+              "label": "名前デコ短文 3",
+              "tags": []
+            },
+            {
+              "value": "about me 𓂃",
+              "label": "名前デコ短文 4",
+              "tags": []
+            },
+            {
+              "value": "link →",
+              "label": "名前デコ短文 5",
+              "tags": []
+            },
+            {
+              "value": "my favorite ♡",
+              "label": "名前デコ短文 6",
+              "tags": []
+            },
+            {
+              "value": "name memo 𓈒𓏸",
+              "label": "名前デコ短文 7",
+              "tags": []
+            },
+            {
+              "value": "bio ୨୧",
+              "label": "名前デコ短文 8",
+              "tags": []
+            },
+            {
+              "value": "推し名 ♡",
+              "label": "名前デコ短文 9",
+              "tags": []
+            },
+            {
+              "value": "かわいい名前 ✦",
+              "label": "名前デコ短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "名前デコ特殊文字コピペの使い方",
+        "paragraphs": [
+          "名前デコ特殊文字は、名前フレーム、推し名の装飾、プロフィール見出しに使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "名前デコの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "♡ name ♡",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "୨୧ name ୨୧",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "推し ୨୧",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "名前フレーム",
+            "href": "/kawaii-copy/name-frame/"
+          },
+          {
+            "label": "括弧特殊文字",
+            "href": "/special-characters/bracket/"
+          },
+          {
+            "label": "リボン特殊文字",
+            "href": "/special-characters/ribbon/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "名前デコ特殊文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "名前フレーム",
+          "href": "/kawaii-copy/name-frame/",
+          "description": "名前デコをまとめて作る。"
+        },
+        {
+          "title": "括弧特殊文字",
+          "href": "/special-characters/bracket/",
+          "description": "名前を囲む記号。"
+        },
+        {
+          "title": "リボン特殊文字",
+          "href": "/special-characters/ribbon/",
+          "description": "量産型の名前に。"
+        }
+      ]
+    },
+    {
+      "slug": "special-characters-cute",
+      "path": "/special-characters/cute/",
+      "family": "special-characters",
+      "navCurrent": "special-characters",
+      "lastmod": "2026-05-29",
+      "title": "可愛い特殊文字コピペ | かわいい記号・プロフィール装飾をコピー - MojiMoon",
+      "description": "可愛い特殊文字をコピーできる無料ツール。可愛い、かわいい、記号、プロフィール、コピペに使いやすい素材を検索して、LINEやSNSにそのまま貼り付けられます。",
+      "ogTitle": "可愛い特殊文字コピペ | かわいい記号・プロフィール装飾をコピー",
+      "ogDescription": "可愛いに使いやすい特殊文字をまとめてコピーできます。",
+      "eyebrow": "Cute Symbols Copy",
+      "h1": "可愛い特殊文字コピペ",
+      "hero": "かわいい雰囲気を作れるハート、リボン、花、キラキラ系の特殊文字を集めました。 クリックですぐコピーしながら草稿にも追加できるので、単体でも組み合わせでも使いやすく整えられます。",
+      "toolLabel": "可愛い特殊文字ツール",
+      "searchPlaceholder": "可愛い、かわいい、記号、プロフィール、コピペなどで検索",
+      "draftPlaceholder": "可愛い特殊文字をクリックするとここに追加されます",
+      "composerHint": "可愛いの候補を複数追加して、メッセージやプロフィールに合う文に整えられます。",
+      "recentLabel": "最近使った可愛い特殊文字",
+      "categories": [
+        {
+          "id": "heart",
+          "label": "ハート"
+        },
+        {
+          "id": "ribbon",
+          "label": "リボン"
+        },
+        {
+          "id": "sparkle",
+          "label": "キラキラ"
+        },
+        {
+          "id": "profile",
+          "label": "短文"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "可愛い",
+          "query": "可愛い"
+        },
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "リボン",
+          "query": "リボン"
+        },
+        {
+          "label": "花",
+          "query": "花"
+        },
+        {
+          "label": "キラキラ",
+          "query": "キラキラ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "heart",
+          "tags": [
+            "可愛い",
+            "ハート"
+          ],
+          "items": [
+            {
+              "value": "♡",
+              "label": "可愛いハート 1",
+              "tags": []
+            },
+            {
+              "value": "♥︎",
+              "label": "可愛いハート 2",
+              "tags": []
+            },
+            {
+              "value": "❤︎",
+              "label": "可愛いハート 3",
+              "tags": []
+            },
+            {
+              "value": "❥",
+              "label": "可愛いハート 4",
+              "tags": []
+            },
+            {
+              "value": "ღ",
+              "label": "可愛いハート 5",
+              "tags": []
+            },
+            {
+              "value": "ෆ",
+              "label": "可愛いハート 6",
+              "tags": []
+            },
+            {
+              "value": "ᰔᩚ",
+              "label": "可愛いハート 7",
+              "tags": []
+            },
+            {
+              "value": "♡⃛",
+              "label": "可愛いハート 8",
+              "tags": []
+            },
+            {
+              "value": "꒰♡꒱",
+              "label": "可愛いハート 9",
+              "tags": []
+            },
+            {
+              "value": "ʚ♡ɞ",
+              "label": "可愛いハート 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "ribbon",
+          "tags": [
+            "可愛い",
+            "リボン"
+          ],
+          "items": [
+            {
+              "value": "୨୧",
+              "label": "可愛いリボン 1",
+              "tags": []
+            },
+            {
+              "value": "୨ৎ",
+              "label": "可愛いリボン 2",
+              "tags": []
+            },
+            {
+              "value": "⋈",
+              "label": "可愛いリボン 3",
+              "tags": []
+            },
+            {
+              "value": "ꔫ",
+              "label": "可愛いリボン 4",
+              "tags": []
+            },
+            {
+              "value": "♡୨୧♡",
+              "label": "可愛いリボン 5",
+              "tags": []
+            },
+            {
+              "value": "₊˚୨୧˚₊",
+              "label": "可愛いリボン 6",
+              "tags": []
+            },
+            {
+              "value": "꒰ ୨୧ ꒱",
+              "label": "可愛いリボン 7",
+              "tags": []
+            },
+            {
+              "value": "ʚ ୨୧ ɞ",
+              "label": "可愛いリボン 8",
+              "tags": []
+            },
+            {
+              "value": "୨୧ 𓂃",
+              "label": "可愛いリボン 9",
+              "tags": []
+            },
+            {
+              "value": "𓂃 ୨ৎ",
+              "label": "可愛いリボン 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "sparkle",
+          "tags": [
+            "可愛い",
+            "キラキラ"
+          ],
+          "items": [
+            {
+              "value": "✦",
+              "label": "可愛いキラキラ 1",
+              "tags": []
+            },
+            {
+              "value": "✧",
+              "label": "可愛いキラキラ 2",
+              "tags": []
+            },
+            {
+              "value": "✩",
+              "label": "可愛いキラキラ 3",
+              "tags": []
+            },
+            {
+              "value": "₊˚⊹",
+              "label": "可愛いキラキラ 4",
+              "tags": []
+            },
+            {
+              "value": "༘⋆",
+              "label": "可愛いキラキラ 5",
+              "tags": []
+            },
+            {
+              "value": "⊹ ࣪ ˖",
+              "label": "可愛いキラキラ 6",
+              "tags": []
+            },
+            {
+              "value": "⟡",
+              "label": "可愛いキラキラ 7",
+              "tags": []
+            },
+            {
+              "value": "⋆｡˚✩",
+              "label": "可愛いキラキラ 8",
+              "tags": []
+            },
+            {
+              "value": "˗ˏˋ ´ˎ˗",
+              "label": "可愛いキラキラ 9",
+              "tags": []
+            },
+            {
+              "value": "ꕤ*.ﾟ",
+              "label": "可愛いキラキラ 10",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "profile",
+          "tags": [
+            "可愛い",
+            "プロフィール"
+          ],
+          "items": [
+            {
+              "value": "cute ♡",
+              "label": "可愛い短文 1",
+              "tags": []
+            },
+            {
+              "value": "profile ୨୧",
+              "label": "可愛い短文 2",
+              "tags": []
+            },
+            {
+              "value": "name ✦",
+              "label": "可愛い短文 3",
+              "tags": []
+            },
+            {
+              "value": "bio 𓂃♡",
+              "label": "可愛い短文 4",
+              "tags": []
+            },
+            {
+              "value": "かわいい ʚ♡ɞ",
+              "label": "可愛い短文 5",
+              "tags": []
+            },
+            {
+              "value": "my favorite ♡",
+              "label": "可愛い短文 6",
+              "tags": []
+            },
+            {
+              "value": "sweet ୨୧",
+              "label": "可愛い短文 7",
+              "tags": []
+            },
+            {
+              "value": "daily 𓈒𓏸",
+              "label": "可愛い短文 8",
+              "tags": []
+            },
+            {
+              "value": "推し ♡",
+              "label": "可愛い短文 9",
+              "tags": []
+            },
+            {
+              "value": "link → ✦",
+              "label": "可愛い短文 10",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "可愛い特殊文字コピペの使い方",
+        "paragraphs": [
+          "可愛い特殊文字は、かわいいプロフィール、名前デコ、SNS投稿の装飾に使いやすい素材です。短い文章に1つ添えるだけで、気持ちや場面が伝わりやすくなります。",
+          "スマホでは見た目の詰まり方が変わりやすいため、草稿欄で一度組み合わせてからコピーすると安心です。LINEの返信では短めに、InstagramやXの投稿では文末や区切りに置くと読みやすくなります。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "LINE・チャット",
+                "body": "可愛いの一言返信に添えると、文章だけよりもやわらかい印象になります。"
+              },
+              {
+                "title": "Instagram・X投稿",
+                "body": "投稿文の先頭や文末に置くと、写真や文章の雰囲気に合わせた装飾になります。"
+              },
+              {
+                "title": "プロフィール・名前デコ",
+                "body": "名前、推し名、自己紹介の近くに少し足すと、見た目を整えやすくなります。"
+              }
+            ]
+          },
+          {
+            "heading": "短い例文",
+            "cards": [
+              {
+                "title": "cute ♡",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "profile ୨୧",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              },
+              {
+                "title": "かわいい ʚ♡ɞ",
+                "body": "そのまま貼り付けたり、名前や一言を足して使えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "かわいいコピペ",
+            "href": "/kawaii-copy/"
+          },
+          {
+            "label": "リボン特殊文字",
+            "href": "/special-characters/ribbon/"
+          },
+          {
+            "label": "ピンク絵文字組み合わせ",
+            "href": "/emoji-combinations/pink/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "可愛い特殊文字はどこで使えますか？",
+          "answer": "LINE、Instagram、X、プロフィール、推し活メッセージ、短い返信などで使えます。"
+        },
+        {
+          "question": "スマホでもきれいに表示されますか？",
+          "answer": "多くの環境で使えますが、端末やアプリによって見た目が少し変わる場合があります。重要なプロフィールでは貼り付け後に表示を確認してください。"
+        },
+        {
+          "question": "他の絵文字や特殊文字と組み合わせられますか？",
+          "answer": "組み合わせられます。草稿欄で並びを調整してからコピーすると、長くなりすぎず使いやすくなります。"
+        }
+      ],
+      "related": [
+        {
+          "title": "かわいいコピペ",
+          "href": "/kawaii-copy/",
+          "description": "顔文字や絵文字もまとめる。"
+        },
+        {
+          "title": "リボン特殊文字",
+          "href": "/special-characters/ribbon/",
+          "description": "かわいい名前デコに。"
+        },
+        {
+          "title": "ピンク絵文字組み合わせ",
+          "href": "/emoji-combinations/pink/",
+          "description": "甘い雰囲気を作る。"
+        }
+      ]
     }
   ]
 }

@@ -1100,3 +1100,9 @@ a {
     padding: 14px;
   }
 }
+
+@media (max-width: 420px) {
+  .item-grid {
+    grid-template-columns: 1fr;
+  }
+}
