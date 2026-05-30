@@ -4,6 +4,8 @@ window.MojiMoonToolData = {
   quickFilters: [
     { label: 'ハート', query: 'ハート' },
     { label: '可愛い', query: '可愛い' },
+    { label: 'Instagram', query: 'instagram' },
+    { label: '文字装飾', query: '文字装飾' },
     { label: '韓国風', query: '韓国' },
     { label: 'キラキラ', query: 'キラキラ' },
     { label: '星', query: '星' },
@@ -164,3 +166,16 @@ window.MojiMoonToolData = {
     { value: '⑬', label: '丸数字13', category: 'number', tags: ['数字'] }
   ]
 };
+
+window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
+  const tags = new Set(item.tags || []);
+  if (['line', 'star', 'arrow', 'bracket'].includes(item.category)) {
+    tags.add('instagram');
+    tags.add('文字装飾');
+  }
+  if (item.category === 'line' || tags.has('可愛い')) {
+    tags.add('ひらがな');
+    tags.add('かわいい');
+  }
+  return { ...item, tags: [...tags] };
+});

@@ -144,30 +144,52 @@
     seoToggleLabel: 'Read more'
   };
   data.quickFilters = [
-    { label: 'Cute', query: 'cute kawaii' },
-    { label: 'White', query: 'white clear aesthetic' },
+    { label: 'Emoji combos', query: 'emoji combos' },
+    { label: 'Cute', query: 'cute' },
+    { label: 'Aesthetic', query: 'aesthetic' },
+    { label: 'Funny', query: 'funny' },
+    { label: 'White', query: 'white' },
     { label: 'Pink', query: 'pink' },
-    { label: 'Hearts', query: 'heart love' },
-    { label: 'Bio', query: 'bio profile instagram' },
-    { label: 'Caption', query: 'caption post message' },
+    { label: 'Hearts', query: 'heart' },
+    { label: 'Bio', query: 'bio' },
+    { label: 'Caption', query: 'caption' },
     { label: 'Birthday', query: 'birthday' },
-    { label: 'Seasonal', query: 'spring summer autumn winter' },
-    { label: 'Fan', query: 'fan profile name' }
+    { label: 'Seasonal', query: 'season' },
+    { label: 'Fan', query: 'fan' }
   ];
   data.categories = data.categories.map((category) => ({
     ...category,
     label: categories[category.id] || category.label
   }));
-  data.items = data.items.map((item) => ({
-    ...item,
-    label: labelMap[item.label] || categories[item.category] || 'Combination',
-    tags: [
-      ...(item.tags || []),
-      categories[item.category],
-      item.category,
-      labelMap[item.label],
-      'emoji combination',
-      'copy paste'
-    ].filter(Boolean)
-  }));
+  data.items = data.items.map((item) => {
+    const translatedLabel = labelMap[item.label] || categories[item.category] || 'Combination';
+    const sourceTags = item.tags || [];
+    const aliasTags = [];
+    if (item.category === 'kawaii' || sourceTags.includes('可愛い')) aliasTags.push('cute emoji combos');
+    if (['white', 'pink', 'bio'].includes(item.category) || sourceTags.some((tag) => ['おしゃれ', '透明感', '白', 'ピンク'].includes(tag))) {
+      aliasTags.push('aesthetic');
+      aliasTags.push('aesthetic emoji combos');
+    }
+    if (['kawaii', 'heart', 'bio'].includes(item.category) || sourceTags.includes('メッセージ')) {
+      aliasTags.push('funny');
+      aliasTags.push('reaction');
+      aliasTags.push('chat');
+      aliasTags.push('caption');
+    }
+    return {
+      ...item,
+      label: translatedLabel,
+      tags: [
+        ...sourceTags,
+        ...aliasTags,
+        categories[item.category],
+        item.category,
+        translatedLabel,
+        'emoji combination',
+        'emoji combo',
+        'emoji combos',
+        'copy paste'
+      ].filter(Boolean)
+    };
+  });
 })();

@@ -2,6 +2,9 @@ window.MojiMoonToolData = {
   slug: 'emoji-copy',
   draftMaxLength: 160,
   quickFilters: [
+    { label: 'かわいい', query: 'かわいい' },
+    { label: 'LINE', query: 'line' },
+    { label: 'キラキラ コピペ', query: 'キラキラ コピペ' },
     { label: '白・透明感', query: '白 透明感' },
     { label: 'ピンク', query: 'ピンク' },
     { label: '韓国風', query: '韓国' },
@@ -202,3 +205,15 @@ window.MojiMoonToolData = {
     { value: '🌚', label: '新月の顔', category: 'sparkle', tags: ['おやすみ', '夜', '月'] }
   ]
 };
+
+window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
+  const tags = new Set(item.tags || []);
+  if (item.category === 'kawaii' || tags.has('可愛い')) tags.add('かわいい');
+  if (item.category === 'sparkle' || tags.has('キラキラ')) {
+    tags.add('キラキラ');
+    tags.add('コピペ');
+    tags.add('キラキラ コピペ');
+  }
+  if (['kawaii', 'heart', 'sparkle', 'social'].includes(item.category)) tags.add('line');
+  return { ...item, tags: [...tags] };
+});

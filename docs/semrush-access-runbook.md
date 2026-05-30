@@ -21,12 +21,15 @@ docs/in-app-browser-runbook.md
   - Do not run rapid automated keyword loops.
   - Use small batches, then pause before continuing.
   - Leave at least 15-30 seconds between Keyword Overview navigations unless the user is manually operating the page.
+  - For automated or agent-driven checks, prefer at least 30-60 seconds between keyword lookups when possible.
   - If the page reports requests are too frequent, stop the batch immediately and wait before trying again.
   - Prefer Semrush exports for larger keyword sets instead of browser-by-browser page collection.
 
 ## Login Flow
 
-1. Open the available browser surface. Prefer the Codex in-app browser when it is available; otherwise use Chrome.
+This flow was re-verified in the Codex in-app browser on 2026-05-30.
+
+1. Open the available browser surface. Prefer the Codex in-app preview browser when it is available; otherwise use Chrome.
 2. Go to:
 
 ```text
@@ -34,6 +37,22 @@ https://dash.3ue.co/zh-Hans/#/login
 ```
 
 3. Log in with the user-provided Tools Share account credentials.
+   - In this local workspace, the credentials are stored outside git at:
+
+```text
+.secrets/semrush.json
+```
+
+   - The JSON keys are:
+
+```json
+{
+  "ID": "<Tools Share username>",
+  "PWD": "<Tools Share password>"
+}
+```
+
+   - Do not print these values, commit them, or copy them into docs.
 4. After login, confirm the page is:
 
 ```text
@@ -44,7 +63,7 @@ https://dash.3ue.co/zh-Hans/#/page/m/home
 6. Use the active card whose expiry is still valid.
 7. Keep the default or user-selected node unless instructed otherwise.
 8. Click `打开`.
-9. Confirm Chrome opens Semrush through:
+9. Confirm Semrush opens through:
 
 ```text
 https://sem.3ue.co/
