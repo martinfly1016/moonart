@@ -17,6 +17,12 @@ docs/in-app-browser-runbook.md
 - Reuse one research tab for keyword pages instead of opening a new tab for every query.
 - Close temporary research tabs when they are no longer needed.
 - Do not keep duplicate Semrush sessions open across Chrome and the Codex in-app browser.
+- Control request frequency when using the `sem.3ue.co` Semrush proxy.
+  - Do not run rapid automated keyword loops.
+  - Use small batches, then pause before continuing.
+  - Leave at least 15-30 seconds between Keyword Overview navigations unless the user is manually operating the page.
+  - If the page reports requests are too frequent, stop the batch immediately and wait before trying again.
+  - Prefer Semrush exports for larger keyword sets instead of browser-by-browser page collection.
 
 ## Login Flow
 

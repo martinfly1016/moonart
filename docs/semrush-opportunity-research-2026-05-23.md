@@ -48,6 +48,10 @@ Recommended first build:
 
 Do not make it a generic article page. Build it as a fast converter with style tabs, preview rows, copy buttons, favorites/recent history, and links into symbol/emoji tools.
 
+Concise conclusion file:
+
+- `docs/semrush-research-conclusion-2026-05-23.md`
+
 ## Directional Keyword Snapshot
 
 Public US cross-checks:
@@ -325,6 +329,320 @@ The product framing should be:
 - not a font article
 - not a static list
 - a fast Unicode text styling tool for bios, usernames, chats, Discord, TikTok, Instagram, and copy/paste decoration
+
+## Continuation Browser Research - 2026-05-23
+
+Semrush session status during continuation:
+
+- Codex in-app browser was unavailable in this environment.
+- Direct Semrush metrics still were not collected.
+- This continuation used public SERP/browser checks and existing local MojiMoon page review.
+
+### Updated Market Read
+
+The public SERP increasingly confirms that the P0 opportunity is not only a single `fancy text generator` page. The stronger pattern is a compact Unicode/copy-paste tool matrix:
+
+- fancy text generator
+- small text generator
+- upside down text generator
+- bubble / circled text generator
+- aesthetic / social bio text
+- special characters / symbols
+- kaomoji
+- dividers and profile decorations
+
+This matters because MojiMoon already has several adjacent pages:
+
+- `/special-characters/`
+- `/en/special-characters/`
+- `/kaomoji/`
+- `/en/kaomoji/`
+- `/emoji-combinations/`
+- `/en/emoji-combinations/`
+- `/slack-emoji-generator/`
+- `/en/slack-emoji-generator/`
+
+The first new page should therefore behave like a hub-style tool and not as an isolated thin converter.
+
+### Competitor Pattern Updates
+
+#### GlamGlyphs
+
+Observed pattern:
+
+- Positions itself around fancy text, symbols, emoji, dividers, and bio-ready glyphs.
+- Exposes many focused pages from one ecosystem: fancy text, small text, Instagram bio symbols, TikTok bio symbols, Discord symbols, name symbols, cute symbols, aesthetic symbols, dividers, hearts, stars, arrows, brackets, kaomoji, and more.
+
+Implication for MojiMoon:
+
+- Build `fancy text generator` with internal links into symbol and emoji tools from day one.
+- Do not wait to create the larger matrix, but design the page so future style-specific routes can reuse the same data/transform engine.
+
+Source:
+
+- `https://glamglyphs.com/`
+
+#### TypeWarp
+
+Observed pattern:
+
+- Uses a many-tool directory model.
+- Groups tools by intent: dark/horror, social fonts, style/fancy, text tools, symbols, translators.
+- Explains the Unicode distinction clearly: output is standard Unicode text rather than a downloaded font.
+
+Implication for MojiMoon:
+
+- The MojiMoon page should include a short, practical compatibility note: "These are Unicode characters, not font files."
+- Tool tabs should be organized by user intent rather than by technical Unicode block.
+
+Source:
+
+- `https://www.typewarp.com/`
+
+#### Japanese Fancy Text Competitors
+
+Observed competitors:
+
+- `https://fontemoji.art/ja`
+- `https://www.i2text.com/ja/cool-text-font-generator`
+- `https://fancytextcopyandpaste.com/ja`
+- `https://www.i2symbol.com/ja/cool-letters`
+- `https://fancymytext.com/jp/`
+
+Common pattern:
+
+- Japanese pages often position around `おしゃれ文字`, `かわいいフォント`, `フォント変換`, `特殊文字`, `インスタ`, and `コピペ`.
+- The strongest Japanese fit is probably not a literal translation of `fancy text generator`; it should target `おしゃれ文字変換`, `おしゃれ文字 コピペ`, `かわいい文字`, and connect to `特殊文字 コピペ`.
+
+Implication for MojiMoon:
+
+- Japanese route should probably be framed as:
+
+```text
+おしゃれ文字変換・フォント変換
+```
+
+- English route can be framed as:
+
+```text
+Fancy Text Generator
+```
+
+Suggested first route pair remains:
+
+- `/fancy-text-generator/`
+- `/en/fancy-text-generator/`
+
+But the Japanese page title/meta should emphasize `おしゃれ文字変換` first.
+
+#### Japanese Special Character Competitors
+
+Observed competitors:
+
+- `https://mojihenkan.com/special-characters/`
+- `https://fontnavi.com/symbol/`
+
+Common pattern:
+
+- Larger symbol inventory claims are used prominently.
+- Competitors emphasize one-click copy, symbol categories, and SNS/profile usage.
+- Some pages include broader categories than MojiMoon currently exposes, including math symbols, music symbols, zodiac, chess, kana/kanji, line drawing, and boxed/circled characters.
+
+Implication for MojiMoon:
+
+- Existing `/special-characters/` is directionally correct, but should be expanded after P0 with more categories and stronger search filters.
+- Before creating many subpages, strengthen the base data set and navigation.
+
+### Discord / Custom Emoji Update
+
+Public checks still support the P1 custom emoji cluster, especially because official platform requirements create clear tool constraints:
+
+- Discord support states custom emoji files must be under 256KB and use supported image formats such as JPEG, PNG, GIF, or WebP.
+- Discord help also references 128 x 128 px as the optimal upload size, with display resizing after upload.
+- Slack support recommends square images under 128KB with transparent backgrounds.
+
+Implication for MojiMoon:
+
+- A future `/en/discord-emoji-maker/` should not just duplicate the Slack text-stamp page.
+- It should add platform presets and validation:
+  - Discord: 128 x 128, under 256KB, PNG/GIF/WebP/JPEG
+  - Slack: square, under 128KB, transparent background preferred
+  - optional later: Twitch emote sizes
+- The current Slack generator engine can be reused, but the product should become a "custom chat emoji maker" engine with platform-specific routes.
+
+Sources:
+
+- `https://support.discord.com/hc/articles/360036479811`
+- `https://discord.com/blog/beginners-guide-to-custom-emojis`
+- `https://slack.com/intl/en-gb/help/articles/206870177-Add-customised-emoji-and-aliases-to-your-workspace`
+
+### ASCII / Text Art Update
+
+Observed competitors:
+
+- `https://textartify.com/`
+- `https://www.fontb.com/ascii-generator`
+- `https://ezascii.com/`
+- `https://ascii-art-generator.net/`
+
+Common pattern:
+
+- Competitors bundle text-to-ASCII banners, image-to-ASCII, galleries, symbol libraries, kaomoji, and quick copy tools.
+- Text-to-ASCII pages often advertise many FIGlet-style fonts and copy/download image output.
+- Image-to-ASCII is useful but heavier and can be awkward on mobile when copied into narrow text fields.
+
+Implication for MojiMoon:
+
+- Keep ASCII/Text Art as P1, not P0.
+- First version should favor mobile-copyable text outputs:
+  - short one-line text art
+  - text banners with a small set of readable styles
+  - emoji/text dividers
+  - copy/download
+- Image-to-ASCII can come later if Semrush confirms enough demand or if the image-to-emoji direction becomes strategic.
+
+### Refined Build Recommendation
+
+First build:
+
+```text
+Fancy Text Generator / おしゃれ文字変換
+```
+
+Why this should come before Discord and ASCII:
+
+- It reuses the existing text-tool page model.
+- It is bilingual from day one.
+- It reinforces `/special-characters/` instead of creating a disconnected feature.
+- It can create multiple future route targets without needing new rendering infrastructure.
+
+MVP feature set:
+
+- Input text with live conversion.
+- Style tabs:
+  - Popular
+  - Cute / Kawaii
+  - Small Text
+  - Bold / Italic
+  - Bubble / Circled
+  - Upside Down
+  - Gothic / Serif
+  - Fullwidth / Aesthetic
+- Output rows with:
+  - preview text
+  - style label
+  - copy button
+  - favorite/recent support if quick to reuse from current patterns
+- Compatibility note:
+  - Unicode text, not real font files.
+  - Some platforms may not display every style.
+- Internal links:
+  - special characters
+  - kaomoji
+  - emoji combinations
+  - emoji copy
+  - Slack emoji generator
+
+Suggested Japanese metadata:
+
+```text
+title: おしゃれ文字変換・フォント変換 | コピペできる可愛い文字 - MojiMoon
+description: 普通の文字を、おしゃれ文字・かわいい文字・小さい文字・丸文字・逆さ文字に変換してコピペできる無料ツール。Instagram、X、LINE、Discordの名前やプロフィールに使えます。
+```
+
+Suggested English metadata:
+
+```text
+title: Fancy Text Generator | Copy and Paste Unicode Fonts - MojiMoon
+description: Convert plain text into fancy Unicode styles, small text, bubble letters, upside down text, bold, italic, gothic, and aesthetic text for bios, names, chats, and posts.
+```
+
+### Semrush Data Still Needed
+
+Chrome/Semrush access note from continuation:
+
+- The user restored the browser login and Chrome could open Semrush Keyword Overview URLs.
+- Local automation could read the active Chrome tab title/URL, confirming the Semrush keyword overview page opened.
+- Codex Chrome Extension control still failed after restarting Chrome.
+- macOS screen capture returned a black image, Computer Use timed out, and Chrome had AppleScript JavaScript execution disabled.
+- Direct `curl` to `sem.3ue.co` without browser session still redirected to the expired-login page.
+- After enabling Chrome's Apple Events JavaScript setting, DOM text extraction worked for Semrush Keyword Overview pages.
+- A rapid automated keyword loop triggered a "requests too frequent" warning from the Semrush proxy. Stop automated batches immediately when this appears. Future Semrush browser collection should use slower pacing, small batches, and preferably Semrush exports for larger keyword lists.
+
+Result: DOM text extraction is now possible, but the Semrush proxy rate-limited rapid collection. Most exact Semrush KD, intent, SERP features, and Keyword Magic cluster data still need slower manual collection or Semrush export. Public keyword API values below are verified and current for this research pass, but they are not a replacement for Semrush KD and SERP data.
+
+Partial Semrush data captured before the rate-limit warning:
+
+| Market | Keyword | Semrush Volume | KD | Intent | Global Volume | CPC | Keyword Ideas / Notes |
+| --- | --- | ---: | ---: | --- | ---: | ---: | --- |
+| US | `fancy text generator` | 60,500 | 67 | Informational | 236,700 | 0.32 | 637 keyword ideas; requires roughly 168 referring domains per Semrush estimate. |
+| US | `small text generator` | 27,100 | 34 | Informational | 60,000 | 0.01 | Strong P0 sub-tool. Keyword Ideas count did not render in the captured text. |
+| US | `upside down text generator` | 9,900 | 28 | Informational | 19,600 | 0.01 | 51 keyword ideas; easier KD than the head term. |
+| US | `bubble text generator` | 1,300 | 28 | Informational | 3,400 | 0 | 143 keyword ideas; small exact term, but cluster includes `text bubble generator` 1.0K. |
+| US | `aesthetic text generator` | 880 | 50 | Informational | 5,100 | 0 | 55 keyword ideas; lower exact demand and harder than expected. |
+| JP | `おしゃれ 文字` | 14,800 | 35 | Informational | 15,000 | 0 | 578 keyword ideas; related `文字 フォント おしゃれ` 8.1K and `おしゃれ 文字 コピペ` 2.9K. |
+| JP | `特殊文字 コピペ` | 9,900 | N/A | N/A | 9,900 | 0 | 41 keyword ideas; related `instagram 特殊 文字 コピペ` 2.9K. |
+| JP | `フォント変換 コピペ` | 0 | N/A | N/A | 30 | 0 | Exact no-volume result, but related `フォント 変換 コピペ` shows 2.9K / KD 44. Treat spacing variant as the useful signal. |
+
+Important handling note:
+
+- Do not continue automated Semrush browser collection at high speed.
+- For additional Semrush metrics, use manual export or collect one keyword at a time with 15-30 second pauses.
+- Several partial pages loaded without summary values before the rate-limit warning; do not treat those as zero-volume Semrush results.
+
+Public API re-check from `https://app.seodata.dev/v1/keyword` on 2026-05-23:
+
+| Market | Keyword | Volume | CPC | Competition | Cache |
+| --- | --- | ---: | ---: | ---: | --- |
+| US | `fancy text generator` | 74,000 | 3.97 | 0 | cached |
+| US | `small text generator` | 27,100 | 0.07 | 0 | cached |
+| US | `upside down text generator` | 12,100 | 0.11 | 0 | cached |
+| US | `ascii art generator` | 12,100 | 2.66 | 0 | cached |
+| US | `bubble text generator` | 1,900 | 0 | 0 | cached |
+| US | `discord emoji maker` | 1,900 | 0 | 0 | cached |
+| US | `aesthetic text generator` | 1,300 | 0 | 0 | cached |
+| JP | `おしゃれ 文字` | 18,100 | 0.36 | 0.02 | cached |
+| JP | `特殊文字 コピペ` | 12,100 | 2.35 | 0 | cached |
+| JP | `絵文字 組み合わせ` | 8,100 | 0 | 0 | cached |
+| JP | `フォント変換 コピペ` | 3,600 | 1.84 | 0 | fresh |
+| JP | `おしゃれ文字変換` | 1,600 | 0.92 | 0 | fresh |
+| JP | `アスキーアート 作成` | 880 | 0 | 0 | cached |
+| JP | `かわいい文字 コピペ` | 0 | 0 | 0 | fresh |
+
+Updated interpretation:
+
+- `fancy text generator` remains the strongest English entry point, but KD 67 makes it a competitive head term. The page needs to be a useful tool hub, not only an exact-match page.
+- `small text generator` is large enough for a prominent MVP section and likely a standalone route soon after launch.
+- `upside down text generator` has meaningful volume and easier KD; it is a good second standalone route once the shared converter engine exists.
+- `bubble text generator` is smaller but easier and has a broader bubble-letter cluster. Include it as a style tab in MVP; route decision can wait.
+- `aesthetic text generator` has lower exact-match Semrush volume and harder KD than public API suggested. Treat it as supporting social-bio language rather than the primary URL target.
+- Japanese positioning should lead with `おしゃれ 文字` / `おしゃれ文字` and include `文字 フォント おしゃれ`, `おしゃれ 文字 コピペ`, and `フォント 変換 コピペ` variants in copy. Do not rely on exact `フォント変換 コピペ` as the primary target.
+- `特殊文字 コピペ` remains a high-value existing-page opportunity and should be strengthened even if the fancy text generator ships first.
+
+When Semrush access is readable, validate these exact items before or immediately after launch:
+
+| Market | Seed | Need |
+| --- | --- | --- |
+| US | `fancy text generator` | Volume, KD, intent, top pages, Keyword Magic clusters |
+| US | `small text generator` | Whether standalone route should launch with MVP |
+| US | `upside down text generator` | Whether standalone route should launch later |
+| US | `bubble text generator` | Long-tail value and SERP difficulty |
+| US | `aesthetic text generator` | Cluster terms around bio/social |
+| JP | `おしゃれ 文字` | Confirm whether `文字変換` or `コピペ` modifiers dominate |
+| JP | `おしゃれ文字変換` | Volume/KD and top URLs |
+| JP | `フォント変換 コピペ` | Whether to mention `フォント変換` in title |
+| JP | `かわいい文字 コピペ` | Fit for style tab/standalone page |
+| JP | `特殊文字 コピペ` | Expansion terms for existing page |
+
+### Updated Priority Queue
+
+| Priority | Work | Rationale |
+| --- | --- | --- |
+| P0 | Build `/fancy-text-generator/` and `/en/fancy-text-generator/` | Best demand/fit/speed combination; strengthens the whole text-tool cluster. |
+| P0 | Expand special-character data categories | Helps existing indexed page and feeds the fancy text tool with internal links. |
+| P1 | Add standalone style routes only after data review | `small text`, `upside down`, `bubble text` may deserve routes, but should share one engine. |
+| P1 | Plan `/en/discord-emoji-maker/` on top of Slack engine | Strong tool intent but more image/export QA. |
+| P1 | Plan `/text-art-generator/` and `/en/text-art-generator/` | Good brand fit, but implementation scope is larger. |
 
 ## Sources
 
