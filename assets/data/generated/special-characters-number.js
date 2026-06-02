@@ -8,8 +8,12 @@ window.MojiMoonToolData = {
       "query": "番号"
     },
     {
-      "label": "丸数字",
-      "query": "丸数字"
+      "label": "丸数字 コピペ",
+      "query": "丸数字 コピペ"
+    },
+    {
+      "label": "数字フォント",
+      "query": "数字フォント"
     },
     {
       "label": "リスト",
@@ -54,7 +58,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -63,7 +70,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -72,7 +82,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -81,7 +94,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -90,7 +106,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -99,7 +118,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -108,7 +130,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -117,7 +142,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -126,7 +154,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -135,7 +166,10 @@ window.MojiMoonToolData = {
       "category": "circle",
       "tags": [
         "丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -144,7 +178,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -153,7 +190,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -162,7 +202,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -171,7 +214,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -180,7 +226,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -189,7 +238,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -198,7 +250,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -207,7 +262,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -216,7 +274,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -225,7 +286,10 @@ window.MojiMoonToolData = {
       "category": "black",
       "tags": [
         "黒丸数字",
-        "番号"
+        "番号",
+        "コピペ",
+        "丸数字 コピペ",
+        "数字フォント"
       ]
     },
     {
@@ -234,7 +298,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -243,7 +309,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -252,7 +320,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -261,7 +331,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -270,7 +342,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -279,7 +353,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -288,7 +364,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -297,7 +375,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -306,7 +386,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {
@@ -315,7 +397,9 @@ window.MojiMoonToolData = {
       "category": "roman",
       "tags": [
         "ローマ数字",
-        "番号"
+        "番号",
+        "数字フォント",
+        "特殊文字 数字 コピペ"
       ]
     },
     {

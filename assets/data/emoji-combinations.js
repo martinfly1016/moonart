@@ -2,6 +2,7 @@ window.MojiMoonToolData = {
   slug: 'emoji-combinations',
   draftMaxLength: 220,
   quickFilters: [
+    { label: '絵文字 組み合わせ', query: '絵文字 組み合わせ' },
     { label: '可愛い', query: '可愛い' },
     { label: '白・透明感', query: '白 透明感' },
     { label: 'ピンク', query: 'ピンク' },
@@ -9,6 +10,7 @@ window.MojiMoonToolData = {
     { label: 'プロフィール', query: 'プロフィール' },
     { label: 'インスタ', query: 'インスタ' },
     { label: '誕生日', query: '誕生日' },
+    { label: 'おめでとう', query: 'おめでとう' },
     { label: '推し活', query: '推し活' }
   ],
   categories: [
@@ -205,3 +207,20 @@ window.MojiMoonToolData = {
     { value: 'fresh start 🌿✨', label: '新しい始まり', category: 'season', tags: ['英語', '春'] }
   ]
 };
+
+window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
+  const tags = new Set(item.tags || []);
+  tags.add('絵文字 組み合わせ');
+  tags.add('絵文字組み合わせ');
+  tags.add('コピペ');
+  if (item.category === 'kawaii' || tags.has('可愛い')) {
+    tags.add('可愛い絵文字 組み合わせ');
+    tags.add('可愛い絵文字の組み合わせ');
+  }
+  if (tags.has('誕生日') || item.label.includes('誕生日') || item.value.toLowerCase().includes('birthday')) {
+    tags.add('誕生日 絵文字 組み合わせ');
+    tags.add('おめでとう 絵文字 組み合わせ');
+    tags.add('おめでとう');
+  }
+  return { ...item, tags: [...tags] };
+});

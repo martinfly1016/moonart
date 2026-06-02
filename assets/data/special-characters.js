@@ -9,7 +9,9 @@ window.MojiMoonToolData = {
     { label: '韓国風', query: '韓国' },
     { label: 'キラキラ', query: 'キラキラ' },
     { label: '星', query: '星' },
+    { label: '星 コピペ', query: '星 コピペ' },
     { label: 'ライン', query: 'ライン' },
+    { label: '丸数字', query: '丸数字 コピペ' },
     { label: '括弧', query: '括弧' },
     { label: '矢印', query: '矢印' }
   ],
@@ -172,6 +174,19 @@ window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
   if (['line', 'star', 'arrow', 'bracket'].includes(item.category)) {
     tags.add('instagram');
     tags.add('文字装飾');
+  }
+  if (item.category === 'star' || tags.has('星') || tags.has('キラキラ')) {
+    tags.add('星 コピペ');
+    tags.add('星絵文字');
+    tags.add('星 絵文字');
+    tags.add('星 絵文字 コピペ');
+    tags.add('キラキラ特殊文字');
+  }
+  if (item.category === 'number' || tags.has('数字')) {
+    tags.add('丸数字');
+    tags.add('丸数字 コピペ');
+    tags.add('数字フォント コピペ');
+    tags.add('特殊文字 数字 コピペ');
   }
   if (item.category === 'line' || tags.has('可愛い')) {
     tags.add('ひらがな');

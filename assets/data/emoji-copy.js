@@ -5,6 +5,7 @@ window.MojiMoonToolData = {
     { label: 'かわいい', query: 'かわいい' },
     { label: 'LINE', query: 'line' },
     { label: 'キラキラ コピペ', query: 'キラキラ コピペ' },
+    { label: 'キラキラコピペ', query: 'キラキラコピペ' },
     { label: '白・透明感', query: '白 透明感' },
     { label: 'ピンク', query: 'ピンク' },
     { label: '韓国風', query: '韓国' },
@@ -213,6 +214,10 @@ window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
     tags.add('キラキラ');
     tags.add('コピペ');
     tags.add('キラキラ コピペ');
+    tags.add('キラキラコピペ');
+    tags.add('キラキラ 絵文字 コピペ');
+    tags.add('キラキラ絵文字コピペ');
+    tags.add('星絵文字');
   }
   if (['kawaii', 'heart', 'sparkle', 'social'].includes(item.category)) tags.add('line');
   return { ...item, tags: [...tags] };
