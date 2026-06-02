@@ -187,6 +187,8 @@
     seoToggleLabel: 'Read more'
   };
   data.quickFilters = [
+    { label: 'Kaomoji copy', query: 'kaomoji copy paste' },
+    { label: 'Copy paste', query: 'copy paste' },
     { label: 'Cute', query: 'cute kawaii' },
     { label: 'Cat', query: 'cat' },
     { label: 'Rabbit', query: 'rabbit' },
