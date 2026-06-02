@@ -11465,6 +11465,413 @@
       ]
     },
     {
+      "slug": "emoji-combinations-world-cup",
+      "path": "/emoji-combinations/world-cup/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "ワールドカップ 絵文字 組み合わせ | サッカー応援テンプレをコピー - MojiMoon",
+      "description": "ワールドカップ 絵文字 組み合わせをコピーできる無料ツール。サッカー絵文字、応援、ゴール、観戦、決勝、国旗を使ったSNS・LINE向けテンプレをまとめてコピーできます。",
+      "ogTitle": "ワールドカップ 絵文字 組み合わせ | サッカー応援テンプレ",
+      "ogDescription": "ワールドカップやサッカー観戦に使える絵文字組み合わせをコピーできます。",
+      "eyebrow": "World Cup Emoji Combinations",
+      "h1": "ワールドカップ 絵文字 組み合わせコピペ",
+      "hero": "ワールドカップ、サッカー観戦、ゴール、勝利、応援投稿に使いやすい絵文字の組み合わせを集めました。SNS、LINE、Instagram、Xの短い投稿にそのまま貼れるオリジナルのサッカー絵文字テンプレです。",
+      "toolLabel": "ワールドカップ絵文字組み合わせツール",
+      "searchPlaceholder": "ワールドカップ、サッカー、応援、ゴール、決勝、日本代表などで検索",
+      "draftPlaceholder": "サッカー応援テンプレをクリックするとここに追加されます",
+      "composerHint": "観戦メッセージや応援投稿に合わせて、複数のテンプレを草稿で組み合わせられます。",
+      "recentLabel": "最近使ったワールドカップ絵文字組み合わせ",
+      "changefreq": "daily",
+      "priority": "0.82",
+      "categories": [
+        {
+          "id": "support",
+          "label": "応援"
+        },
+        {
+          "id": "goal",
+          "label": "ゴール"
+        },
+        {
+          "id": "match",
+          "label": "観戦"
+        },
+        {
+          "id": "final",
+          "label": "決勝"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "ワールドカップ",
+          "query": "ワールドカップ"
+        },
+        {
+          "label": "サッカー",
+          "query": "サッカー"
+        },
+        {
+          "label": "応援",
+          "query": "応援"
+        },
+        {
+          "label": "ゴール",
+          "query": "ゴール"
+        },
+        {
+          "label": "日本代表",
+          "query": "日本代表"
+        },
+        {
+          "label": "決勝",
+          "query": "決勝"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "support",
+          "tags": [
+            "ワールドカップ",
+            "サッカー",
+            "応援",
+            "日本代表",
+            "絵文字 組み合わせ"
+          ],
+          "items": [
+            {
+              "value": "🇯🇵⚽️✨",
+              "label": "日本代表応援 1",
+              "tags": []
+            },
+            {
+              "value": "応援してる 🇯🇵⚽️",
+              "label": "日本代表応援 2",
+              "tags": []
+            },
+            {
+              "value": "勝利を信じて ⚽️🌟",
+              "label": "応援 1",
+              "tags": []
+            },
+            {
+              "value": "がんばれ日本 🇯🇵🏆",
+              "label": "日本代表応援 3",
+              "tags": []
+            },
+            {
+              "value": "one team ⚽️🤍",
+              "label": "応援英字 1",
+              "tags": []
+            },
+            {
+              "value": "vamos! ⚽️🔥",
+              "label": "応援英字 2",
+              "tags": []
+            },
+            {
+              "value": "全力応援 📣⚽️✨",
+              "label": "応援 2",
+              "tags": []
+            },
+            {
+              "value": "届け、この声 📣🇯🇵",
+              "label": "応援 3",
+              "tags": []
+            },
+            {
+              "value": "青く燃えろ 💙⚽️",
+              "label": "日本代表応援 4",
+              "tags": []
+            },
+            {
+              "value": "believe 🏆✨",
+              "label": "応援英字 3",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "goal",
+          "tags": [
+            "ワールドカップ",
+            "サッカー",
+            "ゴール",
+            "勝利",
+            "絵文字 組み合わせ"
+          ],
+          "items": [
+            {
+              "value": "GOAL! ⚽️🔥",
+              "label": "ゴール 1",
+              "tags": []
+            },
+            {
+              "value": "ゴールきた ⚽️✨",
+              "label": "ゴール 2",
+              "tags": []
+            },
+            {
+              "value": "勝ったああ 🏆⚽️",
+              "label": "勝利 1",
+              "tags": []
+            },
+            {
+              "value": "ナイスシュート ⚽️🌟",
+              "label": "ゴール 3",
+              "tags": []
+            },
+            {
+              "value": "最高の一撃 ⚽️🔥",
+              "label": "ゴール 4",
+              "tags": []
+            },
+            {
+              "value": "逆転を信じる ⚽️💫",
+              "label": "応援 4",
+              "tags": []
+            },
+            {
+              "value": "winner mood 🏆✨",
+              "label": "勝利英字 1",
+              "tags": []
+            },
+            {
+              "value": "goal mood ⚽️🎉",
+              "label": "ゴール英字 1",
+              "tags": []
+            },
+            {
+              "value": "歓喜の瞬間 🎉⚽️",
+              "label": "勝利 2",
+              "tags": []
+            },
+            {
+              "value": "この一点に全部 ⚽️🤍",
+              "label": "ゴール 5",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "match",
+          "tags": [
+            "ワールドカップ",
+            "サッカー",
+            "観戦",
+            "試合",
+            "絵文字 組み合わせ"
+          ],
+          "items": [
+            {
+              "value": "match day ⚽️📣",
+              "label": "観戦 1",
+              "tags": []
+            },
+            {
+              "value": "観戦準備OK ⚽️☕️",
+              "label": "観戦 2",
+              "tags": []
+            },
+            {
+              "value": "寝不足確定 🌙⚽️",
+              "label": "観戦 3",
+              "tags": []
+            },
+            {
+              "value": "今夜はサッカー ⚽️✨",
+              "label": "観戦 4",
+              "tags": []
+            },
+            {
+              "value": "kick off ⚽️🔥",
+              "label": "観戦英字 1",
+              "tags": []
+            },
+            {
+              "value": "前半スタート ⚽️",
+              "label": "試合 1",
+              "tags": []
+            },
+            {
+              "value": "後半勝負 ⚽️💪",
+              "label": "試合 2",
+              "tags": []
+            },
+            {
+              "value": "PKまで見届ける ⚽️🫧",
+              "label": "試合 3",
+              "tags": []
+            },
+            {
+              "value": "みんなで観戦 📺⚽️",
+              "label": "観戦 5",
+              "tags": []
+            },
+            {
+              "value": "world cup night 🌙⚽️",
+              "label": "観戦英字 2",
+              "tags": []
+            }
+          ]
+        },
+        {
+          "category": "final",
+          "tags": [
+            "ワールドカップ",
+            "サッカー",
+            "決勝",
+            "優勝",
+            "トロフィー",
+            "絵文字 組み合わせ"
+          ],
+          "items": [
+            {
+              "value": "決勝の夜 🏆⚽️",
+              "label": "決勝 1",
+              "tags": []
+            },
+            {
+              "value": "final mood 🏆✨",
+              "label": "決勝英字 1",
+              "tags": []
+            },
+            {
+              "value": "世界一へ ⚽️🏆",
+              "label": "決勝 2",
+              "tags": []
+            },
+            {
+              "value": "優勝まであと少し 🏆🔥",
+              "label": "決勝 3",
+              "tags": []
+            },
+            {
+              "value": "history maker ⚽️🏆",
+              "label": "決勝英字 2",
+              "tags": []
+            },
+            {
+              "value": "トロフィーを掲げて 🏆✨",
+              "label": "優勝 1",
+              "tags": []
+            },
+            {
+              "value": "最後まで信じる ⚽️🤍",
+              "label": "決勝 4",
+              "tags": []
+            },
+            {
+              "value": "champion dream 🏆💫",
+              "label": "優勝英字 1",
+              "tags": []
+            },
+            {
+              "value": "歓声の先へ 📣🏆",
+              "label": "決勝 5",
+              "tags": []
+            },
+            {
+              "value": "最高のフィナーレ ⚽️✨",
+              "label": "決勝 6",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "ワールドカップ 絵文字 組み合わせの使い方",
+        "paragraphs": [
+          "ワールドカップ 絵文字 組み合わせは、サッカー観戦、応援投稿、ゴールの瞬間、試合後の感想に使いやすい短いテンプレです。⚽️、🏆、📣、✨、国旗絵文字を組み合わせると、SNSやLINEで試合の気分を伝えやすくなります。",
+          "このページのテンプレはMojiMoonが作成したオリジナルの絵文字組み合わせです。公式ロゴや公式素材ではなく、投稿やメッセージに使いやすい短い文字列としてコピーできます。"
+        ],
+        "sections": [
+          {
+            "heading": "シーン別おすすめ",
+            "cards": [
+              {
+                "title": "サッカー応援",
+                "body": "応援してる 🇯🇵⚽️、全力応援 📣⚽️✨ のように、試合前や試合中の短い投稿に使いやすい組み合わせです。"
+              },
+              {
+                "title": "ゴール・勝利",
+                "body": "GOAL! ⚽️🔥、勝ったああ 🏆⚽️ など、試合中のリアクションや勝利の投稿に向いています。"
+              },
+              {
+                "title": "観戦・決勝",
+                "body": "match day ⚽️📣、決勝の夜 🏆⚽️ のように、観戦前の一言や決勝戦のムード作りに使えます。"
+              }
+            ]
+          },
+          {
+            "heading": "使い分けのコツ",
+            "cards": [
+              {
+                "title": "国旗を入れる",
+                "body": "応援する国が決まっている場合は、国旗絵文字と ⚽️ を並べるだけで応援メッセージらしくなります。"
+              },
+              {
+                "title": "短くする",
+                "body": "XやLINEでは、絵文字を2-4個に絞ると読みやすく、試合中のテンポにも合います。"
+              },
+              {
+                "title": "特殊文字を混ぜる",
+                "body": "✦、✧、♡ などを足すと、プロフィールや観戦メモにも使いやすい控えめな装飾になります。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "絵文字組み合わせ一覧",
+            "href": "/emoji-combinations/"
+          },
+          {
+            "label": "キラキラ絵文字コピペ",
+            "href": "/emoji-copy/sparkle/"
+          },
+          {
+            "label": "星特殊文字",
+            "href": "/special-characters/star/"
+          },
+          {
+            "label": "絵文字コピペ",
+            "href": "/emoji-copy/"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "ワールドカップ絵文字組み合わせは公式素材ですか？",
+          "answer": "いいえ。MojiMoonが作成した投稿向けのオリジナル絵文字組み合わせです。公式ロゴ、公式マーク、公式素材ではありません。"
+        },
+        {
+          "question": "サッカー以外のスポーツ応援にも使えますか？",
+          "answer": "一部は使えますが、⚽️ やサッカー観戦向けの言葉を含むため、ワールドカップやサッカー応援に特に向いています。"
+        },
+        {
+          "question": "国旗絵文字を変えて使えますか？",
+          "answer": "はい。草稿欄で国旗や言葉を編集して、応援する国やチームに合わせて使えます。"
+        }
+      ],
+      "related": [
+        {
+          "title": "絵文字組み合わせ",
+          "href": "/emoji-combinations/",
+          "description": "可愛い組み合わせやSNSテンプレを探す。"
+        },
+        {
+          "title": "キラキラ絵文字コピペ",
+          "href": "/emoji-copy/sparkle/",
+          "description": "応援投稿に使う星や光の絵文字。"
+        },
+        {
+          "title": "星特殊文字",
+          "href": "/special-characters/star/",
+          "description": "試合投稿に合わせるキラキラ記号。"
+        }
+      ]
+    },
+    {
       "slug": "emoji-combinations-green",
       "path": "/emoji-combinations/green/",
       "family": "emoji-combinations",

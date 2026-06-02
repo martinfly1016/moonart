@@ -11,6 +11,8 @@ window.MojiMoonToolData = {
     { label: 'インスタ', query: 'インスタ' },
     { label: '誕生日', query: '誕生日' },
     { label: 'おめでとう', query: 'おめでとう' },
+    { label: 'ワールドカップ', query: 'ワールドカップ' },
+    { label: 'サッカー', query: 'サッカー' },
     { label: '推し活', query: '推し活' }
   ],
   categories: [
@@ -204,7 +206,13 @@ window.MojiMoonToolData = {
     { value: 'congrats 🎉✨', label: 'おめでとう英字', category: 'season', tags: ['英語', 'メッセージ'] },
     { value: 'good luck 🍀✨', label: '幸運を', category: 'season', tags: ['英語', '応援'] },
     { value: 'exam season 📚☕️', label: '試験シーズン', category: 'season', tags: ['英語', '勉強'] },
-    { value: 'fresh start 🌿✨', label: '新しい始まり', category: 'season', tags: ['英語', '春'] }
+    { value: 'fresh start 🌿✨', label: '新しい始まり', category: 'season', tags: ['英語', '春'] },
+    { value: '🇯🇵⚽️✨', label: '日本代表応援', category: 'season', tags: ['ワールドカップ', 'サッカー', '応援', '日本代表'] },
+    { value: '応援してる 🇯🇵⚽️', label: 'サッカー応援', category: 'season', tags: ['ワールドカップ', 'サッカー', '応援', '日本代表'] },
+    { value: 'GOAL! ⚽️🔥', label: 'ゴール', category: 'season', tags: ['ワールドカップ', 'サッカー', 'ゴール'] },
+    { value: 'match day ⚽️📣', label: '試合観戦', category: 'season', tags: ['ワールドカップ', 'サッカー', '観戦'] },
+    { value: '決勝の夜 🏆⚽️', label: '決勝', category: 'season', tags: ['ワールドカップ', 'サッカー', '決勝'] },
+    { value: '勝利を信じて ⚽️🌟', label: '勝利祈願', category: 'season', tags: ['ワールドカップ', 'サッカー', '応援'] }
   ]
 };
 
