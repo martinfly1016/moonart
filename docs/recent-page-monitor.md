@@ -6,42 +6,17 @@ This monitor tracks newly shipped page clusters with both Google Search Console 
 
 Default tracked set:
 
-- `/zenkaku-hankaku-converter/`
-- `/emoji-list/`
-- `/kaomoji/love/`
-- `/kawaii-copy/`
-- `/kawaii-copy/yumekawa/`
-- `/kawaii-copy/name-frame/`
-- `/kawaii-copy/divider-line/`
-- `/kawaii-copy/ribbon/`
-- `/kawaii-copy/ryosangata-otaku/`
-- `/kawaii-copy/food/`
-- `/emoji-copy/heart/`
-- `/emoji-copy/kawaii/`
-- `/emoji-copy/sparkle/`
-- `/emoji-copy/tear/`
-- `/emoji-copy/smile/`
-- `/emoji-copy/hand-sign/`
-- `/emoji-copy/flower/`
-- `/emoji-copy/star/`
-- `/emoji-copy/thank-you/`
-- `/emoji-copy/sorry/`
-- `/emoji-copy/warning/`
-- `/emoji-copy/birthday/`
-- `/emoji-copy/good-night/`
-- `/en/emoji-copy/heart/`
-- `/en/emoji-copy/kawaii/`
-- `/en/emoji-copy/sparkle/`
-- `/en/emoji-copy/tear/`
-- `/en/emoji-copy/smile/`
-- `/en/emoji-copy/hand-sign/`
-- `/en/emoji-copy/flower/`
-- `/en/emoji-copy/star/`
-- `/en/emoji-copy/thank-you/`
-- `/en/emoji-copy/sorry/`
-- `/en/emoji-copy/warning/`
-- `/en/emoji-copy/birthday/`
-- `/en/emoji-copy/good-night/`
+- Core follow-up pages such as `/zenkaku-hankaku-converter/`, `/emoji-list/`, `/kaomoji/love/`, and the main `/kawaii-copy/` hub pages.
+- English emoji-copy topic pages that are manually maintained.
+- All generated Japanese copy pages from `_content/ja-copy-pages.json`, including kaomoji, emoji-copy, emoji-combinations, special-characters, and kawaii-copy long-tail pages.
+
+Use `--no-generated` to track only the fixed core list. Use `--pages` or `--page-file` for a narrow custom run.
+
+To inspect the resolved default page list without making GA4 or GSC requests:
+
+```bash
+npm run monitor:recent-pages -- --list-pages
+```
 
 Run:
 

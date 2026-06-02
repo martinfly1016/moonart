@@ -4,6 +4,10 @@ window.MojiMoonToolData = {
   "draftMaxLength": 220,
   "quickFilters": [
     {
+      "label": "ぎゅー顔文字",
+      "query": "ぎゅー 顔文字"
+    },
+    {
       "label": "ハグ",
       "query": "ハグ"
     },

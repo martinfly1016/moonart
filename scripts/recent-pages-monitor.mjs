@@ -19,8 +19,9 @@ const DEFAULT_ORIGIN = 'https://mojimoon.com';
 const DEFAULT_CREDENTIALS = path.join('.secrets', 'google-oauth-client.json');
 const DEFAULT_GSC_TOKEN = path.join('.secrets', 'google-oauth-token.json');
 const DEFAULT_GA_TOKEN = path.join('.secrets', 'google-analytics-token.json');
+const GENERATED_CONTENT_FILE = path.join('_content', 'ja-copy-pages.json');
 
-const DEFAULT_PAGES = [
+const CORE_PAGES = [
   { path: '/zenkaku-hankaku-converter/', label: 'Zenkaku hankaku converter', locale: 'ja', group: 'gsc-indexing-followup' },
   { path: '/emoji-list/', label: 'Emoji list', locale: 'ja', group: 'gsc-indexing-followup' },
   { path: '/kaomoji/love/', label: 'Love kaomoji', locale: 'ja', group: 'gsc-indexing-followup' },
@@ -77,6 +78,8 @@ Options:
   --days <number>           Alternative to --start. Counts back from --end/default end date
   --pages <csv>             Comma-separated page paths or absolute URLs
   --page-file <path>        JSON file with [{ path, label, locale, group }]
+  --no-generated            Do not append generated pages from _content/ja-copy-pages.json
+  --list-pages              Print the resolved tracked pages and exit without API requests
   --top-queries <number>    Top GSC queries per page. Default: 5
   --out-dir <path>          Default: reports/recent-pages/<end-date>
 `);
@@ -95,6 +98,46 @@ function normalizePath(value) {
 
 function pageUrl(origin, pagePath) {
   return new URL(normalizePath(pagePath), origin).toString();
+}
+
+function groupForGeneratedPage(page) {
+  if (page.family === 'kawaii-copy') return 'kawaii-copy-generated';
+  if (page.family === 'emoji-copy') return 'emoji-copy-generated';
+  if (page.family === 'kaomoji') return 'kaomoji-generated';
+  if (page.family === 'special-characters') return 'special-characters-generated';
+  if (page.family === 'emoji-combinations') return 'emoji-combinations-generated';
+  return 'generated-content';
+}
+
+async function loadGeneratedPages() {
+  try {
+    const source = JSON.parse(await fs.readFile(GENERATED_CONTENT_FILE, 'utf8'));
+    if (!Array.isArray(source.pages)) return [];
+    return source.pages.map((page) => ({
+      path: normalizePath(page.path),
+      label: page.h1 || page.title || page.slug || normalizePath(page.path),
+      locale: 'ja',
+      group: groupForGeneratedPage(page)
+    }));
+  } catch (error) {
+    if (error.code === 'ENOENT') return [];
+    throw error;
+  }
+}
+
+function mergePages(pages) {
+  const seen = new Set();
+  const merged = [];
+  for (const page of pages) {
+    const pathName = normalizePath(page.path);
+    if (seen.has(pathName)) continue;
+    seen.add(pathName);
+    merged.push({
+      ...page,
+      path: pathName
+    });
+  }
+  return merged;
 }
 
 function sitePath(siteUrl) {
@@ -198,6 +241,14 @@ function markdownTable(headers, rows) {
     `| ${headers.map(() => '---').join(' | ')} |`,
     ...rows.map((row) => `| ${row.join(' | ')} |`)
   ].join('\n');
+}
+
+function printPageList(pages) {
+  console.log(`Resolved ${pages.length} tracked page(s):`);
+  for (const page of pages) {
+    const parts = [page.path, page.locale || 'unknown', page.group || 'custom', page.label || page.path];
+    console.log(parts.join('\t'));
+  }
 }
 
 function renderMarkdown({ pages, summaryRows, queryRowsByPath, totals, startDate, endDate }) {
@@ -335,7 +386,8 @@ async function loadPages(args) {
       return { path: pathName, label: pathName, locale: '', group: 'custom' };
     });
   }
-  return DEFAULT_PAGES;
+  const generatedPages = args['no-generated'] ? [] : await loadGeneratedPages();
+  return mergePages([...CORE_PAGES, ...generatedPages]);
 }
 
 async function main() {
@@ -345,8 +397,6 @@ async function main() {
     return;
   }
 
-  const credentialsPath = args.credentials || DEFAULT_CREDENTIALS;
-  const credentials = await readCredentials(credentialsPath);
   const site = args.site || DEFAULT_SITE;
   const property = args['ga-property'] || process.env.GA4_PROPERTY_ID || DEFAULT_GA_PROPERTY;
   const origin = args.origin || DEFAULT_ORIGIN;
@@ -354,6 +404,13 @@ async function main() {
   const { startDate, endDate } = resolveDates(args, { lagDays: 3, spanDays: 28 });
   const outDir = args['out-dir'] || path.join('reports', 'recent-pages', endDate);
   const pages = await loadPages(args);
+  if (args['list-pages']) {
+    printPageList(pages);
+    return;
+  }
+
+  const credentialsPath = args.credentials || DEFAULT_CREDENTIALS;
+  const credentials = await readCredentials(credentialsPath);
   const pageSet = new Set(pages.map((page) => normalizePath(page.path)));
 
   const [gscToken, gaToken] = await Promise.all([

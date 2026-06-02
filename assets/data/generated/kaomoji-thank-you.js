@@ -8,6 +8,10 @@ window.MojiMoonToolData = {
       "query": "ありがとう"
     },
     {
+      "label": "感謝 顔文字",
+      "query": "感謝 顔文字"
+    },
+    {
       "label": "可愛い",
       "query": "可愛い"
     },

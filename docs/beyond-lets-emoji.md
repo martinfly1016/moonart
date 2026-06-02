@@ -61,6 +61,12 @@ Emoji copy topic pages:
 - `/emoji-copy/warning/`
 - `/emoji-copy/birthday/`
 - `/emoji-copy/good-night/`
+- `/emoji-copy/good-morning/`
+- `/emoji-copy/otsukaresama/`
+- `/emoji-copy/congratulations/`
+- `/emoji-copy/love/`
+- `/emoji-copy/birthday-message/`
+- `/emoji-copy/love-message/`
 - `/en/emoji-copy/heart/`
 - `/en/emoji-copy/kawaii/`
 - `/en/emoji-copy/sparkle/`
@@ -74,6 +80,12 @@ Emoji copy topic pages:
 - `/en/emoji-copy/warning/`
 - `/en/emoji-copy/birthday/`
 - `/en/emoji-copy/good-night/`
+
+Generated Japanese copy-page expansion:
+
+- Kaomoji long-tail pages for shy, sleepy, confused, surprised, greetings, thank-you, sorry, hug, kiss, animals, angel, wink, peace, OK/NO, good morning, otsukaresama, good night, and message-oriented otsukaresama.
+- Special-character long-tail pages for flowers, ribbons, divider lines, brackets, crowns, music notes, checks, numbers, Instagram, name decoration, and cute symbols.
+- Emoji-combination long-tail pages for pink, blue, black, purple, green, love, birthday, thank-you, good-night, and thank-you-message clusters.
 
 Shared experience:
 
@@ -93,8 +105,18 @@ Kawaii copy workspace:
 - `/kawaii-copy/ribbon/`
 - `/kawaii-copy/ryosangata-otaku/`
 - `/kawaii-copy/food/`
+- `/kawaii-copy/instagram-profile/`
+- `/kawaii-copy/instagram-name/`
+- `/kawaii-copy/line-name/`
+- `/kawaii-copy/profile/`
+- `/kawaii-copy/oshi-profile/`
+- `/kawaii-copy/ryosangata-profile/`
+- `/kawaii-copy/yumekawa-text/`
+- `/kawaii-copy/cute-divider/`
 
 This batch intentionally ships Japanese pages first because the newly added reference competitors and demand signals are Japan-heavy. The workspace adds a cross-tool copy flow for face marks, symbols, dividers, name frames, emoji combinations, global recent history, and saved drafts.
+
+Generated Japanese pages are managed from `_content/ja-copy-pages.json` through `npm run generate:content`. The recent-page monitor now appends this generated source by default, so new generated pages enter the GA4/GSC baseline automatically.
 
 ## Measurement
 
@@ -102,6 +124,14 @@ Run the monitor:
 
 ```bash
 npm run monitor:recent-pages -- --days 28
+```
+
+The default run includes fixed core pages plus all generated Japanese copy pages from `_content/ja-copy-pages.json`. Use `--no-generated` only when comparing the older fixed baseline.
+
+Preview the resolved monitor set without making API requests:
+
+```bash
+npm run monitor:recent-pages -- --list-pages
 ```
 
 Default output:

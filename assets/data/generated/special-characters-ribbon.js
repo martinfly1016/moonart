@@ -4,6 +4,14 @@ window.MojiMoonToolData = {
   "draftMaxLength": 220,
   "quickFilters": [
     {
+      "label": "ˏˋ ˎˊ",
+      "query": "ˏˋ ˎˊ"
+    },
+    {
+      "label": "ドットリボン",
+      "query": "ドットリボン"
+    },
+    {
       "label": "リボン",
       "query": "リボン"
     },
