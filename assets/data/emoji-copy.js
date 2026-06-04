@@ -2,6 +2,9 @@ window.MojiMoonToolData = {
   slug: 'emoji-copy',
   draftMaxLength: 160,
   quickFilters: [
+    { label: '絵文字 コピペ', query: '絵文字 コピペ' },
+    { label: '絵文字コピペ', query: '絵文字コピペ' },
+    { label: '可愛い絵文字 コピペ', query: '可愛い絵文字 コピペ' },
     { label: 'かわいい', query: 'かわいい' },
     { label: 'LINE', query: 'line' },
     { label: 'キラキラ コピペ', query: 'キラキラ コピペ' },
@@ -209,7 +212,14 @@ window.MojiMoonToolData = {
 
 window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
   const tags = new Set(item.tags || []);
+  tags.add('絵文字 コピペ');
+  tags.add('絵文字コピペ');
   if (item.category === 'kawaii' || tags.has('可愛い')) tags.add('かわいい');
+  if (item.category === 'kawaii' || tags.has('可愛い') || tags.has('かわいい')) {
+    tags.add('可愛い絵文字');
+    tags.add('可愛い絵文字 コピペ');
+    tags.add('かわいい絵文字 コピペ');
+  }
   if (item.category === 'sparkle' || tags.has('キラキラ')) {
     tags.add('キラキラ');
     tags.add('コピペ');
@@ -218,6 +228,9 @@ window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
     tags.add('キラキラ 絵文字 コピペ');
     tags.add('キラキラ絵文字コピペ');
     tags.add('星絵文字');
+    tags.add('星 絵文字');
+    tags.add('星 絵文字 コピペ');
+    tags.add('星 コピペ');
   }
   if (['kawaii', 'heart', 'sparkle', 'social'].includes(item.category)) tags.add('line');
   return { ...item, tags: [...tags] };

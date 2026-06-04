@@ -6,12 +6,14 @@ window.MojiMoonToolData = {
   favoritesLimit: 30,
   recentLimit: 18,
   quickFilters: [
+    { label: '可愛い絵文字 コピペ', query: '可愛い絵文字 コピペ' },
+    { label: '絵文字 コピペ', query: '絵文字 コピペ' },
     { label: 'ゆめかわ', query: 'ゆめかわ' },
     { label: '量産型', query: '量産型' },
     { label: '名前フレーム', query: '名前' },
     { label: '区切り線', query: '区切り線' },
     { label: 'ハート', query: 'ハート' },
-    { label: 'キラキラ', query: 'キラキラ' },
+    { label: 'キラキラ コピペ', query: 'キラキラ コピペ' },
     { label: 'リボン', query: 'リボン' },
     { label: '食べ物', query: '食べ物' },
     { label: 'iPhone', query: 'iPhone' },
@@ -124,3 +126,20 @@ window.MojiMoonToolData = {
     { value: 'good night ☾⋆｡˚', label: 'おやすみ英字', category: 'combo', tags: ['おやすみ', 'キラキラ'] }
   ]
 };
+
+window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
+  const tags = new Set(item.tags || []);
+  tags.add('かわいいコピペ');
+  if (item.category === 'emoji' || item.category === 'combo') {
+    tags.add('絵文字 コピペ');
+    tags.add('絵文字コピペ');
+    tags.add('可愛い絵文字');
+    tags.add('可愛い絵文字 コピペ');
+    tags.add('かわいい絵文字 コピペ');
+  }
+  if (item.category === 'emoji' || tags.has('キラキラ')) {
+    tags.add('キラキラ コピペ');
+    tags.add('キラキラコピペ');
+  }
+  return { ...item, tags: [...tags] };
+});

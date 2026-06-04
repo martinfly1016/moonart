@@ -8,8 +8,9 @@ window.MojiMoonToolData = {
     { label: '文字装飾', query: '文字装飾' },
     { label: '韓国風', query: '韓国' },
     { label: 'キラキラ', query: 'キラキラ' },
-    { label: '星', query: '星' },
+    { label: '星 絵文字 コピペ', query: '星 絵文字 コピペ' },
     { label: '星 コピペ', query: '星 コピペ' },
+    { label: '星', query: '星' },
     { label: 'ライン', query: 'ライン' },
     { label: '丸数字', query: '丸数字 コピペ' },
     { label: '括弧', query: '括弧' },
@@ -180,6 +181,8 @@ window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
     tags.add('星絵文字');
     tags.add('星 絵文字');
     tags.add('星 絵文字 コピペ');
+    tags.add('星特殊文字');
+    tags.add('星 特殊文字');
     tags.add('キラキラ特殊文字');
   }
   if (item.category === 'number' || tags.has('数字')) {
