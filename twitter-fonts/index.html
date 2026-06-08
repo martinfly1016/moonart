@@ -93,6 +93,14 @@
     <main class="tf-wrap">
       <section class="tf-app" data-twitter-fonts-app aria-label="Twitterフォント変換ツール">
         <div class="tf-panel">
+          <div class="tf-quickstart" aria-label="使い方">
+            <p class="tf-quickstart-title">使い方は3ステップ</p>
+            <ol>
+              <li><strong>文字を入力</strong><span>名前や短い言葉を入れます。</span></li>
+              <li><strong>スタイルを選ぶ</strong><span>「名前に使う」か「Bioに追加」を押します。</span></li>
+              <li><strong>プレビューしてコピー</strong><span>右のXプロフィールを見て、Bioや全部をコピーします。</span></li>
+            </ol>
+          </div>
           <div class="tf-editor">
             <div class="tf-field">
               <label for="tf-text">変換する文字</label>
@@ -206,6 +214,10 @@
         copied: 'コピー済み',
         copiedToast: 'コピーしました',
         copy: 'コピー',
+        useName: '名前に使う',
+        addBio: 'Bioに追加',
+        nameApplied: '名前に入れました',
+        bioAdded: 'Bioに追加しました',
         chars: (value, limit) => `${value}/${limit}`,
         over: (value, limit) => `${value - limit}文字オーバー`
       }

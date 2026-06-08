@@ -8,6 +8,10 @@
     copied: 'Copied',
     copiedToast: 'Copied',
     copy: 'Copy',
+    useName: 'Use as name',
+    addBio: 'Add to bio',
+    nameApplied: 'Added to display name',
+    bioAdded: 'Added to bio',
     insert: 'Insert',
     apply: 'Use template',
     chars: (value, limit) => `${value}/${limit}`,
@@ -177,11 +181,11 @@
     track('twitter_fonts_copy', { copy_type: button?.dataset.copyType || 'unknown' });
   }
 
-  function flash(button) {
+  function flash(button, temporaryText = ui.copied) {
     if (!button) return;
     const original = button.dataset.originalText || button.textContent;
     button.dataset.originalText = original;
-    button.textContent = ui.copied;
+    button.textContent = temporaryText;
     button.classList.add('copied');
     window.clearTimeout(button.copyTimer);
     button.copyTimer = window.setTimeout(() => {
@@ -247,14 +251,43 @@
       meta.textContent = `${style.label} · ${style.note}`;
       main.append(output, meta);
 
+      const actionGroup = document.createElement('div');
+      actionGroup.className = 'tf-result-actions';
+
+      const useName = document.createElement('button');
+      useName.type = 'button';
+      useName.className = 'tf-btn primary';
+      useName.dataset.copyType = 'use_name';
+      useName.textContent = ui.useName;
+      useName.addEventListener('click', () => {
+        nameInput.value = value;
+        updatePreview();
+        flash(useName, ui.nameApplied);
+        showToast(ui.nameApplied);
+        track('twitter_fonts_use_name', { style_id: style.id });
+      });
+
+      const addBio = document.createElement('button');
+      addBio.type = 'button';
+      addBio.className = 'tf-btn accent';
+      addBio.dataset.copyType = 'add_bio';
+      addBio.textContent = ui.addBio;
+      addBio.addEventListener('click', () => {
+        insertIntoBio(value, { silentFocus: true });
+        flash(addBio, ui.bioAdded);
+        showToast(ui.bioAdded);
+        track('twitter_fonts_add_bio_style', { style_id: style.id });
+      });
+
       const copy = document.createElement('button');
       copy.type = 'button';
-      copy.className = 'tf-btn primary';
+      copy.className = 'tf-btn';
       copy.dataset.copyType = 'font_style';
       copy.textContent = ui.copy;
       copy.addEventListener('click', () => copyText(value, copy));
+      actionGroup.append(useName, addBio, copy);
 
-      row.append(main, copy);
+      row.append(main, actionGroup);
       resultsWrap.appendChild(row);
     });
   }
@@ -294,16 +327,21 @@
     });
   }
 
-  function insertIntoBio(value) {
+  function insertIntoBio(value, options = {}) {
     const start = bioInput.selectionStart || bioInput.value.length;
     const end = bioInput.selectionEnd || bioInput.value.length;
     const prefix = bioInput.value.slice(0, start);
     const suffix = bioInput.value.slice(end);
-    const spacer = prefix && !prefix.endsWith(' ') && value.length <= 4 ? ' ' : '';
-    bioInput.value = `${prefix}${spacer}${value}${suffix}`;
-    bioInput.focus();
+    const spacer = prefix && !prefix.endsWith(' ') ? ' ' : '';
+    const tailSpacer = suffix && !suffix.startsWith(' ') ? ' ' : '';
+    bioInput.value = `${prefix}${spacer}${value}${tailSpacer}${suffix}`;
+    if (!options.silentFocus) bioInput.focus();
     const next = prefix.length + spacer.length + value.length;
-    bioInput.setSelectionRange(next, next);
+    try {
+      bioInput.setSelectionRange(next, next);
+    } catch (error) {
+      // Some mobile browsers do not allow selection changes unless focused.
+    }
     updatePreview();
     track('twitter_fonts_insert', { insert_value: value });
   }
