@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twitterフォント変換 | Xプロフィールのおしゃれ文字・特殊文字をコピペ - MojiMoon</title>
-  <meta name="description" content="Twitterフォント変換とXプロフィール作成ツール。おしゃれ文字、特殊文字、絵文字、区切り線を入れて、名前や自己紹介を160文字以内でプレビューしながらコピーできます。">
+  <title>Twitterフォント変換 | Xの表示名・Bioをおしゃれにコピペ - MojiMoon</title>
+  <meta name="description" content="Twitter/Xの表示名とBioを別々に作れるフォント変換ツール。おしゃれ文字、特殊文字、絵文字、区切り線、Bioテンプレートをプレビューしながらコピーできます。">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://mojimoon.com/twitter-fonts/">
   <link rel="alternate" hreflang="ja" href="https://mojimoon.com/twitter-fonts/">
@@ -13,7 +13,7 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/moon_icon.png">
   <meta property="og:title" content="Twitterフォント変換 | MojiMoon">
-  <meta property="og:description" content="Xプロフィール用のおしゃれ文字、特殊文字、絵文字、区切り線を作ってコピーできます。">
+  <meta property="og:description" content="Xの表示名とBioを別々に整えて、おしゃれ文字・特殊文字・絵文字をプレビューしながらコピーできます。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mojimoon.com/twitter-fonts/">
   <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
@@ -27,7 +27,7 @@
     "operatingSystem": "All",
     "inLanguage": "ja",
     "isAccessibleForFree": true,
-    "description": "Twitter/Xの名前、プロフィール、投稿に使えるUnicodeフォント、特殊文字、絵文字装飾をコピーできる無料ツールです。"
+    "description": "Twitter/Xの表示名とBioを別々に作り、Unicodeフォント、特殊文字、絵文字装飾をコピーできる無料ツールです。"
   }
   </script>
   <script src="/assets/js/analytics.js" defer></script>
@@ -67,13 +67,13 @@
       <div class="hero-inner">
         <div>
           <p class="eyebrow">Twitter Fonts / X Profile Decorator</p>
-          <h1>Twitterフォント変換で、Xプロフィールをおしゃれに。</h1>
-          <p class="hero-copy">名前や自己紹介を、おしゃれ文字・特殊文字・絵文字・区切り線で整えてコピー。160文字のXプロフィールをプレビューしながら作れます。</p>
+          <h1>Twitterフォント変換で、Xの表示名とBioを別々に作る。</h1>
+          <p class="hero-copy">表示名タブで名前を目立たせ、Bioタブで自己紹介を装飾。特殊文字・絵文字・テンプレートを使いながら、Xプロフィールをプレビューしてコピーできます。</p>
           <div class="hero-badges" aria-label="主な機能">
-            <span>Twitterフォント</span>
+            <span>表示名フォント</span>
+            <span>Bioテンプレート</span>
             <span>160文字プレビュー</span>
             <span>特殊文字コピペ</span>
-            <span>絵文字コンボ</span>
           </div>
         </div>
         <div class="hero-phone" aria-hidden="true">
@@ -167,22 +167,48 @@
 
     <section class="tf-section">
       <h2>Twitterフォント変換とは</h2>
-      <p>Twitterフォント変換は、普通の文字をUnicodeのおしゃれ文字に変換して、X/Twitterの名前・プロフィール・投稿に貼り付けられるツールです。フォントファイルではなくテキストなので、コピーしてそのまま使えます。</p>
+      <p>Twitterフォント変換は、普通の文字をUnicodeのおしゃれ文字に変換して、X/Twitterの表示名・Bio・投稿に貼り付けられるツールです。フォントファイルではなくテキストなので、コピーしてそのまま使えます。</p>
+      <p>MojiMoonでは、表示名とBioを同じ画面で混ぜず、2つのタブに分けています。名前を短く目立たせたい時と、Bioを読みやすく飾りたい時では、必要な文字スタイルやテンプレートが違うためです。</p>
       <div class="tf-grid">
-        <div class="tf-info-card"><strong>名前を目立たせる</strong><p>小さい文字、太字、筆記体風、全角文字で表示名を整えます。</p></div>
-        <div class="tf-info-card"><strong>プロフィールを飾る</strong><p>ハート、星、リボン、区切り線、絵文字コンボをBioに追加できます。</p></div>
-        <div class="tf-info-card"><strong>160文字を確認</strong><p>Xのプロフィール向けに文字数を見ながら、短く読みやすく調整できます。</p></div>
+        <div class="tf-info-card"><strong>表示名を作る</strong><p>小さい文字、太字、筆記体風、全角文字で短い名前を目立たせます。</p></div>
+        <div class="tf-info-card"><strong>Bioを作る</strong><p>ハート、星、リボン、区切り線、絵文字、テンプレートで自己紹介を整えます。</p></div>
+        <div class="tf-info-card"><strong>プレビューしてコピー</strong><p>ユーザー名と一緒に見た目を確認し、表示名・Bio・全文をコピーできます。</p></div>
       </div>
+      <h2>使い方</h2>
+      <ol class="tf-steps">
+        <li><strong>表示名タブを選ぶ</strong><span>名前にしたい文字を入力し、気に入ったTwitterフォントを表示名に適用します。</span></li>
+        <li><strong>Bioタブを選ぶ</strong><span>自己紹介を書き、特殊文字・絵文字・Bioテンプレートで読みやすく装飾します。</span></li>
+        <li><strong>右側のプレビューを見る</strong><span>ユーザー名はプレビュー用に編集できます。最後に名前、Bio、または全文をコピーします。</span></li>
+      </ol>
       <h2>Xプロフィールをおしゃれにするコツ</h2>
-      <p>名前は短く、プロフィールは1つのテーマに絞ると読みやすくなります。推し活ならリボンやハート、クリエイターなら星や区切り線、ゲーム用なら太字や小さい文字を使うと、雰囲気が伝わりやすくなります。</p>
+      <p>表示名は短く、Bioは1つのテーマに絞ると読みやすくなります。推し活ならリボンやハート、クリエイターなら星や区切り線、ゲーム用なら太字や小さい文字を使うと、雰囲気が伝わりやすくなります。</p>
+      <div class="tf-faq">
+        <h2>よくある質問</h2>
+        <details>
+          <summary>このTwitterフォントはXでも使えますか？</summary>
+          <p>はい。出力はUnicode文字なので、X/Twitterの表示名、Bio、投稿、プロフィール文にコピーして使えます。</p>
+        </details>
+        <details>
+          <summary>ユーザー名にもおしゃれ文字を使えますか？</summary>
+          <p>Xのユーザー名（@から始まるID）は英数字などに制限されるため、フォント変換の対象ではありません。このページではプレビュー用にだけ編集できます。</p>
+        </details>
+        <details>
+          <summary>Bioは160文字以内にする必要がありますか？</summary>
+          <p>XのBioは短く読みやすいほど伝わりやすくなります。このツールでは160文字を目安に、文字数を見ながら調整できます。</p>
+        </details>
+        <details>
+          <summary>一部の文字が四角や空白に見えるのはなぜですか？</summary>
+          <p>端末やアプリが一部のUnicode文字に対応していない場合があります。表示が崩れる時は、太字、全角、小さい文字など読みやすいスタイルを選んでください。</p>
+        </details>
+      </div>
     </section>
 
     <section class="related-tools">
       <h2>関連ツール</h2>
       <div class="related-grid">
-        <a class="related-card" href="/fancy-text-generator/"><strong>おしゃれ文字変換</strong><span>もっと多くのUnicode文字スタイル。</span></a>
-        <a class="related-card" href="/special-characters/"><strong>特殊文字コピペ</strong><span>ハート、星、矢印、ラインをコピー。</span></a>
-        <a class="related-card" href="/emoji-combinations/"><strong>絵文字組み合わせ</strong><span>プロフィールに使える絵文字セット。</span></a>
+        <a class="related-card" href="/fancy-text-generator/"><strong>おしゃれ文字変換</strong><span>表示名や投稿に使えるUnicode文字をさらに探す。</span></a>
+        <a class="related-card" href="/special-characters/"><strong>特殊文字コピペ</strong><span>Bioに使うハート、星、矢印、区切り線を追加。</span></a>
+        <a class="related-card" href="/emoji-combinations/"><strong>絵文字組み合わせ</strong><span>プロフィールの雰囲気に合う絵文字セットを探す。</span></a>
       </div>
     </section>
 
@@ -207,7 +233,6 @@
           help: '上の表示名をもとに変換しています。好きなスタイルを選ぶと表示名へ反映されます。',
           apply: '表示名に適用',
           applied: '表示名に入れました',
-          secondary: 'Bioにも追加',
           insertHelp: 'クリックで表示名に追加'
         },
         bio: {
@@ -216,7 +241,6 @@
           help: '上のBioをもとに変換しています。短いBioなら置き換え、長いBioなら装飾だけ追加するのがおすすめです。',
           apply: 'Bioに適用',
           applied: 'Bioに入れました',
-          secondary: 'Bioに追加',
           insertHelp: 'クリックでBioに追加'
         }
       },

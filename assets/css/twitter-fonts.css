@@ -731,6 +731,61 @@
   margin: 8px 0 0;
 }
 
+.tf-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.tf-steps li,
+.tf-faq details {
+  border: 1px solid var(--tf-line);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+
+.tf-steps li {
+  padding: 16px;
+}
+
+.tf-steps strong,
+.tf-steps span {
+  display: block;
+}
+
+.tf-steps strong,
+.tf-faq summary {
+  color: var(--tf-ink);
+  font-weight: 950;
+}
+
+.tf-steps span {
+  margin-top: 8px;
+  color: var(--tf-muted);
+  line-height: 1.65;
+}
+
+.tf-faq {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.tf-faq details {
+  padding: 14px 16px;
+}
+
+.tf-faq summary {
+  cursor: pointer;
+}
+
+.tf-faq p {
+  margin: 10px 0 0;
+}
+
 .tf-toast {
   position: fixed;
   left: 50%;
@@ -770,6 +825,10 @@
   }
 
   .tf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tf-steps {
     grid-template-columns: 1fr;
   }
 }
