@@ -94,35 +94,31 @@
       <section class="tf-app" data-twitter-fonts-app aria-label="Twitterフォント変換ツール">
         <div class="tf-panel">
           <div class="tf-quickstart" aria-label="使い方">
-            <p class="tf-quickstart-title">入力するのは基本この1つだけ</p>
+            <p class="tf-quickstart-title">編集したい欄をクリックすると、下のメニューが切り替わります</p>
             <ol>
-              <li><strong>文字を入力</strong><span>まず一番上の欄に名前や短い言葉を入れます。</span></li>
-              <li><strong>スタイルを選ぶ</strong><span>「名前に使う」か「Bioに追加」を押します。</span></li>
-              <li><strong>プレビューしてコピー</strong><span>必要なら下の「プレビューを編集」を開きます。</span></li>
+              <li><strong>表示名をクリック</strong><span>下に名前用のTwitterフォントが出ます。</span></li>
+              <li><strong>Bioをクリック</strong><span>下にBio用の装飾・テンプレートが出ます。</span></li>
+              <li><strong>適用してコピー</strong><span>右のプレビューを見てコピーします。</span></li>
             </ol>
           </div>
           <div class="tf-editor">
-            <div class="tf-field">
-              <label for="tf-text">1. 変換したい文字</label>
-              <input id="tf-text" data-tf-text type="text" maxlength="80" value="Moon girl" placeholder="名前や短いフレーズ">
-              <div class="tf-field-meta"><span>ここだけ入力すれば使えます。下のスタイルを選ぶとプレビューに入ります。</span></div>
+            <div class="tf-field tf-edit-field is-active" data-tf-edit-field="name">
+              <label for="tf-name">1. Xの表示名</label>
+              <input id="tf-name" data-tf-name data-tf-edit-source="name" type="text" maxlength="50" value="Moon girl" placeholder="表示名">
+              <div class="tf-field-meta"><span>この欄を選ぶと、下に表示名向けのフォントが出ます。</span></div>
+            </div>
+            <div class="tf-field tf-edit-field" data-tf-edit-field="bio">
+              <label for="tf-bio">2. プロフィール Bio</label>
+              <textarea id="tf-bio" data-tf-bio data-tf-edit-source="bio" maxlength="220">୨୧ 推しと月とかわいい文字 ୨୧
+♡ fonts / emoji / profile deco ♡</textarea>
+              <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
             </div>
             <details class="tf-advanced">
-              <summary>任意：プレビューを編集する</summary>
-              <p>この3項目は必須ではありません。スタイルカードの「名前に使う」「Bioに追加」を押すと自動で入ります。</p>
-              <div class="tf-field">
-                <label for="tf-name">Xの表示名</label>
-                <input id="tf-name" data-tf-name type="text" maxlength="50" value="Ｍｏｏｎ 𝒈𝒊𝒓𝒍" placeholder="表示名">
-              </div>
+              <summary>任意：ユーザー名を編集する</summary>
+              <p>フォント変換の対象ではありません。プレビュー用に変えたい場合だけ入力します。</p>
               <div class="tf-field">
                 <label for="tf-handle">ユーザー名</label>
                 <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
-              </div>
-              <div class="tf-field">
-                <label for="tf-bio">プロフィール</label>
-                <textarea id="tf-bio" data-tf-bio maxlength="220">୨୧ 推しと月とかわいい文字 ୨୧
-♡ fonts / emoji / profile deco ♡</textarea>
-                <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
               </div>
             </details>
             <div class="tf-actions">
@@ -132,11 +128,17 @@
             </div>
           </div>
 
+          <div class="tf-companion" data-tf-companion>
+            <span data-tf-context-kicker>表示名を編集中</span>
+            <h2 data-tf-context-title>表示名に使うTwitterフォント</h2>
+            <p data-tf-context-help>上の表示名をもとに変換しています。好きなスタイルを選ぶと表示名へ反映されます。</p>
+          </div>
+
           <div class="tf-tabs" data-tf-tabs></div>
           <div class="tf-results" data-tf-results></div>
 
           <div class="tf-block">
-            <div class="tf-block-head"><span class="tf-block-title">特殊文字・絵文字を挿入</span><span>クリックでBioに追加</span></div>
+            <div class="tf-block-head"><span class="tf-block-title">特殊文字・絵文字を挿入</span><span data-tf-insert-help>クリックで選択中の欄に追加</span></div>
             <div class="tf-inserts" data-tf-inserts></div>
           </div>
 
@@ -198,6 +200,24 @@
       defaultHandle: '@mojimoon',
       defaultBio: '୨୧ 推しと月とかわいい文字 ୨୧\n♡ fonts / emoji / profile deco ♡',
       countOk: '160文字以内',
+      fieldContext: {
+        name: {
+          kicker: '表示名を編集中',
+          title: '表示名に使うTwitterフォント',
+          help: '上の表示名をもとに変換しています。好きなスタイルを選ぶと表示名へ反映されます。',
+          apply: '表示名に適用',
+          applied: '表示名に入れました',
+          secondary: 'Bioにも追加'
+        },
+        bio: {
+          kicker: 'Bioを編集中',
+          title: 'Bioに使う装飾フォント',
+          help: '上のBioをもとに変換しています。短いBioなら置き換え、長いBioなら装飾だけ追加するのがおすすめです。',
+          apply: 'Bioを置き換え',
+          applied: 'Bioを置き換えました',
+          secondary: 'Bioに追加'
+        }
+      },
       tabs: [
         { id: 'popular', label: '人気' },
         { id: 'name', label: '名前向け' },

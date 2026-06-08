@@ -221,6 +221,34 @@
   gap: 7px;
 }
 
+.tf-edit-field {
+  position: relative;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: #fff;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.tf-edit-field.is-active {
+  border-color: #67e8f9;
+  background: #f8feff;
+  box-shadow: 0 0 0 4px rgba(103, 232, 249, 0.18);
+}
+
+.tf-edit-field.is-active::after {
+  content: "";
+  position: absolute;
+  left: 26px;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  background: #f8feff;
+  border-right: 1px solid #67e8f9;
+  border-bottom: 1px solid #67e8f9;
+  transform: rotate(45deg);
+}
+
 .tf-advanced {
   display: grid;
   gap: 12px;
@@ -299,6 +327,41 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 9px;
+}
+
+.tf-companion {
+  margin: 0;
+  padding: 15px 16px;
+  border-bottom: 1px solid var(--tf-line);
+  background:
+    linear-gradient(135deg, rgba(8, 145, 178, 0.1), rgba(245, 158, 11, 0.12)),
+    #fff;
+}
+
+.tf-companion span {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tf-companion h2 {
+  margin: 10px 0 5px;
+  color: var(--tf-ink);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+}
+
+.tf-companion p {
+  margin: 0;
+  color: var(--tf-muted);
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 750;
 }
 
 .tf-btn {

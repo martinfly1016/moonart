@@ -20,10 +20,15 @@
     ...(config.ui || {})
   };
 
-  const textInput = root.querySelector('[data-tf-text]');
   const nameInput = root.querySelector('[data-tf-name]');
   const handleInput = root.querySelector('[data-tf-handle]');
   const bioInput = root.querySelector('[data-tf-bio]');
+  const editFields = Array.from(root.querySelectorAll('[data-tf-edit-field]'));
+  const editSources = Array.from(root.querySelectorAll('[data-tf-edit-source]'));
+  const contextKicker = root.querySelector('[data-tf-context-kicker]');
+  const contextTitle = root.querySelector('[data-tf-context-title]');
+  const contextHelp = root.querySelector('[data-tf-context-help]');
+  const insertHelp = root.querySelector('[data-tf-insert-help]');
   const tabsWrap = root.querySelector('[data-tf-tabs]');
   const resultsWrap = root.querySelector('[data-tf-results]');
   const insertsWrap = root.querySelector('[data-tf-inserts]');
@@ -34,7 +39,8 @@
   const bioCount = root.querySelector('[data-tf-bio-count]');
   const weightedCount = root.querySelector('[data-tf-weighted-count]');
   const toast = document.querySelector('[data-tf-toast]');
-  let activeTab = 'popular';
+  let activeField = 'name';
+  let activeTab = 'name';
 
   const tabs = config.tabs || [
     { id: 'popular', label: 'Popular' },
@@ -46,6 +52,27 @@
 
   const inserts = config.inserts || [];
   const templates = config.templates || [];
+  const fieldContext = {
+    name: {
+      kicker: 'Editing display name',
+      title: 'Twitter fonts for your display name',
+      help: 'The styles below are generated from the active display-name field.',
+      apply: ui.useName,
+      applied: ui.nameApplied,
+      secondary: ui.addBio,
+      insertHelp: 'Click to add to display name'
+    },
+    bio: {
+      kicker: 'Editing bio',
+      title: 'Decorations for your bio',
+      help: 'The styles below are generated from the active bio field.',
+      apply: 'Replace bio',
+      applied: 'Bio replaced',
+      secondary: ui.addBio,
+      insertHelp: 'Click to add to bio'
+    },
+    ...(config.fieldContext || {})
+  };
 
   const superscriptMap = {
     A: 'ᴬ', B: 'ᴮ', C: 'ᶜ', D: 'ᴰ', E: 'ᴱ', F: 'ᶠ', G: 'ᴳ', H: 'ᴴ', I: 'ᴵ', J: 'ᴶ', K: 'ᴷ', L: 'ᴸ', M: 'ᴹ',
@@ -224,8 +251,38 @@
     });
   }
 
+  function activeInput() {
+    return activeField === 'bio' ? bioInput : nameInput;
+  }
+
+  function fieldDefaultText() {
+    return activeField === 'bio'
+      ? (config.defaultBio || 'soft fonts')
+      : (config.defaultName || config.fallbackText || 'Moon girl');
+  }
+
+  function setActiveField(field, options = {}) {
+    activeField = field === 'bio' ? 'bio' : 'name';
+    if (!options.keepTab) activeTab = activeField;
+    editFields.forEach((item) => {
+      item.classList.toggle('is-active', item.dataset.tfEditField === activeField);
+    });
+    updateContext();
+    renderTabs();
+    renderResults();
+  }
+
+  function updateContext() {
+    const context = fieldContext[activeField] || fieldContext.name;
+    if (contextKicker) contextKicker.textContent = context.kicker;
+    if (contextTitle) contextTitle.textContent = context.title;
+    if (contextHelp) contextHelp.textContent = context.help;
+    if (insertHelp) insertHelp.textContent = context.insertHelp || context.secondary || '';
+  }
+
   function renderResults() {
-    const source = textInput.value.trim() || nameInput.value.trim() || config.fallbackText || 'Moon girl';
+    const source = activeInput().value.trim() || fieldDefaultText();
+    const context = fieldContext[activeField] || fieldContext.name;
     const seen = new Set();
     const rows = styles
       .filter((style) => style.tabs.includes(activeTab))
@@ -257,26 +314,25 @@
       const useName = document.createElement('button');
       useName.type = 'button';
       useName.className = 'tf-btn primary';
-      useName.dataset.copyType = 'use_name';
-      useName.textContent = ui.useName;
+      useName.dataset.copyType = `apply_${activeField}`;
+      useName.textContent = context.apply;
       useName.addEventListener('click', () => {
-        nameInput.value = value;
-        updatePreview();
-        flash(useName, ui.nameApplied);
-        showToast(ui.nameApplied);
-        track('twitter_fonts_use_name', { style_id: style.id });
+        applyToActiveField(value);
+        flash(useName, context.applied);
+        showToast(context.applied);
+        track('twitter_fonts_apply_style', { style_id: style.id, field: activeField });
       });
 
       const addBio = document.createElement('button');
       addBio.type = 'button';
       addBio.className = 'tf-btn accent';
-      addBio.dataset.copyType = 'add_bio';
-      addBio.textContent = ui.addBio;
+      addBio.dataset.copyType = activeField === 'bio' ? 'append_bio' : 'also_add_bio';
+      addBio.textContent = context.secondary;
       addBio.addEventListener('click', () => {
-        insertIntoBio(value, { silentFocus: true });
+        insertIntoField('bio', value, { silentFocus: true });
         flash(addBio, ui.bioAdded);
         showToast(ui.bioAdded);
-        track('twitter_fonts_add_bio_style', { style_id: style.id });
+        track('twitter_fonts_add_bio_style', { style_id: style.id, from_field: activeField });
       });
 
       const copy = document.createElement('button');
@@ -302,7 +358,7 @@
         button.type = 'button';
         button.className = 'tf-chip';
         button.textContent = item;
-        button.addEventListener('click', () => insertIntoBio(item));
+        button.addEventListener('click', () => insertIntoField(activeField, item));
         block.appendChild(button);
       });
       insertsWrap.appendChild(block);
@@ -319,7 +375,7 @@
       button.addEventListener('click', () => {
         nameInput.value = template.displayName || nameInput.value;
         bioInput.value = template.bio;
-        textInput.value = template.displayName || template.name;
+        setActiveField('bio');
         updateAll();
         track('twitter_fonts_template', { template: template.id || template.name });
       });
@@ -327,18 +383,28 @@
     });
   }
 
-  function insertIntoBio(value, options = {}) {
-    const start = bioInput.selectionStart || bioInput.value.length;
-    const end = bioInput.selectionEnd || bioInput.value.length;
-    const prefix = bioInput.value.slice(0, start);
-    const suffix = bioInput.value.slice(end);
+  function applyToActiveField(value) {
+    if (activeField === 'bio') {
+      bioInput.value = value;
+    } else {
+      nameInput.value = value;
+    }
+    updatePreview();
+  }
+
+  function insertIntoField(field, value, options = {}) {
+    const input = field === 'bio' ? bioInput : nameInput;
+    const start = input.selectionStart || input.value.length;
+    const end = input.selectionEnd || input.value.length;
+    const prefix = input.value.slice(0, start);
+    const suffix = input.value.slice(end);
     const spacer = prefix && !prefix.endsWith(' ') ? ' ' : '';
     const tailSpacer = suffix && !suffix.startsWith(' ') ? ' ' : '';
-    bioInput.value = `${prefix}${spacer}${value}${tailSpacer}${suffix}`;
-    if (!options.silentFocus) bioInput.focus();
+    input.value = `${prefix}${spacer}${value}${tailSpacer}${suffix}`;
+    if (!options.silentFocus) input.focus();
     const next = prefix.length + spacer.length + value.length;
     try {
-      bioInput.setSelectionRange(next, next);
+      input.setSelectionRange(next, next);
     } catch (error) {
       // Some mobile browsers do not allow selection changes unless focused.
     }
@@ -369,8 +435,7 @@
     const tabButton = event.target.closest('[data-tab]');
     if (tabButton) {
       activeTab = tabButton.dataset.tab;
-      renderTabs();
-      renderResults();
+      setActiveField(activeField, { keepTab: true });
     }
     const copyButton = event.target.closest('[data-copy-action]');
     if (copyButton) {
@@ -385,10 +450,15 @@
     }
   });
 
-  [textInput, nameInput, bioInput, handleInput].forEach((input) => {
+  editSources.forEach((input) => {
+    input.addEventListener('focus', () => setActiveField(input.dataset.tfEditSource));
+  });
+
+  [nameInput, bioInput, handleInput].forEach((input) => {
     input.addEventListener('input', updateAll);
   });
 
+  updateContext();
   renderTabs();
   renderInserts();
   renderTemplates();
