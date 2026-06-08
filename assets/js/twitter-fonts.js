@@ -54,7 +54,7 @@
 
   const inserts = config.inserts || [];
   const templates = config.templates || [];
-  const fieldContext = {
+  const fieldContextBase = {
     name: {
       kicker: 'Editing display name',
       title: 'Twitter fonts for your display name',
@@ -72,8 +72,12 @@
       applied: 'Bio replaced',
       secondary: ui.addBio,
       insertHelp: 'Click to add to bio'
-    },
-    ...(config.fieldContext || {})
+    }
+  };
+  const fieldContextOverrides = config.fieldContext || {};
+  const fieldContext = {
+    name: { ...fieldContextBase.name, ...(fieldContextOverrides.name || {}) },
+    bio: { ...fieldContextBase.bio, ...(fieldContextOverrides.bio || {}) }
   };
 
   const superscriptMap = {
@@ -344,25 +348,7 @@
         track('twitter_fonts_apply_style', { style_id: style.id, field: activeField });
       });
 
-      const addBio = document.createElement('button');
-      addBio.type = 'button';
-      addBio.className = 'tf-btn accent';
-      addBio.dataset.copyType = activeField === 'bio' ? 'append_bio' : 'also_add_bio';
-      addBio.textContent = context.secondary;
-      addBio.addEventListener('click', () => {
-        insertIntoField('bio', value, { silentFocus: true });
-        flash(addBio, ui.bioAdded);
-        showToast(ui.bioAdded);
-        track('twitter_fonts_add_bio_style', { style_id: style.id, from_field: activeField });
-      });
-
-      const copy = document.createElement('button');
-      copy.type = 'button';
-      copy.className = 'tf-btn';
-      copy.dataset.copyType = 'font_style';
-      copy.textContent = ui.copy;
-      copy.addEventListener('click', () => copyText(value, copy));
-      actionGroup.append(useName, addBio, copy);
+      actionGroup.append(useName);
 
       row.append(main, actionGroup);
       resultsWrap.appendChild(row);
