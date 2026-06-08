@@ -94,38 +94,33 @@
       <section class="tf-app" data-twitter-fonts-app aria-label="Twitterフォント変換ツール">
         <div class="tf-panel">
           <div class="tf-quickstart" aria-label="使い方">
-            <p class="tf-quickstart-title">編集したい欄をクリックすると、下のメニューが切り替わります</p>
+            <p class="tf-quickstart-title">まず作りたい場所を選びます。表示名とBioは別々に編集できます。</p>
             <ol>
-              <li><strong>表示名をクリック</strong><span>下に名前用のTwitterフォントが出ます。</span></li>
-              <li><strong>Bioをクリック</strong><span>下にBio用の装飾・テンプレートが出ます。</span></li>
-              <li><strong>適用してコピー</strong><span>右のプレビューを見てコピーします。</span></li>
+              <li><strong>表示名タブ</strong><span>名前だけをTwitterフォントに変換します。</span></li>
+              <li><strong>Bioタブ</strong><span>自己紹介だけを装飾・テンプレートで整えます。</span></li>
+              <li><strong>プレビュー</strong><span>ユーザー名は右下で別に編集します。</span></li>
             </ol>
           </div>
+          <div class="tf-work-tabs" role="tablist" aria-label="編集する場所">
+            <button class="tf-work-tab active" type="button" role="tab" aria-selected="true" data-tf-work-tab="name">表示名を作る</button>
+            <button class="tf-work-tab" type="button" role="tab" aria-selected="false" data-tf-work-tab="bio">Bioを作る</button>
+          </div>
           <div class="tf-editor">
-            <div class="tf-field tf-edit-field" data-tf-edit-field="name">
-              <label for="tf-name">1. Xの表示名</label>
-              <input id="tf-name" data-tf-name data-tf-edit-source="name" type="text" maxlength="50" value="Moon girl" placeholder="表示名">
-              <div class="tf-field-meta"><span>この欄を選ぶと、下に表示名向けのフォントが出ます。</span></div>
-            </div>
-            <div class="tf-field tf-edit-field" data-tf-edit-field="bio">
-              <label for="tf-bio">2. プロフィール Bio</label>
-              <textarea id="tf-bio" data-tf-bio data-tf-edit-source="bio" maxlength="220">୨୧ 推しと月とかわいい文字 ୨୧
-♡ fonts / emoji / profile deco ♡</textarea>
-              <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
-            </div>
-            <details class="tf-advanced">
-              <summary>任意：ユーザー名を編集する</summary>
-              <p>フォント変換の対象ではありません。プレビュー用に変えたい場合だけ入力します。</p>
-              <div class="tf-field">
-                <label for="tf-handle">ユーザー名</label>
-                <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
+            <section class="tf-work-panel active" data-tf-work-panel="name" role="tabpanel">
+              <div class="tf-field tf-edit-field is-active" data-tf-edit-field="name">
+                <label for="tf-name">表示名にしたい文字</label>
+                <input id="tf-name" data-tf-name data-tf-edit-source="name" type="text" maxlength="50" value="Moon girl" placeholder="表示名">
+                <div class="tf-field-meta"><span>下の候補は、この表示名だけを変換します。</span></div>
               </div>
-            </details>
-            <div class="tf-actions">
-              <button class="tf-btn primary" type="button" data-copy-action="bio">Bioをコピー</button>
-              <button class="tf-btn accent" type="button" data-copy-action="name">名前をコピー</button>
-              <button class="tf-btn" type="button" data-copy-action="full">全部コピー</button>
-            </div>
+            </section>
+            <section class="tf-work-panel" data-tf-work-panel="bio" role="tabpanel" hidden>
+              <div class="tf-field tf-edit-field" data-tf-edit-field="bio">
+                <label for="tf-bio">Bioに入れたい文章</label>
+                <textarea id="tf-bio" data-tf-bio data-tf-edit-source="bio" maxlength="220">୨୧ 推しと月とかわいい文字 ୨୧
+♡ fonts / emoji / profile deco ♡</textarea>
+                <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
+              </div>
+            </section>
           </div>
 
           <div class="tf-companion" data-tf-companion>
@@ -142,7 +137,7 @@
             <div class="tf-inserts" data-tf-inserts></div>
           </div>
 
-          <div class="tf-block">
+          <div class="tf-block" data-tf-bio-only>
             <div class="tf-block-head"><span class="tf-block-title">プロフィールテンプレート</span><span>選んで編集</span></div>
             <div class="tf-templates" data-tf-templates></div>
           </div>
@@ -157,7 +152,12 @@
             <p class="tf-preview-bio" data-tf-preview-bio></p>
             <div class="tf-preview-meta"><span>📍 Profile preview</span><span>✨ Copy ready</span></div>
           </div>
+          <div class="tf-preview-handle-editor">
+            <label for="tf-handle">プレビュー用ユーザー名</label>
+            <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
+          </div>
           <div class="tf-preview-copy">
+            <button class="tf-btn accent" type="button" data-copy-action="name">名前をコピー</button>
             <button class="tf-btn primary" type="button" data-copy-action="bio">Bioをコピー</button>
             <button class="tf-btn" type="button" data-copy-action="full">全部コピー</button>
           </div>

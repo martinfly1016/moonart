@@ -23,6 +23,8 @@
   const nameInput = root.querySelector('[data-tf-name]');
   const handleInput = root.querySelector('[data-tf-handle]');
   const bioInput = root.querySelector('[data-tf-bio]');
+  const workTabs = Array.from(root.querySelectorAll('[data-tf-work-tab]'));
+  const workPanels = Array.from(root.querySelectorAll('[data-tf-work-panel]'));
   const editFields = Array.from(root.querySelectorAll('[data-tf-edit-field]'));
   const editSources = Array.from(root.querySelectorAll('[data-tf-edit-source]'));
   const contextKicker = root.querySelector('[data-tf-context-kicker]');
@@ -39,8 +41,8 @@
   const bioCount = root.querySelector('[data-tf-bio-count]');
   const weightedCount = root.querySelector('[data-tf-weighted-count]');
   const toast = document.querySelector('[data-tf-toast]');
-  let activeField = null;
-  let activeTab = null;
+  let activeField = 'name';
+  let activeTab = 'name';
 
   const tabs = config.tabs || [
     { id: 'popular', label: 'Popular' },
@@ -240,7 +242,9 @@
 
   function renderTabs() {
     tabsWrap.innerHTML = '';
-    tabs.forEach((tab) => {
+    tabs
+      .filter((tab) => tab.id !== (activeField === 'bio' ? 'name' : 'bio'))
+      .forEach((tab) => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = `tf-tab${tab.id === activeTab ? ' active' : ''}`;
@@ -265,19 +269,24 @@
     activeField = field === 'bio' ? 'bio' : 'name';
     if (!options.keepTab) activeTab = activeField;
     root.classList.add('tools-open');
+    root.classList.toggle('is-editing-name', activeField === 'name');
+    root.classList.toggle('is-editing-bio', activeField === 'bio');
+    workTabs.forEach((tab) => {
+      const isActive = tab.dataset.tfWorkTab === activeField;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', String(isActive));
+    });
+    workPanels.forEach((panel) => {
+      const isActive = panel.dataset.tfWorkPanel === activeField;
+      panel.classList.toggle('active', isActive);
+      panel.hidden = !isActive;
+    });
     editFields.forEach((item) => {
       item.classList.toggle('is-active', item.dataset.tfEditField === activeField);
     });
     updateContext();
     renderTabs();
     renderResults();
-  }
-
-  function closeTools() {
-    activeField = null;
-    activeTab = null;
-    root.classList.remove('tools-open');
-    editFields.forEach((item) => item.classList.remove('is-active'));
   }
 
   function updateContext() {
@@ -449,6 +458,11 @@
       activeTab = tabButton.dataset.tab;
       setActiveField(activeField, { keepTab: true });
     }
+    const workButton = event.target.closest('[data-tf-work-tab]');
+    if (workButton) {
+      setActiveField(workButton.dataset.tfWorkTab);
+      activeInput().focus();
+    }
     const copyButton = event.target.closest('[data-copy-action]');
     if (copyButton) {
       const action = copyButton.dataset.copyAction;
@@ -466,23 +480,12 @@
     input.addEventListener('focus', () => setActiveField(input.dataset.tfEditSource));
   });
 
-  if (handleInput) {
-    handleInput.addEventListener('focus', closeTools);
-  }
-
-  document.addEventListener('pointerdown', (event) => {
-    if (event.target.closest('[data-tf-edit-source]')) return;
-    if (root.classList.contains('tools-open') && event.target.closest('.tf-companion, .tf-tabs, .tf-results, .tf-block, .tf-actions')) return;
-    closeTools();
-  });
-
   [nameInput, bioInput, handleInput].forEach((input) => {
     input.addEventListener('input', updateAll);
   });
 
-  updateContext();
-  renderTabs();
   renderInserts();
   renderTemplates();
+  setActiveField(activeField);
   updatePreview();
 })();
