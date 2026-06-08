@@ -221,6 +221,37 @@
   gap: 7px;
 }
 
+.tf-advanced {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--tf-line);
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.tf-advanced[open] {
+  background: #fff;
+}
+
+.tf-advanced summary {
+  color: var(--tf-ink);
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.tf-advanced p {
+  margin: 2px 0 10px;
+  color: var(--tf-muted);
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 750;
+}
+
+.tf-advanced .tf-field + .tf-field {
+  margin-top: 10px;
+}
+
 .tf-field label,
 .tf-block-title {
   color: var(--tf-ink);

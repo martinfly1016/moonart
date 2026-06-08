@@ -92,33 +92,37 @@
       <section class="tf-app" data-twitter-fonts-app aria-label="Twitter fonts and X bio maker">
         <div class="tf-panel">
           <div class="tf-quickstart" aria-label="How to use">
-            <p class="tf-quickstart-title">Use it in 3 steps</p>
+            <p class="tf-quickstart-title">You only need the first box</p>
             <ol>
-              <li><strong>Type text</strong><span>Enter your name or a short phrase.</span></li>
+              <li><strong>Type text</strong><span>Start with your name or a short phrase in the first box.</span></li>
               <li><strong>Pick a style</strong><span>Choose “Use as name” or “Add to bio”.</span></li>
-              <li><strong>Preview and copy</strong><span>Check the X profile preview, then copy your bio or full profile.</span></li>
+              <li><strong>Preview and copy</strong><span>Open “Edit preview” only if you want fine control.</span></li>
             </ol>
           </div>
           <div class="tf-editor">
             <div class="tf-field">
-              <label for="tf-text">Text to convert</label>
+              <label for="tf-text">1. Text to style</label>
               <input id="tf-text" data-tf-text type="text" maxlength="80" value="Moon girl" placeholder="Type a name or short phrase">
-              <div class="tf-field-meta"><span>Used for the Twitter font styles below</span></div>
+              <div class="tf-field-meta"><span>This is the only required field. Pick a style below to place it into the preview.</span></div>
             </div>
-            <div class="tf-field">
-              <label for="tf-name">Display name</label>
-              <input id="tf-name" data-tf-name type="text" maxlength="50" value="Ｍｏｏｎ 𝒈𝒊𝒓𝒍" placeholder="Display name">
-            </div>
-            <div class="tf-field">
-              <label for="tf-handle">Handle</label>
-              <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
-            </div>
-            <div class="tf-field">
-              <label for="tf-bio">Bio</label>
-              <textarea id="tf-bio" data-tf-bio maxlength="220">୨୧ soft fonts + tiny tools ୨୧
+            <details class="tf-advanced">
+              <summary>Optional: edit preview details</summary>
+              <p>These fields are not required. The “Use as name” and “Add to bio” buttons fill them for you.</p>
+              <div class="tf-field">
+                <label for="tf-name">Display name</label>
+                <input id="tf-name" data-tf-name type="text" maxlength="50" value="Ｍｏｏｎ 𝒈𝒊𝒓𝒍" placeholder="Display name">
+              </div>
+              <div class="tf-field">
+                <label for="tf-handle">Handle</label>
+                <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
+              </div>
+              <div class="tf-field">
+                <label for="tf-bio">Bio</label>
+                <textarea id="tf-bio" data-tf-bio maxlength="220">୨୧ soft fonts + tiny tools ୨୧
 ♡ bios / emoji / profile deco ♡</textarea>
-              <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
-            </div>
+                <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
+              </div>
+            </details>
             <div class="tf-actions">
               <button class="tf-btn primary" type="button" data-copy-action="bio">Copy bio</button>
               <button class="tf-btn accent" type="button" data-copy-action="name">Copy name</button>

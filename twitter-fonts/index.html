@@ -94,33 +94,37 @@
       <section class="tf-app" data-twitter-fonts-app aria-label="Twitterフォント変換ツール">
         <div class="tf-panel">
           <div class="tf-quickstart" aria-label="使い方">
-            <p class="tf-quickstart-title">使い方は3ステップ</p>
+            <p class="tf-quickstart-title">入力するのは基本この1つだけ</p>
             <ol>
-              <li><strong>文字を入力</strong><span>名前や短い言葉を入れます。</span></li>
+              <li><strong>文字を入力</strong><span>まず一番上の欄に名前や短い言葉を入れます。</span></li>
               <li><strong>スタイルを選ぶ</strong><span>「名前に使う」か「Bioに追加」を押します。</span></li>
-              <li><strong>プレビューしてコピー</strong><span>右のXプロフィールを見て、Bioや全部をコピーします。</span></li>
+              <li><strong>プレビューしてコピー</strong><span>必要なら下の「プレビューを編集」を開きます。</span></li>
             </ol>
           </div>
           <div class="tf-editor">
             <div class="tf-field">
-              <label for="tf-text">変換する文字</label>
+              <label for="tf-text">1. 変換したい文字</label>
               <input id="tf-text" data-tf-text type="text" maxlength="80" value="Moon girl" placeholder="名前や短いフレーズ">
-              <div class="tf-field-meta"><span>下のTwitterフォントに反映されます</span></div>
+              <div class="tf-field-meta"><span>ここだけ入力すれば使えます。下のスタイルを選ぶとプレビューに入ります。</span></div>
             </div>
-            <div class="tf-field">
-              <label for="tf-name">Xの表示名</label>
-              <input id="tf-name" data-tf-name type="text" maxlength="50" value="Ｍｏｏｎ 𝒈𝒊𝒓𝒍" placeholder="表示名">
-            </div>
-            <div class="tf-field">
-              <label for="tf-handle">ユーザー名</label>
-              <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
-            </div>
-            <div class="tf-field">
-              <label for="tf-bio">プロフィール</label>
-              <textarea id="tf-bio" data-tf-bio maxlength="220">୨୧ 推しと月とかわいい文字 ୨୧
+            <details class="tf-advanced">
+              <summary>任意：プレビューを編集する</summary>
+              <p>この3項目は必須ではありません。スタイルカードの「名前に使う」「Bioに追加」を押すと自動で入ります。</p>
+              <div class="tf-field">
+                <label for="tf-name">Xの表示名</label>
+                <input id="tf-name" data-tf-name type="text" maxlength="50" value="Ｍｏｏｎ 𝒈𝒊𝒓𝒍" placeholder="表示名">
+              </div>
+              <div class="tf-field">
+                <label for="tf-handle">ユーザー名</label>
+                <input id="tf-handle" data-tf-handle type="text" maxlength="30" value="@mojimoon" placeholder="@username">
+              </div>
+              <div class="tf-field">
+                <label for="tf-bio">プロフィール</label>
+                <textarea id="tf-bio" data-tf-bio maxlength="220">୨୧ 推しと月とかわいい文字 ୨୧
 ♡ fonts / emoji / profile deco ♡</textarea>
-              <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
-            </div>
+                <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
+              </div>
+            </details>
             <div class="tf-actions">
               <button class="tf-btn primary" type="button" data-copy-action="bio">Bioをコピー</button>
               <button class="tf-btn accent" type="button" data-copy-action="name">名前をコピー</button>
