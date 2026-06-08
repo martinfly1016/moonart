@@ -43,6 +43,7 @@
   const toast = document.querySelector('[data-tf-toast]');
   let activeField = 'name';
   let activeTab = 'name';
+  const inputTrackTimers = {};
 
   const tabs = config.tabs || [
     { id: 'popular', label: 'Popular' },
@@ -211,7 +212,10 @@
     }
     flash(button);
     showToast(ui.copiedToast);
-    track('twitter_fonts_copy', { copy_type: button?.dataset.copyType || 'unknown' });
+    track('twitter_fonts_copy', {
+      copy_type: button?.dataset.copyType || 'unknown',
+      output_length: Array.from(text).length
+    });
   }
 
   function flash(button, temporaryText = ui.copied) {
@@ -236,12 +240,31 @@
   }
 
   function track(name, params = {}) {
-    if (typeof window.gtag !== 'function') return;
+    const cleanParams = Object.fromEntries(
+      Object.entries(params).filter(([, value]) => value !== undefined)
+    );
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () {
+      window.dataLayer.push(arguments);
+    };
     window.gtag('event', name, {
+      event_category: 'twitter_fonts',
       tool_slug: config.slug || 'twitter-fonts',
       page_path: window.location.pathname,
-      ...params
+      ...cleanParams
     });
+  }
+
+  function trackInput(field) {
+    const input = field === 'bio' ? bioInput : field === 'handle' ? handleInput : nameInput;
+    window.clearTimeout(inputTrackTimers[field]);
+    inputTrackTimers[field] = window.setTimeout(() => {
+      track(field === 'handle' ? 'twitter_fonts_handle_edit' : 'twitter_fonts_input', {
+        field,
+        input_length: Array.from(input.value.trim()).length,
+        bio_weighted_length: field === 'bio' ? weightedLength(input.value.trim()) : undefined
+      });
+    }, 900);
   }
 
   function renderTabs() {
@@ -345,7 +368,13 @@
         applyToActiveField(value);
         flash(useName, context.applied);
         showToast(context.applied);
-        track('twitter_fonts_apply_style', { style_id: style.id, field: activeField });
+        track('twitter_fonts_apply_style', {
+          style_id: style.id,
+          field: activeField,
+          style_tab: activeTab,
+          source_length: Array.from(source).length,
+          output_length: Array.from(value).length
+        });
       });
 
       actionGroup.append(useName);
@@ -365,7 +394,7 @@
         button.type = 'button';
         button.className = 'tf-chip';
         button.textContent = item;
-        button.addEventListener('click', () => insertIntoField(activeField, item));
+        button.addEventListener('click', () => insertIntoField(activeField, item, { insertGroup: group.label || 'unknown' }));
         block.appendChild(button);
       });
       insertsWrap.appendChild(block);
@@ -384,7 +413,11 @@
         bioInput.value = template.bio;
         setActiveField('bio');
         updateAll();
-        track('twitter_fonts_template', { template: template.id || template.name });
+        track('twitter_fonts_template', {
+          template: template.id || template.name,
+          name_length: Array.from(nameInput.value.trim()).length,
+          bio_weighted_length: weightedLength(bioInput.value.trim())
+        });
       });
       templatesWrap.appendChild(button);
     });
@@ -416,7 +449,12 @@
       // Some mobile browsers do not allow selection changes unless focused.
     }
     updatePreview();
-    track('twitter_fonts_insert', { insert_value: value });
+    track('twitter_fonts_insert', {
+      field,
+      insert_group: options.insertGroup || 'unknown',
+      insert_value: value,
+      input_length: Array.from(input.value.trim()).length
+    });
   }
 
   function updatePreview() {
@@ -443,11 +481,16 @@
     if (tabButton) {
       activeTab = tabButton.dataset.tab;
       setActiveField(activeField, { keepTab: true });
+      track('twitter_fonts_style_category_select', {
+        field: activeField,
+        style_tab: activeTab
+      });
     }
     const workButton = event.target.closest('[data-tf-work-tab]');
     if (workButton) {
       setActiveField(workButton.dataset.tfWorkTab);
       activeInput().focus();
+      track('twitter_fonts_workspace_select', { field: activeField });
     }
     const copyButton = event.target.closest('[data-copy-action]');
     if (copyButton) {
@@ -466,8 +509,19 @@
     input.addEventListener('focus', () => setActiveField(input.dataset.tfEditSource));
   });
 
-  [nameInput, bioInput, handleInput].forEach((input) => {
-    input.addEventListener('input', updateAll);
+  nameInput.addEventListener('input', () => {
+    updateAll();
+    trackInput('name');
+  });
+
+  bioInput.addEventListener('input', () => {
+    updateAll();
+    trackInput('bio');
+  });
+
+  handleInput.addEventListener('input', () => {
+    updateAll();
+    trackInput('handle');
   });
 
   renderInserts();
