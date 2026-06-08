@@ -329,6 +329,29 @@
   gap: 9px;
 }
 
+.tf-app:not(.tools-open) .tf-actions,
+.tf-app:not(.tools-open) .tf-companion,
+.tf-app:not(.tools-open) .tf-tabs,
+.tf-app:not(.tools-open) .tf-results,
+.tf-app:not(.tools-open) .tf-block {
+  display: none;
+}
+
+.tf-app.tools-open .tf-companion {
+  animation: tfCompanionIn 0.14s ease-out;
+}
+
+@keyframes tfCompanionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .tf-companion {
   margin: 0;
   padding: 15px 16px;

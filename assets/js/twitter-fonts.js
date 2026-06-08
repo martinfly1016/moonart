@@ -39,8 +39,8 @@
   const bioCount = root.querySelector('[data-tf-bio-count]');
   const weightedCount = root.querySelector('[data-tf-weighted-count]');
   const toast = document.querySelector('[data-tf-toast]');
-  let activeField = 'name';
-  let activeTab = 'name';
+  let activeField = null;
+  let activeTab = null;
 
   const tabs = config.tabs || [
     { id: 'popular', label: 'Popular' },
@@ -264,12 +264,20 @@
   function setActiveField(field, options = {}) {
     activeField = field === 'bio' ? 'bio' : 'name';
     if (!options.keepTab) activeTab = activeField;
+    root.classList.add('tools-open');
     editFields.forEach((item) => {
       item.classList.toggle('is-active', item.dataset.tfEditField === activeField);
     });
     updateContext();
     renderTabs();
     renderResults();
+  }
+
+  function closeTools() {
+    activeField = null;
+    activeTab = null;
+    root.classList.remove('tools-open');
+    editFields.forEach((item) => item.classList.remove('is-active'));
   }
 
   function updateContext() {
@@ -281,6 +289,10 @@
   }
 
   function renderResults() {
+    if (!activeField) {
+      resultsWrap.innerHTML = '';
+      return;
+    }
     const source = activeInput().value.trim() || fieldDefaultText();
     const context = fieldContext[activeField] || fieldContext.name;
     const seen = new Set();
@@ -454,6 +466,16 @@
     input.addEventListener('focus', () => setActiveField(input.dataset.tfEditSource));
   });
 
+  if (handleInput) {
+    handleInput.addEventListener('focus', closeTools);
+  }
+
+  document.addEventListener('pointerdown', (event) => {
+    if (event.target.closest('[data-tf-edit-source]')) return;
+    if (root.classList.contains('tools-open') && event.target.closest('.tf-companion, .tf-tabs, .tf-results, .tf-block, .tf-actions')) return;
+    closeTools();
+  });
+
   [nameInput, bioInput, handleInput].forEach((input) => {
     input.addEventListener('input', updateAll);
   });
@@ -462,5 +484,5 @@
   renderTabs();
   renderInserts();
   renderTemplates();
-  updateAll();
+  updatePreview();
 })();
