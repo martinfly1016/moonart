@@ -287,14 +287,96 @@ function renderSeoSection(page) {
   const paragraphs = (seo.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('');
   const sections = (seo.sections || []).map(renderSeoSubsection).join('');
   const links = seo.links?.length ? `<div class="category-links">${seo.links.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>` : '';
+  const enrichment = renderGeneratedEnrichment(page);
   const faq = page.faq?.length ? `<h2>FAQ</h2>${page.faq.map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join('')}` : '';
-  return `<section class="seo-section"><h2>${escapeHtml(seo.heading || `${page.h1}の使い方`)}</h2>${paragraphs}${sections}${links}${faq}</section>`;
+  return `<section class="seo-section"><h2>${escapeHtml(seo.heading || `${page.h1}の使い方`)}</h2>${paragraphs}${sections}${enrichment}${links}${faq}</section>`;
 }
 
 function renderSeoSubsection(section) {
   const paragraphs = (section.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('');
   const cards = section.cards?.length ? `<div class="seo-grid">${section.cards.map((card) => `<div class="seo-card"><strong>${escapeHtml(card.title)}</strong><p>${escapeHtml(card.body)}</p></div>`).join('')}</div>` : '';
   return `<h2>${escapeHtml(section.heading)}</h2>${paragraphs}${cards}`;
+}
+
+function renderGeneratedEnrichment(page) {
+  return `${renderContentInventory(page)}${renderSearchGuide(page)}${renderRelatedGuide(page)}`;
+}
+
+function renderContentInventory(page) {
+  const groups = page.itemGroups
+    .map((group) => {
+      const category = page.categories.find((item) => item.id === group.category);
+      const title = category?.label || group.label || group.category;
+      const examples = group.items
+        .slice(0, 4)
+        .map((item) => (typeof item === 'string' ? item : item.value))
+        .filter(Boolean);
+      if (!examples.length) return null;
+      return {
+        title,
+        body: `${examples.join('、')} など。${inventoryBody(page, title)}`
+      };
+    })
+    .filter(Boolean)
+    .slice(0, 4);
+
+  if (!groups.length) return '';
+  return `<h2>${escapeHtml(page.h1)}で探せる素材</h2><div class="seo-grid">${groups.map((card) => `<div class="seo-card"><strong>${escapeHtml(card.title)}</strong><p>${escapeHtml(card.body)}</p></div>`).join('')}</div>`;
+}
+
+function inventoryBody(page, title) {
+  const unit = familyUnit(page.family);
+  if (page.family === 'emoji-combinations') {
+    return `${title}の雰囲気をそろえた${unit}を、プロフィールや投稿文にそのまま足せます。`;
+  }
+  if (page.family === 'special-characters') {
+    return `${title}の見た目に近い${unit}を、名前デコや区切り線に使いやすい形でまとめています。`;
+  }
+  if (page.family === 'kawaii-copy') {
+    return `${title}向けの${unit}を、自己紹介や推し活プロフィールに貼りやすい短さで選べます。`;
+  }
+  return `${title}の気分に近い${unit}を、LINE返信やSNS投稿の文末に合わせて選べます。`;
+}
+
+function renderSearchGuide(page) {
+  const filters = (page.quickFilters || []).slice(0, 5);
+  if (!filters.length) return '';
+  const filterText = filters.map((filter) => filter.label).join('、');
+  const examples = filters.slice(0, 3).map((filter) => ({
+    title: filter.label,
+    body: `検索欄に「${filter.query || filter.label}」と入れると、${searchBody(page, filter.label)}に近い素材へ絞り込めます。`
+  }));
+  return `<h2>検索するときのコツ</h2><p>${escapeHtml(page.h1)}は、${escapeHtml(filterText)}などの言葉で絞り込めます。最初は広い言葉で探し、気に入った素材をコピー草稿に入れてから、短い言葉や別の${escapeHtml(familyUnit(page.family))}を足すと整えやすくなります。</p><div class="seo-grid">${examples.map((card) => `<div class="seo-card"><strong>${escapeHtml(card.title)}</strong><p>${escapeHtml(card.body)}</p></div>`).join('')}</div>`;
+}
+
+function searchBody(page, label) {
+  if (page.family === 'kaomoji') return `${label}の表情や返信の温度感`;
+  if (page.family === 'emoji-copy') return `${label}の場面で使いやすい単体絵文字`;
+  if (page.family === 'emoji-combinations') return `${label}の雰囲気を作る短い組み合わせ`;
+  if (page.family === 'special-characters') return `${label}に合う記号や装飾文字`;
+  return `${label}に合わせたプロフィール用コピペ`;
+}
+
+function renderRelatedGuide(page) {
+  const related = (page.related || []).slice(0, 3);
+  if (!related.length) return '';
+  return `<h2>似た素材との使い分け</h2><div class="seo-grid">${related.map((item) => `<div class="seo-card"><strong><a href="${escapeAttr(item.href)}">${escapeHtml(item.title)}</a></strong><p>${escapeHtml(relatedBody(page, item))}</p></div>`).join('')}</div>`;
+}
+
+function relatedBody(page, item) {
+  const currentUnit = familyUnit(page.family);
+  const description = item.description ? `${item.description} ` : '';
+  return `${description}${page.h1}で合う${currentUnit}が見つからない時や、少し違う雰囲気に寄せたい時に使えます。`;
+}
+
+function familyUnit(family) {
+  return {
+    kaomoji: '顔文字',
+    'emoji-copy': '絵文字',
+    'emoji-combinations': '絵文字組み合わせ',
+    'special-characters': '特殊文字',
+    'kawaii-copy': 'コピペ素材'
+  }[family] || '素材';
 }
 
 function renderRelated(page) {
