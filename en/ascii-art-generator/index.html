@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Art Generator | Text and Image to ASCII - MojiMoon</title>
+  <meta name="description" content="Free ASCII Art Generator for text and images. Convert words or uploaded images into copyable ASCII art, adjust width, charset, invert, contrast, then copy or download as TXT.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/en/ascii-art-generator/">
+  <link rel="alternate" hreflang="ja" href="https://mojimoon.com/ascii-art-generator/">
+  <link rel="alternate" hreflang="en" href="https://mojimoon.com/en/ascii-art-generator/">
+  <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/ascii-art-generator/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="ASCII Art Generator | MojiMoon">
+  <meta property="og:description" content="Turn text or images into copyable ASCII art and download the result as TXT.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/en/ascii-art-generator/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ASCII Art Generator",
+    "url": "https://mojimoon.com/en/ascii-art-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "description": "A free tool that converts text and uploaded images into copyable ASCII art."
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
+  <link rel="stylesheet" href="/assets/css/ascii-art-generator.css">
+  <script src="/assets/js/site-navigation.js" defer></script>
+</head>
+<body class="ascii-body">
+  <div class="tool-shell ascii-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/index_en.html"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+          <a class="header-lang-switch" href="/ascii-art-generator/">日本語</a>
+        </div>
+        <nav class="site-nav" aria-label="MojiMoon text tools">
+<a href="/index_en.html">Moon Text</a>
+<a href="/en/fancy-text-generator/">Fancy Text</a>
+<a href="/en/twitter-fonts/">Twitter Fonts</a>
+<a href="/en/ascii-art-generator/" aria-current="page">ASCII</a>
+<details class="nav-menu nav-menu-wide">
+<summary>Copy</summary>
+<div class="nav-menu-panel">
+<a href="/en/emoji-copy/">Emoji Copy</a>
+<a href="/en/special-characters/">Special Characters</a>
+<a href="/en/emoji-combinations/">Emoji Combos</a>
+</div>
+</details>
+<a href="/en/slack-emoji-generator/">Slack</a>
+</nav>
+      </div>
+    </header>
+
+    <section class="hero ascii-hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">ASCII Art Generator</p>
+          <h1>Convert text and images into copyable ASCII art.</h1>
+          <p class="hero-copy">Make large ASCII letters from short text, or upload an image and turn it into symbol-based text art. Adjust width, character set, invert, contrast, then copy or download the result.</p>
+          <div class="ascii-badges" aria-label="Main features">
+            <span>Text to ASCII</span>
+            <span>Image to ASCII</span>
+            <span>Copy</span>
+            <span>Download .txt</span>
+          </div>
+        </div>
+        <div class="ascii-hero-card" aria-hidden="true">
+<pre>##   ##   ####   ####  ##
+### ###  ##  ##   ##   ##
+## # ##  ##  ##   ##   ##
+##   ##  ##  ##   ##   ##
+##   ##   ####   ####  ####</pre>
+        </div>
+      </div>
+    </section>
+
+    <main class="ascii-wrap">
+      <section class="ascii-app" data-ascii-art-generator aria-label="ASCII Art Generator">
+        <div class="ascii-controls">
+          <div class="ascii-tabs" role="tablist" aria-label="Generator mode">
+            <button class="ascii-tab active" type="button" role="tab" aria-selected="true" data-ascii-mode="text">Text to ASCII</button>
+            <button class="ascii-tab" type="button" role="tab" aria-selected="false" data-ascii-mode="image">Image to ASCII</button>
+          </div>
+
+          <div class="ascii-panel active" data-ascii-panel="text" role="tabpanel">
+            <div class="ascii-field">
+              <label for="ascii-text">Text to convert</label>
+              <textarea id="ascii-text" data-ascii-text rows="5" maxlength="40">MOJI MOON</textarea>
+            </div>
+            <div class="ascii-samples" aria-label="Samples">
+              <button type="button" data-ascii-sample="MOJI MOON">MOJI MOON</button>
+              <button type="button" data-ascii-sample="LOVE 123">LOVE 123</button>
+              <button type="button" data-ascii-sample="HELLO">HELLO</button>
+              <button type="button" data-ascii-sample="ASCII">ASCII</button>
+            </div>
+          </div>
+
+          <div class="ascii-panel" data-ascii-panel="image" role="tabpanel" hidden>
+            <div class="ascii-field">
+              <label for="ascii-image">Upload image</label>
+              <input id="ascii-image" data-ascii-image type="file" accept="image/*">
+            </div>
+            <p class="ascii-card">Images are processed locally in your browser and are not uploaded to a server.</p>
+          </div>
+
+          <div class="ascii-option-grid">
+            <div class="ascii-field">
+              <label class="ascii-range-label" for="ascii-width"><span>Output width</span><span><span data-ascii-width-value>80</span> columns</span></label>
+              <input id="ascii-width" data-ascii-width type="range" min="32" max="120" value="80">
+            </div>
+            <div class="ascii-field">
+              <label for="ascii-charset">Character set</label>
+              <select id="ascii-charset" data-ascii-charset>
+                <option value="standard">Standard @%#*+=-:.</option>
+                <option value="blocks">Block █▓▒░</option>
+                <option value="clean">Clean #*+=-:.</option>
+                <option value="dense">Dense detail</option>
+              </select>
+            </div>
+            <div class="ascii-field">
+              <label class="ascii-range-label" for="ascii-contrast"><span>Contrast</span><span data-ascii-contrast-value>10%</span></label>
+              <input id="ascii-contrast" data-ascii-contrast type="range" min="-40" max="80" value="10">
+            </div>
+            <label class="ascii-check"><input type="checkbox" data-ascii-invert> Invert brightness</label>
+          </div>
+        </div>
+
+        <div class="ascii-output-card">
+          <div class="ascii-output-head">
+            <div class="ascii-output-title">
+              <h2>ASCII output</h2>
+              <span data-ascii-output-meta>0 lines · 0 columns</span>
+            </div>
+            <div class="ascii-actions">
+              <button class="ascii-btn primary" type="button" data-copy-ascii>Copy</button>
+              <button class="ascii-btn" type="button" data-download-ascii>Save TXT</button>
+            </div>
+          </div>
+          <div class="ascii-pre-wrap">
+            <pre class="ascii-output" data-ascii-output></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="ascii-section">
+      <h2>ASCII art for copy and paste</h2>
+      <p>This ASCII Art Generator turns short text or uploaded images into text art made from symbols. Because the result is plain text, you can copy it into README files, social posts, chat messages, profile bios, notes, and code comments.</p>
+      <div class="ascii-grid">
+        <div class="ascii-card"><strong>Text to ASCII</strong><p>Turn names, labels, and short headings into block-style ASCII letters.</p></div>
+        <div class="ascii-card"><strong>Image to ASCII</strong><p>Convert image brightness into symbol density for a monochrome text-art effect.</p></div>
+        <div class="ascii-card"><strong>Copy or download</strong><p>Copy the output instantly or save it as a plain text file.</p></div>
+      </div>
+
+      <h2>How to get cleaner results</h2>
+      <p>For image-to-ASCII, use images with clear contrast and a simple subject. Icons, logos, silhouettes, and strong illustrations usually work better than busy photos with many tiny details.</p>
+
+      <h2>FAQ</h2>
+      <h3>Are uploaded images saved?</h3>
+      <p>No. The image conversion runs inside your browser. MojiMoon does not upload the image to a server.</p>
+      <h3>Can I use this in GitHub README files?</h3>
+      <p>Yes. Copy the output and place it inside a code block so spacing stays aligned.</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>Related tools</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/en/fancy-text-generator/"><strong>Fancy Text Generator</strong><span>Convert names and bios into Unicode styles.</span></a>
+        <a class="related-card" href="/en/twitter-fonts/"><strong>Twitter Fonts</strong><span>Preview X bios and count characters.</span></a>
+        <a class="related-card" href="/en/special-characters/"><strong>Special Characters</strong><span>Copy symbols, stars, arrows, and dividers.</span></a>
+        <a class="related-card" href="/en/emoji-combinations/"><strong>Emoji Combos</strong><span>Find emoji sets for posts and profiles.</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - Free tools for text, emoji, kaomoji, and symbols.</p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script>
+    window.MojiMoonAsciiArtConfig = {
+      lang: 'en',
+      slug: 'ascii-art-generator-en',
+      defaultText: 'MOJI MOON'
+    };
+  </script>
+  <script src="/assets/js/ascii-art-generator.js"></script>
+</body>
+</html>

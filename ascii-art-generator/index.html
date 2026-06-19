@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Art Generator | アスキーアート変換・画像を文字に変換 - MojiMoon</title>
+  <meta name="description" content="ASCII Art Generator。文字や画像をアスキーアートに変換してコピー・ダウンロードできる無料ツール。幅、文字セット、反転、コントラストを調整できます。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/ascii-art-generator/">
+  <link rel="alternate" hreflang="ja" href="https://mojimoon.com/ascii-art-generator/">
+  <link rel="alternate" hreflang="en" href="https://mojimoon.com/en/ascii-art-generator/">
+  <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/ascii-art-generator/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="ASCII Art Generator | MojiMoon">
+  <meta property="og:description" content="文字や画像をアスキーアートに変換して、コピー・ダウンロードできます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/ascii-art-generator/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ASCII Art Generator",
+    "url": "https://mojimoon.com/ascii-art-generator/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "description": "文字や画像をアスキーアートに変換してコピー・ダウンロードできる無料ツールです。"
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
+  <link rel="stylesheet" href="/assets/css/ascii-art-generator.css">
+  <script src="/assets/js/site-navigation.js" defer></script>
+</head>
+<body class="ascii-body">
+  <div class="tool-shell ascii-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+          <a class="header-lang-switch" href="/en/ascii-art-generator/">English</a>
+        </div>
+        <nav class="site-nav" aria-label="文字ツール">
+<a href="/">月文字</a>
+<a href="/fancy-text-generator/">おしゃれ文字</a>
+<a href="/twitter-fonts/">Twitterフォント</a>
+<a href="/ascii-art-generator/" aria-current="page">ASCII</a>
+<a href="/zenkaku-hankaku-converter/">全角半角変換</a>
+<details class="nav-menu nav-menu-wide">
+<summary>コピペ</summary>
+<div class="nav-menu-panel">
+<a href="/kawaii-copy/">かわいいコピペ</a>
+<a href="/emoji-copy/">絵文字コピペ</a>
+<a href="/special-characters/">特殊文字</a>
+<a href="/emoji-combinations/">絵文字組み合わせ</a>
+</div>
+</details>
+</nav>
+      </div>
+    </header>
+
+    <section class="hero ascii-hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">ASCII Art Generator</p>
+          <h1>文字と画像を、コピーできるアスキーアートに変換。</h1>
+          <p class="hero-copy">テキストを大きなASCII文字に変換し、画像を記号だけのアートに変換できます。幅、文字セット、反転、コントラストを調整して、SNS、README、チャット、プロフィールに貼り付けられます。</p>
+          <div class="ascii-badges" aria-label="主な機能">
+            <span>Text to ASCII</span>
+            <span>Image to ASCII</span>
+            <span>Copy</span>
+            <span>Download .txt</span>
+          </div>
+        </div>
+        <div class="ascii-hero-card" aria-hidden="true">
+<pre>##   ##   ####   ####  ##
+### ###  ##  ##   ##   ##
+## # ##  ##  ##   ##   ##
+##   ##  ##  ##   ##   ##
+##   ##   ####   ####  ####</pre>
+        </div>
+      </div>
+    </section>
+
+    <main class="ascii-wrap">
+      <section class="ascii-app" data-ascii-art-generator aria-label="ASCII Art Generator">
+        <div class="ascii-controls">
+          <div class="ascii-tabs" role="tablist" aria-label="変換モード">
+            <button class="ascii-tab active" type="button" role="tab" aria-selected="true" data-ascii-mode="text">文字から作る</button>
+            <button class="ascii-tab" type="button" role="tab" aria-selected="false" data-ascii-mode="image">画像から作る</button>
+          </div>
+
+          <div class="ascii-panel active" data-ascii-panel="text" role="tabpanel">
+            <div class="ascii-field">
+              <label for="ascii-text">ASCIIにしたい文字</label>
+              <textarea id="ascii-text" data-ascii-text rows="5" maxlength="40">MOJI MOON</textarea>
+            </div>
+            <div class="ascii-samples" aria-label="サンプル">
+              <button type="button" data-ascii-sample="MOJI MOON">MOJI MOON</button>
+              <button type="button" data-ascii-sample="LOVE 123">LOVE 123</button>
+              <button type="button" data-ascii-sample="HELLO">HELLO</button>
+              <button type="button" data-ascii-sample="ASCII">ASCII</button>
+            </div>
+          </div>
+
+          <div class="ascii-panel" data-ascii-panel="image" role="tabpanel" hidden>
+            <div class="ascii-field">
+              <label for="ascii-image">画像をアップロード</label>
+              <input id="ascii-image" data-ascii-image type="file" accept="image/*">
+            </div>
+            <p class="ascii-card">画像はブラウザ内だけで処理されます。サーバーには送信されません。</p>
+          </div>
+
+          <div class="ascii-option-grid">
+            <div class="ascii-field">
+              <label class="ascii-range-label" for="ascii-width"><span>出力幅</span><span><span data-ascii-width-value>80</span> columns</span></label>
+              <input id="ascii-width" data-ascii-width type="range" min="32" max="120" value="80">
+            </div>
+            <div class="ascii-field">
+              <label for="ascii-charset">文字セット</label>
+              <select id="ascii-charset" data-ascii-charset>
+                <option value="standard">Standard @%#*+=-:.</option>
+                <option value="blocks">Block █▓▒░</option>
+                <option value="clean">Clean #*+=-:.</option>
+                <option value="dense">Dense detail</option>
+              </select>
+            </div>
+            <div class="ascii-field">
+              <label class="ascii-range-label" for="ascii-contrast"><span>コントラスト</span><span data-ascii-contrast-value>10%</span></label>
+              <input id="ascii-contrast" data-ascii-contrast type="range" min="-40" max="80" value="10">
+            </div>
+            <label class="ascii-check"><input type="checkbox" data-ascii-invert> 明暗を反転</label>
+          </div>
+        </div>
+
+        <div class="ascii-output-card">
+          <div class="ascii-output-head">
+            <div class="ascii-output-title">
+              <h2>変換結果</h2>
+              <span data-ascii-output-meta>0 lines · 0 columns</span>
+            </div>
+            <div class="ascii-actions">
+              <button class="ascii-btn primary" type="button" data-copy-ascii>コピー</button>
+              <button class="ascii-btn" type="button" data-download-ascii>TXT保存</button>
+            </div>
+          </div>
+          <div class="ascii-pre-wrap">
+            <pre class="ascii-output" data-ascii-output></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="ascii-section">
+      <h2>ASCII Art Generatorとは</h2>
+      <p>ASCII Art Generatorは、文字や画像を半角記号だけのアートに変換するツールです。画像として保存するのではなくテキストとしてコピーできるため、README、SNS投稿、チャット、プロフィール、メモにそのまま貼り付けられます。</p>
+      <div class="ascii-grid">
+        <div class="ascii-card"><strong>文字をASCIIアートに変換</strong><p>短い名前、ロゴ、見出しを大きなブロック文字に変換できます。</p></div>
+        <div class="ascii-card"><strong>画像をASCIIに変換</strong><p>画像の明るさを読み取り、記号の密度でモノクロ風のテキストアートにします。</p></div>
+        <div class="ascii-card"><strong>コピー・TXT保存</strong><p>出力をそのままコピーしたり、テキストファイルとして保存できます。</p></div>
+      </div>
+
+      <h2>きれいに変換するコツ</h2>
+      <p>画像から作る場合は、背景と被写体のコントラストが強い画像が向いています。細かい写真より、アイコン、ロゴ、シルエット、はっきりしたイラストのほうが読みやすいASCIIアートになります。</p>
+
+      <h2>よくある質問</h2>
+      <h3>アップロードした画像は保存されますか？</h3>
+      <p>いいえ。画像の変換処理はブラウザ内で完結します。MojiMoonのサーバーへ画像を送信しません。</p>
+      <h3>日本語の文字を大きなASCII文字にできますか？</h3>
+      <p>大きなブロック文字変換は英数字が中心です。日本語を装飾したい場合は<a href="/fancy-text-generator/">おしゃれ文字変換</a>や<a href="/special-characters/">特殊文字コピペ</a>も使えます。</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/fancy-text-generator/"><strong>おしゃれ文字変換</strong><span>名前やBioをUnicode文字に変換。</span></a>
+        <a class="related-card" href="/twitter-fonts/"><strong>Twitterフォント</strong><span>Xプロフィールと文字数を確認。</span></a>
+        <a class="related-card" href="/special-characters/"><strong>特殊文字コピペ</strong><span>記号、ライン、星、ハートをコピー。</span></a>
+        <a class="related-card" href="/emoji-combinations/"><strong>絵文字組み合わせ</strong><span>プロフィールや投稿に使う絵文字セット。</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script>
+    window.MojiMoonAsciiArtConfig = {
+      lang: 'ja',
+      slug: 'ascii-art-generator-ja',
+      defaultText: 'MOJI MOON',
+      meta: (lines, columns) => `${lines}行 · ${columns}列`,
+      ui: {
+        copied: 'コピー済み',
+        copiedToast: 'コピーしました',
+        imageReady: '画像を読み込みました',
+        imageMissing: '画像をアップロードするとASCIIアートに変換できます。'
+      }
+    };
+  </script>
+  <script src="/assets/js/ascii-art-generator.js"></script>
+</body>
+</html>
