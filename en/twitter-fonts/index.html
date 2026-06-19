@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twitter Fonts Generator | X Display Name and Bio Decorator - MojiMoon</title>
-  <meta name="description" content="Create Twitter fonts for X display names and bios in separate workspaces. Add symbols, emoji, dividers, and bio templates, preview your profile, then copy instantly.">
+  <title>Twitter Fonts Generator and X Character Counter - MojiMoon</title>
+  <meta name="description" content="Create Twitter fonts for X display names and bios, decorate profiles with symbols and emoji, and count X bio 160-character or post 280-character limits before you copy.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://mojimoon.com/en/twitter-fonts/">
   <link rel="alternate" hreflang="ja" href="https://mojimoon.com/twitter-fonts/">
@@ -12,8 +12,8 @@
   <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/twitter-fonts/">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/moon_icon.png">
-  <meta property="og:title" content="Twitter Fonts for X Bios | MojiMoon">
-  <meta property="og:description" content="Make copy-and-paste Twitter fonts for X display names and bios, with symbols, emoji, templates, and profile preview.">
+  <meta property="og:title" content="Twitter Fonts and X Character Counter | MojiMoon">
+  <meta property="og:description" content="Make copy-and-paste Twitter fonts for X display names, bios, and posts with symbols, emoji, templates, profile preview, and character counting.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mojimoon.com/en/twitter-fonts/">
   <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
@@ -21,13 +21,13 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Twitter Fonts for X Bios",
+    "name": "Twitter Fonts and X Character Counter",
     "url": "https://mojimoon.com/en/twitter-fonts/",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "All",
     "inLanguage": "en",
     "isAccessibleForFree": true,
-    "description": "A free profile decorator that makes Twitter/X fonts for display names and bios in separate workspaces, with symbols, emoji, templates, and profile preview."
+    "description": "A free profile decorator that makes Twitter/X fonts for display names and bios, with symbols, emoji, templates, profile preview, and X bio/post character counting."
   }
   </script>
   <script src="/assets/js/analytics.js" defer></script>
@@ -66,11 +66,11 @@
         <div>
           <p class="eyebrow">Twitter Fonts / X Profile Decorator</p>
           <h1>Make Twitter fonts for your X display name and bio.</h1>
-          <p class="hero-copy">Use the name tab for short display-name styles and the bio tab for profile text, symbols, emoji, and templates. Preview the full X profile before you copy.</p>
+          <p class="hero-copy">Use the name tab for short display-name styles, the bio tab for profile text and templates, and the counter tab for X bio 160-character or post 280-character checks before you copy.</p>
           <div class="hero-badges" aria-label="Main features">
             <span>Display name fonts</span>
             <span>Bio templates</span>
-            <span>160-character bio preview</span>
+            <span>X character counter</span>
             <span>Symbols</span>
           </div>
         </div>
@@ -96,12 +96,13 @@
             <ol>
               <li><strong>Name tab</strong><span>Convert only the display name into Twitter fonts.</span></li>
               <li><strong>Bio tab</strong><span>Decorate only the bio with symbols and templates.</span></li>
-              <li><strong>Preview</strong><span>Edit the username separately under the preview.</span></li>
+              <li><strong>Counter tab</strong><span>Check X bio 160 and post 280 character limits.</span></li>
             </ol>
           </div>
           <div class="tf-work-tabs" role="tablist" aria-label="Choose editor">
             <button class="tf-work-tab active" type="button" role="tab" aria-selected="true" data-tf-work-tab="name">Make display name</button>
             <button class="tf-work-tab" type="button" role="tab" aria-selected="false" data-tf-work-tab="bio">Make bio</button>
+            <button class="tf-work-tab" type="button" role="tab" aria-selected="false" data-tf-work-tab="counter">Character counter</button>
           </div>
           <div class="tf-editor">
             <section class="tf-work-panel active" data-tf-work-panel="name" role="tabpanel">
@@ -119,23 +120,48 @@
                 <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
               </div>
             </section>
+            <section class="tf-work-panel" data-tf-work-panel="counter" role="tabpanel" hidden>
+              <div class="tf-counter-card">
+                <div class="tf-field tf-edit-field" data-tf-edit-field="counter">
+                  <label for="tf-counter">X post or bio text</label>
+                  <textarea id="tf-counter" data-tf-counter data-tf-edit-source="counter" maxlength="1200">Building a cleaner X profile today. Keep the text readable even with symbols and emoji ✨</textarea>
+                  <div class="tf-field-meta"><span data-tf-counter-weighted>0/280</span><span data-tf-counter-status>OK</span></div>
+                </div>
+                <div class="tf-counter-modes" aria-label="Counter target">
+                  <button class="active" type="button" data-tf-counter-mode="post">Post 280</button>
+                  <button type="button" data-tf-counter-mode="bio">Bio 160</button>
+                </div>
+                <div class="tf-counter-meter" aria-hidden="true"><span data-tf-counter-meter></span></div>
+                <div class="tf-counter-grid" aria-label="Character count details">
+                  <div><strong data-tf-counter-weight>0</strong><span>Estimated X count</span></div>
+                  <div><strong data-tf-counter-plain>0</strong><span>Plain characters</span></div>
+                  <div><strong data-tf-counter-remaining>280</strong><span>Remaining</span></div>
+                  <div><strong data-tf-counter-urls>0</strong><span>URLs</span></div>
+                </div>
+                <p class="tf-counter-note" data-tf-counter-note>URLs count as 23 characters each; emoji and CJK text are estimated with heavier weight.</p>
+                <div class="tf-counter-actions">
+                  <button class="tf-btn accent" type="button" data-counter-load-bio>Load bio</button>
+                  <button class="tf-btn primary" type="button" data-copy-action="counter">Copy text</button>
+                </div>
+              </div>
+            </section>
           </div>
 
-          <div class="tf-block">
+          <div class="tf-block" data-tf-font-tools>
             <div class="tf-block-head"><span class="tf-block-title">Insert symbols and emoji</span><span data-tf-insert-help>Click to add to the active field</span></div>
             <div class="tf-inserts" data-tf-inserts></div>
           </div>
 
-          <div class="tf-companion" data-tf-companion>
+          <div class="tf-companion" data-tf-companion data-tf-font-tools>
             <span data-tf-context-kicker>Editing display name</span>
             <h2 data-tf-context-title>Twitter fonts for your display name</h2>
             <p data-tf-context-help>The styles below are generated from the active display-name field. Pick one to apply it to the preview.</p>
           </div>
 
-          <div class="tf-tabs" data-tf-tabs></div>
-          <div class="tf-results" data-tf-results></div>
+          <div class="tf-tabs" data-tf-tabs data-tf-font-tools></div>
+          <div class="tf-results" data-tf-results data-tf-font-tools></div>
 
-          <div class="tf-block" data-tf-bio-only>
+          <div class="tf-block" data-tf-bio-only data-tf-font-tools>
             <div class="tf-block-head"><span class="tf-block-title">Bio templates</span><span>Pick, then edit</span></div>
             <div class="tf-templates" data-tf-templates></div>
           </div>
@@ -166,18 +192,21 @@
     <section class="tf-section">
       <h2>Twitter fonts for copy and paste</h2>
       <p>This Twitter fonts tool converts your own text into Unicode styles that can be pasted into X/Twitter display names, bios, posts, and captions. The output is text, not a font file, so you can copy it directly.</p>
+      <p>The X character counter helps you check a 160-character bio or a 280-character post before you paste. It estimates heavier weight for emoji, CJK text, and URLs so decorated text is less likely to run over the limit.</p>
       <p>MojiMoon separates display names and bios into two workspaces because they solve different jobs. A display name should be short and recognizable; a bio needs structure, symbols, and a clean preview before you paste it into X.</p>
       <div class="tf-grid">
         <div class="tf-info-card"><strong>Make a display name</strong><p>Use bold, small caps, script, fullwidth, and bubble letters for a short name that stands out.</p></div>
         <div class="tf-info-card"><strong>Decorate a bio</strong><p>Add hearts, stars, ribbons, dividers, emoji, and short templates around your profile text.</p></div>
-        <div class="tf-info-card"><strong>Preview before copy</strong><p>Check the layout with your username, then copy the name, bio, or full profile text.</p></div>
+        <div class="tf-info-card"><strong>Count before copy</strong><p>Check X bio 160 and post 280 limits while using symbols, emoji, and Unicode styles.</p></div>
       </div>
       <h2>How to use the two tabs</h2>
       <ol class="tf-steps">
         <li><strong>Open the display name tab</strong><span>Type the name you want, then apply a Twitter font style to the display-name preview.</span></li>
         <li><strong>Open the bio tab</strong><span>Write your profile text, add symbols or emoji, and use a template when you want a faster starting point.</span></li>
-        <li><strong>Check the preview</strong><span>Edit the username only for preview, then copy the name, bio, or full profile text.</span></li>
+        <li><strong>Open the counter tab</strong><span>Paste a bio or post draft, then check the estimated X count and remaining characters.</span></li>
       </ol>
+      <h2>Twitter / X character counter</h2>
+      <p>X bios are commonly limited to 160 characters, and standard posts use a 280-character limit. Plain Latin text, Japanese text, emoji, symbols, and URLs can behave differently in a weighted counter. This tool counts URLs as 23 characters and estimates emoji or CJK text with heavier weight so you can catch risky drafts earlier.</p>
       <h2>Why this is more than a bio generator</h2>
       <p>A plain Twitter bio generator gives you words. This page helps with the full profile workflow: choose the text style, compose the bio, add symbols, preview the X profile, and copy the final version.</p>
       <div class="tf-faq">
@@ -193,6 +222,10 @@
         <details>
           <summary>Why does the bio tool count 160 characters?</summary>
           <p>X bios are easiest to scan when they stay short. The counter helps you keep the profile readable before you paste it into X.</p>
+        </details>
+        <details>
+          <summary>Can it count a 280-character X post?</summary>
+          <p>Yes. Open the character counter tab and choose Post 280 to see the estimated X count, plain character count, remaining characters, and URL count.</p>
         </details>
         <details>
           <summary>Why do some characters show as boxes?</summary>
@@ -224,6 +257,17 @@
       defaultHandle: '@mojimoon',
       defaultBio: '୨୧ soft fonts + tiny tools ୨୧\n♡ bios / emoji / profile deco ♡',
       countOk: 'OK for X bio',
+      counter: {
+        postLimit: 280,
+        bioLimit: 160,
+        ok: 'Within limit',
+        near: 'Almost full',
+        over: 'Over limit',
+        postMode: 'Post 280',
+        bioMode: 'Bio 160',
+        note: 'URLs count as 23 characters each; emoji and CJK text are estimated with heavier weight.',
+        loadedBio: 'Loaded bio into the counter'
+      },
       fieldContext: {
         name: {
           kicker: 'Editing display name',
@@ -238,6 +282,14 @@
           help: 'The styles below are generated from the active bio field. Replace the bio, or add a decorated snippet to it.',
           apply: 'Apply to bio',
           applied: 'Applied to bio'
+        },
+        counter: {
+          kicker: 'Character counter',
+          title: 'X bio and post character counter',
+          help: 'Check a 160-character bio or 280-character post before you copy.',
+          apply: 'Copy text',
+          applied: 'Copied text',
+          insertHelp: ''
         }
       },
       inserts: [
@@ -248,7 +300,10 @@
         { id: 'creator', name: 'Creator', displayName: '𝒎𝒐𝒐𝒏 creator', bio: 'design / words / tiny tools\nnew work + notes every week ☾' },
         { id: 'founder', name: 'Founder', displayName: 'ᴍᴏᴏɴ founder', bio: 'building small useful things\nproduct notes, experiments, and links ✦' },
         { id: 'fan', name: 'Fan account', displayName: '୨୧ fan log ୨୧', bio: 'fandom notes + soft edits\n♡ clips / threads / daily joy ♡' }
-      ]
+      ],
+      ui: {
+        counterCopied: 'Copied text'
+      }
     };
   </script>
   <script src="/assets/js/twitter-fonts.js"></script>

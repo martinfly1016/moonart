@@ -23,6 +23,8 @@
   const nameInput = root.querySelector('[data-tf-name]');
   const handleInput = root.querySelector('[data-tf-handle]');
   const bioInput = root.querySelector('[data-tf-bio]');
+  const counterInput = root.querySelector('[data-tf-counter]');
+  const counterModeButtons = Array.from(root.querySelectorAll('[data-tf-counter-mode]'));
   const workTabs = Array.from(root.querySelectorAll('[data-tf-work-tab]'));
   const workPanels = Array.from(root.querySelectorAll('[data-tf-work-panel]'));
   const editFields = Array.from(root.querySelectorAll('[data-tf-edit-field]'));
@@ -40,10 +42,29 @@
   const bioPreview = root.querySelector('[data-tf-preview-bio]');
   const bioCount = root.querySelector('[data-tf-bio-count]');
   const weightedCount = root.querySelector('[data-tf-weighted-count]');
+  const counterWeightedLabel = root.querySelector('[data-tf-counter-weighted]');
+  const counterStatusLabel = root.querySelector('[data-tf-counter-status]');
+  const counterWeightValue = root.querySelector('[data-tf-counter-weight]');
+  const counterPlainValue = root.querySelector('[data-tf-counter-plain]');
+  const counterRemainingValue = root.querySelector('[data-tf-counter-remaining]');
+  const counterUrlValue = root.querySelector('[data-tf-counter-urls]');
+  const counterMeter = root.querySelector('[data-tf-counter-meter]');
+  const counterNote = root.querySelector('[data-tf-counter-note]');
   const toast = document.querySelector('[data-tf-toast]');
   let activeField = 'name';
   let activeTab = 'name';
+  let counterMode = 'post';
   const inputTrackTimers = {};
+  const counterConfig = {
+    postLimit: 280,
+    bioLimit: 160,
+    ok: 'Within limit',
+    near: 'Almost full',
+    over: 'Over limit',
+    note: 'URLs count as 23 characters each; emoji and CJK text are estimated with heavier weight.',
+    loadedBio: 'Loaded bio into the counter',
+    ...(config.counter || {})
+  };
 
   const tabs = config.tabs || [
     { id: 'popular', label: 'Popular' },
@@ -73,6 +94,15 @@
       applied: 'Bio replaced',
       secondary: ui.addBio,
       insertHelp: 'Click to add to bio'
+    },
+    counter: {
+      kicker: 'Character counter',
+      title: 'X bio and post character counter',
+      help: 'Check a 160-character bio or 280-character post before you copy.',
+      apply: 'Copy text',
+      applied: ui.counterCopied || 'Copied text',
+      secondary: '',
+      insertHelp: ''
     }
   };
   const fieldContextOverrides = config.fieldContext || {};
@@ -187,12 +217,73 @@
     return changed ? value : text;
   }
 
+  const urlPattern = /https?:\/\/[^\s]+|www\.[^\s]+/giu;
+  const urlWeight = 23;
+  const graphemeSegmenter = typeof Intl !== 'undefined' && Intl.Segmenter
+    ? new Intl.Segmenter(undefined, { granularity: 'grapheme' })
+    : null;
+
+  function splitGraphemes(text) {
+    if (!graphemeSegmenter) return Array.from(text);
+    return Array.from(graphemeSegmenter.segment(text), (item) => item.segment);
+  }
+
   function weightedLength(text) {
-    return Array.from(text).reduce((total, char) => {
+    return analyzeXText(text).weighted;
+  }
+
+  function analyzeXText(text) {
+    const urls = Array.from(text.matchAll(urlPattern));
+    if (!urls.length) {
+      return {
+        weighted: countWeightedSegment(text),
+        plain: Array.from(text).length,
+        urls: 0
+      };
+    }
+
+    let weighted = 0;
+    let cursor = 0;
+    urls.forEach((match) => {
+      weighted += countWeightedSegment(text.slice(cursor, match.index));
+      weighted += urlWeight;
+      cursor = match.index + match[0].length;
+    });
+    weighted += countWeightedSegment(text.slice(cursor));
+    return {
+      weighted,
+      plain: Array.from(text).length,
+      urls: urls.length
+    };
+  }
+
+  function countWeightedSegment(text) {
+    return splitGraphemes(text).reduce((total, cluster) => total + clusterWeight(cluster), 0);
+  }
+
+  function clusterWeight(cluster) {
+    if (!cluster) return 0;
+    if (isEmojiCluster(cluster)) return 2;
+    return Array.from(cluster).reduce((sum, char) => {
       const code = char.codePointAt(0);
-      if (code <= 0x10ff) return total + 1;
-      return total + 2;
+      if (isZeroWeightMark(code)) return sum;
+      return sum + (isLightTwitterCodePoint(code) ? 1 : 2);
     }, 0);
+  }
+
+  function isEmojiCluster(cluster) {
+    return /\p{Extended_Pictographic}/u.test(cluster);
+  }
+
+  function isZeroWeightMark(code) {
+    return code === 0xfe0e || code === 0xfe0f || code === 0x200d;
+  }
+
+  function isLightTwitterCodePoint(code) {
+    return code <= 0x10ff
+      || (code >= 0x2000 && code <= 0x200d)
+      || (code >= 0x2010 && code <= 0x201f)
+      || (code >= 0x2032 && code <= 0x2037);
   }
 
   async function copyText(text, button) {
@@ -256,18 +347,31 @@
   }
 
   function trackInput(field) {
-    const input = field === 'bio' ? bioInput : field === 'handle' ? handleInput : nameInput;
+    const input = field === 'counter'
+      ? counterInput
+      : field === 'bio'
+        ? bioInput
+        : field === 'handle'
+          ? handleInput
+          : nameInput;
+    if (!input) return;
     window.clearTimeout(inputTrackTimers[field]);
     inputTrackTimers[field] = window.setTimeout(() => {
       track(field === 'handle' ? 'twitter_fonts_handle_edit' : 'twitter_fonts_input', {
         field,
         input_length: Array.from(input.value.trim()).length,
-        bio_weighted_length: field === 'bio' ? weightedLength(input.value.trim()) : undefined
+        bio_weighted_length: field === 'bio' ? weightedLength(input.value.trim()) : undefined,
+        counter_weighted_length: field === 'counter' ? weightedLength(input.value.trim()) : undefined,
+        counter_mode: field === 'counter' ? counterMode : undefined
       });
     }, 900);
   }
 
   function renderTabs() {
+    if (activeField === 'counter') {
+      tabsWrap.innerHTML = '';
+      return;
+    }
     tabsWrap.innerHTML = '';
     tabs
       .filter((tab) => tab.id !== (activeField === 'bio' ? 'name' : 'bio'))
@@ -283,21 +387,24 @@
   }
 
   function activeInput() {
+    if (activeField === 'counter') return counterInput;
     return activeField === 'bio' ? bioInput : nameInput;
   }
 
   function fieldDefaultText() {
+    if (activeField === 'counter') return counterInput?.value || '';
     return activeField === 'bio'
       ? (config.defaultBio || 'soft fonts')
       : (config.defaultName || config.fallbackText || 'Moon girl');
   }
 
   function setActiveField(field, options = {}) {
-    activeField = field === 'bio' ? 'bio' : 'name';
+    activeField = field === 'counter' ? 'counter' : field === 'bio' ? 'bio' : 'name';
     if (!options.keepTab) activeTab = activeField;
     root.classList.add('tools-open');
     root.classList.toggle('is-editing-name', activeField === 'name');
     root.classList.toggle('is-editing-bio', activeField === 'bio');
+    root.classList.toggle('is-editing-counter', activeField === 'counter');
     workTabs.forEach((tab) => {
       const isActive = tab.dataset.tfWorkTab === activeField;
       tab.classList.toggle('active', isActive);
@@ -314,6 +421,7 @@
     updateContext();
     renderTabs();
     renderResults();
+    updateCounter();
   }
 
   function updateContext() {
@@ -325,7 +433,7 @@
   }
 
   function renderResults() {
-    if (!activeField) {
+    if (!activeField || activeField === 'counter') {
       resultsWrap.innerHTML = '';
       return;
     }
@@ -433,7 +541,8 @@
   }
 
   function insertIntoField(field, value, options = {}) {
-    const input = field === 'bio' ? bioInput : nameInput;
+    const input = field === 'counter' ? counterInput : field === 'bio' ? bioInput : nameInput;
+    if (!input) return;
     const start = input.selectionStart || input.value.length;
     const end = input.selectionEnd || input.value.length;
     const prefix = input.value.slice(0, start);
@@ -449,6 +558,7 @@
       // Some mobile browsers do not allow selection changes unless focused.
     }
     updatePreview();
+    updateCounter();
     track('twitter_fonts_insert', {
       field,
       insert_group: options.insertGroup || 'unknown',
@@ -464,16 +574,62 @@
     namePreview.textContent = name;
     handlePreview.textContent = handle.startsWith('@') ? handle : `@${handle}`;
     bioPreview.textContent = bio;
-    const count = weightedLength(bio);
-    weightedCount.textContent = ui.chars(count, 160);
-    bioCount.textContent = count > 160 ? ui.over(count, 160) : config.countOk || 'OK for X bio';
-    weightedCount.classList.toggle('over', count > 160);
-    bioCount.classList.toggle('over', count > 160);
+    const bioAnalysis = analyzeXText(bio);
+    const count = bioAnalysis.weighted;
+    weightedCount.textContent = ui.chars(count, counterConfig.bioLimit);
+    bioCount.textContent = count > counterConfig.bioLimit ? ui.over(count, counterConfig.bioLimit) : config.countOk || 'OK for X bio';
+    weightedCount.classList.toggle('over', count > counterConfig.bioLimit);
+    bioCount.classList.toggle('over', count > counterConfig.bioLimit);
   }
 
   function updateAll() {
     renderResults();
     updatePreview();
+    updateCounter();
+  }
+
+  function counterLimit() {
+    return counterMode === 'bio' ? counterConfig.bioLimit : counterConfig.postLimit;
+  }
+
+  function updateCounter() {
+    if (!counterInput) return;
+    const text = counterInput.value.trim();
+    const limit = counterLimit();
+    const analysis = analyzeXText(text);
+    const remaining = limit - analysis.weighted;
+    const ratio = limit ? Math.min(Math.max(analysis.weighted / limit, 0), 1) : 0;
+    const status = remaining < 0
+      ? counterConfig.over
+      : remaining <= Math.ceil(limit * 0.12)
+        ? counterConfig.near
+        : counterConfig.ok;
+
+    counterModeButtons.forEach((button) => {
+      const isActive = button.dataset.tfCounterMode === counterMode;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+
+    if (counterWeightedLabel) counterWeightedLabel.textContent = ui.chars(analysis.weighted, limit);
+    if (counterStatusLabel) {
+      counterStatusLabel.textContent = remaining < 0 ? ui.over(analysis.weighted, limit) : status;
+      counterStatusLabel.classList.toggle('over', remaining < 0);
+      counterStatusLabel.classList.toggle('near', remaining >= 0 && status === counterConfig.near);
+    }
+    if (counterWeightValue) counterWeightValue.textContent = analysis.weighted;
+    if (counterPlainValue) counterPlainValue.textContent = analysis.plain;
+    if (counterRemainingValue) {
+      counterRemainingValue.textContent = remaining >= 0 ? remaining : `-${Math.abs(remaining)}`;
+      counterRemainingValue.classList.toggle('over', remaining < 0);
+    }
+    if (counterUrlValue) counterUrlValue.textContent = analysis.urls;
+    if (counterMeter) {
+      counterMeter.style.width = `${Math.round(ratio * 100)}%`;
+      counterMeter.classList.toggle('over', remaining < 0);
+      counterMeter.classList.toggle('near', remaining >= 0 && status === counterConfig.near);
+    }
+    if (counterNote) counterNote.textContent = counterConfig.note;
   }
 
   root.addEventListener('click', (event) => {
@@ -492,6 +648,24 @@
       activeInput().focus();
       track('twitter_fonts_workspace_select', { field: activeField });
     }
+    const counterModeButton = event.target.closest('[data-tf-counter-mode]');
+    if (counterModeButton) {
+      counterMode = counterModeButton.dataset.tfCounterMode === 'bio' ? 'bio' : 'post';
+      updateCounter();
+      track('twitter_fonts_counter_mode_select', { counter_mode: counterMode });
+    }
+    const loadBioButton = event.target.closest('[data-counter-load-bio]');
+    if (loadBioButton && counterInput) {
+      counterInput.value = bioInput.value.trim() || config.defaultBio || '';
+      counterMode = 'bio';
+      setActiveField('counter');
+      updateCounter();
+      flash(loadBioButton, counterConfig.loadedBio);
+      showToast(counterConfig.loadedBio);
+      track('twitter_fonts_counter_load_bio', {
+        counter_weighted_length: weightedLength(counterInput.value.trim())
+      });
+    }
     const copyButton = event.target.closest('[data-copy-action]');
     if (copyButton) {
       const action = copyButton.dataset.copyAction;
@@ -499,7 +673,9 @@
         ? nameInput.value
         : action === 'bio'
           ? bioInput.value
-          : `${nameInput.value}\n${bioInput.value}`;
+          : action === 'counter'
+            ? counterInput?.value || ''
+            : `${nameInput.value}\n${bioInput.value}`;
       copyButton.dataset.copyType = action;
       copyText(text.trim(), copyButton);
     }
@@ -518,6 +694,13 @@
     updateAll();
     trackInput('bio');
   });
+
+  if (counterInput) {
+    counterInput.addEventListener('input', () => {
+      updateCounter();
+      trackInput('counter');
+    });
+  }
 
   handleInput.addEventListener('input', () => {
     updateAll();

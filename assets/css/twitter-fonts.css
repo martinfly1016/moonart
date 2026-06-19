@@ -218,7 +218,7 @@
 
 .tf-work-tabs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   padding: 14px 16px 0;
   background: #fff;
@@ -340,8 +340,14 @@
   font-weight: 800;
 }
 
-.tf-count.over {
+.tf-count.over,
+.tf-field-meta .over,
+.tf-counter-grid .over {
   color: var(--tf-rose);
+}
+
+.tf-field-meta .near {
+  color: var(--tf-gold);
 }
 
 .tf-actions {
@@ -350,11 +356,116 @@
   gap: 9px;
 }
 
+.tf-counter-card {
+  display: grid;
+  gap: 14px;
+}
+
+.tf-counter-modes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tf-counter-modes button {
+  min-height: 42px;
+  border: 1px solid var(--tf-line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--tf-muted);
+  font: inherit;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.tf-counter-modes button.active {
+  border-color: var(--tf-cyan);
+  background: #ecfeff;
+  color: #155e75;
+}
+
+.tf-counter-meter {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.tf-counter-meter span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--tf-green);
+  transition: width 0.16s ease, background 0.16s ease;
+}
+
+.tf-counter-meter span.near {
+  background: var(--tf-gold);
+}
+
+.tf-counter-meter span.over {
+  background: var(--tf-rose);
+}
+
+.tf-counter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tf-counter-grid div {
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid var(--tf-line);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.tf-counter-grid strong,
+.tf-counter-grid span {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.tf-counter-grid strong {
+  color: var(--tf-ink);
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.tf-counter-grid span {
+  margin-top: 5px;
+  color: var(--tf-muted);
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.tf-counter-note {
+  margin: 0;
+  color: var(--tf-muted);
+  font-size: 13px;
+  line-height: 1.65;
+  font-weight: 780;
+}
+
+.tf-counter-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
 .tf-app.tools-open .tf-companion {
   animation: tfCompanionIn 0.14s ease-out;
 }
 
 .tf-app.is-editing-name [data-tf-bio-only] {
+  display: none;
+}
+
+.tf-app.is-editing-counter [data-tf-font-tools] {
   display: none;
 }
 
@@ -828,6 +939,10 @@
     grid-template-columns: 1fr;
   }
 
+  .tf-counter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .tf-steps {
     grid-template-columns: 1fr;
   }
@@ -844,7 +959,13 @@
   }
 
   .tf-actions,
+  .tf-counter-actions,
   .tf-preview-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .tf-work-tabs,
+  .tf-counter-grid {
     grid-template-columns: 1fr;
   }
 

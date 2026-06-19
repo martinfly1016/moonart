@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twitterフォント変換 | Xの表示名・Bioをおしゃれにコピペ - MojiMoon</title>
-  <meta name="description" content="Twitter/Xの表示名とBioを別々に作れるフォント変換ツール。おしゃれ文字、特殊文字、絵文字、区切り線、Bioテンプレートをプレビューしながらコピーできます。">
+  <title>Twitterフォント変換・文字数カウント | X表示名/Bio/Post - MojiMoon</title>
+  <meta name="description" content="Twitter/Xの表示名とBioを別々に作れるフォント変換ツール。おしゃれ文字、特殊文字、絵文字、Bioテンプレート、XのBio 160文字・投稿280文字カウントをプレビューしながらコピーできます。">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://mojimoon.com/twitter-fonts/">
   <link rel="alternate" hreflang="ja" href="https://mojimoon.com/twitter-fonts/">
@@ -12,8 +12,8 @@
   <link rel="alternate" hreflang="x-default" href="https://mojimoon.com/twitter-fonts/">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/moon_icon.png">
-  <meta property="og:title" content="Twitterフォント変換 | MojiMoon">
-  <meta property="og:description" content="Xの表示名とBioを別々に整えて、おしゃれ文字・特殊文字・絵文字をプレビューしながらコピーできます。">
+  <meta property="og:title" content="Twitterフォント変換・文字数カウント | MojiMoon">
+  <meta property="og:description" content="Xの表示名、Bio、投稿を整えて、おしゃれ文字・特殊文字・絵文字・文字数カウントをプレビューしながらコピーできます。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mojimoon.com/twitter-fonts/">
   <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
@@ -21,13 +21,13 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Twitterフォント変換",
+    "name": "Twitterフォント変換・文字数カウント",
     "url": "https://mojimoon.com/twitter-fonts/",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "All",
     "inLanguage": "ja",
     "isAccessibleForFree": true,
-    "description": "Twitter/Xの表示名とBioを別々に作り、Unicodeフォント、特殊文字、絵文字装飾をコピーできる無料ツールです。"
+    "description": "Twitter/Xの表示名、Bio、投稿を作り、Unicodeフォント、特殊文字、絵文字装飾、Bio 160文字・投稿280文字の文字数カウントを使える無料ツールです。"
   }
   </script>
   <script src="/assets/js/analytics.js" defer></script>
@@ -68,11 +68,11 @@
         <div>
           <p class="eyebrow">Twitter Fonts / X Profile Decorator</p>
           <h1>Twitterフォント変換で、Xの表示名とBioを別々に作る。</h1>
-          <p class="hero-copy">表示名タブで名前を目立たせ、Bioタブで自己紹介を装飾。特殊文字・絵文字・テンプレートを使いながら、Xプロフィールをプレビューしてコピーできます。</p>
+          <p class="hero-copy">表示名タブで名前を目立たせ、Bioタブで自己紹介を装飾。文字数カウントではXのBio 160文字、投稿280文字の目安を見ながら、特殊文字・絵文字入りのテキストをコピーできます。</p>
           <div class="hero-badges" aria-label="主な機能">
             <span>表示名フォント</span>
             <span>Bioテンプレート</span>
-            <span>160文字プレビュー</span>
+            <span>X文字数カウント</span>
             <span>特殊文字コピペ</span>
           </div>
         </div>
@@ -98,12 +98,13 @@
             <ol>
               <li><strong>表示名タブ</strong><span>名前だけをTwitterフォントに変換します。</span></li>
               <li><strong>Bioタブ</strong><span>自己紹介だけを装飾・テンプレートで整えます。</span></li>
-              <li><strong>プレビュー</strong><span>ユーザー名は右下で別に編集します。</span></li>
+              <li><strong>文字数カウント</strong><span>Bio 160文字、投稿280文字の目安を確認します。</span></li>
             </ol>
           </div>
           <div class="tf-work-tabs" role="tablist" aria-label="編集する場所">
             <button class="tf-work-tab active" type="button" role="tab" aria-selected="true" data-tf-work-tab="name">表示名を作る</button>
             <button class="tf-work-tab" type="button" role="tab" aria-selected="false" data-tf-work-tab="bio">Bioを作る</button>
+            <button class="tf-work-tab" type="button" role="tab" aria-selected="false" data-tf-work-tab="counter">文字数カウント</button>
           </div>
           <div class="tf-editor">
             <section class="tf-work-panel active" data-tf-work-panel="name" role="tabpanel">
@@ -121,23 +122,48 @@
                 <div class="tf-field-meta"><span data-tf-weighted-count>0/160</span><span data-tf-bio-count>OK</span></div>
               </div>
             </section>
+            <section class="tf-work-panel" data-tf-work-panel="counter" role="tabpanel" hidden>
+              <div class="tf-counter-card">
+                <div class="tf-field tf-edit-field" data-tf-edit-field="counter">
+                  <label for="tf-counter">Xに投稿する文章・Bio</label>
+                  <textarea id="tf-counter" data-tf-counter data-tf-edit-source="counter" maxlength="1200">今日は新しいプロフィールを整える日。絵文字や特殊文字を入れても、読みやすい長さにします ✨</textarea>
+                  <div class="tf-field-meta"><span data-tf-counter-weighted>0/280</span><span data-tf-counter-status>OK</span></div>
+                </div>
+                <div class="tf-counter-modes" aria-label="カウント対象">
+                  <button class="active" type="button" data-tf-counter-mode="post">投稿 280</button>
+                  <button type="button" data-tf-counter-mode="bio">Bio 160</button>
+                </div>
+                <div class="tf-counter-meter" aria-hidden="true"><span data-tf-counter-meter></span></div>
+                <div class="tf-counter-grid" aria-label="文字数の内訳">
+                  <div><strong data-tf-counter-weight>0</strong><span>推定Xカウント</span></div>
+                  <div><strong data-tf-counter-plain>0</strong><span>実文字数</span></div>
+                  <div><strong data-tf-counter-remaining>280</strong><span>残り</span></div>
+                  <div><strong data-tf-counter-urls>0</strong><span>URL</span></div>
+                </div>
+                <p class="tf-counter-note" data-tf-counter-note>URLは1件23文字、絵文字や日本語は重めに数える推定カウントです。</p>
+                <div class="tf-counter-actions">
+                  <button class="tf-btn accent" type="button" data-counter-load-bio>Bioを入れる</button>
+                  <button class="tf-btn primary" type="button" data-copy-action="counter">文章をコピー</button>
+                </div>
+              </div>
+            </section>
           </div>
 
-          <div class="tf-block">
+          <div class="tf-block" data-tf-font-tools>
             <div class="tf-block-head"><span class="tf-block-title">特殊文字・絵文字を挿入</span><span data-tf-insert-help>クリックで選択中の欄に追加</span></div>
             <div class="tf-inserts" data-tf-inserts></div>
           </div>
 
-          <div class="tf-companion" data-tf-companion>
+          <div class="tf-companion" data-tf-companion data-tf-font-tools>
             <span data-tf-context-kicker>表示名を編集中</span>
             <h2 data-tf-context-title>表示名に使うTwitterフォント</h2>
             <p data-tf-context-help>上の表示名をもとに変換しています。好きなスタイルを選ぶと表示名へ反映されます。</p>
           </div>
 
-          <div class="tf-tabs" data-tf-tabs></div>
-          <div class="tf-results" data-tf-results></div>
+          <div class="tf-tabs" data-tf-tabs data-tf-font-tools></div>
+          <div class="tf-results" data-tf-results data-tf-font-tools></div>
 
-          <div class="tf-block" data-tf-bio-only>
+          <div class="tf-block" data-tf-bio-only data-tf-font-tools>
             <div class="tf-block-head"><span class="tf-block-title">プロフィールテンプレート</span><span>選んで編集</span></div>
             <div class="tf-templates" data-tf-templates></div>
           </div>
@@ -168,18 +194,21 @@
     <section class="tf-section">
       <h2>Twitterフォント変換とは</h2>
       <p>Twitterフォント変換は、普通の文字をUnicodeのおしゃれ文字に変換して、X/Twitterの表示名・Bio・投稿に貼り付けられるツールです。フォントファイルではなくテキストなので、コピーしてそのまま使えます。</p>
+      <p>X文字数カウントでは、Bioの160文字、投稿の280文字を目安に、絵文字・日本語・URLを含むテキストの長さを確認できます。プロフィール装飾と投稿文の下書きを同じ画面で整えられます。</p>
       <p>MojiMoonでは、表示名とBioを同じ画面で混ぜず、2つのタブに分けています。名前を短く目立たせたい時と、Bioを読みやすく飾りたい時では、必要な文字スタイルやテンプレートが違うためです。</p>
       <div class="tf-grid">
         <div class="tf-info-card"><strong>表示名を作る</strong><p>小さい文字、太字、筆記体風、全角文字で短い名前を目立たせます。</p></div>
         <div class="tf-info-card"><strong>Bioを作る</strong><p>ハート、星、リボン、区切り線、絵文字、テンプレートで自己紹介を整えます。</p></div>
-        <div class="tf-info-card"><strong>プレビューしてコピー</strong><p>ユーザー名と一緒に見た目を確認し、表示名・Bio・全文をコピーできます。</p></div>
+        <div class="tf-info-card"><strong>文字数を確認</strong><p>Bio 160文字、投稿280文字の目安を見ながら、装飾した文章をコピーできます。</p></div>
       </div>
       <h2>使い方</h2>
       <ol class="tf-steps">
         <li><strong>表示名タブを選ぶ</strong><span>名前にしたい文字を入力し、気に入ったTwitterフォントを表示名に適用します。</span></li>
         <li><strong>Bioタブを選ぶ</strong><span>自己紹介を書き、特殊文字・絵文字・Bioテンプレートで読みやすく装飾します。</span></li>
-        <li><strong>右側のプレビューを見る</strong><span>ユーザー名はプレビュー用に編集できます。最後に名前、Bio、または全文をコピーします。</span></li>
+        <li><strong>文字数カウントを見る</strong><span>投稿文やBioを貼り付け、X向けの推定カウントと残り文字数を確認します。</span></li>
       </ol>
+      <h2>Twitter / X 文字数カウント</h2>
+      <p>XのBioは160文字、通常の投稿は280文字が目安です。英数字だけの文字列と、絵文字・日本語・特殊文字を含む文章では、見た目の長さとカウントの重さが変わることがあります。このページではURLを23文字換算し、絵文字や日本語を重めに見積もることで、投稿前に超過しやすい文章を見つけやすくしています。</p>
       <h2>Xプロフィールをおしゃれにするコツ</h2>
       <p>表示名は短く、Bioは1つのテーマに絞ると読みやすくなります。推し活ならリボンやハート、クリエイターなら星や区切り線、ゲーム用なら太字や小さい文字を使うと、雰囲気が伝わりやすくなります。</p>
       <div class="tf-faq">
@@ -195,6 +224,10 @@
         <details>
           <summary>Bioは160文字以内にする必要がありますか？</summary>
           <p>XのBioは短く読みやすいほど伝わりやすくなります。このツールでは160文字を目安に、文字数を見ながら調整できます。</p>
+        </details>
+        <details>
+          <summary>投稿の280文字もカウントできますか？</summary>
+          <p>はい。文字数カウントタブで「投稿 280」を選ぶと、Xの通常投稿向けに推定カウント、実文字数、残り文字数、URL数を確認できます。</p>
         </details>
         <details>
           <summary>一部の文字が四角や空白に見えるのはなぜですか？</summary>
@@ -227,6 +260,17 @@
       defaultHandle: '@mojimoon',
       defaultBio: '୨୧ 推しと月とかわいい文字 ୨୧\n♡ fonts / emoji / profile deco ♡',
       countOk: '160文字以内',
+      counter: {
+        postLimit: 280,
+        bioLimit: 160,
+        ok: '範囲内',
+        near: '残りわずか',
+        over: '超過',
+        postMode: '投稿 280',
+        bioMode: 'Bio 160',
+        note: 'URLは1件23文字、絵文字や日本語は重めに数える推定カウントです。',
+        loadedBio: 'Bioを文字数カウントへ入れました'
+      },
       fieldContext: {
         name: {
           kicker: '表示名を編集中',
@@ -243,6 +287,14 @@
           apply: 'Bioに適用',
           applied: 'Bioに入れました',
           insertHelp: 'クリックでBioに追加'
+        },
+        counter: {
+          kicker: '文字数カウント',
+          title: 'XのBio・投稿文字数カウント',
+          help: 'Bio 160文字、投稿280文字の目安を確認できます。',
+          apply: '文章をコピー',
+          applied: '文章をコピーしました',
+          insertHelp: ''
         }
       },
       tabs: [
@@ -269,6 +321,7 @@
         addBio: 'Bioに追加',
         nameApplied: '名前に入れました',
         bioAdded: 'Bioに追加しました',
+        counterCopied: '文章をコピーしました',
         chars: (value, limit) => `${value}/${limit}`,
         over: (value, limit) => `${value - limit}文字オーバー`
       }
