@@ -134,6 +134,10 @@
   margin-bottom: 14px;
 }
 
+.ascii-field[hidden] {
+  display: none;
+}
+
 .ascii-field label,
 .ascii-field strong {
   color: var(--ascii-ink);
@@ -143,6 +147,7 @@
 
 .ascii-field textarea,
 .ascii-field input[type="file"],
+.ascii-field input[type="text"],
 .ascii-field select {
   width: 100%;
   border: 1px solid var(--ascii-line);
@@ -160,6 +165,7 @@
 }
 
 .ascii-field input[type="file"],
+.ascii-field input[type="text"],
 .ascii-field select {
   min-height: 44px;
   padding: 8px 10px;
@@ -182,6 +188,33 @@
   font-size: 13px;
   font-weight: 850;
   cursor: pointer;
+}
+
+.ascii-text-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.ascii-text-options .ascii-field {
+  margin-bottom: 0;
+}
+
+.ascii-warning {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.ascii-warning[hidden] {
+  display: none;
 }
 
 .ascii-option-grid {
@@ -380,6 +413,10 @@
 
   .ascii-actions {
     justify-content: stretch;
+  }
+
+  .ascii-text-options {
+    grid-template-columns: 1fr;
   }
 
   .ascii-btn {

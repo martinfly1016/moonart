@@ -11,6 +11,8 @@
     emptyText: 'Type text or upload an image to generate ASCII art.',
     imageReady: 'Image ready',
     imageMissing: 'Upload an image to convert it into ASCII.',
+    textUnsupportedOnly: 'Text mode supports A-Z, numbers, spaces, !, ?, and -.',
+    unsupportedText: 'Unsupported characters were skipped: {chars}',
     ...(config.ui || {})
   };
 
@@ -21,11 +23,15 @@
   const widthInput = root.querySelector('[data-ascii-width]');
   const widthValue = root.querySelector('[data-ascii-width-value]');
   const charsetInput = root.querySelector('[data-ascii-charset]');
+  const fillInput = root.querySelector('[data-ascii-fill]');
+  const fillCustomInput = root.querySelector('[data-ascii-fill-custom]');
+  const fillCustomField = root.querySelector('[data-ascii-fill-custom-field]');
   const invertInput = root.querySelector('[data-ascii-invert]');
   const contrastInput = root.querySelector('[data-ascii-contrast]');
   const contrastValue = root.querySelector('[data-ascii-contrast-value]');
   const output = root.querySelector('[data-ascii-output]');
   const outputMeta = root.querySelector('[data-ascii-output-meta]');
+  const textWarning = root.querySelector('[data-ascii-text-warning]');
   const copyButton = root.querySelector('[data-copy-ascii]');
   const downloadButton = root.querySelector('[data-download-ascii]');
   const samples = Array.from(root.querySelectorAll('[data-ascii-sample]'));
@@ -108,24 +114,50 @@
     return charsets[charsetInput.value] || charsets.standard;
   }
 
+  function selectedFillChar() {
+    if (!fillInput) return '#';
+    const raw = fillInput && fillInput.value === 'custom'
+      ? (fillCustomInput ? fillCustomInput.value : '#')
+      : fillInput.value;
+    const chars = Array.from((raw || '#').trim());
+    return chars[0] || '#';
+  }
+
   function generateTextAscii(text) {
-    const source = (text || '').trim() || defaultText;
+    const rawSource = (text || '').trim();
+    const source = rawSource || defaultText;
+    const normalized = source.toUpperCase().replace(/\s+/gu, ' ');
     const lines = Array.from({ length: 7 }, () => []);
-    Array.from(source.toUpperCase()).forEach((char) => {
+    const unsupported = new Set();
+    let supportedCount = 0;
+    const fillChar = selectedFillChar();
+
+    Array.from(normalized).forEach((char) => {
       if (char === ' ') {
-        lines.forEach((line) => line.push('   '));
+        if (supportedCount > 0) {
+          lines.forEach((line) => line.push('   '));
+        }
         return;
       }
       const pattern = fontMap[char];
       if (!pattern) {
-        lines.forEach((line, index) => line.push(index === 3 ? char : ' '));
+        unsupported.add(char);
         return;
       }
+      supportedCount += 1;
       pattern.forEach((row, index) => {
-        lines[index].push(row.replace(/1/g, '#').replace(/0/g, ' '));
+        lines[index].push(row.replace(/1/g, fillChar).replace(/0/g, ' '));
       });
     });
-    return lines.map((line) => line.join('  ').replace(/\s+$/u, '')).join('\n');
+
+    const value = supportedCount
+      ? lines.map((line) => line.join('  ').replace(/\s+$/u, '')).join('\n')
+      : '';
+
+    return {
+      value,
+      unsupported: Array.from(unsupported)
+    };
   }
 
   function generateImageAscii() {
@@ -174,9 +206,42 @@
     downloadButton.disabled = !text;
   }
 
+  function updateTextWarning(unsupported) {
+    if (!textWarning) return;
+    if (!unsupported.length) {
+      textWarning.hidden = true;
+      textWarning.textContent = '';
+      return;
+    }
+    const chars = unsupported.join(' ');
+    textWarning.textContent = ui.unsupportedText.replace('{chars}', chars);
+    textWarning.hidden = false;
+  }
+
+  function updateFillCustomState() {
+    if (!fillInput || !fillCustomInput || !fillCustomField) return;
+    const showCustom = fillInput.value === 'custom';
+    fillCustomField.hidden = !showCustom;
+    if (showCustom && !fillCustomInput.value) {
+      fillCustomInput.value = '#';
+    }
+  }
+
   function generate() {
-    const value = mode === 'image' ? generateImageAscii() : generateTextAscii(textInput.value);
-    output.textContent = value || ui.imageMissing;
+    let value = '';
+    let emptyMessage = ui.imageMissing;
+
+    if (mode === 'image') {
+      value = generateImageAscii();
+      updateTextWarning([]);
+    } else {
+      const result = generateTextAscii(textInput.value);
+      value = result.value;
+      updateTextWarning(result.unsupported);
+      emptyMessage = result.unsupported.length ? ui.textUnsupportedOnly : ui.emptyText;
+    }
+
+    output.textContent = value || emptyMessage;
     output.classList.toggle('is-empty', !value);
     updateMeta(value);
   }
@@ -285,6 +350,15 @@
   });
   textInput.addEventListener('input', generate);
   imageInput.addEventListener('change', () => loadImage(imageInput.files && imageInput.files[0]));
+  if (fillInput) {
+    fillInput.addEventListener('change', () => {
+      updateFillCustomState();
+      generate();
+    });
+  }
+  if (fillCustomInput) {
+    fillCustomInput.addEventListener('input', generate);
+  }
   widthInput.addEventListener('input', () => {
     widthValue.textContent = widthInput.value;
     generate();
@@ -301,5 +375,6 @@
   widthValue.textContent = widthInput.value;
   contrastValue.textContent = `${contrastInput.value}%`;
   textInput.value = textInput.value || defaultText;
+  updateFillCustomState();
   setMode(mode);
 })();

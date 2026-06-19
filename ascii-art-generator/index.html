@@ -105,6 +105,24 @@
               <button type="button" data-ascii-sample="HELLO">HELLO</button>
               <button type="button" data-ascii-sample="ASCII">ASCII</button>
             </div>
+            <div class="ascii-text-options">
+              <div class="ascii-field">
+                <label for="ascii-fill">筆画文字</label>
+                <select id="ascii-fill" data-ascii-fill>
+                  <option value="#">#</option>
+                  <option value="*">*</option>
+                  <option value="@">@</option>
+                  <option value="█">█</option>
+                  <option value="■">■</option>
+                  <option value="custom">カスタム</option>
+                </select>
+              </div>
+              <div class="ascii-field" data-ascii-fill-custom-field hidden>
+                <label for="ascii-fill-custom">カスタム文字</label>
+                <input id="ascii-fill-custom" data-ascii-fill-custom type="text" maxlength="2" value="#">
+              </div>
+            </div>
+            <p class="ascii-warning" data-ascii-text-warning hidden></p>
           </div>
 
           <div class="ascii-panel" data-ascii-panel="image" role="tabpanel" hidden>
@@ -199,7 +217,9 @@
         copied: 'コピー済み',
         copiedToast: 'コピーしました',
         imageReady: '画像を読み込みました',
-        imageMissing: '画像をアップロードするとASCIIアートに変換できます。'
+        imageMissing: '画像をアップロードするとASCIIアートに変換できます。',
+        textUnsupportedOnly: '文字から作るモードは、A-Z、数字、スペース、!、?、- に対応しています。',
+        unsupportedText: '未対応の文字をスキップしました: {chars}'
       }
     };
   </script>

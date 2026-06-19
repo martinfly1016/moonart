@@ -104,6 +104,24 @@
               <button type="button" data-ascii-sample="HELLO">HELLO</button>
               <button type="button" data-ascii-sample="ASCII">ASCII</button>
             </div>
+            <div class="ascii-text-options">
+              <div class="ascii-field">
+                <label for="ascii-fill">Stroke character</label>
+                <select id="ascii-fill" data-ascii-fill>
+                  <option value="#">#</option>
+                  <option value="*">*</option>
+                  <option value="@">@</option>
+                  <option value="█">█</option>
+                  <option value="■">■</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+              <div class="ascii-field" data-ascii-fill-custom-field hidden>
+                <label for="ascii-fill-custom">Custom character</label>
+                <input id="ascii-fill-custom" data-ascii-fill-custom type="text" maxlength="2" value="#">
+              </div>
+            </div>
+            <p class="ascii-warning" data-ascii-text-warning hidden></p>
           </div>
 
           <div class="ascii-panel" data-ascii-panel="image" role="tabpanel" hidden>
