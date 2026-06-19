@@ -357,6 +357,73 @@
   line-height: 1.6;
 }
 
+.zen-intent-panel {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.zen-intent-panel h2 {
+  margin: 0;
+  color: var(--zen-ink);
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.25;
+}
+
+.zen-intent-panel p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.zen-intent-kicker {
+  margin: 0 0 4px;
+  color: var(--zen-teal);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.zen-intent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.zen-intent-grid a {
+  min-width: 0;
+  min-height: 118px;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  padding: 13px;
+  border: 1px solid #dbe6f4;
+  border-radius: 8px;
+  background: #f8fbff;
+  color: inherit;
+  text-decoration: none;
+}
+
+.zen-intent-grid a:hover {
+  border-color: #93c5fd;
+  background: #fff;
+}
+
+.zen-intent-grid strong {
+  color: var(--zen-ink);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.zen-intent-grid span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .zen-recent {
   grid-column: 2;
   grid-row: 1;
@@ -553,6 +620,48 @@
   line-height: 1.7;
 }
 
+.zen-rule-table {
+  display: grid;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.zen-rule-table > div {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1.55fr;
+  min-width: 0;
+}
+
+.zen-rule-table > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.zen-rule-table strong,
+.zen-rule-table span {
+  min-width: 0;
+  padding: 11px 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.zen-rule-table strong {
+  background: #eef6ff;
+  color: var(--zen-ink);
+  font-size: 13px;
+}
+
+.zen-rule-table span {
+  color: var(--text);
+}
+
+.zen-rule-table span + span,
+.zen-rule-table strong + strong {
+  border-left: 1px solid var(--line);
+}
+
 @media (max-width: 920px) {
   .zen-app {
     grid-template-columns: minmax(0, 1fr) 300px;
@@ -621,6 +730,18 @@
     padding: 0 12px 12px;
   }
 
+  .zen-intent-panel {
+    padding: 15px;
+  }
+
+  .zen-intent-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zen-intent-grid a {
+    min-height: 0;
+  }
+
   .zen-options summary,
   .zen-note {
     padding-left: 12px;
@@ -638,6 +759,16 @@
 
   .zen-use-list {
     grid-template-columns: 1fr;
+  }
+
+  .zen-rule-table > div {
+    grid-template-columns: 1fr;
+  }
+
+  .zen-rule-table span + span,
+  .zen-rule-table strong + strong {
+    border-left: 0;
+    border-top: 1px solid var(--line);
   }
 
   .zen-recent {
