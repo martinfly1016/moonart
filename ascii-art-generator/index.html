@@ -70,7 +70,8 @@
           <h1>文字と画像を、コピーできるアスキーアートに変換。</h1>
           <p class="hero-copy">テキストを大きなASCII文字に変換し、画像を記号だけのアートに変換できます。幅、文字セット、反転、コントラストを調整して、SNS、README、チャット、プロフィールに貼り付けられます。</p>
           <div class="ascii-badges" aria-label="主な機能">
-            <span>Text to ASCII</span>
+            <span>Block Text</span>
+            <span>Rendered Text</span>
             <span>Image to ASCII</span>
             <span>Copy</span>
             <span>Download .txt</span>
@@ -90,13 +91,14 @@
       <section class="ascii-app" data-ascii-art-generator aria-label="ASCII Art Generator">
         <div class="ascii-controls">
           <div class="ascii-tabs" role="tablist" aria-label="変換モード">
-            <button class="ascii-tab active" type="button" role="tab" aria-selected="true" data-ascii-mode="text">文字から作る</button>
+            <button class="ascii-tab active" type="button" role="tab" aria-selected="true" data-ascii-mode="text">英数字大字</button>
+            <button class="ascii-tab" type="button" role="tab" aria-selected="false" data-ascii-mode="render">文字を描画</button>
             <button class="ascii-tab" type="button" role="tab" aria-selected="false" data-ascii-mode="image">画像から作る</button>
           </div>
 
           <div class="ascii-panel active" data-ascii-panel="text" role="tabpanel">
             <div class="ascii-field">
-              <label for="ascii-text">ASCIIにしたい文字</label>
+              <label for="ascii-text">英数字で作る文字</label>
               <textarea id="ascii-text" data-ascii-text rows="5" maxlength="40">MOJI MOON</textarea>
             </div>
             <div class="ascii-samples" aria-label="サンプル">
@@ -125,6 +127,20 @@
             <p class="ascii-warning" data-ascii-text-warning hidden></p>
           </div>
 
+          <div class="ascii-panel" data-ascii-panel="render" role="tabpanel" hidden>
+            <div class="ascii-field">
+              <label for="ascii-render-text">描画してASCIIにする文字</label>
+              <textarea id="ascii-render-text" data-ascii-render-text rows="4" maxlength="80">こんにちは</textarea>
+            </div>
+            <div class="ascii-samples" aria-label="描画サンプル">
+              <button type="button" data-ascii-render-sample="你好">你好</button>
+              <button type="button" data-ascii-render-sample="こんにちは">こんにちは</button>
+              <button type="button" data-ascii-render-sample="月文字">月文字</button>
+              <button type="button" data-ascii-render-sample="MojiMoon 🌙">MojiMoon 🌙</button>
+            </div>
+            <p class="ascii-card">ブラウザのフォントで文字を描画してからASCII化します。日本語、中国語、絵文字も試せます。</p>
+          </div>
+
           <div class="ascii-panel" data-ascii-panel="image" role="tabpanel" hidden>
             <div class="ascii-field">
               <label for="ascii-image">画像をアップロード</label>
@@ -137,6 +153,10 @@
             <div class="ascii-field">
               <label class="ascii-range-label" for="ascii-width"><span>出力幅</span><span><span data-ascii-width-value>80</span> columns</span></label>
               <input id="ascii-width" data-ascii-width type="range" min="32" max="120" value="80">
+            </div>
+            <div class="ascii-field ascii-render-only">
+              <label class="ascii-range-label" for="ascii-render-weight"><span>文字の太さ</span><span><span data-ascii-render-weight-value>650</span></span></label>
+              <input id="ascii-render-weight" data-ascii-render-weight type="range" min="350" max="900" step="50" value="650">
             </div>
             <div class="ascii-field">
               <label for="ascii-charset">文字セット</label>
@@ -177,9 +197,9 @@
       <h2>ASCII Art Generatorとは</h2>
       <p>ASCII Art Generatorは、文字や画像を半角記号だけのアートに変換するツールです。画像として保存するのではなくテキストとしてコピーできるため、README、SNS投稿、チャット、プロフィール、メモにそのまま貼り付けられます。</p>
       <div class="ascii-grid">
-        <div class="ascii-card"><strong>文字をASCIIアートに変換</strong><p>短い名前、ロゴ、見出しを大きなブロック文字に変換できます。</p></div>
+        <div class="ascii-card"><strong>英数字を大きなASCII文字に変換</strong><p>短い名前、ロゴ、見出しを整ったブロック文字に変換できます。</p></div>
+        <div class="ascii-card"><strong>日本語や中国語もASCII化</strong><p>文字をブラウザ上で描画し、明るさを記号に置き換えてテキストアートにします。</p></div>
         <div class="ascii-card"><strong>画像をASCIIに変換</strong><p>画像の明るさを読み取り、記号の密度でモノクロ風のテキストアートにします。</p></div>
-        <div class="ascii-card"><strong>コピー・TXT保存</strong><p>出力をそのままコピーしたり、テキストファイルとして保存できます。</p></div>
       </div>
 
       <h2>きれいに変換するコツ</h2>
@@ -189,7 +209,7 @@
       <h3>アップロードした画像は保存されますか？</h3>
       <p>いいえ。画像の変換処理はブラウザ内で完結します。MojiMoonのサーバーへ画像を送信しません。</p>
       <h3>日本語の文字を大きなASCII文字にできますか？</h3>
-      <p>大きなブロック文字変換は英数字が中心です。日本語を装飾したい場合は<a href="/fancy-text-generator/">おしゃれ文字変換</a>や<a href="/special-characters/">特殊文字コピペ</a>も使えます。</p>
+      <p>はい。「文字を描画」モードなら、日本語や中国語をブラウザのフォントで描いてからASCIIに変換できます。英数字を整ったブロック文字にしたい場合は「英数字大字」を使ってください。</p>
     </section>
 
     <section class="related-tools">
@@ -212,6 +232,7 @@
       lang: 'ja',
       slug: 'ascii-art-generator-ja',
       defaultText: 'MOJI MOON',
+      renderDefaultText: 'こんにちは',
       meta: (lines, columns) => `${lines}行 · ${columns}列`,
       ui: {
         copied: 'コピー済み',

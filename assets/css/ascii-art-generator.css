@@ -96,7 +96,7 @@
 
 .ascii-tabs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   padding: 12px;
   border-bottom: 1px solid var(--ascii-line);
@@ -223,7 +223,11 @@
   padding: 0 16px 16px;
 }
 
-.ascii-app:not(.is-image-mode) .ascii-option-grid {
+.ascii-app.is-text-mode .ascii-option-grid {
+  display: none;
+}
+
+.ascii-app:not(.is-render-mode) .ascii-render-only {
   display: none;
 }
 
@@ -339,6 +343,14 @@
   white-space: pre;
 }
 
+.ascii-app.is-render-mode .ascii-output {
+  display: inline-block;
+  width: max-content;
+  min-width: max-content;
+  min-height: 0;
+  padding: 14px 4px 18px;
+}
+
 .ascii-output.is-empty {
   color: #8fa1b8;
   white-space: normal;
@@ -409,6 +421,10 @@
   .ascii-output-head {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .ascii-tabs {
+    grid-template-columns: 1fr;
   }
 
   .ascii-actions {

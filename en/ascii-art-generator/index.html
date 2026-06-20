@@ -69,7 +69,8 @@
           <h1>Convert text and images into copyable ASCII art.</h1>
           <p class="hero-copy">Make large ASCII letters from short text, or upload an image and turn it into symbol-based text art. Adjust width, character set, invert, contrast, then copy or download the result.</p>
           <div class="ascii-badges" aria-label="Main features">
-            <span>Text to ASCII</span>
+            <span>Block Text</span>
+            <span>Rendered Text</span>
             <span>Image to ASCII</span>
             <span>Copy</span>
             <span>Download .txt</span>
@@ -89,13 +90,14 @@
       <section class="ascii-app" data-ascii-art-generator aria-label="ASCII Art Generator">
         <div class="ascii-controls">
           <div class="ascii-tabs" role="tablist" aria-label="Generator mode">
-            <button class="ascii-tab active" type="button" role="tab" aria-selected="true" data-ascii-mode="text">Text to ASCII</button>
+            <button class="ascii-tab active" type="button" role="tab" aria-selected="true" data-ascii-mode="text">Block letters</button>
+            <button class="ascii-tab" type="button" role="tab" aria-selected="false" data-ascii-mode="render">Rendered text</button>
             <button class="ascii-tab" type="button" role="tab" aria-selected="false" data-ascii-mode="image">Image to ASCII</button>
           </div>
 
           <div class="ascii-panel active" data-ascii-panel="text" role="tabpanel">
             <div class="ascii-field">
-              <label for="ascii-text">Text to convert</label>
+              <label for="ascii-text">Text for block letters</label>
               <textarea id="ascii-text" data-ascii-text rows="5" maxlength="40">MOJI MOON</textarea>
             </div>
             <div class="ascii-samples" aria-label="Samples">
@@ -124,6 +126,20 @@
             <p class="ascii-warning" data-ascii-text-warning hidden></p>
           </div>
 
+          <div class="ascii-panel" data-ascii-panel="render" role="tabpanel" hidden>
+            <div class="ascii-field">
+              <label for="ascii-render-text">Text to render as ASCII</label>
+              <textarea id="ascii-render-text" data-ascii-render-text rows="4" maxlength="80">Hello!</textarea>
+            </div>
+            <div class="ascii-samples" aria-label="Rendered text samples">
+              <button type="button" data-ascii-render-sample="Hello!">Hello!</button>
+              <button type="button" data-ascii-render-sample="こんにちは">こんにちは</button>
+              <button type="button" data-ascii-render-sample="你好">你好</button>
+              <button type="button" data-ascii-render-sample="MojiMoon 🌙">MojiMoon 🌙</button>
+            </div>
+            <p class="ascii-card">This mode draws text with your browser font, then converts the rendered shape into ASCII. It works for Japanese, Chinese, emoji, and other visible text.</p>
+          </div>
+
           <div class="ascii-panel" data-ascii-panel="image" role="tabpanel" hidden>
             <div class="ascii-field">
               <label for="ascii-image">Upload image</label>
@@ -136,6 +152,10 @@
             <div class="ascii-field">
               <label class="ascii-range-label" for="ascii-width"><span>Output width</span><span><span data-ascii-width-value>80</span> columns</span></label>
               <input id="ascii-width" data-ascii-width type="range" min="32" max="120" value="80">
+            </div>
+            <div class="ascii-field ascii-render-only">
+              <label class="ascii-range-label" for="ascii-render-weight"><span>Text weight</span><span><span data-ascii-render-weight-value>650</span></span></label>
+              <input id="ascii-render-weight" data-ascii-render-weight type="range" min="350" max="900" step="50" value="650">
             </div>
             <div class="ascii-field">
               <label for="ascii-charset">Character set</label>
@@ -176,9 +196,9 @@
       <h2>ASCII art for copy and paste</h2>
       <p>This ASCII Art Generator turns short text or uploaded images into text art made from symbols. Because the result is plain text, you can copy it into README files, social posts, chat messages, profile bios, notes, and code comments.</p>
       <div class="ascii-grid">
-        <div class="ascii-card"><strong>Text to ASCII</strong><p>Turn names, labels, and short headings into block-style ASCII letters.</p></div>
+        <div class="ascii-card"><strong>Block letters for A-Z and numbers</strong><p>Turn names, labels, and short headings into clean block-style ASCII letters.</p></div>
+        <div class="ascii-card"><strong>Rendered text for non-Latin scripts</strong><p>Draw Japanese, Chinese, emoji, or mixed text in the browser, then map the shape into ASCII characters.</p></div>
         <div class="ascii-card"><strong>Image to ASCII</strong><p>Convert image brightness into symbol density for a monochrome text-art effect.</p></div>
-        <div class="ascii-card"><strong>Copy or download</strong><p>Copy the output instantly or save it as a plain text file.</p></div>
       </div>
 
       <h2>How to get cleaner results</h2>
@@ -189,6 +209,8 @@
       <p>No. The image conversion runs inside your browser. MojiMoon does not upload the image to a server.</p>
       <h3>Can I use this in GitHub README files?</h3>
       <p>Yes. Copy the output and place it inside a code block so spacing stays aligned.</p>
+      <h3>Can it convert Japanese or Chinese text?</h3>
+      <p>Yes. Use Rendered text mode for Japanese, Chinese, emoji, and mixed text. Use Block letters when you want cleaner A-Z and number shapes.</p>
     </section>
 
     <section class="related-tools">
@@ -210,7 +232,8 @@
     window.MojiMoonAsciiArtConfig = {
       lang: 'en',
       slug: 'ascii-art-generator-en',
-      defaultText: 'MOJI MOON'
+      defaultText: 'MOJI MOON',
+      renderDefaultText: 'Hello!'
     };
   </script>
   <script src="/assets/js/ascii-art-generator.js"></script>
