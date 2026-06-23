@@ -26,6 +26,7 @@ const navTargets = {
 async function main() {
   const source = await readJson(contentFile);
   const pages = normalizePages(source);
+  const sitemapPages = pages.filter(shouldIncludeInSitemap);
   await validateUniqueTargets(pages);
 
   const outputs = pages.flatMap((page) => [
@@ -43,7 +44,7 @@ async function main() {
   outputs.push({
     kind: 'sitemap',
     file: sitemapFile,
-    content: await renderUpdatedSitemap(pages)
+    content: await renderUpdatedSitemap(sitemapPages)
   });
 
   const stale = [];
@@ -58,7 +59,7 @@ async function main() {
 
   console.log(`${checkOnly ? 'Checked' : 'Generated'} ${pages.length} content page(s).`);
   console.log(`Data files: ${pages.length}`);
-  console.log(`Sitemap URLs managed: ${pages.length}`);
+  console.log(`Sitemap URLs managed: ${sitemapPages.length}`);
 }
 
 async function readJson(file) {
@@ -97,6 +98,10 @@ function normalizePage(page, defaults, updated) {
   }
   const pagePath = normalizeUrlPath(page.path);
   const navCurrent = page.navCurrent || page.family;
+  const indexing = page.indexing || 'standard';
+  if (!['priority', 'standard', 'internal'].includes(indexing)) {
+    throw new Error(`Unsupported indexing "${indexing}" for ${page.slug}.`);
+  }
   if (!navTargets[navCurrent]) {
     throw new Error(`Unsupported navCurrent "${navCurrent}" for ${page.slug}.`);
   }
@@ -110,9 +115,10 @@ function normalizePage(page, defaults, updated) {
     path: pagePath,
     canonical: `${baseUrl}${pagePath}`,
     navCurrent,
+    indexing,
     updated: page.lastmod || updated || today(),
     changefreq: page.changefreq || defaults.changefreq,
-    priority: String(page.priority || defaults.priority),
+    priority: String(page.priority || (indexing === 'priority' ? '0.85' : defaults.priority)),
     draftMaxLength: Number(page.draftMaxLength || defaults.draftMaxLength),
     pageSize: Number(page.pageSize || defaults.pageSize),
     categories,
@@ -122,6 +128,10 @@ function normalizePage(page, defaults, updated) {
     htmlFile: path.join(rootDir, pagePath.slice(1), 'index.html'),
     dataFile: path.join(generatedDataDir, `${page.slug}.js`)
   };
+}
+
+function shouldIncludeInSitemap(page) {
+  return page.indexing !== 'internal' && page.sitemap !== false;
 }
 
 function requireString(object, key) {

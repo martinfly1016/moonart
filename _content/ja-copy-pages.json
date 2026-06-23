@@ -8888,7 +8888,8 @@
           "href": "/fancy-text-generator/",
           "description": "英字プロフィールを整える。"
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "special-characters-check",
@@ -12822,7 +12823,8 @@
           "href": "/special-characters/flower/",
           "description": "春の朝投稿に合わせる。"
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "emoji-copy-otsukaresama",
@@ -13207,7 +13209,8 @@
           "href": "/special-characters/check/",
           "description": "仕事メモに使う。"
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "emoji-copy-congratulations",
@@ -13592,7 +13595,8 @@
           "href": "/special-characters/flower/",
           "description": "祝福文に花を足す。"
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "emoji-copy-love",
@@ -13977,7 +13981,8 @@
           "href": "/emoji-copy/heart/",
           "description": "ハートを単体で探す。"
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "emoji-combinations-thank-you",
@@ -14362,7 +14367,8 @@
           "href": "/special-characters/flower/",
           "description": "お礼文に花を足す。"
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "emoji-combinations-good-night",
@@ -14747,7 +14753,8 @@
           "href": "/emoji-combinations/white/",
           "description": "透明感ある夜に。"
         }
-      ]
+      ],
+      "indexing": "priority"
     },
     {
       "slug": "kaomoji-good-morning",
@@ -16734,7 +16741,8 @@
           "href": "/special-characters/ribbon/",
           "description": "量産型の名前に。"
         }
-      ]
+      ],
+      "indexing": "priority"
     },
     {
       "slug": "special-characters-cute",
@@ -21340,7 +21348,8 @@
             }
           ]
         }
-      ]
+      ],
+      "indexing": "priority"
     },
     {
       "slug": "emoji-copy-love-message",
@@ -21805,7 +21814,8 @@
             }
           ]
         }
-      ]
+      ],
+      "indexing": "internal"
     },
     {
       "slug": "emoji-combinations-thank-you-message",
@@ -22270,7 +22280,8 @@
             }
           ]
         }
-      ]
+      ],
+      "indexing": "priority"
     },
     {
       "slug": "kaomoji-otsukaresama-message",
