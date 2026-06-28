@@ -10,6 +10,7 @@ window.MojiMoonToolData = {
     { label: 'キラキラ', query: 'キラキラ' },
     { label: '星 絵文字 コピペ', query: '星 絵文字 コピペ' },
     { label: '星 コピペ', query: '星 コピペ' },
+    { label: '星 可愛い コピペ', query: '星 可愛い コピペ' },
     { label: '星', query: '星' },
     { label: 'ライン', query: 'ライン' },
     { label: '丸数字', query: '丸数字 コピペ' },
@@ -181,6 +182,7 @@ window.MojiMoonToolData.items = window.MojiMoonToolData.items.map((item) => {
     tags.add('星絵文字');
     tags.add('星 絵文字');
     tags.add('星 絵文字 コピペ');
+    tags.add('星 可愛い コピペ');
     tags.add('星特殊文字');
     tags.add('星 特殊文字');
     tags.add('キラキラ特殊文字');

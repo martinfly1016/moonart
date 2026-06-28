@@ -9,6 +9,8 @@ window.MojiMoonToolData = {
     { label: 'LINE', query: 'line' },
     { label: 'キラキラ コピペ', query: 'キラキラ コピペ' },
     { label: 'キラキラコピペ', query: 'キラキラコピペ' },
+    { label: 'キラキラ 絵文字 コピペ', query: 'キラキラ 絵文字 コピペ' },
+    { label: 'キラキラ 特殊文字', query: 'キラキラ 特殊文字' },
     { label: '白・透明感', query: '白 透明感' },
     { label: 'ピンク', query: 'ピンク' },
     { label: '韓国風', query: '韓国' },
