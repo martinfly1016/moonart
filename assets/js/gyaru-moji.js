@@ -19,15 +19,15 @@
     'ち': '干',
     'つ': '⊃',
     'て': 'τ',
-    'と': '━',
-    'な': '十',
+    'と': '┠',
+    'な': 'ﾅヽ',
     'に': '二',
     'ぬ': 'йu',
     'ね': 'йё',
     'の': 'σ',
     'は': 'l±',
     'ひ': 'ん',
-    'ふ': 'ふ',
+    'ふ': '、ζ、',
     'へ': '∧',
     'ほ': '木',
     'ま': 'мα',
@@ -40,7 +40,7 @@
     'よ': 'чo',
     'ら': 'яα',
     'り': 'L|',
-    'る': 'る',
+    'る': 'ゐ',
     'れ': 'яё',
     'ろ': 'з',
     'わ': 'ωα',
@@ -60,15 +60,15 @@
     'ぢ': '干\u309B',
     'づ': '⊃\u309B',
     'で': 'τ\u309B',
-    'ど': '━\u309B',
+    'ど': '┠\u309B',
     'ば': 'l±\u309B',
     'び': 'ん\u309B',
-    'ぶ': 'ふ\u309B',
+    'ぶ': '、ζ、\u309B',
     'べ': '∧\u309B',
     'ぼ': '木\u309B',
     'ぱ': 'l±\u309C',
     'ぴ': 'ん\u309C',
-    'ぷ': 'ふ\u309C',
+    'ぷ': '、ζ、\u309C',
     'ぺ': '∧\u309C',
     'ぽ': '木\u309C',
     'ぁ': 'ぁ',
@@ -122,16 +122,32 @@
     }).join('');
   }
 
-  function pairsByLength(table) {
+  function isPlainScript(value) {
+    var chars = Array.from(value);
+    if (!chars.length) return true;
+    return chars.every(function (char) {
+      var code = char.codePointAt(0);
+      return (code >= 0x3040 && code <= 0x309F) ||
+        (code >= 0x30A0 && code <= 0x30FF) ||
+        (code >= 0x4E00 && code <= 0x9FFF);
+    });
+  }
+
+  function pairsByLength(table, skipPlain) {
     return Object.keys(table).map(function (key) {
       return [key, table[key]];
+    }).filter(function (pair) {
+      if (!skipPlain) return true;
+      if (!pair[1] || pair[1] === pair[0]) return false;
+      if (isPlainScript(pair[1])) return false;
+      return true;
     }).sort(function (a, b) {
       return b[1].length - a[1].length;
     });
   }
 
-  var decorativePairs = pairsByLength(decorative);
-  var halfwidthPairs = pairsByLength(halfwidth);
+  var decorativePairs = pairsByLength(decorative, true);
+  var halfwidthPairs = pairsByLength(halfwidth, false);
 
   function decodeWith(text, pairs) {
     var source = String(text || '');

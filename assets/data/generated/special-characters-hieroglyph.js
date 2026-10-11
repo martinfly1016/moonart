@@ -49,6 +49,18 @@ window.MojiMoonToolData = {
   "pageSize": 160,
   "items": [
     {
+      "value": "𓂃𓈒𓏸",
+      "label": "いちばん貼られる並び",
+      "category": "line",
+      "tags": [
+        "ライン",
+        "おしゃれ",
+        "𓂃"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
       "value": "𓂃",
       "label": "ゆるい波の線",
       "category": "line",
@@ -75,18 +87,6 @@ window.MojiMoonToolData = {
     {
       "value": "𓏸",
       "label": "三つの点",
-      "category": "line",
-      "tags": [
-        "ライン",
-        "おしゃれ",
-        "𓂃"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "𓂃𓈒𓏸",
-      "label": "いちばん貼られる並び",
       "category": "line",
       "tags": [
         "ライン",
@@ -170,7 +170,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "𓃃",
-      "label": "牛の象形文字",
+      "label": "並びの先頭に置く文字",
       "category": "set",
       "tags": [
         "𓃃",
@@ -194,7 +194,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "𓃃𓈒𓏏",
-      "label": "牛・点・パンの並び",
+      "label": "別の三点の並び",
       "category": "set",
       "tags": [
         "𓃃",
@@ -206,7 +206,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "𓃃 𓈒 𓏏",
-      "label": "間を空けた三つ",
+      "label": "間を空けた別の並び",
       "category": "set",
       "tags": [
         "𓃃",
@@ -230,7 +230,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "𓃃𓂃",
-      "label": "牛と波線",
+      "label": "象形と波線",
       "category": "set",
       "tags": [
         "𓃃",
@@ -242,7 +242,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "𓃃𓈒𓏸",
-      "label": "牛から点の列へ",
+      "label": "象形から点の列へ",
       "category": "set",
       "tags": [
         "𓃃",
@@ -356,7 +356,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "𓃃♡𓏏",
-      "label": "牛とハートとパン",
+      "label": "象形とハート",
       "category": "heart",
       "tags": [
         "ハート"

@@ -258,8 +258,15 @@
   }
 
   function appendToDraft(text, options = {}) {
-    const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
-    const nextValue = `${draft.value}${spacer}${text}`.trimStart();
+    const multiline = /[\r\n]/.test(text);
+    let nextValue;
+    if (multiline) {
+      const base = draft.value.replace(/[ \t]+$/g, '').replace(/\n+$/, '');
+      nextValue = base ? `${base}\n${text.replace(/^\n+/, '')}` : text;
+    } else {
+      const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
+      nextValue = `${draft.value}${spacer}${text}`.trimStart();
+    }
     if (draftMaxLength && nextValue.length > draftMaxLength) {
       if (!options.silentLimit) showToast(ui.draftLimit(draftMaxLength));
       return false;

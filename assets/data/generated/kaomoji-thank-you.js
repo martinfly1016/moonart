@@ -127,7 +127,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "(人´∀`)",
-      "label": "手を前に出すお礼",
+      "label": "頭を下げるお礼",
       "category": "polite",
       "tags": [
         "ありがとう",
@@ -149,7 +149,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "(*´▽`人)",
-      "label": "笑顔で手を伸ばす",
+      "label": "隣に人がいるお礼",
       "category": "polite",
       "tags": [
         "ありがとう",

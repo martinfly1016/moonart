@@ -127,7 +127,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "( ˘༥˘ )",
-      "label": "口がへの字の眠気",
+      "label": "口をすぼめた眠気",
       "category": "drowsy",
       "tags": [
         "眠い",
