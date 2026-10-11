@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "thank you 💐",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "thanks ✨",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "感謝です 💌",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "助かったよ 🙏",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いつもありがとう 🌷",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう ☁️🤍",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "thank you so much 🫧",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "感謝いっぱい 💗",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとね 🫶🏻",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ありがとう",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💐🤍✨",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🌷💌🤍",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🌸🫶🏻✨",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🌼☁️💗",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🪻🤍🫧",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💐 𓂃 ♡",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "flower thanks 🌷",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "感謝の花 💐",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう 🌸",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お礼 💐✨",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "花",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🤍🫧☁️",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🧸🤍💌",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☕️🤍✨",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🍀🫶🏻",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🪽🤍𓂃",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "soft thanks ☁️",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "take care 🤍",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やさしい気持ち 🫧",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ほんとにありがとう 🤍",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれさま ☕️",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "本当にありがとう 💐",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "助かりました 🙏✨",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "うれしいです 🫶🏻",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "感謝してます 🤍",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "またよろしくね 🌷",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "thanks a lot 💌",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとうメモ 𓂃",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お礼の気持ち 💗",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日もありがとう ☕️",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "thankful day ✨",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "お礼"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

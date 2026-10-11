@@ -60,7 +60,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(´｡•ω(•ω•｡`)ぎゅー",
@@ -70,7 +72,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ´ω`)ﾉ(╥ω╥)",
@@ -80,7 +84,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘̩╭╮˘̩)っ",
@@ -90,7 +96,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕっ•ᴥ•ʔっ",
@@ -100,7 +108,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(づ｡◕‿‿◕｡)づ",
@@ -110,7 +120,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘з(˘⌣˘ )",
@@ -120,7 +132,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ´▽｀)っ",
@@ -130,7 +144,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(つ✧ω✧)つ",
@@ -140,7 +156,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(つ﹏<。)ヾ(´∀｀*)",
@@ -150,7 +168,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( T_T)＼(^-^ )",
@@ -160,7 +180,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ- ‸ - ς)ヾ(･ω･*)",
@@ -170,7 +192,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(づ￣ ³￣)づ",
@@ -180,7 +204,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ´ω`c)",
@@ -190,7 +216,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(⊃｡•́‿•̀｡)⊃",
@@ -200,7 +228,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘ω˘ς )",
@@ -210,7 +240,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ぎゅー(つ≧▽≦)つ",
@@ -220,7 +252,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ハグ(´｡•ω(•ω•｡`)ぎゅー",
@@ -230,7 +264,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "よしよし(っ´ω`)ﾉ(╥ω╥)",
@@ -240,7 +276,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "大丈夫(っ˘̩╭╮˘̩)っ",
@@ -250,7 +288,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれさまʕっ•ᴥ•ʔっ",
@@ -260,7 +300,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "そばにいるよ(づ｡◕‿‿◕｡)づ",
@@ -270,7 +312,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "元気出して(っ˘з(˘⌣˘ )",
@@ -280,7 +324,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "なでなで(っ´▽｀)っ",
@@ -290,7 +336,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいじょうぶだよ(つ✧ω✧)つ",
@@ -300,7 +348,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "抱きしめる(つ﹏<。)ヾ(´∀｀*)",
@@ -310,7 +360,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "よしよし (づ｡◕‿‿◕｡)づ",
@@ -320,7 +372,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "大丈夫 (っ˘з(˘⌣˘ )",
@@ -330,7 +384,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれさま (っ´▽｀)っ",
@@ -340,7 +396,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "そばにいるよ (つ✧ω✧)つ",
@@ -350,7 +408,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "元気出して (つ﹏<。)ヾ(´∀｀*)",
@@ -360,7 +420,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "なでなで ( T_T)＼(^-^ )",
@@ -370,7 +432,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいじょうぶだよ (っ- ‸ - ς)ヾ(･ω･*)",
@@ -380,7 +444,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "抱きしめる (づ￣ ³￣)づ",
@@ -390,7 +456,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ぎゅーしたい (っ˘з(˘⌣˘ )",
@@ -400,7 +468,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ぎゅっとする (っ´▽｀)っ",
@@ -410,7 +480,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "元気出して (つ✧ω✧)つ",
@@ -420,7 +492,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "そばにいるよ (つ﹏<。)ヾ(´∀｀*)",
@@ -430,7 +504,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "よしよし ( T_T)＼(^-^ )",
@@ -440,7 +516,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "あたたかい気持ち (っ- ‸ - ς)ヾ(･ω･*)",
@@ -450,7 +528,9 @@ window.MojiMoonToolData = {
         "ハグ",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

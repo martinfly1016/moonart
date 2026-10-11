@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♕",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♚",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♛",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♖",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♜",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⚜",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✦",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✧",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◇",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♔𓂃",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✦♔✦",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♕ 𓈒𓏸",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⚜︎",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◇◆◇",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✧ royal",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "king ♔",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "queen ♕",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "prince ♔",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "princess ♕",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "上品"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "No.1 ♔",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "rank ♕",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "1st ✦",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "top ♛",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "winner ♔",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "best ✧",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推しNo.1 ♔",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "favorite ♕",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "special ♛",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "legend ♔",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "ランキング"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ♔",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "profile ♕",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し ♔",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "bio ✦♔",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "royal mood ♕",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "queen day ♕",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "king mood ♔",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "my crown ♛",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♔ name ♔",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♕ fan account",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "王冠",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

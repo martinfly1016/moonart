@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ´ ▽ ` )ﾉ",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(*´▽`*)ﾉ",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ᵕᴗᵕ )*･☪︎·̩͙",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑˃̵ᴗ˂̵)و",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡･∀･)ﾉﾞ",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ฅ’ω’ฅ)",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( *ˊᵕˋ)ﾉ",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ੭ ˙ᗜ˙ )੭",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•̀ᴗ-)✧",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "おはよう",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(˶ᵔ ᵕ ᵔ˶)",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑>◡<๑)",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘ω˘ς )",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ´,,•ω•,,`)",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(♡˙︶˙♡)",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐢ ᵕ ᐢ)",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑˘︶˘๑)",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(⸝⸝ᵕᴗᵕ⸝⸝)",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•ᴗ•｡)♡",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(*ฅ́˘ฅ̀*)",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "朝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "٩(ˊᗜˋ*)و",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "٩(｡•ω•｡)و",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ง ˙˘˙ )ว",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "୧( ˵ ° ~ ° ˵ )୨",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•̀ㅂ•́)و✧",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ง •̀ω•́)ง",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "٩( ᐛ )و",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•̀ㅁ•́ฅ✧",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ᕙ( ˙꒳˙ )ᕗ",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑و•̀ω•́)و",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "元気",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おはよう(｡･ω･)ﾉﾞ",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おはよー(*´▽`*)ﾉ",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日もよろしく(๑˃̵ᴗ˂̵)و",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "朝だよ( *ˊᵕˋ)ﾉ",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "がんばろう٩(ˊᗜˋ*)و",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いってらっしゃい(｡•̀ᴗ-)✧",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いい朝(˶ᵔ ᵕ ᵔ˶)",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "起きたよ(ฅ’ω’ฅ)",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おはようございます( ´ ▽ ` )ﾉ",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日も元気に(ง •̀ω•́)ง",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

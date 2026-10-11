@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•́︿•̀｡)",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(._.`)",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(´._.｀)",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡>﹏<｡)",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(人･_･)♡",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(＞人＜;)",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(；ω；)",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ߹꒳߹ )",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•́︵•̀｡)",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(；・∀・)",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡ŏ﹏ŏ)",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(つ﹏<。)",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑-﹏-๑)",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ᵕ̩̩ㅅᵕ̩̩ )",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ごめん(_ _;)",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すみません(｡•́︿•̀｡)",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "遅れてごめん(._.`)",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "申し訳ない(´._.｀)",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "確認不足でした(｡>﹏<｡)",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ごめんね(人･_･)♡",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "待たせてごめん(＞人＜;)",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勘違いしてた(；ω；)",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "反省してる( ߹꒳߹ )",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "本当にごめん(｡•́︵•̀｡)",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "遅れてごめん (人･_･)♡",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "申し訳ない (＞人＜;)",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "確認不足でした (；ω；)",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ごめんね ( ߹꒳߹ )",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "待たせてごめん (｡•́︵•̀｡)",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勘違いしてた (ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "反省してる (；・∀・)",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "本当にごめん (｡ŏ﹏ŏ)",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "本当にごめん (＞人＜;)",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すみません (；ω；)",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "申し訳ないです ( ߹꒳߹ )",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "気をつけます (｡•́︵•̀｡)",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "少し遅れます (ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "あとで連絡します (；・∀・)",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

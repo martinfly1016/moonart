@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "好き",
         "ハート"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💗",
@@ -65,7 +67,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "ピンク"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💖",
@@ -75,7 +79,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "キラキラ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🤍",
@@ -85,7 +91,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "白"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🫶",
@@ -95,7 +103,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "手"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💕",
@@ -105,7 +115,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "恋愛"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💞",
@@ -115,7 +127,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "恋愛"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💘",
@@ -125,7 +139,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "矢"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💝",
@@ -135,7 +151,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "ギフト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❤️‍🔥",
@@ -145,7 +163,9 @@ window.MojiMoonToolData = {
         "好き",
         "ハート",
         "熱い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🌷",
@@ -155,7 +175,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "花"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💐",
@@ -165,7 +187,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "花束"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✨",
@@ -175,7 +199,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "キラキラ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🪽",
@@ -185,7 +211,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "羽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☁️",
@@ -195,7 +223,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "雲"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🌙",
@@ -205,7 +235,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "月"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🧸",
@@ -215,7 +247,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎀",
@@ -225,7 +259,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "リボン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🥺",
@@ -235,7 +271,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "表情"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☺️",
@@ -245,7 +283,9 @@ window.MojiMoonToolData = {
         "やさしい",
         "好き",
         "笑顔"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し ♡",
@@ -255,7 +295,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "推し"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいすき 🫶",
@@ -264,7 +306,9 @@ window.MojiMoonToolData = {
       "tags": [
         "推し活",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "好きしかない 💗",
@@ -273,7 +317,9 @@ window.MojiMoonToolData = {
       "tags": [
         "推し活",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日もかわいい 🎀",
@@ -283,7 +329,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "最高です ✨",
@@ -293,7 +341,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "感想"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "尊い 🤍",
@@ -303,7 +353,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "推し"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "幸せありがとう 💐",
@@ -313,7 +365,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ずっと応援してます ♡",
@@ -323,7 +377,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "応援"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推ししか勝たん 💖",
@@ -333,7 +389,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "量産型"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "love my oshi 🫶",
@@ -343,7 +401,9 @@ window.MojiMoonToolData = {
         "推し活",
         "好き",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すき ♡",
@@ -353,7 +413,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいすき 💗",
@@ -363,7 +425,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう、すき 💐",
@@ -373,7 +437,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "感謝"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "会いたい 🫶",
@@ -382,7 +448,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "恋愛"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日も好きです 🤍",
@@ -391,7 +459,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "恋愛"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ずっと一緒に ✨",
@@ -401,7 +471,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "未来"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "love you ♡",
@@ -411,7 +483,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "miss you 🌙",
@@ -421,7 +495,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "大切な人 💝",
@@ -430,7 +506,9 @@ window.MojiMoonToolData = {
       "tags": [
         "短文",
         "恋愛"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "好きが増えた 💞",
@@ -440,7 +518,9 @@ window.MojiMoonToolData = {
         "短文",
         "恋愛",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

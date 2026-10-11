@@ -57,9 +57,81 @@ async function main() {
     throw new Error(`Generated content is out of date:\n${stale.map((file) => `- ${file}`).join('\n')}`);
   }
 
+  const handwritten = await syncHandwrittenGrids(checkOnly);
+  if (checkOnly && handwritten.length) {
+    throw new Error(`Generated content is out of date:\n${handwritten.map((file) => `- ${file}`).join('\n')}`);
+  }
+
   console.log(`${checkOnly ? 'Checked' : 'Generated'} ${pages.length} content page(s).`);
   console.log(`Data files: ${pages.length}`);
   console.log(`Sitemap URLs managed: ${sitemapPages.length}`);
+  console.log(`Handwritten grids: ${handwrittenTargets.length}`);
+}
+
+const handwrittenTargets = [
+  { html: 'special-characters/index.html', data: 'assets/data/special-characters.js', headings: false },
+  { html: 'special-characters/heart/index.html', data: 'assets/data/pages/heart.js', headings: true },
+  { html: 'special-characters/star/index.html', data: 'assets/data/pages/star.js', headings: true },
+  { html: 'emoji-copy/sparkle/index.html', data: 'assets/data/pages/sparkle.js', headings: true },
+  { html: 'kaomoji/sad/index.html', data: 'assets/data/pages/crying.js', headings: true }
+];
+
+async function loadToolData(file) {
+  const source = await fs.readFile(file, 'utf8');
+  const sandbox = {};
+  const runner = new Function('window', `${source}\nreturn window.MojiMoonToolData;`);
+  return runner(sandbox);
+}
+
+function toolDataToPage(data, headings) {
+  const categories = data.categories || [{ id: 'all', label: 'すべて' }];
+  const items = (data.items || []).map((item) => ({
+    ...item,
+    tags: item.tags || [],
+    wide: Boolean(item.wide || String(item.value).includes('\n')),
+    beadHref: item.beadHref || ''
+  }));
+  const groups = categories
+    .filter((category) => category.id !== 'all')
+    .map((category) => ({
+      category: category.id,
+      heading: category.heading || category.label,
+      items: items.filter((item) => item.category === category.id)
+    }))
+    .filter((group) => group.items.length);
+  const used = new Set(groups.flatMap((group) => group.items.map((item) => item.value)));
+  const rest = items.filter((item) => !used.has(item.value));
+  if (rest.length) groups.push({ category: rest[0].category || 'all', heading: 'そのほか', items: rest });
+  return {
+    showGroupHeadings: Boolean(headings) && groups.length > 1,
+    categories,
+    itemGroups: groups.length ? groups : [{ category: 'all', heading: 'すべて', items }],
+    items
+  };
+}
+
+async function syncHandwrittenGrids(checkOnly) {
+  const stale = [];
+  for (const target of handwrittenTargets) {
+    const htmlFile = path.join(rootDir, target.html);
+    const dataFile = path.join(rootDir, target.data);
+    const grid = renderItemGrid(toolDataToPage(await loadToolData(dataFile), target.headings));
+    const block = `<!-- mojimoon:static-grid:start -->\n${grid}\n<!-- mojimoon:static-grid:end -->`;
+    const html = await fs.readFile(htmlFile, 'utf8');
+    const marker = '<!-- mojimoon:static-grid:start -->';
+    let next = html;
+    if (html.includes(marker)) {
+      next = html.replace(/<!-- mojimoon:static-grid:start -->[\s\S]*?<!-- mojimoon:static-grid:end -->/u, block);
+    } else if (html.includes('<div class="item-grid" data-grid></div>')) {
+      next = html.replace('<div class="item-grid" data-grid></div>', block);
+    } else {
+      throw new Error(`No item grid placeholder in ${target.html}`);
+    }
+    if (next === html) continue;
+    stale.push(target.html);
+    if (!checkOnly) await fs.writeFile(htmlFile, next);
+  }
+  return stale;
 }
 
 async function readJson(file) {
@@ -190,7 +262,9 @@ function normalizeItems(page, categoryIds) {
           ...(page.tags || []),
           ...(group.tags || []),
           ...(item.tags || [])
-        ])
+        ]),
+        wide: Boolean(item.wide || String(item.value).includes('\n')),
+        beadHref: item.beadHref || group.beadHref || ''
       });
     }
   }
@@ -214,21 +288,11 @@ async function validateUniqueTargets(pages) {
 }
 
 function renderPage(page) {
-  const faqSchema = page.faq?.length ? `
+  const faqSchema = [renderFaqSchema(page), renderBreadcrumbSchema(page), renderItemListSchema(page)].filter(Boolean).map((node) => `
   <script type="application/ld+json">
-  ${escapeScriptJson(JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: page.faq.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer
-      }
-    }))
-  }, null, 2))}
-  </script>` : '';
+  ${escapeScriptJson(JSON.stringify(node, null, 2))}
+  </script>`).join('');
+  const hreflang = (page.hreflang || []).map((link) => `  <link rel="alternate" hreflang="${escapeAttr(link.lang)}" href="${escapeAttr(link.href)}">`).join('\n');
 
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -239,7 +303,7 @@ function renderPage(page) {
   <meta name="description" content="${escapeAttr(page.description)}">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="${escapeAttr(page.canonical)}">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+${hreflang ? `${hreflang}\n` : ''}  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/moon_icon.png">
   <meta property="og:title" content="${escapeAttr(page.ogTitle || page.title)}">
   <meta property="og:description" content="${escapeAttr(page.ogDescription || page.description)}">
@@ -256,7 +320,7 @@ function renderPage(page) {
   <div class="tool-shell">
     ${renderHeader(page)}
     <section class="hero"><div class="hero-inner"><p class="eyebrow">${escapeHtml(page.eyebrow || 'MojiMoon Copy Tool')}</p><h1>${escapeHtml(page.h1)}</h1><p class="hero-copy">${escapeHtml(page.hero)}</p></div></section>
-    <main class="tool-wrap"><div class="tool-app"><section class="workspace" aria-label="${escapeAttr(page.toolLabel)}"><div class="tool-tabs" data-tabs></div><div class="search-row"><input class="search-input" type="search" data-search placeholder="${escapeAttr(page.searchPlaceholder || 'キーワードで検索')}"><button class="clear-search" type="button" data-clear-search>クリア</button></div><div class="item-grid" data-grid></div></section><aside class="composer" aria-label="コピー草稿"><h2>コピー草稿</h2><textarea class="draft-input" data-draft placeholder="${escapeAttr(page.draftPlaceholder || 'クリックするとここに追加されます')}"></textarea><div class="button-row"><button class="primary-btn" type="button" data-copy-draft>コピー</button><button class="secondary-btn" type="button" data-clear-draft>消去</button></div><p class="hint">${escapeHtml(page.composerHint || 'クリックした素材を草稿で組み合わせてコピーできます。')}</p><div class="recent-list" data-recent aria-label="${escapeAttr(page.recentLabel || '最近使ったもの')}"></div></aside></div></main>
+    <main class="tool-wrap"><div class="tool-app"><section class="workspace" aria-label="${escapeAttr(page.toolLabel)}"><div class="tool-tabs" data-tabs></div><div class="search-row"><input class="search-input" type="search" data-search placeholder="${escapeAttr(page.searchPlaceholder || 'キーワードで検索')}"><button class="clear-search" type="button" data-clear-search>クリア</button></div>${renderItemGrid(page)}</section><aside class="composer" aria-label="コピー草稿"><h2>コピー草稿</h2><textarea class="draft-input" data-draft placeholder="${escapeAttr(page.draftPlaceholder || 'クリックするとここに追加されます')}"></textarea><div class="button-row"><button class="primary-btn" type="button" data-copy-draft>コピー</button><button class="secondary-btn" type="button" data-clear-draft>消去</button></div><p class="hint">${escapeHtml(page.composerHint || 'クリックした素材を草稿で組み合わせてコピーできます。')}</p><div class="recent-list" data-recent aria-label="${escapeAttr(page.recentLabel || '最近使ったもの')}"></div></aside></div></main>
     ${renderSeoSection(page)}
     ${renderRelated(page)}
     <footer class="site-footer"><p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p></footer>
@@ -272,6 +336,8 @@ function renderHeader(page) {
   return `<header class="site-header"><div class="site-header-inner"><div class="brand-group"><a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a></div><nav class="site-nav" aria-label="文字ツール">
 <a href="/">月文字</a>
 <a href="/fancy-text-generator/">おしゃれ文字</a>
+<a href="/fancy-text-generator/cursive/">筆記体</a>
+<a href="/gyaru-moji/">ギャル文字</a>
 <a href="/zenkaku-hankaku-converter/">全角半角変換</a>
 <details class="nav-menu nav-menu-wide">
 <summary aria-current="page">コピペ</summary>
@@ -297,9 +363,115 @@ function renderSeoSection(page) {
   const paragraphs = (seo.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('');
   const sections = (seo.sections || []).map(renderSeoSubsection).join('');
   const links = seo.links?.length ? `<div class="category-links">${seo.links.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>` : '';
-  const enrichment = renderGeneratedEnrichment(page);
+  const enrichment = page.skipGeneratedEnrichment ? '' : renderGeneratedEnrichment(page);
   const faq = page.faq?.length ? `<h2>FAQ</h2>${page.faq.map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join('')}` : '';
   return `<section class="seo-section"><h2>${escapeHtml(seo.heading || `${page.h1}の使い方`)}</h2>${paragraphs}${sections}${enrichment}${links}${faq}</section>`;
+}
+
+function renderFaqSchema(page) {
+  if (!page.faq?.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: page.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer
+      }
+    }))
+  };
+}
+
+function renderBreadcrumbSchema(page) {
+  const family = familyCrumb(page.family);
+  if (!family) return null;
+  const crumbs = [
+    { name: 'ホーム', item: `${baseUrl}/` },
+    { name: family[0], item: `${baseUrl}${family[1]}` },
+    { name: page.h1, item: page.canonical }
+  ];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.item
+    }))
+  };
+}
+
+function renderItemListSchema(page) {
+  const elements = page.items.slice(0, 20).map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: placeholderLabel(item.label) ? item.value : item.label,
+    description: item.value
+  }));
+  if (!elements.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: page.h1,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: page.items.length,
+    itemListElement: elements
+  };
+}
+
+function familyCrumb(family) {
+  return {
+    kaomoji: ['顔文字', '/kaomoji/'],
+    'emoji-copy': ['絵文字コピペ', '/emoji-copy/'],
+    'emoji-combinations': ['絵文字組み合わせ', '/emoji-combinations/'],
+    'special-characters': ['特殊文字', '/special-characters/'],
+    'kawaii-copy': ['かわいいコピペ', '/kawaii-copy/']
+  }[family] || null;
+}
+
+function placeholderLabel(label) {
+  return /^\S.{0,24}\s+\d+$/.test(String(label || '').trim());
+}
+
+function renderItemGrid(page) {
+  const seen = new Set();
+  const blocks = [];
+  for (const group of page.itemGroups) {
+    const cards = [];
+    for (const entry of group.items) {
+      const value = typeof entry === 'string' ? entry : entry.value;
+      if (!value || seen.has(value)) continue;
+      seen.add(value);
+      const item = page.items.find((candidate) => candidate.value === value);
+      if (!item) continue;
+      cards.push(renderCopyCard(item));
+    }
+    if (cards.length) blocks.push({ group, cards });
+  }
+  const headings = Boolean(page.showGroupHeadings) && blocks.length > 1;
+  if (!headings) {
+    return `<div class="item-grid" data-grid data-static-items>${blocks.flatMap((block) => block.cards).join('')}</div>`;
+  }
+  return `<div class="item-grid has-groups" data-grid data-static-items>${blocks.map(({ group, cards }) => {
+    const category = page.categories.find((item) => item.id === group.category);
+    const heading = group.heading || category?.label || group.category;
+    return `<section class="grid-group" data-grid-group="${escapeAttr(group.category)}"><h2 class="grid-group-title">${escapeHtml(heading)}</h2><div class="grid-group-cards">${cards.join('')}</div></section>`;
+  }).join('')}</div>`;
+}
+
+function renderCopyCard(item) {
+  const label = item.label && !placeholderLabel(item.label) && item.label !== item.value ? item.label : '';
+  const classes = ['copy-card'];
+  if (item.wide) classes.push('copy-card-wide');
+  const valueClass = item.wide ? 'copy-value copy-value-pre' : 'copy-value';
+  const labelHtml = label ? `<span class="copy-label">${escapeHtml(label)}</span>` : '';
+  const beadHtml = item.beadHref ? `<a class="bead-cta" href="${escapeAttr(item.beadHref)}" target="_blank" rel="noopener">アイロンビーズ図案にする</a>` : '';
+  const card = `<button class="${classes.join(' ')}" type="button" data-copy="${escapeAttr(encodeURIComponent(item.value))}" data-label="${escapeAttr(label)}" data-category="${escapeAttr(item.category)}" data-tags="${escapeAttr((item.tags || []).join(','))}"><span class="${valueClass}">${escapeHtml(item.value)}</span>${labelHtml}</button>`;
+  if (!beadHtml) return card;
+  return `<div class="copy-stack${item.wide ? ' copy-card-wide' : ''}">${card}${beadHtml}</div>`;
 }
 
 function renderSeoSubsection(section) {

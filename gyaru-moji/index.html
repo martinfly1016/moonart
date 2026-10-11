@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ギャル文字 変換・一覧 | 記号多めと半角カタカナ - MojiMoon</title>
+  <meta name="description" content="ひらがなをギャル文字に変換してコピーできます。記号を多くした書き方と、読みやすい半角カタカナ。一覧から一文字ずつも取れます。漢字はそのまま残ります。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/gyaru-moji/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="ギャル文字 変換・一覧 | MojiMoon">
+  <meta property="og:description" content="かわいい、おはよう、ありがとうを、記号多めと半角カタカナの両方でコピーできます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/gyaru-moji/">
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ギャル文字 変換",
+    "url": "https://mojimoon.com/gyaru-moji/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "description": "ひらがなを記号多めのギャル文字と、読みやすい半角カタカナに変換してコピーできる無料ツールです。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ギャル文字は読めますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "記号を多くした書き方は雰囲気優先です。相手に読ませたいときは、同じページの半角カタカナを使ってください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "漢字も変換できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "漢字と英字はそのまま残ります。変換できるのはひらがなとカタカナです。カタカナはひらがなと同じ字形になります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ギャル文字を普通のひらがなに戻せますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "戻せます。変換結果の「記号から戻す」と「半角から戻す」が、長い記号から順にひらがなへ戻します。"
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/fancy-text-generator.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
+  <script src="/assets/js/site-navigation.js" defer></script>
+</head>
+<body class="fancy-text-body gyaru-page">
+  <div class="tool-shell fancy-text-page">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+        </div>
+        <nav class="site-nav" aria-label="文字ツール">
+<a href="/">月文字</a>
+<a href="/fancy-text-generator/">おしゃれ文字</a>
+<a href="/fancy-text-generator/cursive/">筆記体</a>
+<a href="/gyaru-moji/" aria-current="page">ギャル文字</a>
+<a href="/zenkaku-hankaku-converter/">全角半角変換</a>
+<details class="nav-menu nav-menu-wide">
+<summary>コピペ</summary>
+<div class="nav-menu-panel">
+<a href="/kawaii-copy/">かわいいコピペ</a>
+<a href="/emoji-copy/">絵文字コピペ</a>
+<a href="/emoji-list/">絵文字一覧</a>
+<a href="/kaomoji/">顔文字</a>
+<a href="/special-characters/">特殊文字</a>
+<a href="/emoji-combinations/">絵文字組み合わせ</a>
+</div>
+</details>
+<a href="/slack-emoji-generator/">Slack</a>
+</nav>
+      </div>
+    </header>
+
+    <section class="hero fancy-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Gyaru Moji</p>
+        <h1>ギャル文字 変換・一覧</h1>
+        <p class="hero-copy">ひらがなを、記号を多くした書き方と、読みやすい半角カタカナの両方にします。カタカナも同じ字形になります。漢字はそのまま残ります。</p>
+        <div class="hero-preview-strip" aria-label="ギャル文字の見本">
+          <span>ｶゝωαﾚヽﾚヽ</span>
+          <span>ｶﾜｲｲ</span>
+          <span>ぉl±чoぅ</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="fancy-wrap">
+      <section class="fancy-app" aria-label="ギャル文字変換">
+        <div class="fancy-input-panel">
+          <div class="fancy-label-row">
+            <label for="gyaru-input">変換するひらがな</label>
+            <span class="fancy-count" data-gyaru-count>0/80</span>
+          </div>
+          <div class="fancy-input-shell">
+            <textarea id="gyaru-input" class="fancy-input" data-gyaru-input maxlength="80" rows="3" placeholder="かわいい">かわいい</textarea>
+            <button class="clear-input-btn" type="button" data-gyaru-clear>クリア</button>
+          </div>
+          <div class="sample-row" aria-label="見本の言葉">
+            <button type="button" data-gyaru-sample="かわいい">かわいい</button>
+            <button type="button" data-gyaru-sample="おはよう">おはよう</button>
+            <button type="button" data-gyaru-sample="ありがとう">ありがとう</button>
+            <button type="button" data-gyaru-sample="すき">すき</button>
+            <button type="button" data-gyaru-sample="おやすみ">おやすみ</button>
+          </div>
+        </div>
+        <p class="unicode-note">「記号から戻す」は、記号になっているギャル文字だけをひらがなに戻します。普通のひらがなや、小さい ぁ・ぅ はそのまま残ります。</p>
+        <div class="fancy-results-head">
+          <h2>変換結果</h2>
+        </div>
+        <div class="fancy-results" data-gyaru-results></div>
+      </section>
+    </main>
+
+    <section class="seo-section">
+      <h2>よく使う言葉</h2>
+      <p>変換しなくても、この五語は両方の書き方で置いてあります。記号多めは見た目、半角は読ませる用です。</p>
+      <div class="example-list">
+        <p class="example-line"><span data-static-value>ｶゝωαﾚヽﾚヽ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ｶﾜｲｲ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ぉl±чoぅ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ｵﾊﾖｳ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ぁL|ｶゝ゛┠ぅ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ｱﾘｶﾞﾄｳ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>￡(ｷ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ｽｷ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ぉゃ￡彡</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+        <p class="example-line"><span data-static-value>ｵﾔｽﾐ</span><button type="button" class="copy-output-btn" data-static-copy>コピー</button></p>
+      </div>
+
+      <h2>ギャル文字一覧</h2>
+      <p>一文字ずつ探すときはこの表です。左がもとの仮名、中央が記号多め、右が半角カタカナです。濁点は記号のうしろに付きます。</p>
+      <div class="gyaru-chart-wrap">
+        <table class="gyaru-chart">
+          <thead>
+            <tr><th>もとの字</th><th>記号多め</th><th>半角カタカナ</th></tr>
+          </thead>
+          <tbody>
+<tr><td>あ</td><td>ぁ</td><td>ｱ</td></tr>
+<tr><td>い</td><td>ﾚヽ</td><td>ｲ</td></tr>
+<tr><td>う</td><td>ぅ</td><td>ｳ</td></tr>
+<tr><td>え</td><td>ぇ</td><td>ｴ</td></tr>
+<tr><td>お</td><td>ぉ</td><td>ｵ</td></tr>
+<tr><td>か</td><td>ｶゝ</td><td>ｶ</td></tr>
+<tr><td>き</td><td>(ｷ</td><td>ｷ</td></tr>
+<tr><td>く</td><td>＜</td><td>ｸ</td></tr>
+<tr><td>け</td><td>ﾚﾅ</td><td>ｹ</td></tr>
+<tr><td>こ</td><td>⊇</td><td>ｺ</td></tr>
+<tr><td>さ</td><td>±</td><td>ｻ</td></tr>
+<tr><td>し</td><td>ι</td><td>ｼ</td></tr>
+<tr><td>す</td><td>￡</td><td>ｽ</td></tr>
+<tr><td>せ</td><td>世</td><td>ｾ</td></tr>
+<tr><td>そ</td><td>ξ</td><td>ｿ</td></tr>
+<tr><td>た</td><td>ﾅ=</td><td>ﾀ</td></tr>
+<tr><td>ち</td><td>干</td><td>ﾁ</td></tr>
+<tr><td>つ</td><td>⊃</td><td>ﾂ</td></tr>
+<tr><td>て</td><td>τ</td><td>ﾃ</td></tr>
+<tr><td>と</td><td>┠</td><td>ﾄ</td></tr>
+<tr><td>な</td><td>ﾅヽ</td><td>ﾅ</td></tr>
+<tr><td>に</td><td>二</td><td>ﾆ</td></tr>
+<tr><td>ぬ</td><td>йu</td><td>ﾇ</td></tr>
+<tr><td>ね</td><td>йё</td><td>ﾈ</td></tr>
+<tr><td>の</td><td>σ</td><td>ﾉ</td></tr>
+<tr><td>は</td><td>l±</td><td>ﾊ</td></tr>
+<tr><td>ひ</td><td>ん</td><td>ﾋ</td></tr>
+<tr><td>ふ</td><td>、ζ、</td><td>ﾌ</td></tr>
+<tr><td>へ</td><td>∧</td><td>ﾍ</td></tr>
+<tr><td>ほ</td><td>木</td><td>ﾎ</td></tr>
+<tr><td>ま</td><td>мα</td><td>ﾏ</td></tr>
+<tr><td>み</td><td>彡</td><td>ﾐ</td></tr>
+<tr><td>む</td><td>￡￡</td><td>ﾑ</td></tr>
+<tr><td>め</td><td>×</td><td>ﾒ</td></tr>
+<tr><td>も</td><td>м○</td><td>ﾓ</td></tr>
+<tr><td>や</td><td>ゃ</td><td>ﾔ</td></tr>
+<tr><td>ゆ</td><td>ф</td><td>ﾕ</td></tr>
+<tr><td>よ</td><td>чo</td><td>ﾖ</td></tr>
+<tr><td>ら</td><td>яα</td><td>ﾗ</td></tr>
+<tr><td>り</td><td>L|</td><td>ﾘ</td></tr>
+<tr><td>る</td><td>ゐ</td><td>ﾙ</td></tr>
+<tr><td>れ</td><td>яё</td><td>ﾚ</td></tr>
+<tr><td>ろ</td><td>з</td><td>ﾛ</td></tr>
+<tr><td>わ</td><td>ωα</td><td>ﾜ</td></tr>
+<tr><td>を</td><td>ё</td><td>ｦ</td></tr>
+<tr><td>ん</td><td>ω</td><td>ﾝ</td></tr>
+<tr><td>が</td><td>ｶゝ゛</td><td>ｶﾞ</td></tr>
+<tr><td>ぎ</td><td>(ｷ゛</td><td>ｷﾞ</td></tr>
+<tr><td>ぐ</td><td>＜゛</td><td>ｸﾞ</td></tr>
+<tr><td>げ</td><td>ﾚﾅ゛</td><td>ｹﾞ</td></tr>
+<tr><td>ご</td><td>⊇゛</td><td>ｺﾞ</td></tr>
+<tr><td>ざ</td><td>±゛</td><td>ｻﾞ</td></tr>
+<tr><td>じ</td><td>ι゛</td><td>ｼﾞ</td></tr>
+<tr><td>ず</td><td>￡゛</td><td>ｽﾞ</td></tr>
+<tr><td>ぜ</td><td>世゛</td><td>ｾﾞ</td></tr>
+<tr><td>ぞ</td><td>ξ゛</td><td>ｿﾞ</td></tr>
+<tr><td>だ</td><td>ﾅ=゛</td><td>ﾀﾞ</td></tr>
+<tr><td>ぢ</td><td>干゛</td><td>ﾁﾞ</td></tr>
+<tr><td>づ</td><td>⊃゛</td><td>ﾂﾞ</td></tr>
+<tr><td>で</td><td>τ゛</td><td>ﾃﾞ</td></tr>
+<tr><td>ど</td><td>┠゛</td><td>ﾄﾞ</td></tr>
+<tr><td>ば</td><td>l±゛</td><td>ﾊﾞ</td></tr>
+<tr><td>び</td><td>ん゛</td><td>ﾋﾞ</td></tr>
+<tr><td>ぶ</td><td>、ζ、゛</td><td>ﾌﾞ</td></tr>
+<tr><td>べ</td><td>∧゛</td><td>ﾍﾞ</td></tr>
+<tr><td>ぼ</td><td>木゛</td><td>ﾎﾞ</td></tr>
+<tr><td>ぱ</td><td>l±゜</td><td>ﾊﾟ</td></tr>
+<tr><td>ぴ</td><td>ん゜</td><td>ﾋﾟ</td></tr>
+<tr><td>ぷ</td><td>、ζ、゜</td><td>ﾌﾟ</td></tr>
+<tr><td>ぺ</td><td>∧゜</td><td>ﾍﾟ</td></tr>
+<tr><td>ぽ</td><td>木゜</td><td>ﾎﾟ</td></tr>
+<tr><td>ぁ</td><td>ぁ</td><td>ｧ</td></tr>
+<tr><td>ぃ</td><td>ｨ</td><td>ｨ</td></tr>
+<tr><td>ぅ</td><td>ぅ</td><td>ｩ</td></tr>
+<tr><td>ぇ</td><td>ｪ</td><td>ｪ</td></tr>
+<tr><td>ぉ</td><td>ｫ</td><td>ｫ</td></tr>
+<tr><td>っ</td><td>ｯ</td><td>ｯ</td></tr>
+<tr><td>ゃ</td><td>ｬ</td><td>ｬ</td></tr>
+<tr><td>ゅ</td><td>ｭ</td><td>ｭ</td></tr>
+<tr><td>ょ</td><td>ｮ</td><td>ｮ</td></tr>
+<tr><td>ゎ</td><td>ゎ</td><td>ﾜ</td></tr>
+<tr><td>ゔ</td><td>ｳﾞ</td><td>ｳﾞ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>使い分け</h2>
+      <div class="seo-grid">
+        <div class="seo-card"><strong>記号多め</strong><p>プロフィールの一言や、読まれなくても雰囲気が伝わればいい名前向きです。ひらがなの形が変わるので、長い文章には向きません。</p></div>
+        <div class="seo-card"><strong>半角カタカナ</strong><p>ｶﾜｲｲ のように、ガラケー時代の書き方です。友達に読ませるラインはこちらにしてください。</p></div>
+        <div class="seo-card"><strong>戻す</strong><p>もらったギャル文字を上の欄に貼ると、ひらがなに戻ります。カタカナで入れた言葉も、戻すとひらがなになります。</p></div>
+      </div>
+
+      <h2>よくある質問</h2>
+      <h3>ギャル文字は読めますか？</h3>
+      <p>記号を多くした書き方は雰囲気優先です。相手に読ませたいときは、同じページの半角カタカナを使ってください。</p>
+      <h3>漢字も変換できますか？</h3>
+      <p>漢字と英字はそのまま残ります。変換できるのはひらがなとカタカナです。英字を筆記体にしたいときは <a href="/fancy-text-generator/cursive/">筆記体 変換</a> です。</p>
+      <h3>ギャル文字を普通のひらがなに戻せますか？</h3>
+      <p>戻せます。記号になっている文字だけがひらがなに戻り、普通の文章はそのまま残ります。半角カタカナは「半角から戻す」で戻ります。</p>
+      <div class="category-links">
+        <a href="/fancy-text-generator/cursive/">筆記体 変換</a>
+        <a href="/fancy-text-generator/">おしゃれ文字</a>
+        <a href="/kawaii-copy/">かわいいコピペ</a>
+        <a href="/kaomoji/">顔文字</a>
+      </div>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/fancy-text-generator/cursive/"><strong>筆記体</strong><span>英字の名前を筆記体にする。</span></a>
+        <a class="related-card" href="/kawaii-copy/line-name/"><strong>LINEの名前</strong><span>記号で表示名を飾る。</span></a>
+        <a class="related-card" href="/special-characters/cute/"><strong>かわいい特殊文字</strong><span>文字を崩さず記号を足す。</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p>
+    </footer>
+  </div>
+  <div class="toast" data-toast></div>
+  <script src="/assets/js/gyaru-moji.js"></script>
+</body>
+</html>

@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘з(˘⌣˘ )",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘ ³˘)♡",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑˘ ³˘๑)",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(づ￣ ³￣)づ",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘з(˘⌣˘ )♡",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘ ³˘)ﾉ⌒♡",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑♡3♡๑)",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘ ³˘)❤",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡♥‿♥｡)",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(*˘ ³˘)♥",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ღ˘⌣˘ღ) chu",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "キス",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑˘ ³˘๑)•*¨*•.¸¸♪",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "キス",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘͈ ᵕ ˘͈♡)",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "キス",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ˘з(˘⌣˘ )ぎゅ",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "キス",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(♡˙︶˙♡)",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "キス",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ちゅ( ˘ ³˘)♥",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "キス(っ˘з(˘⌣˘ )",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "投げキス( ˘ ³˘)♡",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいすき(๑˘ ³˘๑)",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すき(づ￣ ³￣)づ",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "会いたい(っ˘з(˘⌣˘ )♡",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "きゅん( ˘ ³˘)ﾉ⌒♡",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "らぶ(๑♡3♡๑)",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おやすみのちゅ( ˘ ³˘)❤",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとうちゅ(｡♥‿♥｡)",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "キス",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "投げキス (っ˘з(˘⌣˘ )♡",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいすき ( ˘ ³˘)ﾉ⌒♡",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すき (๑♡3♡๑)",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "会いたい ( ˘ ³˘)❤",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "きゅん (｡♥‿♥｡)",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "らぶ (*˘ ³˘)♥",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おやすみのちゅ (ღ˘⌣˘ღ) chu",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとうちゅ (๑˘ ³˘๑)•*¨*•.¸¸♪",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ちゅ ( ˘ ³˘)ﾉ⌒♡",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいすき (๑♡3♡๑)",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "投げキス ( ˘ ³˘)❤",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "好きだよ (｡♥‿♥｡)",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "愛してる (*˘ ³˘)♥",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "照れるね (ღ˘⌣˘ღ) chu",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "キス",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

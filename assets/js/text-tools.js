@@ -258,8 +258,15 @@
   }
 
   function appendToDraft(text, options = {}) {
-    const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
-    const nextValue = `${draft.value}${spacer}${text}`.trimStart();
+    const multiline = /[\r\n]/.test(text);
+    let nextValue;
+    if (multiline) {
+      const base = draft.value.replace(/[ \t]+$/g, '').replace(/\n+$/, '');
+      nextValue = base ? `${base}\n${text.replace(/^\n+/, '')}` : text;
+    } else {
+      const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
+      nextValue = `${draft.value}${spacer}${text}`.trimStart();
+    }
     if (draftMaxLength && nextValue.length > draftMaxLength) {
       if (!options.silentLimit) showToast(ui.draftLimit(draftMaxLength));
       return false;
@@ -309,6 +316,35 @@
     }).join('');
   }
 
+  function isPlaceholderLabel(label) {
+    return /^\S.{0,24}\s+\d+$/.test(String(label || '').trim());
+  }
+
+  function visibleLabel(label) {
+    if (!label || isPlaceholderLabel(label)) return '';
+    return label;
+  }
+
+  function safeDecode(value) {
+    try {
+      return decodeURIComponent(value || '');
+    } catch (error) {
+      return value || '';
+    }
+  }
+
+  const staticItems = Boolean(grid?.hasAttribute('data-static-items'));
+  const staticCards = staticItems ? Array.from(grid.querySelectorAll('[data-copy]')) : [];
+  let noResultsNode = null;
+  if (staticItems) {
+    noResultsNode = document.createElement('div');
+    noResultsNode.className = 'no-results';
+    noResultsNode.dataset.noResults = '';
+    noResultsNode.hidden = true;
+    noResultsNode.textContent = ui.noResults;
+    grid.appendChild(noResultsNode);
+  }
+
   function itemMatches(item, query) {
     if (!query) return true;
     const haystack = [item.value, item.label, ...(item.tags || [])].map(normalize).join(' ');
@@ -342,7 +378,38 @@
     `;
   }
 
+  function renderStaticGrid() {
+    const query = normalize(searchInput.value);
+    const matched = staticCards.filter((card) => {
+      const item = {
+        value: safeDecode(card.dataset.copy),
+        label: card.dataset.label || '',
+        category: card.dataset.category || '',
+        tags: (card.dataset.tags || '').split(',').filter(Boolean)
+      };
+      return categoryMatches(item) && itemMatches(item, query);
+    });
+    const totalPages = Math.max(1, Math.ceil(matched.length / pageSize));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const visible = new Set(matched.slice((currentPage - 1) * pageSize, currentPage * pageSize));
+    staticCards.forEach((card) => {
+      const show = visible.has(card);
+      card.hidden = !show;
+      const stack = card.parentElement?.classList.contains('copy-stack') ? card.parentElement : null;
+      if (stack) stack.hidden = !show;
+    });
+    grid.querySelectorAll('[data-grid-group]').forEach((group) => {
+      group.hidden = !group.querySelector('.copy-card:not([hidden])');
+    });
+    if (noResultsNode) noResultsNode.hidden = matched.length > 0;
+    renderPagination(matched.length);
+  }
+
   function renderGrid() {
+    if (staticItems) {
+      renderStaticGrid();
+      return;
+    }
     const items = filteredItems();
     if (!items.length) {
       grid.innerHTML = `<div class="no-results">${ui.noResults}</div>`;
@@ -352,12 +419,16 @@
     const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
     if (currentPage > totalPages) currentPage = totalPages;
     const pageItems = items.slice((currentPage - 1) * pageSize, currentPage * pageSize);
-    grid.innerHTML = pageItems.map((item) => `
-      <button class="copy-card" type="button" data-copy="${encodeURIComponent(item.value)}" data-label="${item.label || ''}">
-        <span class="copy-value">${item.value}</span>
-        <span class="copy-label">${item.label || ui.fallbackLabel}</span>
+    grid.innerHTML = pageItems.map((item) => {
+      const label = visibleLabel(item.label);
+      const wide = String(item.value).includes('\n');
+      return `
+      <button class="copy-card${wide ? ' copy-card-wide' : ''}" type="button" data-copy="${encodeURIComponent(item.value)}" data-label="${escapeHtml(label)}">
+        <span class="copy-value${wide ? ' copy-value-pre' : ''}">${escapeHtml(item.value)}</span>
+        ${label ? `<span class="copy-label">${escapeHtml(label)}</span>` : `<span class="copy-label">${escapeHtml(ui.fallbackLabel)}</span>`}
       </button>
-    `).join('');
+    `;
+    }).join('');
     renderPagination(items.length);
   }
 

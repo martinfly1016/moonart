@@ -8,20 +8,16 @@ window.MojiMoonToolData = {
       "query": "びっくり"
     },
     {
-      "label": "可愛い",
-      "query": "可愛い"
+      "label": "えっ",
+      "query": "えっ"
     },
     {
-      "label": "LINE",
-      "query": "LINE"
+      "label": "まじ",
+      "query": "まじ"
     },
     {
       "label": "返信",
       "query": "返信"
-    },
-    {
-      "label": "SNS",
-      "query": "SNS"
     }
   ],
   "categories": [
@@ -30,423 +26,763 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
-      "id": "basic",
-      "label": "定番"
+      "id": "small",
+      "label": "えっ"
+    },
+    {
+      "id": "big",
+      "label": "まじ"
     },
     {
       "id": "cute",
-      "label": "可愛い"
+      "label": "かわいい"
     },
     {
       "id": "reply",
       "label": "返信"
     },
     {
-      "id": "short",
-      "label": "短文"
+      "id": "more",
+      "label": "ほか"
     }
   ],
-  "pageSize": 48,
+  "pageSize": 160,
   "items": [
     {
-      "value": "(๑°ㅁ°๑)‼",
-      "label": "びっくり 1",
-      "category": "basic",
+      "value": "(；・∀・)",
+      "label": "軽く驚く",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(⊙_⊙)",
-      "label": "びっくり 2",
-      "category": "basic",
+      "value": "(ﾟωﾟ)",
+      "label": "ぽかん",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "Σ( °o°)",
-      "label": "びっくり 3",
-      "category": "basic",
+      "value": "(●´ω｀●)",
+      "label": "目を丸くして固まる",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(꒪⌓꒪)",
-      "label": "びっくり 4",
-      "category": "basic",
+      "value": "(๑°o°๑)",
+      "label": "口が丸い",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(°ロ°) !",
-      "label": "びっくり 5",
-      "category": "basic",
+      "value": "(ﾟoﾟ)",
+      "label": "小さい驚き",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
-    },
-    {
-      "value": "ฅ(º ﾛ º ฅ)",
-      "label": "びっくり 6",
-      "category": "basic",
-      "tags": [
-        "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑°⌓°๑)",
-      "label": "びっくり 7",
-      "category": "basic",
+      "label": "眉が上がる",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "∑(O_O;)",
-      "label": "びっくり 8",
-      "category": "basic",
+      "value": "(°o°)",
+      "label": "無言の驚き",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(੭ ᐕ)੭",
-      "label": "びっくり 9",
-      "category": "basic",
+      "value": "(°0°)",
+      "label": "数字の口",
+      "category": "small",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "えっ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(｡･о･｡)",
-      "label": "びっくり 10",
-      "category": "basic",
+      "value": "(ﾟдﾟ)",
+      "label": "目が見開いている",
+      "category": "big",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(⊙_⊙)",
+      "label": "丸い目",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(°ロ°)",
+      "label": "口が四角",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑°ㅁ°๑)",
+      "label": "口を開けたまま",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(꒪⌓꒪)",
+      "label": "目が揺れている",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Σ(ﾟДﾟ)",
-      "label": "びっくり 11",
-      "category": "basic",
+      "label": "のけぞる",
+      "category": "big",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(ﾟoﾟ;;",
-      "label": "びっくり 12",
-      "category": "basic",
+      "value": "(￣□￣;)",
+      "label": "焦って驚く",
+      "category": "big",
       "tags": [
         "びっくり",
-        "顔文字",
-        "コピペ"
-      ]
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "(⊙ꇴ⊙)",
-      "label": "可愛いびっくり 1",
-      "category": "cute",
+      "value": "(ﾉ≧∀≦)ﾉ",
+      "label": "飛び上がる",
+      "category": "big",
       "tags": [
         "びっくり",
-        "可愛い",
-        "LINE"
-      ]
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "( ﾟдﾟ)",
-      "label": "可愛いびっくり 2",
-      "category": "cute",
+      "value": "∑(O_O;)",
+      "label": "汗をかいて驚く",
+      "category": "big",
       "tags": [
         "びっくり",
-        "可愛い",
-        "LINE"
-      ]
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(°o°:)",
+      "label": "固まる",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(☉_☉)",
+      "label": "目が点",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(◎_◎;)",
+      "label": "目がぐるぐるする前",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(°Д°)",
-      "label": "可愛いびっくり 3",
+      "label": "大きい口",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(°□°)",
+      "label": "口が開いたまま",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(●o●)",
+      "label": "目も口も丸い",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(ﾟﾛﾟ)",
+      "label": "カタカナの口",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(；ﾟдﾟ)",
+      "label": "汗と驚き",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(°△°)",
+      "label": "口が三角の大驚き",
+      "category": "big",
+      "tags": [
+        "びっくり",
+        "まじ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(☆_☆)",
+      "label": "目が星になる",
       "category": "cute",
       "tags": [
         "びっくり",
-        "可愛い",
-        "LINE"
-      ]
+        "かわいい"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(✧∀✧)",
+      "label": "うれしい驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡•́△•̀｡)",
+      "label": "口が三角",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(☆▽☆)",
+      "label": "星目で笑う驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ(ﾟдﾟ)",
+      "label": "短い返事",
+      "category": "reply",
+      "tags": [
+        "返信",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "まじ(⊙_⊙)",
+      "label": "信じられない",
+      "category": "reply",
+      "tags": [
+        "返信",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "知らなかった(ﾟωﾟ)",
+      "label": "初耳",
+      "category": "reply",
+      "tags": [
+        "返信",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "すごい(✧∀✧)",
+      "label": "ほめたあとの驚き",
+      "category": "reply",
+      "tags": [
+        "返信",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "待って(；ﾟдﾟ)",
+      "label": "話を止める",
+      "category": "reply",
+      "tags": [
+        "返信",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えー(°□°)",
+      "label": "声に出す驚き",
+      "category": "reply",
+      "tags": [
+        "返信",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑°ㅁ°๑)‼",
+      "label": "(๑°ㅁ°๑)‼",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "Σ( °o°)",
+      "label": "Σ( °o°)",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(°ロ°) !",
+      "label": "(°ロ°) !",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ฅ(º ﾛ º ฅ)",
+      "label": "ฅ(º ﾛ º ฅ)",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(੭ ᐕ)੭",
+      "label": "(੭ ᐕ)੭",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡･о･｡)",
+      "label": "(｡･о･｡)",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(ﾟoﾟ;;",
+      "label": "(ﾟoﾟ;;",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(⊙ꇴ⊙)",
+      "label": "(⊙ꇴ⊙)",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "( ﾟдﾟ)",
+      "label": "( ﾟдﾟ)",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑º ﾛ º๑)",
-      "label": "可愛いびっくり 4",
-      "category": "cute",
+      "label": "(๑º ﾛ º๑)",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "可愛い",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "えっ(๑°ㅁ°๑)‼",
       "label": "えっの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "びっくり(⊙_⊙)",
       "label": "びっくりの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "まじでΣ( °o°)",
       "label": "まじでの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "知らなかった(꒪⌓꒪)",
       "label": "知らなかったの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すごい(°ロ°) !",
       "label": "すごいの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ほんとにฅ(º ﾛ º ฅ)",
       "label": "ほんとにの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "衝撃(๑°⌓°๑)",
       "label": "衝撃の返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "急すぎる∑(O_O;)",
       "label": "急すぎるの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "びっくりした(੭ ᐕ)੭",
       "label": "びっくりしたの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "そんなことある(｡･о･｡)",
       "label": "そんなことあるの返信",
-      "category": "reply",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "返信",
-        "LINE"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "まじで ฅ(º ﾛ º ฅ)",
       "label": "まじでの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "知らなかった (๑°⌓°๑)",
       "label": "知らなかったの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すごい ∑(O_O;)",
       "label": "すごいの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ほんとに (੭ ᐕ)੭",
       "label": "ほんとにの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "衝撃 (｡･о･｡)",
       "label": "衝撃の短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "急すぎる Σ(ﾟДﾟ)",
       "label": "急すぎるの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "びっくりした (ﾟoﾟ;;",
       "label": "びっくりしたの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "そんなことある (⊙ꇴ⊙)",
       "label": "そんなことあるの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "びっくりした (๑°⌓°๑)",
       "label": "びっくりしたの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すごいね ∑(O_O;)",
       "label": "すごいねの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "まさか (੭ ᐕ)੭",
       "label": "まさかの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "えっ本当 (｡･о･｡)",
       "label": "えっ本当の短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "予想外 Σ(ﾟДﾟ)",
       "label": "予想外の短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "驚いた (ﾟoﾟ;;",
       "label": "驚いたの短文",
-      "category": "short",
+      "category": "more",
       "tags": [
-        "びっくり",
-        "SNS",
-        "短文"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

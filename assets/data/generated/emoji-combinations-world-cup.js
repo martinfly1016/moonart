@@ -62,7 +62,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "応援してる 🇯🇵⚽️",
@@ -74,7 +76,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勝利を信じて ⚽️🌟",
@@ -86,7 +90,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "がんばれ日本 🇯🇵🏆",
@@ -98,7 +104,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "one team ⚽️🤍",
@@ -110,7 +118,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "vamos! ⚽️🔥",
@@ -122,7 +132,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "全力応援 📣⚽️✨",
@@ -134,7 +146,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "届け、この声 📣🇯🇵",
@@ -146,7 +160,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "青く燃えろ 💙⚽️",
@@ -158,7 +174,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "believe 🏆✨",
@@ -170,7 +188,9 @@ window.MojiMoonToolData = {
         "応援",
         "日本代表",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "GOAL! ⚽️🔥",
@@ -182,7 +202,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゴールきた ⚽️✨",
@@ -194,7 +216,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勝ったああ 🏆⚽️",
@@ -206,7 +230,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ナイスシュート ⚽️🌟",
@@ -218,7 +244,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "最高の一撃 ⚽️🔥",
@@ -230,7 +258,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "逆転を信じる ⚽️💫",
@@ -242,7 +272,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "winner mood 🏆✨",
@@ -254,7 +286,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "goal mood ⚽️🎉",
@@ -266,7 +300,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "歓喜の瞬間 🎉⚽️",
@@ -278,7 +314,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "この一点に全部 ⚽️🤍",
@@ -290,7 +328,9 @@ window.MojiMoonToolData = {
         "ゴール",
         "勝利",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "match day ⚽️📣",
@@ -302,7 +342,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "観戦準備OK ⚽️☕️",
@@ -314,7 +356,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "寝不足確定 🌙⚽️",
@@ -326,7 +370,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今夜はサッカー ⚽️✨",
@@ -338,7 +384,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "kick off ⚽️🔥",
@@ -350,7 +398,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "前半スタート ⚽️",
@@ -362,7 +412,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "後半勝負 ⚽️💪",
@@ -374,7 +426,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "PKまで見届ける ⚽️🫧",
@@ -386,7 +440,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "みんなで観戦 📺⚽️",
@@ -398,7 +454,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "world cup night 🌙⚽️",
@@ -410,7 +468,9 @@ window.MojiMoonToolData = {
         "観戦",
         "試合",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "決勝の夜 🏆⚽️",
@@ -423,7 +483,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "final mood 🏆✨",
@@ -436,7 +498,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "世界一へ ⚽️🏆",
@@ -449,7 +513,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "優勝まであと少し 🏆🔥",
@@ -462,7 +528,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "history maker ⚽️🏆",
@@ -475,7 +543,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "トロフィーを掲げて 🏆✨",
@@ -488,7 +558,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "最後まで信じる ⚽️🤍",
@@ -501,7 +573,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "champion dream 🏆💫",
@@ -514,7 +588,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "歓声の先へ 📣🏆",
@@ -527,7 +603,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "最高のフィナーレ ⚽️✨",
@@ -540,7 +618,9 @@ window.MojiMoonToolData = {
         "優勝",
         "トロフィー",
         "絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

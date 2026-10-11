@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(｡•ᴗ•｡)໒꒱",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(՞ ܸ. .ܸ՞)໒꒱",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒰ྀིっ˕ -｡꒱ྀི১",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ( ˶ˆᗜˆ˵ )໒꒱",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(୨୧ᵕ̤ᴗᵕ̤)໒꒱",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒰ྀི´ ˘ ` ꒱ྀི১",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(*´˘`*)໒꒱",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒰ྀི ˶ᵔ ᵕ ᵔ˶ ꒱ྀི১",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(ღ˘⌣˘ღ)໒꒱",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒰ྀི ᵕ ᵕ ꒱ྀི১",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(๑•ᴗ•๑)໒꒱",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "天使",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒰ྀི > ̫ < ꒱ྀི১",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "天使",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ(｡･ω･｡)໒꒱",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "天使",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒰ྀི ̥_ ̫ _ ̥ ꒱ྀི১",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "天使",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ( ˘͈ ᵕ ˘͈ )໒꒱",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "天使",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "天使꒰ঌ( ˊ˘ˋ)໒꒱",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "尊い꒰ঌ(｡•ᴗ•｡)໒꒱",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "白い気持ち꒰ঌ(՞ ܸ. .ܸ՞)໒꒱",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "かわいい໒꒰ྀིっ˕ -｡꒱ྀི১",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "羽つき꒰ঌ( ˶ˆᗜˆ˵ )໒꒱",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やさしい꒰ঌ(୨୧ᵕ̤ᴗᵕ̤)໒꒱",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "透明感໒꒰ྀི´ ˘ ` ꒱ྀི১",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推しが天使꒰ঌ(*´˘`*)໒꒱",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう天使໒꒰ྀི ˶ᵔ ᵕ ᵔ˶ ꒱ྀི১",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれ天使꒰ঌ(ღ˘⌣˘ღ)໒꒱",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "天使",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "白い気持ち ꒰ঌ(୨୧ᵕ̤ᴗᵕ̤)໒꒱",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "かわいい ໒꒰ྀི´ ˘ ` ꒱ྀི১",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "羽つき ꒰ঌ(*´˘`*)໒꒱",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やさしい ໒꒰ྀི ˶ᵔ ᵕ ᵔ˶ ꒱ྀི১",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "透明感 ꒰ঌ(ღ˘⌣˘ღ)໒꒱",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推しが天使 ໒꒰ྀི ᵕ ᵕ ꒱ྀི১",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう天使 ꒰ঌ(๑•ᴗ•๑)໒꒱",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれ天使 ໒꒰ྀི > ̫ < ꒱ྀི১",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "天使みたい ໒꒰ྀི´ ˘ ` ꒱ྀི১",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やさしいね ꒰ঌ(*´˘`*)໒꒱",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "癒やされた ໒꒰ྀི ˶ᵔ ᵕ ᵔ˶ ꒱ྀི১",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いい子だね ꒰ঌ(ღ˘⌣˘ღ)໒꒱",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "見守ってる ໒꒰ྀི ᵕ ᵕ ꒱ྀི১",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ふわふわ ꒰ঌ(๑•ᴗ•๑)໒꒱",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "天使",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

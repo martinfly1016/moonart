@@ -62,7 +62,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "②",
@@ -74,7 +76,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "③",
@@ -86,7 +90,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "④",
@@ -98,7 +104,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⑤",
@@ -110,7 +118,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⑥",
@@ -122,7 +132,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⑦",
@@ -134,7 +146,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⑧",
@@ -146,7 +160,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⑨",
@@ -158,7 +174,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⑩",
@@ -170,7 +188,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❶",
@@ -182,7 +202,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❷",
@@ -194,7 +216,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❸",
@@ -206,7 +230,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❹",
@@ -218,7 +244,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❺",
@@ -230,7 +258,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❻",
@@ -242,7 +272,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❼",
@@ -254,7 +286,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❽",
@@ -266,7 +300,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❾",
@@ -278,7 +314,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "❿",
@@ -290,7 +328,9 @@ window.MojiMoonToolData = {
         "コピペ",
         "丸数字 コピペ",
         "数字フォント"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅰ",
@@ -301,7 +341,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅱ",
@@ -312,7 +354,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅲ",
@@ -323,7 +367,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅳ",
@@ -334,7 +380,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅴ",
@@ -345,7 +393,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅵ",
@@ -356,7 +406,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅶ",
@@ -367,7 +419,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅷ",
@@ -378,7 +432,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅸ",
@@ -389,7 +445,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "Ⅹ",
@@ -400,7 +458,9 @@ window.MojiMoonToolData = {
         "番号",
         "数字フォント",
         "特殊文字 数字 コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "① profile",
@@ -409,7 +469,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "② link",
@@ -418,7 +480,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "③ memo",
@@ -427,7 +491,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "No.1 ❶",
@@ -436,7 +502,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "step ①",
@@ -445,7 +513,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "rank Ⅰ",
@@ -454,7 +524,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "list ❶",
@@ -463,7 +535,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し①",
@@ -472,7 +546,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "予定②",
@@ -481,7 +557,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "メモ③",
@@ -490,7 +568,9 @@ window.MojiMoonToolData = {
       "tags": [
         "番号",
         "リスト"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

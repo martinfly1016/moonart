@@ -320,6 +320,67 @@ a {
   line-height: 1.35;
 }
 
+.item-grid.has-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.grid-group-title {
+  margin: 2px 2px 10px;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.grid-group-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(126px, 1fr));
+  gap: 10px;
+}
+
+.copy-card-wide,
+.copy-stack.copy-card-wide {
+  grid-column: 1 / -1;
+}
+
+.copy-value-pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.copy-stack {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bead-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: #9a3412;
+  border: 1px solid #fdba74;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.bead-cta:hover {
+  background: #ffedd5;
+}
+
 .no-results {
   grid-column: 1 / -1;
   padding: 30px;

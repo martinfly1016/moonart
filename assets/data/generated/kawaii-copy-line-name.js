@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "短め"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ᵕ̈",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "顔"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name 𓂃",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "淡色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡ name",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "ハート"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ୨୧",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "リボン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ✧",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ꕤ",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "花"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ⌇",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "シンプル"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name 𖤐",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ name ꒱",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "LINE",
         "名前",
         "括弧"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゆるく返信します ᵕ̈",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "返信"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日もおつかれさま 𓂃",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "お疲れ様"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "通知ゆっくりです ☾",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "通知"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "好きなものだけ ♡",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "しばらく低浮上 𓈒𓏸",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "低浮上"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "まったり更新中 ✎",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "更新"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日もいい日 𖤐",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "前向き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "返信遅めです ᵕ̈",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "返信"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "小さな幸せ集め ꕤ",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "日常"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ひとことメモ 𓂃",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "ひとこと",
         "ステメ",
         "メモ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "ハート"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "୨୧",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "リボン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓂃",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ꕤ",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "花"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✧",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "キラキラ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𖤐",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⌇",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "区切り"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ᵕ̈",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "顔"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒱",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "天使"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓈒𓏸",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "特殊文字",
         "記号",
         "淡色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おやすみ ☾",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "おやすみ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おはよう ☀",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "おはよう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "感謝です 𓂃",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "ありがとう"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "またね ᵕ̈",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "挨拶"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "すき ♡",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "がんばる ✧",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "応援"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ひと休み ☕",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "日常"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "記録用 ✎",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "メモ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し活中 ୨୧",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "推し活"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "低浮上 𓂃",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "短め",
         "LINE",
         "低浮上"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

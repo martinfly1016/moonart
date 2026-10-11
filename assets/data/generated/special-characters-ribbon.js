@@ -4,32 +4,20 @@ window.MojiMoonToolData = {
   "draftMaxLength": 220,
   "quickFilters": [
     {
-      "label": "ˏˋ ˎˊ",
-      "query": "ˏˋ ˎˊ"
-    },
-    {
-      "label": "ドットリボン",
-      "query": "ドットリボン"
-    },
-    {
       "label": "リボン",
       "query": "リボン"
     },
     {
+      "label": "ドット",
+      "query": "ドット"
+    },
+    {
+      "label": "名前",
+      "query": "名前"
+    },
+    {
       "label": "量産型",
-      "query": "量産型"
-    },
-    {
-      "label": "可愛い",
-      "query": "可愛い"
-    },
-    {
-      "label": "ハート",
-      "query": "ハート"
-    },
-    {
-      "label": "推し活",
-      "query": "推し活"
+      "query": "量産"
     }
   ],
   "categories": [
@@ -38,383 +26,661 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
-      "id": "basic",
-      "label": "リボン"
+      "id": "mark",
+      "label": "記号"
     },
     {
-      "id": "cute",
-      "label": "可愛い"
+      "id": "name",
+      "label": "名前"
     },
     {
-      "id": "line",
-      "label": "ライン"
+      "id": "dot",
+      "label": "ドットリボン"
     },
     {
-      "id": "profile",
-      "label": "プロフィール"
+      "id": "emoji",
+      "label": "絵文字"
+    },
+    {
+      "id": "more",
+      "label": "ほか"
     }
   ],
-  "pageSize": 48,
+  "pageSize": 160,
   "items": [
     {
       "value": "୨୧",
-      "label": "リボン記号 1",
-      "category": "basic",
+      "label": "いちばん貼られている結び目",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "୨ৎ",
-      "label": "リボン記号 2",
-      "category": "basic",
+      "label": "片側がほどけた形",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ꔫ",
-      "label": "リボン記号 3",
-      "category": "basic",
+      "label": "小さな花結び",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⋈",
-      "label": "リボン記号 4",
-      "category": "basic",
+      "label": "交差したリボン",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʚɞ",
-      "label": "リボン記号 5",
-      "category": "basic",
+      "label": "羽のような輪",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʚ♡ɞ",
-      "label": "リボン記号 6",
-      "category": "basic",
+      "label": "ハートを包んだ輪",
+      "category": "mark",
       "tags": [
         "リボン",
-        "特殊文字"
-      ]
+        "特殊文字",
+        "ハート"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ ໒꒱",
-      "label": "リボン記号 7",
-      "category": "basic",
+      "label": "羽のフレーム",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ა ໒꒱",
-      "label": "リボン記号 8",
-      "category": "basic",
+      "label": "手で包むフレーム",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "˗ˏˋ ୨୧ ˎˊ˗",
-      "label": "リボン記号 9",
-      "category": "basic",
+      "value": "🎀",
+      "label": "色つきのリボン絵文字",
+      "category": "mark",
       "tags": [
         "リボン",
-        "特殊文字"
-      ]
+        "特殊文字",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "ꕤ୭*",
-      "label": "リボン記号 10",
-      "category": "basic",
+      "value": "🎗️",
+      "label": "ループのリボン",
+      "category": "mark",
       "tags": [
         "リボン",
         "特殊文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𐙚",
+      "label": "極小の結び目",
+      "category": "mark",
+      "tags": [
+        "リボン",
+        "特殊文字",
+        "小さい"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ꨄ",
+      "label": "ハートに見えるリボン",
+      "category": "mark",
+      "tags": [
+        "リボン",
+        "特殊文字",
+        "ハート"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡୨୧♡",
-      "label": "可愛いリボン 1",
-      "category": "cute",
+      "label": "ハートで挟んだ結び目",
+      "category": "name",
       "tags": [
         "リボン",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "୨୧⑅*",
-      "label": "可愛いリボン 2",
-      "category": "cute",
-      "tags": [
-        "リボン",
-        "可愛い"
-      ]
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "₊˚୨୧˚₊",
-      "label": "可愛いリボン 3",
-      "category": "cute",
+      "label": "光を足した名前飾り",
+      "category": "name",
       "tags": [
         "リボン",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "୨୧ 𓂃",
-      "label": "可愛いリボン 4",
-      "category": "cute",
-      "tags": [
-        "リボン",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "𓂃 ୨୧",
-      "label": "可愛いリボン 5",
-      "category": "cute",
-      "tags": [
-        "リボン",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "୨୧⋆｡˚",
-      "label": "可愛いリボン 6",
-      "category": "cute",
-      "tags": [
-        "リボン",
-        "可愛い"
-      ]
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ ୨୧ ꒱",
-      "label": "可愛いリボン 7",
-      "category": "cute",
+      "label": "丸括弧の中のリボン",
+      "category": "name",
       "tags": [
         "リボン",
-        "可愛い"
-      ]
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "୨୧♡୨୧",
-      "label": "可愛いリボン 8",
-      "category": "cute",
+      "value": "˗ˏˋ ୨୧ ˎˊ˗",
+      "label": "両側に尾がある",
+      "category": "name",
       "tags": [
         "リボン",
-        "可愛い"
-      ]
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "୨ৎ˚₊",
-      "label": "可愛いリボン 9",
-      "category": "cute",
+      "value": "୨୧ name ୨୧",
+      "label": "名前を入れる型",
+      "category": "name",
       "tags": [
         "リボン",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "ʚ ୨୧ ɞ",
-      "label": "可愛いリボン 10",
-      "category": "cute",
-      "tags": [
-        "リボン",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "୨୧ ┈┈ ୨୧",
-      "label": "リボンライン 1",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "୨୧ 𓂃 ୨୧",
-      "label": "リボンライン 2",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "♡ ୨୧ ♡",
-      "label": "リボンライン 3",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "୨୧ ୨୧ ୨୧",
-      "label": "リボンライン 4",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "₊˚୨୧˚₊ 𓂃",
-      "label": "リボンライン 5",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "꒰ ୨୧ ꒱ 𓈒𓏸",
-      "label": "リボンライン 6",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "୨୧ *⑅",
-      "label": "リボンライン 7",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "𓂃 ୨ৎ 𓂃",
-      "label": "リボンライン 8",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "୨୧⋆｡˚✩",
-      "label": "リボンライン 9",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "ʚ♡ɞ 𓂃",
-      "label": "リボンライン 10",
-      "category": "line",
-      "tags": [
-        "リボン",
-        "ライン"
-      ]
-    },
-    {
-      "value": "name ୨୧",
-      "label": "リボンプロフィール 1",
-      "category": "profile",
-      "tags": [
-        "リボン",
-        "プロフィール"
-      ]
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し ୨୧",
-      "label": "リボンプロフィール 2",
-      "category": "profile",
+      "label": "推しの欄の印",
+      "category": "name",
       "tags": [
         "リボン",
-        "プロフィール"
-      ]
-    },
-    {
-      "value": "bio 𓂃୨୧",
-      "label": "リボンプロフィール 3",
-      "category": "profile",
-      "tags": [
-        "リボン",
-        "プロフィール"
-      ]
-    },
-    {
-      "value": "ribbon mood ୨ৎ",
-      "label": "リボンプロフィール 4",
-      "category": "profile",
-      "tags": [
-        "リボン",
-        "プロフィール"
-      ]
-    },
-    {
-      "value": "かわいい ʚ♡ɞ",
-      "label": "リボンプロフィール 5",
-      "category": "profile",
-      "tags": [
-        "リボン",
-        "プロフィール"
-      ]
+        "名前",
+        "量産"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "量産型 ୨୧",
-      "label": "リボンプロフィール 6",
-      "category": "profile",
+      "label": "量産型プロフィールの印",
+      "category": "name",
       "tags": [
         "リボン",
-        "プロフィール"
-      ]
+        "名前",
+        "量産"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ʚ ୨୧ ɞ",
+      "label": "輪の中の結び目",
+      "category": "name",
+      "tags": [
+        "リボン",
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓂃 ୨ৎ 𓂃",
+      "label": "余白の多い名前",
+      "category": "name",
+      "tags": [
+        "リボン",
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⋆⸜ ୨୧ ⸝⋆",
+      "label": "中央にリボンを置く",
+      "category": "name",
+      "tags": [
+        "リボン",
+        "名前"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⣠⣄  ⣠⣄\n⠙⠋⠴⠛⠋\n  ⠈⠃",
+      "label": "輪が二つの小さなリボン",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": true,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "╭╮╭╮\n╰╯╰╯\n ╰╯",
+      "label": "線で描いた輪",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": true,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "♡⠀♡⠀♡",
+      "label": "点の間隔で並べたハート",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン",
+        "ハート"
+      ],
+      "wide": false,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "⠤⠤♡⠤⠤",
+      "label": "点線の中央にハート",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": false,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "· · ♡ · ·",
+      "label": "まばらなドットリボン",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": false,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "⣿ 🎀 ⣿",
+      "label": "ブロックで挟んだ絵文字",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": false,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "═╗  ╔═\n ╚╗╔╝\n  ╚╝",
+      "label": "左右に尾のある結び",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": true,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "˚₊· 🎀 ·₊˚",
+      "label": "絵文字リボンに点を添える",
+      "category": "dot",
+      "tags": [
+        "ドットリボン",
+        "ドット",
+        "リボン"
+      ],
+      "wide": false,
+      "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-ribbon"
+    },
+    {
+      "value": "🎀💗",
+      "label": "ピンクを足す",
+      "category": "emoji",
+      "tags": [
+        "リボン",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎀🤍",
+      "label": "白とリボン",
+      "category": "emoji",
+      "tags": [
+        "リボン",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎁🎀",
+      "label": "包みとリボン",
+      "category": "emoji",
+      "tags": [
+        "リボン",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧸🎀",
+      "label": "ぬいぐるみとリボン",
+      "category": "emoji",
+      "tags": [
+        "リボン",
+        "絵文字",
+        "かわいい"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧ ┈┈ ୨୧",
+      "label": "リボンの区切り線",
+      "category": "emoji",
+      "tags": [
+        "リボン",
+        "絵文字",
+        "区切り"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "♡ ୨୧ ♡",
+      "label": "ハートとリボンの一行",
+      "category": "emoji",
+      "tags": [
+        "リボン",
+        "絵文字",
+        "ハート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ꕤ୭*",
+      "label": "ꕤ୭*",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧⑅*",
+      "label": "୨୧⑅*",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧ 𓂃",
+      "label": "୨୧ 𓂃",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓂃 ୨୧",
+      "label": "𓂃 ୨୧",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧⋆｡˚",
+      "label": "୨୧⋆｡˚",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧♡୨୧",
+      "label": "୨୧♡୨୧",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨ৎ˚₊",
+      "label": "୨ৎ˚₊",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧ 𓂃 ୨୧",
+      "label": "୨୧ 𓂃 ୨୧",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧ ୨୧ ୨୧",
+      "label": "୨୧ ୨୧ ୨୧",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "₊˚୨୧˚₊ 𓂃",
+      "label": "₊˚୨୧˚₊ 𓂃",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "꒰ ୨୧ ꒱ 𓈒𓏸",
+      "label": "꒰ ୨୧ ꒱ 𓈒𓏸",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧ *⑅",
+      "label": "୨୧ *⑅",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧⋆｡˚✩",
+      "label": "୨୧⋆｡˚✩",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ʚ♡ɞ 𓂃",
+      "label": "ʚ♡ɞ 𓂃",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "name ୨୧",
+      "label": "name ୨୧",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "bio 𓂃୨୧",
+      "label": "bio 𓂃୨୧",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ribbon mood ୨ৎ",
+      "label": "ribbon mood ୨ৎ",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "かわいい ʚ♡ɞ",
+      "label": "かわいい ʚ♡ɞ",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "profile ꒰ ୨୧ ꒱",
-      "label": "リボンプロフィール 7",
-      "category": "profile",
+      "label": "profile ꒰ ୨୧ ꒱",
+      "category": "more",
       "tags": [
-        "リボン",
-        "プロフィール"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "link ୨୧ →",
-      "label": "リボンプロフィール 8",
-      "category": "profile",
+      "label": "link ୨୧ →",
+      "category": "more",
       "tags": [
-        "リボン",
-        "プロフィール"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "sweet ୨୧",
-      "label": "リボンプロフィール 9",
-      "category": "profile",
+      "label": "sweet ୨୧",
+      "category": "more",
       "tags": [
-        "リボン",
-        "プロフィール"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "fan account ୨୧",
-      "label": "リボンプロフィール 10",
-      "category": "profile",
+      "label": "fan account ୨୧",
+      "category": "more",
       "tags": [
-        "リボン",
-        "プロフィール"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

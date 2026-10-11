@@ -686,3 +686,81 @@
     background: #eef2f7;
   }
 }
+
+.fancy-result-plain {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.fancy-output-pre {
+  white-space: pre-wrap;
+}
+
+.cursive-page .copy-output-btn,
+.gyaru-page .copy-output-btn,
+.cursive-page .sample-row button,
+.gyaru-page .sample-row button,
+.cursive-page .clear-input-btn,
+.gyaru-page .clear-input-btn {
+  min-height: 44px;
+}
+
+.kana-warning {
+  grid-column: 1;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: #9a3412;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.kana-warning[hidden] {
+  display: none;
+}
+
+.gyaru-chart-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gyaru-chart {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.gyaru-chart th,
+.gyaru-chart td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.example-list {
+  display: grid;
+  gap: 10px;
+}
+
+.example-line {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.example-line [data-static-value] {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.example-line .copy-output-btn {
+  flex: 0 0 auto;
+  min-height: 44px;
+}

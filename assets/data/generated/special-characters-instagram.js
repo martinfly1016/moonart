@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "about me 𓈒𓏸",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "bio 𓂃♡",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name ✦",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "daily 𓂃☕️",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "photo diary 📷",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "my mood ⊹",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "favorite ୨୧",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "me 𓂃🤍",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𝑚𝑦 𝑑𝑎𝑖𝑙𝑦",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "インスタ",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "link →",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "link below ↴",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "tap here ⇢",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "more ↪",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "profile link 🔗",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "DM open 💌",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "shop →",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "blog ↳",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "follow me ⇢",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "new post →",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "リンク",
         "案内"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓂃 𓈒𓏸",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "────",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "┈┈",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "﹏﹏",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "୨୧ ┈┈ ୨୧",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡ ┈┈ ♡",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✦ ━━ ✦",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "˗ˏˋ ´ˎ˗",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⊹ ࣪ ˖",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⋆｡˚ ☁︎ ˚｡⋆",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✦",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✧",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "୨୧",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ ꒱",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʚ♡ɞ",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "₊˚⊹",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓆩 𓆪",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ꕤ",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓍯",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "可愛い",
         "おしゃれ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

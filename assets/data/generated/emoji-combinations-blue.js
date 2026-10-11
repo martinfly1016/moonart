@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💙🦋✨",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🩵☁️🫧",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💎🫧🤍",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🦋💙𓂃",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🩵🐬🌊",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💙☁️🪽",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🫧💠✨",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🩵🫶🏻🫧",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💙 𓂃 𓈒𓏸",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "水色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🌊🐚🫧",
@@ -146,7 +166,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🐬🩵🌊",
@@ -156,7 +178,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🫧🌧️☁️",
@@ -166,7 +190,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💧🩵✨",
@@ -176,7 +202,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "sea mood 🌊🫧",
@@ -186,7 +214,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "summer blue 🐬💙",
@@ -196,7 +226,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "rain day ☔️🩵",
@@ -206,7 +238,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "aqua note 🫧💎",
@@ -216,7 +250,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ocean 𓂃🌊",
@@ -226,7 +262,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "blue sky ☁️🩵",
@@ -236,7 +274,9 @@ window.MojiMoonToolData = {
         "青",
         "海",
         "夏"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "profile 🩵🫧",
@@ -245,7 +285,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "bio 𓂃💙",
@@ -254,7 +296,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "blue mood 🦋",
@@ -263,7 +307,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "link → 🩵",
@@ -272,7 +318,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "about me 🫧",
@@ -281,7 +329,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "透明感 🩵☁️",
@@ -290,7 +340,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "水色プロフィール 💎",
@@ -299,7 +351,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し色 💙✨",
@@ -308,7 +362,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "photo diary 🦋📷",
@@ -317,7 +373,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "soft blue ☁️🩵",
@@ -326,7 +384,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう 🩵",
@@ -335,7 +395,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれさま 🫧",
@@ -344,7 +406,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "good night 💙🌙",
@@ -353,7 +417,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "new post 🦋✨",
@@ -362,7 +428,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "take care ☁️🩵",
@@ -371,7 +439,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "happy day 💎",
@@ -380,7 +450,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "cool mood 💙",
@@ -389,7 +461,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "dreamy 🫧",
@@ -398,7 +472,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "夏の気分 🌊",
@@ -407,7 +483,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "青空メモ 🩵",
@@ -416,7 +494,9 @@ window.MojiMoonToolData = {
       "tags": [
         "青",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };
