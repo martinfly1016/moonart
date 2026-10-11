@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ヾﾉ｡ÒдÓ)ﾉｼ",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(乂・ω・´)",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ｰ̀εｰ́ )",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｀へ´*)ノ",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ヾﾉ･∀･`)",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ･᷄ὢ･᷅ )",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•́︿•̀｡)",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(¬_¬)",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(눈_눈)",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘•ω•˘ )",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•̀ㅁ•́๑)",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "NO",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ヾﾉ･ω･`)",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "NO",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑-﹏-๑)",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "NO",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(；・∀・)ﾉ",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "NO",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡>﹏<｡)",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "NO",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だめ(>_< )三( >_<)",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "無理かもヾﾉ｡ÒдÓ)ﾉｼ",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いやです(乂・ω・´)",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今回はごめん( ｰ̀εｰ́ )",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "できない(｀へ´*)ノ",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ちょっと難しい(ヾﾉ･∀･`)",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "NO( ･᷄ὢ･᷅ )",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "遠慮します(｡•́︿•̀｡)",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "また今度(¬_¬)",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やめておく(눈_눈)",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "NO",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いやです (ヾﾉ･∀･`)",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今回はごめん ( ･᷄ὢ･᷅ )",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "できない (｡•́︿•̀｡)",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ちょっと難しい (¬_¬)",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "NO (눈_눈)",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "遠慮します ( ˘•ω•˘ )",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "また今度 (๑•̀ㅁ•́๑)",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やめておく (ヾﾉ･ω･`)",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "無理かも ( ･᷄ὢ･᷅ )",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だめです (｡•́︿•̀｡)",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "違うかも (¬_¬)",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やめておく (눈_눈)",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今回はなし ( ˘•ω•˘ )",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "NOです (๑•̀ㅁ•́๑)",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "NO",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

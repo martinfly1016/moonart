@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♫",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♬",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♩",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♭",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♮",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♯",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𝄞",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𝄢",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "°♪",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "音楽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♪𓂃",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♫♡",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♬⋆｡˚",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♪₊˚",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡♪",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♪꒰ ꒱",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♬ 𓈒𓏸",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "music ♪",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "song ♫",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "BGM ♬",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "可愛い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♪ ┈┈ ♪",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♫ 𓂃 ♫",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♬⋆｡˚✩",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♪♪♪",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♩ ♫ ♬",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "₊˚♪˚₊",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡ ♪ ♡",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓂃 music ♪",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "BGM 𓈒𓏸",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "sound on ♫",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "ライン"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "music mood ♪",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "song diary ♫",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "BGM memo ♬",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し曲 ♪",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "playlist ♫",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "live report ♬",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "music on ♪",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "now playing ♫",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "my song ♬",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "音楽の時間 ♪",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "音符",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

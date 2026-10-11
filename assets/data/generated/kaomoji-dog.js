@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ- ﻌ -ᐡ)",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡᴗ ̫ ᴗᐡ)",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ •̥ ̫ •̥ ᐡ)",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ ̳ᴗ ̫ ᴗ ̳ᐡ)",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "U ´ᴥ` U",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "U・x・U",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(U｡･ｪ･｡U)",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "▽・ᴥ・▽",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ •͈ ·̫ •͈ ᐡ)",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ • ﻌ • ᐡ)",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "犬",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "૮・ﻌ・ა",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "犬",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "૮ ˶ᵔ ᵕ ᵔ˶ ა",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "犬",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "૮₍ ˶• ˔ ต ₎ა",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "犬",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "૮₍ ˃ ⤙ ˂ ₎ა",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "犬",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "わん(U・ᴥ・U)",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "犬です(ᐡ- ﻌ -ᐡ)",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おすわり(ᐡᴗ ̫ ᴗᐡ)",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "しっぽふりふり(ᐡ •̥ ̫ •̥ ᐡ)",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "待ってる(ᐡ ̳ᴗ ̫ ᴗ ̳ᐡ)",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お散歩行こ(ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "なでてU ´ᴥ` U",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "かまってU・x・U",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "眠いわん(U｡･ｪ･｡U)",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "うれしいわん▽・ᴥ・▽",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "犬",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おすわり (ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "しっぽふりふり U ´ᴥ` U",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "待ってる U・x・U",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お散歩行こ (U｡･ｪ･｡U)",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "なでて ▽・ᴥ・▽",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "かまって (ᐡ •͈ ·̫ •͈ ᐡ)",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "眠いわん (ᐡ • ﻌ • ᐡ)",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "うれしいわん ૮・ﻌ・ა",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "わんわん U ´ᴥ` U",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "犬好き U・x・U",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お散歩行こう (U｡･ｪ･｡U)",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "しっぽふりふり ▽・ᴥ・▽",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "待ってるわん (ᐡ •͈ ·̫ •͈ ᐡ)",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "わんこ気分 (ᐡ • ﻌ • ᐡ)",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "犬",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

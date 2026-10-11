@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑-﹏-๑)",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡ŏ﹏ŏ)",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(´･_･`)",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(._.`)",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(・・;)",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(；・∀・)",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(。´･ω･)?",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(・・?)",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘•ω•˘ )",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•́︵•̀｡)",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "困る",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•́ ₃ •̀๑)",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "困る",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˃̣̣̥⌓˂̣̣̥ )",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "困る",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(´-ω-`)",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "困る",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ´~` )",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "困る",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "どうしよう(｡•́︿•̀｡)",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "困った(๑-﹏-๑)",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "悩む(｡ŏ﹏ŏ)",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "迷ってる(´･_･`)",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ちょっと待って(._.`)",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "うーん(・・;)",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "わからない(；・∀・)",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "確認するね(。´･ω･)?",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "返事に困る(・・?)",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "考え中( ˘•ω•˘ )",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "困る",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "悩む (・・;)",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "迷ってる (；・∀・)",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ちょっと待って (。´･ω･)?",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "うーん (・・?)",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "わからない ( ˘•ω•˘ )",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "確認するね (｡•́︵•̀｡)",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "返事に困る (ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "考え中 (๑•́ ₃ •̀๑)",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "どうしたらいいかな (；・∀・)",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "少し考えるね (。´･ω･)?",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "確認してみる (・・?)",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "まだ迷ってる ( ˘•ω•˘ )",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "一旦保留 (｡•́︵•̀｡)",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "もう少し待って (ᐡ ̥_ ̫ _ ̥ᐡ)",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "困る",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

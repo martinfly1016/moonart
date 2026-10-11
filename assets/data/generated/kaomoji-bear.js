@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕっ•ᴥ•ʔっ",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᵔᴥᵔ)",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(・(ｪ)・)",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ•̀ω•́ʔ✧",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ´•ᴥ•`ʔ",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ ᵔᴥᵔ ʔ",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ•ᴥ•ʔﾉ♡",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕっ˘ڡ˘ςʔ",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ；ᴥ；ʔ",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕノ•ᴥ•ʔノ",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ •́؈•̀ ₎",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "くま",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕっ•ᴥ•ʔっ♡",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "くま",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕง•ᴥ•ʔง",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "くま",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ •̀ o •́ ʔ",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "くま",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ʕ -ᴥ- ʔ",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "くま",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "くまʕ•ᴥ•ʔ",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ぎゅーʕっ•ᴥ•ʔっ",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "のんびり(ᵔᴥᵔ)",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おやつ(・(ｪ)・)",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "眠いくまʕ•̀ω•́ʔ✧",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "くまですʕ´•ᴥ•`ʔ",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "なでてʕ ᵔᴥᵔ ʔ",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゆるくまʕ•ᴥ•ʔﾉ♡",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "しょんぼりくまʕっ˘ڡ˘ςʔ",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "がんばるくまʕ；ᴥ；ʔ",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "くま",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "のんびり ʕ´•ᴥ•`ʔ",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おやつ ʕ ᵔᴥᵔ ʔ",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "眠いくま ʕ•ᴥ•ʔﾉ♡",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "くまです ʕっ˘ڡ˘ςʔ",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "なでて ʕ；ᴥ；ʔ",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゆるくま ʕノ•ᴥ•ʔノ",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "しょんぼりくま ʕ •́؈•̀ ₎",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "がんばるくま ʕっ•ᴥ•ʔっ♡",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "くまさん ʕ ᵔᴥᵔ ʔ",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "のんびりくま ʕ•ᴥ•ʔﾉ♡",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ぎゅっとくま ʕっ˘ڡ˘ςʔ",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おやすみくま ʕ；ᴥ；ʔ",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "くま好き ʕノ•ᴥ•ʔノ",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "もふもふ ʕ •́؈•̀ ₎",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "くま",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

@@ -62,7 +62,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎂✨🎉",
@@ -74,7 +76,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🍰🕯️💗",
@@ -86,7 +90,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎂🤍🫧",
@@ -98,7 +104,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🧁🎀✨",
@@ -110,7 +118,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🍰💐💗",
@@ -122,7 +132,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎂 ୨୧ 🎁",
@@ -134,7 +146,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday cake 🎂",
@@ -146,7 +160,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "sweet birthday 🍰",
@@ -158,7 +174,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "cake day 🎂✨",
@@ -170,7 +188,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎉🎂✨",
@@ -183,7 +203,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎁🎈💗",
@@ -196,7 +218,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🥳🎉🎂",
@@ -209,7 +233,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎈💐✨",
@@ -222,7 +248,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎊🤍🎁",
@@ -235,7 +263,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "party time 🎉",
@@ -248,7 +278,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "happy day 🥳",
@@ -261,7 +293,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "celebrate 🎊",
@@ -274,7 +308,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お祝い 🎉✨",
@@ -287,7 +323,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday party 🎈",
@@ -300,7 +338,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "happy birthday 🎂💗",
@@ -313,7 +353,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お誕生日おめでとう 🎉",
@@ -326,7 +368,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "素敵な一年に ✨",
@@ -339,7 +383,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いつもありがとう 💐",
@@ -352,7 +398,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "大好きだよ 🎂",
@@ -365,7 +413,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おめでとう 🥳",
@@ -378,7 +428,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday wish 💌",
@@ -391,7 +443,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "for you 🎁",
@@ -404,7 +458,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "happy day 🎈",
@@ -417,7 +473,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お祝いメッセージ 💗",
@@ -430,7 +488,9 @@ window.MojiMoonToolData = {
         "絵文字 組み合わせ",
         "誕生日 絵文字 組み合わせ",
         "おめでとう 絵文字 組み合わせ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday post 🎂",
@@ -439,7 +499,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "new post 🎉📷",
@@ -448,7 +510,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday photo 🎈",
@@ -457,7 +521,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "today is my day 🎂",
@@ -466,7 +532,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "party log 🎊",
@@ -475,7 +543,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "cake memo 🍰",
@@ -484,7 +554,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "friend birthday 💐",
@@ -493,7 +565,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し誕生日 🎂✨",
@@ -502,7 +576,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday mood 🎁",
@@ -511,7 +587,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "special day 🥳",
@@ -520,7 +598,9 @@ window.MojiMoonToolData = {
       "tags": [
         "誕生日",
         "投稿"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

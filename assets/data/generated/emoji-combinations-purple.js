@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🪻💜🫧",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☂️💜🌙",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💜🦋✨",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🔮🌙💜",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💜 𓂃 ✦",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🍇💜🫶🏻",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🪄💜✨",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💜☁️🪽",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "purple mood 💜",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "推し色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "dreamy 💜☁️",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "magic night 🔮🌙",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "yumekawa 💜🪽",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "moon spell 🌙✨",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "fairy mood 🪄💜",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "lavender 🪻☁️",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "soft purple 💜",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "twilight 🔮✨",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "夢かわ 💜🫧",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "魔法の時間 🪄",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "夢かわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "profile 💜",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "bio 𓂃🔮",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "name 🪻",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "link → 💜",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "about me ☂️",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し色 💜✨",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "purple profile ✦",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "fan account 💜",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "moon child 🌙💜",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "lavender bio 🪻",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう 💜",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれさま 🔮",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "good night 💜🌙",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "new post 🪻✨",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "take care ☁️💜",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "happy day 💜",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "magic mood 🔮",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "dreamy note 💜",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "推し活 💜",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "夜のメモ 🌙",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "紫",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

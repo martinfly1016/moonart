@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(*´︶`*)ﾉ",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡･ω･｡)ﾉ",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑˘ ˘๑)*.。",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ᵕᴗᵕ )",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(*´꒳`*)",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•ᴗ•｡)",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘ω˘ )",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(o´▽`o)ﾉ",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•᎑•๑)",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "お疲れ様",
         "顔文字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ´ω`)ﾉ(╥ω╥)",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( T_T)＼(^-^ )",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡-ω-ヾ(>᎑<`๑)",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( *´꒳`*)੭⁾⁾",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡･ᴗ･)_🍵",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( *ˊᵕˋ)_旦",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(っ´ω`c)",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˊᵕˋ )♡",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ´･･)ﾉ(._.`)",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑´•ω•)۶”",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "やさしい",
         "労い"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "_(:3 」∠)_",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(¦3[▓▓]",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˘ω˘ )ｽﾔｧ",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑-﹏-๑)",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(；´∀｀)",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡ŏ﹏ŏ)",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(疲´･ω･`)",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(o_ _)o",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ´Д｀)=3",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｀･ω･´)ゞ",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "仕事",
         "休憩"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お疲れ様( ´ ▽ ` )ﾉ",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれさま(*´︶`*)ﾉ",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日もがんばったね(๑•᎑•๑)",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゆっくり休んで( ˘ω˘ )",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "無理しないで( *ˊᵕˋ)_旦",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ありがとう(｡•ᴗ•｡)",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "よくがんばった(｀･ω･´)ゞ",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "休憩しよ(｡･ᴗ･)_🍵",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おつかれー(o´▽`o)ﾉ",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "また明日( ᵕᴗᵕ )",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

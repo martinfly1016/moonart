@@ -26,7 +26,7 @@ window.MojiMoonToolData = {
     { id: 'arrow', label: '矢印' },
     { id: 'number', label: '数字' }
   ],
-  pageSize: 48,
+  pageSize: 200,
   items: [
     { value: '♡', label: '白ハート', category: 'heart', tags: ['可愛い'] },
     { value: '♥', label: '黒ハート', category: 'heart', tags: ['ハート'] },

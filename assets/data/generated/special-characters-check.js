@@ -55,7 +55,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✔",
@@ -64,7 +66,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✔︎",
@@ -73,7 +77,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☑",
@@ -82,7 +88,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☑︎",
@@ -91,7 +99,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✅",
@@ -100,7 +110,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🗸",
@@ -109,7 +121,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✓✓",
@@ -118,7 +132,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✔✔",
@@ -127,7 +143,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "OK ✓",
@@ -136,7 +154,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "OK"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "○",
@@ -145,7 +165,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◎",
@@ -154,7 +176,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "●",
@@ -163,7 +187,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◯",
@@ -172,7 +198,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◉",
@@ -181,7 +209,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◌",
@@ -190,7 +220,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◍",
@@ -199,7 +231,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◐",
@@ -208,7 +242,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◑",
@@ -217,7 +253,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "◒",
@@ -226,7 +264,9 @@ window.MojiMoonToolData = {
       "tags": [
         "丸印",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✗",
@@ -235,7 +275,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✘",
@@ -244,7 +286,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✕",
@@ -253,7 +297,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "×",
@@ -262,7 +308,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☓",
@@ -271,7 +319,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "✖",
@@ -280,7 +330,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "NG ✗",
@@ -289,7 +341,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "NO ×",
@@ -298,7 +352,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "cancel ✘",
@@ -307,7 +363,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "あとで △",
@@ -316,7 +374,9 @@ window.MojiMoonToolData = {
       "tags": [
         "バツ",
         "確認"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "確認済み ✓",
@@ -325,7 +385,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "完了 ✔",
@@ -334,7 +396,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "OKです ☑",
@@ -343,7 +407,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "チェック中 ○",
@@ -352,7 +418,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "対応済み ✔︎",
@@ -361,7 +429,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "あとで確認 △",
@@ -370,7 +440,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "未対応 ×",
@@ -379,7 +451,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "メモ ✓",
@@ -388,7 +462,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "list ✔",
@@ -397,7 +473,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "done ✓",
@@ -406,7 +484,9 @@ window.MojiMoonToolData = {
       "tags": [
         "チェック",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

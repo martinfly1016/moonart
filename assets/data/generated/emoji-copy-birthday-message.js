@@ -1,27 +1,23 @@
 // mojimoon:generated-data slug="emoji-copy-birthday-message" source="_content/ja-copy-pages.json"
 window.MojiMoonToolData = {
   "slug": "emoji-copy-birthday-message",
-  "draftMaxLength": 220,
+  "draftMaxLength": 400,
   "quickFilters": [
     {
-      "label": "誕生日",
-      "query": "誕生日"
+      "label": "友達",
+      "query": "友達"
     },
     {
-      "label": "おめでとう",
-      "query": "おめでとう"
+      "label": "一言",
+      "query": "一言"
     },
     {
-      "label": "ケーキ",
-      "query": "ケーキ"
+      "label": "推し",
+      "query": "推し"
     },
     {
-      "label": "プレゼント",
-      "query": "プレゼント"
-    },
-    {
-      "label": "花",
-      "query": "花"
+      "label": "家族",
+      "query": "家族"
     }
   ],
   "categories": [
@@ -30,417 +26,758 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
-      "id": "cake",
-      "label": "ケーキ"
+      "id": "friend",
+      "label": "友達"
     },
     {
-      "id": "gift",
-      "label": "ギフト"
+      "id": "family",
+      "label": "家族"
     },
     {
-      "id": "party",
-      "label": "お祝い"
+      "id": "partner",
+      "label": "恋人"
     },
     {
-      "id": "message",
-      "label": "短文"
+      "id": "oshi",
+      "label": "推し"
+    },
+    {
+      "id": "chat",
+      "label": "グループ"
+    },
+    {
+      "id": "mark",
+      "label": "絵文字だけ"
+    },
+    {
+      "id": "more",
+      "label": "ほか"
     }
   ],
-  "pageSize": 48,
+  "pageSize": 160,
   "items": [
     {
-      "value": "🎂",
-      "label": "ケーキ 1",
-      "category": "cake",
+      "value": "誕生日おめでとう。今年も変な話は、いちばんに聞かせて。🎂",
+      "label": "いちばんに話す友達",
+      "category": "friend",
       "tags": [
+        "友達",
         "誕生日",
-        "ケーキ"
-      ]
+        "一言"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🍰",
-      "label": "ケーキ 2",
-      "category": "cake",
+      "value": "同じクラスじゃなくなっても、今日だけは先に祝いたかった。🎉",
+      "label": "離れた友達",
+      "category": "friend",
       "tags": [
+        "友達",
         "誕生日",
-        "ケーキ"
-      ]
+        "一言"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🧁",
-      "label": "ケーキ 3",
-      "category": "cake",
+      "value": "課題もバイトも今日は置いといて、好きなもの食べて。🍰",
+      "label": "忙しい友達",
+      "category": "friend",
       "tags": [
+        "友達",
         "誕生日",
-        "ケーキ",
-        "カップケーキ"
-      ]
+        "一言"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🎂✨",
-      "label": "ケーキ 4",
-      "category": "cake",
+      "value": "遅れちゃった。昨日のうちに送るつもりだった。誕生日おめでとう。🎈",
+      "label": "遅れた友達",
+      "category": "friend",
       "tags": [
+        "友達",
         "誕生日",
-        "ケーキ",
-        "キラキラ"
-      ]
+        "一言"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🍰🎀",
-      "label": "ケーキ 5",
-      "category": "cake",
+      "value": "写真はあとで送る。とりあえず、生まれてきてくれてよかった。📷",
+      "label": "グループのあと",
+      "category": "friend",
       "tags": [
+        "友達",
         "誕生日",
-        "ケーキ",
-        "リボン"
-      ]
+        "一言"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🎂💐",
-      "label": "ケーキ 6",
-      "category": "cake",
+      "value": "次会ったとき奢るから、今日は自分でケーキ買って。🎁",
+      "label": "会えない友達",
+      "category": "friend",
       "tags": [
+        "友達",
         "誕生日",
-        "ケーキ",
-        "花"
-      ]
+        "一言"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🧁♡",
-      "label": "ケーキ 7",
-      "category": "cake",
+      "value": "お母さん、生まれてきてくれてありがとう。今年も元気でいてね。💐",
+      "label": "母へ",
+      "category": "family",
       "tags": [
-        "誕生日",
-        "ケーキ",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "🎂🥂",
-      "label": "ケーキ 8",
-      "category": "cake",
-      "tags": [
-        "誕生日",
-        "ケーキ",
-        "乾杯"
-      ]
-    },
-    {
-      "value": "🍰🎉",
-      "label": "ケーキ 9",
-      "category": "cake",
-      "tags": [
-        "誕生日",
-        "ケーキ",
-        "お祝い"
-      ]
-    },
-    {
-      "value": "🎂🎁",
-      "label": "ケーキ 10",
-      "category": "cake",
-      "tags": [
-        "誕生日",
-        "ケーキ",
-        "ギフト"
-      ]
-    },
-    {
-      "value": "🎁",
-      "label": "ギフト 1",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト"
-      ]
-    },
-    {
-      "value": "💝",
-      "label": "ギフト 2",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
-        "ハート"
-      ]
-    },
-    {
-      "value": "🎀",
-      "label": "ギフト 3",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
-        "リボン"
-      ]
-    },
-    {
-      "value": "🎁✨",
-      "label": "ギフト 4",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
-        "キラキラ"
-      ]
-    },
-    {
-      "value": "💐🎁",
-      "label": "ギフト 5",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
-        "花"
-      ]
-    },
-    {
-      "value": "🎀💌",
-      "label": "ギフト 6",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
-        "手紙"
-      ]
-    },
-    {
-      "value": "🎁♡",
-      "label": "ギフト 7",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
-        "可愛い"
-      ]
-    },
-    {
-      "value": "💝🎂",
-      "label": "ギフト 8",
-      "category": "gift",
-      "tags": [
-        "プレゼント",
-        "ギフト",
+        "家族",
         "誕生日"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🎁🥳",
-      "label": "ギフト 9",
-      "category": "gift",
+      "value": "お父さん、誕生日おめでとう。甘いものは控えめに、って言いつつケーキは食べるね。🎂",
+      "label": "父へ",
+      "category": "family",
       "tags": [
-        "プレゼント",
-        "ギフト",
-        "お祝い"
-      ]
+        "家族",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🎀🌷",
-      "label": "ギフト 10",
-      "category": "gift",
+      "value": "でかくなったな。誕生日おめでとう。兄ちゃんより先に大人ぶるなよ。🎁",
+      "label": "弟や妹へ",
+      "category": "family",
       "tags": [
-        "プレゼント",
-        "ギフト",
-        "花"
-      ]
+        "家族",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おばあちゃん、今年も長い電話しよう。誕生日おめでとう。📞",
+      "label": "祖父母へ",
+      "category": "family",
+      "tags": [
+        "家族",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "家族で食べるケーキ、切り分けはわたしがやる。おめでとう。🍰",
+      "label": "家族の食卓",
+      "category": "family",
+      "tags": [
+        "家族",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "生まれた日を、隣で祝えるのがうれしい。今日はちゃんと言葉にする。💗",
+      "label": "隣にいる相手",
+      "category": "partner",
+      "tags": [
+        "恋人",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おめでとう。今年のケーキはわたしが選ぶ。味の文句は明日でいい。🎂",
+      "label": "一緒にいる夜",
+      "category": "partner",
+      "tags": [
+        "恋人",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "会えない誕生日だけど、電話は切らないでおく。生まれてきてくれてありがとう。🌙",
+      "label": "遠距離",
+      "category": "partner",
+      "tags": [
+        "恋人",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "いつもより少し長いメッセージになる。好きだよ。誕生日おめでとう。💌",
+      "label": "手紙のように",
+      "category": "partner",
+      "tags": [
+        "恋人",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "起きてすぐにこれ読んで。一番乗りのおめでとう。☀️",
+      "label": "朝一",
+      "category": "partner",
+      "tags": [
+        "恋人",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "生まれてきてくれてありがとう。今日はサイリウムの色で祝ってます。🎤",
+      "label": "ライブの日",
+      "category": "oshi",
+      "tags": [
+        "推し",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "推してる側の用事じゃなくて、あなたの誕生日。元気でいてくれたら、それが一番です。🌟",
+      "label": "本人へ届くかも",
+      "category": "oshi",
+      "tags": [
+        "推し",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "新しい曲より先に、今日はお誕生日おめでとうを置いておきます。🎧",
+      "label": "音楽の推し",
+      "category": "oshi",
+      "tags": [
+        "推し",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "同じ日を祝ってる人がこんなにいるの、ちょっとすごい。誕生日おめでとう。🎉",
+      "label": "ファン同士",
+      "category": "oshi",
+      "tags": [
+        "推し",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "現場には行けないけど、今日のタイムラインはあなたの色にしてます。💜",
+      "label": "遠征できない日",
+      "category": "oshi",
+      "tags": [
+        "推し",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "みんなで祝えてよかった。写真は夜にまとめて上げるね。📸",
+      "label": "グループのあと",
+      "category": "chat",
+      "tags": [
+        "グループ",
+        "誕生日",
+        "友達"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "代表して送っとく。誕生日おめでとう。リアクションは各自で。🎈",
+      "label": "グループの代表",
+      "category": "chat",
+      "tags": [
+        "グループ",
+        "誕生日",
+        "友達"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "通話はこのあと。まず文字で、誕生日おめでとう。📞",
+      "label": "通話の前",
+      "category": "chat",
+      "tags": [
+        "グループ",
+        "誕生日",
+        "友達"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂",
+      "label": "ケーキ",
+      "category": "mark",
+      "tags": [
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎉",
-      "label": "お祝い 1",
-      "category": "party",
+      "label": "クラッカー",
+      "category": "mark",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "クラッカー"
-      ]
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🥳",
-      "label": "お祝い 2",
-      "category": "party",
+      "value": "🎈",
+      "label": "風船",
+      "category": "mark",
       "tags": [
-        "お祝い",
-        "パーティー"
-      ]
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
-      "value": "🎊",
-      "label": "お祝い 3",
-      "category": "party",
+      "value": "🎁",
+      "label": "プレゼント",
+      "category": "mark",
       "tags": [
-        "お祝い",
-        "パーティー"
-      ]
-    },
-    {
-      "value": "✨",
-      "label": "お祝い 4",
-      "category": "party",
-      "tags": [
-        "お祝い",
-        "パーティー",
-        "キラキラ"
-      ]
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💐",
-      "label": "お祝い 5",
-      "category": "party",
+      "label": "花束",
+      "category": "mark",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "花束"
-      ]
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍰",
+      "label": "ショートケーキ",
+      "category": "mark",
+      "tags": [
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂💗",
+      "label": "ケーキとハート",
+      "category": "mark",
+      "tags": [
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎉✨",
+      "label": "お祝いの光",
+      "category": "mark",
+      "tags": [
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂🥂",
+      "label": "乾杯",
+      "category": "mark",
+      "tags": [
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥳🎂",
+      "label": "パーティーの顔",
+      "category": "mark",
+      "tags": [
+        "絵文字",
+        "誕生日"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧁",
+      "label": "🧁",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂✨",
+      "label": "🎂✨",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍰🎀",
+      "label": "🍰🎀",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂💐",
+      "label": "🎂💐",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧁♡",
+      "label": "🧁♡",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍰🎉",
+      "label": "🍰🎉",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂🎁",
+      "label": "🎂🎁",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💝",
+      "label": "💝",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎀",
+      "label": "🎀",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎁✨",
+      "label": "🎁✨",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💐🎁",
+      "label": "💐🎁",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎀💌",
+      "label": "🎀💌",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎁♡",
+      "label": "🎁♡",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💝🎂",
+      "label": "💝🎂",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎁🥳",
+      "label": "🎁🥳",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎀🌷",
+      "label": "🎀🌷",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥳",
+      "label": "🥳",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎊",
+      "label": "🎊",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✨",
+      "label": "✨",
+      "category": "more",
+      "tags": [
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🥂",
-      "label": "お祝い 6",
-      "category": "party",
+      "label": "🥂",
+      "category": "more",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "乾杯"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎉🎂",
-      "label": "お祝い 7",
-      "category": "party",
+      "label": "🎉🎂",
+      "category": "more",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "誕生日"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🥳🎁",
-      "label": "お祝い 8",
-      "category": "party",
+      "label": "🥳🎁",
+      "category": "more",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "ギフト"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "💐✨",
-      "label": "お祝い 9",
-      "category": "party",
+      "label": "💐✨",
+      "category": "more",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "花"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "🎊💖",
-      "label": "お祝い 10",
-      "category": "party",
+      "label": "🎊💖",
+      "category": "more",
       "tags": [
-        "お祝い",
-        "パーティー",
-        "ハート"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "おめでとう 🎂",
-      "label": "短文 1",
-      "category": "message",
+      "label": "おめでとう 🎂",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "happy birthday 🎉",
-      "label": "短文 2",
-      "category": "message",
+      "label": "happy birthday 🎉",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "英字"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "素敵な一年に ✨",
-      "label": "短文 3",
-      "category": "message",
+      "label": "素敵な一年に ✨",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "願い"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "生まれてきてくれてありがとう 💐",
-      "label": "短文 4",
-      "category": "message",
+      "label": "生まれてきてくれてありがとう 💐",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "感謝"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "だいすき 🎁",
-      "label": "短文 5",
-      "category": "message",
+      "label": "だいすき 🎁",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "好き"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "最高の日になりますように 🥳",
-      "label": "短文 6",
-      "category": "message",
+      "label": "最高の日になりますように 🥳",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "願い"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お祝いさせてね 🎀",
-      "label": "短文 7",
-      "category": "message",
+      "label": "お祝いさせてね 🎀",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "お祝い"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "これからもよろしく ♡",
-      "label": "短文 8",
-      "category": "message",
+      "label": "これからもよろしく ♡",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "挨拶"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "幸せいっぱいの一年に 🍰",
-      "label": "短文 9",
-      "category": "message",
+      "label": "幸せいっぱいの一年に 🍰",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "幸せ"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "birthday love 💝",
-      "label": "短文 10",
-      "category": "message",
+      "label": "birthday love 💝",
+      "category": "more",
       "tags": [
-        "短文",
-        "おめでとう",
-        "英字"
-      ]
+        "その他"
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

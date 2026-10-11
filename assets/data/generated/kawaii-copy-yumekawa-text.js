@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "ふわふわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "夢みる時間 𓂃",
@@ -65,7 +67,9 @@ window.MojiMoonToolData = {
       "tags": [
         "ゆめかわ",
         "夢"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "sweet dream ୨୧",
@@ -75,7 +79,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "夢色メモ ✎",
@@ -85,7 +91,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "記録"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "きらめく夢 ✧",
@@ -95,7 +103,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "キラキラ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゆめかわ日記 ♡",
@@ -105,7 +115,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "日記"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "眠る前の魔法 ☾",
@@ -115,7 +127,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "月"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "淡い夢を集めて 𖤐",
@@ -125,7 +139,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "淡色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "夢のかけら ꕤ",
@@ -135,7 +151,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "花"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "dream room 𓂃",
@@ -145,7 +163,9 @@ window.MojiMoonToolData = {
         "ゆめかわ",
         "夢",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ angel ໒꒱",
@@ -155,7 +175,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "໒꒱ name ໒꒱",
@@ -165,7 +187,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "名前"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "天使のきろく ໒꒱",
@@ -175,7 +199,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "記録"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ だいすき ໒꒱",
@@ -185,7 +211,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "好き"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "羽のように軽く 𓈒𓏸",
@@ -195,7 +223,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "淡色"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "angel note ✎",
@@ -205,7 +235,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "꒰ঌ profile ໒꒱",
@@ -215,7 +247,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "プロフィール"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "小さな羽 ໒꒱",
@@ -224,7 +258,9 @@ window.MojiMoonToolData = {
       "tags": [
         "天使",
         "羽"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "天使界隈 ୨୧",
@@ -234,7 +270,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "界隈"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ふわり ໒꒱",
@@ -244,7 +282,9 @@ window.MojiMoonToolData = {
         "天使",
         "羽",
         "短め"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "moon light ☾",
@@ -253,7 +293,9 @@ window.MojiMoonToolData = {
       "tags": [
         "月",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "お月さまメモ ☽",
@@ -262,7 +304,9 @@ window.MojiMoonToolData = {
       "tags": [
         "月",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "星屑のきろく 𖤐",
@@ -271,7 +315,9 @@ window.MojiMoonToolData = {
       "tags": [
         "月",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☾ name ☽",
@@ -281,7 +327,9 @@ window.MojiMoonToolData = {
         "月",
         "星",
         "名前"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "night dream 𖤐",
@@ -291,7 +339,9 @@ window.MojiMoonToolData = {
         "月",
         "星",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "⋆｡˚ ☁︎ ˚｡⋆｡",
@@ -301,7 +351,9 @@ window.MojiMoonToolData = {
         "月",
         "星",
         "空"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "月と星のあいだ ✧",
@@ -310,7 +362,9 @@ window.MojiMoonToolData = {
       "tags": [
         "月",
         "星"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "眠たい夜 𓂃 ☾",
@@ -320,7 +374,9 @@ window.MojiMoonToolData = {
         "月",
         "星",
         "夜"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "starry note 𖤐",
@@ -330,7 +386,9 @@ window.MojiMoonToolData = {
         "月",
         "星",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "☾ 𓈒𓏸 𖤐",
@@ -340,7 +398,9 @@ window.MojiMoonToolData = {
         "月",
         "星",
         "記号"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓂃 𓈒𓏸",
@@ -349,7 +409,9 @@ window.MojiMoonToolData = {
       "tags": [
         "淡色",
         "ふわふわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ꕤ*.ﾟ",
@@ -359,7 +421,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "花"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "𓍯 𓂃",
@@ -368,7 +432,9 @@ window.MojiMoonToolData = {
       "tags": [
         "淡色",
         "ふわふわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "♡ 𓈒𓏸",
@@ -378,7 +444,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "ハート"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ふわり 𓂃",
@@ -387,7 +455,9 @@ window.MojiMoonToolData = {
       "tags": [
         "淡色",
         "ふわふわ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "淡色きろく ᵕ̈",
@@ -397,7 +467,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "記録"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "soft mood 𓈒𓏸",
@@ -407,7 +479,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やさしい時間 ꕤ",
@@ -417,7 +491,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "やさしい"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ゆるい日々 𓂃",
@@ -427,7 +503,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "日常"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "milk tea mood ☕",
@@ -437,7 +515,9 @@ window.MojiMoonToolData = {
         "淡色",
         "ふわふわ",
         "英字"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };

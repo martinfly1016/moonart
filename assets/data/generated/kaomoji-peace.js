@@ -56,7 +56,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "v(｡･ω･｡)ｨｪｨ♪",
@@ -66,7 +68,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑˃̵ᴗ˂̵)و✌",
@@ -76,7 +80,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡•̀ᴗ-)✌",
@@ -86,7 +92,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(≧▽≦)v",
@@ -96,7 +104,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ´ ▽ ` )v",
@@ -106,7 +116,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•̀ㅂ•́)و✧",
@@ -116,7 +128,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ･ㅂ･)و ̑̑",
@@ -126,7 +140,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡･ω･｡)v",
@@ -136,7 +152,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(✌︎˙˘˙✌︎)",
@@ -146,7 +164,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "( ˶ˆᗜˆ˵ )✌",
@@ -156,7 +176,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(◍ ´꒳` ◍)v",
@@ -166,7 +188,9 @@ window.MojiMoonToolData = {
         "ピース",
         "顔文字",
         "コピペ"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(๑•ᴗ•๑)✌",
@@ -176,7 +200,9 @@ window.MojiMoonToolData = {
         "ピース",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ᐢ ܸ. .ܸ ᐢ)✌",
@@ -186,7 +212,9 @@ window.MojiMoonToolData = {
         "ピース",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(ง ˙˘˙ )ว✌",
@@ -196,7 +224,9 @@ window.MojiMoonToolData = {
         "ピース",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "(｡>ω<｡)ﾉ",
@@ -206,7 +236,9 @@ window.MojiMoonToolData = {
         "ピース",
         "可愛い",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ピース✌︎( ᐛ )✌︎",
@@ -216,7 +248,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やったv(｡･ω･｡)ｨｪｨ♪",
@@ -226,7 +260,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いえい(๑˃̵ᴗ˂̵)و✌",
@@ -236,7 +272,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "写真撮ろ(｡•̀ᴗ-)✌",
@@ -246,7 +284,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勝った(≧▽≦)v",
@@ -256,7 +296,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いい感じ( ´ ▽ ` )v",
@@ -266,7 +308,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "成功(๑•̀ㅂ•́)و✧",
@@ -276,7 +320,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "楽しい( ･ㅂ･)و ̑̑",
@@ -286,7 +332,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日も平和(｡･ω･｡)v",
@@ -296,7 +344,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "記念に(✌︎˙˘˙✌︎)",
@@ -306,7 +356,9 @@ window.MojiMoonToolData = {
         "ピース",
         "返信",
         "LINE"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いえい ( ´ ▽ ` )v",
@@ -316,7 +368,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "写真撮ろ (๑•̀ㅂ•́)و✧",
@@ -326,7 +380,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勝った ( ･ㅂ･)و ̑̑",
@@ -336,7 +392,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いい感じ (｡･ω･｡)v",
@@ -346,7 +404,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "成功 (✌︎˙˘˙✌︎)",
@@ -356,7 +416,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "楽しい ( ˶ˆᗜˆ˵ )✌",
@@ -366,7 +428,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "今日も平和 (◍ ´꒳` ◍)v",
@@ -376,7 +440,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "記念に (๑•ᴗ•๑)✌",
@@ -386,7 +452,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "ピース (๑•̀ㅂ•́)و✧",
@@ -396,7 +464,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "やったね ( ･ㅂ･)و ̑̑",
@@ -406,7 +476,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "勝った (｡･ω･｡)v",
@@ -416,7 +488,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "平和だね (✌︎˙˘˙✌︎)",
@@ -426,7 +500,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "いい日 ( ˶ˆᗜˆ˵ )✌",
@@ -436,7 +512,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     },
     {
       "value": "はいチーズ (◍ ´꒳` ◍)v",
@@ -446,7 +524,9 @@ window.MojiMoonToolData = {
         "ピース",
         "SNS",
         "短文"
-      ]
+      ],
+      "wide": false,
+      "beadHref": ""
     }
   ]
 };
