@@ -201,6 +201,7 @@ a {
   min-height: 38px;
   padding: 0 13px;
   font-weight: 700;
+  font-family: inherit;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -553,6 +554,7 @@ a {
   color: var(--text);
   border-radius: 999px;
   padding: 7px 9px;
+  font-family: inherit;
   cursor: pointer;
 }
 
