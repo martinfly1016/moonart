@@ -116,6 +116,7 @@ export function createDisplaySession(options) {
   let sentinel = null;
   let lockedScroll = 0;
   let resizeTimer = 0;
+  let lastFrame = '';
 
   function applyFrame(pseudo) {
     const style = stage.style;
@@ -191,16 +192,28 @@ export function createDisplaySession(options) {
     options.onWakeRenew?.(wake);
   }
 
+  function publishFrame() {
+    const style = stage.style;
+    if (!style) {
+      options.onResize?.();
+      return;
+    }
+    const frame = `${style.top}|${style.left}|${style.width}|${style.height}|${board?.classList.contains('is-rotated') ? 1 : 0}`;
+    if (frame === lastFrame) return;
+    lastFrame = frame;
+    options.onResize?.();
+  }
+
   function onResize() {
     if (!active) return;
     syncClasses();
-    options.onResize?.();
+    publishFrame();
     if (typeof win.clearTimeout === 'function') win.clearTimeout(resizeTimer);
     if (typeof win.setTimeout !== 'function') return;
     resizeTimer = win.setTimeout(() => {
       if (!active) return;
       syncClasses();
-      options.onResize?.();
+      publishFrame();
     }, 280);
   }
 
@@ -276,6 +289,7 @@ export function createDisplaySession(options) {
     active = false;
     method = null;
     lockedLandscape = false;
+    lastFrame = '';
     unbind();
     if (sentinel?.release) {
       try {

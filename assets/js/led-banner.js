@@ -13,23 +13,17 @@ import { createDisplaySession, isStandaloneDisplay } from './led-display.js';
 import { bindStickyPreview } from './sticky-preview.js';
 import {
   acknowledgePhoto,
-  blinkDurationMs,
   contrastLow,
   durationBucket,
-  fontPxForInk,
-  shrinkToWidth,
-  gapPx,
   hasPhotoAck,
-  inkFor,
   loadFavorites,
   loadRecent,
-  marqueeDurationMs,
-  marqueeKeyframes,
+  motionNeedsRestart,
   normalizeBanner,
+  presentationFor,
   pushRecent,
   splitEmoji,
   stateFromHash,
-  staticScale,
   stepColor,
   toggleFavorite
 } from './led-state.js';
@@ -64,6 +58,7 @@ function boot() {
   let builtKey = '';
   let motion = null;
   let blink = null;
+  let motionPlan = null;
   let fitFrame = 0;
   let startedAt = 0;
   let displayed = false;
@@ -141,16 +136,10 @@ function boot() {
   }
 
   function paintBoard() {
-    if (state.mode === 'penlight') {
-      board.style.background = state.light === 'gradient'
-        ? `linear-gradient(115deg, ${state.fill} 0%, ${state.fill2} 100%)`
-        : state.fill;
-      trackNode.style.setProperty('--led-ink', inkFor(state.fill));
-    } else {
-      board.style.background = state.bg;
-      trackNode.style.setProperty('--led-ink', state.fill);
-    }
-    const font = FONTS[state.font] || FONTS.dela;
+    const plan = presentationFor(state, {});
+    board.style.background = plan.background;
+    trackNode.style.setProperty('--led-ink', plan.ink);
+    const font = FONTS[plan.font] || FONTS.dela;
     trackNode.style.setProperty('--led-font', font.family);
     trackNode.style.setProperty('--led-weight', String(font.weight));
     viewport.classList.toggle('is-scroll', scrolling());
@@ -225,55 +214,80 @@ function boot() {
     if (!height || !width) return;
     const copies = [...trackNode.querySelectorAll('.led-copy')];
     if (!copies.length) return;
-    const vertical = verticalScroll();
-    const gap = scrolling() ? gapPx(state.gap, vertical ? height : width) : 0;
-    copies.forEach((copy) => {
-      copy.style.top = '0px';
-      copy.style.paddingRight = vertical ? '0px' : `${gap}px`;
-      copy.style.paddingBottom = vertical ? `${gap}px` : '0px';
+    const sample = state.mode === 'penlight' ? null : measureInk(copies[0]);
+    let plan = presentationFor(state, {
+      width,
+      height,
+      inkPerEm: sample?.perEm,
+      offsetEm: sample?.offsetEm
     });
-    if (state.mode === 'penlight') {
-      const base = Math.max(28, Math.round(Math.min(width, height) * 0.22));
-      copies.forEach((copy) => {
-        copy.style.fontSize = `${base}px`;
+    const paintCopy = (copy, item) => {
+      copy.style.position = 'relative';
+      copy.style.fontSize = `${item.fontPx}px`;
+      copy.style.top = `${item.shift}px`;
+      copy.style.paddingRight = item.vertical ? '0px' : `${item.gap}px`;
+      copy.style.paddingBottom = item.vertical ? `${item.gap}px` : '0px';
+    };
+    copies.forEach((copy) => paintCopy(copy, plan));
+    if (state.mode === 'penlight' && copies[0]) {
+      plan = presentationFor(state, {
+        width,
+        height,
+        textWidth: copies[0].scrollWidth,
+        textHeight: copies[0].scrollHeight
       });
-      if (copies[0]) {
-        const scale = staticScale(copies[0].scrollWidth, copies[0].scrollHeight, width * 0.9, height * 0.42);
-        copies[0].style.fontSize = `${Math.max(22, Math.floor(base * scale))}px`;
-      }
+      paintCopy(copies[0], plan);
       return;
     }
-    const sample = measureInk(copies[0]);
-    // Viewport clientHeight is the board height inside the safe-area padding.
-    let fontPx = fontPxForInk(height, state.scale, sample.perEm);
-    if (!scrolling()) {
-      copies[0].style.fontSize = `${fontPx}px`;
-      fontPx = shrinkToWidth(fontPx, copies[0].scrollWidth, width * 0.92);
+    if (!scrolling() && copies[0]) {
+      plan = presentationFor(state, {
+        width,
+        height,
+        inkPerEm: sample?.perEm,
+        offsetEm: sample?.offsetEm,
+        textWidth: copies[0].scrollWidth
+      });
+      copies.forEach((copy) => paintCopy(copy, plan));
     }
-    const shift = Math.round(-(sample.offsetEm || 0) * fontPx);
-    copies.forEach((copy) => {
-      copy.style.position = 'relative';
-      copy.style.fontSize = `${fontPx}px`;
-      copy.style.top = `${shift}px`;
-    });
+  }
+
+  function tune(animation, duration) {
+    if (!animation?.effect?.updateTiming || !duration) return;
+    const current = Number(animation.effect.getComputedTiming?.().duration) || 0;
+    if (Math.abs(current - duration) > 30) animation.effect.updateTiming({ duration });
+    if (animation.playState === 'paused' && !document.hidden) animation.play();
   }
 
   function startMotion() {
-    stopMotion();
-    const reduced = prefersReduced();
-    if (scrolling()) {
-      const copy = trackNode.querySelector('.led-copy');
-      const distance = verticalScroll() ? copy?.offsetHeight : copy?.offsetWidth;
-      if (distance) {
-        trackNode.classList.add('is-moving');
-        motion = trackNode.animate(marqueeKeyframes(state.direction), {
-          duration: marqueeDurationMs(distance, state.speed, reduced),
-          iterations: Infinity,
-          easing: 'linear'
-        });
-      }
+    const copy = trackNode.querySelector('.led-copy');
+    const distance = scrolling() ? (verticalScroll() ? copy?.offsetHeight : copy?.offsetWidth) : 0;
+    if (scrolling() && !distance) return;
+    const plan = presentationFor(state, {
+      width: viewport.clientWidth,
+      height: viewport.clientHeight,
+      distance,
+      reduced: prefersReduced()
+    });
+    const keep = !motionNeedsRestart(motionPlan, plan)
+      && (!plan.duration || motion)
+      && (!plan.blink || blink);
+    if (keep) {
+      tune(motion, plan.duration);
+      tune(blink, plan.blink);
+      motionPlan = plan;
+      return;
     }
-    if (state.mode === 'banner' && state.effect === 'blink' && !reduced) {
+    stopMotion();
+    motionPlan = plan;
+    if (plan.duration && plan.keyframes) {
+      trackNode.classList.add('is-moving');
+      motion = trackNode.animate(plan.keyframes, {
+        duration: plan.duration,
+        iterations: Infinity,
+        easing: 'linear'
+      });
+    }
+    if (plan.blink) {
       blink = viewport.animate([
         { opacity: 1, offset: 0 },
         { opacity: 1, offset: 0.42 },
@@ -281,7 +295,7 @@ function boot() {
         { opacity: 0, offset: 0.92 },
         { opacity: 1, offset: 1 }
       ], {
-        duration: blinkDurationMs(state.blinkHz),
+        duration: plan.blink,
         iterations: Infinity,
         easing: 'linear'
       });

@@ -278,12 +278,15 @@ body.led-display-open {
   height: 100%;
 }
 
-body.led-display-open .tool-shell {
+body.led-display-open .site-header,
+body.led-display-open .led-hero,
+body.led-display-open .led-note,
+body.led-display-open .share-banner,
+body.led-display-open .led-controls,
+body.led-display-open .led-article,
+body.led-display-open .related-tools,
+body.led-display-open .site-footer {
   visibility: hidden;
-}
-
-body.led-display-open .led-stage.is-open {
-  visibility: visible;
 }
 
 body.led-display-open .led-ad-slot {

@@ -27,8 +27,12 @@ import {
   stateFromHash,
   clampTextScale,
   fontPxForInk,
+  motionNeedsRestart,
+  normalizeBanner,
+  presentationFor,
   shrinkToWidth,
   staticScale,
+  stepColor,
   toggleFavorite
 } from '../assets/js/led-state.js';
 
@@ -423,7 +427,13 @@ assert.match(css, /is-editing/);
 assert.match(css, /position:\s*sticky/);
 assert.match(page, /viewport-fit=cover/);
 assert.ok(page.indexOf('data-install-hint') < page.indexOf('data-stage'));
-assert.match(sw, /led-banner-v3/);
+assert.match(sw, /led-banner-v4/);
+assert.equal(css.includes('led-display-open .tool-shell'), false);
+assert.match(css, /led-display-open \.led-controls/);
+assert.match(css, /led-display-open \.site-footer/);
+assert.match(bannerJs, /presentationFor/);
+assert.match(bannerJs, /updateTiming/);
+assert.match(bannerJs, /motionNeedsRestart/);
 assert.match(page, /data-scale/);
 assert.match(page, /文字の大きさ/);
 assert.match(sw, /sticky-preview\.js/);
@@ -503,5 +513,155 @@ assert.equal(pushRecent(memory, { text: '指ハート' }).length, 1);
 const favorite = toggleFavorite(memory, { text: 'ピースして', mode: 'banner' });
 assert.equal(favorite.added, true);
 assert.equal(toggleFavorite(memory, { text: 'ピースして', mode: 'banner' }).added, false);
+
+const previewBox = { width: 360, height: 120, distance: 500, inkPerEm: 0.8, offsetEm: 0.04, textWidth: 480, textHeight: 90 };
+const displayBox = { width: 844, height: 390, distance: 1800, inkPerEm: 0.8, offsetEm: 0.04, textWidth: 900, textHeight: 200 };
+
+function project(plan, box) {
+  const along = plan.vertical ? box.height : box.width;
+  return {
+    background: plan.background,
+    ink: plan.ink,
+    font: plan.font,
+    text: plan.text,
+    parts: plan.parts,
+    direction: plan.direction,
+    effect: plan.effect,
+    scale: plan.scale,
+    speed: plan.speed,
+    gapSetting: plan.gapSetting,
+    blink: plan.blink,
+    keyframes: plan.keyframes,
+    copies: plan.copies,
+    light: plan.light,
+    gapRatio: along ? Math.round((plan.gap / along) * 100) : 0,
+    rate: plan.duration ? Math.round((box.distance / plan.duration) * 1000) : 0
+  };
+}
+
+function surfacesMatch(state) {
+  const preview = presentationFor(state, previewBox);
+  const display = presentationFor(state, displayBox);
+  const left = project(preview, previewBox);
+  const right = project(display, displayBox);
+  assert.equal(left.background, right.background);
+  assert.equal(left.ink, right.ink);
+  assert.equal(left.font, right.font);
+  assert.equal(left.text, right.text);
+  assert.deepEqual(left.parts, right.parts);
+  assert.equal(left.direction, right.direction);
+  assert.equal(left.effect, right.effect);
+  assert.equal(left.scale, right.scale);
+  assert.equal(left.speed, right.speed);
+  assert.equal(left.gapSetting, right.gapSetting);
+  assert.equal(left.blink, right.blink);
+  assert.deepEqual(left.keyframes, right.keyframes);
+  assert.equal(left.copies, right.copies);
+  assert.equal(left.light, right.light);
+  assert.equal(left.gapRatio, right.gapRatio);
+  assert.ok(Math.abs(left.rate - right.rate) <= 1);
+  assert.deepEqual(presentationFor(state, displayBox), presentationFor(state, displayBox));
+}
+
+const base = () => normalizeBanner({
+  mode: 'banner',
+  text: '大好き',
+  effect: 'scroll',
+  direction: 'left',
+  speed: 3,
+  gap: 16,
+  fill: '#ff4d88',
+  bg: '#1a1a1a',
+  font: 'dela',
+  scale: 95
+});
+
+const rows = [];
+function audit(name, before, after, changed) {
+  try {
+    surfacesMatch(before);
+    surfacesMatch(after);
+    const previewBefore = presentationFor(before, previewBox);
+    const displayBefore = presentationFor(before, displayBox);
+    const previewAfter = presentationFor(after, previewBox);
+    const displayAfter = presentationFor(after, displayBox);
+    assert.deepEqual(previewBefore, presentationFor(before, previewBox));
+    assert.deepEqual(displayBefore, presentationFor(before, displayBox));
+    assert.equal(changed(previewBefore, previewAfter), true);
+    assert.equal(changed(displayBefore, displayAfter), true);
+    rows.push([name, 'pass']);
+  } catch (error) {
+    rows.push([name, 'fail']);
+    return error;
+  }
+  return null;
+}
+
+const failures = [
+  audit('text', base(), normalizeBanner({ ...base(), text: '初参戦' }), (a, b) => a.text !== b.text),
+  audit('mode: scroll', normalizeBanner({ ...base(), effect: 'still' }), base(), (a, b) => a.duration > 0 && b.duration === 0 ? false : a.duration !== b.duration),
+  audit('mode: static', base(), normalizeBanner({ ...base(), effect: 'still' }), (a, b) => a.duration > 0 && b.duration === 0 && a.copies !== b.copies),
+  audit('mode: blink', base(), normalizeBanner({ ...base(), effect: 'blink', blinkHz: 2 }), (a, b) => a.blink === 0 && b.blink > 0),
+  audit('speed', normalizeBanner({ ...base(), speed: 1 }), normalizeBanner({ ...base(), speed: 5 }), (a, b) => a.duration !== b.duration && a.speed !== b.speed),
+  audit('gap', normalizeBanner({ ...base(), gap: 0 }), normalizeBanner({ ...base(), gap: 80 }), (a, b) => a.gap !== b.gap && a.gapSetting !== b.gapSetting),
+  audit('direction', base(), normalizeBanner({ ...base(), direction: 'up' }), (a, b) => a.direction !== b.direction && a.vertical !== b.vertical),
+  audit('text color', base(), normalizeBanner({ ...base(), fill: '#3aa0e8' }), (a, b) => a.ink !== b.ink),
+  audit('background color', base(), normalizeBanner({ ...base(), bg: '#ffffff' }), (a, b) => a.background !== b.background),
+  audit('member color preset', base(), normalizeBanner({ ...base(), text: '花', fill: '#e23b3b' }), (a, b) => a.text !== b.text && a.ink !== b.ink),
+  audit('font', base(), normalizeBanner({ ...base(), font: 'rounded' }), (a, b) => a.font !== b.font),
+  audit('size', normalizeBanner({ ...base(), scale: 60 }), normalizeBanner({ ...base(), scale: 100 }), (a, b) => a.fontPx !== b.fontPx && a.scale !== b.scale),
+  audit('penlight solid', base(), normalizeBanner({ ...base(), mode: 'penlight', light: 'solid', fill: '#ff4d88' }), (a, b) => b.mode === 'penlight' && b.background === '#ff4d88' && b.duration === 0),
+  audit('penlight gradient', normalizeBanner({ ...base(), mode: 'penlight', light: 'solid' }), normalizeBanner({ ...base(), mode: 'penlight', light: 'gradient', fill: '#ff4d88', fill2: '#7a5cff' }), (a, b) => a.background !== b.background && b.background.includes('linear-gradient')),
+  audit('penlight color switch', normalizeBanner({ ...base(), mode: 'penlight', light: 'solid', fill: '#ff4d88' }), normalizeBanner({ ...base(), mode: 'penlight', light: 'solid', fill: stepColor('#ff4d88', 1) }), (a, b) => a.background !== b.background),
+  audit('emoji', base(), normalizeBanner({ ...base(), text: '大好き💖' }), (a, b) => b.parts.some((part) => part.emoji) && !a.parts.some((part) => part.emoji))
+];
+
+const sharedPlan = normalizeBanner({
+  ...base(),
+  text: '大好き💖',
+  speed: 1,
+  gap: 80,
+  fill: '#3aa0e8',
+  bg: '#ffffff',
+  font: 'rounded',
+  scale: 70,
+  effect: 'blink',
+  direction: 'right',
+  blinkHz: 2
+});
+failures.push((() => {
+  try {
+    const opened = stateFromHash(decodeShareHash(encodeShareHash(sharedPlan)));
+    surfacesMatch(sharedPlan);
+    surfacesMatch(opened);
+    assert.deepEqual(presentationFor(sharedPlan, previewBox), presentationFor(opened, previewBox));
+    assert.deepEqual(presentationFor(sharedPlan, displayBox), presentationFor(opened, displayBox));
+    rows.push(['share link', 'pass']);
+    return null;
+  } catch (error) {
+    rows.push(['share link', 'fail']);
+    return error;
+  }
+})());
+const slow = presentationFor(normalizeBanner({ ...base(), speed: 1, gap: 0 }), displayBox);
+const fast = presentationFor(normalizeBanner({ ...base(), speed: 5, gap: 80 }), displayBox);
+failures.push(audit(
+  'change while open',
+  normalizeBanner({ ...base(), speed: 1, gap: 0 }),
+  normalizeBanner({ ...base(), speed: 5, gap: 80 }),
+  (a, b) => a.duration !== b.duration && a.gap !== b.gap && motionNeedsRestart(a, b) === false
+));
+failures.push(audit(
+  'reopen display',
+  fast && normalizeBanner({ ...base(), speed: 5, gap: 80 }),
+  normalizeBanner({ ...base(), speed: 5, gap: 80 }),
+  (a, b) => motionNeedsRestart(slow, a) === false && a.duration === b.duration && a.gap === b.gap
+));
+
+const failedRows = failures.filter(Boolean);
+console.log('| setting | preview vs display |');
+console.log('| --- | --- |');
+rows.forEach(([name, status]) => console.log(`| ${name} | ${status} |`));
+if (failedRows.length) throw failedRows[0];
 
 console.log('led-banner checks passed');
