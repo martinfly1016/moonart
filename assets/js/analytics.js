@@ -7,7 +7,12 @@
   };
 
   window.gtag('js', new Date());
-  window.gtag('config', measurementId);
+  // Hash links carry text the visitor typed. Keep that out of page_location.
+  var pagePath = window.location.pathname + window.location.search;
+  window.gtag('config', measurementId, {
+    page_location: window.location.origin + pagePath,
+    page_path: pagePath
+  });
 
   var script = document.createElement('script');
   script.async = true;

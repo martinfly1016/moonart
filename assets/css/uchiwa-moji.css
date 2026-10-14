@@ -1,0 +1,479 @@
+@font-face {
+  font-family: "Uchiwa Dela Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/uchiwa/dela-gothic-one.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Uchiwa Rounded";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/uchiwa/mplus-rounded-1c-bold.woff2") format("woff2");
+}
+
+.uchiwa-body {
+  background:
+    radial-gradient(circle at top, #fff 0, #f6f7fb 42%);
+}
+
+.uchiwa-hero .hero-inner {
+  padding: 22px 16px 18px;
+}
+
+.uchiwa-hero h1 {
+  font-size: clamp(1.7rem, 6vw, 2.6rem);
+}
+
+.uchiwa-hero .hero-copy {
+  max-width: 40rem;
+}
+
+.uchiwa-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px 8px;
+  min-width: 0;
+}
+
+.uchiwa-app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  min-width: 0;
+}
+
+.uchiwa-stage-wrap,
+.uchiwa-controls,
+.share-banner,
+.note-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.uchiwa-stage-wrap {
+  padding: 12px;
+  min-width: 0;
+  max-width: 100%;
+  background:
+    linear-gradient(180deg, #fff7fb 0%, #eef2ff 100%);
+}
+
+.uchiwa-stage {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.uchiwa-stage canvas {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.share-banner,
+.note-card,
+.inapp-note {
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  line-height: 1.7;
+}
+
+.share-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share-banner[hidden],
+.note-card[hidden],
+.inapp-note[hidden],
+.stroke-row[hidden],
+.custom-size[hidden],
+[hidden] {
+  display: none !important;
+}
+
+.uchiwa-controls {
+  padding: 14px;
+  box-shadow: none;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.field-label,
+.group-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.field-label span,
+.hint,
+.size-note,
+.fan-count,
+.member-empty,
+.font-credit {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.uchiwa-text {
+  width: 100%;
+  min-height: 76px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  resize: vertical;
+  font: 700 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+}
+
+.deco-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.deco-links a,
+.seo-section a,
+.font-credit a {
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.control-block {
+  margin-top: 16px;
+}
+
+.choice-row,
+.phrase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.choice-row button,
+.chip-row button,
+.phrase-actions button,
+.stroke-colors button,
+.member-apply,
+.member-remove,
+.text-button,
+.primary-btn,
+.secondary-btn {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font: 800 14px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.choice-row button[aria-pressed="true"],
+.stroke-colors button[aria-pressed="true"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.chip-row {
+  display: flex;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-bottom: 4px;
+}
+
+.chip-row button {
+  flex: 0 0 auto;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.color-grid button,
+.color-custom {
+  min-width: 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 6px 8px;
+  font: 800 13px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+.color-grid button[aria-pressed="true"] {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.swatch-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(23, 32, 51, 0.18);
+  flex: 0 0 auto;
+}
+
+.color-custom input,
+.dual-row input[type="color"] {
+  width: 44px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.dual-row,
+.custom-size,
+.action-row,
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.custom-size label,
+.dual-row label,
+.stroke-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.custom-size input[type="number"] {
+  width: 88px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0 10px;
+  font: 700 16px sans-serif;
+}
+
+.stroke-row {
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.stroke-row input[type="range"] {
+  flex: 1 1 140px;
+  min-width: 120px;
+}
+
+.contrast-note {
+  margin: 8px 0 0;
+  color: #9a3412;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.member-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.member-apply {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.member-remove {
+  width: 44px;
+  padding: 0;
+}
+
+.action-row {
+  margin-top: 16px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  flex: 1 1 160px;
+}
+
+.secondary-btn {
+  flex: 1 1 140px;
+}
+
+.primary-btn:disabled,
+.secondary-btn:disabled {
+  opacity: 0.55;
+}
+
+.export-status {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.etiquette {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff7ed;
+  color: #7c2d12;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.etiquette strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.uchiwa-ad-slot {
+  height: 100px;
+  min-height: 100px;
+  margin: 14px 0 0;
+}
+
+.phrase-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.phrase-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.phrase-list li span {
+  font-weight: 800;
+  min-width: 8em;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.steps li + li,
+.seo-section p + p {
+  margin-top: 8px;
+}
+
+.font-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.font-table th,
+.font-table td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.uchiwa-dialog {
+  width: min(440px, calc(100vw - 32px));
+  border: 0;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.uchiwa-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.uchiwa-dialog h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.uchiwa-dialog p {
+  line-height: 1.7;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+@media (min-width: 720px) {
+  .color-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .uchiwa-app {
+    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+    align-items: start;
+  }
+
+  .uchiwa-stage-wrap {
+    position: sticky;
+    top: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    flex: 0 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
