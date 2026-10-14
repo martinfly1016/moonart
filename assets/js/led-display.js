@@ -62,6 +62,21 @@ export function displayFrame(viewport, safe) {
   };
 }
 
+// Padding is applied on the board, whose axes swap when it is rotated 90°.
+// The stage already hangs off the screen by one safe inset, so the control
+// needs a second inset to land inside the visible safe area.
+export function controlPads(safe, rotated) {
+  const inset = rotated
+    ? { t: safe.right, r: safe.bottom, b: safe.left, l: safe.top }
+    : { t: safe.top, r: safe.right, b: safe.bottom, l: safe.left };
+  return {
+    t: inset.t * 2,
+    r: inset.r * 2,
+    b: inset.b * 2,
+    l: inset.l * 2
+  };
+}
+
 export async function requestScreenWakeLock(wakeLock) {
   if (!wakeLock || typeof wakeLock.request !== 'function') {
     return { status: 'unsupported', sentinel: null };
@@ -112,25 +127,26 @@ export function createDisplaySession(options) {
       style.height = '';
       style.removeProperty?.('--led-vv-w');
       style.removeProperty?.('--led-vv-h');
-      style.removeProperty?.('--led-bleed-t');
-      style.removeProperty?.('--led-bleed-r');
-      style.removeProperty?.('--led-bleed-b');
-      style.removeProperty?.('--led-bleed-l');
+      style.removeProperty?.('--led-pad-t');
+      style.removeProperty?.('--led-pad-r');
+      style.removeProperty?.('--led-pad-b');
+      style.removeProperty?.('--led-pad-l');
       return;
     }
     const viewport = readVisibleViewport(win);
     const safe = readSafeArea(win, doc);
     const frame = displayFrame(viewport, safe);
+    const pads = controlPads(safe, Boolean(board?.classList.contains('is-rotated')));
     style.top = `${frame.top}px`;
     style.left = `${frame.left}px`;
     style.width = `${frame.width}px`;
     style.height = `${frame.height}px`;
     style.setProperty?.('--led-vv-w', `${frame.width}px`);
     style.setProperty?.('--led-vv-h', `${frame.height}px`);
-    style.setProperty?.('--led-bleed-t', `${safe.top}px`);
-    style.setProperty?.('--led-bleed-r', `${safe.right}px`);
-    style.setProperty?.('--led-bleed-b', `${safe.bottom}px`);
-    style.setProperty?.('--led-bleed-l', `${safe.left}px`);
+    style.setProperty?.('--led-pad-t', `${pads.t}px`);
+    style.setProperty?.('--led-pad-r', `${pads.r}px`);
+    style.setProperty?.('--led-pad-b', `${pads.b}px`);
+    style.setProperty?.('--led-pad-l', `${pads.l}px`);
   }
 
   function syncClasses() {

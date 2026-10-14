@@ -4,6 +4,7 @@ import {
   NO_SLEEP_VIDEO_DEFAULT,
   chooseFullscreenMethod,
   createDisplaySession,
+  controlPads,
   displayFrame,
   fullscreenApiAvailable,
   isStandaloneDisplay,
@@ -306,7 +307,15 @@ assert.equal(visible.stage.style.top, '12px');
 assert.equal(visible.stage.style.left, '-47px');
 assert.equal(visible.stage.style.width, '894px');
 assert.equal(visible.stage.style.height, '361px');
-assert.equal(visible.stage.style.values['--led-bleed-l'], '47px');
+assert.equal(visible.stage.style.values['--led-pad-l'], '94px');
+assert.equal(visible.stage.style.values['--led-pad-r'], '94px');
+assert.equal(visible.stage.style.values['--led-pad-b'], '42px');
+assert.deepEqual(controlPads({ top: 59, right: 0, bottom: 34, left: 0 }, true), {
+  t: 0,
+  r: 68,
+  b: 0,
+  l: 118
+});
 assert.equal(visible.listeners.has('vv:resize'), true);
 assert.equal(visible.listeners.has('vv:scroll'), true);
 await visible.session.exit();
