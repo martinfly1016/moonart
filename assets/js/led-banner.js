@@ -19,14 +19,18 @@ import { bindStickyPreview } from './sticky-preview.js';
 import {
   acknowledgePhoto,
   contrastLow,
+  createMarqueeRunner,
   durationBucket,
   hasPhotoAck,
   loadFavorites,
   loadRecent,
+  marqueeLoopPx,
   motionNeedsRestart,
+  snapMarqueeLoop,
   normalizeBanner,
   presentationFor,
   pushRecent,
+  speedPxPerSec,
   splitEmoji,
   stateFromHash,
   stepColor,
@@ -185,7 +189,35 @@ function boot() {
     blink?.cancel();
     motion = null;
     blink = null;
-    trackNode.classList.remove('is-moving');
+    trackNode.style.transform = '';
+  }
+
+  // One copy plus its trailing gap, measured from the painted boxes so the
+  // period matches the pixels on screen after font load and rotation.
+  function scrollLoopPx() {
+    const copies = trackNode.querySelectorAll('.led-copy');
+    if (copies.length < 2) return 0;
+    const vertical = verticalScroll();
+    const second = copies[1];
+    second.style.marginLeft = vertical ? '' : '0px';
+    second.style.marginTop = vertical ? '0px' : '';
+    const firstBox = copies[0].getBoundingClientRect();
+    const secondBox = second.getBoundingClientRect();
+    const measured = marqueeLoopPx(firstBox.left, firstBox.top, secondBox.left, secondBox.top);
+    const loop = snapMarqueeLoop(measured, window.devicePixelRatio || 1);
+    const fix = loop - measured;
+    if (loop && Math.abs(fix) >= 0.01) {
+      if (vertical) second.style.marginTop = `${fix}px`;
+      else second.style.marginLeft = `${fix}px`;
+    }
+    return loop;
+  }
+
+  function applyShift(shift) {
+    const value = (Math.round(shift * 100) / 100).toFixed(2);
+    trackNode.style.transform = verticalScroll()
+      ? `translate3d(0px, ${value}px, 0px)`
+      : `translate3d(${value}px, 0px, 0px)`;
   }
 
   function glyphMetrics(node) {
@@ -267,31 +299,38 @@ function boot() {
 
   function startMotion() {
     const copy = trackNode.querySelector('.led-copy');
-    const distance = scrolling() ? (verticalScroll() ? copy?.offsetHeight : copy?.offsetWidth) : 0;
-    if (scrolling() && !distance) return;
+    const loop = scrolling() ? scrollLoopPx() : 0;
+    if (scrolling() && !loop) return;
+    const fontPx = copy ? parseFloat(getComputedStyle(copy).fontSize) : 0;
     const plan = presentationFor(state, {
       width: viewport.clientWidth,
       height: viewport.clientHeight,
-      distance,
+      distance: loop,
       reduced: prefersReduced()
     });
+    const reverse = plan.direction === 'right' || plan.direction === 'down';
+    const speed = loop
+      ? speedPxPerSec(state.speed, fontPx || plan.fontPx) * (prefersReduced() ? 0.45 : 1)
+      : 0;
     const keep = !motionNeedsRestart(motionPlan, plan)
       && (!plan.duration || motion)
       && (!plan.blink || blink);
     if (keep) {
-      tune(motion, plan.duration);
+      if (plan.duration && motion) motion.retune({ loop, speed, reverse });
       tune(blink, plan.blink);
       motionPlan = plan;
       return;
     }
     stopMotion();
     motionPlan = plan;
-    if (plan.duration && plan.keyframes) {
-      trackNode.classList.add('is-moving');
-      motion = trackNode.animate(plan.keyframes, {
-        duration: plan.duration,
-        iterations: Infinity,
-        easing: 'linear'
+    if (plan.duration && loop) {
+      motion = createMarqueeRunner({
+        loop,
+        speed,
+        reverse,
+        apply: applyShift,
+        raf: (callback) => requestAnimationFrame(callback),
+        cancel: (id) => cancelAnimationFrame(id)
       });
     }
     if (plan.blink) {

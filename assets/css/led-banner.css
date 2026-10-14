@@ -111,10 +111,6 @@
   height: max-content;
 }
 
-.led-track.is-moving {
-  will-change: transform;
-}
-
 .led-copy {
   display: flex;
   align-items: center;
