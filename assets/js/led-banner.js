@@ -192,31 +192,31 @@ function boot() {
     trackNode.classList.remove('is-moving');
   }
 
+  function glyphMetrics(node) {
+    const canvas = glyphMetrics.canvas || (glyphMetrics.canvas = document.createElement('canvas'));
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+    const size = 200;
+    const style = getComputedStyle(node);
+    ctx.font = `${style.fontWeight} ${size}px ${style.fontFamily}`;
+    const metrics = ctx.measureText(node.textContent || ' ');
+    const ascent = metrics.actualBoundingBoxAscent || 0;
+    const descent = metrics.actualBoundingBoxDescent || 0;
+    if (ascent + descent < 1) return null;
+    const fontAscent = metrics.fontBoundingBoxAscent || ascent;
+    const fontDescent = metrics.fontBoundingBoxDescent || descent;
+    return {
+      perEm: (ascent + descent) / size,
+      // Positive when the painted glyphs sit below the center of the em box.
+      offsetEm: ((fontAscent - fontDescent) - (ascent - descent)) / 2 / size
+    };
+  }
+
   function measureInk(copy) {
-    const probe = document.createElement('div');
-    probe.setAttribute('aria-hidden', 'true');
-    probe.style.cssText = 'position:fixed;left:0;top:0;visibility:hidden;pointer-events:none;display:flex;align-items:center;white-space:nowrap;line-height:1;font-size:100px;';
-    [...copy.children].forEach((child) => {
-      const span = child.cloneNode(true);
-      const style = getComputedStyle(child);
-      span.style.fontFamily = style.fontFamily;
-      span.style.fontWeight = style.fontWeight;
-      span.style.fontSize = '100px';
-      span.style.lineHeight = '1';
-      probe.append(span);
-    });
-    if (!probe.childElementCount) {
-      probe.textContent = copy.textContent || '文字';
-    }
-    document.body.append(probe);
-    const range = document.createRange();
-    range.selectNodeContents(probe);
-    const ink = range.getBoundingClientRect();
-    const box = probe.getBoundingClientRect();
-    probe.remove();
-    const perEm = ink.height > 0 ? ink.height / 100 : 1;
-    const offsetEm = ((ink.top + ink.height / 2) - (box.top + box.height / 2)) / 100;
-    return { perEm, offsetEm };
+    const nodes = [...copy.querySelectorAll('.led-plain, .led-emoji')];
+    const metrics = nodes.map(glyphMetrics).filter(Boolean);
+    if (!metrics.length) return { perEm: 1, offsetEm: 0 };
+    return metrics.reduce((tallest, item) => (item.perEm > tallest.perEm ? item : tallest));
   }
 
   function applyFit() {

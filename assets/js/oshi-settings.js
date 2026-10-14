@@ -193,7 +193,7 @@ export function compactState(state) {
   };
   if (source.mode === 'banner' || source.mode === 'penlight') {
     const scale = Number(source.scale);
-    result.sz = Number.isFinite(scale) ? Math.round(Math.min(100, Math.max(60, scale))) : 92;
+    result.sz = Number.isFinite(scale) ? Math.round(Math.min(100, Math.max(60, scale))) : 95;
   }
   return result;
 }
@@ -231,7 +231,7 @@ export function expandState(data) {
     bg: normalizeColor(data.bg, base.bg),
     gap: Math.round(clamp(data.gp, 0, 80, base.gap)),
     light: data.lt === 'g' ? 'gradient' : 'solid',
-    scale: Number.isFinite(Number(data.sz)) ? Number(data.sz) : 92
+    scale: Number.isFinite(Number(data.sz)) ? Number(data.sz) : 95
   };
 }
 

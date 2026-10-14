@@ -57,7 +57,7 @@ export function bannerDefaults() {
     gap: 16,
     blinkHz: 1,
     light: 'solid',
-    scale: 92
+    scale: 95
   };
 }
 
@@ -151,7 +151,7 @@ export function durationBucket(seconds) {
 
 export const TEXT_FILL_MIN = 60;
 export const TEXT_FILL_MAX = 100;
-export const TEXT_FILL_DEFAULT = 92;
+export const TEXT_FILL_DEFAULT = 95;
 
 export function clampTextScale(value) {
   const number = Number(value);

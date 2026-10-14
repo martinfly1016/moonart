@@ -447,7 +447,7 @@ assert.equal(clampBlinkHz(0), 0.5);
 assert.equal(blinkDurationMs(3), 333);
 assert.equal(gapPx(0, 800), 0);
 assert.equal(staticScale(200, 100, 100, 100), 0.5);
-assert.equal(clampTextScale(undefined), 92);
+assert.equal(clampTextScale(undefined), 95);
 assert.equal(clampTextScale(40), 60);
 assert.equal(clampTextScale(140), 100);
 assert.equal(fontPxForInk(390, 92, 0.7), 513);
@@ -490,7 +490,7 @@ assert.equal(shared.gap, 0);
 assert.equal(shared.blinkHz, 3);
 assert.equal(shared.font, 'rounded');
 assert.equal(shared.scale, 70);
-assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'banner', text: '大好き' }))).scale, 92);
+assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'banner', text: '大好き' }))).scale, 95);
 assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'uchiwa', text: '大好き', effect: 'rainbow' }))).effect, 'scroll');
 
 const memory = {
