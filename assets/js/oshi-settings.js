@@ -69,7 +69,10 @@ export function defaultState() {
     speed: 3,
     effect: 'still',
     direction: 'left',
-    blinkHz: 0
+    blinkHz: 0,
+    bg: '#1a1a1a',
+    gap: 16,
+    light: 'solid'
   };
 }
 
@@ -183,7 +186,10 @@ export function compactState(state) {
     sp: clamp(source.speed, 1, 5, 3),
     ef: ['still', 'scroll', 'blink', 'rainbow'].includes(source.effect) ? source.effect : 'still',
     dir: ['left', 'right', 'up', 'down'].includes(source.direction) ? source.direction : 'left',
-    bk: round1(clamp(source.blinkHz, 0, 3, 0))
+    bk: round1(clamp(source.blinkHz, 0, 3, 0)),
+    bg: normalizeColor(source.bg, '#1a1a1a'),
+    gp: Math.round(clamp(source.gap, 0, 80, 16)),
+    lt: source.light === 'gradient' ? 'g' : 's'
   };
 }
 
@@ -216,7 +222,10 @@ export function expandState(data) {
     speed: clamp(data.sp, 1, 5, 3),
     effect: ['still', 'scroll', 'blink', 'rainbow'].includes(data.ef) ? data.ef : 'still',
     direction: ['left', 'right', 'up', 'down'].includes(data.dir) ? data.dir : 'left',
-    blinkHz: clamp(data.bk, 0, 3, 0)
+    blinkHz: clamp(data.bk, 0, 3, 0),
+    bg: normalizeColor(data.bg, base.bg),
+    gap: Math.round(clamp(data.gp, 0, 80, base.gap)),
+    light: data.lt === 'g' ? 'gradient' : 'solid'
   };
 }
 

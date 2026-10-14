@@ -328,6 +328,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mojimoon.com/led-banner/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mojimoon.com/zenkaku-hankaku-converter/</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://mojimoon.com/zenkaku-hankaku-converter/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mojimoon.com/zenkaku-hankaku-converter/"/>

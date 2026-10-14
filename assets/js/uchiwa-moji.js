@@ -1030,6 +1030,11 @@ function boot() {
     members = [];
   }
   if (isInAppBrowser()) document.querySelector('[data-inapp-note]').hidden = false;
+  document.querySelector('[data-open-led]')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    const hash = encodeShareHash({ ...state, mode: 'banner' });
+    window.location.assign(`/led-banner/#${hash}`);
+  });
   document.addEventListener('click', onClick);
   root.addEventListener('input', onInput);
   root.addEventListener('change', onInput);

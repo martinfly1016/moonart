@@ -106,6 +106,7 @@ export function createDisplaySession(options) {
   function onResize() {
     if (!active) return;
     syncClasses();
+    options.onResize?.();
   }
 
   function onFullscreenChange() {

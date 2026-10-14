@@ -3,18 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>電光掲示板 - MojiMoon</title>
-  <meta name="description" content="スマホの画面を横向きの全画面表示にします。">
+  <title>電光掲示板アプリ｜スマホで流れる文字・推しの名前・ペンライト【無料・インストール不要】 - MojiMoon</title>
+  <meta name="description" content="推しの名前とメンカラで、スマホを電光掲示板やペンライトにします。流れる文字、静止、点滅に対応。無料で、登録もインストールも要りません。">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://mojimoon.com/led-banner/">
+  <link rel="manifest" href="/led-banner/manifest.webmanifest">
+  <meta name="theme-color" content="#141827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="電光掲示板">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/moon_icon.png">
-  <meta property="og:title" content="電光掲示板">
-  <meta property="og:description" content="スマホの画面を横向きの全画面表示にします。">
+  <meta property="og:title" content="電光掲示板アプリ｜スマホで流れる文字・ペンライト">
+  <meta property="og:description" content="推しの名前とメンカラで、スマホが電光掲示板にもペンライトにもなります。無料・登録不要・インストール不要。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mojimoon.com/led-banner/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "電光掲示板アプリ",
+    "url": "https://mojimoon.com/led-banner/",
+    "applicationCategory": "EntertainmentApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "description": "推しの名前とメンカラで、スマホの画面を電光掲示板やペンライトとして使える無料ツールです。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "無料で使えますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "無料です。登録も、有料プランもありません。表示中の画面に広告は出ません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "アプリのインストールは必要ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "必要ありません。ブラウザでこのページを開けば使えます。ホーム画面に追加すると、次からもすぐ開けます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "オフラインでも使えますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一度このページを開いておけば、電波の弱い場所でもう一度開けます。最初の読み込みには通信が要ります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "iPhoneで全画面にできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "できます。iPhoneのSafariはページそのものを全画面にできないので、画面を横向きの表示に回転させます。共有からホーム画面に追加すると、アドレスバーも隠せます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "会場で使っていいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "公演と会場のルールによります。スマホや発光物を禁止しているところでは使わないでください。胸の高さにとどめ、係員の指示に従ってください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "点滅は光過敏の人に影響しますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "点滅は光過敏の方の体調に影響することがあります。このページの点滅は1秒に3回までです。不安なときは静止にしてください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "画面が勝手に暗くなりませんか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "対応しているブラウザでは、全画面のあいだ画面がスリープしないようにします。止まらないときは、端末の設定で自動ロックをなしにしてください。明るさそのものは、端末の設定で上げます。"
+        }
+      }
+    ]
+  }
+  </script>
   <script src="/assets/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/uchiwa-moji.css">
   <link rel="stylesheet" href="/assets/css/led-banner.css">
   <link rel="stylesheet" href="/assets/css/site-navigation.css">
   <script src="/assets/js/site-navigation.js" defer></script>
@@ -48,29 +135,260 @@
     <section class="hero led-hero">
       <div class="hero-inner">
         <p class="eyebrow">LED Banner</p>
-        <h1>電光掲示板</h1>
-        <p class="hero-copy">画面を横向きの全画面にして、文字を大きく表示します。</p>
+        <h1>電光掲示板アプリ</h1>
+        <p class="hero-copy">推しの名前とメンカラで、スマホが電光掲示板にもペンライトにもなる。無料・登録不要・インストール不要。</p>
       </div>
     </section>
 
     <main class="led-wrap" data-led-banner>
       <p class="led-note" data-inapp hidden>アプリ内ブラウザでは全画面が制限されることがあります。メニューから Safari で開いてください。</p>
-      <div class="led-stage" data-stage>
-        <div class="led-board" data-board>
-          <p class="led-message">電光掲示板</p>
-          <p class="led-lock-tip" data-lock-tip role="status" hidden>このブラウザでは画面の自動ロックを止められません。設定で「自動ロック」を「なし」にしてください。</p>
-          <button class="led-exit" type="button" data-exit hidden>閉じる</button>
+      <p class="led-note" data-install-hint hidden>
+        <span data-install-text></span>
+        <button class="led-install" type="button" data-install hidden>ホーム画面に追加</button>
+      </p>
+      <p class="share-banner" data-share-banner hidden>
+        <span>共有された設定を開きました。文字と色を確認してから、全画面にできます。</span>
+        <button class="primary-btn" type="button" data-enter>全画面で表示</button>
+      </p>
+
+      <div class="led-app">
+        <div class="led-stage" data-stage>
+          <div class="led-board" data-board>
+            <div class="led-viewport" data-viewport aria-live="off">
+              <div class="led-track" data-track></div>
+            </div>
+            <p class="led-lock-tip" data-lock-tip role="status" hidden>このブラウザでは画面の自動ロックを止められません。設定で「自動ロック」を「なし」にしてください。</p>
+            <div class="led-display-controls" data-display-controls>
+              <button type="button" data-light-prev hidden>前の色</button>
+              <button type="button" data-light-next hidden>次の色</button>
+              <button type="button" data-exit hidden>閉じる</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="led-controls">
+          <div class="choice-row" role="group" aria-label="表示モード">
+            <button type="button" data-mode="banner" aria-pressed="true">電光掲示板</button>
+            <button type="button" data-mode="penlight" aria-pressed="false">ペンライト</button>
+          </div>
+
+          <label class="field-label" for="led-text">表示する文字 <span data-count>0/40</span></label>
+          <input id="led-text" class="led-text" data-text maxlength="80" spellcheck="false" autocomplete="off" placeholder="なまえ、だいすき" value="大好き">
+          <p class="hint">短いほど遠くから読めます。絵文字は色をつけずに、そのまま出します。</p>
+          <p class="deco-links">足す <a href="/kaomoji/">顔文字一覧</a><a href="/uchiwa-moji/" data-open-uchiwa>うちわ文字で作る</a></p>
+
+          <div class="control-block">
+            <p class="group-label">定型文</p>
+            <div class="chip-row" role="group" aria-label="定型文">
+              <button type="button" data-phrase="ピースして">ピースして</button>
+              <button type="button" data-phrase="指ハート">指ハート</button>
+              <button type="button" data-phrase="手ふって">手ふって</button>
+              <button type="button" data-phrase="ウインクして">ウインクして</button>
+              <button type="button" data-phrase="バーンして">バーンして</button>
+              <button type="button" data-phrase="だいすき">だいすき</button>
+              <button type="button" data-phrase="一生推す">一生推す</button>
+              <button type="button" data-phrase="初参戦">初参戦</button>
+              <button type="button" data-phrase="誕生日おめでとう">誕生日おめでとう</button>
+              <button type="button" data-phrase="遠征">遠征</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">顔文字</p>
+            <div class="chip-row" aria-label="顔文字">
+              <button type="button" data-kaomoji="(♡´▽`♡)" aria-label="顔文字を挿入">(♡´▽`♡)</button>
+              <button type="button" data-kaomoji="(ﾉ´∀`)ﾉ" aria-label="顔文字を挿入">(ﾉ´∀`)ﾉ</button>
+              <button type="button" data-kaomoji="＼(^o^)／" aria-label="顔文字を挿入">＼(^o^)／</button>
+              <button type="button" data-kaomoji="(*´꒳`*)" aria-label="顔文字を挿入">(*´꒳`*)</button>
+              <button type="button" data-kaomoji="(๑˃̵ᴗ˂̵)و" aria-label="顔文字を挿入">(๑˃̵ᴗ˂̵)و</button>
+              <button type="button" data-kaomoji="♡(>ᴗ<)♡" aria-label="顔文字を挿入">♡(>ᴗ<)♡</button>
+              <button type="button" data-kaomoji="٩(ˊᗜˋ*)و" aria-label="顔文字を挿入">٩(ˊᗜˋ*)و</button>
+              <button type="button" data-kaomoji="(｡♥‿♥｡)" aria-label="顔文字を挿入">(｡♥‿♥｡)</button>
+            </div>
+          </div>
+
+          <div class="control-block" data-banner-only>
+            <p class="group-label">動き</p>
+            <div class="choice-row" role="group" aria-label="動き">
+              <button type="button" data-effect="scroll" aria-pressed="true">スクロール</button>
+              <button type="button" data-effect="still" aria-pressed="false">静止</button>
+              <button type="button" data-effect="blink" aria-pressed="false">点滅</button>
+            </div>
+            <div class="choice-row" role="group" aria-label="スクロールの方向" data-direction-row>
+              <button type="button" data-direction="left" aria-pressed="true">左</button>
+              <button type="button" data-direction="right" aria-pressed="false">右</button>
+              <button type="button" data-direction="up" aria-pressed="false">上</button>
+              <button type="button" data-direction="down" aria-pressed="false">下</button>
+            </div>
+            <label class="led-slider" data-speed-row>速度 <span data-speed-label>3</span>
+              <input type="range" data-speed min="1" max="5" step="1" value="3" aria-label="速度">
+            </label>
+            <label class="led-slider" data-gap-row>繰り返しの間隔 <span data-gap-label>16</span>
+              <input type="range" data-gap min="0" max="80" step="4" value="16" aria-label="繰り返しの間隔">
+            </label>
+            <label class="led-slider" data-blink-row hidden>点滅 <span data-blink-label>1回/秒</span>
+              <input type="range" data-blink min="0.5" max="3" step="0.5" value="1" aria-label="点滅の回数">
+            </label>
+            <p class="motion-note" data-motion-note hidden>この端末は動きを減らす設定です。点滅は止め、スクロールはゆっくりにしています。</p>
+          </div>
+
+          <div class="control-block" data-penlight-only hidden>
+            <p class="group-label">ペンライト</p>
+            <div class="choice-row" role="group" aria-label="ペンライトの種類">
+              <button type="button" data-light="solid" aria-pressed="true">単色</button>
+              <button type="button" data-light="gradient" aria-pressed="false">2色グラデーション</button>
+            </div>
+            <p class="hint">色を押すとすぐ切り替わります。全画面では「前の色」「次の色」でも変えられます。</p>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">フォント</p>
+            <div class="choice-row" role="group" aria-label="フォント">
+              <button type="button" data-font="dela" aria-pressed="true">太字</button>
+              <button type="button" data-font="rounded" aria-pressed="false">丸文字</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label"><span data-fill-label>文字色</span> <span data-color-name>ピンク</span></p>
+            <div class="color-grid" role="group" aria-label="メンカラ">
+              <button type="button" data-fill="#e23b3b"><span class="swatch-dot" style="background:#e23b3b"></span>レッド</button>
+              <button type="button" data-fill="#ff4d88" aria-pressed="true"><span class="swatch-dot" style="background:#ff4d88"></span>ピンク</button>
+              <button type="button" data-fill="#e85a9b"><span class="swatch-dot" style="background:#e85a9b"></span>ローズ</button>
+              <button type="button" data-fill="#f58220"><span class="swatch-dot" style="background:#f58220"></span>オレンジ</button>
+              <button type="button" data-fill="#f5c518"><span class="swatch-dot" style="background:#f5c518"></span>イエロー</button>
+              <button type="button" data-fill="#2fad5b"><span class="swatch-dot" style="background:#2fad5b"></span>グリーン</button>
+              <button type="button" data-fill="#3dcdb8"><span class="swatch-dot" style="background:#3dcdb8"></span>ミント</button>
+              <button type="button" data-fill="#3aa0e8"><span class="swatch-dot" style="background:#3aa0e8"></span>スカイ</button>
+              <button type="button" data-fill="#3a5bdb"><span class="swatch-dot" style="background:#3a5bdb"></span>ブルー</button>
+              <button type="button" data-fill="#8a4ad8"><span class="swatch-dot" style="background:#8a4ad8"></span>パープル</button>
+              <button type="button" data-fill="#ffffff"><span class="swatch-dot" style="background:#ffffff"></span>ホワイト</button>
+              <button type="button" data-fill="#1a1a1a"><span class="swatch-dot" style="background:#1a1a1a"></span>ブラック</button>
+            </div>
+            <label class="color-custom">自由に選ぶ <input type="color" data-custom-fill value="#ff4d88" aria-label="自由な色"></label>
+            <p class="font-credit">色の名前は一般的な呼び方です。特定のグループの色は入っていません。</p>
+          </div>
+
+          <div class="control-block" data-bg-block>
+            <p class="group-label"><span data-bg-label>背景色</span></p>
+            <div class="color-grid" role="group" aria-label="背景色">
+              <button type="button" data-bg="#1a1a1a" aria-pressed="true"><span class="swatch-dot" style="background:#1a1a1a"></span>ブラック</button>
+              <button type="button" data-bg="#ffffff"><span class="swatch-dot" style="background:#ffffff"></span>ホワイト</button>
+              <button type="button" data-bg="#e23b3b"><span class="swatch-dot" style="background:#e23b3b"></span>レッド</button>
+              <button type="button" data-bg="#ff4d88"><span class="swatch-dot" style="background:#ff4d88"></span>ピンク</button>
+              <button type="button" data-bg="#f58220"><span class="swatch-dot" style="background:#f58220"></span>オレンジ</button>
+              <button type="button" data-bg="#f5c518"><span class="swatch-dot" style="background:#f5c518"></span>イエロー</button>
+              <button type="button" data-bg="#2fad5b"><span class="swatch-dot" style="background:#2fad5b"></span>グリーン</button>
+              <button type="button" data-bg="#3aa0e8"><span class="swatch-dot" style="background:#3aa0e8"></span>スカイ</button>
+              <button type="button" data-bg="#3a5bdb"><span class="swatch-dot" style="background:#3a5bdb"></span>ブルー</button>
+              <button type="button" data-bg="#8a4ad8"><span class="swatch-dot" style="background:#8a4ad8"></span>パープル</button>
+            </div>
+            <label class="color-custom">自由に選ぶ <input type="color" data-custom-bg value="#1a1a1a" aria-label="自由な背景色"></label>
+            <p class="contrast-note" data-contrast hidden>文字と背景が近い色です。遠くからは読みにくくなります。</p>
+          </div>
+
+          <div class="saved-block" data-members-block hidden>
+            <p class="group-label">この端末のメンバー</p>
+            <div class="member-list" data-members></div>
+          </div>
+          <div class="saved-block">
+            <p class="group-label">お気に入り</p>
+            <div class="chip-row" data-favorites></div>
+          </div>
+          <div class="saved-block">
+            <p class="group-label">最近使った文字</p>
+            <div class="chip-row" data-recent></div>
+          </div>
+
+          <div class="action-row">
+            <button class="primary-btn" type="button" data-enter>全画面で表示</button>
+            <button class="secondary-btn" type="button" data-share>リンクで共有</button>
+            <button class="secondary-btn" type="button" data-favorite>お気に入り</button>
+          </div>
+          <p class="etiquette"><strong>会場では</strong>公演と会場のルールを確認してください。胸の高さにとどめ、通路で掲げたまま歩かないでください。暗転中に光るものを禁止している会場では使わないでください。</p>
         </div>
       </div>
-      <div class="led-actions">
-        <button class="primary-btn" type="button" data-enter>全画面で表示</button>
-      </div>
+      <div class="led-ad-slot" data-ad-slot aria-hidden="true"></div>
     </main>
+
+    <section class="led-article seo-section">
+      <h2>使い方</h2>
+      <ol class="steps">
+        <li>文字を入れるか、ピースして、指ハート、だいすき、初参戦などの定型文を選びます。</li>
+        <li>メンカラと、スクロール・静止・点滅を決めます。速度と、次の文字までの間隔も動かせます。</li>
+        <li>「全画面で表示」を押します。スマホを縦に持ったままでも、文字は横向きに並びます。</li>
+      </ol>
+      <p>電光掲示板をスマホのブラウザだけで出せます。ストアの電光掲示板アプリを探して入れる前に、このページで文字の長さと色を試してください。短い言葉のほうが、席からでも読めます。</p>
+
+      <h2>ペンライトモード</h2>
+      <p>同じページの「ペンライト」に切り替えると、画面全体がメンカラの光になります。単色と、2色のグラデーションを選べます。色のボタンですぐ切り替えられ、全画面中も前後の色に送れます。名前を入れておくと、光の中央に小さく出ます。ペンライトの状態も、共有リンクのアドレスに含まれます。別のページには分かれません。</p>
+
+      <h2>ホーム画面に追加する</h2>
+      <p>iPhoneでは、Safariの共有ボタンから「ホーム画面に追加」を選びます。追加したアイコンから開くと、アドレスバーのない画面で電光掲示板を出せます。Androidでは、ブラウザのメニューからホーム画面に追加できます。一度開いたあとは、電波が不安定な会場でもう一度開けます。</p>
+
+      <h2>会場でのマナー</h2>
+      <p>多くの公演では、スマホや発光物、高く掲げるものにルールがあります。チケットの案内と、会場の注意を先に見てください。掲げると後ろの人の視界をふさぎます。胸の高さを目安にして、演出の途中で高く上げないでください。移動中はしまってください。</p>
+      <p>画面の明るさは、このページからは変えられません。必要なら端末の明るさ設定を使ってください。いちばん明るく、という使い方は周りに強く出ます。暗転で発光を止められているときは、画面を消してください。スマホを掲げると撮影と間違えられることがあるので、係員の指示に従ってください。</p>
+      <p>点滅する表示は、光過敏の方の体調に影響することがあります。点滅は1秒に3回までです。動きを減らす設定の端末では、点滅を出さず、スクロールを遅くします。</p>
+
+      <h2>フォント</h2>
+      <p>太字は <a href="/assets/fonts/uchiwa/DelaGothicOne-OFL.txt">Dela Gothic One</a>、丸文字は <a href="/assets/fonts/uchiwa/MPLUSRounded1c-OFL.txt">M PLUS Rounded 1c</a> です。どちらも SIL Open Font License で、ページの表示に使えます。</p>
+
+      <h2>よくある質問</h2>
+      <h3>無料で使えますか？</h3>
+      <p>無料です。登録も、有料プランもありません。表示中の画面に広告は出ません。</p>
+      <h3>アプリのインストールは必要ですか？</h3>
+      <p>必要ありません。ブラウザでこのページを開けば使えます。ホーム画面に追加すると、次からもすぐ開けます。</p>
+      <h3>オフラインでも使えますか？</h3>
+      <p>一度このページを開いておけば、電波の弱い場所でもう一度開けます。最初の読み込みには通信が要ります。</p>
+      <h3>iPhoneで全画面にできますか？</h3>
+      <p>できます。iPhoneのSafariはページそのものを全画面にできないので、画面を横向きの表示に回転させます。共有からホーム画面に追加すると、アドレスバーも隠せます。</p>
+      <h3>会場で使っていいですか？</h3>
+      <p>公演と会場のルールによります。スマホや発光物を禁止しているところでは使わないでください。胸の高さにとどめ、係員の指示に従ってください。</p>
+      <h3>点滅は光過敏の人に影響しますか？</h3>
+      <p>点滅は光過敏の方の体調に影響することがあります。このページの点滅は1秒に3回までです。不安なときは静止にしてください。</p>
+      <h3>画面が勝手に暗くなりませんか？</h3>
+      <p>対応しているブラウザでは、全画面のあいだ画面がスリープしないようにします。止まらないときは、端末の設定で自動ロックをなしにしてください。明るさそのものは、端末の設定で上げます。</p>
+      <h3>入力した名前は残りますか？</h3>
+      <p>サーバーには残りません。お気に入りと最近使った文字は、この端末の中だけに保存します。共有リンクはアドレスの#以降に文字と色を入れるので、送る前に内容を確認してください。</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/"><strong>月文字</strong><span>推しの名前を月文字アートにする。</span></a>
+        <a class="related-card" href="/uchiwa-moji/"><strong>うちわ文字</strong><span>同じ名前で、うちわ用の文字を作る。</span></a>
+        <a class="related-card" href="/kaomoji/"><strong>顔文字</strong><span>電光掲示板に足す顔文字を探す。</span></a>
+      </div>
+    </section>
 
     <footer class="site-footer">
       <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p>
     </footer>
   </div>
+
+  <dialog class="uchiwa-dialog" data-share-dialog>
+    <form method="dialog">
+      <h2>共有する内容</h2>
+      <p data-share-summary></p>
+      <p>リンクを開いた人に、この文字と色、動きの設定が見えます。名前を入れているときは、送る相手を確認してください。</p>
+      <div class="dialog-actions">
+        <button class="secondary-btn" type="submit" value="cancel">やめる</button>
+        <button class="primary-btn" type="submit" value="ok">共有する</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog class="uchiwa-dialog" data-photo-dialog>
+    <form method="dialog">
+      <h2>点滅について</h2>
+      <p>点滅する表示は、光過敏の方に影響することがあります。回数は1秒に3回までです。</p>
+      <div class="dialog-actions">
+        <button class="secondary-btn" type="submit" value="cancel">やめる</button>
+        <button class="primary-btn" type="submit" value="ok">続ける</button>
+      </div>
+    </form>
+  </dialog>
+  <div class="toast" data-toast role="status"></div>
   <script type="module" src="/assets/js/led-banner.js"></script>
 </body>
 </html>

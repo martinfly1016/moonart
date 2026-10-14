@@ -10,6 +10,19 @@ import {
   shouldRenewWakeLock,
   shouldUsePortraitRotation
 } from '../assets/js/led-display.js';
+import { decodeShareHash, encodeShareHash } from '../assets/js/oshi-settings.js';
+import {
+  blinkDurationMs,
+  clampBlinkHz,
+  durationBucket,
+  gapPx,
+  marqueeKeyframes,
+  pushRecent,
+  splitEmoji,
+  stateFromHash,
+  staticScale,
+  toggleFavorite
+} from '../assets/js/led-state.js';
 
 const page = fs.readFileSync(new URL('../led-banner/index.html', import.meta.url), 'utf8');
 const uchiwa = fs.readFileSync(new URL('../uchiwa-moji/index.html', import.meta.url), 'utf8');
@@ -252,5 +265,84 @@ const homeScreen = createDisplaySession({
 });
 const standaloneDetail = await homeScreen.enter();
 assert.equal(standaloneDetail.method, 'standalone');
+
+const css = fs.readFileSync(new URL('../assets/css/led-banner.css', import.meta.url), 'utf8');
+const sw = fs.readFileSync(new URL('../led-banner/sw.js', import.meta.url), 'utf8');
+const manifest = fs.readFileSync(new URL('../led-banner/manifest.webmanifest', import.meta.url), 'utf8');
+const sitemap = fs.readFileSync(new URL('../sitemap.xml', import.meta.url), 'utf8');
+const kaomoji = fs.readFileSync(new URL('../kaomoji/index.html', import.meta.url), 'utf8');
+const bannerJs = fs.readFileSync(new URL('../assets/js/led-banner.js', import.meta.url), 'utf8');
+assert.equal(page.includes('SEO'), false);
+assert.match(page, /電光掲示板アプリ/);
+assert.match(page, /電光掲示板をスマホ/);
+assert.match(page, /ペンライトモード/);
+assert.match(page, /ホーム画面に追加/);
+assert.match(page, /href="\/"/);
+assert.match(page, /href="\/uchiwa-moji\/"/);
+assert.match(page, /href="\/kaomoji\/"/);
+assert.match(kaomoji, /href="\/led-banner\/"/);
+assert.match(uchiwa, /data-open-led/);
+assert.match(sitemap, /https:\/\/mojimoon\.com\/led-banner\//);
+assert.match(manifest, /"scope": "\/led-banner\/"/);
+assert.match(manifest, /"display": "standalone"/);
+assert.match(sw, /\/led-banner\//);
+assert.match(bannerJs, /scope: '\/led-banner\/'/);
+assert.match(css, /led-display-open \.led-ad-slot/);
+assert.match(css, /translate3d|transform: rotate\(90deg\)/);
+const stageHtml = page.slice(page.indexOf('data-stage'), page.indexOf('led-controls'));
+assert.equal(stageHtml.includes('led-ad-slot'), false);
+assert.match(page, /led-ad-slot/);
+
+assert.equal(clampBlinkHz(10), 3);
+assert.equal(clampBlinkHz(0), 0.5);
+assert.equal(blinkDurationMs(3), 333);
+assert.equal(gapPx(0, 800), 0);
+assert.equal(staticScale(200, 100, 100, 100), 0.5);
+assert.equal(durationBucket(12), '10-30');
+assert.deepEqual(splitEmoji('だいすき💖'), [
+  { emoji: false, value: 'だいすき' },
+  { emoji: true, value: '💖' }
+]);
+const left = marqueeKeyframes('left');
+const right = marqueeKeyframes('right');
+const up = marqueeKeyframes('up');
+assert.equal(left[1].transform.includes('-50%'), true);
+assert.equal(right[0].transform.includes('-50%'), true);
+assert.equal(up[1].transform.includes('-50%'), true);
+assert.equal(left[0].transform, right[1].transform);
+
+const shared = stateFromHash(decodeShareHash(encodeShareHash({
+  mode: 'penlight',
+  text: '初参戦',
+  fill: '#3aa0e8',
+  fill2: '#f5c518',
+  bg: '#1a1a1a',
+  effect: 'blink',
+  direction: 'up',
+  speed: 2,
+  gap: 0,
+  blinkHz: 9,
+  light: 'gradient',
+  font: 'rounded'
+})));
+assert.equal(shared.mode, 'penlight');
+assert.equal(shared.text, '初参戦');
+assert.equal(shared.light, 'gradient');
+assert.equal(shared.direction, 'up');
+assert.equal(shared.gap, 0);
+assert.equal(shared.blinkHz, 3);
+assert.equal(shared.font, 'rounded');
+assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'uchiwa', text: '大好き', effect: 'rainbow' }))).effect, 'scroll');
+
+const memory = {
+  data: {},
+  getItem(key) { return this.data[key] || null; },
+  setItem(key, value) { this.data[key] = String(value); }
+};
+assert.equal(pushRecent(memory, { text: '指ハート', fill: '#ff4d88' })[0].text, '指ハート');
+assert.equal(pushRecent(memory, { text: '指ハート' }).length, 1);
+const favorite = toggleFavorite(memory, { text: 'ピースして', mode: 'banner' });
+assert.equal(favorite.added, true);
+assert.equal(toggleFavorite(memory, { text: 'ピースして', mode: 'banner' }).added, false);
 
 console.log('led-banner checks passed');
