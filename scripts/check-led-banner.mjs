@@ -24,7 +24,12 @@ import {
   clampBlinkHz,
   durationBucket,
   gapPx,
+  continuousMarqueeDelta,
+  createMarqueeRunner,
   marqueeKeyframes,
+  marqueeLoopPx,
+  marqueeShift,
+  snapMarqueeLoop,
   pushRecent,
   splitEmoji,
   stateFromHash,
@@ -477,7 +482,11 @@ assert.match(css, /is-editing/);
 assert.match(css, /position:\s*sticky/);
 assert.match(page, /viewport-fit=cover/);
 assert.ok(page.indexOf('data-install-hint') < page.indexOf('data-stage'));
-assert.match(sw, /led-banner-v5/);
+assert.match(sw, /led-banner-v6/);
+assert.match(bannerJs, /createMarqueeRunner/);
+assert.match(bannerJs, /marqueeLoopPx/);
+assert.equal(bannerJs.includes('trackNode.animate'), false);
+assert.equal(css.includes('will-change: transform'), false);
 assert.match(page, /data-ios-hint/);
 assert.match(page, /画面縦向きのロック/);
 assert.match(page, /data-speed min="1" max="10"/);
@@ -534,6 +543,118 @@ assert.equal(left[1].transform.includes('-50%'), true);
 assert.equal(right[0].transform.includes('-50%'), true);
 assert.equal(up[1].transform.includes('-50%'), true);
 assert.equal(left[0].transform, right[1].transform);
+assert.equal(marqueeLoopPx(0, 0, 0, 844), 844);
+assert.equal(snapMarqueeLoop(100.26, 2), 100.5);
+assert.equal(snapMarqueeLoop(100.24, 2), 100);
+assert.ok(Math.abs(snapMarqueeLoop(100.26, 2) - 100.26) <= 0.25);
+assert.match(bannerJs, /snapMarqueeLoop/);
+assert.equal(marqueeLoopPx(5, 5, 5, 5), 0);
+assert.ok(Math.abs(marqueeLoopPx(0, 0, 3, 4) - 5) < 1e-9);
+assert.equal(marqueeShift(0, 200, false), 0);
+assert.equal(marqueeShift(50, 200, false), -50);
+assert.equal(marqueeShift(200, 200, false), 0);
+assert.equal(marqueeShift(0, 200, true), -200);
+assert.equal(marqueeShift(50, 200, true), -150);
+assert.ok(continuousMarqueeDelta(-180, -40, 800) > 100);
+
+function driveMarquee({ loop, speed, reverse = false, frames }) {
+  let now = 1000;
+  const queue = [];
+  const runner = createMarqueeRunner({
+    loop,
+    speed,
+    reverse,
+    apply() {},
+    raf(callback) {
+      queue.push(callback);
+      return queue.length;
+    },
+    cancel() {
+      queue.length = 0;
+    }
+  });
+  const samples = [];
+  function take(extra = {}) {
+    samples.push({ t: now, ...runner.snapshot(), ...extra });
+  }
+  function pump(dt) {
+    now += dt;
+    const callback = queue.shift();
+    if (!callback) throw new Error('marquee stopped');
+    callback(now);
+    take();
+  }
+  pump(0);
+  frames.forEach((frame) => {
+    if (frame.retune) {
+      runner.retune(frame.retune);
+      take({ retune: true });
+    }
+    pump(frame.dt);
+  });
+  runner.cancel();
+  return samples;
+}
+
+function assertNoBackwardJump(samples, reverse) {
+  let wraps = 0;
+  for (let index = 1; index < samples.length; index += 1) {
+    const prev = samples[index - 1];
+    const next = samples[index];
+    const delta = continuousMarqueeDelta(prev.shift, next.shift, next.loop);
+    const raw = next.shift - prev.shift;
+    if (Math.abs(raw) > next.loop / 2) wraps += 1;
+    if (next.retune || next.t === prev.t) {
+      assert.ok(Math.abs(delta) <= 0.05, `resize moved the scroll by ${delta}px`);
+      continue;
+    }
+    const expected = (reverse ? 1 : -1) * (prev.speed * (next.t - prev.t)) / 1000;
+    const error = Math.abs(delta - expected);
+    assert.ok(error <= 0.05, `frame ${index}: moved ${delta}px, expected ${expected}px`);
+    if (!reverse) assert.ok(delta <= 0.05, `frame ${index} jumped backward by ${delta}px`);
+    if (reverse) assert.ok(delta >= -0.05, `frame ${index} jumped backward by ${delta}px`);
+  }
+  return wraps;
+}
+
+const forwardFrames = [];
+for (let index = 0; index < 90; index += 1) {
+  const frame = { dt: 16 };
+  if (index === 24) frame.retune = { loop: 640 };
+  if (index === 48) frame.retune = { loop: 280.5 };
+  if (index === 70) frame.retune = { speed: 1500 };
+  forwardFrames.push(frame);
+}
+const forward = driveMarquee({ loop: 500, speed: 900, frames: forwardFrames });
+const forwardWraps = assertNoBackwardJump(forward, false);
+assert.ok(forwardWraps >= 3, `expected several wraps, saw ${forwardWraps}`);
+
+const fractional = driveMarquee({
+  loop: 100.4,
+  speed: 240,
+  frames: Array.from({ length: 40 }, () => ({ dt: 16 }))
+});
+assert.ok(assertNoBackwardJump(fractional, false) >= 1);
+
+const shrunk = driveMarquee({
+  loop: 100,
+  speed: 1000,
+  frames: Array.from({ length: 24 }, (_, index) => ({
+    dt: 16,
+    retune: index === 12 ? { loop: 40 } : undefined
+  }))
+});
+assert.ok(assertNoBackwardJump(shrunk, false) >= 1);
+
+const reverseFrames = [];
+for (let index = 0; index < 50; index += 1) {
+  const frame = { dt: 20 };
+  if (index === 18) frame.retune = { loop: 360 };
+  if (index === 32) frame.retune = { speed: 700 };
+  reverseFrames.push(frame);
+}
+const backward = driveMarquee({ loop: 420, speed: 500, reverse: true, frames: reverseFrames });
+assert.ok(assertNoBackwardJump(backward, true) >= 1);
 
 const shared = stateFromHash(decodeShareHash(encodeShareHash({
   mode: 'penlight',

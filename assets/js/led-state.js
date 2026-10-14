@@ -161,6 +161,134 @@ export function marqueeKeyframes(direction) {
   return [{ transform: start }, { transform: end }];
 }
 
+// Distance between the two painted copies, in CSS pixels. Callers pass
+// screen coordinates; rotation preserves length, so this is the local
+// scroll period on the rotated axis as well as the upright one.
+export function marqueeLoopPx(x0, y0, x1, y1) {
+  const dx = Number(x1) - Number(x0);
+  const dy = Number(y1) - Number(y0);
+  if (!Number.isFinite(dx) || !Number.isFinite(dy)) return 0;
+  const span = Math.hypot(dx, dy);
+  return span > 0.5 ? span : 0;
+}
+
+// Land the loop on a device pixel so the wrap does not round to a different
+// physical pixel than the gap between the copies.
+export function snapMarqueeLoop(measured, devicePixelRatio = 1) {
+  const dpr = devicePixelRatio > 0 ? devicePixelRatio : 1;
+  if (!(measured > 0.5)) return 0;
+  return Math.round(measured * dpr) / dpr;
+}
+
+export function wrapOffset(offset, loop) {
+  if (!(loop > 0) || !Number.isFinite(offset)) return 0;
+  let mod = offset % loop;
+  if (!Number.isFinite(mod)) return 0;
+  if (mod < 0) mod += loop;
+  if (mod < 0.001 || loop - mod < 0.001) return 0;
+  return mod;
+}
+
+// Forward scroll (left/up) travels from 0 toward -loop.
+// Reverse scroll (right/down) travels from -loop toward 0.
+export function marqueeShift(offset, loop, reverse) {
+  const pos = wrapOffset(offset, loop);
+  if (!(loop > 0)) return 0;
+  const shift = reverse ? pos - loop : -pos;
+  return shift === 0 ? 0 : shift;
+}
+
+// Fold a wrap from -loop back to 0 into the small step that actually happened.
+export function continuousMarqueeDelta(previousShift, nextShift, loop) {
+  let delta = nextShift - previousShift;
+  if (!(loop > 0) || !Number.isFinite(delta)) return delta;
+  const half = loop / 2;
+  while (delta > half) delta -= loop;
+  while (delta < -half) delta += loop;
+  return delta;
+}
+
+export function createMarqueeRunner({
+  loop,
+  speed,
+  reverse = false,
+  apply,
+  raf,
+  cancel
+}) {
+  let loopPx = loop > 0 ? loop : 0;
+  let speedPx = speed > 0 ? speed : 0;
+  let reverseDir = Boolean(reverse);
+  let offset = 0;
+  let last = 0;
+  let primed = false;
+  let active = true;
+  let dead = false;
+  let frameId = 0;
+
+  function paint() {
+    apply(marqueeShift(offset, loopPx, reverseDir));
+  }
+
+  function tick(ts) {
+    if (!active) return;
+    const time = Number.isFinite(ts) ? ts : 0;
+    if (!primed) {
+      primed = true;
+      last = time;
+      paint();
+      frameId = raf(tick);
+      return;
+    }
+    const dt = Math.min(250, Math.max(0, time - last));
+    last = time;
+    offset = wrapOffset(offset + (speedPx * dt) / 1000, loopPx);
+    paint();
+    if (!active) return;
+    frameId = raf(tick);
+  }
+
+  frameId = raf(tick);
+
+  return {
+    retune({ loop: nextLoop, speed: nextSpeed, reverse: nextReverse } = {}) {
+      const previousShift = marqueeShift(offset, loopPx, reverseDir);
+      if (typeof nextReverse === 'boolean') reverseDir = nextReverse;
+      if (Number.isFinite(nextLoop) && nextLoop > 0) loopPx = nextLoop;
+      if (Number.isFinite(nextSpeed) && nextSpeed >= 0) speedPx = nextSpeed;
+      const raw = reverseDir ? previousShift + loopPx : -previousShift;
+      offset = wrapOffset(raw, loopPx);
+      paint();
+    },
+    pause() {
+      active = false;
+      if (frameId) cancel?.(frameId);
+      frameId = 0;
+    },
+    play() {
+      if (dead || active) return;
+      active = true;
+      primed = false;
+      frameId = raf(tick);
+    },
+    cancel() {
+      dead = true;
+      active = false;
+      if (frameId) cancel?.(frameId);
+      frameId = 0;
+    },
+    snapshot() {
+      return {
+        offset,
+        loop: loopPx,
+        speed: speedPx,
+        reverse: reverseDir,
+        shift: marqueeShift(offset, loopPx, reverseDir)
+      };
+    }
+  };
+}
+
 export function blinkDurationMs(hz) {
   return Math.round(1000 / clampBlinkHz(hz));
 }
