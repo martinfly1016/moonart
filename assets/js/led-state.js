@@ -82,7 +82,7 @@ export function normalizeBanner(input = {}) {
     bg: colorOr(source.bg, base.bg),
     effect,
     direction: ['left', 'right', 'up', 'down'].includes(source.direction) ? source.direction : 'left',
-    speed: clamp(source.speed, 1, 5, base.speed),
+    speed: clamp(source.speed, SPEED_MIN, SPEED_MAX, base.speed),
     gap: Math.round(clamp(source.gap, 0, 80, base.gap)),
     blinkHz: clampBlinkHz(source.blinkHz),
     light: source.light === 'gradient' ? 'gradient' : 'solid',
@@ -115,15 +115,40 @@ export function splitEmoji(value) {
   return parts;
 }
 
-export function speedPxPerSec(level) {
-  const table = { 1: 36, 2: 64, 3: 104, 4: 156, 5: 220 };
-  return table[clamp(level, 1, 5, 3)] || table[3];
+export const SPEED_MIN = 1;
+export const SPEED_MAX = 10;
+export const SPEED_DEFAULT = 3;
+
+// Character-heights per second. Levels 1–5 match the old pixel speeds on a
+// 136px preview. Level 10 is twice that old top, so the slider maximum is
+// twice as fast and the same level feels the same at any text size.
+const HEIGHTS_PER_SEC = {
+  1: 0.265,
+  2: 0.471,
+  3: 0.765,
+  4: 1.147,
+  5: 1.618,
+  6: 1.942,
+  7: 2.265,
+  8: 2.589,
+  9: 2.912,
+  10: 3.236
+};
+
+export function speedHeightsPerSec(level) {
+  const index = clamp(level, SPEED_MIN, SPEED_MAX, SPEED_DEFAULT);
+  return HEIGHTS_PER_SEC[index] || HEIGHTS_PER_SEC[SPEED_DEFAULT];
 }
 
-export function marqueeDurationMs(distancePx, speedLevel, reduced) {
+export function speedPxPerSec(level, textHeightPx = 136) {
+  const height = Math.max(28, Number(textHeightPx) || 136);
+  return speedHeightsPerSec(level) * height;
+}
+
+export function marqueeDurationMs(distancePx, speedLevel, reduced, textHeightPx) {
   const distance = Math.max(1, Number(distancePx) || 1);
-  const rate = speedPxPerSec(speedLevel) * (reduced ? 0.45 : 1);
-  return Math.max(1200, Math.round((distance / rate) * 1000));
+  const rate = speedPxPerSec(speedLevel, textHeightPx) * (reduced ? 0.45 : 1);
+  return Math.max(400, Math.round((distance / rate) * 1000));
 }
 
 export function marqueeKeyframes(direction) {
@@ -232,7 +257,7 @@ export function presentationFor(state, box = {}) {
     shift: Math.round(-(Number(box.offsetEm) || 0) * fontPx),
     vertical,
     copies: scrolling ? 2 : 1,
-    duration: scrolling && distance ? marqueeDurationMs(distance, next.speed, reduced) : 0,
+    duration: scrolling && distance ? marqueeDurationMs(distance, next.speed, reduced, fontPx || undefined) : 0,
     blink: next.mode === 'banner' && next.effect === 'blink' && !reduced ? blinkDurationMs(next.blinkHz) : 0,
     keyframes: scrolling ? marqueeKeyframes(next.direction) : null,
     background: next.mode === 'penlight'

@@ -183,7 +183,7 @@ export function compactState(state) {
       round1(clamp(source.customH, 80, 420, 285))
     ],
     p: source.paper === 'A4' ? 'A4' : 'A3',
-    sp: clamp(source.speed, 1, 5, 3),
+    sp: clamp(source.speed, 1, 10, 3),
     ef: ['still', 'scroll', 'blink', 'rainbow'].includes(source.effect) ? source.effect : 'still',
     dir: ['left', 'right', 'up', 'down'].includes(source.direction) ? source.direction : 'left',
     bk: round1(clamp(source.blinkHz, 0, 3, 0)),
@@ -224,7 +224,7 @@ export function expandState(data) {
     customW: clamp(data.mm?.[0], 80, 420, base.customW),
     customH: clamp(data.mm?.[1], 80, 420, base.customH),
     paper: data.p === 'A4' ? 'A4' : 'A3',
-    speed: clamp(data.sp, 1, 5, 3),
+    speed: clamp(data.sp, 1, 10, 3),
     effect: ['still', 'scroll', 'blink', 'rainbow'].includes(data.ef) ? data.ef : 'still',
     direction: ['left', 'right', 'up', 'down'].includes(data.dir) ? data.dir : 'left',
     blinkHz: clamp(data.bk, 0, 3, 0),

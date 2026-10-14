@@ -1,4 +1,4 @@
-const CACHE = 'led-banner-v4';
+const CACHE = 'led-banner-v5';
 const ASSETS = [
   '/led-banner/',
   '/led-banner/index.html',

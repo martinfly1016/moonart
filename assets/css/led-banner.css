@@ -156,9 +156,45 @@
   text-align: center;
 }
 
+.led-ios-hint {
+  position: absolute;
+  z-index: 4;
+  top: calc(10px + var(--led-pad-t, env(safe-area-inset-top)));
+  left: calc(12px + var(--led-pad-l, env(safe-area-inset-left)));
+  right: calc(12px + var(--led-pad-r, env(safe-area-inset-right)));
+  max-height: calc(100% - 84px - var(--led-pad-t, 0px) - var(--led-pad-b, 0px));
+  overflow: auto;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.86);
+  color: #fff;
+  font: 700 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.led-ios-hint p,
+.led-ios-hint ol {
+  margin: 0 0 8px;
+}
+
+.led-ios-hint ol {
+  padding-left: 1.2em;
+}
+
+.led-ios-hint button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #1a1a1a;
+  font: 800 14px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
 .led-display-controls {
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   left: calc(12px + var(--led-pad-l, env(safe-area-inset-left)));
   right: calc(12px + var(--led-pad-r, env(safe-area-inset-right)));
   bottom: calc(10px + var(--led-pad-b, env(safe-area-inset-bottom)));

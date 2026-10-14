@@ -69,7 +69,7 @@
         "name": "iPhoneで全画面にできますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "できます。iPhoneのSafariはページそのものを全画面にできないので、画面を横向きの表示に回転させます。共有からホーム画面に追加すると、アドレスバーも隠せます。"
+          "text": "iPhoneのSafariはページの全画面表示に対応していないので、アドレスバーはページからは消せません。共有からホーム画面に追加して、そのアイコンから開くとアドレスバーのない画面になります。ブラウザのまま使うときは、コントロールセンターで画面縦向きのロックをオンにして、iPhoneを横に持ってください。Safariは縦のままなので、掲示板を回転させてほぼ画面いっぱいに出します。"
         }
       },
       {
@@ -158,6 +158,14 @@
               <div class="led-track" data-track></div>
             </div>
             <p class="led-lock-tip" data-lock-tip role="status" hidden>このブラウザでは画面の自動ロックを止められません。設定で「自動ロック」を「なし」にしてください。</p>
+            <div class="led-ios-hint" data-ios-hint hidden role="region" aria-label="画面いっぱいに出す">
+              <p>iPhoneのSafariは、ページからはアドレスバーを消せません。ほぼ画面いっぱいにするなら、次のどちらかです。</p>
+              <ol>
+                <li>コントロールセンターで<strong>画面縦向きのロック</strong>をオンにして、iPhoneを横に持ってください。Safariは縦のままなので、アドレスバーは短い辺に寄り、掲示板がほぼ画面いっぱいになります。</li>
+                <li>共有ボタンから<strong>ホーム画面に追加</strong>し、追加したアイコンから開いてください。アドレスバーのない画面になります。</li>
+              </ol>
+              <button type="button" data-ios-hint-dismiss>わかった</button>
+            </div>
             <div class="led-display-controls" data-display-controls>
               <button type="button" data-light-prev hidden>前の色</button>
               <button type="button" data-light-next hidden>次の色</button>
@@ -224,7 +232,7 @@
               <input type="range" data-scale min="60" max="100" step="1" value="95" aria-label="文字の大きさ">
             </label>
             <label class="led-slider" data-speed-row>速度 <span data-speed-label>3</span>
-              <input type="range" data-speed min="1" max="5" step="1" value="3" aria-label="速度">
+              <input type="range" data-speed min="1" max="10" step="1" value="3" aria-label="速度">
             </label>
             <label class="led-slider" data-gap-row>繰り返しの間隔 <span data-gap-label>16</span>
               <input type="range" data-gap min="0" max="80" step="4" value="16" aria-label="繰り返しの間隔">
@@ -345,7 +353,7 @@
       <h3>オフラインでも使えますか？</h3>
       <p>一度このページを開いておけば、電波の弱い場所でもう一度開けます。最初の読み込みには通信が要ります。</p>
       <h3>iPhoneで全画面にできますか？</h3>
-      <p>できます。iPhoneのSafariはページそのものを全画面にできないので、画面を横向きの表示に回転させます。共有からホーム画面に追加すると、アドレスバーも隠せます。</p>
+      <p>iPhoneのSafariはページの全画面表示に対応していないので、アドレスバーはページからは消せません。共有からホーム画面に追加して、そのアイコンから開くとアドレスバーのない画面になります。ブラウザのまま使うときは、コントロールセンターで画面縦向きのロックをオンにして、iPhoneを横に持ってください。Safariは縦のままなので、掲示板を回転させてほぼ画面いっぱいに出します。</p>
       <h3>会場で使っていいですか？</h3>
       <p>公演と会場のルールによります。スマホや発光物を禁止しているところでは使わないでください。胸の高さにとどめ、係員の指示に従ってください。</p>
       <h3>点滅は光過敏の人に影響しますか？</h3>
