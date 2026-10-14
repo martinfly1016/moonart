@@ -696,6 +696,9 @@ display: block !important;
 .btn-orange{background:linear-gradient(135deg,#f97316,#c2410c)}
 .friend-link{color:#fde68a;text-decoration:none;margin:0 8px;font-weight:600}
 .friend-link:hover{color:#fff;text-decoration:underline}
+.uchiwa-entry{margin:10px 0 0}
+.uchiwa-entry a{color:#fde68a;font-weight:700;text-decoration:none}
+.uchiwa-entry a:hover{text-decoration:underline}
 .moon-art.loading{position:relative;min-height:60px}
 .moon-art.loading::after{content:'';position:absolute;top:50%;left:50%;width:32px;height:32px;margin:-16px 0 0 -16px;border:3px solid rgba(99,102,241,.2);border-top-color:#6366f1;border-radius:50%;animation:moon-spin .8s linear infinite}
 @keyframes moon-spin{to{transform:rotate(360deg)}}
@@ -724,6 +727,7 @@ display: block !important;
 <a href="/fancy-text-generator/">おしゃれ文字</a>
 <a href="/fancy-text-generator/cursive/">筆記体</a>
 <a href="/gyaru-moji/">ギャル文字</a>
+<a href="/uchiwa-moji/">うちわ文字</a>
 <a href="/ascii-art-generator/">ASCII</a>
 <a href="/zenkaku-hankaku-converter/">全角半角変換</a>
 <details class="nav-menu nav-menu-wide">
@@ -754,6 +758,7 @@ display: block !important;
 <div class="moon-hero-actions">
 <a href="/artemis.html" class="artemis-link">🚀 Artemis II 特集</a>
 <a href="/guide.html" class="guide-link">📖 使用ガイド</a>
+<a href="/uchiwa-moji/" class="guide-link">推しの名前でうちわ文字を作る</a>
 </div>
 </div>
 </section>
@@ -765,6 +770,7 @@ display: block !important;
 <div class="tab-content active" id="textTab">
 <div class="form-group">
 <input type="text" id="textInput" class="text-input" placeholder="変換したいテキストを入力してください" value="月文字">
+<p class="uchiwa-entry"><a href="/uchiwa-moji/">推しの名前でうちわ文字を作る</a></p>
 </div>
 <div class="form-group">
 <div class="direction-control">
@@ -2347,6 +2353,9 @@ this.style.boxShadow = 'none';
 </a>
 <a href="gyaru-moji/" class="btn-footer btn-orange">
 ω ギャル文字
+</a>
+<a href="uchiwa-moji/" class="btn-footer btn-purple">
+♡ うちわ文字
 </a>
 <a href="zenkaku-hankaku-converter/" class="btn-footer btn-blue">
 Ａ 全角 半角 変換

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>うちわ文字メーカー｜ファンサうちわをスマホで作る - MojiMoon</title>
+  <meta name="description" content="推しの名前とメンカラで、ファンサうちわの文字をスマホだけで作れます。フチや連結うちわ、A4・A3の印刷用PNGに対応。無料で、登録もアプリも不要です。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/uchiwa-moji/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="うちわ文字メーカー｜ファンサうちわをスマホで作る">
+  <meta property="og:description" content="推しの名前とメンカラで、うちわ文字をスマホで作ってPNG保存。連結うちわとA4・A3の印刷に対応しています。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/uchiwa-moji/">
+  <meta property="og:image" content="https://mojimoon.com/uchiwa-moji/og.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "うちわ文字メーカー",
+    "url": "https://mojimoon.com/uchiwa-moji/",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "description": "推しの名前とメンカラで、ファンサうちわの文字をスマホだけで作れる無料ツールです。連結うちわとA4・A3のPNG保存に対応しています。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "無料で使えますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "無料です。登録もアプリのインストールも不要で、ブラウザだけで作れます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "スマホだけでも作れますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "作れます。文字を入れて色とフチを決め、PNGで保存します。iPhoneでは共有メニューから写真や印刷アプリに渡せます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "印刷サイズはどれですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A4（210×297mm）とA3（297×420mm）です。どちらも300dpiのPNGなので、コンビニの印刷で倍率100%にすると原寸に近く出力できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "コンビニで印刷するには？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PNGを保存し、セブン-イレブンのネットプリントや、ローソン、ファミリーマートなどのマルチコピー機でA4またはA3を選びます。倍率は100%にしてください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "うちわのサイズ規定はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "公演ごとに違います。レギュラーとジャンボは市販のうちわの扇面の目安です。持ち込みできる大きさは、公演と会場の案内で確認してください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "連結うちわは会場に持ち込めますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "会場によっては持ち込めません。作る前に、連結や複数枚の持ち込みが許可されているか確認してください。"
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/uchiwa-moji.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
+  <script src="/assets/js/site-navigation.js" defer></script>
+</head>
+<body class="uchiwa-body">
+  <div class="tool-shell">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+        </div>
+        <nav class="site-nav" aria-label="文字ツール">
+          <a href="/">月文字</a>
+          <a href="/uchiwa-moji/" aria-current="page">うちわ文字</a>
+          <a href="/fancy-text-generator/cursive/">筆記体</a>
+          <a href="/gyaru-moji/">ギャル文字</a>
+          <details class="nav-menu nav-menu-wide">
+            <summary>コピペ</summary>
+            <div class="nav-menu-panel">
+              <a href="/kawaii-copy/">かわいいコピペ</a>
+              <a href="/kaomoji/">顔文字</a>
+              <a href="/special-characters/">特殊文字</a>
+              <a href="/emoji-combinations/">絵文字組み合わせ</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero uchiwa-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Uchiwa Lettering</p>
+        <h1>うちわ文字メーカー</h1>
+        <p class="hero-copy">推しの名前とメンカラで、うちわ文字をスマホで作ってそのまま印刷。無料・登録不要・アプリ不要。</p>
+      </div>
+    </section>
+
+    <main class="uchiwa-wrap" data-uchiwa>
+      <p class="share-banner" data-share-banner hidden>
+        <span>共有された設定を開きました。文字と色を確認してから保存できます。</span>
+        <button class="primary-btn" type="button" data-export>PNGで保存</button>
+      </p>
+      <div class="uchiwa-app">
+        <div class="uchiwa-stage-wrap">
+          <div class="uchiwa-stage">
+            <canvas data-preview aria-label="うちわのプレビュー"></canvas>
+          </div>
+        </div>
+        <div class="uchiwa-controls">
+          <label class="field-label" for="uchiwa-text">うちわに書く文字 <span data-count>0/40</span></label>
+          <textarea id="uchiwa-text" class="uchiwa-text" data-text rows="2" spellcheck="false" autocomplete="off" placeholder="なまえ、大好き、ピースして">大好き</textarea>
+          <p class="deco-links">名前を飾る <a href="/fancy-text-generator/cursive/">筆記体に変換</a><a href="/gyaru-moji/">ギャル文字に変換</a><a href="/special-characters/name-decoration/">名前デコ</a></p>
+
+          <div class="control-block">
+            <p class="group-label">フォント</p>
+            <div class="choice-row" role="group" aria-label="フォント">
+              <button type="button" data-font="dela" aria-pressed="true">太字</button>
+              <button type="button" data-font="rounded" aria-pressed="false">丸文字</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">メンカラ <span data-color-name>ピンク</span></p>
+            <div class="color-grid" role="group" aria-label="メンカラ">
+              <button type="button" data-fill="#e23b3b"><span class="swatch-dot" style="background:#e23b3b"></span>レッド</button>
+              <button type="button" data-fill="#ff4d88" aria-pressed="true"><span class="swatch-dot" style="background:#ff4d88"></span>ピンク</button>
+              <button type="button" data-fill="#e85a9b"><span class="swatch-dot" style="background:#e85a9b"></span>ローズ</button>
+              <button type="button" data-fill="#f58220"><span class="swatch-dot" style="background:#f58220"></span>オレンジ</button>
+              <button type="button" data-fill="#f5c518"><span class="swatch-dot" style="background:#f5c518"></span>イエロー</button>
+              <button type="button" data-fill="#2fad5b"><span class="swatch-dot" style="background:#2fad5b"></span>グリーン</button>
+              <button type="button" data-fill="#3dcdb8"><span class="swatch-dot" style="background:#3dcdb8"></span>ミント</button>
+              <button type="button" data-fill="#3aa0e8"><span class="swatch-dot" style="background:#3aa0e8"></span>スカイ</button>
+              <button type="button" data-fill="#3a5bdb"><span class="swatch-dot" style="background:#3a5bdb"></span>ブルー</button>
+              <button type="button" data-fill="#8a4ad8"><span class="swatch-dot" style="background:#8a4ad8"></span>パープル</button>
+              <button type="button" data-fill="#ffffff"><span class="swatch-dot" style="background:#ffffff"></span>ホワイト</button>
+              <button type="button" data-fill="#1a1a1a"><span class="swatch-dot" style="background:#1a1a1a"></span>ブラック</button>
+            </div>
+            <div class="dual-row">
+              <label class="color-custom">カスタム <input type="color" data-custom-color value="#ff4d88" aria-label="カスタムカラー"></label>
+              <button type="button" data-rainbow aria-pressed="false">虹</button>
+              <label>双推し <input type="color" data-fill2 value="#7a5cff" aria-label="双推しの2色目"></label>
+              <button type="button" data-fill2-clear hidden>双推しをやめる</button>
+            </div>
+            <p class="font-credit">色の名前は一般的な呼び方です。特定のグループの色は入っていません。<a href="/emoji-combinations/">推し色の絵文字</a>も使えます。</p>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">フチ</p>
+            <div class="choice-row" role="group" aria-label="フチの層">
+              <button type="button" data-layers="1" aria-pressed="true">1層</button>
+              <button type="button" data-layers="2">2層</button>
+              <button type="button" data-layers="3">3層</button>
+            </div>
+            <div class="stroke-row" data-stroke-row="0">
+              <span>1</span>
+              <div class="stroke-colors" role="group" aria-label="1層目の色">
+                <button type="button" data-stroke-color="#ffffff">白</button>
+                <button type="button" data-stroke-color="#111111">黒</button>
+                <button type="button" data-stroke-color="fill">文字色</button>
+              </div>
+              <label>太さ <input type="range" data-stroke-width min="0.6" max="8" step="0.2" value="3.2" aria-label="1層目の太さ"></label>
+            </div>
+            <div class="stroke-row" data-stroke-row="1" hidden>
+              <span>2</span>
+              <div class="stroke-colors" role="group" aria-label="2層目の色">
+                <button type="button" data-stroke-color="#ffffff">白</button>
+                <button type="button" data-stroke-color="#111111">黒</button>
+                <button type="button" data-stroke-color="fill">文字色</button>
+              </div>
+              <label>太さ <input type="range" data-stroke-width min="0.6" max="8" step="0.2" value="4.8" aria-label="2層目の太さ"></label>
+            </div>
+            <div class="stroke-row" data-stroke-row="2" hidden>
+              <span>3</span>
+              <div class="stroke-colors" role="group" aria-label="3層目の色">
+                <button type="button" data-stroke-color="#ffffff">白</button>
+                <button type="button" data-stroke-color="#111111">黒</button>
+                <button type="button" data-stroke-color="fill">文字色</button>
+              </div>
+              <label>太さ <input type="range" data-stroke-width min="0.6" max="8" step="0.2" value="6.4" aria-label="3層目の太さ"></label>
+            </div>
+            <p class="contrast-note" data-contrast-note hidden>白い文字には、黒や濃い色のフチを付けると読めます。</p>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">書き方</p>
+            <div class="choice-row" role="group" aria-label="文字の方向">
+              <button type="button" data-writing="vertical" aria-pressed="true">縦書き</button>
+              <button type="button" data-writing="horizontal">横書き</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">ファンサの言葉</p>
+            <div class="chip-row" aria-label="ファンサの定型文">
+              <button type="button" data-phrase="ピースして">ピースして</button>
+              <button type="button" data-phrase="指ハート">指ハート</button>
+              <button type="button" data-phrase="ウインクして">ウインクして</button>
+              <button type="button" data-phrase="名前呼んで">名前呼んで</button>
+              <button type="button" data-phrase="手を振って">手を振って</button>
+              <button type="button" data-phrase="大好き">大好き</button>
+              <button type="button" data-phrase="推してる">推してる</button>
+              <button type="button" data-phrase="初参戦">初参戦</button>
+              <button type="button" data-phrase="おめでとう">おめでとう</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">顔文字と飾り</p>
+            <div class="chip-row" aria-label="顔文字と飾り">
+              <button type="button" data-insert="♡" aria-label="ハートを挿入">♡</button>
+              <button type="button" data-insert="★" aria-label="星を挿入">★</button>
+              <button type="button" data-insert="✧" aria-label="きらきらを挿入">✧</button>
+              <button type="button" data-insert="☆" aria-label="白星を挿入">☆</button>
+              <button type="button" data-insert="♪" aria-label="音符を挿入">♪</button>
+              <button type="button" data-insert="🎀" aria-label="リボンを挿入">🎀</button>
+              <button type="button" data-insert="👑" aria-label="王冠を挿入">👑</button>
+              <button type="button" data-insert="˚✧" aria-label="飾りを挿入">˚✧</button>
+              <button type="button" data-insert="♡°・" aria-label="ハートの飾りを挿入">♡°・</button>
+              <button type="button" data-insert="(♡´▽`♡)" aria-label="顔文字を挿入">(♡´▽`♡)</button>
+              <button type="button" data-insert="(ﾉ´∀`)ﾉ" aria-label="顔文字を挿入">(ﾉ´∀`)ﾉ</button>
+              <button type="button" data-insert="＼(^o^)／" aria-label="顔文字を挿入">＼(^o^)／</button>
+              <button type="button" data-insert="(*´꒳`*)" aria-label="顔文字を挿入">(*´꒳`*)</button>
+              <button type="button" data-insert="(๑˃̵ᴗ˂̵)و" aria-label="顔文字を挿入">(๑˃̵ᴗ˂̵)و</button>
+              <button type="button" data-insert="♡(>ᴗ<)♡" aria-label="顔文字を挿入">♡(>ᴗ<)♡</button>
+              <button type="button" data-insert="٩(ˊᗜˋ*)و" aria-label="顔文字を挿入">٩(ˊᗜˋ*)و</button>
+              <button type="button" data-insert="(｡♥‿♥｡)" aria-label="顔文字を挿入">(｡♥‿♥｡)</button>
+              <button type="button" data-insert="✧٩(ˊᗜˋ*)و✧" aria-label="顔文字を挿入">✧٩(ˊᗜˋ*)و✧</button>
+              <button type="button" data-insert="⋆⸜♡⸝⋆" aria-label="飾りを挿入">⋆⸜♡⸝⋆</button>
+              <button type="button" data-insert="( ˶ˆ꒳ˆ˵ )" aria-label="顔文字を挿入">( ˶ˆ꒳ˆ˵ )</button>
+              <button type="button" data-insert="(♡˙︶˙♡)" aria-label="顔文字を挿入">(♡˙︶˙♡)</button>
+              <button type="button" data-insert="(*ˊᗜˋ*)" aria-label="顔文字を挿入">(*ˊᗜˋ*)</button>
+              <button type="button" data-insert="(ﾉ≧∀≦)ﾉ" aria-label="顔文字を挿入">(ﾉ≧∀≦)ﾉ</button>
+              <button type="button" data-insert="ヾ(＠^∇^＠)ノ" aria-label="顔文字を挿入">ヾ(＠^∇^＠)ノ</button>
+              <button type="button" data-insert="(´｡• ᵕ •｡`)" aria-label="顔文字を挿入">(´｡• ᵕ •｡`)</button>
+              <button type="button" data-insert="♡⁺˳" aria-label="飾りを挿入">♡⁺˳</button>
+              <button type="button" data-insert="★°・" aria-label="飾りを挿入">★°・</button>
+              <button type="button" data-insert="🎀♡🎀" aria-label="飾りを挿入">🎀♡🎀</button>
+              <button type="button" data-insert="👑♡👑" aria-label="飾りを挿入">👑♡👑</button>
+              <button type="button" data-insert="✿" aria-label="花を挿入">✿</button>
+              <button type="button" data-insert="❀" aria-label="花を挿入">❀</button>
+              <button type="button" data-insert="♫" aria-label="音符を挿入">♫</button>
+              <button type="button" data-insert="♡︎" aria-label="ハートを挿入">♡︎</button>
+              <button type="button" data-insert="𓂃♡𓂃" aria-label="飾りを挿入">𓂃♡𓂃</button>
+              <button type="button" data-insert="(ノ´∀｀)ノ" aria-label="顔文字を挿入">(ノ´∀｀)ノ</button>
+              <button type="button" data-insert="(*´▽`*)" aria-label="顔文字を挿入">(*´▽`*)</button>
+            </div>
+            <p class="hint">記号の形は、フォントに含まれないとき端末の絵文字で描きます。<a href="/kaomoji/">顔文字一覧</a>からも選べます。</p>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">連結うちわ <span class="fan-count" data-fan-count></span></p>
+            <div class="choice-row" role="group" aria-label="レイアウト">
+              <button type="button" data-layout="single" data-per="1" aria-pressed="true">1枚</button>
+              <button type="button" data-layout="renketsu" data-per="1">連結・1字</button>
+              <button type="button" data-layout="renketsu" data-per="2">連結・2字</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">うちわのサイズ</p>
+            <div class="choice-row" role="group" aria-label="うちわのサイズ">
+              <button type="button" data-size="regular">レギュラー</button>
+              <button type="button" data-size="jumbo" aria-pressed="true">ジャンボ</button>
+              <button type="button" data-size="custom">カスタム</button>
+            </div>
+            <p class="size-note" data-size-note>ジャンボの扇面は横295mm × 縦285mmです。</p>
+            <div class="custom-size" data-custom-size hidden>
+              <label>横 <input type="number" data-custom-w min="80" max="420" step="1" value="295" aria-label="扇面の幅ミリメートル"> mm</label>
+              <label>縦 <input type="number" data-custom-h min="80" max="420" step="1" value="285" aria-label="扇面の高さミリメートル"> mm</label>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">この端末に残す名前</p>
+            <button class="secondary-btn" type="button" data-save-member>この文字と色を保存</button>
+            <div class="member-list" data-members></div>
+            <p class="hint"><a href="/kawaii-copy/oshi-profile/">推し活プロフィール</a>の飾りとも組み合わせられます。</p>
+          </div>
+
+          <div class="control-block">
+            <p class="group-label">印刷する用紙</p>
+            <div class="choice-row" role="group" aria-label="用紙">
+              <button type="button" data-paper="A4">A4</button>
+              <button type="button" data-paper="A3" aria-pressed="true">A3</button>
+            </div>
+            <p class="hint">300dpiのPNGです。扇面が用紙より大きいときは、裁ち落とし線つきで複数枚に分けます。ジャンボはA3に収まりやすいです。<span data-sheet-note></span></p>
+          </div>
+
+          <p class="inapp-note" data-inapp-note hidden>LINEやXのアプリ内ブラウザでは、画像を保存できないことがあります。SafariやChromeで開いてください。</p>
+          <div class="etiquette">
+            <strong>保存する前に、公演と会場のルールを確認してください。</strong>
+            大きさ、持ち込み、掲げてよいタイミングは公演ごとに違います。連結うちわは会場によって持ち込めないことがあります。持つときは胸の高さまでにして、演出中に高く掲げたり、移動しながら使ったりしないでください。
+          </div>
+          <div class="action-row">
+            <button class="primary-btn" type="button" data-export>PNGで保存</button>
+            <button class="secondary-btn" type="button" data-share>リンクで共有</button>
+          </div>
+          <p class="export-status" data-export-status role="status"></p>
+        </div>
+      </div>
+      <!-- Reserved for a future ad. Fixed height so the page does not jump when it is filled. -->
+      <div class="uchiwa-ad-slot" data-ad-slot="uchiwa-below-editor" aria-hidden="true"></div>
+    </main>
+
+    <section class="seo-section">
+      <h2>うちわ文字の作り方</h2>
+      <ol class="steps">
+        <li>名前やファンサの言葉を入れて、メンカラとフチを決めます。</li>
+        <li>A4かA3のPNGで保存します。iPhoneでは共有から写真や印刷アプリへ渡せます。</li>
+        <li>コンビニのコピー機で、選んだ用紙のまま印刷します。倍率は100%です。</li>
+        <li>点線に沿って切り、うちわの扇面に貼ります。</li>
+      </ol>
+      <p>応援うちわは、遠くから名前が読めることが先です。文字は短く、フチは紙の色に負けない太さにしてください。作った名前を月の絵文字にしたいときは、<a href="/">月文字</a>にも渡せます。</p>
+
+      <h2>連結うちわ</h2>
+      <p>一言を1文字ずつ、または2文字ずつに分けて、同じ色とフチで並べます。プレビューは横一列、保存するPNGには番号が入ります。座席で並べるときは、隣の人の視界をふさがない高さにしてください。会場によっては連結うちわ自体を持ち込めません。</p>
+
+      <h2>ファンサのうちわに書く言葉</h2>
+      <p>下の言葉は、そのままうちわに入れるか、コピーして使えます。呼びかける言葉は短く、気持ちの言葉は読み切れる長さにしてあります。</p>
+      <h3>定番のファンサ</h3>
+      <ul class="phrase-list">
+        <li><span>ピースして</span><span class="phrase-actions"><button type="button" data-phrase="ピースして">入れる</button><button type="button" data-copy="ピースして">コピー</button></span></li>
+        <li><span>指ハート</span><span class="phrase-actions"><button type="button" data-phrase="指ハート">入れる</button><button type="button" data-copy="指ハート">コピー</button></span></li>
+        <li><span>ウインクして</span><span class="phrase-actions"><button type="button" data-phrase="ウインクして">入れる</button><button type="button" data-copy="ウインクして">コピー</button></span></li>
+        <li><span>名前呼んで</span><span class="phrase-actions"><button type="button" data-phrase="名前呼んで">入れる</button><button type="button" data-copy="名前呼んで">コピー</button></span></li>
+        <li><span>手を振って</span><span class="phrase-actions"><button type="button" data-phrase="手を振って">入れる</button><button type="button" data-copy="手を振って">コピー</button></span></li>
+        <li><span>笑顔見せて</span><span class="phrase-actions"><button type="button" data-phrase="笑顔見せて">入れる</button><button type="button" data-copy="笑顔見せて">コピー</button></span></li>
+        <li><span>こっち見て</span><span class="phrase-actions"><button type="button" data-phrase="こっち見て">入れる</button><button type="button" data-copy="こっち見て">コピー</button></span></li>
+        <li><span>ジャンプして</span><span class="phrase-actions"><button type="button" data-phrase="ジャンプして">入れる</button><button type="button" data-copy="ジャンプして">コピー</button></span></li>
+        <li><span>ハート作って</span><span class="phrase-actions"><button type="button" data-phrase="ハート作って">入れる</button><button type="button" data-copy="ハート作って">コピー</button></span></li>
+        <li><span>投げキッス</span><span class="phrase-actions"><button type="button" data-phrase="投げキッス">入れる</button><button type="button" data-copy="投げキッス">コピー</button></span></li>
+        <li><span>敬礼して</span><span class="phrase-actions"><button type="button" data-phrase="敬礼して">入れる</button><button type="button" data-copy="敬礼して">コピー</button></span></li>
+        <li><span>踊って</span><span class="phrase-actions"><button type="button" data-phrase="踊って">入れる</button><button type="button" data-copy="踊って">コピー</button></span></li>
+        <li><span>決めて</span><span class="phrase-actions"><button type="button" data-phrase="決めて">入れる</button><button type="button" data-copy="決めて">コピー</button></span></li>
+        <li><span>拍手して</span><span class="phrase-actions"><button type="button" data-phrase="拍手して">入れる</button><button type="button" data-copy="拍手して">コピー</button></span></li>
+        <li><span>振り返って</span><span class="phrase-actions"><button type="button" data-phrase="振り返って">入れる</button><button type="button" data-copy="振り返って">コピー</button></span></li>
+      </ul>
+      <h3>気持ちを伝える</h3>
+      <ul class="phrase-list">
+        <li><span>大好き</span><span class="phrase-actions"><button type="button" data-phrase="大好き">入れる</button><button type="button" data-copy="大好き">コピー</button></span></li>
+        <li><span>推してる</span><span class="phrase-actions"><button type="button" data-phrase="推してる">入れる</button><button type="button" data-copy="推してる">コピー</button></span></li>
+        <li><span>世界一</span><span class="phrase-actions"><button type="button" data-phrase="世界一">入れる</button><button type="button" data-copy="世界一">コピー</button></span></li>
+        <li><span>ずっと一緒</span><span class="phrase-actions"><button type="button" data-phrase="ずっと一緒">入れる</button><button type="button" data-copy="ずっと一緒">コピー</button></span></li>
+        <li><span>ありがとう</span><span class="phrase-actions"><button type="button" data-phrase="ありがとう">入れる</button><button type="button" data-copy="ありがとう">コピー</button></span></li>
+        <li><span>大好きだよ</span><span class="phrase-actions"><button type="button" data-phrase="大好きだよ">入れる</button><button type="button" data-copy="大好きだよ">コピー</button></span></li>
+        <li><span>君がいい</span><span class="phrase-actions"><button type="button" data-phrase="君がいい">入れる</button><button type="button" data-copy="君がいい">コピー</button></span></li>
+        <li><span>今日も好き</span><span class="phrase-actions"><button type="button" data-phrase="今日も好き">入れる</button><button type="button" data-copy="今日も好き">コピー</button></span></li>
+        <li><span>目が合った</span><span class="phrase-actions"><button type="button" data-phrase="目が合った">入れる</button><button type="button" data-copy="目が合った">コピー</button></span></li>
+        <li><span>幸せです</span><span class="phrase-actions"><button type="button" data-phrase="幸せです">入れる</button><button type="button" data-copy="幸せです">コピー</button></span></li>
+        <li><span>誇りです</span><span class="phrase-actions"><button type="button" data-phrase="誇りです">入れる</button><button type="button" data-copy="誇りです">コピー</button></span></li>
+        <li><span>応援してる</span><span class="phrase-actions"><button type="button" data-phrase="応援してる">入れる</button><button type="button" data-copy="応援してる">コピー</button></span></li>
+        <li><span>会えてよかった</span><span class="phrase-actions"><button type="button" data-phrase="会えてよかった">入れる</button><button type="button" data-copy="会えてよかった">コピー</button></span></li>
+        <li><span>また来年も</span><span class="phrase-actions"><button type="button" data-phrase="また来年も">入れる</button><button type="button" data-copy="また来年も">コピー</button></span></li>
+        <li><span>側にいるよ</span><span class="phrase-actions"><button type="button" data-phrase="側にいるよ">入れる</button><button type="button" data-copy="側にいるよ">コピー</button></span></li>
+      </ul>
+      <h3>初めてと記念日</h3>
+      <ul class="phrase-list">
+        <li><span>初参戦</span><span class="phrase-actions"><button type="button" data-phrase="初参戦">入れる</button><button type="button" data-copy="初参戦">コピー</button></span></li>
+        <li><span>初めてです</span><span class="phrase-actions"><button type="button" data-phrase="初めてです">入れる</button><button type="button" data-copy="初めてです">コピー</button></span></li>
+        <li><span>誕生日おめでとう</span><span class="phrase-actions"><button type="button" data-phrase="誕生日おめでとう">入れる</button><button type="button" data-copy="誕生日おめでとう">コピー</button></span></li>
+        <li><span>生誕祭</span><span class="phrase-actions"><button type="button" data-phrase="生誕祭">入れる</button><button type="button" data-copy="生誕祭">コピー</button></span></li>
+        <li><span>おめでとう</span><span class="phrase-actions"><button type="button" data-phrase="おめでとう">入れる</button><button type="button" data-copy="おめでとう">コピー</button></span></li>
+        <li><span>デビュー記念</span><span class="phrase-actions"><button type="button" data-phrase="デビュー記念">入れる</button><button type="button" data-copy="デビュー記念">コピー</button></span></li>
+        <li><span>周年おめでとう</span><span class="phrase-actions"><button type="button" data-phrase="周年おめでとう">入れる</button><button type="button" data-copy="周年おめでとう">コピー</button></span></li>
+        <li><span>遠征してきた</span><span class="phrase-actions"><button type="button" data-phrase="遠征してきた">入れる</button><button type="button" data-copy="遠征してきた">コピー</button></span></li>
+        <li><span>会いに来た</span><span class="phrase-actions"><button type="button" data-phrase="会いに来た">入れる</button><button type="button" data-copy="会いに来た">コピー</button></span></li>
+        <li><span>今日が記念日</span><span class="phrase-actions"><button type="button" data-phrase="今日が記念日">入れる</button><button type="button" data-copy="今日が記念日">コピー</button></span></li>
+        <li><span>また会おう</span><span class="phrase-actions"><button type="button" data-phrase="また会おう">入れる</button><button type="button" data-copy="また会おう">コピー</button></span></li>
+        <li><span>一緒に歌おう</span><span class="phrase-actions"><button type="button" data-phrase="一緒に歌おう">入れる</button><button type="button" data-copy="一緒に歌おう">コピー</button></span></li>
+      </ul>
+      <h3>短い掛け声</h3>
+      <ul class="phrase-list">
+        <li><span>オー</span><span class="phrase-actions"><button type="button" data-phrase="オー">入れる</button><button type="button" data-copy="オー">コピー</button></span></li>
+        <li><span>ヘイ</span><span class="phrase-actions"><button type="button" data-phrase="ヘイ">入れる</button><button type="button" data-copy="ヘイ">コピー</button></span></li>
+        <li><span>いくぞ</span><span class="phrase-actions"><button type="button" data-phrase="いくぞ">入れる</button><button type="button" data-copy="いくぞ">コピー</button></span></li>
+        <li><span>最高</span><span class="phrase-actions"><button type="button" data-phrase="最高">入れる</button><button type="button" data-copy="最高">コピー</button></span></li>
+        <li><span>かっこいい</span><span class="phrase-actions"><button type="button" data-phrase="かっこいい">入れる</button><button type="button" data-copy="かっこいい">コピー</button></span></li>
+        <li><span>かわいい</span><span class="phrase-actions"><button type="button" data-phrase="かわいい">入れる</button><button type="button" data-copy="かわいい">コピー</button></span></li>
+        <li><span>天才</span><span class="phrase-actions"><button type="button" data-phrase="天才">入れる</button><button type="button" data-copy="天才">コピー</button></span></li>
+        <li><span>尊い</span><span class="phrase-actions"><button type="button" data-phrase="尊い">入れる</button><button type="button" data-copy="尊い">コピー</button></span></li>
+        <li><span>お疲れ様</span><span class="phrase-actions"><button type="button" data-phrase="お疲れ様">入れる</button><button type="button" data-copy="お疲れ様">コピー</button></span></li>
+        <li><span>エンジョイ</span><span class="phrase-actions"><button type="button" data-phrase="エンジョイ">入れる</button><button type="button" data-copy="エンジョイ">コピー</button></span></li>
+        <li><span>サビ好き</span><span class="phrase-actions"><button type="button" data-phrase="サビ好き">入れる</button><button type="button" data-copy="サビ好き">コピー</button></span></li>
+        <li><span>アンコール</span><span class="phrase-actions"><button type="button" data-phrase="アンコール">入れる</button><button type="button" data-copy="アンコール">コピー</button></span></li>
+        <li><span>今日も最高</span><span class="phrase-actions"><button type="button" data-phrase="今日も最高">入れる</button><button type="button" data-copy="今日も最高">コピー</button></span></li>
+      </ul>
+
+      <h2>無料で使えるフォント</h2>
+      <p>うちわ文字は太字が読みやすいので、最初は Dela Gothic One です。丸い印象にしたいときは、丸文字を一度押すと M PLUS Rounded 1c に替わります。どちらも SIL Open Font License で、個人の応援うちわを印刷するときに使えます。</p>
+      <table class="font-table">
+        <thead>
+          <tr><th>表示</th><th>フォント</th><th>ライセンス</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>太字</td><td>Dela Gothic One</td><td><a href="/assets/fonts/uchiwa/DelaGothicOne-OFL.txt">OFL</a></td></tr>
+          <tr><td>丸文字</td><td>M PLUS Rounded 1c</td><td><a href="/assets/fonts/uchiwa/MPLUSRounded1c-OFL.txt">OFL</a></td></tr>
+        </tbody>
+      </table>
+
+      <h2>コンビニで印刷する</h2>
+      <p>保存したPNGを、セブン-イレブンのネットプリント、ローソン、ファミリーマートなどのマルチコピー機に持ち込みます。用紙は作ったときと同じA4かA3を選び、拡大縮小は原寸（100%）にしてください。光沢紙にすると、会場の照明でも文字が残りやすいです。点線は切る位置、角の短い線は複数枚を貼り合わせる位置です。</p>
+
+      <h2>応援うちわのサイズとマナー</h2>
+      <p>レギュラーの扇面は横243mm×縦215mm、ジャンボは横295mm×縦285mmを目安にしています。市販のうちわの扇面に近い寸法で、持ち手は含みません。カスタムでは80mmから420mmまで指定できます。公演の規定はこの目安と違うことがあるので、チケットの案内や公式の注意を見てから印刷してください。</p>
+      <p>うちわは胸の高さで持ちます。演出の途中で高く上げる、通路で広げたまま歩く、隣の席の前に出す、といった使い方は周りの視界を遮ります。スマホの画面をうちわの代わりに掲げる場合も、撮影と間違えられないよう係員の指示に従ってください。</p>
+
+      <h2>よくある質問</h2>
+      <h3>無料で使えますか？</h3>
+      <p>無料です。登録もアプリのインストールも不要で、ブラウザだけで作れます。</p>
+      <h3>スマホだけでも作れますか？</h3>
+      <p>作れます。文字を入れて色とフチを決め、PNGで保存します。iPhoneでは共有メニューから写真や印刷アプリに渡せます。</p>
+      <h3>印刷サイズはどれですか？</h3>
+      <p>A4（210×297mm）とA3（297×420mm）です。どちらも300dpiのPNGなので、コンビニの印刷で倍率100%にすると原寸に近く出力できます。</p>
+      <h3>コンビニで印刷するには？</h3>
+      <p>PNGを保存し、セブン-イレブンのネットプリントや、ローソン、ファミリーマートなどのマルチコピー機でA4またはA3を選びます。倍率は100%にしてください。</p>
+      <h3>うちわのサイズ規定はありますか？</h3>
+      <p>公演ごとに違います。レギュラーとジャンボは市販のうちわの扇面の目安です。持ち込みできる大きさは、公演と会場の案内で確認してください。</p>
+      <h3>連結うちわは会場に持ち込めますか？</h3>
+      <p>会場によっては持ち込めません。作る前に、連結や複数枚の持ち込みが許可されているか確認してください。</p>
+      <h3>メンバーの名前や色は最初から入っていますか？</h3>
+      <p>入っていません。名前と色は自分で入力します。よく使う組み合わせは、この端末に10人まで保存できます。共有リンクにもその文字が入るので、送る前に内容を確認してください。</p>
+      <h3>入力した名前はサーバーに残りますか？</h3>
+      <p>残りません。編集もPNGの作成も、このブラウザの中で完結します。共有リンクはアドレスの#以降に設定を入れるだけで、ページの閲覧記録にはその部分を送りません。</p>
+    </section>
+
+    <section class="related-tools">
+      <h2>関連ツール</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/"><strong>月文字</strong><span>推しの名前を月文字アートにする。</span></a>
+        <a class="related-card" href="/fancy-text-generator/cursive/"><strong>筆記体</strong><span>推しの名前をデコる。</span></a>
+        <a class="related-card" href="/gyaru-moji/"><strong>ギャル文字</strong><span>ひらがなの名前を崩して飾る。</span></a>
+        <a class="related-card" href="/kaomoji/"><strong>顔文字</strong><span>うちわに足す顔文字を探す。</span></a>
+        <a class="related-card" href="/emoji-combinations/"><strong>絵文字組み合わせ</strong><span>推し色や誕生日の並びをコピーする。</span></a>
+        <a class="related-card" href="/kawaii-copy/oshi-profile/"><strong>推し活プロフィール</strong><span>名前の周りの飾り文を探す。</span></a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p>
+    </footer>
+  </div>
+
+  <dialog class="uchiwa-dialog" data-share-dialog>
+    <form method="dialog">
+      <h2>共有する内容</h2>
+      <p data-share-summary></p>
+      <p>リンクを開いた人に、この文字と色、フォント、フチの設定が見えます。名前を入れているときは、送る相手を確認してください。</p>
+      <div class="dialog-actions">
+        <button class="secondary-btn" type="submit" value="cancel">やめる</button>
+        <button class="primary-btn" type="submit" value="ok">共有する</button>
+      </div>
+    </form>
+  </dialog>
+  <div class="toast" data-toast role="status"></div>
+  <script type="module" src="/assets/js/uchiwa-moji.js"></script>
+</body>
+</html>
