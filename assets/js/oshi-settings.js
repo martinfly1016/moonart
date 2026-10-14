@@ -162,7 +162,7 @@ export function planPaperPages(fan, paper) {
 
 export function compactState(state) {
   const source = { ...defaultState(), ...state };
-  return {
+  const result = {
     v: 1,
     m: source.mode === 'penlight' ? 'p' : source.mode === 'banner' ? 'b' : 'u',
     t: clampText(source.text),
@@ -191,6 +191,11 @@ export function compactState(state) {
     gp: Math.round(clamp(source.gap, 0, 80, 16)),
     lt: source.light === 'gradient' ? 'g' : 's'
   };
+  if (source.mode === 'banner' || source.mode === 'penlight') {
+    const scale = Number(source.scale);
+    result.sz = Number.isFinite(scale) ? Math.round(Math.min(100, Math.max(60, scale))) : 92;
+  }
+  return result;
 }
 
 export function expandState(data) {
@@ -225,7 +230,8 @@ export function expandState(data) {
     blinkHz: clamp(data.bk, 0, 3, 0),
     bg: normalizeColor(data.bg, base.bg),
     gap: Math.round(clamp(data.gp, 0, 80, base.gap)),
-    light: data.lt === 'g' ? 'gradient' : 'solid'
+    light: data.lt === 'g' ? 'gradient' : 'solid',
+    scale: Number.isFinite(Number(data.sz)) ? Number(data.sz) : 92
   };
 }
 

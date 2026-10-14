@@ -56,7 +56,8 @@ export function bannerDefaults() {
     speed: 3,
     gap: 16,
     blinkHz: 1,
-    light: 'solid'
+    light: 'solid',
+    scale: 92
   };
 }
 
@@ -84,7 +85,8 @@ export function normalizeBanner(input = {}) {
     speed: clamp(source.speed, 1, 5, base.speed),
     gap: Math.round(clamp(source.gap, 0, 80, base.gap)),
     blinkHz: clampBlinkHz(source.blinkHz),
-    light: source.light === 'gradient' ? 'gradient' : 'solid'
+    light: source.light === 'gradient' ? 'gradient' : 'solid',
+    scale: clampTextScale(source.scale)
   };
 }
 
@@ -147,8 +149,32 @@ export function durationBucket(seconds) {
   return '180+';
 }
 
-export function fitScrollFontPx(crossPx) {
-  return Math.max(28, Math.round(Math.max(0, crossPx) * 0.6));
+export const TEXT_FILL_MIN = 60;
+export const TEXT_FILL_MAX = 100;
+export const TEXT_FILL_DEFAULT = 92;
+
+export function clampTextScale(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return TEXT_FILL_DEFAULT;
+  return Math.round(Math.min(TEXT_FILL_MAX, Math.max(TEXT_FILL_MIN, number)));
+}
+
+// font-size is the em box. CJK display fonts leave empty space inside it,
+// so the em has to be taller than the board for the ink to fill it.
+export function fontPxForInk(crossPx, scalePercent, inkPerEm) {
+  const cross = Math.max(0, Number(crossPx) || 0);
+  const fill = clampTextScale(scalePercent) / 100;
+  const ink = Number(inkPerEm);
+  const perEm = ink > 0.2 && ink < 2.5 ? ink : 1;
+  return Math.max(28, Math.round((cross * fill) / perEm));
+}
+
+export function shrinkToWidth(fontPx, textWidth, limitWidth) {
+  const size = Number(fontPx) || 0;
+  const width = Number(textWidth) || 0;
+  const limit = Number(limitWidth) || 0;
+  if (!size || !width || !limit || width <= limit) return Math.max(22, Math.round(size));
+  return Math.max(22, Math.floor(size * (limit / width)));
 }
 
 export function staticScale(textWidth, textHeight, limitWidth, limitHeight) {
@@ -214,7 +240,8 @@ function snapshot(state) {
     gap: next.gap,
     blinkHz: next.blinkHz,
     mode: next.mode,
-    light: next.light
+    light: next.light,
+    scale: next.scale
   };
 }
 

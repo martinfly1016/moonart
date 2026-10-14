@@ -171,6 +171,10 @@
   justify-content: space-between;
 }
 
+.led-stage.is-open .led-display-controls button {
+  background: rgba(0, 0, 0, 0.78);
+}
+
 .led-display-controls button,
 .led-install {
   min-height: 44px;

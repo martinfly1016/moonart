@@ -16,7 +16,8 @@ import {
   blinkDurationMs,
   contrastLow,
   durationBucket,
-  fitScrollFontPx,
+  fontPxForInk,
+  shrinkToWidth,
   gapPx,
   hasPhotoAck,
   inkFor,
@@ -191,26 +192,70 @@ function boot() {
     trackNode.classList.remove('is-moving');
   }
 
-  function applyFit() {
-    const cross = verticalScroll() ? viewport.clientWidth : viewport.clientHeight;
-    const along = verticalScroll() ? viewport.clientHeight : viewport.clientWidth;
-    if (!cross || !along) return;
-    const base = state.mode === 'penlight'
-      ? Math.max(28, Math.round(cross * 0.22))
-      : fitScrollFontPx(cross);
-    const copies = [...trackNode.querySelectorAll('.led-copy')];
-    const gap = scrolling() ? gapPx(state.gap, along) : 0;
-    copies.forEach((copy) => {
-      copy.style.fontSize = `${base}px`;
-      copy.style.paddingRight = verticalScroll() ? '0px' : `${gap}px`;
-      copy.style.paddingBottom = verticalScroll() ? `${gap}px` : '0px';
+  function measureInk(copy) {
+    const probe = document.createElement('div');
+    probe.setAttribute('aria-hidden', 'true');
+    probe.style.cssText = 'position:fixed;left:0;top:0;visibility:hidden;pointer-events:none;display:flex;align-items:center;white-space:nowrap;line-height:1;font-size:100px;';
+    [...copy.children].forEach((child) => {
+      const span = child.cloneNode(true);
+      const style = getComputedStyle(child);
+      span.style.fontFamily = style.fontFamily;
+      span.style.fontWeight = style.fontWeight;
+      span.style.fontSize = '100px';
+      span.style.lineHeight = '1';
+      probe.append(span);
     });
-    if (!scrolling() && copies[0]) {
-      const limitW = viewport.clientWidth * 0.9;
-      const limitH = viewport.clientHeight * (state.mode === 'penlight' ? 0.42 : 0.8);
-      const scale = staticScale(copies[0].scrollWidth, copies[0].scrollHeight, limitW, limitH);
-      copies[0].style.fontSize = `${Math.max(22, Math.floor(base * scale))}px`;
+    if (!probe.childElementCount) {
+      probe.textContent = copy.textContent || '文字';
     }
+    document.body.append(probe);
+    const range = document.createRange();
+    range.selectNodeContents(probe);
+    const ink = range.getBoundingClientRect();
+    const box = probe.getBoundingClientRect();
+    probe.remove();
+    const perEm = ink.height > 0 ? ink.height / 100 : 1;
+    const offsetEm = ((ink.top + ink.height / 2) - (box.top + box.height / 2)) / 100;
+    return { perEm, offsetEm };
+  }
+
+  function applyFit() {
+    const height = viewport.clientHeight;
+    const width = viewport.clientWidth;
+    if (!height || !width) return;
+    const copies = [...trackNode.querySelectorAll('.led-copy')];
+    if (!copies.length) return;
+    const vertical = verticalScroll();
+    const gap = scrolling() ? gapPx(state.gap, vertical ? height : width) : 0;
+    copies.forEach((copy) => {
+      copy.style.top = '0px';
+      copy.style.paddingRight = vertical ? '0px' : `${gap}px`;
+      copy.style.paddingBottom = vertical ? `${gap}px` : '0px';
+    });
+    if (state.mode === 'penlight') {
+      const base = Math.max(28, Math.round(Math.min(width, height) * 0.22));
+      copies.forEach((copy) => {
+        copy.style.fontSize = `${base}px`;
+      });
+      if (copies[0]) {
+        const scale = staticScale(copies[0].scrollWidth, copies[0].scrollHeight, width * 0.9, height * 0.42);
+        copies[0].style.fontSize = `${Math.max(22, Math.floor(base * scale))}px`;
+      }
+      return;
+    }
+    const sample = measureInk(copies[0]);
+    // Viewport clientHeight is the board height inside the safe-area padding.
+    let fontPx = fontPxForInk(height, state.scale, sample.perEm);
+    if (!scrolling()) {
+      copies[0].style.fontSize = `${fontPx}px`;
+      fontPx = shrinkToWidth(fontPx, copies[0].scrollWidth, width * 0.92);
+    }
+    const shift = Math.round(-(sample.offsetEm || 0) * fontPx);
+    copies.forEach((copy) => {
+      copy.style.position = 'relative';
+      copy.style.fontSize = `${fontPx}px`;
+      copy.style.top = `${shift}px`;
+    });
   }
 
   function startMotion() {
@@ -278,6 +323,8 @@ function boot() {
     root.querySelector('[data-speed-label]').textContent = String(state.speed);
     root.querySelector('[data-gap]').value = String(state.gap);
     root.querySelector('[data-gap-label]').textContent = String(state.gap);
+    root.querySelector('[data-scale]').value = String(state.scale);
+    root.querySelector('[data-scale-label]').textContent = `${state.scale}%`;
     root.querySelector('[data-blink]').value = String(state.blinkHz);
     root.querySelector('[data-blink-label]').textContent = `${state.blinkHz}回/秒`;
     root.querySelector('[data-custom-fill]').value = state.fill;
@@ -517,6 +564,11 @@ function boot() {
       scheduleFit();
     } else if (target.matches('[data-gap]')) {
       state.gap = Number(target.value);
+      markEdited();
+      syncControls();
+      scheduleFit();
+    } else if (target.matches('[data-scale]')) {
+      state.scale = Number(target.value);
       markEdited();
       syncControls();
       scheduleFit();
