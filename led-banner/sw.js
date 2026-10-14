@@ -1,4 +1,4 @@
-const CACHE = 'led-banner-v1';
+const CACHE = 'led-banner-v2';
 const ASSETS = [
   '/led-banner/',
   '/led-banner/index.html',
@@ -11,6 +11,7 @@ const ASSETS = [
   '/assets/js/analytics.js',
   '/assets/js/led-banner.js',
   '/assets/js/led-display.js',
+  '/assets/js/sticky-preview.js',
   '/assets/js/led-state.js',
   '/assets/js/oshi-settings.js',
   '/assets/fonts/uchiwa/dela-gothic-one.woff2',

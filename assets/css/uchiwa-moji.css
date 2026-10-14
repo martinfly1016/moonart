@@ -17,6 +17,11 @@
 .uchiwa-body {
   background:
     radial-gradient(circle at top, #fff 0, #f6f7fb 42%);
+  overflow-x: clip;
+}
+
+.uchiwa-body .tool-shell {
+  overflow-x: clip;
 }
 
 .uchiwa-hero .hero-inner {
@@ -106,6 +111,13 @@
   box-shadow: none;
   min-width: 0;
   max-width: 100%;
+}
+
+.uchiwa-controls input,
+.uchiwa-controls textarea,
+.uchiwa-controls select {
+  scroll-margin-top: 32svh;
+  scroll-margin-bottom: 50svh;
 }
 
 .field-label,
@@ -458,15 +470,44 @@ textarea:focus-visible {
   }
 }
 
+@media (max-width: 959px) {
+  .uchiwa-stage-wrap {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 30;
+    max-height: 30svh;
+    overflow: hidden;
+  }
+
+  .uchiwa-stage-wrap.is-pinned {
+    max-height: 25svh;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  }
+
+  .uchiwa-stage-wrap.is-editing {
+    position: relative;
+    top: auto;
+    max-height: 18svh;
+    box-shadow: none;
+  }
+}
+
 @media (min-width: 960px) {
   .uchiwa-app {
     grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
     align-items: start;
   }
 
-  .uchiwa-stage-wrap {
+  .uchiwa-stage-wrap,
+  .uchiwa-stage-wrap.is-pinned,
+  .uchiwa-stage-wrap.is-editing {
     position: sticky;
     top: 12px;
+    max-height: none;
+    overflow: visible;
+    z-index: 2;
   }
 
   .primary-btn,
