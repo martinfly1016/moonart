@@ -25,6 +25,9 @@ import {
   pushRecent,
   splitEmoji,
   stateFromHash,
+  clampTextScale,
+  fontPxForInk,
+  shrinkToWidth,
   staticScale,
   toggleFavorite
 } from '../assets/js/led-state.js';
@@ -420,7 +423,9 @@ assert.match(css, /is-editing/);
 assert.match(css, /position:\s*sticky/);
 assert.match(page, /viewport-fit=cover/);
 assert.ok(page.indexOf('data-install-hint') < page.indexOf('data-stage'));
-assert.match(sw, /led-banner-v2/);
+assert.match(sw, /led-banner-v3/);
+assert.match(page, /data-scale/);
+assert.match(page, /文字の大きさ/);
 assert.match(sw, /sticky-preview\.js/);
 const uchiwaCss = fs.readFileSync(new URL('../assets/css/uchiwa-moji.css', import.meta.url), 'utf8');
 const uchiwaJs = fs.readFileSync(new URL('../assets/js/uchiwa-moji.js', import.meta.url), 'utf8');
@@ -442,6 +447,13 @@ assert.equal(clampBlinkHz(0), 0.5);
 assert.equal(blinkDurationMs(3), 333);
 assert.equal(gapPx(0, 800), 0);
 assert.equal(staticScale(200, 100, 100, 100), 0.5);
+assert.equal(clampTextScale(undefined), 95);
+assert.equal(clampTextScale(40), 60);
+assert.equal(clampTextScale(140), 100);
+assert.equal(fontPxForInk(390, 92, 0.7), 513);
+assert.equal(fontPxForInk(390, 92, 1), 359);
+assert.equal(shrinkToWidth(400, 800, 400), 200);
+assert.equal(shrinkToWidth(400, 200, 400), 400);
 assert.equal(durationBucket(12), '10-30');
 assert.deepEqual(splitEmoji('だいすき💖'), [
   { emoji: false, value: 'だいすき' },
@@ -467,7 +479,8 @@ const shared = stateFromHash(decodeShareHash(encodeShareHash({
   gap: 0,
   blinkHz: 9,
   light: 'gradient',
-  font: 'rounded'
+  font: 'rounded',
+  scale: 70
 })));
 assert.equal(shared.mode, 'penlight');
 assert.equal(shared.text, '初参戦');
@@ -476,6 +489,8 @@ assert.equal(shared.direction, 'up');
 assert.equal(shared.gap, 0);
 assert.equal(shared.blinkHz, 3);
 assert.equal(shared.font, 'rounded');
+assert.equal(shared.scale, 70);
+assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'banner', text: '大好き' }))).scale, 95);
 assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'uchiwa', text: '大好き', effect: 'rainbow' }))).effect, 'scroll');
 
 const memory = {

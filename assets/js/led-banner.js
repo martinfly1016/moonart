@@ -16,7 +16,8 @@ import {
   blinkDurationMs,
   contrastLow,
   durationBucket,
-  fitScrollFontPx,
+  fontPxForInk,
+  shrinkToWidth,
   gapPx,
   hasPhotoAck,
   inkFor,
@@ -191,26 +192,70 @@ function boot() {
     trackNode.classList.remove('is-moving');
   }
 
+  function glyphMetrics(node) {
+    const canvas = glyphMetrics.canvas || (glyphMetrics.canvas = document.createElement('canvas'));
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+    const size = 200;
+    const style = getComputedStyle(node);
+    ctx.font = `${style.fontWeight} ${size}px ${style.fontFamily}`;
+    const metrics = ctx.measureText(node.textContent || ' ');
+    const ascent = metrics.actualBoundingBoxAscent || 0;
+    const descent = metrics.actualBoundingBoxDescent || 0;
+    if (ascent + descent < 1) return null;
+    const fontAscent = metrics.fontBoundingBoxAscent || ascent;
+    const fontDescent = metrics.fontBoundingBoxDescent || descent;
+    return {
+      perEm: (ascent + descent) / size,
+      // Positive when the painted glyphs sit below the center of the em box.
+      offsetEm: ((fontAscent - fontDescent) - (ascent - descent)) / 2 / size
+    };
+  }
+
+  function measureInk(copy) {
+    const nodes = [...copy.querySelectorAll('.led-plain, .led-emoji')];
+    const metrics = nodes.map(glyphMetrics).filter(Boolean);
+    if (!metrics.length) return { perEm: 1, offsetEm: 0 };
+    return metrics.reduce((tallest, item) => (item.perEm > tallest.perEm ? item : tallest));
+  }
+
   function applyFit() {
-    const cross = verticalScroll() ? viewport.clientWidth : viewport.clientHeight;
-    const along = verticalScroll() ? viewport.clientHeight : viewport.clientWidth;
-    if (!cross || !along) return;
-    const base = state.mode === 'penlight'
-      ? Math.max(28, Math.round(cross * 0.22))
-      : fitScrollFontPx(cross);
+    const height = viewport.clientHeight;
+    const width = viewport.clientWidth;
+    if (!height || !width) return;
     const copies = [...trackNode.querySelectorAll('.led-copy')];
-    const gap = scrolling() ? gapPx(state.gap, along) : 0;
+    if (!copies.length) return;
+    const vertical = verticalScroll();
+    const gap = scrolling() ? gapPx(state.gap, vertical ? height : width) : 0;
     copies.forEach((copy) => {
-      copy.style.fontSize = `${base}px`;
-      copy.style.paddingRight = verticalScroll() ? '0px' : `${gap}px`;
-      copy.style.paddingBottom = verticalScroll() ? `${gap}px` : '0px';
+      copy.style.top = '0px';
+      copy.style.paddingRight = vertical ? '0px' : `${gap}px`;
+      copy.style.paddingBottom = vertical ? `${gap}px` : '0px';
     });
-    if (!scrolling() && copies[0]) {
-      const limitW = viewport.clientWidth * 0.9;
-      const limitH = viewport.clientHeight * (state.mode === 'penlight' ? 0.42 : 0.8);
-      const scale = staticScale(copies[0].scrollWidth, copies[0].scrollHeight, limitW, limitH);
-      copies[0].style.fontSize = `${Math.max(22, Math.floor(base * scale))}px`;
+    if (state.mode === 'penlight') {
+      const base = Math.max(28, Math.round(Math.min(width, height) * 0.22));
+      copies.forEach((copy) => {
+        copy.style.fontSize = `${base}px`;
+      });
+      if (copies[0]) {
+        const scale = staticScale(copies[0].scrollWidth, copies[0].scrollHeight, width * 0.9, height * 0.42);
+        copies[0].style.fontSize = `${Math.max(22, Math.floor(base * scale))}px`;
+      }
+      return;
     }
+    const sample = measureInk(copies[0]);
+    // Viewport clientHeight is the board height inside the safe-area padding.
+    let fontPx = fontPxForInk(height, state.scale, sample.perEm);
+    if (!scrolling()) {
+      copies[0].style.fontSize = `${fontPx}px`;
+      fontPx = shrinkToWidth(fontPx, copies[0].scrollWidth, width * 0.92);
+    }
+    const shift = Math.round(-(sample.offsetEm || 0) * fontPx);
+    copies.forEach((copy) => {
+      copy.style.position = 'relative';
+      copy.style.fontSize = `${fontPx}px`;
+      copy.style.top = `${shift}px`;
+    });
   }
 
   function startMotion() {
@@ -278,6 +323,8 @@ function boot() {
     root.querySelector('[data-speed-label]').textContent = String(state.speed);
     root.querySelector('[data-gap]').value = String(state.gap);
     root.querySelector('[data-gap-label]').textContent = String(state.gap);
+    root.querySelector('[data-scale]').value = String(state.scale);
+    root.querySelector('[data-scale-label]').textContent = `${state.scale}%`;
     root.querySelector('[data-blink]').value = String(state.blinkHz);
     root.querySelector('[data-blink-label]').textContent = `${state.blinkHz}回/秒`;
     root.querySelector('[data-custom-fill]').value = state.fill;
@@ -517,6 +564,11 @@ function boot() {
       scheduleFit();
     } else if (target.matches('[data-gap]')) {
       state.gap = Number(target.value);
+      markEdited();
+      syncControls();
+      scheduleFit();
+    } else if (target.matches('[data-scale]')) {
+      state.scale = Number(target.value);
       markEdited();
       syncControls();
       scheduleFit();
