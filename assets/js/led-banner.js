@@ -9,7 +9,12 @@ import {
   loadMembers,
   trackToolEvent
 } from './oshi-settings.js';
-import { createDisplaySession, isStandaloneDisplay } from './led-display.js';
+import {
+  createDisplaySession,
+  isIphoneSafari,
+  isStandaloneDisplay,
+  shouldShowIosDisplayHint
+} from './led-display.js';
 import { bindStickyPreview } from './sticky-preview.js';
 import {
   acknowledgePhoto,
@@ -101,6 +106,7 @@ function boot() {
       source = 'editor';
       scheduleFit();
       paintSaved();
+      syncIosHint(method);
     },
     onWakeRenew(wake) {
       tip.hidden = wake.status === 'ok';
@@ -116,6 +122,7 @@ function boot() {
       }
       displayed = false;
       tip.hidden = true;
+      hideIosHint();
       paintBoard();
       scheduleFit();
     }
@@ -538,6 +545,34 @@ function boot() {
     track('share_link_create', { tool: 'led-banner', channel });
   }
 
+  const IOS_HINT_KEY = 'mojimoon.led.ios-hint.v1';
+
+  function iosHintDismissed() {
+    try {
+      return storage.getItem(IOS_HINT_KEY) === '1';
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function hideIosHint() {
+    const hint = root.querySelector('[data-ios-hint]');
+    if (hint) hint.hidden = true;
+  }
+
+  function syncIosHint(method) {
+    const hint = root.querySelector('[data-ios-hint]');
+    if (!hint) return;
+    const show = shouldShowIosDisplayHint({
+      iphoneSafari: isIphoneSafari(window),
+      standalone: isStandaloneDisplay(window),
+      method,
+      dismissed: iosHintDismissed()
+    });
+    hint.hidden = !show;
+    if (show) hint.querySelector('[data-ios-hint-dismiss]')?.focus();
+  }
+
   function setupInstall() {
     const hint = root.querySelector('[data-install-hint]');
     const text = root.querySelector('[data-install-text]');
@@ -676,6 +711,15 @@ function boot() {
   });
   exitButton.addEventListener('click', () => {
     session.exit();
+  });
+  root.querySelector('[data-ios-hint-dismiss]')?.addEventListener('click', () => {
+    try {
+      storage.setItem(IOS_HINT_KEY, '1');
+    } catch (error) {
+      // Private mode can reject storage; the hint still closes for this visit.
+    }
+    hideIosHint();
+    exitButton.focus();
   });
 
   document.querySelector('[data-open-uchiwa]')?.addEventListener('click', (event) => {

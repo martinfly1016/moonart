@@ -6,8 +6,11 @@ import {
   createDisplaySession,
   controlPads,
   displayFrame,
+  currentFullscreenElement,
   fullscreenApiAvailable,
+  isIphoneSafari,
   isStandaloneDisplay,
+  shouldShowIosDisplayHint,
   readSafeArea,
   readVisibleViewport,
   requestScreenWakeLock,
@@ -28,6 +31,9 @@ import {
   clampTextScale,
   fontPxForInk,
   motionNeedsRestart,
+  speedHeightsPerSec,
+  speedPxPerSec,
+  SPEED_MAX,
   normalizeBanner,
   presentationFor,
   shrinkToWidth,
@@ -55,7 +61,34 @@ assert.equal(chooseFullscreenMethod({ apiAvailable: true, standalone: false }), 
 assert.equal(chooseFullscreenMethod({ apiAvailable: false, standalone: false }), 'pseudo');
 assert.equal(chooseFullscreenMethod({ apiAvailable: true, standalone: true }), 'standalone');
 assert.equal(fullscreenApiAvailable({ requestFullscreen() {} }), true);
+assert.equal(fullscreenApiAvailable({ webkitRequestFullscreen() {} }), true);
 assert.equal(fullscreenApiAvailable({}), false);
+const webkitDoc = { fullscreenElement: null, webkitFullscreenElement: { id: 'stage' } };
+assert.equal(currentFullscreenElement(webkitDoc), webkitDoc.webkitFullscreenElement);
+assert.equal(isIphoneSafari({
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1'
+}), true);
+assert.equal(isIphoneSafari({
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/120.0.0.0 Mobile/15E148 Safari/604.1'
+}), false);
+assert.equal(isIphoneSafari({
+  userAgent: 'Mozilla/5.0 (iPad; CPU OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1'
+}), false);
+assert.equal(shouldShowIosDisplayHint({
+  iphoneSafari: true, standalone: false, method: 'pseudo', dismissed: false
+}), true);
+assert.equal(shouldShowIosDisplayHint({
+  iphoneSafari: true, standalone: true, method: 'standalone', dismissed: false
+}), false);
+assert.equal(shouldShowIosDisplayHint({
+  iphoneSafari: true, standalone: false, method: 'api', dismissed: false
+}), false);
+assert.equal(shouldShowIosDisplayHint({
+  iphoneSafari: false, standalone: false, method: 'pseudo', dismissed: false
+}), false);
+assert.equal(shouldShowIosDisplayHint({
+  iphoneSafari: true, standalone: false, method: 'pseudo', dismissed: true
+}), false);
 assert.equal(isStandaloneDisplay({ navigator: { standalone: true } }), true);
 assert.equal(isStandaloneDisplay({
   navigator: {},
@@ -329,6 +362,23 @@ await visible.session.exit();
 assert.equal(visible.listeners.has('vv:resize'), false);
 assert.equal(visible.stage.style.left, '');
 
+const safariPortrait = await createHarness({
+  api: false,
+  portrait: true,
+  visualViewport: { offsetTop: 91, offsetLeft: 0, width: 390, height: 640 }
+});
+safariPortrait.win.innerWidth = 390;
+safariPortrait.win.innerHeight = 844;
+await safariPortrait.session.enter();
+assert.equal(safariPortrait.board.classList.contains('is-rotated'), true);
+assert.equal(safariPortrait.stage.style.top, '91px');
+assert.equal(safariPortrait.stage.style.left, '0px');
+assert.equal(safariPortrait.stage.style.width, '390px');
+assert.equal(safariPortrait.stage.style.height, '640px');
+assert.equal(safariPortrait.stage.style.values['--led-vv-w'], '390px');
+assert.equal(safariPortrait.stage.style.values['--led-vv-h'], '640px');
+await safariPortrait.session.exit();
+
 assert.deepEqual(readVisibleViewport({
   innerWidth: 844,
   innerHeight: 390,
@@ -427,7 +477,15 @@ assert.match(css, /is-editing/);
 assert.match(css, /position:\s*sticky/);
 assert.match(page, /viewport-fit=cover/);
 assert.ok(page.indexOf('data-install-hint') < page.indexOf('data-stage'));
-assert.match(sw, /led-banner-v4/);
+assert.match(sw, /led-banner-v5/);
+assert.match(page, /data-ios-hint/);
+assert.match(page, /画面縦向きのロック/);
+assert.match(page, /data-speed min="1" max="10"/);
+assert.equal(SPEED_MAX, 10);
+assert.ok(Math.abs(speedPxPerSec(5, 136) - 220) < 1);
+assert.ok(Math.abs(speedPxPerSec(3, 136) - 104) < 1);
+assert.ok(speedHeightsPerSec(10) >= speedHeightsPerSec(5) * 2 - 0.001);
+assert.ok(Math.abs(speedPxPerSec(3, 460) / 460 - speedPxPerSec(3, 136) / 136) < 0.001);
 assert.equal(css.includes('led-display-open .tool-shell'), false);
 assert.match(css, /led-display-open \.led-controls/);
 assert.match(css, /led-display-open \.site-footer/);
@@ -501,6 +559,8 @@ assert.equal(shared.blinkHz, 3);
 assert.equal(shared.font, 'rounded');
 assert.equal(shared.scale, 70);
 assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'banner', text: '大好き' }))).scale, 95);
+assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'banner', text: '大好き', speed: 10 }))).speed, 10);
+assert.equal(normalizeBanner({ speed: 11 }).speed, 10);
 assert.equal(stateFromHash(decodeShareHash(encodeShareHash({ mode: 'uchiwa', text: '大好き', effect: 'rainbow' }))).effect, 'scroll');
 
 const memory = {
@@ -535,7 +595,9 @@ function project(plan, box) {
     copies: plan.copies,
     light: plan.light,
     gapRatio: along ? Math.round((plan.gap / along) * 100) : 0,
-    rate: plan.duration ? Math.round((box.distance / plan.duration) * 1000) : 0
+    rate: plan.duration && plan.fontPx
+      ? Math.round((box.distance / plan.duration) * 1000 / plan.fontPx * 1000)
+      : 0
   };
 }
 
@@ -559,7 +621,7 @@ function surfacesMatch(state) {
   assert.equal(left.copies, right.copies);
   assert.equal(left.light, right.light);
   assert.equal(left.gapRatio, right.gapRatio);
-  assert.ok(Math.abs(left.rate - right.rate) <= 1);
+  assert.ok(Math.abs(left.rate - right.rate) <= 20);
   assert.deepEqual(presentationFor(state, displayBox), presentationFor(state, displayBox));
 }
 

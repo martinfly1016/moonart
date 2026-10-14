@@ -9,7 +9,39 @@ export function chooseFullscreenMethod({ apiAvailable, standalone }) {
 }
 
 export function fullscreenApiAvailable(element) {
-  return typeof element?.requestFullscreen === 'function';
+  return typeof element?.requestFullscreen === 'function'
+    || typeof element?.webkitRequestFullscreen === 'function';
+}
+
+export function isIphoneSafari(source) {
+  const nav = source?.navigator || source || {};
+  const ua = nav.userAgent || '';
+  if (!/iPhone|iPod/.test(ua)) return false;
+  if (/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|GSA\//.test(ua)) return false;
+  return /Safari/.test(ua);
+}
+
+// iPhone Safari cannot hide its own address bar. The hint explains the two
+// ways to get the board nearly edge to edge. A successful Fullscreen API
+// session, and a home-screen app, already are.
+export function shouldShowIosDisplayHint({ iphoneSafari, standalone, method, dismissed }) {
+  return Boolean(iphoneSafari) && !standalone && method !== 'api' && !dismissed;
+}
+
+export async function requestElementFullscreen(element) {
+  if (!element) return;
+  if (typeof element.requestFullscreen === 'function') {
+    await element.requestFullscreen();
+    return;
+  }
+  if (typeof element.webkitRequestFullscreen === 'function') {
+    const result = element.webkitRequestFullscreen();
+    if (result?.then) await result;
+  }
+}
+
+export function currentFullscreenElement(doc) {
+  return doc?.fullscreenElement || doc?.webkitFullscreenElement || null;
 }
 
 export function isStandaloneDisplay(win) {
@@ -218,7 +250,7 @@ export function createDisplaySession(options) {
   }
 
   function onFullscreenChange() {
-    if (!active || method !== 'api' || doc.fullscreenElement) return;
+    if (!active || method !== 'api' || currentFullscreenElement(doc)) return;
     exit();
   }
 
@@ -230,6 +262,7 @@ export function createDisplaySession(options) {
   function bind() {
     doc.addEventListener('visibilitychange', onVisibility);
     doc.addEventListener('fullscreenchange', onFullscreenChange);
+    doc.addEventListener('webkitfullscreenchange', onFullscreenChange);
     win.addEventListener('resize', onResize);
     win.addEventListener('orientationchange', onResize);
     win.visualViewport?.addEventListener('resize', onResize);
@@ -240,6 +273,7 @@ export function createDisplaySession(options) {
   function unbind() {
     doc.removeEventListener('visibilitychange', onVisibility);
     doc.removeEventListener('fullscreenchange', onFullscreenChange);
+    doc.removeEventListener('webkitfullscreenchange', onFullscreenChange);
     win.removeEventListener('resize', onResize);
     win.removeEventListener('orientationchange', onResize);
     win.visualViewport?.removeEventListener('resize', onResize);
@@ -262,9 +296,9 @@ export function createDisplaySession(options) {
       lockedLandscape = false;
       if (method === 'api') {
         try {
-          await stage.requestFullscreen();
+          await requestElementFullscreen(stage);
           lockedLandscape = await lockLandscape(screenRef);
-          if (!doc.fullscreenElement) method = 'pseudo';
+          if (!currentFullscreenElement(doc)) method = 'pseudo';
         } catch (error) {
           method = 'pseudo';
           lockedLandscape = false;
@@ -299,11 +333,15 @@ export function createDisplaySession(options) {
       }
     }
     sentinel = null;
-    if (closingMethod === 'api' && doc.fullscreenElement && doc.exitFullscreen) {
-      try {
-        await doc.exitFullscreen();
-      } catch (error) {
-        // The browser may already have left fullscreen.
+    if (closingMethod === 'api' && currentFullscreenElement(doc)) {
+      const leave = doc.exitFullscreen || doc.webkitExitFullscreen;
+      if (leave) {
+        try {
+          const result = leave.call(doc);
+          if (result?.then) await result;
+        } catch (error) {
+          // The browser may already have left fullscreen.
+        }
       }
     }
     syncClasses();
