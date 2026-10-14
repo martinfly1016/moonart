@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>電光掲示板 - MojiMoon</title>
+  <meta name="description" content="スマホの画面を横向きの全画面表示にします。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mojimoon.com/led-banner/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/moon_icon.png">
+  <meta property="og:title" content="電光掲示板">
+  <meta property="og:description" content="スマホの画面を横向きの全画面表示にします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojimoon.com/led-banner/">
+  <script src="/assets/js/analytics.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/text-tools.css">
+  <link rel="stylesheet" href="/assets/css/led-banner.css">
+  <link rel="stylesheet" href="/assets/css/site-navigation.css">
+  <script src="/assets/js/site-navigation.js" defer></script>
+</head>
+<body class="led-body">
+  <div class="tool-shell">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="brand-group">
+          <a class="brand" href="/"><span class="brand-mark">🌙</span><span>MojiMoon</span></a>
+        </div>
+        <nav class="site-nav" aria-label="文字ツール">
+          <a href="/">月文字</a>
+          <a href="/uchiwa-moji/">うちわ文字</a>
+          <a href="/led-banner/" aria-current="page">電光掲示板</a>
+          <a href="/fancy-text-generator/cursive/">筆記体</a>
+          <a href="/gyaru-moji/">ギャル文字</a>
+          <details class="nav-menu nav-menu-wide">
+            <summary>コピペ</summary>
+            <div class="nav-menu-panel">
+              <a href="/kawaii-copy/">かわいいコピペ</a>
+              <a href="/kaomoji/">顔文字</a>
+              <a href="/special-characters/">特殊文字</a>
+              <a href="/emoji-combinations/">絵文字組み合わせ</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero led-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">LED Banner</p>
+        <h1>電光掲示板</h1>
+        <p class="hero-copy">画面を横向きの全画面にして、文字を大きく表示します。</p>
+      </div>
+    </section>
+
+    <main class="led-wrap" data-led-banner>
+      <p class="led-note" data-inapp hidden>アプリ内ブラウザでは全画面が制限されることがあります。メニューから Safari で開いてください。</p>
+      <div class="led-stage" data-stage>
+        <div class="led-board" data-board>
+          <p class="led-message">電光掲示板</p>
+          <p class="led-lock-tip" data-lock-tip role="status" hidden>このブラウザでは画面の自動ロックを止められません。設定で「自動ロック」を「なし」にしてください。</p>
+          <button class="led-exit" type="button" data-exit hidden>閉じる</button>
+        </div>
+      </div>
+      <div class="led-actions">
+        <button class="primary-btn" type="button" data-enter>全画面で表示</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p>
+    </footer>
+  </div>
+  <script type="module" src="/assets/js/led-banner.js"></script>
+</body>
+</html>
