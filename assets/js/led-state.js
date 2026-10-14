@@ -186,6 +186,75 @@ export function gapPx(gap, alongPx) {
   return Math.round(Math.max(0, alongPx) * (clamp(gap, 0, 80, 16) / 100));
 }
 
+// One plan for the editor preview and the fullscreen board. Pixel sizes follow
+// the board that is on screen; speed, gap ratio, and colors come from state.
+export function presentationFor(state, box = {}) {
+  const next = normalizeBanner(state);
+  const text = next.text.trim();
+  const scrolling = next.mode === 'banner' && next.effect === 'scroll' && Boolean(text);
+  const vertical = scrolling && (next.direction === 'up' || next.direction === 'down');
+  const width = Math.max(0, Number(box.width) || 0);
+  const height = Math.max(0, Number(box.height) || 0);
+  const along = vertical ? height : width;
+  const reduced = Boolean(box.reduced);
+  let fontPx = 0;
+  if (next.mode === 'penlight') {
+    const base = Math.max(28, Math.round(Math.min(width, height) * 0.22));
+    if (box.textWidth && box.textHeight && width && height) {
+      const scale = staticScale(box.textWidth, box.textHeight, width * 0.9, height * 0.42);
+      fontPx = Math.max(22, Math.floor(base * scale));
+    } else {
+      fontPx = base;
+    }
+  } else if (width && height) {
+    fontPx = fontPxForInk(height, next.scale, box.inkPerEm || 1);
+    if (!scrolling && box.textWidth) fontPx = shrinkToWidth(fontPx, box.textWidth, width * 0.92);
+  }
+  const distance = Math.max(0, Number(box.distance) || 0);
+  const shown = text || '文字を入力';
+  const parts = splitEmoji(shown);
+  return {
+    mode: next.mode,
+    effect: next.effect,
+    direction: next.direction,
+    text: shown,
+    parts: parts.length ? parts : [{ emoji: false, value: shown }],
+    font: next.font,
+    fill: next.fill,
+    fill2: next.fill2,
+    bg: next.bg,
+    light: next.light,
+    scale: next.scale,
+    speed: next.speed,
+    gapSetting: next.gap,
+    gap: scrolling ? gapPx(next.gap, along) : 0,
+    fontPx,
+    shift: Math.round(-(Number(box.offsetEm) || 0) * fontPx),
+    vertical,
+    copies: scrolling ? 2 : 1,
+    duration: scrolling && distance ? marqueeDurationMs(distance, next.speed, reduced) : 0,
+    blink: next.mode === 'banner' && next.effect === 'blink' && !reduced ? blinkDurationMs(next.blinkHz) : 0,
+    keyframes: scrolling ? marqueeKeyframes(next.direction) : null,
+    background: next.mode === 'penlight'
+      ? (next.light === 'gradient'
+        ? `linear-gradient(115deg, ${next.fill} 0%, ${next.fill2} 100%)`
+        : next.fill)
+      : next.bg,
+    ink: next.mode === 'penlight' ? inkFor(next.fill) : next.fill
+  };
+}
+
+// Speed, gap, and board size retune the running animation. Direction, effect,
+// and mode replace it, because the keyframes themselves change.
+export function motionNeedsRestart(current, next) {
+  if (!current || !next) return true;
+  return current.mode !== next.mode
+    || current.effect !== next.effect
+    || current.direction !== next.direction
+    || Boolean(current.duration) !== Boolean(next.duration)
+    || Boolean(current.blink) !== Boolean(next.blink);
+}
+
 function channel(hex) {
   const value = Number.parseInt(hex, 16) / 255;
   return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
