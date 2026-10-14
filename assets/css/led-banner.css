@@ -1,5 +1,17 @@
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
 .led-body {
   background: radial-gradient(circle at top, #fff 0, #f6f7fb 42%);
+  overflow-x: clip;
+}
+
+.led-body .tool-shell {
+  overflow-x: clip;
 }
 
 .led-hero .hero-inner {
@@ -55,7 +67,7 @@
 
 .led-stage {
   position: relative;
-  height: 180px;
+  height: min(30svh, 240px);
   background: #1a1a1a;
   overflow: hidden;
 }
@@ -133,9 +145,9 @@
 .led-lock-tip {
   position: absolute;
   z-index: 3;
-  top: calc(10px + env(safe-area-inset-top));
-  left: 16px;
-  right: 16px;
+  top: calc(10px + var(--led-pad-t, env(safe-area-inset-top)));
+  left: calc(16px + var(--led-pad-l, env(safe-area-inset-left)));
+  right: calc(16px + var(--led-pad-r, env(safe-area-inset-right)));
   margin: 0;
   color: #fde68a;
   font-size: 13px;
@@ -147,9 +159,9 @@
 .led-display-controls {
   position: absolute;
   z-index: 3;
-  left: calc(12px + env(safe-area-inset-left));
-  right: calc(12px + env(safe-area-inset-right));
-  bottom: calc(10px + env(safe-area-inset-bottom));
+  left: calc(12px + var(--led-pad-l, env(safe-area-inset-left)));
+  right: calc(12px + var(--led-pad-r, env(safe-area-inset-right)));
+  bottom: calc(10px + var(--led-pad-b, env(safe-area-inset-bottom)));
   display: flex;
   justify-content: flex-end;
   gap: 8px;
@@ -175,6 +187,13 @@
   padding: 14px;
   box-shadow: none;
   min-width: 0;
+}
+
+.led-controls input,
+.led-controls textarea,
+.led-controls select {
+  scroll-margin-top: 32svh;
+  scroll-margin-bottom: 50svh;
 }
 
 .led-text {
@@ -243,8 +262,24 @@
   font-size: 1.05rem;
 }
 
+html.led-display-open,
 body.led-display-open {
+  background: #000;
   overflow: hidden;
+}
+
+body.led-display-open {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+body.led-display-open .tool-shell {
+  visibility: hidden;
+}
+
+body.led-display-open .led-stage.is-open {
+  visibility: visible;
 }
 
 body.led-display-open .led-ad-slot {
@@ -258,13 +293,24 @@ body.led-display-open .led-ad-slot {
 .led-stage.is-open:not(.is-api) {
   position: fixed;
   z-index: 80;
-  inset: 0;
-  width: 100vw;
-  height: 100dvh;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  height: 100svh;
   margin: 0;
   border: 0;
   border-radius: 0;
   box-shadow: none;
+  background: #000;
+}
+
+.led-stage.is-open .led-viewport {
+  top: var(--led-pad-t, env(safe-area-inset-top));
+  right: var(--led-pad-r, env(safe-area-inset-right));
+  bottom: var(--led-pad-b, env(safe-area-inset-bottom));
+  left: var(--led-pad-l, env(safe-area-inset-left));
 }
 
 .led-stage.is-api,
@@ -283,8 +329,8 @@ body.led-display-open .led-ad-slot {
 
 .led-stage.is-open .led-board.is-rotated,
 .led-stage:fullscreen .led-board.is-rotated {
-  width: 100dvh;
-  height: 100vw;
+  width: var(--led-vv-h, 100svh);
+  height: var(--led-vv-w, 100dvw);
 }
 
 /* Portrait phones: rotate the board so a vertical hold reads as landscape. */
@@ -292,8 +338,8 @@ body.led-display-open .led-ad-slot {
   position: absolute;
   top: 0;
   left: 100%;
-  width: 100dvh;
-  height: 100vw;
+  width: var(--led-vv-h, 100svh);
+  height: var(--led-vv-w, 100dvw);
   transform: rotate(90deg);
   transform-origin: top left;
 }
@@ -305,22 +351,48 @@ a.secondary-btn {
   text-decoration: none;
 }
 
+@media (max-width: 959px) {
+  .led-stage {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 30;
+  }
+
+  .led-stage.is-pinned {
+    height: min(25svh, 200px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  }
+
+  .led-stage.is-editing {
+    position: relative;
+    top: auto;
+    height: min(18svh, 120px);
+    box-shadow: none;
+  }
+}
+
 @media (min-width: 960px) {
   .led-app {
     grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
     align-items: start;
   }
 
-  .led-stage {
+  .led-stage,
+  .led-stage.is-pinned,
+  .led-stage.is-editing {
     position: sticky;
     top: 12px;
     height: 280px;
+    z-index: 2;
   }
 
-  .led-stage.is-open {
+  .led-stage.is-open,
+  .led-stage.is-open.is-pinned,
+  .led-stage.is-open.is-editing {
     position: fixed;
     top: 0;
-    height: 100dvh;
+    z-index: 80;
+    height: 100svh;
   }
 }
 

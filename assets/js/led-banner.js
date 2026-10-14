@@ -10,6 +10,7 @@ import {
   trackToolEvent
 } from './oshi-settings.js';
 import { createDisplaySession, isStandaloneDisplay } from './led-display.js';
+import { bindStickyPreview } from './sticky-preview.js';
 import {
   acknowledgePhoto,
   blinkDurationMs,
@@ -80,12 +81,14 @@ function boot() {
   if (isInAppBrowser()) root.querySelector('[data-inapp]').hidden = false;
   setupInstall();
 
+  let syncSticky = () => {};
   const session = createDisplaySession({
     stage,
     board,
     exitButton,
     enterButton: enterButtons[0],
     onEnter({ method, wake }) {
+      syncSticky();
       track('fullscreen_result', { method, os: detectOs() });
       track('wakelock_result', { status: wake.status, os: detectOs() });
       tip.hidden = wake.status === 'ok';
@@ -110,6 +113,7 @@ function boot() {
       scheduleFit();
     },
     onExit() {
+      syncSticky();
       if (displayed) {
         const seconds = Math.max(0, Math.round((Date.now() - startedAt) / 1000));
         track('banner_display_end', { duration_sec: durationBucket(seconds) });
@@ -633,6 +637,14 @@ function boot() {
     track('share_link_open', { tool: 'led-banner', channel: 'url' });
     render();
   });
+
+  syncSticky = bindStickyPreview(stage, {
+    controls: root.querySelector('.led-controls'),
+    isSuppressed: () => stage.classList.contains('is-open'),
+    onChange() {
+      scheduleFit();
+    }
+  }).sync;
 
   window.addEventListener('resize', scheduleFit);
   window.matchMedia?.('(prefers-reduced-motion: reduce)')?.addEventListener?.('change', () => render());

@@ -19,6 +19,7 @@ import {
   splitFans,
   trackToolEvent
 } from './oshi-settings.js';
+import { bindStickyPreview } from './sticky-preview.js';
 import {
   a3FallbackSlices,
   buildPng,
@@ -334,9 +335,15 @@ function schedulePreview() {
 
 function previewBudget() {
   const stage = preview.parentElement;
+  const wrap = stage.parentElement;
   const width = stage.clientWidth || stage.getBoundingClientRect().width || 280;
   const compact = window.innerWidth < 960;
-  const maxHeight = compact ? Math.min(250, Math.round(window.innerHeight * 0.32)) : 480;
+  const pinned = Boolean(wrap?.classList.contains('is-pinned'));
+  const editing = Boolean(wrap?.classList.contains('is-editing'));
+  const vh = window.visualViewport?.height || window.innerHeight || 800;
+  const ratio = pinned ? 0.25 : editing ? 0.18 : 0.30;
+  const padding = pinned ? 12 : 24;
+  const maxHeight = compact ? Math.max(72, Math.round(vh * ratio) - padding) : 480;
   return { width: Math.max(120, width), maxHeight };
 }
 
@@ -1039,6 +1046,12 @@ function boot() {
   root.addEventListener('input', onInput);
   root.addEventListener('change', onInput);
   window.addEventListener('resize', schedulePreview);
+  bindStickyPreview(root.querySelector('.uchiwa-stage-wrap'), {
+    controls: root.querySelector('.uchiwa-controls'),
+    onChange() {
+      schedulePreview();
+    }
+  });
   render();
   drawPreview();
   ensureFont(state.font).then(drawPreview).catch(() => {
