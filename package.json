@@ -8,6 +8,7 @@
     "generate:content": "node scripts/generate-content-pages.mjs",
     "check:content": "node scripts/generate-content-pages.mjs --check",
     "check:uchiwa": "node scripts/check-uchiwa.mjs",
+    "check:led-banner": "node scripts/check-led-banner.mjs",
     "build": "node scripts/generate-content-pages.mjs --check && node scripts/vercel-build.mjs",
     "lint": "eslint .",
     "gsc": "node scripts/gsc-report.mjs",

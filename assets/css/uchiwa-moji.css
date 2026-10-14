@@ -336,6 +336,13 @@
   flex: 1 1 140px;
 }
 
+a.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .primary-btn:disabled,
 .secondary-btn:disabled {
   opacity: 0.55;
