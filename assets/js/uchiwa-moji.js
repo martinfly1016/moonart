@@ -332,18 +332,35 @@ function schedulePreview() {
   });
 }
 
+function previewBudget() {
+  const stage = preview.parentElement;
+  const width = stage.clientWidth || stage.getBoundingClientRect().width || 280;
+  const compact = window.innerWidth < 960;
+  const maxHeight = compact ? Math.min(250, Math.round(window.innerHeight * 0.32)) : 480;
+  return { width: Math.max(120, width), maxHeight };
+}
+
 function drawPreview() {
   const stage = preview.parentElement;
   const fans = splitFans(state.text, state.layout, state.perFan);
   const mm = fanSizeMm(state);
-  const gap = 16;
-  const available = Math.max(220, stage.clientWidth || 320);
+  const gap = 12;
+  const budget = previewBudget();
   const columns = Math.max(1, fans.length);
-  const fanW = columns === 1 ? Math.min(available, 440) : Math.min(190, (available - gap * (columns - 1)) / columns);
-  const fanH = fanW * (mm.h / mm.w);
-  const handleH = fanH * 0.16;
+  const handleRatio = 0.14;
+  let fanW = columns === 1
+    ? budget.width
+    : Math.min(150, (budget.width - gap * (columns - 1)) / columns);
+  let fanH = fanW * (mm.h / mm.w);
+  const totalH = fanH * (1 + handleRatio);
+  if (totalH > budget.maxHeight) {
+    const scale = budget.maxHeight / totalH;
+    fanW *= scale;
+    fanH *= scale;
+  }
   const cssW = columns * fanW + (columns - 1) * gap;
-  const cssH = fanH + handleH;
+  const cssH = fanH * (1 + handleRatio);
+  stage.style.justifyContent = cssW <= budget.width + 1 ? 'center' : 'flex-start';
   const dpr = Math.min(2, window.devicePixelRatio || 1);
   preview.style.width = `${cssW}px`;
   preview.style.height = `${cssH}px`;
@@ -1018,7 +1035,8 @@ function boot() {
   root.addEventListener('change', onInput);
   window.addEventListener('resize', schedulePreview);
   render();
-  ensureFont(state.font).then(schedulePreview).catch(() => {
+  drawPreview();
+  ensureFont(state.font).then(drawPreview).catch(() => {
     setStatus('フォントを読み込めませんでした。表示は端末のフォントになります。');
   });
   window.__uchiwa = {

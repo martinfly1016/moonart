@@ -35,11 +35,14 @@
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 16px 8px;
+  min-width: 0;
 }
 
 .uchiwa-app {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
+  min-width: 0;
 }
 
 .uchiwa-stage-wrap,
@@ -53,21 +56,24 @@
 }
 
 .uchiwa-stage-wrap {
-  padding: 14px;
+  padding: 12px;
+  min-width: 0;
+  max-width: 100%;
   background:
     linear-gradient(180deg, #fff7fb 0%, #eef2ff 100%);
 }
 
 .uchiwa-stage {
-  overflow-x: auto;
   display: flex;
   justify-content: center;
-  min-height: 220px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .uchiwa-stage canvas {
   display: block;
-  max-width: none;
+  flex: 0 0 auto;
 }
 
 .share-banner,
@@ -98,6 +104,8 @@
 .uchiwa-controls {
   padding: 14px;
   box-shadow: none;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .field-label,
@@ -152,11 +160,12 @@
 }
 
 .choice-row,
-.chip-row,
 .phrase-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .choice-row button,
@@ -186,6 +195,9 @@
 }
 
 .chip-row {
+  display: flex;
+  max-width: 100%;
+  min-width: 0;
   overflow-x: auto;
   flex-wrap: nowrap;
   padding-bottom: 4px;
@@ -199,10 +211,13 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .color-grid button,
 .color-custom {
+  min-width: 0;
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -438,7 +453,7 @@ textarea:focus-visible {
 
 @media (min-width: 960px) {
   .uchiwa-app {
-    grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
     align-items: start;
   }
 
