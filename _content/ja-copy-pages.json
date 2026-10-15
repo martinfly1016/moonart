@@ -15413,7 +15413,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-11",
+      "lastmod": "2026-10-15",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -15931,6 +15931,10 @@
           {
             "href": "/special-characters/star/",
             "label": "星の記号"
+          },
+          {
+            "href": "/special-characters/moon/",
+            "label": "月の記号"
           }
         ]
       },
@@ -15963,6 +15967,11 @@
           "href": "/special-characters/hieroglyph/",
           "title": "𓂃𓈒𓏸",
           "description": "夜の行に余白を足す。"
+        },
+        {
+          "href": "/special-characters/moon/",
+          "title": "月の記号",
+          "description": "線の三日月と、満ち欠け。"
         }
       ]
     },
@@ -19989,7 +19998,7 @@
       "path": "/kawaii-copy/oshi-profile/",
       "family": "kawaii-copy",
       "navCurrent": "kawaii-copy",
-      "lastmod": "2026-05-29",
+      "lastmod": "2026-10-15",
       "title": "推し活プロフィールコピペ | 自己紹介・担当・記念日テンプレ - MojiMoon",
       "description": "推し活プロフィールに使えるコピペ素材。担当、同担、推しカラー、記念日、現場記録の短文をコピーできます。",
       "ogTitle": "推し活プロフィールコピペ | 自己紹介・担当・記念日テンプレ",
@@ -20086,6 +20095,10 @@
         ],
         "links": [
           {
+            "href": "/emoji-combinations/oshi/",
+            "label": "推し活の絵文字"
+          },
+          {
             "label": "量産型プロフィールコピペ",
             "href": "/kawaii-copy/ryosangata-profile/"
           },
@@ -20114,6 +20127,16 @@
         }
       ],
       "related": [
+        {
+          "href": "/emoji-combinations/oshi/",
+          "title": "推し活の絵文字",
+          "description": "ハートの色とライブの小物。"
+        },
+        {
+          "href": "/uchiwa-moji/",
+          "title": "うちわ文字",
+          "description": "名前をうちわの大きさにする。"
+        },
         {
           "title": "量産型プロフィールコピペ",
           "href": "/kawaii-copy/ryosangata-profile/",
@@ -23413,7 +23436,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-11",
+      "lastmod": "2026-10-15",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -23820,6 +23843,10 @@
         ],
         "links": [
           {
+            "href": "/special-characters/aesthetic/",
+            "label": "おしゃれ記号 𓂃 𓈒𓏸"
+          },
+          {
             "href": "/special-characters/line/",
             "label": "区切り線"
           },
@@ -23848,6 +23875,11 @@
         }
       ],
       "related": [
+        {
+          "href": "/special-characters/aesthetic/",
+          "title": "おしゃれ記号",
+          "description": "𓂃 𓈒𓏸 に星やハートを足す。"
+        },
         {
           "href": "/special-characters/line/",
           "title": "区切り線",
@@ -25228,6 +25260,2603 @@
           "href": "/emoji-copy/congratulations/",
           "title": "おめでとう",
           "description": "正月以外のお祝い。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.86",
+      "slug": "emoji-combinations-halloween",
+      "path": "/emoji-combinations/halloween/",
+      "family": "emoji-combinations",
+      "title": "ハロウィン 絵文字 組み合わせ | おばけ・かぼちゃ・魔女 - MojiMoon",
+      "description": "ハロウィンの絵文字を、おばけ、かぼちゃ、魔女、コウモリ、黒猫、Trick or Treat に分けてコピーできます。",
+      "ogTitle": "ハロウィン絵文字の組み合わせ",
+      "ogDescription": "🎃 を中心にした短い並びと、お菓子を渡す一言。",
+      "eyebrow": "Halloween Emoji",
+      "h1": "ハロウィン絵文字の組み合わせ",
+      "hero": "ハロウィンの絵文字は、モチーフを一つ決めると散らかりません。おばけ、かぼちゃ、魔女、コウモリ、黒猫を一行に全部入れるとポスターになります。お菓子を渡す短い文も、同じページに置いています。",
+      "toolLabel": "ハロウィンの組み合わせ",
+      "searchPlaceholder": "おばけ、かぼちゃ、魔女、黒猫、お菓子",
+      "draftPlaceholder": "組み合わせをクリックするとここに入ります",
+      "composerHint": "当日の挨拶は、絵文字を足す前に言葉を短くしてください。",
+      "recentLabel": "最近使ったハロウィンの組み合わせ",
+      "categories": [
+        {
+          "id": "ghost",
+          "label": "おばけ"
+        },
+        {
+          "id": "pumpkin",
+          "label": "かぼちゃ"
+        },
+        {
+          "id": "witch",
+          "label": "魔女"
+        },
+        {
+          "id": "bat",
+          "label": "コウモリ"
+        },
+        {
+          "id": "cat",
+          "label": "黒猫"
+        },
+        {
+          "id": "candy",
+          "label": "お菓子"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "おばけ",
+          "query": "おばけ"
+        },
+        {
+          "label": "かぼちゃ",
+          "query": "かぼちゃ"
+        },
+        {
+          "label": "魔女",
+          "query": "魔女"
+        },
+        {
+          "label": "黒猫",
+          "query": "黒猫"
+        },
+        {
+          "label": "お菓子",
+          "query": "お菓子"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "ghost",
+          "heading": "おばけ",
+          "tags": [
+            "ハロウィン",
+            "おばけ"
+          ],
+          "items": [
+            {
+              "value": "👻",
+              "label": "おばけ"
+            },
+            {
+              "value": "👻🎃",
+              "label": "おばけとかぼちゃの提灯"
+            },
+            {
+              "value": "👻🌙",
+              "label": "おばけと三日月"
+            },
+            {
+              "value": "💀",
+              "label": "どくろ"
+            },
+            {
+              "value": "☠️",
+              "label": "どくろと骨"
+            },
+            {
+              "value": "🕷️",
+              "label": "蜘蛛"
+            },
+            {
+              "value": "🕸️",
+              "label": "蜘蛛の巣"
+            },
+            {
+              "value": "🕸️👻🕸️",
+              "label": "巣に挟んだおばけ"
+            },
+            {
+              "value": "👻✨",
+              "label": "おばけときらめき"
+            },
+            {
+              "value": "💀🌙",
+              "label": "どくろと三日月"
+            }
+          ]
+        },
+        {
+          "category": "pumpkin",
+          "heading": "かぼちゃ",
+          "tags": [
+            "ハロウィン",
+            "かぼちゃ"
+          ],
+          "items": [
+            {
+              "value": "🎃",
+              "label": "かぼちゃの提灯"
+            },
+            {
+              "value": "🎃🎃",
+              "label": "提灯を二つ"
+            },
+            {
+              "value": "🎃🧡",
+              "label": "提灯とオレンジのハート"
+            },
+            {
+              "value": "🎃⭐",
+              "label": "提灯と星"
+            },
+            {
+              "value": "🎃🕯️",
+              "label": "提灯とろうそく"
+            },
+            {
+              "value": "🌕🎃",
+              "label": "満月と提灯"
+            },
+            {
+              "value": "✨🎃✨",
+              "label": "きらめきで提灯を挟む"
+            },
+            {
+              "value": "🎃🍂",
+              "label": "提灯と落ち葉"
+            }
+          ]
+        },
+        {
+          "category": "witch",
+          "heading": "魔女",
+          "tags": [
+            "ハロウィン",
+            "魔女"
+          ],
+          "items": [
+            {
+              "value": "🧙",
+              "label": "魔法使い"
+            },
+            {
+              "value": "🧙‍♀️",
+              "label": "魔女"
+            },
+            {
+              "value": "🧙‍♀️🔮",
+              "label": "魔女と水晶玉"
+            },
+            {
+              "value": "🔮",
+              "label": "水晶玉"
+            },
+            {
+              "value": "🕯️",
+              "label": "ろうそく"
+            },
+            {
+              "value": "🪄",
+              "label": "魔法の杖"
+            },
+            {
+              "value": "🪄✨",
+              "label": "杖ときらめき"
+            },
+            {
+              "value": "🧙‍♀️🌙",
+              "label": "魔女と三日月"
+            },
+            {
+              "value": "🕯️✨",
+              "label": "ろうそくときらめき"
+            }
+          ]
+        },
+        {
+          "category": "bat",
+          "heading": "コウモリ",
+          "tags": [
+            "ハロウィン",
+            "コウモリ"
+          ],
+          "items": [
+            {
+              "value": "🦇",
+              "label": "コウモリ"
+            },
+            {
+              "value": "🦇🌙",
+              "label": "コウモリと三日月"
+            },
+            {
+              "value": "🦇🦇",
+              "label": "コウモリを二羽"
+            },
+            {
+              "value": "🖤🦇",
+              "label": "黒いハートとコウモリ"
+            },
+            {
+              "value": "🌑🦇",
+              "label": "黒い月とコウモリ"
+            },
+            {
+              "value": "🦇✨",
+              "label": "コウモリときらめき"
+            },
+            {
+              "value": "🌙🦇🌙",
+              "label": "三日月でコウモリを挟む"
+            }
+          ]
+        },
+        {
+          "category": "cat",
+          "heading": "黒猫",
+          "tags": [
+            "ハロウィン",
+            "黒猫",
+            "猫"
+          ],
+          "items": [
+            {
+              "value": "🐈‍⬛",
+              "label": "黒い猫"
+            },
+            {
+              "value": "🐱",
+              "label": "猫"
+            },
+            {
+              "value": "🐈‍⬛🌙",
+              "label": "黒い猫と三日月"
+            },
+            {
+              "value": "🖤🐱",
+              "label": "黒いハートと猫"
+            },
+            {
+              "value": "🐈‍⬛🎃",
+              "label": "黒い猫と提灯"
+            },
+            {
+              "value": "🐱🖤",
+              "label": "猫と黒いハート"
+            },
+            {
+              "value": "🐈‍⬛✨",
+              "label": "黒い猫ときらめき"
+            }
+          ]
+        },
+        {
+          "category": "candy",
+          "heading": "Trick or Treat",
+          "tags": [
+            "ハロウィン",
+            "お菓子",
+            "Trick"
+          ],
+          "items": [
+            {
+              "value": "🍬",
+              "label": "あめ"
+            },
+            {
+              "value": "🍭",
+              "label": "棒つきのあめ"
+            },
+            {
+              "value": "🍫",
+              "label": "板チョコ"
+            },
+            {
+              "value": "🍬🍭",
+              "label": "あめを二つ"
+            },
+            {
+              "value": "Trick or Treat 🎃",
+              "label": "英語の一言と提灯"
+            },
+            {
+              "value": "トリック・オア・トリート 🍬",
+              "label": "カタカナの一言とあめ"
+            },
+            {
+              "value": "お菓子をくれなきゃ、いたずらしちゃうよ 🎃",
+              "label": "くだけた一言と提灯"
+            },
+            {
+              "value": "ハッピーハロウィン 👻",
+              "label": "挨拶とおばけ"
+            },
+            {
+              "value": "今夜はおばけの気分 👻",
+              "label": "夜の一言とおばけ"
+            },
+            {
+              "value": "あめ、ひとつだけ 🍬",
+              "label": "あめをねだる一言"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "モチーフは一つで足ります",
+        "paragraphs": [
+          "チャットに送るなら 🎃 か 👻 かを決めて、もう一つだけ足してください。魔女、コウモリ、黒猫、お菓子を同じ行に置くと、どれが本題か分かりません。",
+          "かぼちゃの提灯を大きく書きたいときは、うちわ文字に短い言葉を入れると、手持ちの大きさになります。電光掲示板は、その言葉を画面いっぱいに流すときに使います。"
+        ],
+        "sections": [
+          {
+            "heading": "いつどれを",
+            "cards": [
+              {
+                "title": "当日の挨拶",
+                "body": "ハッピーハロウィン 👻 で足ります。提灯を三つにすると、挨拶より飾りが長くなります。"
+              },
+              {
+                "title": "夜の写真",
+                "body": "🌙 を一つ足すと、時間帯が夜だと伝わります。🌕 は明るすぎるので、暗い写真には 🌑 のほうが近いです。"
+              },
+              {
+                "title": "お菓子",
+                "body": "Trick or Treat は英語のままのほうが、行事の言い方として通ります。説明を足すなら、あめの絵文字は一つで十分です。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/kaomoji/halloween/",
+            "label": "ハロウィンの顔文字"
+          },
+          {
+            "href": "/uchiwa-moji/",
+            "label": "🎃 うちわ文字"
+          },
+          {
+            "href": "/led-banner/",
+            "label": "電光掲示板"
+          },
+          {
+            "href": "/special-characters/moon/",
+            "label": "月の記号"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "ハロウィンの絵文字は何を中心にしますか？",
+          "answer": "🎃 か 👻 かを一つ決めて、🌙 か 🍬 かを足すとまとまります。魔女もコウモリも同じ行に入れないでください。"
+        },
+        {
+          "question": "黒い猫はどれですか？",
+          "answer": "🐈‍⬛ が黒い猫です。🐱 は色のついていない猫の顔なので、黒く見せたいときは 🖤 を横に置きます。"
+        },
+        {
+          "question": "うちわに大きく書けますか？",
+          "answer": "短い言葉はうちわ文字で、画面いっぱいに流す文は電光掲示板で作れます。このページは、その前後に貼る絵文字の並びです。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/kaomoji/halloween/",
+          "title": "ハロウィンの顔文字",
+          "description": "絵文字ではなく、顔でハロウィンにする。"
+        },
+        {
+          "href": "/uchiwa-moji/",
+          "title": "うちわ文字",
+          "description": "短い言葉を、うちわの大きさにする。"
+        },
+        {
+          "href": "/led-banner/",
+          "title": "電光掲示板",
+          "description": "挨拶を画面いっぱいに流す。"
+        },
+        {
+          "href": "/special-characters/moon/",
+          "title": "月の記号",
+          "description": "夜の行に、線の三日月を足す。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.84",
+      "slug": "kaomoji-halloween",
+      "path": "/kaomoji/halloween/",
+      "family": "kaomoji",
+      "title": "ハロウィン 顔文字 コピペ | おばけ・魔女・黒猫 - MojiMoon",
+      "description": "ハロウィンに添える顔文字です。丸い顔、星を投げる手、耳のある猫、お菓子を渡す手を分けてコピーできます。",
+      "ogTitle": "ハロウィンの顔文字",
+      "ogDescription": "おばけや黒猫の絵文字と一緒に貼る、短い顔です。",
+      "eyebrow": "Halloween Kaomoji",
+      "h1": "ハロウィンの顔文字",
+      "hero": "顔文字だけではかぼちゃには見えません。丸い顔、角のある顔、耳のある猫、星を投げる手を、おばけやかぼちゃの絵文字と組んでいます。絵文字だけの並びは、組み合わせのページに分けています。",
+      "toolLabel": "ハロウィンの顔文字",
+      "searchPlaceholder": "おばけ、猫、魔女、お菓子、かぼちゃ",
+      "draftPlaceholder": "顔文字をクリックするとここに入ります",
+      "composerHint": "絵文字を両側に足すと、顔の意味が行事のほうに寄ります。",
+      "recentLabel": "最近使ったハロウィンの顔文字",
+      "categories": [
+        {
+          "id": "ghost",
+          "label": "おばけ"
+        },
+        {
+          "id": "pumpkin",
+          "label": "かぼちゃ"
+        },
+        {
+          "id": "witch",
+          "label": "魔女"
+        },
+        {
+          "id": "cat",
+          "label": "黒猫"
+        },
+        {
+          "id": "bat",
+          "label": "コウモリ"
+        },
+        {
+          "id": "candy",
+          "label": "お菓子"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "おばけ",
+          "query": "おばけ"
+        },
+        {
+          "label": "猫",
+          "query": "猫"
+        },
+        {
+          "label": "魔女",
+          "query": "魔女"
+        },
+        {
+          "label": "お菓子",
+          "query": "お菓子"
+        },
+        {
+          "label": "かぼちゃ",
+          "query": "かぼちゃ"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "ghost",
+          "heading": "丸い顔と角",
+          "tags": [
+            "ハロウィン",
+            "おばけ"
+          ],
+          "items": [
+            {
+              "value": "( ˘ω˘ )",
+              "label": "目を閉じた丸い顔"
+            },
+            {
+              "value": "(´・ω・`)",
+              "label": "小さな口の顔"
+            },
+            {
+              "value": "👻( ˘ω˘ )👻",
+              "label": "おばけに挟んだ丸い顔"
+            },
+            {
+              "value": "(っ˘ω˘ς )",
+              "label": "横になった顔"
+            },
+            {
+              "value": "ψ(｀∇´)ψ",
+              "label": "両脇に角のある顔"
+            },
+            {
+              "value": "✧ψ(｀∇´)ψ✧",
+              "label": "角のある顔に光"
+            },
+            {
+              "value": "👻(´・ω・`)👻",
+              "label": "おばけに挟んだ小さな口"
+            }
+          ]
+        },
+        {
+          "category": "pumpkin",
+          "heading": "かぼちゃの提灯と一緒に",
+          "tags": [
+            "ハロウィン",
+            "かぼちゃ"
+          ],
+          "items": [
+            {
+              "value": "🎃(´・ω・`)🎃",
+              "label": "提灯に挟んだ顔"
+            },
+            {
+              "value": "(´▽`ʃ♡ƪ)🎃",
+              "label": "笑いと提灯"
+            },
+            {
+              "value": "🎃(๑˃̵ᴗ˂̵)و",
+              "label": "提灯と、腕を上げた顔"
+            },
+            {
+              "value": "(ﾉ´∀｀*)ﾉ🎃",
+              "label": "提灯を渡す手"
+            },
+            {
+              "value": "🎃( ˘ω˘ )",
+              "label": "提灯と、目を閉じた顔"
+            }
+          ]
+        },
+        {
+          "category": "witch",
+          "heading": "星を投げる手",
+          "tags": [
+            "ハロウィン",
+            "魔女"
+          ],
+          "items": [
+            {
+              "value": "(∩^o^)⊃━☆",
+              "label": "星を投げる手"
+            },
+            {
+              "value": "(∩｀-´)⊃━☆ﾟ.*･｡ﾟ",
+              "label": "杖の先に星が散る",
+              "wide": true
+            },
+            {
+              "value": "🔮(∩^o^)⊃━☆",
+              "label": "水晶玉と、星を投げる手"
+            },
+            {
+              "value": "🧙‍♀️(∩^o^)⊃━☆",
+              "label": "魔女と、星を投げる手"
+            },
+            {
+              "value": "🪄(∩^o^)⊃━☆",
+              "label": "杖の絵文字と、星を投げる手"
+            },
+            {
+              "value": "✧(∩^o^)⊃━☆✧",
+              "label": "光に挟んだ、星を投げる手"
+            }
+          ]
+        },
+        {
+          "category": "cat",
+          "heading": "耳のある猫",
+          "tags": [
+            "ハロウィン",
+            "黒猫",
+            "猫"
+          ],
+          "items": [
+            {
+              "value": "(=^・ω・^=)",
+              "label": "耳とひげのある猫"
+            },
+            {
+              "value": "(ΦωΦ)",
+              "label": "丸い目の猫"
+            },
+            {
+              "value": "ฅ^•ﻌ•^ฅ",
+              "label": "耳を立てた猫"
+            },
+            {
+              "value": "(=｀ω´=)",
+              "label": "眉を寄せた猫"
+            },
+            {
+              "value": "(ฅ'ω'ฅ)",
+              "label": "前足を出した猫"
+            },
+            {
+              "value": "ฅ(⌯͒• ɪ •⌯͒)ฅ",
+              "label": "小さな口の猫",
+              "wide": true
+            },
+            {
+              "value": "🐈‍⬛(=^・ω・^=)",
+              "label": "黒い猫の絵文字と、耳のある猫"
+            },
+            {
+              "value": "🖤(ΦωΦ)",
+              "label": "黒いハートと、丸い目の猫"
+            }
+          ]
+        },
+        {
+          "category": "bat",
+          "heading": "コウモリに挟む",
+          "tags": [
+            "ハロウィン",
+            "コウモリ"
+          ],
+          "items": [
+            {
+              "value": "🦇(´・ω・`)🦇",
+              "label": "コウモリに挟んだ顔"
+            },
+            {
+              "value": "🦇( ˘ω˘ )🦇",
+              "label": "コウモリと、目を閉じた顔"
+            },
+            {
+              "value": "🦇(=^・ω・^=)🦇",
+              "label": "コウモリに挟んだ猫"
+            },
+            {
+              "value": "🖤🦇(ΦωΦ)",
+              "label": "黒いハート、コウモリ、丸い目"
+            }
+          ]
+        },
+        {
+          "category": "candy",
+          "heading": "お菓子を渡す手",
+          "tags": [
+            "ハロウィン",
+            "お菓子"
+          ],
+          "items": [
+            {
+              "value": "🍬(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
+              "label": "あめを渡す手",
+              "wide": true
+            },
+            {
+              "value": "༼ つ ◕_◕ ༽つ🍬",
+              "label": "両手を前にあめ",
+              "wide": true
+            },
+            {
+              "value": "Trick or Treat (ﾉ´∀｀*)ﾉ",
+              "label": "英語の一言と、渡す手",
+              "wide": true
+            },
+            {
+              "value": "🍭(´｡• ᵕ •｡`)🍭",
+              "label": "棒つきのあめに挟んだ顔"
+            },
+            {
+              "value": "(づ｡◕‿‿◕｡)づ🍬",
+              "label": "両手であめを出す",
+              "wide": true
+            },
+            {
+              "value": "🍫(´・ω・`)",
+              "label": "板チョコと小さな口"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "顔と絵文字は役割が違います",
+        "paragraphs": [
+          "(´・ω・`) だけではハロウィンになりません。左右に 👻 や 🎃 を置くと、その顔が行事のほうを向きます。猫に見せたいときは、耳の ฅ や =^= があるものを選んでください。",
+          "黒く塗られた猫の絵文字は 🐈‍⬛ です。顔文字の猫は線なので、黒く見せたいときは 🖤 か 🐈‍⬛ を横に足します。"
+        ],
+        "sections": [
+          {
+            "heading": "使いどころ",
+            "cards": [
+              {
+                "title": "リプライ",
+                "body": "顔は一つ。お菓子を渡す手と提灯を両方入れると、一行が顔文字の展示になります。"
+              },
+              {
+                "title": "猫",
+                "body": "耳が見えるものを猫にしてください。丸い目だけの (ΦωΦ) は猫に見えますが、耳はありません。"
+              },
+              {
+                "title": "魔女",
+                "body": "星を投げる手は、腕の先に ☆ があるものです。魔女の人そのものは 🧙‍♀️ を横に置いたときだけそう読めます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/emoji-combinations/halloween/",
+            "label": "ハロウィンの絵文字"
+          },
+          {
+            "href": "/kaomoji/cat/",
+            "label": "猫の顔文字"
+          },
+          {
+            "href": "/uchiwa-moji/",
+            "label": "うちわ文字"
+          },
+          {
+            "href": "/kaomoji/",
+            "label": "顔文字一覧"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "この顔文字だけ送るとハロウィンになりますか？",
+          "answer": "なりません。丸い顔や猫の顔は、👻 や 🎃 を横に置いて初めてハロウィンの文に見えます。"
+        },
+        {
+          "question": "黒猫の顔文字はどれですか？",
+          "answer": "線の猫は黒猫そのものではありません。耳のある (=^・ω・^=) の横に 🐈‍⬛ を置いたものが、黒い猫と一緒に読めます。"
+        },
+        {
+          "question": "魔女の杖はどれですか？",
+          "answer": "(∩^o^)⊃━☆ は、腕の先に星がある手です。杖の絵文字 🪄 を足すと、星を投げる仕草が杖のほうに寄ります。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/emoji-combinations/halloween/",
+          "title": "ハロウィンの絵文字",
+          "description": "顔を足さず、絵だけで置く。"
+        },
+        {
+          "href": "/kaomoji/cat/",
+          "title": "猫の顔文字",
+          "description": "ハロウィン以外の猫。"
+        },
+        {
+          "href": "/uchiwa-moji/",
+          "title": "うちわ文字",
+          "description": "短い言葉を大きくする。"
+        },
+        {
+          "href": "/kaomoji/kawaii/",
+          "title": "かわいい顔文字",
+          "description": "行事を足さないときの顔。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.86",
+      "slug": "special-characters-aesthetic",
+      "path": "/special-characters/aesthetic/",
+      "family": "special-characters",
+      "title": "𓂃 𓈒𓏸 おしゃれ記号 コピペ | 余白の並び - MojiMoon",
+      "description": "𓂃 𓈒𓏸 を、余白、名前の下、花、括弧に分けてコピーできます。象形文字だけの一覧は別のページにあります。",
+      "ogTitle": "𓂃 𓈒𓏸 のおしゃれ記号",
+      "ogDescription": "プロフィールの空行に置く、波と点の並びです。",
+      "eyebrow": "Aesthetic Symbols",
+      "h1": "𓂃 𓈒𓏸 おしゃれ記号",
+      "hero": "プロフィールの空いている行に置く、細い記号です。いちばんよく貼られているのは 𓂃 𓈒𓏸 で、波の線と点を横に並べたものです。星やハートを足すときも、この並びは一行に一つにしてください。文字の形だけを見たいときは、象形文字のページにまとめてあります。",
+      "toolLabel": "おしゃれ記号",
+      "searchPlaceholder": "𓂃、余白、花、括弧、名前",
+      "draftPlaceholder": "記号をクリックするとここに入ります",
+      "composerHint": "名前の下には、この並びを一行だけ置いてください。",
+      "recentLabel": "最近使ったおしゃれ記号",
+      "categories": [
+        {
+          "id": "space",
+          "label": "余白"
+        },
+        {
+          "id": "bracket",
+          "label": "括弧"
+        },
+        {
+          "id": "flower",
+          "label": "花"
+        },
+        {
+          "id": "mix",
+          "label": "ハートと星"
+        },
+        {
+          "id": "name",
+          "label": "名前"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "余白",
+          "query": "余白"
+        },
+        {
+          "label": "𓂃",
+          "query": "𓂃"
+        },
+        {
+          "label": "花",
+          "query": "花"
+        },
+        {
+          "label": "括弧",
+          "query": "括弧"
+        },
+        {
+          "label": "名前",
+          "query": "名前"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "space",
+          "heading": "波と点",
+          "tags": [
+            "おしゃれ",
+            "余白",
+            "𓂃"
+          ],
+          "items": [
+            {
+              "value": "𓂃 𓈒𓏸",
+              "label": "間を空けた波と点"
+            },
+            {
+              "value": "𓂃𓈒𓏸",
+              "label": "波と点を続けた並び"
+            },
+            {
+              "value": "𓂃",
+              "label": "ゆるい波の線"
+            },
+            {
+              "value": "𓈒",
+              "label": "一粒の点"
+            },
+            {
+              "value": "𓏸",
+              "label": "三つの点"
+            },
+            {
+              "value": "𓈒𓏸",
+              "label": "点だけ"
+            },
+            {
+              "value": "𓏸𓈒𓂃",
+              "label": "点から波へ"
+            },
+            {
+              "value": "𓂃 𓈒𓏸 𓂃",
+              "label": "波で点を挟む"
+            },
+            {
+              "value": "𓈒 𓈒 𓈒",
+              "label": "点を三つ離して置く"
+            },
+            {
+              "value": "𓏸 𓂃 𓏸",
+              "label": "三つの点、波、三つの点"
+            }
+          ]
+        },
+        {
+          "category": "bracket",
+          "heading": "名前を挟む括弧",
+          "tags": [
+            "おしゃれ",
+            "括弧"
+          ],
+          "items": [
+            {
+              "value": "𓆩",
+              "label": "左の角括弧"
+            },
+            {
+              "value": "𓆪",
+              "label": "右の角括弧"
+            },
+            {
+              "value": "𓆩𓆪",
+              "label": "閉じた角括弧"
+            },
+            {
+              "value": "𓆩 𓆪",
+              "label": "間を空けた角括弧"
+            },
+            {
+              "value": "𓆩♡𓆪",
+              "label": "角括弧と白ハート"
+            },
+            {
+              "value": "𓆩✧𓆪",
+              "label": "角括弧と四芒の星"
+            },
+            {
+              "value": "˗ˏˋ",
+              "label": "左の引用符"
+            },
+            {
+              "value": "´ˎ˗",
+              "label": "右の引用符"
+            },
+            {
+              "value": "꒰꒱",
+              "label": "丸い括弧"
+            },
+            {
+              "value": "꒰ ꒱",
+              "label": "間を空けた丸い括弧"
+            }
+          ]
+        },
+        {
+          "category": "flower",
+          "heading": "細い絵",
+          "tags": [
+            "おしゃれ",
+            "花"
+          ],
+          "items": [
+            {
+              "value": "𓍯",
+              "label": "輪の形"
+            },
+            {
+              "value": "𓆸",
+              "label": "花の形"
+            },
+            {
+              "value": "𓆰",
+              "label": "草の形"
+            },
+            {
+              "value": "𓇢",
+              "label": "茎の形"
+            },
+            {
+              "value": "𓇬",
+              "label": "丸い花"
+            },
+            {
+              "value": "𓍯𓂃",
+              "label": "輪と波"
+            },
+            {
+              "value": "𓆸𓈒𓏸",
+              "label": "花と点"
+            },
+            {
+              "value": "𓇢𓂃",
+              "label": "茎と波"
+            },
+            {
+              "value": "𓏏",
+              "label": "半円"
+            },
+            {
+              "value": "𓇳",
+              "label": "太陽"
+            },
+            {
+              "value": "𓃃",
+              "label": "足先に見える形"
+            },
+            {
+              "value": "𓃃𓈒𓏏",
+              "label": "足先、点、半円"
+            },
+            {
+              "value": "𓅯",
+              "label": "鳥の形"
+            },
+            {
+              "value": "𓋜",
+              "label": "楕円の枠"
+            }
+          ]
+        },
+        {
+          "category": "mix",
+          "heading": "ハートと星を一つ",
+          "tags": [
+            "おしゃれ",
+            "ハート",
+            "星"
+          ],
+          "items": [
+            {
+              "value": "♡𓈒𓏸",
+              "label": "白ハートのあとに点"
+            },
+            {
+              "value": "𓂃♡𓂃",
+              "label": "波で白ハートを挟む"
+            },
+            {
+              "value": "✧𓂃𓈒𓏸",
+              "label": "四芒の星と余白"
+            },
+            {
+              "value": "⋆𓈒𓏸",
+              "label": "小さな星と点"
+            },
+            {
+              "value": "𓂃𓈒♡",
+              "label": "余白の途中に白ハート"
+            },
+            {
+              "value": "˚𓂃 𓈒𓏸",
+              "label": "上の丸と、空けた余白"
+            },
+            {
+              "value": "₊𓈒𓏸",
+              "label": "下付きの十字と点"
+            },
+            {
+              "value": "𓆸♡𓆸",
+              "label": "花で白ハートを挟む"
+            }
+          ]
+        },
+        {
+          "category": "name",
+          "heading": "名前の置き方",
+          "tags": [
+            "おしゃれ",
+            "名前"
+          ],
+          "items": [
+            {
+              "value": "なまえ𓂃𓈒𓏸",
+              "label": "名前のうしろに余白"
+            },
+            {
+              "value": "𓂃𓈒𓏸なまえ",
+              "label": "余白のあとに名前"
+            },
+            {
+              "value": "𓆩なまえ𓆪",
+              "label": "角括弧の中の名前"
+            },
+            {
+              "value": "♡なまえ𓂃",
+              "label": "白ハート、名前、波"
+            },
+            {
+              "value": "なまえ\n𓂃 𓈒𓏸",
+              "label": "名前の次の行に余白",
+              "wide": true
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "一行だけ置いてください",
+        "paragraphs": [
+          "𓂃 𓈒𓏸 は、自己紹介の前に空行を作るための並びです。波の線が細く、点は文章の邪魔をしません。同じ行に ✧ を三つ足すと、余白ではなく飾りになります。",
+          "𓃃𓈒𓏏 は先頭の形が足先に見えるので、波の列とは高さが違います。両方を一つのプロフィールに入れると、行が揃いません。どちらかに決めてください。形の一覧は象形文字のページにあります。"
+        ],
+        "sections": [
+          {
+            "heading": "入れ方",
+            "cards": [
+              {
+                "title": "名前の下",
+                "body": "名前の次の行に 𓂃 𓈒𓏸 だけ。その下に自己紹介を書くと、見出しと本文が分かれます。"
+              },
+              {
+                "title": "ハート",
+                "body": "𓂃♡𓂃 は、余白の途中に気持ちを一つ置く形です。ハートを三つにすると、線の細さが消えます。"
+              },
+              {
+                "title": "古い端末",
+                "body": "四角になる機種では、┈┈ か ♡ に替えてください。名前の必須の部分には使わないほうが安全です。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/special-characters/hieroglyph/",
+            "label": "象形文字 𓂃𓈒𓏸"
+          },
+          {
+            "href": "/special-characters/line/",
+            "label": "区切り線"
+          },
+          {
+            "href": "/special-characters/flower/",
+            "label": "花の記号"
+          },
+          {
+            "href": "/special-characters/instagram/",
+            "label": "Instagramの記号"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "𓂃 𓈒𓏸 はどういう意味ですか？",
+          "answer": "意味を読ませず、プロフィールの余白として貼られています。波の線と、一粒の点と、三つの点を横に置いた並びです。"
+        },
+        {
+          "question": "象形文字のページと何が違いますか？",
+          "answer": "象形文字のページは、この文字の並びそのものです。こちらは、その余白に星やハートや名前を足したときの置き方も一緒に置いています。"
+        },
+        {
+          "question": "四角になって表示されないときは？",
+          "answer": "古い端末では象形文字が四角になることがあります。そのときは ┈┈ や ♡ に替えてください。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/special-characters/hieroglyph/",
+          "title": "象形文字",
+          "description": "𓂃𓈒𓏸 の並びだけを見る。"
+        },
+        {
+          "href": "/special-characters/line/",
+          "title": "区切り線",
+          "description": "波線以外の線。"
+        },
+        {
+          "href": "/special-characters/flower/",
+          "title": "花の記号",
+          "description": "花を象形文字以外から探す。"
+        },
+        {
+          "href": "/special-characters/instagram/",
+          "title": "Instagram",
+          "description": "自己紹介の行を組む。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.82",
+      "slug": "special-characters-korean",
+      "path": "/special-characters/korean/",
+      "family": "special-characters",
+      "title": "韓国風 特殊文字 コピペ | ハート・キラキラ・顔 - MojiMoon",
+      "description": "韓国のプロフィールで見かける細いハート、キラキラ、ㅠㅠ や ^ㅅ^ の顔をコピーできます。",
+      "ogTitle": "韓国風の特殊文字",
+      "ogDescription": "ෆ や ₊˚⊹、ハングルの形を顔に見立てた並びです。",
+      "eyebrow": "Korean Style Symbols",
+      "h1": "韓国風の特殊文字",
+      "hero": "韓国のプロフィールで見かける、細くて余白の多い記号です。ハートは ෆ や ♡、光は ₊˚⊹ のように小さく置きます。ㅠㅠ や ^ㅅ^ は絵文字ではなく、ハングルの形を顔に見立てたものです。",
+      "toolLabel": "韓国風の記号",
+      "searchPlaceholder": "ハート、キラキラ、泣き、笑い、名前",
+      "draftPlaceholder": "記号をクリックするとここに入ります",
+      "composerHint": "光の記号は、一行に一種類だけにしてください。",
+      "recentLabel": "最近使った韓国風の記号",
+      "categories": [
+        {
+          "id": "heart",
+          "label": "ハート"
+        },
+        {
+          "id": "sparkle",
+          "label": "キラキラ"
+        },
+        {
+          "id": "deco",
+          "label": "飾り"
+        },
+        {
+          "id": "face",
+          "label": "顔"
+        },
+        {
+          "id": "name",
+          "label": "名前"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "キラキラ",
+          "query": "キラキラ"
+        },
+        {
+          "label": "泣き",
+          "query": "泣き"
+        },
+        {
+          "label": "笑い",
+          "query": "笑い"
+        },
+        {
+          "label": "名前",
+          "query": "名前"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "heart",
+          "heading": "細いハート",
+          "tags": [
+            "韓国",
+            "ハート"
+          ],
+          "items": [
+            {
+              "value": "ෆ",
+              "label": "丸いハート"
+            },
+            {
+              "value": "ᰔ",
+              "label": "小さなハート"
+            },
+            {
+              "value": "ᰔᩚ",
+              "label": "小さなハートに点"
+            },
+            {
+              "value": "♡",
+              "label": "白ハート"
+            },
+            {
+              "value": "♡̷",
+              "label": "線の入った白ハート"
+            },
+            {
+              "value": "ღ",
+              "label": "曲がったハート"
+            },
+            {
+              "value": "ৎ",
+              "label": "小さな結び"
+            },
+            {
+              "value": "♡︎",
+              "label": "文字スタイルの白ハート"
+            },
+            {
+              "value": "♥︎",
+              "label": "文字スタイルの黒ハート"
+            }
+          ]
+        },
+        {
+          "category": "sparkle",
+          "heading": "小さな光",
+          "tags": [
+            "韓国",
+            "キラキラ"
+          ],
+          "items": [
+            {
+              "value": "₊˚⊹",
+              "label": "下付きの十字、丸、光"
+            },
+            {
+              "value": "⊹ ࣪ ˖",
+              "label": "余白を空けた光"
+            },
+            {
+              "value": "⟡ ݁₊ .",
+              "label": "ダイヤ、点、下付きの十字"
+            },
+            {
+              "value": "༘⋆",
+              "label": "点と小さな星"
+            },
+            {
+              "value": "⋆｡˚",
+              "label": "星、丸、上の丸"
+            },
+            {
+              "value": "✧",
+              "label": "白い四芒星"
+            },
+            {
+              "value": "⋆",
+              "label": "小さな星"
+            },
+            {
+              "value": "‧₊˚",
+              "label": "中点、下付きの十字、上の丸"
+            },
+            {
+              "value": "࿔",
+              "label": "小さな花"
+            },
+            {
+              "value": "𐙚",
+              "label": "小さなリボン"
+            }
+          ]
+        },
+        {
+          "category": "deco",
+          "heading": "名前の脇に置く飾り",
+          "tags": [
+            "韓国",
+            "飾り"
+          ],
+          "items": [
+            {
+              "value": "୨୧",
+              "label": "リボンのような括弧"
+            },
+            {
+              "value": "୨ৎ",
+              "label": "リボンと小さな結び"
+            },
+            {
+              "value": "꒰꒱",
+              "label": "丸い括弧"
+            },
+            {
+              "value": "˗ˏˋ",
+              "label": "左の引用符"
+            },
+            {
+              "value": "´ˎ˗",
+              "label": "右の引用符"
+            },
+            {
+              "value": "𓆩♡𓆪",
+              "label": "角括弧と白ハート"
+            },
+            {
+              "value": "ꕤ",
+              "label": "花の印"
+            },
+            {
+              "value": "ꔛ",
+              "label": "ゆるい波"
+            },
+            {
+              "value": "ა",
+              "label": "腕に見える文字"
+            },
+            {
+              "value": "૮",
+              "label": "反対側の腕に見える文字"
+            }
+          ]
+        },
+        {
+          "category": "face",
+          "heading": "ハングルの顔",
+          "tags": [
+            "韓国",
+            "顔",
+            "泣き",
+            "笑い"
+          ],
+          "items": [
+            {
+              "value": "ㅠㅠ",
+              "label": "泣き。ㅠ を二つ"
+            },
+            {
+              "value": "ㅜㅜ",
+              "label": "泣き。ㅜ を二つ"
+            },
+            {
+              "value": "ㅜ.ㅜ",
+              "label": "点を挟んだ泣き"
+            },
+            {
+              "value": "ㅠ.ㅠ",
+              "label": "点を挟んだ、もう一つの泣き"
+            },
+            {
+              "value": "ㅎㅎ",
+              "label": "笑い。ㅎ を二つ"
+            },
+            {
+              "value": "ㅋㅋ",
+              "label": "笑い。ㅋ を二つ"
+            },
+            {
+              "value": "ㅎ.ㅎ",
+              "label": "点を挟んだ笑い"
+            },
+            {
+              "value": "^ㅅ^",
+              "label": "への字の口でにっこり"
+            },
+            {
+              "value": "ㅇㅅㅇ",
+              "label": "丸い目とへの字の口"
+            },
+            {
+              "value": "ㅇㅁㅇ",
+              "label": "丸い目と四角い口"
+            },
+            {
+              "value": "ㅡㅡ",
+              "label": "横線の目"
+            },
+            {
+              "value": "૮₍˶ᵔ ᵕ ᵔ˶₎ა",
+              "label": "腕を広げた丸い顔",
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "name",
+          "heading": "名前の飾り",
+          "tags": [
+            "韓国",
+            "名前"
+          ],
+          "items": [
+            {
+              "value": "₊˚ෆなまえෆ˚₊",
+              "label": "丸いハートで名前を挟む"
+            },
+            {
+              "value": "୨ৎ なまえ",
+              "label": "結びのあとに名前"
+            },
+            {
+              "value": "𓆩なまえ𓆪",
+              "label": "角括弧の中の名前"
+            },
+            {
+              "value": "꒰なまえ꒱",
+              "label": "丸い括弧の中の名前"
+            },
+            {
+              "value": "˗ˏˋなまえˎ˗",
+              "label": "引用符の中の名前"
+            },
+            {
+              "value": "໒꒱ なまえ ꒰ა",
+              "label": "腕で名前を挟む"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "小さく置いてください",
+        "paragraphs": [
+          "韓国風と呼ばれる並びは、ハートと光を大きく主張しません。ෆ は丸いハート、₊˚⊹ は下付きの十字と小さな光です。同じ行に種類を増やすと、細さが消えます。",
+          "ㅠ と ㅜ は、横に二つ置くと泣いている顔に見えます。ㅎ と ㅋ は笑いに見えます。どちらもハングルの字母で、絵文字の涙とは別のものです。"
+        ],
+        "sections": [
+          {
+            "heading": "見分け",
+            "cards": [
+              {
+                "title": "ハート",
+                "body": "色をつけたいときは絵文字の 💗 です。文章の文字サイズに合わせるなら ෆ か ♡ です。"
+              },
+              {
+                "title": "光",
+                "body": "₊˚⊹ と ⊹ ࣪ ˖ はどちらも小さい光です。両方を一行に入れると、点が多すぎて読めません。"
+              },
+              {
+                "title": "顔",
+                "body": "^ㅅ^ の ㅅ は口です。ㅇㅅㅇ は、その口の左右に丸い目を置いたものです。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/special-characters/heart/",
+            "label": "ハートの記号"
+          },
+          {
+            "href": "/special-characters/star/",
+            "label": "星の記号"
+          },
+          {
+            "href": "/special-characters/aesthetic/",
+            "label": "𓂃 𓈒𓏸"
+          },
+          {
+            "href": "/special-characters/cute/",
+            "label": "かわいい記号"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "ㅠㅠ は何と読みますか？",
+          "answer": "字母としてはユに近い音ですが、顔としては泣きです。ㅜㅜ も泣きで、棒の向きが違います。"
+        },
+        {
+          "question": "ෆ はハートですか？",
+          "answer": "丸く閉じた形なので、プロフィールではハートとして使われています。色はつきません。"
+        },
+        {
+          "question": "星のページと何が違いますか？",
+          "answer": "星のページは ★ や ✦ の形です。こちらは、その星を下付きの十字や点と組んで、行の高さを抑えた並びです。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/special-characters/heart/",
+          "title": "ハート",
+          "description": "韓国風以外のハート。"
+        },
+        {
+          "href": "/special-characters/star/",
+          "title": "星",
+          "description": "大きい星と、区切りの星。"
+        },
+        {
+          "href": "/special-characters/aesthetic/",
+          "title": "𓂃 𓈒𓏸",
+          "description": "波と点の余白。"
+        },
+        {
+          "href": "/special-characters/cute/",
+          "title": "かわいい記号",
+          "description": "ハートとリボンをまとめて見る。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.82",
+      "slug": "emoji-combinations-oshi",
+      "path": "/emoji-combinations/oshi/",
+      "family": "emoji-combinations",
+      "title": "推し活 絵文字 組み合わせ | ライブ・ハート・うちわ - MojiMoon",
+      "description": "ライブや参戦報告に添える絵文字です。ハートの色、マイク、切符を分けてコピーでき、うちわ文字と電光掲示板へ進めます。",
+      "ogTitle": "推し活の絵文字組み合わせ",
+      "ogDescription": "色を一つ決めて、ライブの一言に足す並びです。",
+      "eyebrow": "Oshi Emoji",
+      "h1": "推し活の絵文字組み合わせ",
+      "hero": "ライブの告知や参戦報告に足す絵文字です。色は一つ決めて、ハートを増やしすぎないでください。名前をうちわの大きさにするのはうちわ文字、その言葉を画面いっぱいに流すのは電光掲示板です。",
+      "toolLabel": "推し活の組み合わせ",
+      "searchPlaceholder": "ライブ、ハート、うちわ、ペンライト、参戦",
+      "draftPlaceholder": "組み合わせをクリックするとここに入ります",
+      "composerHint": "色は一色に決めてから、マイクか切符かを足してください。",
+      "recentLabel": "最近使った推し活の組み合わせ",
+      "categories": [
+        {
+          "id": "heart",
+          "label": "ハート"
+        },
+        {
+          "id": "live",
+          "label": "ライブ"
+        },
+        {
+          "id": "color",
+          "label": "色"
+        },
+        {
+          "id": "note",
+          "label": "一言"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "ライブ",
+          "query": "ライブ"
+        },
+        {
+          "label": "色",
+          "query": "色"
+        },
+        {
+          "label": "うちわ",
+          "query": "うちわ"
+        },
+        {
+          "label": "参戦",
+          "query": "参戦"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "heart",
+          "heading": "色のハート",
+          "tags": [
+            "推し活",
+            "ハート"
+          ],
+          "items": [
+            {
+              "value": "💗",
+              "label": "ピンクのハート"
+            },
+            {
+              "value": "💖",
+              "label": "光の入ったハート"
+            },
+            {
+              "value": "💕",
+              "label": "二つのハート"
+            },
+            {
+              "value": "🩷",
+              "label": "薄いピンクのハート"
+            },
+            {
+              "value": "💜",
+              "label": "紫のハート"
+            },
+            {
+              "value": "💙",
+              "label": "青のハート"
+            },
+            {
+              "value": "❤️",
+              "label": "赤のハート"
+            },
+            {
+              "value": "🖤",
+              "label": "黒いハート"
+            },
+            {
+              "value": "💚",
+              "label": "緑のハート"
+            },
+            {
+              "value": "💛",
+              "label": "黄色のハート"
+            },
+            {
+              "value": "🧡",
+              "label": "オレンジのハート"
+            },
+            {
+              "value": "🤍",
+              "label": "白いハート"
+            },
+            {
+              "value": "🩵",
+              "label": "水色のハート"
+            },
+            {
+              "value": "🩶",
+              "label": "灰色のハート"
+            },
+            {
+              "value": "🎀",
+              "label": "リボン"
+            },
+            {
+              "value": "💗🎀",
+              "label": "ピンクのハートとリボン"
+            },
+            {
+              "value": "👑",
+              "label": "王冠"
+            },
+            {
+              "value": "💎",
+              "label": "宝石"
+            }
+          ]
+        },
+        {
+          "category": "live",
+          "heading": "ライブの小物",
+          "tags": [
+            "推し活",
+            "ライブ"
+          ],
+          "items": [
+            {
+              "value": "🎤",
+              "label": "マイク"
+            },
+            {
+              "value": "🎶",
+              "label": "音符"
+            },
+            {
+              "value": "🎵",
+              "label": "八分音符"
+            },
+            {
+              "value": "🎤🎶",
+              "label": "マイクと音符"
+            },
+            {
+              "value": "📣",
+              "label": "メガホン"
+            },
+            {
+              "value": "🎫",
+              "label": "切符"
+            },
+            {
+              "value": "🎟️",
+              "label": "半券"
+            },
+            {
+              "value": "📸",
+              "label": "カメラ"
+            },
+            {
+              "value": "💿",
+              "label": "ディスク"
+            },
+            {
+              "value": "🏟️",
+              "label": "競技場"
+            },
+            {
+              "value": "🎤✨",
+              "label": "マイクときらめき"
+            },
+            {
+              "value": "🎶💗",
+              "label": "音符とピンクのハート"
+            },
+            {
+              "value": "🫶",
+              "label": "ハートの形の手"
+            },
+            {
+              "value": "🫶🏻",
+              "label": "明るい肌の、ハートの形の手"
+            }
+          ]
+        },
+        {
+          "category": "color",
+          "heading": "色を二つまで",
+          "tags": [
+            "推し活",
+            "色",
+            "ペンライト"
+          ],
+          "items": [
+            {
+              "value": "❤️💙",
+              "label": "赤と青のハート"
+            },
+            {
+              "value": "💜💗",
+              "label": "紫とピンクのハート"
+            },
+            {
+              "value": "💛💚",
+              "label": "黄色と緑のハート"
+            },
+            {
+              "value": "🖤🤍",
+              "label": "黒と白のハート"
+            },
+            {
+              "value": "🩵💙",
+              "label": "水色と青のハート"
+            },
+            {
+              "value": "💡",
+              "label": "電球"
+            },
+            {
+              "value": "🔦",
+              "label": "懐中電灯"
+            },
+            {
+              "value": "✨💗✨",
+              "label": "きらめきでピンクを挟む"
+            },
+            {
+              "value": "📣💗",
+              "label": "メガホンとピンクのハート"
+            }
+          ]
+        },
+        {
+          "category": "note",
+          "heading": "送れる一言",
+          "tags": [
+            "推し活",
+            "参戦",
+            "うちわ",
+            "ライブ"
+          ],
+          "items": [
+            {
+              "value": "参戦します 🎤",
+              "label": "参戦の一言とマイク"
+            },
+            {
+              "value": "今日のライブ、たのしみ 🎶",
+              "label": "ライブ前の一言と音符"
+            },
+            {
+              "value": "ペンライトの色、合わせてね 💗",
+              "label": "色のお願いとピンク"
+            },
+            {
+              "value": "うちわ、持ってく 📣",
+              "label": "うちわの一言とメガホン"
+            },
+            {
+              "value": "現場で会えたらうれしい 🎫",
+              "label": "現場の一言と切符"
+            },
+            {
+              "value": "今日もだいすき 💗",
+              "label": "好きの一言とピンク"
+            },
+            {
+              "value": "なまえ 💗",
+              "label": "名前のうしろにピンク"
+            },
+            {
+              "value": "🎀 なまえ 🎀",
+              "label": "リボンで名前を挟む"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "色は一つ、小物は一つ",
+        "paragraphs": [
+          "推しの色がピンクなら 💗、青なら 💙 です。赤と青を両方入れるのは、対になる色があるときだけにしてください。マイク、切符、メガホンは、その日の用事がどれかに合わせて一つです。",
+          "名前を大きく書くならうちわ文字、短い文を流すなら電光掲示板です。プロフィールの自己紹介文は、推し活プロフィールのほうに短い文がまとまっています。顔で返すなら、推し活の顔文字です。"
+        ],
+        "sections": [
+          {
+            "heading": "道具の使い分け",
+            "cards": [
+              {
+                "title": "うちわ",
+                "body": "会場で掲げる名前は、うちわ文字で大きさを確認してから印刷します。📣 はこのページの絵文字で、うちわそのものではありません。"
+              },
+              {
+                "title": "ペンライト",
+                "body": "電球の絵文字は 💡 です。色を伝えたいときは、電球ではなくハートの色を一つ置いたほうが誤解がありません。"
+              },
+              {
+                "title": "電光掲示板",
+                "body": "「参戦します」のような短い文を、スマホの画面いっぱいに流せます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/uchiwa-moji/",
+            "label": "うちわ文字"
+          },
+          {
+            "href": "/led-banner/",
+            "label": "電光掲示板"
+          },
+          {
+            "href": "/kaomoji/oshi/",
+            "label": "推し活の顔文字"
+          },
+          {
+            "href": "/kawaii-copy/oshi-profile/",
+            "label": "推し活プロフィール"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "ペンライトの絵文字はどれですか？",
+          "answer": "スティックそのものの絵文字はありません。色を伝えるなら 💗 や 💙 のハート、光そのものなら 💡 の電球です。"
+        },
+        {
+          "question": "うちわの文字はどこで作れますか？",
+          "answer": "うちわ文字で、名前や短い言葉の大きさを確認できます。このページの 📣 はメガホンで、うちわの絵ではありません。"
+        },
+        {
+          "question": "ハートは何個までですか？",
+          "answer": "プロフィールなら一つ、投稿の文末なら二つまでが見やすいです。色を二色使うときは、対になる理由があるときに限ってください。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/uchiwa-moji/",
+          "title": "うちわ文字",
+          "description": "名前を、うちわの大きさにする。"
+        },
+        {
+          "href": "/led-banner/",
+          "title": "電光掲示板",
+          "description": "短い文を画面いっぱいに流す。"
+        },
+        {
+          "href": "/kaomoji/oshi/",
+          "title": "推し活の顔文字",
+          "description": "絵文字ではなく顔で返す。"
+        },
+        {
+          "href": "/kawaii-copy/oshi-profile/",
+          "title": "推し活プロフィール",
+          "description": "自己紹介と担当の短文。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.8",
+      "slug": "kaomoji-oshi",
+      "path": "/kaomoji/oshi/",
+      "family": "kaomoji",
+      "title": "推し活 顔文字 コピペ | 応援・ライブ・ときめき - MojiMoon",
+      "description": "参戦報告やリプライに添える顔文字です。手を上げたもの、ハートの目、マイクを添えたものをコピーできます。",
+      "ogTitle": "推し活の顔文字",
+      "ogDescription": "応援の手と、ハートの目。名前の大きさはうちわ文字へ。",
+      "eyebrow": "Oshi Kaomoji",
+      "h1": "推し活の顔文字",
+      "hero": "参戦報告やリプライに足す顔です。両手を上げた笑い、ハートの目、マイクを添えたものを分けています。名前を大きく書くうちわはうちわ文字、短い文を流すのは電光掲示板です。",
+      "toolLabel": "推し活の顔文字",
+      "searchPlaceholder": "応援、ハート、ライブ、マイク、名前",
+      "draftPlaceholder": "顔文字をクリックするとここに入ります",
+      "composerHint": "顔は一つ。絵文字を足すならマイクかハートかを選んでください。",
+      "recentLabel": "最近使った推し活の顔文字",
+      "categories": [
+        {
+          "id": "cheer",
+          "label": "応援"
+        },
+        {
+          "id": "love",
+          "label": "ときめき"
+        },
+        {
+          "id": "live",
+          "label": "ライブ"
+        },
+        {
+          "id": "name",
+          "label": "名前"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "応援",
+          "query": "応援"
+        },
+        {
+          "label": "ハート",
+          "query": "ハート"
+        },
+        {
+          "label": "ライブ",
+          "query": "ライブ"
+        },
+        {
+          "label": "名前",
+          "query": "名前"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "cheer",
+          "heading": "手を上げる",
+          "tags": [
+            "推し活",
+            "応援"
+          ],
+          "items": [
+            {
+              "value": "(๑˃̵ᴗ˂̵)و",
+              "label": "片手を上げた気合い"
+            },
+            {
+              "value": "(ง •̀_•́)ง",
+              "label": "両方の拳"
+            },
+            {
+              "value": "＼(≧▽≦)／",
+              "label": "両手を上げた笑い"
+            },
+            {
+              "value": "ヾ(๑╹◡╹)ﾉ\"",
+              "label": "手を振る笑い"
+            },
+            {
+              "value": "(੭˙꒳˙)੭",
+              "label": "片手を上げた丸い顔"
+            },
+            {
+              "value": "٩(๑`^´๑)۶",
+              "label": "腕を上げた盛り上げ"
+            },
+            {
+              "value": "✧*｡٩(ˊᗜˋ*)و✧*｡",
+              "label": "星に囲まれた笑い",
+              "wide": true
+            },
+            {
+              "value": "(ﾉ´ヮ`)ﾉ*:･ﾟ",
+              "label": "手を振る光"
+            }
+          ]
+        },
+        {
+          "category": "love",
+          "heading": "ハートの目",
+          "tags": [
+            "推し活",
+            "ハート",
+            "ときめき"
+          ],
+          "items": [
+            {
+              "value": "(♡˙︶˙♡)",
+              "label": "目が白ハート"
+            },
+            {
+              "value": "♡(˃͈ દ ˂͈ ༶ )",
+              "label": "白ハートを抱えた顔",
+              "wide": true
+            },
+            {
+              "value": "(´｡• ᵕ •｡`) ♡",
+              "label": "小さな口と白ハート"
+            },
+            {
+              "value": "(灬º‿º灬)♡",
+              "label": "照れた笑いと白ハート"
+            },
+            {
+              "value": "(⸝⸝ᵕᴗᵕ⸝⸝)",
+              "label": "目を細めた笑い"
+            },
+            {
+              "value": "( ˶ˆ꒳ˆ˵ )",
+              "label": "ふわっとした笑い"
+            },
+            {
+              "value": "♡⸜(˶˃ ᵕ ˂˶)⸝♡",
+              "label": "白ハートに挟んだ顔",
+              "wide": true
+            },
+            {
+              "value": "(｡•̀ᴗ-)✧",
+              "label": "ウインクと四芒の星"
+            }
+          ]
+        },
+        {
+          "category": "live",
+          "heading": "マイクと切符",
+          "tags": [
+            "推し活",
+            "ライブ"
+          ],
+          "items": [
+            {
+              "value": "🎤(≧▽≦)",
+              "label": "マイクと笑い"
+            },
+            {
+              "value": "📣(๑˃̵ᴗ˂̵)و",
+              "label": "メガホンと、片手を上げた顔"
+            },
+            {
+              "value": "♪(´ε｀ )",
+              "label": "音符と、口をすぼめた顔"
+            },
+            {
+              "value": "🎶(♡˙︶˙♡)🎶",
+              "label": "音符と、目がハートの顔"
+            },
+            {
+              "value": "🎫(ﾉ´∀｀*)ﾉ",
+              "label": "切符と、渡す手"
+            },
+            {
+              "value": "👑(´▽`ʃ♡ƪ)",
+              "label": "王冠と笑い"
+            },
+            {
+              "value": "📸(｡•̀ᴗ-)✧",
+              "label": "カメラとウインク"
+            }
+          ]
+        },
+        {
+          "category": "name",
+          "heading": "名前の置き方",
+          "tags": [
+            "推し活",
+            "名前"
+          ],
+          "items": [
+            {
+              "value": "꒰なまえ꒱♡",
+              "label": "丸括弧と白ハート"
+            },
+            {
+              "value": "♡なまえ♡",
+              "label": "白ハートで名前を挟む"
+            },
+            {
+              "value": "୨୧なまえ୨୧",
+              "label": "リボンの括弧で名前を挟む"
+            },
+            {
+              "value": "(♡˙︶˙♡)なまえ",
+              "label": "ハートの目のあとに名前"
+            },
+            {
+              "value": "＼(≧▽≦)／なまえ",
+              "label": "両手を上げた笑いと名前"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "顔は一つで足ります",
+        "paragraphs": [
+          "参戦のリプライに、手を上げた顔を二つ置くと応援ではなく展示になります。片手の (๑˃̵ᴗ˂̵)و か、両手の ＼(≧▽≦)／ かを決めてください。",
+          "目が ♡ の顔は、好きの返事です。ライブの小物を足すなら 🎤 か 🎫 の片方だけです。名前をうちわにする作業は、うちわ文字の画面で大きさを見てからにしてください。"
+        ],
+        "sections": [
+          {
+            "heading": "隣のツール",
+            "cards": [
+              {
+                "title": "絵文字",
+                "body": "色のハートやマイクだけの並びは、推し活の絵文字組み合わせに分けています。"
+              },
+              {
+                "title": "うちわ",
+                "body": "会場で掲げる名前は、うちわ文字で文字の詰まりを確認します。"
+              },
+              {
+                "title": "電光掲示板",
+                "body": "「だいすき」のような短い言葉を、画面いっぱいに流せます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/emoji-combinations/oshi/",
+            "label": "推し活の絵文字"
+          },
+          {
+            "href": "/uchiwa-moji/",
+            "label": "うちわ文字"
+          },
+          {
+            "href": "/led-banner/",
+            "label": "電光掲示板"
+          },
+          {
+            "href": "/kawaii-copy/oshi-profile/",
+            "label": "推し活プロフィール"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "応援の顔はどれが無難ですか？",
+          "answer": "片手を上げた (๑˃̵ᴗ˂̵)و が短いです。両手の ＼(≧▽≦)／ は、喜びが先に立って見えます。"
+        },
+        {
+          "question": "ハートの目は好きを表しますか？",
+          "answer": "(♡˙︶˙♡) は目の位置が白ハートです。好きの返事に使えます。怒った顔ではありません。"
+        },
+        {
+          "question": "名前を大きくするには？",
+          "answer": "このページの括弧は、プロフィールに貼る大きさです。うちわの大きさにするならうちわ文字、画面に流すなら電光掲示板を使ってください。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/emoji-combinations/oshi/",
+          "title": "推し活の絵文字",
+          "description": "ハートの色と、ライブの小物。"
+        },
+        {
+          "href": "/uchiwa-moji/",
+          "title": "うちわ文字",
+          "description": "名前をうちわの大きさにする。"
+        },
+        {
+          "href": "/led-banner/",
+          "title": "電光掲示板",
+          "description": "短い言葉を画面に流す。"
+        },
+        {
+          "href": "/kawaii-copy/oshi-profile/",
+          "title": "推し活プロフィール",
+          "description": "担当や記念日の短文。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-10-15",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 160,
+      "changefreq": "weekly",
+      "priority": "0.84",
+      "slug": "special-characters-moon",
+      "path": "/special-characters/moon/",
+      "family": "special-characters",
+      "title": "月の記号 コピペ | ☽☾ 三日月・満月 - MojiMoon",
+      "description": "☽ ☾ と、🌙 や満ち欠けの月をコピーできます。月の形で文字を描くツールは、トップの月文字です。",
+      "ogTitle": "月の記号",
+      "ogDescription": "線の三日月と、色のついた月の絵文字。",
+      "eyebrow": "Moon Symbols",
+      "h1": "月の記号",
+      "hero": "文章の端に置く月です。☽ と ☾ は線だけの三日月で、🌙 は黄色い三日月です。満ち欠けは、黒い月から満月まで順に置いています。月の形で文字そのものを描くときは、トップの月文字を使ってください。",
+      "toolLabel": "月の記号",
+      "searchPlaceholder": "三日月、満月、星、夜、名前",
+      "draftPlaceholder": "記号をクリックするとここに入ります",
+      "composerHint": "線の月と、色のついた月を同じ行に混ぜすぎないでください。",
+      "recentLabel": "最近使った月の記号",
+      "categories": [
+        {
+          "id": "mark",
+          "label": "記号"
+        },
+        {
+          "id": "emoji",
+          "label": "絵文字"
+        },
+        {
+          "id": "night",
+          "label": "夜"
+        },
+        {
+          "id": "name",
+          "label": "名前"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "三日月",
+          "query": "三日月"
+        },
+        {
+          "label": "満月",
+          "query": "満月"
+        },
+        {
+          "label": "星",
+          "query": "星"
+        },
+        {
+          "label": "夜",
+          "query": "夜"
+        },
+        {
+          "label": "名前",
+          "query": "名前"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "mark",
+          "heading": "線の月と星",
+          "tags": [
+            "月",
+            "三日月",
+            "記号"
+          ],
+          "items": [
+            {
+              "value": "☽",
+              "label": "左に開いた三日月"
+            },
+            {
+              "value": "☾",
+              "label": "右に開いた三日月"
+            },
+            {
+              "value": "☽☾",
+              "label": "背中合わせの三日月"
+            },
+            {
+              "value": "☾☽",
+              "label": "向かい合う三日月"
+            },
+            {
+              "value": "☽⋆☾",
+              "label": "小さな星を挟んだ三日月"
+            },
+            {
+              "value": "★",
+              "label": "黒い星"
+            },
+            {
+              "value": "☆",
+              "label": "白い星"
+            },
+            {
+              "value": "✧",
+              "label": "白い四芒星"
+            },
+            {
+              "value": "⋆",
+              "label": "小さな星"
+            },
+            {
+              "value": "✦",
+              "label": "黒い四芒星"
+            }
+          ]
+        },
+        {
+          "category": "emoji",
+          "heading": "色のついた月",
+          "tags": [
+            "月",
+            "三日月",
+            "満月",
+            "絵文字"
+          ],
+          "items": [
+            {
+              "value": "🌙",
+              "label": "黄色い三日月"
+            },
+            {
+              "value": "🌑",
+              "label": "黒い月"
+            },
+            {
+              "value": "🌒",
+              "label": "右が明るい細い月"
+            },
+            {
+              "value": "🌓",
+              "label": "右半分が明るい月"
+            },
+            {
+              "value": "🌔",
+              "label": "右が大きく明るい月"
+            },
+            {
+              "value": "🌕",
+              "label": "満月"
+            },
+            {
+              "value": "🌖",
+              "label": "左が大きく明るい月"
+            },
+            {
+              "value": "🌗",
+              "label": "左半分が明るい月"
+            },
+            {
+              "value": "🌘",
+              "label": "左が明るい細い月"
+            },
+            {
+              "value": "🌚",
+              "label": "顔のある黒い月"
+            },
+            {
+              "value": "🌛",
+              "label": "右に顔のある半月"
+            },
+            {
+              "value": "🌜",
+              "label": "左に顔のある半月"
+            },
+            {
+              "value": "🌝",
+              "label": "顔のある満月"
+            }
+          ]
+        },
+        {
+          "category": "night",
+          "heading": "夜の並び",
+          "tags": [
+            "月",
+            "夜",
+            "星"
+          ],
+          "items": [
+            {
+              "value": "✨",
+              "label": "きらめき"
+            },
+            {
+              "value": "⭐",
+              "label": "黄色い星"
+            },
+            {
+              "value": "🌟",
+              "label": "光る星"
+            },
+            {
+              "value": "💫",
+              "label": "渦のある星"
+            },
+            {
+              "value": "🌠",
+              "label": "流れ星"
+            },
+            {
+              "value": "🌌",
+              "label": "天の川"
+            },
+            {
+              "value": "🌃",
+              "label": "夜の街"
+            },
+            {
+              "value": "🌙✨",
+              "label": "黄色い三日月ときらめき"
+            },
+            {
+              "value": "🌕⭐",
+              "label": "満月と黄色い星"
+            },
+            {
+              "value": "✨🌙✨",
+              "label": "きらめきで三日月を挟む"
+            },
+            {
+              "value": "🌙⋆",
+              "label": "黄色い三日月と小さな星"
+            },
+            {
+              "value": "🌌🌙",
+              "label": "天の川と黄色い三日月"
+            },
+            {
+              "value": "☽✧",
+              "label": "線の三日月と四芒の星"
+            }
+          ]
+        },
+        {
+          "category": "name",
+          "heading": "名前の脇",
+          "tags": [
+            "月",
+            "名前"
+          ],
+          "items": [
+            {
+              "value": "☽なまえ☾",
+              "label": "線の三日月で名前を挟む"
+            },
+            {
+              "value": "🌙なまえ",
+              "label": "黄色い三日月のあとに名前"
+            },
+            {
+              "value": "なまえ🌙",
+              "label": "名前のあとに黄色い三日月"
+            },
+            {
+              "value": "✧なまえ☽",
+              "label": "四芒の星、名前、線の三日月"
+            },
+            {
+              "value": "🌕なまえ🌕",
+              "label": "満月で名前を挟む"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "線の月と、色のついた月",
+        "paragraphs": [
+          "☽ は左に開いた三日月、☾ は右に開いた三日月です。色はつきません。🌙 は黄色い三日月で、文章の中ではこちらのほうが月だとすぐ分かります。同じ行に両方入れると、線と色が喧嘩します。",
+          "月の形で「月」や名前を描きたいときは、このページの記号を並べるのでは足りません。トップの月文字が、文字の形を月の点で作ります。"
+        ],
+        "sections": [
+          {
+            "heading": "どれを選ぶか",
+            "cards": [
+              {
+                "title": "プロフィール",
+                "body": "☽なまえ☾ のように、線の月で名前を挟むと文字サイズが揃います。"
+              },
+              {
+                "title": "夜の挨拶",
+                "body": "おやすみの文末には 🌙 が一つで足ります。満ち欠けを全部並べる必要はありません。"
+              },
+              {
+                "title": "文字の絵",
+                "body": "月文字は、入力した言葉を月のドットで描きます。ここでコピーする ☽ とは別の作り方です。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/",
+            "label": "月文字"
+          },
+          {
+            "href": "/emoji-combinations/good-night/",
+            "label": "おやすみの組み合わせ"
+          },
+          {
+            "href": "/emoji-copy/star/",
+            "label": "星と月の絵文字"
+          },
+          {
+            "href": "/special-characters/aesthetic/",
+            "label": "𓂃 𓈒𓏸"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "☽ と 🌙 の違いは何ですか？",
+          "answer": "☽ は線だけの三日月で、左に開いています。🌙 は黄色い三日月です。色をつけたくない行には ☽、月だとすぐ見せたい行には 🌙 です。"
+        },
+        {
+          "question": "月文字とは何が違いますか？",
+          "answer": "月文字は、言葉の形を月の点で描くツールです。このページは、文の端に貼る月の記号と絵文字をコピーする場所です。"
+        },
+        {
+          "question": "満ち欠けはどの順ですか？",
+          "answer": "黒い月、右が細い月、右半分、右が大きい月、満月、左が大きい月、左半分、左が細い月、の順に置いています。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/",
+          "title": "月文字",
+          "description": "言葉を、月の点で描く。"
+        },
+        {
+          "href": "/emoji-combinations/good-night/",
+          "title": "おやすみ",
+          "description": "夜の挨拶に月を一つ足す。"
+        },
+        {
+          "href": "/emoji-copy/star/",
+          "title": "星と月の絵文字",
+          "description": "単体の星や月を探す。"
+        },
+        {
+          "href": "/special-characters/star/",
+          "title": "星の記号",
+          "description": "線の星を、月と別に見る。"
         }
       ]
     }
