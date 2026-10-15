@@ -73,7 +73,8 @@ const handwrittenTargets = [
   { html: 'special-characters/heart/index.html', data: 'assets/data/pages/heart.js', headings: true },
   { html: 'special-characters/star/index.html', data: 'assets/data/pages/star.js', headings: true },
   { html: 'emoji-copy/sparkle/index.html', data: 'assets/data/pages/sparkle.js', headings: true },
-  { html: 'kaomoji/sad/index.html', data: 'assets/data/pages/crying.js', headings: true }
+  { html: 'kaomoji/sad/index.html', data: 'assets/data/pages/crying.js', headings: true },
+  { html: 'kaomoji/angry/index.html', data: 'assets/data/pages/angry.js', headings: true }
 ];
 
 async function loadToolData(file) {

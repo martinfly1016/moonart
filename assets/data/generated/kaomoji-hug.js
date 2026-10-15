@@ -4,28 +4,20 @@ window.MojiMoonToolData = {
   "draftMaxLength": 220,
   "quickFilters": [
     {
-      "label": "ぎゅー顔文字",
-      "query": "ぎゅー 顔文字"
-    },
-    {
       "label": "ハグ",
       "query": "ハグ"
     },
     {
-      "label": "可愛い",
-      "query": "可愛い"
+      "label": "ぎゅー",
+      "query": "ぎゅー"
     },
     {
-      "label": "LINE",
-      "query": "LINE"
+      "label": "なでる",
+      "query": "なでる"
     },
     {
-      "label": "返信",
-      "query": "返信"
-    },
-    {
-      "label": "SNS",
-      "query": "SNS"
+      "label": "絵文字",
+      "query": "絵文字"
     }
   ],
   "categories": [
@@ -34,500 +26,569 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
-      "id": "basic",
-      "label": "定番"
+      "id": "arms",
+      "label": "両腕"
     },
     {
-      "id": "cute",
-      "label": "可愛い"
+      "id": "comfort",
+      "label": "なでる"
     },
     {
       "id": "reply",
       "label": "返信"
     },
     {
-      "id": "short",
-      "label": "短文"
+      "id": "emoji",
+      "label": "絵文字"
     }
   ],
-  "pageSize": 48,
+  "pageSize": 160,
   "items": [
     {
       "value": "(つ≧▽≦)つ",
-      "label": "ハグ 1",
-      "category": "basic",
+      "label": "笑顔で両腕を前に",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(´｡•ω(•ω•｡`)ぎゅー",
-      "label": "ハグ 2",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(っ´ω`)ﾉ(╥ω╥)",
-      "label": "ハグ 3",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(っ˘̩╭╮˘̩)っ",
-      "label": "ハグ 4",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "ʕっ•ᴥ•ʔっ",
-      "label": "ハグ 5",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(づ｡◕‿‿◕｡)づ",
-      "label": "ハグ 6",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(っ˘з(˘⌣˘ )",
-      "label": "ハグ 7",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
+        "ぎゅー"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "(っ´▽｀)っ",
-      "label": "ハグ 8",
-      "category": "basic",
+      "label": "笑って抱きつく",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "顔文字",
-        "コピペ"
+        "ぎゅー"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "(つ✧ω✧)つ",
-      "label": "ハグ 9",
-      "category": "basic",
+      "label": "目が星で両腕",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "顔文字",
-        "コピペ"
+        "ぎゅー"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "(つ﹏<。)ヾ(´∀｀*)",
-      "label": "ハグ 10",
-      "category": "basic",
+      "value": "(づ｡◕‿‿◕｡)づ",
+      "label": "まるい目で両腕",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "( T_T)＼(^-^ )",
-      "label": "ハグ 11",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(っ- ‸ - ς)ヾ(･ω･*)",
-      "label": "ハグ 12",
-      "category": "basic",
-      "tags": [
-        "ハグ",
-        "顔文字",
-        "コピペ"
+        "ぎゅー"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "(づ￣ ³￣)づ",
-      "label": "可愛いハグ 1",
-      "category": "cute",
+      "label": "口をすぼめて両腕",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "可愛い",
-        "LINE"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(っ´ω`c)",
-      "label": "可愛いハグ 2",
-      "category": "cute",
-      "tags": [
-        "ハグ",
-        "可愛い",
-        "LINE"
+        "ぎゅー"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "(⊃｡•́‿•̀｡)⊃",
-      "label": "可愛いハグ 3",
-      "category": "cute",
+      "label": "腕を回す",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "可愛い",
-        "LINE"
+        "ぎゅー"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "(っ˘ω˘ς )",
-      "label": "可愛いハグ 4",
-      "category": "cute",
+      "value": "(っ´ω`)っ",
+      "label": "短い両腕",
+      "category": "arms",
       "tags": [
         "ハグ",
-        "可愛い",
-        "LINE"
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ˘ω˘)っ",
+      "label": "目を細めて両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⊂(・▽・⊂)",
+      "label": "小さく片側から",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⊂(´・ω・｀⊂)",
+      "label": "控えめに片側から",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(つ´∀｀)つ",
+      "label": "口を開けて両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(づ◡‿◡)づ",
+      "label": "にこにこ両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ'ω')っ",
+      "label": "小さな両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(⊃ω⊂)",
+      "label": "腕を閉じる",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(´・ω・)っ",
+      "label": "片手だけ伸ばす",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っಠ‿ಠ)っ",
+      "label": "真顔で両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(づ◡﹏◡)づ",
+      "label": "うるうるした両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(⊃д⊂)",
+      "label": "口を開けて腕を閉じる",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ≧▽≦)っ",
+      "label": "つが小さい両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(づ￣ ³￣)づ♡",
+      "label": "ハートを添えた両腕",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ´▽｀)っ♡",
+      "label": "笑顔の両腕にハート",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ˘ω˘)っ♡",
+      "label": "目を細めた両腕にハート",
+      "category": "arms",
+      "tags": [
+        "ハグ",
+        "ぎゅー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(´｡•ω(•ω•｡`)ぎゅー",
+      "label": "向かい合ってぎゅー",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ´ω`)ﾉ(╥ω╥)",
+      "label": "泣く顔の頭をなでる",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ˘̩╭╮˘̩)っ",
+      "label": "泣きながら抱きつく",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ʕっ•ᴥ•ʔっ",
+      "label": "くまが抱きつく",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(つ﹏<。)ヾ(´∀｀*)",
+      "label": "泣く顔を笑顔が迎える",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "( T_T)＼(^-^ )",
+      "label": "泣く顔をなでる",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ- ‸ - ς)ヾ(･ω･*)",
+      "label": "むすっとした顔をなでる",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ˘з(˘⌣˘ )",
+      "label": "口をすぼめて顔を寄せる",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ´；ω；`っ)",
+      "label": "泣きながらしがみつく",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⊂((・▽・))⊃",
+      "label": "両側から腕",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(っ´Д｀)っ",
+      "label": "泣きながら手を伸ばす",
+      "category": "comfort",
+      "tags": [
+        "ハグ",
+        "なでる"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "ぎゅー(つ≧▽≦)つ",
-      "label": "ぎゅーの返信",
+      "label": "ぎゅーの一言",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "ハグ(´｡•ω(•ω•｡`)ぎゅー",
-      "label": "ハグの返信",
-      "category": "reply",
-      "tags": [
-        "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "よしよし(っ´ω`)ﾉ(╥ω╥)",
-      "label": "よしよしの返信",
+      "label": "よしよしとなでる",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
-      "wide": false,
+      "wide": true,
       "beadHref": ""
     },
     {
-      "value": "大丈夫(っ˘̩╭╮˘̩)っ",
-      "label": "大丈夫の返信",
+      "value": "大丈夫だよ(っ˘̩╭╮˘̩)っ",
+      "label": "大丈夫だよの一言",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "おつかれさまʕっ•ᴥ•ʔっ",
-      "label": "おつかれさまの返信",
+      "label": "おつかれさまにくま",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "そばにいるよ(づ｡◕‿‿◕｡)づ",
-      "label": "そばにいるよの返信",
+      "label": "そばにいるよの一言",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "元気出して(っ˘з(˘⌣˘ )",
-      "label": "元気出しての返信",
-      "category": "reply",
-      "tags": [
-        "ハグ",
-        "返信",
-        "LINE"
-      ],
-      "wide": false,
+      "wide": true,
       "beadHref": ""
     },
     {
       "value": "なでなで(っ´▽｀)っ",
-      "label": "なでなでの返信",
+      "label": "なでなでの一言",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "だいじょうぶだよ(つ✧ω✧)つ",
-      "label": "だいじょうぶだよの返信",
+      "value": "元気出して(つ✧ω✧)つ",
+      "label": "元気出しての一言",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "抱きしめる(つ﹏<。)ヾ(´∀｀*)",
-      "label": "抱きしめるの返信",
+      "value": "抱きしめる(⊃｡•́‿•̀｡)⊃",
+      "label": "抱きしめるの一言",
       "category": "reply",
       "tags": [
         "ハグ",
-        "返信",
-        "LINE"
+        "ぎゅー",
+        "返信"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "ぎゅってする(っ´ω`)っ",
+      "label": "ぎゅってするの一言",
+      "category": "reply",
+      "tags": [
+        "ハグ",
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "よしよし (づ｡◕‿‿◕｡)づ",
-      "label": "よしよしの短文",
-      "category": "short",
+      "value": "ここにいるよ(´・ω・)っ",
+      "label": "ここにいるよの一言",
+      "category": "reply",
       "tags": [
         "ハグ",
-        "SNS",
-        "短文"
+        "ぎゅー",
+        "返信"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "大丈夫 (っ˘з(˘⌣˘ )",
-      "label": "大丈夫の短文",
-      "category": "short",
+      "value": "🤗",
+      "label": "手を開いたハグ",
+      "category": "emoji",
       "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
+        "絵文字",
+        "ハグ"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "おつかれさま (っ´▽｀)っ",
-      "label": "おつかれさまの短文",
-      "category": "short",
+      "value": "🫂",
+      "label": "抱き合う二人",
+      "category": "emoji",
       "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
+        "絵文字",
+        "ハグ"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "そばにいるよ (つ✧ω✧)つ",
-      "label": "そばにいるよの短文",
-      "category": "short",
+      "value": "💗",
+      "label": "ピンクのハート",
+      "category": "emoji",
       "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
+        "絵文字",
+        "ハグ"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "元気出して (つ﹏<。)ヾ(´∀｀*)",
-      "label": "元気出しての短文",
-      "category": "short",
+      "value": "🤗💗",
+      "label": "開いた手とハート",
+      "category": "emoji",
       "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
+        "絵文字",
+        "ハグ"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "なでなで ( T_T)＼(^-^ )",
-      "label": "なでなでの短文",
-      "category": "short",
+      "value": "🫂💗",
+      "label": "二人とハート",
+      "category": "emoji",
       "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
+        "絵文字",
+        "ハグ"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
-      "value": "だいじょうぶだよ (っ- ‸ - ς)ヾ(･ω･*)",
-      "label": "だいじょうぶだよの短文",
-      "category": "short",
+      "value": "🤗✨",
+      "label": "開いた手ときらめき",
+      "category": "emoji",
       "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "抱きしめる (づ￣ ³￣)づ",
-      "label": "抱きしめるの短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "ぎゅーしたい (っ˘з(˘⌣˘ )",
-      "label": "ぎゅーしたいの短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "ぎゅっとする (っ´▽｀)っ",
-      "label": "ぎゅっとするの短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "元気出して (つ✧ω✧)つ",
-      "label": "元気出しての短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "そばにいるよ (つ﹏<。)ヾ(´∀｀*)",
-      "label": "そばにいるよの短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "よしよし ( T_T)＼(^-^ )",
-      "label": "よしよしの短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "あたたかい気持ち (っ- ‸ - ς)ヾ(･ω･*)",
-      "label": "あたたかい気持ちの短文",
-      "category": "short",
-      "tags": [
-        "ハグ",
-        "SNS",
-        "短文"
+        "絵文字",
+        "ハグ"
       ],
       "wide": false,
       "beadHref": ""
