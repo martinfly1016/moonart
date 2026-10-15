@@ -382,13 +382,13 @@
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/sad/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/angry/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -605,9 +605,33 @@
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/hug/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/doya/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/scared/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/handwritten/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/birthday/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/kiss/</loc>
