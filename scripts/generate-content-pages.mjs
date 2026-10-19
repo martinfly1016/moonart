@@ -320,7 +320,7 @@ ${hreflang ? `${hreflang}\n` : ''}  <link rel="icon" href="/favicon.ico" type="i
   ${htmlMarker} slug="${escapeAttr(page.slug)}" source="_content/ja-copy-pages.json" -->
   <div class="tool-shell">
     ${renderHeader(page)}
-    <section class="hero"><div class="hero-inner"><p class="eyebrow">${escapeHtml(page.eyebrow || 'MojiMoon Copy Tool')}</p><h1>${escapeHtml(page.h1)}</h1><p class="hero-copy">${escapeHtml(page.hero)}</p></div></section>
+    <section class="hero"><div class="hero-inner"><p class="eyebrow">${escapeHtml(page.eyebrow || 'MojiMoon Copy Tool')}</p><h1>${escapeHtml(page.h1)}</h1><p class="hero-copy">${escapeHtml(page.hero)}</p>${renderHeroLinks(page)}</div></section>
     <main class="tool-wrap"><div class="tool-app"><section class="workspace" aria-label="${escapeAttr(page.toolLabel)}"><div class="tool-tabs" data-tabs></div><div class="search-row"><input class="search-input" type="search" data-search placeholder="${escapeAttr(page.searchPlaceholder || 'キーワードで検索')}"><button class="clear-search" type="button" data-clear-search>クリア</button></div>${renderItemGrid(page)}</section><aside class="composer" aria-label="コピー草稿"><h2>コピー草稿</h2><textarea class="draft-input" data-draft placeholder="${escapeAttr(page.draftPlaceholder || 'クリックするとここに追加されます')}"></textarea><div class="button-row"><button class="primary-btn" type="button" data-copy-draft>コピー</button><button class="secondary-btn" type="button" data-clear-draft>消去</button></div><p class="hint">${escapeHtml(page.composerHint || 'クリックした素材を草稿で組み合わせてコピーできます。')}</p><div class="recent-list" data-recent aria-label="${escapeAttr(page.recentLabel || '最近使ったもの')}"></div></aside></div></main>
     ${renderSeoSection(page)}
     ${renderRelated(page)}
@@ -357,6 +357,11 @@ function renderHeader(page) {
 
 function current(page, key) {
   return page.navCurrent === key ? ' aria-current="page"' : '';
+}
+
+function renderHeroLinks(page) {
+  if (!page.heroLinks?.length) return '';
+  return `<div class="category-links">${page.heroLinks.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>`;
 }
 
 function renderSeoSection(page) {
