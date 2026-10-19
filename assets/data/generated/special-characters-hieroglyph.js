@@ -50,7 +50,7 @@ window.MojiMoonToolData = {
   "items": [
     {
       "value": "𓂃𓈒𓏸",
-      "label": "いちばん貼られる並び",
+      "label": "波と点を続けた形",
       "category": "line",
       "tags": [
         "ライン",
@@ -158,7 +158,7 @@ window.MojiMoonToolData = {
     },
     {
       "value": "name𓂃𓈒𓏸",
-      "label": "名前の下に余白",
+      "label": "名前のうしろに続けた形",
       "category": "line",
       "tags": [
         "ライン",
