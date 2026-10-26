@@ -8,7 +8,11 @@ window.MojiMoonToolData = {
       "query": "区切り線"
     },
     {
-      "label": "飾り線",
+      "label": "罫線",
+      "query": "罫線"
+    },
+    {
+      "label": "おしゃれ",
       "query": "飾り"
     },
     {
@@ -16,7 +20,7 @@ window.MojiMoonToolData = {
       "query": "点"
     },
     {
-      "label": "インスタ",
+      "label": "プロフィール",
       "query": "プロフィール"
     }
   ],
@@ -27,11 +31,11 @@ window.MojiMoonToolData = {
     },
     {
       "id": "plain",
-      "label": "線だけ"
+      "label": "区切り線"
     },
     {
       "id": "cute",
-      "label": "飾り線"
+      "label": "おしゃれ"
     },
     {
       "id": "dot",
@@ -49,23 +53,98 @@ window.MojiMoonToolData = {
   "pageSize": 160,
   "items": [
     {
-      "value": "────",
-      "label": "細い横線",
+      "value": "𓂃",
+      "label": "ゆるい線",
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓈒𓏸",
+      "label": "点を添えた線",
+      "category": "plain",
+      "tags": [
+        "区切り線",
+        "ライン",
+        "罫線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┈┈",
+      "label": "短い点線",
+      "category": "plain",
+      "tags": [
+        "区切り線",
+        "ライン",
+        "罫線",
+        "点"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "────",
+      "label": "細い罫線",
+      "category": "plain",
+      "tags": [
+        "区切り線",
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
     },
     {
       "value": "━━━━",
-      "label": "太い横線",
+      "label": "太い罫線",
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "﹏﹏",
+      "label": "短い波線",
+      "category": "plain",
+      "tags": [
+        "区切り線",
+        "ライン",
+        "罫線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "〜〜",
+      "label": "ゆるい波",
+      "category": "plain",
+      "tags": [
+        "区切り線",
+        "ライン",
+        "罫線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⌇",
+      "label": "一本の斜め線",
+      "category": "plain",
+      "tags": [
+        "区切り線",
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -77,6 +156,7 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り線",
         "ライン",
+        "罫線",
         "点"
       ],
       "wide": false,
@@ -89,6 +169,7 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り線",
         "ライン",
+        "罫線",
         "点"
       ],
       "wide": false,
@@ -100,7 +181,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -111,7 +193,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -122,7 +205,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -133,7 +217,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -145,6 +230,7 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り線",
         "ライン",
+        "罫線",
         "点"
       ],
       "wide": false,
@@ -156,7 +242,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -167,7 +254,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -179,6 +267,7 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り線",
         "ライン",
+        "罫線",
         "点"
       ],
       "wide": false,
@@ -191,6 +280,7 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り線",
         "ライン",
+        "罫線",
         "点"
       ],
       "wide": false,
@@ -203,6 +293,7 @@ window.MojiMoonToolData = {
       "tags": [
         "区切り線",
         "ライン",
+        "罫線",
         "点"
       ],
       "wide": false,
@@ -214,7 +305,8 @@ window.MojiMoonToolData = {
       "category": "plain",
       "tags": [
         "区切り線",
-        "ライン"
+        "ライン",
+        "罫線"
       ],
       "wide": false,
       "beadHref": ""
@@ -241,6 +333,19 @@ window.MojiMoonToolData = {
         "かわいい",
         "飾り",
         "ハート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✦ ━━ ✦",
+      "label": "星と太い線",
+      "category": "cute",
+      "tags": [
+        "飾り線",
+        "かわいい",
+        "飾り",
+        "星"
       ],
       "wide": false,
       "beadHref": ""
@@ -317,19 +422,6 @@ window.MojiMoonToolData = {
         "かわいい",
         "飾り",
         "ハート"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "✦ ━━ ✦",
-      "label": "星と太い線",
-      "category": "cute",
-      "tags": [
-        "飾り線",
-        "かわいい",
-        "飾り",
-        "星"
       ],
       "wide": false,
       "beadHref": ""
@@ -649,66 +741,6 @@ window.MojiMoonToolData = {
         "プロフィール",
         "インスタ",
         "区切り線"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "𓂃",
-      "label": "𓂃",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "𓈒𓏸",
-      "label": "𓈒𓏸",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "┈┈",
-      "label": "┈┈",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "﹏﹏",
-      "label": "﹏﹏",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "〜〜",
-      "label": "〜〜",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "⌇",
-      "label": "⌇",
-      "category": "more",
-      "tags": [
-        "その他"
       ],
       "wide": false,
       "beadHref": ""

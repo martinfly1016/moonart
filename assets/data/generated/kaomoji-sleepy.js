@@ -4,12 +4,12 @@ window.MojiMoonToolData = {
   "draftMaxLength": 220,
   "quickFilters": [
     {
-      "label": "眠い",
-      "query": "眠い"
-    },
-    {
       "label": "おやすみ",
       "query": "おやすみ"
+    },
+    {
+      "label": "眠い",
+      "query": "眠い"
     },
     {
       "label": "うとうと",
@@ -26,6 +26,10 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
+      "id": "line",
+      "label": "おやすみ"
+    },
+    {
       "id": "drowsy",
       "label": "眠い"
     },
@@ -38,10 +42,6 @@ window.MojiMoonToolData = {
       "label": "布団"
     },
     {
-      "id": "line",
-      "label": "文にする"
-    },
-    {
       "id": "more",
       "label": "ほか"
     }
@@ -49,12 +49,133 @@ window.MojiMoonToolData = {
   "pageSize": 160,
   "items": [
     {
+      "value": "おやすみ( ˘ω˘ )",
+      "label": "おやすみの一言",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おやすみなさい(｡-ω-)zzz",
+      "label": "少し丁寧",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "また明日(っ ̫ -˘)",
+      "label": "続きは明日",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "そろそろ寝るね( ˘ω˘ )",
+      "label": "会話を閉じる",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "いい夢みてね( ˘͈ ᵕ ˘͈ )",
+      "label": "相手に言う",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "返信は明日するね(｡ρω-｡)",
+      "label": "既読のまま寝る",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "もう寝落ちしそう(¦3[▓▓]",
+      "label": "限界",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ゆっくり休んで( ˊ꒳ˋ )",
+      "label": "相手を休ませる",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "今日もありがとう( ᵕᴗᵕ )",
+      "label": "寝る前のお礼",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "good night( ˘꒳˘ )",
+      "label": "英語で閉じる",
+      "category": "line",
+      "tags": [
+        "おやすみ",
+        "返信",
+        "顔文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
       "value": "(っ ̫ -˘)",
       "label": "うとうと",
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -65,7 +186,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -76,7 +198,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -87,7 +210,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -98,7 +222,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -109,7 +234,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -120,7 +246,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -131,7 +258,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -142,7 +270,8 @@ window.MojiMoonToolData = {
       "category": "drowsy",
       "tags": [
         "眠い",
-        "うとうと"
+        "うとうと",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -257,7 +386,8 @@ window.MojiMoonToolData = {
       "category": "bed",
       "tags": [
         "布団",
-        "寝る"
+        "寝る",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -268,7 +398,8 @@ window.MojiMoonToolData = {
       "category": "bed",
       "tags": [
         "布団",
-        "寝る"
+        "寝る",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -279,7 +410,8 @@ window.MojiMoonToolData = {
       "category": "bed",
       "tags": [
         "布団",
-        "寝る"
+        "寝る",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -290,117 +422,8 @@ window.MojiMoonToolData = {
       "category": "bed",
       "tags": [
         "布団",
-        "寝る"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "おやすみ( ˘ω˘ )",
-      "label": "おやすみの一言",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "おやすみなさい(｡-ω-)zzz",
-      "label": "少し丁寧",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "また明日(っ ̫ -˘)",
-      "label": "続きは明日",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "そろそろ寝るね( ˘ω˘ )",
-      "label": "会話を閉じる",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "いい夢みてね( ˘͈ ᵕ ˘͈ )",
-      "label": "相手に言う",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "返信は明日するね(｡ρω-｡)",
-      "label": "既読のまま寝る",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "もう寝落ちしそう(¦3[▓▓]",
-      "label": "限界",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "ゆっくり休んで( ˊ꒳ˋ )",
-      "label": "相手を休ませる",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "今日もありがとう( ᵕᴗᵕ )",
-      "label": "寝る前のお礼",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "good night( ˘꒳˘ )",
-      "label": "英語で閉じる",
-      "category": "line",
-      "tags": [
-        "おやすみ",
-        "返信"
+        "寝る",
+        "顔文字"
       ],
       "wide": false,
       "beadHref": ""

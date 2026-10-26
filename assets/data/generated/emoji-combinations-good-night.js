@@ -26,6 +26,10 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
+      "id": "text",
+      "label": "おやすみ"
+    },
+    {
       "id": "short",
       "label": "一行"
     },
@@ -38,10 +42,6 @@ window.MojiMoonToolData = {
       "label": "ストーリー"
     },
     {
-      "id": "text",
-      "label": "言葉つき"
-    },
-    {
       "id": "more",
       "label": "ほか"
     }
@@ -49,12 +49,85 @@ window.MojiMoonToolData = {
   "pageSize": 160,
   "items": [
     {
+      "value": "おやすみ 🌙",
+      "label": "そのまま送る",
+      "category": "text",
+      "tags": [
+        "おやすみ",
+        "絵文字",
+        "組み合わせ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おやすみなさい ☁️🌙",
+      "label": "少し丁寧",
+      "category": "text",
+      "tags": [
+        "おやすみ",
+        "絵文字",
+        "組み合わせ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "いい夢を 🌙✨",
+      "label": "相手に言う",
+      "category": "text",
+      "tags": [
+        "おやすみ",
+        "絵文字",
+        "組み合わせ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "また明日 ⭐",
+      "label": "続きは朝",
+      "category": "text",
+      "tags": [
+        "おやすみ",
+        "絵文字",
+        "組み合わせ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "もう寝る 💤",
+      "label": "自分の宣言",
+      "category": "text",
+      "tags": [
+        "おやすみ",
+        "絵文字",
+        "組み合わせ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "good night 🌙",
+      "label": "英語で閉じる",
+      "category": "text",
+      "tags": [
+        "おやすみ",
+        "絵文字",
+        "組み合わせ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
       "value": "🌙☁️🤍",
       "label": "月と雲と白",
       "category": "short",
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "月",
         "白"
       ],
@@ -68,6 +141,7 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "月"
       ],
       "wide": false,
@@ -80,6 +154,7 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "星",
         "月"
       ],
@@ -92,7 +167,8 @@ window.MojiMoonToolData = {
       "category": "short",
       "tags": [
         "おやすみ",
-        "組み合わせ"
+        "組み合わせ",
+        "絵文字"
       ],
       "wide": false,
       "beadHref": ""
@@ -104,6 +180,7 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "かわいい"
       ],
       "wide": false,
@@ -116,6 +193,7 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "月",
         "星"
       ],
@@ -129,6 +207,7 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "白"
       ],
       "wide": false,
@@ -141,6 +220,7 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "組み合わせ",
+        "絵文字",
         "星"
       ],
       "wide": false,
@@ -300,66 +380,6 @@ window.MojiMoonToolData = {
       "tags": [
         "おやすみ",
         "夜"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "おやすみ 🌙",
-      "label": "そのまま送る",
-      "category": "text",
-      "tags": [
-        "おやすみ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "おやすみなさい ☁️🌙",
-      "label": "少し丁寧",
-      "category": "text",
-      "tags": [
-        "おやすみ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "いい夢を 🌙✨",
-      "label": "相手に言う",
-      "category": "text",
-      "tags": [
-        "おやすみ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "また明日 ⭐",
-      "label": "続きは朝",
-      "category": "text",
-      "tags": [
-        "おやすみ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "もう寝る 💤",
-      "label": "自分の宣言",
-      "category": "text",
-      "tags": [
-        "おやすみ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "good night 🌙",
-      "label": "英語で閉じる",
-      "category": "text",
-      "tags": [
-        "おやすみ"
       ],
       "wide": false,
       "beadHref": ""
