@@ -286,6 +286,10 @@ a {
   gap: 10px;
 }
 
+.item-grid-stable {
+  min-height: 720px;
+}
+
 .copy-card {
   min-width: 0;
   min-height: 72px;
@@ -930,6 +934,10 @@ a {
   .item-grid {
     grid-template-columns: 1fr;
     padding: 12px;
+  }
+
+  .item-grid-stable {
+    min-height: 960px;
   }
 
   .copy-value {

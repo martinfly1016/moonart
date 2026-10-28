@@ -14,6 +14,12 @@ const htmlMarker = '<!-- mojimoon:generated-page';
 const dataMarker = '// mojimoon:generated-data';
 const sitemapStart = '  <!-- mojimoon:generated-pages:start -->';
 const sitemapEnd = '  <!-- mojimoon:generated-pages:end -->';
+const sprintDate = '2026-10-28';
+const sitemapExclude = new Set([
+  'https://mojimoon.com/kawaii-copy/divider-line/',
+  'https://mojimoon.com/kawaii-copy/ribbon/',
+  'https://mojimoon.com/kawaii-copy/cute-divider/'
+]);
 
 const navTargets = {
   kaomoji: '/kaomoji/',
@@ -53,19 +59,25 @@ async function main() {
     if (changed) stale.push(path.relative(rootDir, output.file));
   }
 
-  if (checkOnly && stale.length) {
-    throw new Error(`Generated content is out of date:\n${stale.map((file) => `- ${file}`).join('\n')}`);
-  }
+  stale.push(...await syncHandwrittenGrids(checkOnly));
+  const legacy = await syncLegacyListGrids(checkOnly);
+  stale.push(...legacy.files);
+  const footerFiles = await syncSiteFooters(checkOnly);
+  stale.push(...footerFiles);
+  stale.push(...await bumpSitemapDates(checkOnly, [...legacy.files, ...footerFiles]));
 
-  const handwritten = await syncHandwrittenGrids(checkOnly);
-  if (checkOnly && handwritten.length) {
-    throw new Error(`Generated content is out of date:\n${handwritten.map((file) => `- ${file}`).join('\n')}`);
+  if (checkOnly && stale.length) {
+    throw new Error(`Generated content is out of date:\n${[...new Set(stale)].map((file) => `- ${file}`).join('\n')}`);
   }
 
   console.log(`${checkOnly ? 'Checked' : 'Generated'} ${pages.length} content page(s).`);
   console.log(`Data files: ${pages.length}`);
   console.log(`Sitemap URLs managed: ${sitemapPages.length}`);
   console.log(`Handwritten grids: ${handwrittenTargets.length}`);
+  console.log('Legacy static data-copy counts:');
+  for (const entry of legacy.counts) {
+    console.log(`- ${entry.path} ${entry.count}`);
+  }
 }
 
 const handwrittenTargets = [
@@ -77,11 +89,15 @@ const handwrittenTargets = [
   { html: 'kaomoji/angry/index.html', data: 'assets/data/pages/angry.js', headings: true }
 ];
 
-async function loadToolData(file) {
+async function loadWindowData(file, key) {
   const source = await fs.readFile(file, 'utf8');
   const sandbox = {};
-  const runner = new Function('window', `${source}\nreturn window.MojiMoonToolData;`);
+  const runner = new Function('window', `${source}\nreturn window.${key};`);
   return runner(sandbox);
+}
+
+async function loadToolData(file) {
+  return loadWindowData(file, 'MojiMoonToolData');
 }
 
 function toolDataToPage(data, headings) {
@@ -133,6 +149,240 @@ async function syncHandwrittenGrids(checkOnly) {
     if (!checkOnly) await fs.writeFile(htmlFile, next);
   }
   return stale;
+}
+
+const legacyListTargets = [
+  { html: 'emoji-combinations/index.html', data: 'assets/data/emoji-combinations.js', reserve: true },
+  { html: 'emoji-combinations/kawaii/index.html', data: 'assets/data/emoji-combinations.js', category: 'kawaii' },
+  { html: 'emoji-combinations/white/index.html', data: 'assets/data/emoji-combinations.js', category: 'white' },
+  { html: 'kaomoji/index.html', data: 'assets/data/kaomoji.js' },
+  { html: 'kaomoji/kawaii/index.html', data: 'assets/data/kaomoji.js', category: 'kawaii' },
+  { html: 'kaomoji/cat/index.html', data: 'assets/data/kaomoji.js', category: 'cat' },
+  { html: 'kaomoji/happy/index.html', data: 'assets/data/kaomoji.js', category: 'happy' },
+  { html: 'kaomoji/love/index.html', data: 'assets/data/kaomoji.js', category: 'love' },
+  { html: 'kaomoji/rabbit/index.html', data: 'assets/data/kaomoji.js', category: 'rabbit' },
+  { html: 'special-characters/arrow/index.html', data: 'assets/data/special-characters.js', category: 'arrow' },
+  { html: 'kawaii-copy/index.html', data: 'assets/data/kawaii-copy.js' },
+  { html: 'kawaii-copy/yumekawa/index.html', data: 'assets/data/kawaii-copy.js', query: 'ゆめかわ' },
+  { html: 'kawaii-copy/name-frame/index.html', data: 'assets/data/kawaii-copy.js', category: 'name' },
+  { html: 'kawaii-copy/ryosangata-otaku/index.html', data: 'assets/data/kawaii-copy.js', query: '量産型' },
+  { html: 'kawaii-copy/food/index.html', data: 'assets/data/kawaii-copy.js', query: '食べ物' },
+  { html: 'emoji-copy/index.html', data: 'assets/data/emoji-copy.js' },
+  { html: 'emoji-copy/kawaii/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii' },
+  { html: 'emoji-copy/heart/index.html', data: 'assets/data/emoji-copy.js', category: 'heart' },
+  { html: 'emoji-copy/tear/index.html', data: 'assets/data/emoji-copy.js', category: 'face', query: '涙' },
+  { html: 'emoji-copy/smile/index.html', data: 'assets/data/emoji-copy.js', category: 'face', query: '笑顔' },
+  { html: 'emoji-copy/hand-sign/index.html', data: 'assets/data/emoji-copy.js', query: '手' },
+  { html: 'emoji-copy/flower/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii', query: '花' },
+  { html: 'emoji-copy/star/index.html', data: 'assets/data/emoji-copy.js', category: 'sparkle', query: '星' },
+  { html: 'emoji-copy/birthday/index.html', data: 'assets/data/emoji-copy.js', query: '誕生日' },
+  { html: 'emoji-copy/good-night/index.html', data: 'assets/data/emoji-copy.js', query: 'おやすみ' },
+  { html: 'emoji-copy/sorry/index.html', data: 'assets/data/emoji-copy.js', category: 'face', query: '謝る' },
+  { html: 'emoji-copy/thank-you/index.html', data: 'assets/data/emoji-copy.js', query: 'ありがとう' },
+  { html: 'emoji-copy/warning/index.html', data: 'assets/data/emoji-copy.js', category: 'social', query: '警告' },
+  { html: 'emoji-list/person-role/index.html', data: 'assets/data/emoji-list-person-role.js', kind: 'emoji-list' },
+  { html: 'emoji-list/index.html', data: 'assets/data/emoji-list-person-role.js', kind: 'emoji-list-hub' }
+];
+
+function resolveActiveCategory(data, configured) {
+  if (configured && data.categories?.some((category) => category.id === configured)) return configured;
+  return data.categories?.[0]?.id || 'all';
+}
+
+function matchesToolItem(item, activeCategory, query) {
+  const categoryOk = !activeCategory || activeCategory === 'all' || item.category === activeCategory || (item.tags || []).includes(activeCategory);
+  if (!categoryOk) return false;
+  if (!query) return true;
+  const haystack = [item.value, item.label, ...(item.tags || [])].map((part) => String(part || '').toLowerCase().trim()).join(' ');
+  return query.split(/\s+/).every((token) => haystack.includes(token));
+}
+
+function renderLegacyCopyCard(item, hidden) {
+  const visible = item.label && !placeholderLabel(item.label) && item.label !== item.value ? item.label : '';
+  const wide = Boolean(item.wide || String(item.value).includes('\n'));
+  const classes = wide ? 'copy-card copy-card-wide' : 'copy-card';
+  const valueClass = wide ? 'copy-value copy-value-pre' : 'copy-value';
+  const labelHtml = visible ? `<span class="copy-label">${escapeHtml(visible)}</span>` : '';
+  const hiddenAttr = hidden ? ' hidden' : '';
+  return `<button class="${classes}" type="button"${hiddenAttr} data-copy="${escapeAttr(encodeURIComponent(item.value))}" data-label="${escapeAttr(item.label || '')}" data-category="${escapeAttr(item.category || '')}" data-tags="${escapeAttr((item.tags || []).join(','))}"><span class="${valueClass}">${escapeHtml(item.value)}</span>${labelHtml}</button>`;
+}
+
+function renderStaticTabs(data, activeCategory) {
+  return (data.categories || []).map((category) => {
+    const selected = category.id === activeCategory;
+    return `<button class="tool-tab${selected ? ' active' : ''}" type="button" data-tab="${escapeAttr(category.id)}"${selected ? ' aria-current="page"' : ''}>${escapeHtml(category.label)}</button>`;
+  }).join('');
+}
+
+function renderStaticQuickFilters(data) {
+  if (!data.quickFilters?.length) return '';
+  const buttons = data.quickFilters.map((item) => `<button class="quick-filter" type="button" data-quick-query="${escapeAttr(item.query)}">${escapeHtml(item.label)}</button>`).join('');
+  return `<div class="quick-filter-row">${buttons}</div>`;
+}
+
+function renderLegacyItemGrid(data, target) {
+  const activeCategory = resolveActiveCategory(data, target.category);
+  const query = String(target.query || '').toLowerCase().trim();
+  const items = (data.items || []).filter((item) => matchesToolItem(item, activeCategory, query));
+  if (!items.length) throw new Error(`No static items for ${target.html}`);
+  const pageSize = Number(data.pageSize || 48);
+  const gridClass = target.reserve ? 'item-grid item-grid-stable' : 'item-grid';
+  const cards = items.map((item, index) => renderLegacyCopyCard(item, index >= pageSize)).join('');
+  return {
+    count: items.length,
+    activeCategory,
+    grid: `<div class="${gridClass}" data-grid data-static-items>${cards}</div>`,
+    tabs: renderStaticTabs(data, activeCategory),
+    quick: renderStaticQuickFilters(data)
+  };
+}
+
+function renderEmojiListCards(data) {
+  return (data.items || []).map((item) => {
+    const encoded = encodeURIComponent(item.value);
+    const codes = Array.from(item.value).map((char) => `U+${char.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')}`).join(' ');
+    const entities = Array.from(item.value).map((char) => `&#x${char.codePointAt(0).toString(16)};`).join('');
+    return `<article class="emoji-card"><button class="emoji-main" type="button" data-add="${escapeAttr(encoded)}" aria-label="${escapeAttr(`${item.nameJa}を草稿に追加`)}"><span class="emoji-glyph">${escapeHtml(item.value)}</span><span class="emoji-names"><strong>${escapeHtml(item.nameJa)}</strong><span>${escapeHtml(item.nameEn)}</span></span></button><div class="emoji-meta"><span>${escapeHtml(codes)}</span><span>${escapeHtml(entities)}</span></div><div class="emoji-actions"><button type="button" data-copy="${escapeAttr(encoded)}">コピー</button><button type="button" data-add="${escapeAttr(encoded)}">草稿へ</button></div></article>`;
+  }).join('');
+}
+
+function markedGrid(grid) {
+  return `<!-- mojimoon:static-grid:start -->\n${grid}\n<!-- mojimoon:static-grid:end -->`;
+}
+
+function replaceMarkedGrid(html, block, placeholder) {
+  const marker = '<!-- mojimoon:static-grid:start -->';
+  if (html.includes(marker)) {
+    return html.replace(/<!-- mojimoon:static-grid:start -->[\s\S]*?<!-- mojimoon:static-grid:end -->/u, block);
+  }
+  if (placeholder && html.includes(placeholder)) return html.replace(placeholder, block);
+  return null;
+}
+
+async function syncLegacyListGrids(checkOnly) {
+  const files = [];
+  const counts = [];
+  for (const target of legacyListTargets) {
+    const htmlFile = path.join(rootDir, target.html);
+    let html = await fs.readFile(htmlFile, 'utf8');
+    let next = html;
+    let count = 0;
+    if (target.kind === 'emoji-list' || target.kind === 'emoji-list-hub') {
+      const data = await loadWindowData(path.join(rootDir, target.data), 'MojiMoonEmojiListData');
+      const cards = renderEmojiListCards(data);
+      count = data.items?.length || 0;
+      if (!count) throw new Error(`No static items for ${target.html}`);
+      const grid = `<div class="emoji-grid" data-emoji-grid data-static-items>${cards}</div>`;
+      const block = markedGrid(grid);
+      if (target.kind === 'emoji-list-hub') {
+        if (html.includes('<!-- mojimoon:static-grid:start -->')) {
+          next = replaceMarkedGrid(html, block);
+        } else {
+          const section = `<section class="emoji-panel" aria-label="仕事と役割の絵文字"><h2>仕事と役割の絵文字</h2><p>医療従事者、学生、教師、会社員、警察官など、この一覧からコピーできます。肌色の切り替えは<a href="/emoji-list/person-role/">仕事と役割の絵文字一覧</a>です。</p>${block}</section>\n\n  `;
+          if (!html.includes('<section class="seo-section">')) throw new Error(`No SEO section in ${target.html}`);
+          next = html.replace('<section class="seo-section">', `${section}<section class="seo-section">`);
+        }
+        if (!next.includes('/assets/js/emoji-list.js')) {
+          next = next.replace('</body>', `  <div class="toast" data-toast></div>\n  <script src="/assets/data/emoji-list-person-role.js"></script>\n  <script src="/assets/js/emoji-list.js"></script>\n</body>`);
+        }
+      } else {
+        const replaced = replaceMarkedGrid(html, block, '<div class="emoji-grid" data-emoji-grid></div>');
+        if (!replaced) throw new Error(`No emoji grid placeholder in ${target.html}`);
+        next = replaced;
+      }
+    } else {
+      const data = await loadToolData(path.join(rootDir, target.data));
+      const rendered = renderLegacyItemGrid(data, target);
+      count = rendered.count;
+      const block = markedGrid(rendered.grid);
+      const first = !html.includes('<!-- mojimoon:static-grid:start -->');
+      const replacement = first && rendered.quick && !html.includes('class="quick-filter-row"') ? `${rendered.quick}${block}` : block;
+      const replaced = replaceMarkedGrid(html, replacement, '<div class="item-grid" data-grid></div>');
+      if (!replaced) throw new Error(`No item grid placeholder in ${target.html}`);
+      next = replaced;
+      if (next.includes('<div class="tool-tabs" data-tabs></div>')) {
+        next = next.replace('<div class="tool-tabs" data-tabs></div>', `<div class="tool-tabs" data-tabs>${rendered.tabs}</div>`);
+      }
+    }
+    counts.push({ path: `/${target.html.replace(/index\.html$/, '')}`, count });
+    if (next === html) continue;
+    files.push(target.html);
+    if (!checkOnly) await fs.writeFile(htmlFile, next);
+  }
+  return { files, counts };
+}
+
+const siteFooterPattern = /<footer class="site-footer">\s*<p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。(\s*<a href="\/guide\.html">月文字ガイド<\/a>)?<\/p>\s*<\/footer>/u;
+
+async function listHtmlFiles(dir) {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === 'assets') continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) files.push(...await listHtmlFiles(full));
+    else if (entry.name.endsWith('.html')) files.push(full);
+  }
+  return files;
+}
+
+async function syncSiteFooters(checkOnly) {
+  const stale = [];
+  const files = await listHtmlFiles(rootDir);
+  for (const file of files) {
+    const html = await fs.readFile(file, 'utf8');
+    if (html.includes('class="footer-blocks"') || !siteFooterPattern.test(html)) continue;
+    siteFooterPattern.lastIndex = 0;
+    const next = html.replace(siteFooterPattern, (_match, guide) => renderSiteFooter({ guide: Boolean(guide) }));
+    if (next === html) continue;
+    stale.push(path.relative(rootDir, file));
+    if (!checkOnly) await fs.writeFile(file, next);
+  }
+  return stale;
+}
+
+function htmlFileToLoc(file) {
+  const rel = file.split(path.sep).join('/');
+  if (sitemapExclude.has(`https://mojimoon.com/${rel.replace(/index\.html$/, '')}`)) return '';
+  if (rel === 'index.html') return 'https://mojimoon.com/';
+  if (rel.startsWith('en/') || rel.includes('/en/')) return '';
+  if (rel.endsWith('/index.html')) return `https://mojimoon.com/${rel.slice(0, -'index.html'.length)}`;
+  if (rel.endsWith('.html')) return `https://mojimoon.com/${rel}`;
+  return '';
+}
+
+async function bumpSitemapDates(checkOnly, extraFiles) {
+  const locs = new Set(legacyListTargets.map((target) => htmlFileToLoc(target.html)).filter(Boolean));
+  locs.add('https://mojimoon.com/special-characters/');
+  locs.add('https://mojimoon.com/special-characters/star/');
+  locs.add('https://mojimoon.com/special-characters/line/');
+  locs.add('https://mojimoon.com/special-characters/flower/');
+  for (const file of extraFiles) {
+    const loc = htmlFileToLoc(file);
+    if (loc) locs.add(loc);
+  }
+  let sitemap = await fs.readFile(sitemapFile, 'utf8');
+  const generatedStart = sitemap.indexOf(sitemapStart);
+  const generatedEnd = sitemap.indexOf(sitemapEnd);
+  let next = sitemap;
+  for (const loc of locs) {
+    if (sitemapExclude.has(loc)) continue;
+    const needle = `<loc>${loc}</loc>`;
+    const index = next.indexOf(needle);
+    if (index < 0) continue;
+    if (generatedStart >= 0 && index > generatedStart && index < generatedEnd) continue;
+    const urlEnd = next.indexOf('</url>', index);
+    if (urlEnd < 0) continue;
+    const block = next.slice(index, urlEnd);
+    const replaced = block.replace(/<lastmod>[^<]*<\/lastmod>/u, (current) => {
+      const value = current.replace(/<\/?lastmod>/gu, '');
+      return value >= sprintDate ? current : `<lastmod>${sprintDate}</lastmod>`;
+    });
+    next = next.slice(0, index) + replaced + next.slice(urlEnd);
+  }
+  if (next === sitemap) return [];
+  if (!checkOnly) await fs.writeFile(sitemapFile, next);
+  return ['sitemap.xml'];
 }
 
 async function readJson(file) {
@@ -189,7 +439,7 @@ function normalizePage(page, defaults, updated) {
     canonical: `${baseUrl}${pagePath}`,
     navCurrent,
     indexing,
-    updated: page.lastmod || updated || today(),
+    updated: floorSitemapDate(page.lastmod || updated || sprintDate),
     changefreq: page.changefreq || defaults.changefreq,
     priority: String(page.priority || (indexing === 'priority' ? '0.85' : defaults.priority)),
     draftMaxLength: Number(page.draftMaxLength || defaults.draftMaxLength),
@@ -324,7 +574,7 @@ ${hreflang ? `${hreflang}\n` : ''}  <link rel="icon" href="/favicon.ico" type="i
     <main class="tool-wrap"><div class="tool-app"><section class="workspace" aria-label="${escapeAttr(page.toolLabel)}"><div class="tool-tabs" data-tabs></div><div class="search-row"><input class="search-input" type="search" data-search placeholder="${escapeAttr(page.searchPlaceholder || 'キーワードで検索')}"><button class="clear-search" type="button" data-clear-search>クリア</button></div>${renderItemGrid(page)}</section><aside class="composer" aria-label="コピー草稿"><h2>コピー草稿</h2><textarea class="draft-input" data-draft placeholder="${escapeAttr(page.draftPlaceholder || 'クリックするとここに追加されます')}"></textarea><div class="button-row"><button class="primary-btn" type="button" data-copy-draft>コピー</button><button class="secondary-btn" type="button" data-clear-draft>消去</button></div><p class="hint">${escapeHtml(page.composerHint || 'クリックした素材を草稿で組み合わせてコピーできます。')}</p><div class="recent-list" data-recent aria-label="${escapeAttr(page.recentLabel || '最近使ったもの')}"></div></aside></div></main>
     ${renderSeoSection(page)}
     ${renderRelated(page)}
-    <footer class="site-footer"><p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。</p></footer>
+    ${renderSiteFooter()}
   </div>
   <div class="toast" data-toast></div><script src="${escapeAttr(page.dataUrl)}"></script><script src="/assets/js/mobile-draft-sheet.js"></script>
   <script src="/assets/js/text-tools.js"></script>
@@ -360,8 +610,20 @@ function current(page, key) {
 }
 
 function renderHeroLinks(page) {
-  if (!page.heroLinks?.length) return '';
-  return `<div class="category-links">${page.heroLinks.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>`;
+  const links = [...(page.heroLinks || [])];
+  if (page.path === '/special-characters/line/' || page.path === '/special-characters/flower/') {
+    const href = '/special-characters/aesthetic/';
+    if (!links.some((link) => link.href === href)) {
+      links.push({ href, label: '𓂃 𓈒𓏸 コピペ' });
+    }
+  }
+  if (!links.length) return '';
+  return `<div class="category-links">${links.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>`;
+}
+
+function renderSiteFooter(options = {}) {
+  const guide = options.guide ? ' <a href="/guide.html">月文字ガイド</a>' : '';
+  return `<footer class="site-footer"><nav class="footer-blocks" aria-label="関連ページ"><div class="footer-block"><strong>季節・イベント</strong><a href="/emoji-combinations/halloween/">ハロウィン</a><a href="/kaomoji/halloween/">ハロウィン顔文字</a><a href="/emoji-combinations/christmas/">クリスマス</a><a href="/emoji-combinations/new-year/">あけおめ</a><a href="/emoji-combinations/love/">バレンタイン</a></div><div class="footer-block"><strong>推し活</strong><a href="/emoji-combinations/oshi/">推し活絵文字</a><a href="/kaomoji/oshi/">推し活顔文字</a><a href="/uchiwa-moji/">うちわ文字</a><a href="/led-banner/">電光掲示板</a></div></nav><p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。${guide}</p></footer>`;
 }
 
 function renderSeoSection(page) {
@@ -647,6 +909,10 @@ async function writeGeneratedFile(output, dryRun) {
 
 function today() {
   return new Date().toISOString().slice(0, 10);
+}
+
+function floorSitemapDate(value) {
+  return value < sprintDate ? sprintDate : value;
 }
 
 function escapeHtml(value) {
