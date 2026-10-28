@@ -85,6 +85,9 @@ const handwrittenTargets = [
   { html: 'special-characters/heart/index.html', data: 'assets/data/pages/heart.js', headings: true },
   { html: 'special-characters/star/index.html', data: 'assets/data/pages/star.js', headings: true },
   { html: 'emoji-copy/sparkle/index.html', data: 'assets/data/pages/sparkle.js', headings: true },
+  { html: 'kaomoji/kawaii/index.html', data: 'assets/data/pages/kaomoji-kawaii.js', headings: true },
+  { html: 'kaomoji/cat/index.html', data: 'assets/data/pages/kaomoji-cat.js', headings: true },
+  { html: 'kaomoji/happy/index.html', data: 'assets/data/pages/kaomoji-happy.js', headings: true },
   { html: 'kaomoji/sad/index.html', data: 'assets/data/pages/crying.js', headings: true },
   { html: 'kaomoji/angry/index.html', data: 'assets/data/pages/angry.js', headings: true }
 ];
@@ -156,9 +159,6 @@ const legacyListTargets = [
   { html: 'emoji-combinations/kawaii/index.html', data: 'assets/data/emoji-combinations.js', category: 'kawaii' },
   { html: 'emoji-combinations/white/index.html', data: 'assets/data/emoji-combinations.js', category: 'white' },
   { html: 'kaomoji/index.html', data: 'assets/data/kaomoji.js' },
-  { html: 'kaomoji/kawaii/index.html', data: 'assets/data/kaomoji.js', category: 'kawaii' },
-  { html: 'kaomoji/cat/index.html', data: 'assets/data/kaomoji.js', category: 'cat' },
-  { html: 'kaomoji/happy/index.html', data: 'assets/data/kaomoji.js', category: 'happy' },
   { html: 'kaomoji/love/index.html', data: 'assets/data/kaomoji.js', category: 'love' },
   { html: 'kaomoji/rabbit/index.html', data: 'assets/data/kaomoji.js', category: 'rabbit' },
   { html: 'special-characters/arrow/index.html', data: 'assets/data/special-characters.js', category: 'arrow' },
@@ -357,6 +357,11 @@ async function bumpSitemapDates(checkOnly, extraFiles) {
   locs.add('https://mojimoon.com/special-characters/star/');
   locs.add('https://mojimoon.com/special-characters/line/');
   locs.add('https://mojimoon.com/special-characters/flower/');
+  locs.add('https://mojimoon.com/kaomoji/kawaii/');
+  locs.add('https://mojimoon.com/kaomoji/cat/');
+  locs.add('https://mojimoon.com/kaomoji/happy/');
+  locs.add('https://mojimoon.com/emoji-copy/sparkle/');
+  locs.add('https://mojimoon.com/kawaii-copy/');
   for (const file of extraFiles) {
     const loc = htmlFileToLoc(file);
     if (loc) locs.add(loc);
