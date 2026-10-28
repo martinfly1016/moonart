@@ -981,5 +981,23 @@
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>
+  <url>
+    <loc>https://mojimoon.com/emoji-combinations/christmas-message/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/peek/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/throw/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
   <!-- mojimoon:generated-pages:end -->
 </urlset>
