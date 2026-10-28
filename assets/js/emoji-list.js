@@ -125,12 +125,18 @@
   }
 
   function updateDraftState() {
+    if (!draft) return;
     const hasContent = draft.value.trim().length > 0;
     if (copyDraft) copyDraft.disabled = !hasContent;
     mobileDraftSheet?.update();
   }
 
   function addToDraft(value) {
+    if (!draft) {
+      copyText(value);
+      remember(value);
+      return;
+    }
     const spacer = draft.value && !draft.value.endsWith(' ') ? ' ' : '';
     const nextValue = `${draft.value}${spacer}${value}`.trimStart();
     if (nextValue.length > draftMaxLength) {
@@ -213,7 +219,14 @@
     `).join('');
   }
 
+  let keepStaticGrid = Boolean(grid?.hasAttribute('data-static-items'));
+
   function renderGrid() {
+    if (keepStaticGrid && activeCategory === 'all' && !activeTone && !normalize(search?.value || '')) {
+      if (count) count.textContent = `${grid.querySelectorAll('[data-copy]').length}件`;
+      return;
+    }
+    keepStaticGrid = false;
     const items = filteredItems();
     if (count) count.textContent = `${items.length}件`;
     if (!items.length) {
@@ -324,5 +337,5 @@
   renderGrid();
   renderRecent();
   updateDraftState();
-  setupCollapsibleSeo();
+  if (draft) setupCollapsibleSeo();
 })();

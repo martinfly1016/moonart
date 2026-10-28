@@ -8,6 +8,30 @@
   unicode-range: U+13083, U+130C3, U+1316F, U+131A9, U+131AA, U+131B0, U+131B8, U+131E2, U+131EC, U+131F3, U+13212, U+132DC, U+1336F, U+133CF, U+133F8;
 }
 
+.footer-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin: 0 0 12px;
+}
+
+.footer-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: baseline;
+}
+
+.footer-block strong {
+  margin-right: 2px;
+}
+
+.footer-block a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .site-nav {
   position: relative;
   z-index: 50;

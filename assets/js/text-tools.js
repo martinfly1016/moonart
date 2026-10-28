@@ -301,6 +301,12 @@
 
   function renderQuickFilters() {
     if (!data.quickFilters?.length || !searchInput) return;
+    const searchRow = searchInput.closest('.search-row');
+    const existing = searchRow?.nextElementSibling;
+    if (existing?.classList.contains('quick-filter-row')) {
+      quickFilterWrap = existing;
+      return;
+    }
     quickFilterWrap = document.createElement('div');
     quickFilterWrap.className = 'quick-filter-row';
     quickFilterWrap.innerHTML = data.quickFilters.map((item) => `
@@ -335,6 +341,7 @@
 
   const staticItems = Boolean(grid?.hasAttribute('data-static-items'));
   const staticCards = staticItems ? Array.from(grid.querySelectorAll('[data-copy]')) : [];
+  let preferStatic = staticItems;
   let noResultsNode = null;
   if (staticItems) {
     noResultsNode = document.createElement('div');
@@ -405,10 +412,26 @@
     renderPagination(matched.length);
   }
 
+  function staticMatchCount() {
+    const query = normalize(searchInput.value);
+    return staticCards.filter((card) => {
+      const item = {
+        value: safeDecode(card.dataset.copy),
+        label: card.dataset.label || '',
+        category: card.dataset.category || '',
+        tags: (card.dataset.tags || '').split(',').filter(Boolean)
+      };
+      return categoryMatches(item) && itemMatches(item, query);
+    }).length;
+  }
+
   function renderGrid() {
-    if (staticItems) {
-      renderStaticGrid();
-      return;
+    if (preferStatic) {
+      if (staticMatchCount() >= filteredItems().length) {
+        renderStaticGrid();
+        return;
+      }
+      preferStatic = false;
     }
     const items = filteredItems();
     if (!items.length) {
