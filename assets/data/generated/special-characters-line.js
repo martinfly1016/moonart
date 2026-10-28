@@ -22,6 +22,14 @@ window.MojiMoonToolData = {
     {
       "label": "プロフィール",
       "query": "プロフィール"
+    },
+    {
+      "label": "可愛い線",
+      "query": "可愛い"
+    },
+    {
+      "label": "インスタ",
+      "query": "インスタ"
     }
   ],
   "categories": [
@@ -32,6 +40,18 @@ window.MojiMoonToolData = {
     {
       "id": "plain",
       "label": "区切り線"
+    },
+    {
+      "id": "kawaii-line",
+      "label": "可愛い線"
+    },
+    {
+      "id": "dotted",
+      "label": "点線"
+    },
+    {
+      "id": "insta-simple",
+      "label": "インスタ"
     },
     {
       "id": "cute",
@@ -307,6 +327,534 @@ window.MojiMoonToolData = {
         "区切り線",
         "ライン",
         "罫線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "♡┈♡┈♡",
+      "label": "ハートが等間隔の線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ෆ┈┈ෆ",
+      "label": "丸ハートで止めた点線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "♡⸝⸝┈┈⸝⸝♡",
+      "label": "やわらかい括弧とハート",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ꕤ┈┈ꕤ",
+      "label": "花で止めた点線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⋆┈┈⋆┈┈⋆",
+      "label": "小さい星の点線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓂃 ♡ 𓂃",
+      "label": "ゆるい線でハートを挟む",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ฅ┈┈ฅ",
+      "label": "耳を付けた線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ɞ┈┈ʚ",
+      "label": "羽で止めた短い線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "♡*.·┈┈·.*♡",
+      "label": "点を散らしたハート線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "˚₊♡┈┈♡₊˚",
+      "label": "上下に余白のあるハート線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "꒰ঌ┈┈໒꒱",
+      "label": "羽括弧のあいだの点線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✿┈┈✿",
+      "label": "花びらで止めた線",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⸜♡⸝┈┈⸜♡⸝",
+      "label": "小さなハートを繰り返す",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "₊˚ෆ┈┈ෆ˚₊",
+      "label": "丸ハートの両側に余白",
+      "category": "kawaii-line",
+      "tags": [
+        "可愛い線",
+        "かわいい",
+        "飾り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┄┄┄┄",
+      "label": "細かい三点リーダー線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┉┉┉┉",
+      "label": "少し太い点線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┈ ┈ ┈ ┈",
+      "label": "間を空けた点線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "·· ┈ ··",
+      "label": "両端だけ点の線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⋯ ⋯ ⋯",
+      "label": "中点を離して置く",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "‥‥‥‥",
+      "label": "二点リーダーの列",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "•┈•┈•┈•",
+      "label": "丸点と点線の交互",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┈ · · ┈",
+      "label": "中央に二粒の点",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⋯┈⋯┈⋯",
+      "label": "中点と点線の交互",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "· ┈ · ┈ ·",
+      "label": "一粒ずつ挟む点線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "・・・・・",
+      "label": "中黒だけの短い点線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "─ ─ ─ ─",
+      "label": "実線を離した点線風",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┉ · ┉ · ┉",
+      "label": "太い点線に一粒",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⠤⠤⠤⠤",
+      "label": "点字の横線",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⠂⠂⠂⠂",
+      "label": "点字の点を横に",
+      "category": "dotted",
+      "tags": [
+        "点線",
+        "点",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "────────",
+      "label": "飾りなしの細線",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "┈┈┈",
+      "label": "三つの短い点線",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "———",
+      "label": "ダッシュだけの線",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "・・・・",
+      "label": "中黒四つ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓂃𓂃",
+      "label": "ゆるい線を二つ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓈒 𓈒 𓈒",
+      "label": "余白の点を三つ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⋆ ⋆ ⋆",
+      "label": "小さい星を三つ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "♡ ♡",
+      "label": "ハートを二つ、間を空ける",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ꕤ",
+      "label": "花一つで区切る",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "୨୧",
+      "label": "小さなリボンだけ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✦",
+      "label": "星一つで区切る",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "· · ·",
+      "label": "まばらな点を三つ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "─ ─ ─",
+      "label": "短い実線を三つ",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "𓂃𓈒",
+      "label": "線と点を一組",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "♡",
+      "label": "ハート一つで区切る",
+      "category": "insta-simple",
+      "tags": [
+        "インスタ",
+        "シンプル",
+        "区切り線"
       ],
       "wide": false,
       "beadHref": ""

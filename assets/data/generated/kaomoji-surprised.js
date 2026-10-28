@@ -8,16 +8,20 @@ window.MojiMoonToolData = {
       "query": "びっくり"
     },
     {
+      "label": "かわいい",
+      "query": "かわいい"
+    },
+    {
+      "label": "驚き",
+      "query": "驚き"
+    },
+    {
       "label": "えっ",
       "query": "えっ"
     },
     {
       "label": "まじ",
       "query": "まじ"
-    },
-    {
-      "label": "返信",
-      "query": "返信"
     }
   ],
   "categories": [
@@ -26,16 +30,20 @@ window.MojiMoonToolData = {
       "label": "すべて"
     },
     {
+      "id": "cute",
+      "label": "かわいい"
+    },
+    {
+      "id": "odoroki",
+      "label": "驚き"
+    },
+    {
       "id": "small",
       "label": "えっ"
     },
     {
       "id": "big",
       "label": "まじ"
-    },
-    {
-      "id": "cute",
-      "label": "かわいい"
     },
     {
       "id": "reply",
@@ -48,6 +56,438 @@ window.MojiMoonToolData = {
   ],
   "pageSize": 160,
   "items": [
+    {
+      "value": "(☆_☆)",
+      "label": "目が星になる",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(✧∀✧)",
+      "label": "うれしい驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡•́△•̀｡)",
+      "label": "口が三角",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(☆▽☆)",
+      "label": "星目で笑う驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑°o°๑)",
+      "label": "口が丸い",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡･о･｡)",
+      "label": "(｡･о･｡)",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(⊙ꇴ⊙)",
+      "label": "(⊙ꇴ⊙)",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ฅ(º ﾛ º ฅ)",
+      "label": "ฅ(º ﾛ º ฅ)",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(ﾟoﾟ;;",
+      "label": "(ﾟoﾟ;;",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑º ﾛ º๑)",
+      "label": "(๑º ﾛ º๑)",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(✧ω✧)",
+      "label": "目が光って驚く",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(☆ω☆)",
+      "label": "星の目でぽかん",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(♡°□°♡)",
+      "label": "ハートに挟んだ口",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑°ᗜ°๑)",
+      "label": "笑って驚く",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑òᗜó๑)",
+      "label": "目が寄る驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡>_<｡)",
+      "label": "目を細めて驚く",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑°ロ°๑)",
+      "label": "丸い顔の大きい口",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(*ﾟ□ﾟ*)",
+      "label": "声が出る前の顔",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "( ˶°□°˶)",
+      "label": "もふっと驚く",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(☆□☆)",
+      "label": "星の目と四角い口",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑✧ᗜ✧๑)",
+      "label": "きらきらした驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡•́ω•̀｡)",
+      "label": "口が小さい驚き",
+      "category": "cute",
+      "tags": [
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚いた(ﾟдﾟ)",
+      "label": "驚いた",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚く(⊙_⊙)",
+      "label": "驚く",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚き(°ロ°)",
+      "label": "驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "あまりの驚き(°Д°)",
+      "label": "あまりの驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "思わず驚く(ﾉ≧∀≦)ﾉ",
+      "label": "思わず驚く",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚(☉_☉)",
+      "label": "目が点の驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚くΣ(ﾟДﾟ)",
+      "label": "のけぞる驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚き(◎_◎;)",
+      "label": "目が回る前の驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚いた(°□°)",
+      "label": "口が開いた驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "まじで驚く(￣□￣;)",
+      "label": "焦りの驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "驚きすぎ(ﾟﾛﾟ)",
+      "label": "声にならない驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ちょっと驚く(；・∀・)",
+      "label": "汗が出る前の驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(°△°)驚き",
+      "label": "口が三角の驚き",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ、驚く(；ﾟдﾟ)",
+      "label": "えっ、驚く",
+      "category": "odoroki",
+      "tags": [
+        "驚き",
+        "驚く",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
     {
       "value": "(；・∀・)",
       "label": "軽く驚く",
@@ -73,17 +513,6 @@ window.MojiMoonToolData = {
     {
       "value": "(●´ω｀●)",
       "label": "目を丸くして固まる",
-      "category": "small",
-      "tags": [
-        "びっくり",
-        "えっ"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(๑°o°๑)",
-      "label": "口が丸い",
       "category": "small",
       "tags": [
         "びっくり",
@@ -335,50 +764,6 @@ window.MojiMoonToolData = {
       "beadHref": ""
     },
     {
-      "value": "(☆_☆)",
-      "label": "目が星になる",
-      "category": "cute",
-      "tags": [
-        "びっくり",
-        "かわいい"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(✧∀✧)",
-      "label": "うれしい驚き",
-      "category": "cute",
-      "tags": [
-        "びっくり",
-        "かわいい"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(｡•́△•̀｡)",
-      "label": "口が三角",
-      "category": "cute",
-      "tags": [
-        "びっくり",
-        "かわいい"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(☆▽☆)",
-      "label": "星目で笑う驚き",
-      "category": "cute",
-      "tags": [
-        "びっくり",
-        "かわいい"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
       "value": "えっ(ﾟдﾟ)",
       "label": "短い返事",
       "category": "reply",
@@ -475,16 +860,6 @@ window.MojiMoonToolData = {
       "beadHref": ""
     },
     {
-      "value": "ฅ(º ﾛ º ฅ)",
-      "label": "ฅ(º ﾛ º ฅ)",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
       "value": "(੭ ᐕ)੭",
       "label": "(੭ ᐕ)੭",
       "category": "more",
@@ -495,48 +870,8 @@ window.MojiMoonToolData = {
       "beadHref": ""
     },
     {
-      "value": "(｡･о･｡)",
-      "label": "(｡･о･｡)",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(ﾟoﾟ;;",
-      "label": "(ﾟoﾟ;;",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(⊙ꇴ⊙)",
-      "label": "(⊙ꇴ⊙)",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
       "value": "( ﾟдﾟ)",
       "label": "( ﾟдﾟ)",
-      "category": "more",
-      "tags": [
-        "その他"
-      ],
-      "wide": false,
-      "beadHref": ""
-    },
-    {
-      "value": "(๑º ﾛ º๑)",
-      "label": "(๑º ﾛ º๑)",
       "category": "more",
       "tags": [
         "その他"

@@ -1639,7 +1639,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-11",
+      "lastmod": "2026-10-28",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -1649,19 +1649,27 @@
       "path": "/kaomoji/surprised/",
       "family": "kaomoji",
       "indexing": "priority",
-      "title": "びっくり顔文字コピペ | 驚く・えっ・まじで - MojiMoon",
-      "description": "びっくり顔文字を、軽い「えっ」、固まる「まじ」、うれしい驚きに分けてコピーできます。LINEの一言返信に付ける短い顔もまとめています。",
-      "ogTitle": "びっくり顔文字コピペ",
-      "ogDescription": "えっ、まじ、うれしい驚き。温度の違うびっくり顔文字。",
+      "title": "びっくり顔文字 コピペ｜かわいい驚き顔文字・えっ・まじで - MojiMoon",
+      "description": "かわいいびっくり顔文字を先に並べています。(☆_☆)、(✧∀✧)、(๑°o°๑)、驚いた(ﾟдﾟ)、Σ(ﾟДﾟ)。えっ、まじ、驚きで温度が違います。",
+      "ogTitle": "びっくり顔文字 コピペ｜かわいい驚き顔文字",
+      "ogDescription": "(☆_☆) や 驚いた(ﾟдﾟ) など、かわいい驚き顔文字と、えっ・まじの温度違いをコピーできます。",
       "eyebrow": "Surprised Kaomoji",
-      "h1": "びっくり顔文字コピペ",
-      "hero": "同じ「びっくり」でも、初耳の「えっ」と、予定が崩れた「まじ」では口の開き方が違います。大きい Σ は文章より顔が勝つので、チャットの最後の一言に向いています。",
+      "h1": "びっくり顔文字 コピペ",
+      "hero": "かわいい驚きを先に置いています。(☆_☆) や (✧∀✧) はうれしい報告、(ﾟωﾟ) は初耳の「えっ」、Σ(ﾟДﾟ) は予定が崩れた「まじ」です。驚き、驚く、で探す顔はその次です。",
       "toolLabel": "びっくり顔文字",
-      "searchPlaceholder": "びっくり、えっ、まじ、かわいい",
+      "searchPlaceholder": "びっくり、かわいい、驚き、えっ、まじ",
       "draftPlaceholder": "顔文字をクリックするとここに入ります",
       "composerHint": "返事の言葉を先に書いて、顔は一つだけ足すと読みやすいです。",
       "recentLabel": "最近使ったびっくり顔文字",
       "categories": [
+        {
+          "id": "cute",
+          "label": "かわいい"
+        },
+        {
+          "id": "odoroki",
+          "label": "驚き"
+        },
         {
           "id": "small",
           "label": "えっ"
@@ -1669,10 +1677,6 @@
         {
           "id": "big",
           "label": "まじ"
-        },
-        {
-          "id": "cute",
-          "label": "かわいい"
         },
         {
           "id": "reply",
@@ -1689,19 +1693,189 @@
           "query": "びっくり"
         },
         {
+          "label": "かわいい",
+          "query": "かわいい"
+        },
+        {
+          "label": "驚き",
+          "query": "驚き"
+        },
+        {
           "label": "えっ",
           "query": "えっ"
         },
         {
           "label": "まじ",
           "query": "まじ"
-        },
-        {
-          "label": "返信",
-          "query": "返信"
         }
       ],
       "itemGroups": [
+        {
+          "category": "cute",
+          "heading": "かわいく驚く",
+          "tags": [
+            "びっくり",
+            "かわいい",
+            "驚き"
+          ],
+          "items": [
+            {
+              "value": "(☆_☆)",
+              "label": "目が星になる"
+            },
+            {
+              "value": "(✧∀✧)",
+              "label": "うれしい驚き"
+            },
+            {
+              "value": "(｡•́△•̀｡)",
+              "label": "口が三角"
+            },
+            {
+              "value": "(☆▽☆)",
+              "label": "星目で笑う驚き"
+            },
+            {
+              "value": "(๑°o°๑)",
+              "label": "口が丸い"
+            },
+            {
+              "value": "(｡･о･｡)",
+              "label": "(｡･о･｡)"
+            },
+            {
+              "value": "(⊙ꇴ⊙)",
+              "label": "(⊙ꇴ⊙)"
+            },
+            {
+              "value": "ฅ(º ﾛ º ฅ)",
+              "label": "ฅ(º ﾛ º ฅ)"
+            },
+            {
+              "value": "(ﾟoﾟ;;",
+              "label": "(ﾟoﾟ;;"
+            },
+            {
+              "value": "(๑º ﾛ º๑)",
+              "label": "(๑º ﾛ º๑)"
+            },
+            {
+              "value": "(✧ω✧)",
+              "label": "目が光って驚く"
+            },
+            {
+              "value": "(☆ω☆)",
+              "label": "星の目でぽかん"
+            },
+            {
+              "value": "(♡°□°♡)",
+              "label": "ハートに挟んだ口"
+            },
+            {
+              "value": "(๑°ᗜ°๑)",
+              "label": "笑って驚く"
+            },
+            {
+              "value": "(๑òᗜó๑)",
+              "label": "目が寄る驚き"
+            },
+            {
+              "value": "(｡>_<｡)",
+              "label": "目を細めて驚く"
+            },
+            {
+              "value": "(๑°ロ°๑)",
+              "label": "丸い顔の大きい口"
+            },
+            {
+              "value": "(*ﾟ□ﾟ*)",
+              "label": "声が出る前の顔"
+            },
+            {
+              "value": "( ˶°□°˶)",
+              "label": "もふっと驚く"
+            },
+            {
+              "value": "(☆□☆)",
+              "label": "星の目と四角い口"
+            },
+            {
+              "value": "(๑✧ᗜ✧๑)",
+              "label": "きらきらした驚き"
+            },
+            {
+              "value": "(｡•́ω•̀｡)",
+              "label": "口が小さい驚き"
+            }
+          ]
+        },
+        {
+          "category": "odoroki",
+          "heading": "驚き・驚く",
+          "tags": [
+            "驚き",
+            "驚く",
+            "びっくり"
+          ],
+          "items": [
+            {
+              "value": "驚いた(ﾟдﾟ)",
+              "label": "驚いた"
+            },
+            {
+              "value": "驚く(⊙_⊙)",
+              "label": "驚く"
+            },
+            {
+              "value": "驚き(°ロ°)",
+              "label": "驚き"
+            },
+            {
+              "value": "あまりの驚き(°Д°)",
+              "label": "あまりの驚き"
+            },
+            {
+              "value": "思わず驚く(ﾉ≧∀≦)ﾉ",
+              "label": "思わず驚く"
+            },
+            {
+              "value": "驚(☉_☉)",
+              "label": "目が点の驚き"
+            },
+            {
+              "value": "驚くΣ(ﾟДﾟ)",
+              "label": "のけぞる驚き"
+            },
+            {
+              "value": "驚き(◎_◎;)",
+              "label": "目が回る前の驚き"
+            },
+            {
+              "value": "驚いた(°□°)",
+              "label": "口が開いた驚き"
+            },
+            {
+              "value": "まじで驚く(￣□￣;)",
+              "label": "焦りの驚き"
+            },
+            {
+              "value": "驚きすぎ(ﾟﾛﾟ)",
+              "label": "声にならない驚き"
+            },
+            {
+              "value": "ちょっと驚く(；・∀・)",
+              "label": "汗が出る前の驚き"
+            },
+            {
+              "value": "(°△°)驚き",
+              "label": "口が三角の驚き"
+            },
+            {
+              "value": "えっ、驚く(；ﾟдﾟ)",
+              "label": "えっ、驚く"
+            }
+          ]
+        },
         {
           "category": "small",
           "heading": "軽い驚き",
@@ -1729,14 +1903,6 @@
             {
               "value": "(●´ω｀●)",
               "label": "目を丸くして固まる",
-              "tags": [
-                "えっ",
-                "びっくり"
-              ]
-            },
-            {
-              "value": "(๑°o°๑)",
-              "label": "口が丸い",
               "tags": [
                 "えっ",
                 "びっくり"
@@ -1931,48 +2097,6 @@
           ]
         },
         {
-          "category": "cute",
-          "heading": "かわいく驚く",
-          "tags": [
-            "びっくり",
-            "かわいい"
-          ],
-          "items": [
-            {
-              "value": "(☆_☆)",
-              "label": "目が星になる",
-              "tags": [
-                "かわいい",
-                "びっくり"
-              ]
-            },
-            {
-              "value": "(✧∀✧)",
-              "label": "うれしい驚き",
-              "tags": [
-                "かわいい",
-                "びっくり"
-              ]
-            },
-            {
-              "value": "(｡•́△•̀｡)",
-              "label": "口が三角",
-              "tags": [
-                "かわいい",
-                "びっくり"
-              ]
-            },
-            {
-              "value": "(☆▽☆)",
-              "label": "星目で笑う驚き",
-              "tags": [
-                "かわいい",
-                "びっくり"
-              ]
-            }
-          ]
-        },
-        {
           "category": "reply",
           "heading": "文の後ろに置く",
           "tags": [
@@ -2047,38 +2171,13 @@
               "tags": []
             },
             {
-              "value": "ฅ(º ﾛ º ฅ)",
-              "label": "ฅ(º ﾛ º ฅ)",
-              "tags": []
-            },
-            {
               "value": "(੭ ᐕ)੭",
               "label": "(੭ ᐕ)੭",
               "tags": []
             },
             {
-              "value": "(｡･о･｡)",
-              "label": "(｡･о･｡)",
-              "tags": []
-            },
-            {
-              "value": "(ﾟoﾟ;;",
-              "label": "(ﾟoﾟ;;",
-              "tags": []
-            },
-            {
-              "value": "(⊙ꇴ⊙)",
-              "label": "(⊙ꇴ⊙)",
-              "tags": []
-            },
-            {
               "value": "( ﾟдﾟ)",
               "label": "( ﾟдﾟ)",
-              "tags": []
-            },
-            {
-              "value": "(๑º ﾛ º๑)",
-              "label": "(๑º ﾛ º๑)",
               "tags": []
             },
             {
@@ -2207,8 +2306,8 @@
       "seo": {
         "heading": "びっくりの大きさ",
         "paragraphs": [
-          "びっくり顔文字は、相手の話に乗った証拠として文末に置きます。(ﾟдﾟ) はまだ会話の中にいられて、Σ(ﾟДﾟ) は会話を一度止める顔です。嬉しい報告への返事に Σ を使うと、驚いているのか引いているのか伝わらなくなります。",
-          "泣く顔や眠い顔と並べると、感情の目録になってしまいます。このページは「今、想定の外にいる」顔だけにしています。"
+          "びっくり顔文字は、相手の話に乗った証拠として文末に置きます。かわいい驚きは (☆_☆) や (✧∀✧)、(๑°o°๑)。(ﾟдﾟ) はまだ会話の中にいられて、Σ(ﾟДﾟ) は会話を一度止める顔です。うれしい報告に Σ を使うと、驚いているのか引いているのか伝わらなくなります。",
+          "「驚き」「驚く」で探すときは、驚いた(ﾟдﾟ) や 驚く(⊙_⊙) のように言葉が付いた顔を使ってください。泣く顔や眠い顔と並べると、感情の目録になってしまいます。"
         ],
         "sections": [
           {
@@ -8710,13 +8809,13 @@
       "path": "/special-characters/flower/",
       "family": "special-characters",
       "navCurrent": "special-characters",
-      "title": "花特殊文字コピペ | 花・春・かわいい記号をコピー - MojiMoon",
-      "description": "花特殊文字コピペをコピーできる無料ツール。花、春、可愛い、プロフィール、装飾に使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
-      "ogTitle": "花特殊文字コピペ | 花・春・かわいい記号をコピー",
-      "ogDescription": "花に合う特殊文字をまとめてコピーできます。",
+      "title": "𓂃 花の絵文字・記号 コピペ｜かわいい花・春の特殊文字 - MojiMoon",
+      "description": "𓂃、✿、❀、❁、ꕤ など、花の絵文字と記号をコピーできます。プロフィールの余白や春の投稿に、短い花を一つ足せます。",
+      "ogTitle": "𓂃 花の絵文字・記号 コピペ",
+      "ogDescription": "𓂃、✿、❀、❁。花の絵文字と記号を、名前の下や春の投稿用にコピーできます。",
       "eyebrow": "Flower Symbols Copy",
-      "h1": "花特殊文字コピペ",
-      "hero": "花 コピペ、花 特殊文字、可愛い 花 記号を探しているときに使いやすい花・春・ふんわり系の特殊文字を集めました。気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "h1": "𓂃 花の絵文字・記号 コピペ",
+      "hero": "花の絵文字と記号です。名前の下に置く余白は 𓂃、単体で貼る花は ✿ ❀ ❁、小さい花は ꕤ です。春の投稿では、花を一つにすると文章が読めます。",
       "toolLabel": "花特殊文字ツール",
       "searchPlaceholder": "花、春、可愛い、プロフィール、装飾などで検索",
       "draftPlaceholder": "花特殊文字をクリックするとここに追加されます",
@@ -9130,7 +9229,8 @@
           "href": "/special-characters/ribbon/",
           "description": "量産型プロフィールに使う。"
         }
-      ]
+      ],
+      "lastmod": "2026-10-28"
     },
     {
       "lastmod": "2026-10-11",
@@ -9710,7 +9810,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-26",
+      "lastmod": "2026-10-28",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -9736,6 +9836,18 @@
         {
           "id": "plain",
           "label": "区切り線"
+        },
+        {
+          "id": "kawaii-line",
+          "label": "可愛い線"
+        },
+        {
+          "id": "dotted",
+          "label": "点線"
+        },
+        {
+          "id": "insta-simple",
+          "label": "インスタ"
         },
         {
           "id": "cute",
@@ -9774,6 +9886,14 @@
         {
           "label": "プロフィール",
           "query": "プロフィール"
+        },
+        {
+          "label": "可愛い線",
+          "query": "可愛い"
+        },
+        {
+          "label": "インスタ",
+          "query": "インスタ"
         }
       ],
       "itemGroups": [
@@ -9953,6 +10073,215 @@
               "tags": [
                 "区切り線"
               ]
+            }
+          ]
+        },
+        {
+          "category": "kawaii-line",
+          "heading": "可愛い線",
+          "tags": [
+            "可愛い線",
+            "かわいい",
+            "飾り線"
+          ],
+          "items": [
+            {
+              "value": "♡┈♡┈♡",
+              "label": "ハートが等間隔の線"
+            },
+            {
+              "value": "ෆ┈┈ෆ",
+              "label": "丸ハートで止めた点線"
+            },
+            {
+              "value": "♡⸝⸝┈┈⸝⸝♡",
+              "label": "やわらかい括弧とハート"
+            },
+            {
+              "value": "ꕤ┈┈ꕤ",
+              "label": "花で止めた点線"
+            },
+            {
+              "value": "⋆┈┈⋆┈┈⋆",
+              "label": "小さい星の点線"
+            },
+            {
+              "value": "𓂃 ♡ 𓂃",
+              "label": "ゆるい線でハートを挟む"
+            },
+            {
+              "value": "ฅ┈┈ฅ",
+              "label": "耳を付けた線"
+            },
+            {
+              "value": "ɞ┈┈ʚ",
+              "label": "羽で止めた短い線"
+            },
+            {
+              "value": "♡*.·┈┈·.*♡",
+              "label": "点を散らしたハート線"
+            },
+            {
+              "value": "˚₊♡┈┈♡₊˚",
+              "label": "上下に余白のあるハート線"
+            },
+            {
+              "value": "꒰ঌ┈┈໒꒱",
+              "label": "羽括弧のあいだの点線"
+            },
+            {
+              "value": "✿┈┈✿",
+              "label": "花びらで止めた線"
+            },
+            {
+              "value": "⸜♡⸝┈┈⸜♡⸝",
+              "label": "小さなハートを繰り返す"
+            },
+            {
+              "value": "₊˚ෆ┈┈ෆ˚₊",
+              "label": "丸ハートの両側に余白"
+            }
+          ]
+        },
+        {
+          "category": "dotted",
+          "heading": "点線",
+          "tags": [
+            "点線",
+            "点",
+            "区切り線"
+          ],
+          "items": [
+            {
+              "value": "┄┄┄┄",
+              "label": "細かい三点リーダー線"
+            },
+            {
+              "value": "┉┉┉┉",
+              "label": "少し太い点線"
+            },
+            {
+              "value": "┈ ┈ ┈ ┈",
+              "label": "間を空けた点線"
+            },
+            {
+              "value": "·· ┈ ··",
+              "label": "両端だけ点の線"
+            },
+            {
+              "value": "⋯ ⋯ ⋯",
+              "label": "中点を離して置く"
+            },
+            {
+              "value": "‥‥‥‥",
+              "label": "二点リーダーの列"
+            },
+            {
+              "value": "•┈•┈•┈•",
+              "label": "丸点と点線の交互"
+            },
+            {
+              "value": "┈ · · ┈",
+              "label": "中央に二粒の点"
+            },
+            {
+              "value": "⋯┈⋯┈⋯",
+              "label": "中点と点線の交互"
+            },
+            {
+              "value": "· ┈ · ┈ ·",
+              "label": "一粒ずつ挟む点線"
+            },
+            {
+              "value": "・・・・・",
+              "label": "中黒だけの短い点線"
+            },
+            {
+              "value": "─ ─ ─ ─",
+              "label": "実線を離した点線風"
+            },
+            {
+              "value": "┉ · ┉ · ┉",
+              "label": "太い点線に一粒"
+            },
+            {
+              "value": "⠤⠤⠤⠤",
+              "label": "点字の横線"
+            },
+            {
+              "value": "⠂⠂⠂⠂",
+              "label": "点字の点を横に"
+            }
+          ]
+        },
+        {
+          "category": "insta-simple",
+          "heading": "インスタ区切り線（シンプル）",
+          "tags": [
+            "インスタ",
+            "シンプル",
+            "区切り線"
+          ],
+          "items": [
+            {
+              "value": "────────",
+              "label": "飾りなしの細線"
+            },
+            {
+              "value": "┈┈┈",
+              "label": "三つの短い点線"
+            },
+            {
+              "value": "———",
+              "label": "ダッシュだけの線"
+            },
+            {
+              "value": "・・・・",
+              "label": "中黒四つ"
+            },
+            {
+              "value": "𓂃𓂃",
+              "label": "ゆるい線を二つ"
+            },
+            {
+              "value": "𓈒 𓈒 𓈒",
+              "label": "余白の点を三つ"
+            },
+            {
+              "value": "⋆ ⋆ ⋆",
+              "label": "小さい星を三つ"
+            },
+            {
+              "value": "♡ ♡",
+              "label": "ハートを二つ、間を空ける"
+            },
+            {
+              "value": "ꕤ",
+              "label": "花一つで区切る"
+            },
+            {
+              "value": "୨୧",
+              "label": "小さなリボンだけ"
+            },
+            {
+              "value": "✦",
+              "label": "星一つで区切る"
+            },
+            {
+              "value": "· · ·",
+              "label": "まばらな点を三つ"
+            },
+            {
+              "value": "─ ─ ─",
+              "label": "短い実線を三つ"
+            },
+            {
+              "value": "𓂃𓈒",
+              "label": "線と点を一組"
+            },
+            {
+              "value": "♡",
+              "label": "ハート一つで区切る"
             }
           ]
         },
@@ -10440,13 +10769,13 @@
       "path": "/special-characters/bracket/",
       "family": "special-characters",
       "navCurrent": "special-characters",
-      "title": "括弧特殊文字コピペ | かわいい括弧・囲み文字をコピー - MojiMoon",
-      "description": "括弧特殊文字コピペをコピーできる無料ツール。括弧、囲み、名前、プロフィール、可愛いに使いやすい特殊文字を検索して、SNSやLINEにそのまま貼り付けられます。",
-      "ogTitle": "括弧特殊文字コピペ | かわいい括弧・囲み文字をコピー",
-      "ogDescription": "括弧に合う特殊文字をまとめてコピーできます。",
+      "title": "かっこ かわいい コピペ｜【】『』꒰꒱ 可愛い括弧 - MojiMoon",
+      "description": "【】、『』、꒰ ꒱、₍ ₎ など、名前や推し名を囲むかわいい括弧をコピーできます。見出しにはすみ付き、やわらかい行には丸い括弧です。",
+      "ogTitle": "かっこ かわいい コピペ｜【】『』꒰꒱",
+      "ogDescription": "【】、『』、꒰ ꒱、₍ ₎。名前を囲むかわいい括弧をコピーできます。",
       "eyebrow": "Bracket Symbols Copy",
-      "h1": "括弧特殊文字コピペ",
-      "hero": "「括弧 特殊文字」「囲み文字 コピペ」「名前 囲み 記号」を探している人向けに、名前、推し名、見出しを囲んで整えるかわいい括弧や装飾フレームを集めました。気に入ったものをクリックして草稿に追加し、名前や短い文章に合わせてまとめてコピーできます。",
+      "h1": "かっこ かわいい コピペ",
+      "hero": "名前や推し名を囲むかっこです。かための見出しは【】と『』、やわらかい一行は ꒰ ꒱ と ₍ ₎。気に入った対を草稿に入れて、中の文字だけ差し替えてコピーできます。",
       "toolLabel": "括弧特殊文字ツール",
       "searchPlaceholder": "括弧、囲み、名前、プロフィール、可愛いなどで検索",
       "draftPlaceholder": "括弧特殊文字をクリックするとここに追加されます",
@@ -10848,7 +11177,8 @@
           "href": "/fancy-text-generator/",
           "description": "中に入れる文字を変換。"
         }
-      ]
+      ],
+      "lastmod": "2026-10-28"
     },
     {
       "slug": "special-characters-crown",
@@ -26287,7 +26617,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-11",
+      "lastmod": "2026-10-28",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -26296,38 +26626,46 @@
       "slug": "emoji-combinations-christmas",
       "path": "/emoji-combinations/christmas/",
       "family": "emoji-combinations",
-      "title": "クリスマス 絵文字 組み合わせ | ツリー・雪・一言 - MojiMoon",
-      "description": "クリスマスの絵文字組み合わせを、短い並び、ドット、𓂃 を添えた形、そのまま送れる一言に分けてコピーできます。",
-      "ogTitle": "クリスマス絵文字の組み合わせ",
-      "ogDescription": "🎄 を中心にした短い並びと、友達に送る一言。",
+      "title": "クリスマス 絵文字 組み合わせ｜ツリー・サンタ・雪・プレゼント - MojiMoon",
+      "description": "🎄⭐、🎅🎁、❄️⛄️、🎁🎀、メリークリスマス 🎄 を、ツリー、サンタ、雪、プレゼント、LINE一言、インスタ、推し活に分けてコピーできます。",
+      "ogTitle": "クリスマス絵文字の組み合わせ｜ツリー・サンタ・雪",
+      "ogDescription": "🎄⭐、🎅🎁、❄️⛄️。ツリー、サンタ、雪、プレゼント、LINE一言、インスタ、推し活の並びをコピーできます。",
       "eyebrow": "Christmas Emoji",
       "h1": "クリスマス絵文字の組み合わせ",
-      "hero": "クリスマスの絵文字は、ツリーを中心にすると散らかりません。雪と星は脇役です。ドットや 𓂃 を添えた静かな形と、友達に送る短い文も同じページに置いています。",
-      "toolLabel": "クリスマスの組み合わせ",
-      "searchPlaceholder": "クリスマス、ツリー、雪、ドット",
+      "hero": "クリスマスの絵文字は、ツリー、サンタ、雪、プレゼントで分けています。チャットの一言、インスタの一行、推し活の現場メモも同じページです。色を全部入れた一行は作りません。",
+      "toolLabel": "クリスマス絵文字の組み合わせ",
+      "searchPlaceholder": "ツリー、サンタ、雪、プレゼント、インスタ、推し",
       "draftPlaceholder": "組み合わせをクリックするとここに入ります",
       "composerHint": "挨拶の文は、絵文字を足す前に名前を先頭へ。",
       "recentLabel": "最近使ったクリスマスの組み合わせ",
       "categories": [
         {
-          "id": "short",
-          "label": "短い"
+          "id": "tree",
+          "label": "ツリー"
         },
         {
-          "id": "picture",
-          "label": "縦に積む"
+          "id": "santa",
+          "label": "サンタ"
         },
         {
-          "id": "quiet",
-          "label": "余白"
+          "id": "snow",
+          "label": "雪"
         },
         {
-          "id": "dot",
-          "label": "ドット"
+          "id": "gift",
+          "label": "プレゼント"
         },
         {
-          "id": "note",
-          "label": "一言"
+          "id": "line",
+          "label": "LINE一言"
+        },
+        {
+          "id": "insta",
+          "label": "インスタ"
+        },
+        {
+          "id": "oshi",
+          "label": "推し活"
         }
       ],
       "quickFilters": [
@@ -26336,227 +26674,442 @@
           "query": "ツリー"
         },
         {
+          "label": "サンタ",
+          "query": "サンタ"
+        },
+        {
           "label": "雪",
           "query": "雪"
         },
         {
-          "label": "ドット",
-          "query": "ドット"
+          "label": "プレゼント",
+          "query": "プレゼント"
         },
         {
-          "label": "メッセージ",
-          "query": "クリスマス"
+          "label": "推し活",
+          "query": "推し"
         }
       ],
       "itemGroups": [
         {
-          "category": "short",
-          "heading": "横に三つまで",
+          "category": "tree",
+          "heading": "ツリー",
           "tags": [
             "クリスマス",
+            "ツリー",
             "絵文字"
           ],
           "items": [
             {
               "value": "🎄⭐",
-              "label": "ツリーと星",
-              "tags": [
-                "クリスマス"
-              ]
+              "label": "ツリーと星"
             },
             {
               "value": "🎄🎁",
-              "label": "ツリーと包み",
-              "tags": [
-                "クリスマス"
-              ]
-            },
-            {
-              "value": "❄️🎄❄️",
-              "label": "雪で挟む",
-              "tags": [
-                "クリスマス"
-              ]
-            },
-            {
-              "value": "🎅🎄",
-              "label": "人とツリー",
-              "tags": [
-                "クリスマス"
-              ]
+              "label": "ツリーと包み"
             },
             {
               "value": "🔔🎄",
-              "label": "ベルとツリー",
-              "tags": [
-                "クリスマス"
-              ]
+              "label": "ベルとツリー"
             },
             {
               "value": "⭐️🎄🎁",
-              "label": "上から下への並び",
-              "tags": [
-                "クリスマス"
-              ]
+              "label": "星、ツリー、包み"
             },
             {
               "value": "🎄❤️",
-              "label": "赤を一つ",
-              "tags": [
-                "クリスマス"
-              ]
+              "label": "赤を一つ"
             },
             {
               "value": "🦌🎄",
-              "label": "トナカイ",
-              "tags": [
-                "クリスマス"
-              ]
-            }
-          ]
-        },
-        {
-          "category": "picture",
-          "heading": "改行して積む",
-          "tags": [
-            "クリスマス"
-          ],
-          "items": [
+              "label": "トナカイとツリー"
+            },
+            {
+              "value": "🎄✨🎄",
+              "label": "きらめきを挟む"
+            },
+            {
+              "value": "⋆🎄⋆",
+              "label": "細い星で挟む"
+            },
+            {
+              "value": "𓂃🎄𓈒𓏸",
+              "label": "余白の中のツリー"
+            },
+            {
+              "value": "✦ 🎄 ✦",
+              "label": "星記号で挟む"
+            },
+            {
+              "value": "· · 🎄 · ·",
+              "label": "ドットの中のツリー",
+              "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-christmas"
+            },
+            {
+              "value": "🎀🎄",
+              "label": "リボンとツリー"
+            },
+            {
+              "value": "🎄🕯️",
+              "label": "ツリーとろうそく"
+            },
+            {
+              "value": "🎄🍪",
+              "label": "クッキーとツリー"
+            },
             {
               "value": "🎄\n🎁🎁🎁",
               "label": "ツリーの下に三つ",
-              "tags": [
-                "クリスマス"
-              ],
               "wide": true
             },
             {
               "value": "  ★\n ★★★\n  🎄",
               "label": "星からツリー",
-              "tags": [
-                "クリスマス"
-              ],
               "wide": true
             }
           ]
         },
         {
-          "category": "quiet",
-          "heading": "𓂃 と一緒に",
+          "category": "santa",
+          "heading": "サンタ",
           "tags": [
             "クリスマス",
-            "おしゃれ"
+            "サンタ"
           ],
           "items": [
             {
-              "value": "𓂃🎄𓈒𓏸",
-              "label": "余白の中のツリー",
-              "tags": [
-                "𓂃",
-                "クリスマス"
-              ]
+              "value": "🎅🎄",
+              "label": "人とツリー"
             },
             {
-              "value": "❄️𓂃𓈒𓏸",
-              "label": "雪と象形文字",
-              "tags": [
-                "𓂃",
-                "クリスマス"
-              ]
+              "value": "🎅🎁",
+              "label": "人と包み"
             },
             {
-              "value": "𓃃𓈒🎄",
-              "label": "象形文字とツリー",
-              "tags": [
-                "𓂃",
-                "クリスマス"
-              ]
+              "value": "🎅❄️",
+              "label": "人と雪"
+            },
+            {
+              "value": "🎄🎅🎁",
+              "label": "ツリー、人、包み"
+            },
+            {
+              "value": "🎅✨",
+              "label": "人と光"
+            },
+            {
+              "value": "🦌🎅",
+              "label": "トナカイと人"
+            },
+            {
+              "value": "🎅🔔",
+              "label": "人とベル"
+            },
+            {
+              "value": "❤️🎅❤️",
+              "label": "赤で挟む"
+            },
+            {
+              "value": "🎅🌟🎁",
+              "label": "人、光る星、包み"
+            },
+            {
+              "value": "⋆🎅⋆",
+              "label": "細い星で人を挟む"
+            },
+            {
+              "value": "🎅🍪🥛",
+              "label": "クッキーと牛乳"
+            },
+            {
+              "value": "🧸🎅",
+              "label": "くまのぬいぐるみ"
             }
           ]
         },
         {
-          "category": "dot",
-          "heading": "ドットのクリスマス",
+          "category": "snow",
+          "heading": "雪",
           "tags": [
-            "ドット",
-            "クリスマス"
+            "クリスマス",
+            "雪"
           ],
           "items": [
             {
-              "value": "· · 🎄 · ·",
-              "label": "ドットの中のツリー",
-              "tags": [
-                "ドット"
-              ],
-              "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-christmas"
+              "value": "❄️🎄❄️",
+              "label": "雪でツリーを挟む"
+            },
+            {
+              "value": "❄️𓂃𓈒𓏸",
+              "label": "雪と象形文字"
             },
             {
               "value": "❄️ · ❄️ · ❄️",
               "label": "雪のドット",
-              "tags": [
-                "ドット"
-              ],
               "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-christmas"
             },
             {
-              "value": "✦ 🎄 ✦",
-              "label": "星記号で挟む",
-              "tags": [
-                "ドット"
-              ],
-              "beadHref": "https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=dot-christmas"
+              "value": "❄️✨",
+              "label": "雪と光"
+            },
+            {
+              "value": "🌨️🎄",
+              "label": "吹雪とツリー"
+            },
+            {
+              "value": "❄️⛄️❄️",
+              "label": "雪だるま"
+            },
+            {
+              "value": "🤍❄️🤍",
+              "label": "白いハートと雪"
+            },
+            {
+              "value": "❄️🌟",
+              "label": "雪と光る星"
+            },
+            {
+              "value": "𓂃❄️𓈒𓏸",
+              "label": "余白の中の雪"
+            },
+            {
+              "value": "❄️🕯️",
+              "label": "雪とろうそく"
+            },
+            {
+              "value": "⋆❄️⋆",
+              "label": "細い星と雪"
+            },
+            {
+              "value": "❄️🦌❄️",
+              "label": "雪とトナカイ"
             }
           ]
         },
         {
-          "category": "note",
-          "heading": "送れる一言",
+          "category": "gift",
+          "heading": "プレゼント",
           "tags": [
             "クリスマス",
-            "メッセージ"
+            "プレゼント"
+          ],
+          "items": [
+            {
+              "value": "🎁✨",
+              "label": "包みと光"
+            },
+            {
+              "value": "🎁🎀",
+              "label": "包みとリボン"
+            },
+            {
+              "value": "🎄🎁🎁",
+              "label": "ツリーと包み二つ"
+            },
+            {
+              "value": "🎁❤️",
+              "label": "包みと赤"
+            },
+            {
+              "value": "⋆🎁⋆",
+              "label": "細い星で包みを挟む"
+            },
+            {
+              "value": "🎁❄️",
+              "label": "包みと雪"
+            },
+            {
+              "value": "🧸🎁",
+              "label": "ぬいぐるみと包み"
+            },
+            {
+              "value": "🎁🕯️",
+              "label": "包みとろうそく"
+            },
+            {
+              "value": "𓂃🎁𓈒𓏸",
+              "label": "余白の中の包み"
+            },
+            {
+              "value": "🎁🧦",
+              "label": "包みと靴下"
+            },
+            {
+              "value": "🎀🎁🎀",
+              "label": "リボンで包みを挟む"
+            },
+            {
+              "value": "🎁\n🎀🎀",
+              "label": "包みの下にリボン",
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "line",
+          "heading": "LINE一言",
+          "tags": [
+            "クリスマス",
+            "メッセージ",
+            "LINE"
           ],
           "items": [
             {
               "value": "メリークリスマス 🎄",
-              "label": "そのままの挨拶",
-              "tags": [
-                "メッセージ"
-              ]
+              "label": "そのままの挨拶"
             },
             {
               "value": "Merry Christmas 🎄⭐",
-              "label": "英語の挨拶",
-              "tags": [
-                "メッセージ"
-              ]
+              "label": "英語の挨拶"
             },
             {
               "value": "今年も一緒にいられてよかった。メリークリスマス。🎄",
-              "label": "近い人へ",
-              "tags": [
-                "メッセージ"
-              ]
+              "label": "近い人へ"
             },
             {
               "value": "寒いから、あったかいもの飲んで。🎄",
-              "label": "友達へ",
-              "tags": [
-                "メッセージ"
-              ]
+              "label": "友達へ"
             },
             {
               "value": "ツリーの電気、今日だけは消さないで。✨🎄",
-              "label": "夜の一言",
-              "tags": [
-                "メッセージ"
-              ]
+              "label": "夜の一言"
             },
             {
               "value": "プレゼントより先に、メリークリスマス。🎁",
-              "label": "渡す前",
-              "tags": [
-                "メッセージ"
-              ]
+              "label": "渡す前"
+            },
+            {
+              "value": "メリークリスマス。今年もありがとう。❄️",
+              "label": "お礼を先に"
+            },
+            {
+              "value": "あったかい夜を。メリークリスマス。🕯️",
+              "label": "夜の短い挨拶"
+            },
+            {
+              "value": "仕事おつかれさま。メリークリスマス。🎄",
+              "label": "仕事仲間へ"
+            },
+            {
+              "value": "明日も会えるのがうれしい。メリークリスマス。🎁",
+              "label": "また会う人へ"
+            },
+            {
+              "value": "雪、降った？こっちはまだ。❄️",
+              "label": "天気の一言"
+            },
+            {
+              "value": "サンタは来なくても、メッセージは来る。🎅",
+              "label": "ふざけた一言"
+            }
+          ]
+        },
+        {
+          "category": "insta",
+          "heading": "インスタ",
+          "tags": [
+            "クリスマス",
+            "インスタ"
+          ],
+          "items": [
+            {
+              "value": "christmas mood 🎄𓂃",
+              "label": "ストーリーの一行"
+            },
+            {
+              "value": "𓂃 🎄 𓈒𓏸",
+              "label": "余白だけのツリー"
+            },
+            {
+              "value": "❄️ silent night ❄️",
+              "label": "静かな夜"
+            },
+            {
+              "value": "✦ holiday ✦",
+              "label": "星で挟んだ holiday"
+            },
+            {
+              "value": "🎄 white christmas 🤍",
+              "label": "白いクリスマス"
+            },
+            {
+              "value": "december 25 ⋆🎄⋆",
+              "label": "日付とツリー"
+            },
+            {
+              "value": "𓂃 merry 𓈒𓏸",
+              "label": "merry だけの行"
+            },
+            {
+              "value": "🎁 for you 𓂃",
+              "label": "渡す相手の行"
+            },
+            {
+              "value": "night light ✨🎄",
+              "label": "夜の光"
+            },
+            {
+              "value": "⋆ xmas eve ⋆",
+              "label": "イブの一行"
+            },
+            {
+              "value": "🎄 home 🏠",
+              "label": "家にいる印"
+            }
+          ]
+        },
+        {
+          "category": "oshi",
+          "heading": "推し活クリスマス",
+          "tags": [
+            "クリスマス",
+            "推し活",
+            "推し"
+          ],
+          "items": [
+            {
+              "value": "🎄 推しにメリークリスマス 🎁",
+              "label": "推しへの挨拶"
+            },
+            {
+              "value": "サンタより推し。🎄",
+              "label": "短い宣言"
+            },
+            {
+              "value": "🎁 今年のプレゼントは現場",
+              "label": "参戦の一言"
+            },
+            {
+              "value": "❄️ 推しのイルミネーション見に行く",
+              "label": "予定"
+            },
+            {
+              "value": "🎄 ペンライトの色、今日は赤と緑",
+              "label": "現場メモ"
+            },
+            {
+              "value": "⭐ クリスマスライブ、最前で",
+              "label": "ライブの一言"
+            },
+            {
+              "value": "🎁 推しへの手紙、先に書いた",
+              "label": "手紙"
+            },
+            {
+              "value": "❄️ 寒い現場、カイロ持った？",
+              "label": "同行者へ"
+            },
+            {
+              "value": "🎄 クリスマスも推し活",
+              "label": "プロフィールの一行"
+            },
+            {
+              "value": "🔔 開演ベルが一番のプレゼント",
+              "label": "開演前"
+            },
+            {
+              "value": "🎁 特典会までがクリスマス",
+              "label": "特典会"
             }
           ]
         }
@@ -26564,40 +27117,40 @@
       "seo": {
         "heading": "ツリーを真ん中に置く",
         "paragraphs": [
-          "クリスマス絵文字の組み合わせは、🎅🎁❄️⭐🔔 を全部入れるとポスターになります。チャットなら 🎄 を一つ決めて、雪か星かを片方だけ足してください。",
-          "𓂃 を添えると、赤と緑の主張が少し落ちます。ドット版はシールやビーズの下絵にも使えます。店のセール文や業務の案内は、ここでは書いていません。"
+          "ツリーは 🎄 を一つ。サンタは 🎅、雪は ❄️、包みは 🎁 と、モチーフをグループで分けています。一行に全部入れるとポスターになるので、チャットではグループを一つ選んでください。",
+          "LINE一言は、その文のまま送れます。インスタは自己紹介の一行に収まる短さです。推し活は現場、手紙、ペンライトの色など、クリスマス当日の予定に寄せています。"
         ],
         "sections": [
           {
             "heading": "いつどれを",
             "cards": [
               {
-                "title": "当日の朝",
-                "body": "メリークリスマス 🎄 だけで足ります。ツリーを三つにすると、挨拶より飾りが長くなります。"
+                "title": "ツリー",
+                "body": "🎄⭐ か ❄️🎄❄️。星と雪を両方足すと、ツリーが見えなくなります。"
               },
               {
-                "title": "ストーリー",
-                "body": "改行して積んだツリーは、写真の下に置くと絵として見えます。"
+                "title": "LINE",
+                "body": "メリークリスマス 🎄 だけで足ります。近い人には、今年もありがとう、を先に書いてください。"
               },
               {
-                "title": "静かに",
-                "body": "𓂃🎄𓈒𓏸 は、赤を増やしたくないプロフィール向きです。"
+                "title": "推し活",
+                "body": "🎄 推しにメリークリスマス 🎁 は相手が一人のとき。現場の同行者には、カイロの一言のほうが役に立ちます。"
               }
             ]
           }
         ],
         "links": [
           {
-            "href": "/emoji-combinations/new-year/",
-            "label": "お正月・あけおめ"
-          },
-          {
-            "href": "/special-characters/dot/",
-            "label": "ドット記号"
+            "href": "/kaomoji/christmas/",
+            "label": "クリスマス顔文字"
           },
           {
             "href": "/fancy-text-generator/cursive/",
             "label": "筆記体の Merry Christmas"
+          },
+          {
+            "href": "/emoji-combinations/new-year/",
+            "label": "お正月・あけおめ"
           }
         ]
       },
@@ -26612,14 +27165,14 @@
         },
         {
           "question": "ドットのツリーはビーズにできますか？",
-          "answer": "ドットの項目から図案作成を開けます。色を塗る作業はビーズのアプリ側です。"
+          "answer": "· · 🎄 · · と ❄️ · ❄️ · ❄️ から図案作成を開けます。色を塗る作業はビーズのアプリ側です。"
         }
       ],
       "related": [
         {
-          "href": "/emoji-combinations/new-year/",
-          "title": "お正月",
-          "description": "年が明けたあとの挨拶。"
+          "href": "/kaomoji/christmas/",
+          "title": "クリスマス顔文字",
+          "description": "絵文字ではなく、括弧の顔を添える。"
         },
         {
           "href": "/fancy-text-generator/cursive/",
@@ -26627,9 +27180,19 @@
           "description": "Merry Christmas を英字の筆記体にする。"
         },
         {
-          "href": "/special-characters/hieroglyph/",
-          "title": "象形文字",
-          "description": "🎄 の脇に余白を足す。"
+          "href": "/emoji-combinations/new-year/",
+          "title": "お正月",
+          "description": "年が明けたあとの挨拶。"
+        }
+      ],
+      "heroLinks": [
+        {
+          "href": "/kaomoji/christmas/",
+          "label": "クリスマス顔文字"
+        },
+        {
+          "href": "/fancy-text-generator/cursive/",
+          "label": "Merry Christmas 筆記体"
         }
       ]
     },
@@ -27732,6 +28295,467 @@
           "href": "/kaomoji/kawaii/",
           "title": "かわいい顔文字",
           "description": "行事を足さないときの顔。"
+        }
+      ]
+    },
+    {
+      "slug": "kaomoji-christmas",
+      "path": "/kaomoji/christmas/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "title": "クリスマス 顔文字 コピペ｜ツリー・サンタ・雪・プレゼント - MojiMoon",
+      "description": "クリスマスの顔文字です。🎄(´・ω・`)🎄、🎅( ˘ω˘ )、🎁(つ≧▽≦)つ、❄️( ˶ˆᗜˆ˵ )❄️ を、ツリー、サンタ、雪、プレゼント、一言に分けてコピーできます。",
+      "ogTitle": "クリスマス 顔文字 コピペ",
+      "ogDescription": "🎄(´・ω・`)🎄 や 🎁(つ≧▽≦)つ。ツリー、サンタ、雪、プレゼントの顔文字をコピーできます。",
+      "eyebrow": "Christmas Kaomoji",
+      "h1": "クリスマス 顔文字",
+      "hero": "顔文字だけではツリーには見えません。丸い顔、星を投げる手、耳のある猫、包みを渡す手を、🎄 や 🎅 と組んでいます。色の並びだけ欲しいときは、絵文字の組み合わせに分けています。",
+      "toolLabel": "クリスマスの顔文字",
+      "searchPlaceholder": "ツリー、サンタ、雪、プレゼント、猫、一言",
+      "draftPlaceholder": "顔文字をクリックするとここに入ります",
+      "composerHint": "絵文字を片側だけにすると、顔の意味が行事のほうに寄ります。",
+      "recentLabel": "最近使ったクリスマスの顔文字",
+      "showGroupHeadings": true,
+      "priority": "0.84",
+      "lastmod": "2026-10-28",
+      "categories": [
+        {
+          "id": "tree",
+          "label": "ツリー"
+        },
+        {
+          "id": "santa",
+          "label": "サンタ"
+        },
+        {
+          "id": "snow",
+          "label": "雪"
+        },
+        {
+          "id": "gift",
+          "label": "プレゼント"
+        },
+        {
+          "id": "deer",
+          "label": "トナカイ"
+        },
+        {
+          "id": "light",
+          "label": "イルミネーション"
+        },
+        {
+          "id": "note",
+          "label": "一言"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "ツリー",
+          "query": "ツリー"
+        },
+        {
+          "label": "サンタ",
+          "query": "サンタ"
+        },
+        {
+          "label": "雪",
+          "query": "雪"
+        },
+        {
+          "label": "プレゼント",
+          "query": "プレゼント"
+        },
+        {
+          "label": "猫",
+          "query": "猫"
+        }
+      ],
+      "heroLinks": [
+        {
+          "href": "/emoji-combinations/christmas/",
+          "label": "クリスマス絵文字の組み合わせ"
+        },
+        {
+          "href": "/fancy-text-generator/cursive/",
+          "label": "Merry Christmas 筆記体"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "tree",
+          "heading": "ツリーの横に置く顔",
+          "tags": [
+            "クリスマス",
+            "ツリー",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "🎄(´・ω・`)🎄",
+              "label": "小さな口をツリーで挟む"
+            },
+            {
+              "value": "🎄( ˘ω˘ )",
+              "label": "目を閉じた顔とツリー"
+            },
+            {
+              "value": "(๑˃̵ᴗ˂̵)و🎄",
+              "label": "腕を上げた顔とツリー"
+            },
+            {
+              "value": "🎄(｡•ᴗ•｡)♡",
+              "label": "ハートの口とツリー"
+            },
+            {
+              "value": "⋆(✧∀✧)⋆🎄",
+              "label": "うれしい驚きとツリー"
+            },
+            {
+              "value": "🎄(∩^o^)⊃━☆",
+              "label": "星を投げる手とツリー"
+            },
+            {
+              "value": "(´▽`ʃ♡ƪ)🎄",
+              "label": "笑いとツリー"
+            },
+            {
+              "value": "🎄(=^・ω・^=)",
+              "label": "耳のある猫とツリー"
+            },
+            {
+              "value": "🎄(ᐢ. ̫.ᐢ)",
+              "label": "うさぎとツリー"
+            },
+            {
+              "value": "( ˶ˆᗜˆ˵ )🎄",
+              "label": "にこにことツリー"
+            }
+          ]
+        },
+        {
+          "category": "santa",
+          "heading": "サンタの帽子と一緒",
+          "tags": [
+            "クリスマス",
+            "サンタ",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "🎅( ˘ω˘ )",
+              "label": "目を閉じた顔とサンタ"
+            },
+            {
+              "value": "🎅(´・ω・`)🎅",
+              "label": "小さな口をサンタで挟む"
+            },
+            {
+              "value": "🎅(ﾉ´∀｀*)ﾉ",
+              "label": "手を振る顔とサンタ"
+            },
+            {
+              "value": "🎅(๑˃̵ᴗ˂̵)و",
+              "label": "腕を上げた顔とサンタ"
+            },
+            {
+              "value": "(っ˘ω˘ς )🎅",
+              "label": "横になった顔とサンタ"
+            },
+            {
+              "value": "🎅(｡•ᴗ•｡)♡",
+              "label": "ハートの口とサンタ"
+            },
+            {
+              "value": "🎅(∩^o^)⊃━☆",
+              "label": "星を投げる手とサンタ"
+            },
+            {
+              "value": "🔔🎅( ˶ˆᗜˆ˵ )",
+              "label": "ベル、サンタ、にこにこ"
+            }
+          ]
+        },
+        {
+          "category": "snow",
+          "heading": "雪の日の顔",
+          "tags": [
+            "クリスマス",
+            "雪",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "❄️( ˶ˆᗜˆ˵ )❄️",
+              "label": "にこにこを雪で挟む"
+            },
+            {
+              "value": "❄️( ˘ω˘ )",
+              "label": "目を閉じた顔と雪"
+            },
+            {
+              "value": "❄️(っ˘ω˘ς )",
+              "label": "横になった顔と雪"
+            },
+            {
+              "value": "(｡•́△•̀｡)❄️",
+              "label": "口が三角の顔と雪"
+            },
+            {
+              "value": "❄️(´；ω；`)",
+              "label": "寒くてうるっとした顔"
+            },
+            {
+              "value": "⛄️(´・ω・`)⛄️",
+              "label": "雪だるまに挟んだ小さな口"
+            },
+            {
+              "value": "❄️(=^・ω・^=)❄️",
+              "label": "猫を雪で挟む"
+            },
+            {
+              "value": "❄️(ᐢ ̫ᐢ)",
+              "label": "にこにこうさぎと雪"
+            }
+          ]
+        },
+        {
+          "category": "gift",
+          "heading": "プレゼントを渡す手",
+          "tags": [
+            "クリスマス",
+            "プレゼント",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "🎁(つ≧▽≦)つ🎁",
+              "label": "両手で包みを出す"
+            },
+            {
+              "value": "(ﾉ´∀｀*)ﾉ🎁",
+              "label": "片手で包みを渡す"
+            },
+            {
+              "value": "🎁(´・ω・`)🎁",
+              "label": "小さな口を包みで挟む"
+            },
+            {
+              "value": "🎀(｡•ᴗ•｡)♡",
+              "label": "リボンとハートの口"
+            },
+            {
+              "value": "🎁(๑˃̵ᴗ˂̵)و",
+              "label": "腕を上げた顔と包み"
+            },
+            {
+              "value": "(づ｡◕‿◕｡)づ🎁",
+              "label": "両手を前に出した顔と包み"
+            },
+            {
+              "value": "🎁( ˘ω˘ )🎁",
+              "label": "目を閉じた顔を包みで挟む"
+            },
+            {
+              "value": "🧦(´▽`ʃ♡ƪ)",
+              "label": "靴下が先、笑いが後"
+            }
+          ]
+        },
+        {
+          "category": "deer",
+          "heading": "トナカイと赤鼻",
+          "tags": [
+            "クリスマス",
+            "トナカイ",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "🦌(=^・ω・^=)",
+              "label": "耳のある猫とトナカイ"
+            },
+            {
+              "value": "🦌(˶ˆᗜˆ˵)",
+              "label": "にこにことトナカイ"
+            },
+            {
+              "value": "🔴(´・ω・`)",
+              "label": "赤い鼻と小さな口"
+            },
+            {
+              "value": "🦌(ᐢ•ﻌ•ᐢ)🦌",
+              "label": "うさぎをトナカイで挟む"
+            },
+            {
+              "value": "(ΦωΦ)🦌",
+              "label": "丸い目の猫とトナカイ"
+            },
+            {
+              "value": "🦌ʕ•ᴥ•ʔ",
+              "label": "くまとトナカイ"
+            },
+            {
+              "value": "✨🦌(✧∀✧)",
+              "label": "光、トナカイ、うれしい驚き"
+            },
+            {
+              "value": "🦌(๑°ᗜ°๑)",
+              "label": "笑って驚く顔とトナカイ"
+            }
+          ]
+        },
+        {
+          "category": "light",
+          "heading": "イルミネーション",
+          "tags": [
+            "クリスマス",
+            "イルミネーション",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "✨(✧∀✧)✨",
+              "label": "うれしい驚きを光で挟む"
+            },
+            {
+              "value": "🌟(｡•ᴗ•｡)♡🌟",
+              "label": "ハートの口を光る星で挟む"
+            },
+            {
+              "value": "✧(∩^o^)⊃━☆✧",
+              "label": "星を投げる手を光で挟む"
+            },
+            {
+              "value": "💡( ˶ˆᗜˆ˵ )",
+              "label": "電球とにこにこ"
+            },
+            {
+              "value": "✨(=^・ω・^=)✨",
+              "label": "猫を光で挟む"
+            },
+            {
+              "value": "⋆(☆▽☆)⋆",
+              "label": "星の目を細い星で挟む"
+            },
+            {
+              "value": "🕯️( ˘ω˘ )🕯️",
+              "label": "ろうそくと、目を閉じた顔"
+            },
+            {
+              "value": "🌃✨(´・ω・`)",
+              "label": "夜の街、光、小さな口"
+            }
+          ]
+        },
+        {
+          "category": "note",
+          "heading": "一言に添える顔",
+          "tags": [
+            "クリスマス",
+            "メッセージ",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "メリークリスマス 🎄(´・ω・`)",
+              "label": "挨拶と小さな口"
+            },
+            {
+              "value": "Merry Christmas ( ˶ˆᗜˆ˵ )🎄",
+              "label": "英語の挨拶とにこにこ"
+            },
+            {
+              "value": "今年もありがとう 🎁(｡•ᴗ•｡)♡",
+              "label": "お礼とハートの口"
+            },
+            {
+              "value": "あったかくしてね ❄️( ˘ω˘ )",
+              "label": "夜の気遣い"
+            },
+            {
+              "value": "プレゼントより先にこれ 🎁(つ≧▽≦)つ",
+              "label": "渡す前の一言"
+            },
+            {
+              "value": "現場で待ってる 🎄(๑˃̵ᴗ˂̵)و",
+              "label": "待ち合わせ"
+            },
+            {
+              "value": "サンタは推しでいい 🎅(✧∀✧)",
+              "label": "ふざけた一言"
+            },
+            {
+              "value": "電気、消さないで ✨(☆▽☆)",
+              "label": "夜のツリー"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "顔と、色のついたモチーフ",
+        "paragraphs": [
+          "(´・ω・`) だけではクリスマスになりません。片側に 🎄 か 🎅 を置くと、その顔が行事のほうを向きます。ツリーとサンタと包みを全部付けると、一行が顔の展示になります。",
+          "色の並びだけが欲しいときは絵文字の組み合わせ、英字の Merry Christmas を筆記体にするときは筆記体のページです。このページは括弧でできた顔です。"
+        ],
+        "sections": [
+          {
+            "heading": "どれを文末に置くか",
+            "cards": [
+              {
+                "title": "当日の朝",
+                "body": "メリークリスマス 🎄(´・ω・`) で足ります。ツリーを左右に置くのは、顔を見せたいときだけです。"
+              },
+              {
+                "title": "渡すとき",
+                "body": "🎁(つ≧▽≦)つ🎁 は両手が包みです。(ﾉ´∀｀*)ﾉ🎁 は片手なので、文章の後ろに置きやすいです。"
+              },
+              {
+                "title": "猫",
+                "body": "耳の (=^・ω・^=) を猫にしてください。丸い目だけの顔は、横に 🦌 を置くとトナカイに見えます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/emoji-combinations/christmas/",
+            "label": "クリスマス絵文字の組み合わせ"
+          },
+          {
+            "href": "/fancy-text-generator/cursive/",
+            "label": "Merry Christmas 筆記体"
+          },
+          {
+            "href": "/kaomoji/",
+            "label": "顔文字一覧"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "question": "クリスマス顔文字と絵文字の組み合わせは何が違いますか？",
+          "answer": "このページは括弧でできた顔です。🎄⭐ のような色の並びだけ欲しいときは、クリスマス絵文字の組み合わせを使ってください。"
+        },
+        {
+          "question": "Merry Christmas を筆記体にするには？",
+          "answer": "英字は筆記体のページで変換できます。ひらがなの「メリークリスマス」は筆記体にならないので、このページの顔を横に置いてください。"
+        }
+      ],
+      "related": [
+        {
+          "href": "/emoji-combinations/christmas/",
+          "title": "クリスマス絵文字",
+          "description": "顔ではなく、色の並びをコピーする。"
+        },
+        {
+          "href": "/fancy-text-generator/cursive/",
+          "title": "筆記体",
+          "description": "Merry Christmas を英字の筆記体にする。"
+        },
+        {
+          "href": "/kaomoji/halloween/",
+          "title": "ハロウィン顔文字",
+          "description": "行事の顔を、別の季節で見る。"
         }
       ]
     },
@@ -29205,7 +30229,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-15",
+      "lastmod": "2026-10-28",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -29214,26 +30238,26 @@
       "slug": "special-characters-moon",
       "path": "/special-characters/moon/",
       "family": "special-characters",
-      "title": "月の記号 コピペ | ☽☾ 三日月・満月 - MojiMoon",
-      "description": "☽ ☾ と、🌙 や満ち欠けの月をコピーできます。月の形で文字を描くツールは、トップの月文字です。",
-      "ogTitle": "月の記号",
-      "ogDescription": "線の三日月と、色のついた月の絵文字。",
-      "eyebrow": "Moon Symbols",
-      "h1": "月の記号",
-      "hero": "文章の端に置く月です。☽ と ☾ は線だけの三日月で、🌙 は黄色い三日月です。満ち欠けは、黒い月から満月まで順に置いています。月の形で文字そのものを描くときは、トップの月文字を使ってください。",
-      "toolLabel": "月の記号",
-      "searchPlaceholder": "三日月、満月、星、夜、名前",
+      "title": "月の絵文字・記号 コピペ｜🌙☽☾ 三日月・満月・満ち欠け - MojiMoon",
+      "description": "🌙、🌕、🌑、☽、☾ をコピーできます。黒い月から満月までの満ち欠けと、名前の脇に置く三日月を分けています。文字の形を月で描くときは月文字です。",
+      "ogTitle": "月の絵文字 コピペ｜🌙🌕🌑 三日月・満ち欠け",
+      "ogDescription": "🌙、🌕、🌑、☽、☾。三日月、満月、満ち欠けの月の絵文字と記号をコピーできます。",
+      "eyebrow": "Moon Emoji Copy",
+      "h1": "月の絵文字 コピペ",
+      "hero": "コピーする月の絵文字です。🌙 は黄色い三日月、🌑 から 🌕 は満ち欠け、☽ と ☾ は線だけの三日月です。月の形で文字そのものを描くときは、トップの月文字を使ってください。",
+      "toolLabel": "月の絵文字 コピペ",
+      "searchPlaceholder": "月の絵文字、三日月、満月、満ち欠け、名前",
       "draftPlaceholder": "記号をクリックするとここに入ります",
       "composerHint": "線の月と、色のついた月を同じ行に混ぜすぎないでください。",
       "recentLabel": "最近使った月の記号",
       "categories": [
         {
-          "id": "mark",
-          "label": "記号"
-        },
-        {
           "id": "emoji",
           "label": "絵文字"
+        },
+        {
+          "id": "mark",
+          "label": "記号"
         },
         {
           "id": "night",
@@ -29246,6 +30270,10 @@
       ],
       "quickFilters": [
         {
+          "label": "絵文字",
+          "query": "絵文字"
+        },
+        {
           "label": "三日月",
           "query": "三日月"
         },
@@ -29254,12 +30282,8 @@
           "query": "満月"
         },
         {
-          "label": "星",
-          "query": "星"
-        },
-        {
-          "label": "夜",
-          "query": "夜"
+          "label": "満ち欠け",
+          "query": "満ち欠け"
         },
         {
           "label": "名前",
@@ -29268,59 +30292,8 @@
       ],
       "itemGroups": [
         {
-          "category": "mark",
-          "heading": "線の月と星",
-          "tags": [
-            "月",
-            "三日月",
-            "記号"
-          ],
-          "items": [
-            {
-              "value": "☽",
-              "label": "左に開いた三日月"
-            },
-            {
-              "value": "☾",
-              "label": "右に開いた三日月"
-            },
-            {
-              "value": "☽☾",
-              "label": "背中合わせの三日月"
-            },
-            {
-              "value": "☾☽",
-              "label": "向かい合う三日月"
-            },
-            {
-              "value": "☽⋆☾",
-              "label": "小さな星を挟んだ三日月"
-            },
-            {
-              "value": "★",
-              "label": "黒い星"
-            },
-            {
-              "value": "☆",
-              "label": "白い星"
-            },
-            {
-              "value": "✧",
-              "label": "白い四芒星"
-            },
-            {
-              "value": "⋆",
-              "label": "小さな星"
-            },
-            {
-              "value": "✦",
-              "label": "黒い四芒星"
-            }
-          ]
-        },
-        {
           "category": "emoji",
-          "heading": "色のついた月",
+          "heading": "🌙🌕🌑 満ち欠け",
           "tags": [
             "月",
             "三日月",
@@ -29379,6 +30352,57 @@
             {
               "value": "🌝",
               "label": "顔のある満月"
+            }
+          ]
+        },
+        {
+          "category": "mark",
+          "heading": "線の月と星",
+          "tags": [
+            "月",
+            "三日月",
+            "記号"
+          ],
+          "items": [
+            {
+              "value": "☽",
+              "label": "左に開いた三日月"
+            },
+            {
+              "value": "☾",
+              "label": "右に開いた三日月"
+            },
+            {
+              "value": "☽☾",
+              "label": "背中合わせの三日月"
+            },
+            {
+              "value": "☾☽",
+              "label": "向かい合う三日月"
+            },
+            {
+              "value": "☽⋆☾",
+              "label": "小さな星を挟んだ三日月"
+            },
+            {
+              "value": "★",
+              "label": "黒い星"
+            },
+            {
+              "value": "☆",
+              "label": "白い星"
+            },
+            {
+              "value": "✧",
+              "label": "白い四芒星"
+            },
+            {
+              "value": "⋆",
+              "label": "小さな星"
+            },
+            {
+              "value": "✦",
+              "label": "黒い四芒星"
             }
           ]
         },
@@ -29477,9 +30501,9 @@
         }
       ],
       "seo": {
-        "heading": "線の月と、色のついた月",
+        "heading": "月の絵文字と、線だけの月",
         "paragraphs": [
-          "☽ は左に開いた三日月、☾ は右に開いた三日月です。色はつきません。🌙 は黄色い三日月で、文章の中ではこちらのほうが月だとすぐ分かります。同じ行に両方入れると、線と色が喧嘩します。",
+          "月の絵文字は 🌙 が一番見つけやすいです。満ち欠けは 🌑🌒🌓🌔🌕🌖🌗🌘 の順で、黒い月から細い月、半分、満月、そしてまた細くなります。☽ と ☾ は色が付かない三日月で、文章のサイズに揃います。",
           "月の形で「月」や名前を描きたいときは、このページの記号を並べるのでは足りません。トップの月文字が、文字の形を月の点で作ります。"
         ],
         "sections": [
@@ -29492,7 +30516,7 @@
               },
               {
                 "title": "夜の挨拶",
-                "body": "おやすみの文末には 🌙 が一つで足ります。満ち欠けを全部並べる必要はありません。"
+                "body": "おやすみの文末には 🌙 が一つで足ります。満ち欠けの 🌑 から 🌕 を全部並べる必要はありません。"
               },
               {
                 "title": "文字の絵",
