@@ -8,6 +8,18 @@ window.MojiMoonToolData = {
       "query": "ごめん"
     },
     {
+      "label": "すみません",
+      "query": "すみません"
+    },
+    {
+      "label": "ぺこり",
+      "query": "ぺこり"
+    },
+    {
+      "label": "絵文字",
+      "query": "絵文字"
+    },
+    {
       "label": "可愛い",
       "query": "可愛い"
     },
@@ -44,9 +56,13 @@ window.MojiMoonToolData = {
     {
       "id": "short",
       "label": "短文"
+    },
+    {
+      "id": "emoji",
+      "label": "絵文字"
     }
   ],
-  "pageSize": 48,
+  "pageSize": 96,
   "items": [
     {
       "value": "(_ _;)",
@@ -524,6 +540,214 @@ window.MojiMoonToolData = {
         "ごめん",
         "SNS",
         "短文"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "すみません 🙏",
+      "label": "そのまま謝る",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "すみません 🙇",
+      "label": "頭を下げる",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ごめんね 🙏",
+      "label": "カジュアルなごめん",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ごめんね 🙇",
+      "label": "ごめんのぺこり",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ごめんなさい 🙇‍♀️",
+      "label": "少し丁寧",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ぺこり 🙇",
+      "label": "ぺこり",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ぺこり 🙇‍♀️",
+      "label": "ぺこり、少し丁寧",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "反省してます 🙏",
+      "label": "反省",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "申し訳ないです 🙇",
+      "label": "申し訳ない",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "遅くなってごめん 🙏",
+      "label": "遅刻",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "待たせてごめん 🙇‍♀️",
+      "label": "待たせた",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "勘違いしてごめん 😣",
+      "label": "勘違い",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "確認します 🙏",
+      "label": "確認の返事",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "次は気をつけます 🙇",
+      "label": "次から",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "本当にごめんね 🥺",
+      "label": "気持ちを足す",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "すみませんでした 🙇‍♀️",
+      "label": "事後の謝罪",
+      "category": "emoji",
+      "tags": [
+        "すみません",
+        "ごめん",
+        "絵文字",
+        "ぺこり"
       ],
       "wide": false,
       "beadHref": ""

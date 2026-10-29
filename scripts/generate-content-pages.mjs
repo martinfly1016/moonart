@@ -89,6 +89,7 @@ const handwrittenTargets = [
   { html: 'kaomoji/cat/index.html', data: 'assets/data/pages/kaomoji-cat.js', headings: true },
   { html: 'kaomoji/happy/index.html', data: 'assets/data/pages/kaomoji-happy.js', headings: true },
   { html: 'kaomoji/sad/index.html', data: 'assets/data/pages/crying.js', headings: true },
+  { html: 'emoji-copy/tear/index.html', data: 'assets/data/pages/tear-emoji.js', headings: true },
   { html: 'kaomoji/angry/index.html', data: 'assets/data/pages/angry.js', headings: true }
 ];
 
@@ -170,7 +171,6 @@ const legacyListTargets = [
   { html: 'emoji-copy/index.html', data: 'assets/data/emoji-copy.js' },
   { html: 'emoji-copy/kawaii/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii' },
   { html: 'emoji-copy/heart/index.html', data: 'assets/data/emoji-copy.js', category: 'heart' },
-  { html: 'emoji-copy/tear/index.html', data: 'assets/data/emoji-copy.js', category: 'face', query: '涙' },
   { html: 'emoji-copy/smile/index.html', data: 'assets/data/emoji-copy.js', category: 'face', query: '笑顔' },
   { html: 'emoji-copy/hand-sign/index.html', data: 'assets/data/emoji-copy.js', query: '手' },
   { html: 'emoji-copy/flower/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii', query: '花' },
@@ -360,7 +360,9 @@ async function bumpSitemapDates(checkOnly, extraFiles) {
   locs.add('https://mojimoon.com/kaomoji/kawaii/');
   locs.add('https://mojimoon.com/kaomoji/cat/');
   locs.add('https://mojimoon.com/kaomoji/happy/');
+  locs.add('https://mojimoon.com/kaomoji/sad/');
   locs.add('https://mojimoon.com/emoji-copy/sparkle/');
+  locs.add('https://mojimoon.com/emoji-copy/tear/');
   locs.add('https://mojimoon.com/kawaii-copy/');
   for (const file of extraFiles) {
     const loc = htmlFileToLoc(file);
