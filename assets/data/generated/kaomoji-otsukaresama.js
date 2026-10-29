@@ -8,6 +8,10 @@ window.MojiMoonToolData = {
       "query": "お疲れ様"
     },
     {
+      "label": "絵文字",
+      "query": "絵文字"
+    },
+    {
       "label": "仕事",
       "query": "仕事"
     },
@@ -44,9 +48,13 @@ window.MojiMoonToolData = {
     {
       "id": "message",
       "label": "短文"
+    },
+    {
+      "id": "emoji",
+      "label": "絵文字"
     }
   ],
-  "pageSize": 48,
+  "pageSize": 96,
   "items": [
     {
       "value": "( ´ ▽ ` )ﾉ",
@@ -484,6 +492,214 @@ window.MojiMoonToolData = {
       "tags": [
         "LINE",
         "短文"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "お疲れ様 🍵",
+      "label": "お茶を添える",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "お疲れ様です 🙇",
+      "label": "丁寧な労い",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おつかれ ✨",
+      "label": "カジュアル",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おつかれさま 🌙",
+      "label": "夜の労い",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "今日もお疲れ様 🙌",
+      "label": "今日の締め",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "仕事おつかれ 💼",
+      "label": "仕事終わり",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "今夜は休んで 🌙",
+      "label": "休ませる",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おつかれー 😊",
+      "label": "くだけた返事",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "明日もよろしく 🙏",
+      "label": "翌日につなぐ",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "今週もお疲れ様 📅",
+      "label": "週の締め",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "お先に失礼します 🙇",
+      "label": "先に退勤",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "退勤おつかれ 🏠",
+      "label": "帰宅",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "よくがんばったね 👏",
+      "label": "ねぎらい",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "一区切り 🍵",
+      "label": "区切り",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おつかれさまです 🍵",
+      "label": "丁寧にお茶",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "おつかれさまです 🌙✨",
+      "label": "夜の丁寧",
+      "category": "emoji",
+      "tags": [
+        "お疲れ様",
+        "絵文字",
+        "労い",
+        "LINE"
       ],
       "wide": false,
       "beadHref": ""
