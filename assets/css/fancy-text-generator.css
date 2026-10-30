@@ -63,6 +63,16 @@
   padding: 0 20px 48px;
 }
 
+.cursive-catalog.tool-wrap {
+  margin-top: 0;
+}
+
+.cursive-catalog .catalog-title {
+  margin: 0 0 14px;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
 .fancy-app {
   min-width: 0;
   display: grid;

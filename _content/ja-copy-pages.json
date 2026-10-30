@@ -26838,7 +26838,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-11",
+      "lastmod": "2026-10-30",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -26847,297 +26847,987 @@
       "slug": "kawaii-copy-ascii-art",
       "path": "/kawaii-copy/ascii-art/",
       "family": "kawaii-copy",
-      "title": "かわいいアスキーアート コピペ | 猫・ハート・星 - MojiMoon",
-      "description": "1行から5行のかわいいアスキーアートをコピーできます。猫、兎、ハート、星を、スマホの幅で崩れにくい短さにしています。写真からの変換は別のツールです。",
-      "ogTitle": "かわいいアスキーアート コピペ",
-      "ogDescription": "短い猫やハートのAA。長い2ch芸ではなく、貼って崩れにくいもの。",
+      "title": "かわいいアスキーアート コピペ｜ハート・リボン・動物・誕生日 - MojiMoon",
+      "description": "スマホの横幅に収まる短いアスキーアートを100件以上コピーできます。ハート、リボン、動物、誕生日、ありがとう、おもしろに分けています。",
+      "ogTitle": "かわいいアスキーアート｜ハート・リボン・動物・誕生日",
+      "ogDescription": "ハート、リボン、動物、誕生日、ありがとう、おもしろ。スマホ幅の文字絵をコピーできます。",
       "eyebrow": "Kawaii ASCII",
       "h1": "かわいいアスキーアート コピペ",
-      "hero": "ここにあるのは、チャットに貼るための短い文字絵です。猫、兎、ハート、星。横幅はスマホの一行に収まりやすいものだけにして、5行を超える芸は置いていません。写真を文字にしたいときは、別のアスキーアート変換を使ってください。",
+      "hero": "チャットに貼るための短い文字絵です。ハート、リボン、動物、誕生日、ありがとう、おもしろ。どれもスマホの一行幅に収まる長さで、画像を文字に変換する道具とは別のコピー集です。",
       "toolLabel": "かわいいアスキーアート",
-      "searchPlaceholder": "猫、兎、ハート、星、顔",
+      "searchPlaceholder": "ハート、リボン、猫、ケーキ、ありがとう",
       "draftPlaceholder": "作品をクリックすると、改行ごとここに入ります",
-      "composerHint": "貼った先のフォントで星の位置がずれたら、一行ものの顔に替えてください。",
+      "composerHint": "貼った先で幅が足りないときは、三行以内のものに替えてください。",
       "recentLabel": "最近コピーしたAA",
       "categories": [
+        {
+          "id": "heart",
+          "label": "ハート"
+        },
+        {
+          "id": "ribbon",
+          "label": "リボン"
+        },
         {
           "id": "animal",
           "label": "動物"
         },
         {
-          "id": "mark",
-          "label": "ハートと星"
+          "id": "birthday",
+          "label": "誕生日"
         },
         {
-          "id": "face",
-          "label": "一行の顔"
+          "id": "thanks",
+          "label": "ありがとう"
+        },
+        {
+          "id": "funny",
+          "label": "おもしろ"
         }
       ],
       "quickFilters": [
-        {
-          "label": "猫",
-          "query": "猫"
-        },
         {
           "label": "ハート",
           "query": "ハート"
         },
         {
-          "label": "星",
-          "query": "星"
+          "label": "リボン",
+          "query": "リボン"
         },
         {
-          "label": "兎",
-          "query": "兎"
+          "label": "動物",
+          "query": "動物"
+        },
+        {
+          "label": "誕生日",
+          "query": "誕生日"
+        },
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        },
+        {
+          "label": "おもしろ",
+          "query": "おもしろ"
         }
       ],
       "itemGroups": [
         {
-          "category": "animal",
-          "heading": "猫・兎・熊",
-          "tags": [
-            "かわいい",
-            "アスキーアート",
-            "猫"
-          ],
-          "items": [
-            {
-              "value": " /\\_/\\\n( o.o )\n > ^ <",
-              "label": "正面の猫",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": "(\\_/)\n(•.•)\n/>  >",
-              "label": "歩いている猫",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": " /)/)\n( . .)\n(> < )",
-              "label": "丸い熊",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": "(\\_/)\n(>.<)\n(\")(\")",
-              "label": "耳の長い兎",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": "  ^~^\n ('Y')\nC(_ _)",
-              "label": "小さい兎",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": " ʕ•ᴥ•ʔ",
-              "label": "熊の一行",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": "(=^･ω･^=)",
-              "label": "猫の一行",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": " (\\(\\ \n ( -.-)\no_(\")(\")",
-              "label": "横向きの兎",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": "  /) /)\n ( • ༝ •)\n c( づ  )",
-              "label": "猫が手を出す",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            },
-            {
-              "value": " ／l、\n（ﾟ､ ｡ ７\n  l、ﾞ~ヽ\n  じしf_)ノ",
-              "label": "ちいさな犬",
-              "tags": [
-                "動物",
-                "かわいい"
-              ],
-              "wide": true
-            }
-          ]
-        },
-        {
-          "category": "mark",
-          "heading": "ハートと星",
+          "category": "heart",
+          "heading": "ハート",
           "tags": [
             "ハート",
-            "星",
             "アスキーアート"
           ],
           "items": [
             {
-              "value": "  . .\n / V \\\n/(   )\\",
-              "label": "ハートの線",
+              "value": " .  .\n/    \\\n\\    /\n \\  /\n  \\/",
+              "label": "線のハート",
               "tags": [
-                "ハート",
-                "星"
+                "ハート"
               ],
               "wide": true
             },
             {
-              "value": "  ★\n ★ ★\n★   ★",
-              "label": "小さな星",
+              "value": " . .\n\\   /\n \\ /\n  v",
+              "label": "小さいハート",
               "tags": [
-                "ハート",
-                "星"
+                "ハート"
               ],
               "wide": true
             },
             {
-              "value": "  ☁\n ⋆  ⋆",
-              "label": "雲と星",
+              "value": " .. ..\n.     .\n \\   /\n  \\ /\n   v",
+              "label": "丸いハート",
               "tags": [
-                "ハート",
-                "星"
+                "ハート"
               ],
               "wide": true
             },
             {
-              "value": " ♡\n(   )\n ---",
-              "label": "箱のハート",
+              "value": " *  *\n*    *\n *  *\n  **",
+              "label": "星で塗ったハート",
               "tags": [
-                "ハート",
-                "星"
+                "ハート"
               ],
               "wide": true
             },
             {
-              "value": " ✧\n(  )\n ✧",
-              "label": "上下に光",
+              "value": " .  .\n:    :\n \\  /\n  ..",
+              "label": "点線のハート",
               "tags": [
-                "ハート",
-                "星"
+                "ハート"
               ],
               "wide": true
             },
             {
-              "value": "  ∧＿∧\n（｡･ω･｡)つ━☆・*。",
-              "label": "星を渡す",
+              "value": "  ..\n .  .\n(    )\n \\  /\n  \\/",
+              "label": "二重のハート",
               "tags": [
-                "ハート",
-                "星"
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .  .\n/    \\\n\\ -> /\n \\  /\n  \\/",
+              "label": "矢印のハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "<3  <3\nv    v",
+              "label": "並んだハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .  .\n/    \\\n\\    /\n  ||\n  ||",
+              "label": "風船のハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "+ .  . +\n /    \\\n \\    /\n  \\  /\n+  \\/ +",
+              "label": "きらきらハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "+------+\n| .  . |\n| \\  / |\n|  \\/  |\n+------+",
+              "label": "枠のハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .  .\n/    \\\n\\    /\n  ||\n _||_",
+              "label": "花のハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  <3\n <3 <3\n<3 <3 <3",
+              "label": "積みハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\\\  //\n \\\\//\n  ><",
+              "label": "開いたハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "<3 <3 <3",
+              "label": "ちいさな三つ",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ## ##\n##   ##\n #   #\n  # #\n   #",
+              "label": "太線のハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  . .\n /   \\\n \\   /\n--\\ /--\n   v",
+              "label": "贈るハート",
+              "tags": [
+                "ハート"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ______\n| .  . |\n| \\  / |\n|__\\/__|",
+              "label": "ノートのハート",
+              "tags": [
+                "ハート"
               ],
               "wide": true
             }
           ]
         },
         {
-          "category": "face",
-          "heading": "一行で貼る顔",
+          "category": "ribbon",
+          "heading": "リボン",
           "tags": [
-            "かわいい",
-            "顔"
+            "リボン",
+            "アスキーアート"
           ],
           "items": [
             {
-              "value": "(•‿•)",
-              "label": "丸顔の一行",
+              "value": "\\   /\n)   (\n/___\\\n  |\n  |",
+              "label": "ちょう結び",
               "tags": [
-                "顔"
-              ],
-              "wide": false
-            },
-            {
-              "value": "( ˘ᵕ˘ )",
-              "label": "眠そうな一行",
-              "tags": [
-                "顔"
-              ],
-              "wide": false
-            },
-            {
-              "value": "(っ˘ω˘)っ",
-              "label": "差し出す手",
-              "tags": [
-                "顔"
-              ],
-              "wide": false
-            },
-            {
-              "value": "  __\n (oo)\n--||--",
-              "label": "正面の顔",
-              "tags": [
-                "顔"
+                "リボン"
               ],
               "wide": true
             },
             {
-              "value": "(づ｡◕‿‿◕｡)づ",
-              "label": "渡してくる顔",
+              "value": "--<><>--",
+              "label": "横リボン",
               "tags": [
-                "顔"
+                "リボン"
               ],
-              "wide": false
+              "wide": true
             },
             {
-              "value": "(✿◠‿◠)",
-              "label": "花のついた笑顔",
+              "value": ".-----.\n|  |  |\n|  |  |\n'--+--'",
+              "label": "ギフトの輪",
               "tags": [
-                "顔"
+                "リボン"
               ],
-              "wide": false
+              "wide": true
+            },
+            {
+              "value": "  /\\\n /  \\\n(    )\n  ||\n /  \\",
+              "label": "たれリボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "><\n||\n\\/",
+              "label": "小さな結び",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\\\  //\n \\\\//\n //\\\\\n//  \\\\",
+              "label": "二重リボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  ||\n--++--\n|    |\n|    |\n+----+",
+              "label": "箱の上のリボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "><====",
+              "label": "端のリボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ____\n|    |\n|    |\n \\  /\n  \\/",
+              "label": "リボンのしおり",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\ | /\n- + -\n/ | \\\n  |\n / \\",
+              "label": "花リボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n(    )\n '--'\n  ||",
+              "label": "ループ",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\    /\n \\  /\n  ><\n /  \\\n/    \\",
+              "label": "交差したリボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  __\n /  \\\n( <> )\n \\__/",
+              "label": "首かけリボン",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ||\n ||\n_||_\n\\  /",
+              "label": "細いたれ",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  [ ]\n==[]==\n  ||\n /  \\",
+              "label": "プレゼント結び",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            },
+            {
+              "value": ">< >< ><",
+              "label": "リボンの列",
+              "tags": [
+                "リボン"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "animal",
+          "heading": "動物",
+          "tags": [
+            "動物",
+            "アスキーアート"
+          ],
+          "items": [
+            {
+              "value": " /\\_/\\\n( ^.^ )\n /| |\\",
+              "label": "正面の猫",
+              "tags": [
+                "猫",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " /\\_/\\\n( -.- )\n=(   )=",
+              "label": "すわり猫",
+              "tags": [
+                "猫",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " /\\_/\\\n( o.o )\nc(   )",
+              "label": "歩く猫",
+              "tags": [
+                "猫",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "(\\) (\\)\n( o.o )\n (\")(\")",
+              "label": "耳の兎",
+              "tags": [
+                "兎",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " \\\\ \\\\\n ('.')\n o o",
+              "label": "ちび兎",
+              "tags": [
+                "兎",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n( o o )\n > - <\n `---'",
+              "label": "丸い熊",
+              "tags": [
+                "熊",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " /) /)\n( o.o)\n / > >",
+              "label": "小さな犬",
+              "tags": [
+                "犬",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  __\n>(o )___\n ( ._>",
+              "label": "横向きの鳥",
+              "tags": [
+                "鳥",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n( o.o)\n ^ ^",
+              "label": "ひよこ",
+              "tags": [
+                "鳥",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "><>\n ~",
+              "label": "魚",
+              "tags": [
+                "魚",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  _\n><_>\n  ~",
+              "label": "金魚",
+              "tags": [
+                "魚",
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " @..@\n(----)\n( >__< )\n ^^  ^^",
+              "label": "かえる",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\  /\\  /\n \\/  \\/\n /\\  /\\\n/  \\/  \\",
+              "label": "ちょう",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n( o.o)\n/(   )\\\n ^^ ^^",
+              "label": "ペンギン",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ^  ^\n( o  o)\n ( == )\n  ----",
+              "label": "ぶた",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  ()()\n ( '-')\no(   )",
+              "label": "ねずみ",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n( :: )\\\n `-'--'",
+              "label": "かたつむり",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": ".----.\n(  o   )\n `-----'~",
+              "label": "くじら",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": " /\\ /\\\n( o.o )\n > ^ <\n /\\_/\\",
+              "label": "ふくろう",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\()/\n-(::)-\n/()\\",
+              "label": "みつばち",
+              "tags": [
+                "動物"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "birthday",
+          "heading": "誕生日",
+          "tags": [
+            "誕生日",
+            "アスキーアート"
+          ],
+          "items": [
+            {
+              "value": "  |||\n .---.\n(     )\n `---'",
+              "label": "ろうそくのケーキ",
+              "tags": [
+                "ケーキ",
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "   i\n .---.\n|     |\n '---'",
+              "label": "一本ろうそく",
+              "tags": [
+                "ケーキ",
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  *\n .-.\n(   )\n `-.'",
+              "label": "カップケーキ",
+              "tags": [
+                "ケーキ",
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n(    )\n '--'\n  |\n  |",
+              "label": "風船ひとつ",
+              "tags": [
+                "風船",
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": " o  o  o\n |  |  |\n \\ | /\n  \\|/",
+              "label": "風船三つ",
+              "tags": [
+                "風船",
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "   /\\\n  /  \\\n /____\\\n   ||",
+              "label": "パーティー帽",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  __\n _||_\n|    |\n|____|",
+              "label": "ギフト箱",
+              "tags": [
+                "プレゼント",
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "|>\n|>\n|>\n||",
+              "label": "旗",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "*  +  *\n +    +\n*  +  *",
+              "label": "紙吹雪",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\  *\n >>*\n/  *",
+              "label": "クラッカー",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  *\n .-.\n|   |\n '-'",
+              "label": "カップと星",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  i i\n /   \\\n(     )\n -----",
+              "label": "ショートケーキ",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  #1\n.----.\n|    |\n'----'",
+              "label": "ナンバーケーキ",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  *\n  |\n.---.\n|   |\n'---'",
+              "label": "星のろうそく",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": "*--*--*--*",
+              "label": "ガーランド",
+              "tags": [
+                "誕生日"
+              ],
+              "wide": true
+            },
+            {
+              "value": " __\n|><|\n|__|",
+              "label": "プレゼント小箱",
+              "tags": [
+                "プレゼント",
+                "誕生日"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "thanks",
+          "heading": "ありがとう",
+          "tags": [
+            "ありがとう",
+            "アスキーアート"
+          ],
+          "items": [
+            {
+              "value": "+--------+\n| THANKS |\n+--------+",
+              "label": "ありがとうカード",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " \\|/\n--+--\n /|\\\n  |\n _|_",
+              "label": "花束",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ______\n|\\    \\\n| \\    |\n|  \\___|",
+              "label": "手紙",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  /\\\n /  \\\n(    )\n \\__/",
+              "label": "封筒",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\o/\n |\n/ \\",
+              "label": "手を振る",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " @\n\\|/\n |\n/ \\",
+              "label": "小さな花",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n(    )\n `-'",
+              "label": "お茶",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .----.\n( THX  )\n '----'",
+              "label": "スタンプ",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "+------+\n| *  * |\n| THAN |\n+------+",
+              "label": "星のカード",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ><\n+--+\n|  |\n+--+",
+              "label": "リボンカード",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " <3\n/ \\\n |",
+              "label": "ハートの礼",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\  /\n ><\n/  \\",
+              "label": "拍手",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": " ____\n|TY! |\n|____|",
+              "label": "メモ",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "(\\)/\n \\|/\n  |\n / \\",
+              "label": "ブーケ",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "|> TY\n|>\n||",
+              "label": "ありがとうの旗",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  *\n / \\\n/   \\",
+              "label": "星を渡す",
+              "tags": [
+                "ありがとう"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "funny",
+          "heading": "おもしろ",
+          "tags": [
+            "おもしろ",
+            "アスキーアート"
+          ],
+          "items": [
+            {
+              "value": " .---.\n| o o |\n|  ^  |\n '---'",
+              "label": "びっくり顔",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n| - - |\n| ___ |\n '---'",
+              "label": "すまし顔",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n| @ @ |\n|  ~  |\n '---'",
+              "label": "目が回る",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": "[o_o]\n<| |>\n / \\",
+              "label": "ロボット",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .-.\n(o o)\n| ~ |\n'-'-'",
+              "label": "おばけ",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " |||\n-|-|-\n |||\n \\_/",
+              "label": "サボテン",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .\n/\n/\n'",
+              "label": "バナナ",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .--.\n| () |\n '--'",
+              "label": "ドーナツ",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " /\\_/\\\n( o o )\n > ~ <\n  | |",
+              "label": "宇宙人",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n| o o |\n'-|-'\n / \\",
+              "label": "箱の人",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n| - - |\n|  z  |\n '---'",
+              "label": "眠い顔",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": "\\o\n |\\\n/ \\",
+              "label": "手を振る人",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  *\n / \\\n*---*\n \\ /\n  *",
+              "label": "魔法",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": "  !\n.---.\n| ? |\n'---'",
+              "label": "おっと",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n| ^ ^ |\n| \\_/ |\n '---'",
+              "label": "にこにこ",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
+            },
+            {
+              "value": " .---.\n| o o |\n| \\_  |\n '---'",
+              "label": "てへぺろ",
+              "tags": [
+                "おもしろ"
+              ],
+              "wide": true
             }
           ]
         }
       ],
       "seo": {
-        "heading": "長いAAではなく、貼れる大きさ",
+        "heading": "スマホの幅で貼る文字絵",
         "paragraphs": [
-          "アスキーアートコピペには、巨大な作品や掲示板の定型も混ざります。このページが集めているのは、LINEやプロフィールにそのまま置ける1〜5行です。猫の顔は三行、ハートはそれより少なく、横の空白を盛りすぎていません。",
-          "等幅フォントでないと、星の点が横にずれます。ずれたときは、複数行の絵をやめて ʕ•ᴥ•ʔ のような一行にすると、ほぼ崩れません。写真やロゴを文字に変換する道具は、サイト内の別ページにあります。"
+          "このページのアスキーアートは、ハート、リボン、猫や兎などの動物、誕生日のケーキ、ありがとうのカード、ちょっとしたおもしろ顔です。横は16文字以内、縦は五行までにして、スマホのチャットでも横スクロールが出にくい長さにしています。",
+          "等幅に近いフォントだと、線の位置が揃います。崩れたときは複数行の絵をやめて、一行の <3 や >< に替えてください。写真やロゴを文字にしたいときは、コピー集ではなくアスキーアート変換を使います。"
         ],
         "sections": [
           {
-            "heading": "向き不向き",
+            "heading": "グループの使い分け",
             "cards": [
               {
-                "title": "チャット",
-                "body": "三行の猫まで。五行を超えると、相手の画面でスクロールが増えます。"
+                "title": "ハートとリボン",
+                "body": "返事の末尾やプロフィールの区切りに。線で描いた形が欲しいときだけ使い、記号一文字で足りるならハート記号のページのほうが小さいです。"
               },
               {
-                "title": "ハートのAA",
-                "body": "♡ の記号で足りるなら、そちらのほうが小さいです。線でハートの形が欲しいときだけ、このページのハートを使います。"
+                "title": "誕生日とありがとう",
+                "body": "ケーキ、風船、THANKS のカード。文章の下に三行だけ足すと、長いAAよりも読まれます。"
               },
               {
-                "title": "変換ツール",
-                "body": "自分の写真を文字にしたい場合は、コピー集ではなく変換ツールです。"
+                "title": "動物とおもしろ",
+                "body": "猫、兎、熊、びっくり顔。やる夫や巨大なコピペは置いていません。"
               }
             ]
           }
@@ -27152,25 +27842,15 @@
             "label": "ハート記号"
           },
           {
+            "href": "/emoji-combinations/birthday/",
+            "label": "誕生日絵文字"
+          },
+          {
             "href": "/kaomoji/cat/",
             "label": "猫の顔文字"
           }
         ]
       },
-      "faq": [
-        {
-          "question": "スマホで形が崩れます。",
-          "answer": "空白の幅がフォントで変わると崩れます。三行の絵がずれたら、一行の顔文字型に替えてください。このページの作品は、そもそも横幅を短くしてあります。"
-        },
-        {
-          "question": "やる夫や長いコピペはありますか？",
-          "answer": "置いていません。かわいい動物とハートと星だけです。"
-        },
-        {
-          "question": "自分の絵をAAにできますか？",
-          "answer": "このページは作品のコピーです。画像からの変換はアスキーアート変換のツールで行えます。"
-        }
-      ],
       "related": [
         {
           "href": "/ascii-art-generator/",
@@ -27178,14 +27858,19 @@
           "description": "画像や文字からアスキーアートを作る。"
         },
         {
+          "href": "/emoji-combinations/birthday/",
+          "title": "誕生日絵文字",
+          "description": "ケーキや風船を絵文字で並べる。"
+        },
+        {
+          "href": "/special-characters/heart/",
+          "title": "ハート記号",
+          "description": "線ではなく、一文字のハート。"
+        },
+        {
           "href": "/kaomoji/cat/",
           "title": "猫顔文字",
           "description": "三行より短い猫。"
-        },
-        {
-          "href": "/special-characters/dot/",
-          "title": "ドット",
-          "description": "マス目の星やリボン。"
         }
       ]
     },
@@ -33428,6 +34113,1585 @@
           "href": "/kaomoji/peek/",
           "title": "チラ見顔文字",
           "description": "放つのではなく、壁から顔を出す。"
+        }
+      ]
+    },
+    {
+      "renderMode": "embed",
+      "lastmod": "2026-10-30",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 200,
+      "changefreq": "weekly",
+      "priority": "0.8",
+      "slug": "fancy-text-cursive",
+      "path": "/fancy-text-generator/cursive/",
+      "family": "fancy-text",
+      "title": "筆記体 変換｜A–Z一覧・名前・メッセージカード - MojiMoon",
+      "description": "AからZの細い筆記体と太い筆記体、よく使う名前、誕生日・ありがとう・クリスマスのカード文言をコピーできます。ひらがなは変換できません。",
+      "ogTitle": "筆記体 変換｜A–Z・名前・カード文言",
+      "ogDescription": "細い筆記体と太い筆記体のAからZ、名前、誕生日やクリスマスのカードをコピーできます。",
+      "eyebrow": "Cursive Copy",
+      "h1": "筆記体 変換",
+      "hero": "英字を細い筆記体・太い筆記体・斜体にします。下の一覧に、AからZ、よく使う名前、誕生日やクリスマスのカード文言を置いています。ひらがなは変換できません。",
+      "catalogHeading": "コピーできる筆記体",
+      "toolLabel": "筆記体の一覧",
+      "searchPlaceholder": "A、名前、誕生日、ありがとう、クリスマス",
+      "draftPlaceholder": "文字をクリックするとここに追加されます",
+      "composerHint": "名前とカード文言を草稿でつないでから、まとめてコピーできます。",
+      "recentLabel": "最近コピーした筆記体",
+      "categories": [
+        {
+          "id": "thin",
+          "label": "細いA–Z"
+        },
+        {
+          "id": "bold",
+          "label": "太いA–Z"
+        },
+        {
+          "id": "name",
+          "label": "名前"
+        },
+        {
+          "id": "card",
+          "label": "メッセージカード"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "アルファベット",
+          "query": "アルファベット"
+        },
+        {
+          "label": "名前",
+          "query": "名前"
+        },
+        {
+          "label": "誕生日",
+          "query": "誕生日"
+        },
+        {
+          "label": "ありがとう",
+          "query": "ありがとう"
+        },
+        {
+          "label": "クリスマス",
+          "query": "クリスマス"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "thin",
+          "heading": "細いA–Z",
+          "tags": [
+            "アルファベット",
+            "細い",
+            "筆記体"
+          ],
+          "items": [
+            {
+              "value": "𝒜",
+              "label": "A 細い筆記体",
+              "tags": [
+                "A",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℬ",
+              "label": "B 細い筆記体",
+              "tags": [
+                "B",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒞",
+              "label": "C 細い筆記体",
+              "tags": [
+                "C",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒟",
+              "label": "D 細い筆記体",
+              "tags": [
+                "D",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℰ",
+              "label": "E 細い筆記体",
+              "tags": [
+                "E",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℱ",
+              "label": "F 細い筆記体",
+              "tags": [
+                "F",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒢",
+              "label": "G 細い筆記体",
+              "tags": [
+                "G",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℋ",
+              "label": "H 細い筆記体",
+              "tags": [
+                "H",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℐ",
+              "label": "I 細い筆記体",
+              "tags": [
+                "I",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒥",
+              "label": "J 細い筆記体",
+              "tags": [
+                "J",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒦",
+              "label": "K 細い筆記体",
+              "tags": [
+                "K",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℒ",
+              "label": "L 細い筆記体",
+              "tags": [
+                "L",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℳ",
+              "label": "M 細い筆記体",
+              "tags": [
+                "M",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒩",
+              "label": "N 細い筆記体",
+              "tags": [
+                "N",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒪",
+              "label": "O 細い筆記体",
+              "tags": [
+                "O",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒫",
+              "label": "P 細い筆記体",
+              "tags": [
+                "P",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒬",
+              "label": "Q 細い筆記体",
+              "tags": [
+                "Q",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℛ",
+              "label": "R 細い筆記体",
+              "tags": [
+                "R",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒮",
+              "label": "S 細い筆記体",
+              "tags": [
+                "S",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒯",
+              "label": "T 細い筆記体",
+              "tags": [
+                "T",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒰",
+              "label": "U 細い筆記体",
+              "tags": [
+                "U",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒱",
+              "label": "V 細い筆記体",
+              "tags": [
+                "V",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒲",
+              "label": "W 細い筆記体",
+              "tags": [
+                "W",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒳",
+              "label": "X 細い筆記体",
+              "tags": [
+                "X",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒴",
+              "label": "Y 細い筆記体",
+              "tags": [
+                "Y",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒵",
+              "label": "Z 細い筆記体",
+              "tags": [
+                "Z",
+                "細い",
+                "アルファベット"
+              ],
+              "wide": false
+            }
+          ]
+        },
+        {
+          "category": "bold",
+          "heading": "太いA–Z",
+          "tags": [
+            "アルファベット",
+            "太い",
+            "筆記体"
+          ],
+          "items": [
+            {
+              "value": "𝓐",
+              "label": "A 太い筆記体",
+              "tags": [
+                "A",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓑",
+              "label": "B 太い筆記体",
+              "tags": [
+                "B",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓒",
+              "label": "C 太い筆記体",
+              "tags": [
+                "C",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓓",
+              "label": "D 太い筆記体",
+              "tags": [
+                "D",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓔",
+              "label": "E 太い筆記体",
+              "tags": [
+                "E",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓕",
+              "label": "F 太い筆記体",
+              "tags": [
+                "F",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓖",
+              "label": "G 太い筆記体",
+              "tags": [
+                "G",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓗",
+              "label": "H 太い筆記体",
+              "tags": [
+                "H",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓘",
+              "label": "I 太い筆記体",
+              "tags": [
+                "I",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓙",
+              "label": "J 太い筆記体",
+              "tags": [
+                "J",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓚",
+              "label": "K 太い筆記体",
+              "tags": [
+                "K",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓛",
+              "label": "L 太い筆記体",
+              "tags": [
+                "L",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓜",
+              "label": "M 太い筆記体",
+              "tags": [
+                "M",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓝",
+              "label": "N 太い筆記体",
+              "tags": [
+                "N",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓞",
+              "label": "O 太い筆記体",
+              "tags": [
+                "O",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓟",
+              "label": "P 太い筆記体",
+              "tags": [
+                "P",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓠",
+              "label": "Q 太い筆記体",
+              "tags": [
+                "Q",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓡",
+              "label": "R 太い筆記体",
+              "tags": [
+                "R",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓢",
+              "label": "S 太い筆記体",
+              "tags": [
+                "S",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓣",
+              "label": "T 太い筆記体",
+              "tags": [
+                "T",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓤",
+              "label": "U 太い筆記体",
+              "tags": [
+                "U",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓥",
+              "label": "V 太い筆記体",
+              "tags": [
+                "V",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓦",
+              "label": "W 太い筆記体",
+              "tags": [
+                "W",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓧",
+              "label": "X 太い筆記体",
+              "tags": [
+                "X",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓨",
+              "label": "Y 太い筆記体",
+              "tags": [
+                "Y",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝓩",
+              "label": "Z 太い筆記体",
+              "tags": [
+                "Z",
+                "太い",
+                "アルファベット"
+              ],
+              "wide": false
+            }
+          ]
+        },
+        {
+          "category": "name",
+          "heading": "名前",
+          "tags": [
+            "名前",
+            "筆記体"
+          ],
+          "items": [
+            {
+              "value": "ℳℴ𝓂ℴ",
+              "label": "名前 Momo",
+              "tags": [
+                "名前",
+                "Momo"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒴𝓊𝒾",
+              "label": "名前 Yui",
+              "tags": [
+                "名前",
+                "Yui"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℋ𝒶𝓃𝒶",
+              "label": "名前 Hana",
+              "tags": [
+                "名前",
+                "Hana"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒮𝒶𝓀𝓊𝓇𝒶",
+              "label": "名前 Sakura",
+              "tags": [
+                "名前",
+                "Sakura"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒜ℴ𝒾",
+              "label": "名前 Aoi",
+              "tags": [
+                "名前",
+                "Aoi"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℛ𝒾𝓃",
+              "label": "名前 Rin",
+              "tags": [
+                "名前",
+                "Rin"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℳℯ𝒾",
+              "label": "名前 Mei",
+              "tags": [
+                "名前",
+                "Mei"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒴𝓊𝓃𝒶",
+              "label": "名前 Yuna",
+              "tags": [
+                "名前",
+                "Yuna"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℳ𝒾ℴ",
+              "label": "名前 Mio",
+              "tags": [
+                "名前",
+                "Mio"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒮ℴ𝓇𝒶",
+              "label": "名前 Sora",
+              "tags": [
+                "名前",
+                "Sora"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℋ𝒶𝓇𝓊",
+              "label": "名前 Haru",
+              "tags": [
+                "名前",
+                "Haru"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℛ𝒾𝓀ℴ",
+              "label": "名前 Riko",
+              "tags": [
+                "名前",
+                "Riko"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒦𝒶𝓃𝒶",
+              "label": "名前 Kana",
+              "tags": [
+                "名前",
+                "Kana"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒩𝒶𝓃𝒶",
+              "label": "名前 Nana",
+              "tags": [
+                "名前",
+                "Nana"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒴𝓊𝓀𝒾",
+              "label": "名前 Yuki",
+              "tags": [
+                "名前",
+                "Yuki"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℋ𝒾𝓃𝒶",
+              "label": "名前 Hina",
+              "tags": [
+                "名前",
+                "Hina"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℛℯ𝓃",
+              "label": "名前 Ren",
+              "tags": [
+                "名前",
+                "Ren"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒦ℴ𝒽𝒶𝓇𝓊",
+              "label": "名前 Koharu",
+              "tags": [
+                "名前",
+                "Koharu"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒜𝓀𝒶𝓇𝒾",
+              "label": "名前 Akari",
+              "tags": [
+                "名前",
+                "Akari"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℐ𝒸𝒽𝒾𝓀𝒶",
+              "label": "名前 Ichika",
+              "tags": [
+                "名前",
+                "Ichika"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℰ𝓂𝓂𝒶",
+              "label": "名前 Emma",
+              "tags": [
+                "名前",
+                "Emma"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒪𝓁𝒾𝓋𝒾𝒶",
+              "label": "名前 Olivia",
+              "tags": [
+                "名前",
+                "Olivia"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒮ℴ𝓅𝒽𝒾𝒶",
+              "label": "名前 Sophia",
+              "tags": [
+                "名前",
+                "Sophia"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℳ𝒾𝒶",
+              "label": "名前 Mia",
+              "tags": [
+                "名前",
+                "Mia"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℒ𝓊𝓃𝒶",
+              "label": "名前 Luna",
+              "tags": [
+                "名前",
+                "Luna"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℒ𝒾𝓁𝓎",
+              "label": "名前 Lily",
+              "tags": [
+                "名前",
+                "Lily"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒞𝒽𝓁ℴℯ",
+              "label": "名前 Chloe",
+              "tags": [
+                "名前",
+                "Chloe"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒢𝓇𝒶𝒸ℯ",
+              "label": "名前 Grace",
+              "tags": [
+                "名前",
+                "Grace"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℰ𝓂𝒾𝓁𝓎",
+              "label": "名前 Emily",
+              "tags": [
+                "名前",
+                "Emily"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒜𝓃𝓃𝒶",
+              "label": "名前 Anna",
+              "tags": [
+                "名前",
+                "Anna"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒜𝓁𝒾𝒸ℯ",
+              "label": "名前 Alice",
+              "tags": [
+                "名前",
+                "Alice"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℛℴ𝓈ℯ",
+              "label": "名前 Rose",
+              "tags": [
+                "名前",
+                "Rose"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℐ𝓇𝒾𝓈",
+              "label": "名前 Iris",
+              "tags": [
+                "名前",
+                "Iris"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒮𝓉ℯ𝓁𝓁𝒶",
+              "label": "名前 Stella",
+              "tags": [
+                "名前",
+                "Stella"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒞𝓁𝒶𝒾𝓇ℯ",
+              "label": "名前 Claire",
+              "tags": [
+                "名前",
+                "Claire"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒮ℴ𝓅𝒽𝒾ℯ",
+              "label": "名前 Sophie",
+              "tags": [
+                "名前",
+                "Sophie"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒜𝓂𝓎",
+              "label": "名前 Amy",
+              "tags": [
+                "名前",
+                "Amy"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒦𝒶𝓉ℯ",
+              "label": "名前 Kate",
+              "tags": [
+                "名前",
+                "Kate"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒩𝒾𝓃𝒶",
+              "label": "名前 Nina",
+              "tags": [
+                "名前",
+                "Nina"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℰ𝓁𝓁𝒶",
+              "label": "名前 Ella",
+              "tags": [
+                "名前",
+                "Ella"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℛ𝓊𝒷𝓎",
+              "label": "名前 Ruby",
+              "tags": [
+                "名前",
+                "Ruby"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℒℯℴ",
+              "label": "名前 Leo",
+              "tags": [
+                "名前",
+                "Leo"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒦𝒶𝒾",
+              "label": "名前 Kai",
+              "tags": [
+                "名前",
+                "Kai"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒜𝓁ℯ𝓍",
+              "label": "名前 Alex",
+              "tags": [
+                "名前",
+                "Alex"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒩ℴ𝒶𝒽",
+              "label": "名前 Noah",
+              "tags": [
+                "名前",
+                "Noah"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℒ𝒾𝒶𝓂",
+              "label": "名前 Liam",
+              "tags": [
+                "名前",
+                "Liam"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒥𝒶𝓂ℯ𝓈",
+              "label": "名前 James",
+              "tags": [
+                "名前",
+                "James"
+              ],
+              "wide": false
+            },
+            {
+              "value": "𝒟𝒶𝓋𝒾𝒹",
+              "label": "名前 David",
+              "tags": [
+                "名前",
+                "David"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℳ𝒶𝓇𝓎",
+              "label": "名前 Mary",
+              "tags": [
+                "名前",
+                "Mary"
+              ],
+              "wide": false
+            },
+            {
+              "value": "ℋ𝒶𝓃𝓃𝒶𝒽",
+              "label": "名前 Hannah",
+              "tags": [
+                "名前",
+                "Hannah"
+              ],
+              "wide": false
+            }
+          ]
+        },
+        {
+          "category": "card",
+          "heading": "メッセージカード",
+          "tags": [
+            "カード",
+            "筆記体"
+          ],
+          "items": [
+            {
+              "value": "ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎",
+              "label": "Happy Birthday 細い",
+              "tags": [
+                "誕生日",
+                "Happy Birthday",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒯𝒽𝒶𝓃𝓀 𝓎ℴ𝓊",
+              "label": "Thank you 細い",
+              "tags": [
+                "ありがとう",
+                "Thank you",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒯𝒽𝒶𝓃𝓀𝓈 𝒶 𝓁ℴ𝓉",
+              "label": "Thanks a lot 細い",
+              "tags": [
+                "ありがとう",
+                "Thanks a lot",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℳℯ𝓇𝓇𝓎 𝒞𝒽𝓇𝒾𝓈𝓉𝓂𝒶𝓈",
+              "label": "Merry Christmas 細い",
+              "tags": [
+                "クリスマス",
+                "Merry Christmas",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℋ𝒶𝓅𝓅𝓎 𝒩ℯ𝓌 𝒴ℯ𝒶𝓇",
+              "label": "Happy New Year 細い",
+              "tags": [
+                "年始",
+                "Happy New Year",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒞ℴ𝓃ℊ𝓇𝒶𝓉𝓊𝓁𝒶𝓉𝒾ℴ𝓃𝓈",
+              "label": "Congratulations 細い",
+              "tags": [
+                "お祝い",
+                "Congratulations",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℐ 𝓁ℴ𝓋ℯ 𝓎ℴ𝓊",
+              "label": "I love you 細い",
+              "tags": [
+                "ラブ",
+                "I love you",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒲𝒾𝓉𝒽 𝓁ℴ𝓋ℯ",
+              "label": "With love 細い",
+              "tags": [
+                "ラブ",
+                "With love",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℱℴ𝓇 𝓎ℴ𝓊",
+              "label": "For you 細い",
+              "tags": [
+                "カード",
+                "For you",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℬℯ𝓈𝓉 𝓌𝒾𝓈𝒽ℯ𝓈",
+              "label": "Best wishes 細い",
+              "tags": [
+                "カード",
+                "Best wishes",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒢ℴℴ𝒹 𝓁𝓊𝒸𝓀",
+              "label": "Good luck 細い",
+              "tags": [
+                "カード",
+                "Good luck",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒢ℯ𝓉 𝓌ℯ𝓁𝓁 𝓈ℴℴ𝓃",
+              "label": "Get well soon 細い",
+              "tags": [
+                "カード",
+                "Get well soon",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℳ𝒾𝓈𝓈 𝓎ℴ𝓊",
+              "label": "Miss you 細い",
+              "tags": [
+                "カード",
+                "Miss you",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒮𝓌ℯℯ𝓉 𝒹𝓇ℯ𝒶𝓂𝓈",
+              "label": "Sweet dreams 細い",
+              "tags": [
+                "カード",
+                "Sweet dreams",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℬℯ 𝓂𝒾𝓃ℯ",
+              "label": "Be mine 細い",
+              "tags": [
+                "ラブ",
+                "Be mine",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒥𝓊𝓈𝓉 𝒻ℴ𝓇 𝓎ℴ𝓊",
+              "label": "Just for you 細い",
+              "tags": [
+                "カード",
+                "Just for you",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℱℴ𝓇ℯ𝓋ℯ𝓇 𝓎ℴ𝓊𝓇𝓈",
+              "label": "Forever yours 細い",
+              "tags": [
+                "ラブ",
+                "Forever yours",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒴ℴ𝓊 𝒶𝓇ℯ 𝓁ℴ𝓋ℯ𝒹",
+              "label": "You are loved 細い",
+              "tags": [
+                "ラブ",
+                "You are loved",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℋ𝒶𝓅𝓅𝓎 𝒜𝓃𝓃𝒾𝓋ℯ𝓇𝓈𝒶𝓇𝓎",
+              "label": "Happy Anniversary 細い",
+              "tags": [
+                "お祝い",
+                "Happy Anniversary",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒲ℯ𝓁𝒸ℴ𝓂ℯ",
+              "label": "Welcome 細い",
+              "tags": [
+                "カード",
+                "Welcome",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒢ℴℴ𝒹 𝓂ℴ𝓇𝓃𝒾𝓃ℊ",
+              "label": "Good morning 細い",
+              "tags": [
+                "カード",
+                "Good morning",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒯𝒶𝓀ℯ 𝒸𝒶𝓇ℯ",
+              "label": "Take care 細い",
+              "tags": [
+                "カード",
+                "Take care",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒮ℯℯ 𝓎ℴ𝓊 𝓈ℴℴ𝓃",
+              "label": "See you soon 細い",
+              "tags": [
+                "カード",
+                "See you soon",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℳ𝓎 𝒹ℯ𝒶𝓇",
+              "label": "My dear 細い",
+              "tags": [
+                "カード",
+                "My dear",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℋ𝒶𝓅𝓅𝓎 𝒱𝒶𝓁ℯ𝓃𝓉𝒾𝓃ℯ",
+              "label": "Happy Valentine 細い",
+              "tags": [
+                "バレンタイン",
+                "Happy Valentine",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒲𝒶𝓇𝓂 𝓌𝒾𝓈𝒽ℯ𝓈",
+              "label": "Warm wishes 細い",
+              "tags": [
+                "カード",
+                "Warm wishes",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒜𝓁𝓁 𝓂𝓎 𝓁ℴ𝓋ℯ",
+              "label": "All my love 細い",
+              "tags": [
+                "ラブ",
+                "All my love",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒞𝒽ℯℯ𝓇𝓈",
+              "label": "Cheers 細い",
+              "tags": [
+                "カード",
+                "Cheers",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝒲𝒾𝓉𝒽 𝓉𝒽𝒶𝓃𝓀𝓈",
+              "label": "With thanks 細い",
+              "tags": [
+                "ありがとう",
+                "With thanks",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ℳ𝒶𝓃𝓎 𝓉𝒽𝒶𝓃𝓀𝓈",
+              "label": "Many thanks 細い",
+              "tags": [
+                "ありがとう",
+                "Many thanks",
+                "細い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂",
+              "label": "Happy Birthday 太い",
+              "tags": [
+                "誕生日",
+                "Happy Birthday",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓣𝓱𝓪𝓷𝓴 𝔂𝓸𝓾",
+              "label": "Thank you 太い",
+              "tags": [
+                "ありがとう",
+                "Thank you",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓜𝓮𝓻𝓻𝔂 𝓒𝓱𝓻𝓲𝓼𝓽𝓶𝓪𝓼",
+              "label": "Merry Christmas 太い",
+              "tags": [
+                "クリスマス",
+                "Merry Christmas",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓒𝓸𝓷𝓰𝓻𝓪𝓽𝓾𝓵𝓪𝓽𝓲𝓸𝓷𝓼",
+              "label": "Congratulations 太い",
+              "tags": [
+                "お祝い",
+                "Congratulations",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓘 𝓵𝓸𝓿𝓮 𝔂𝓸𝓾",
+              "label": "I love you 太い",
+              "tags": [
+                "ラブ",
+                "I love you",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓦𝓲𝓽𝓱 𝓵𝓸𝓿𝓮",
+              "label": "With love 太い",
+              "tags": [
+                "ラブ",
+                "With love",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓑𝓮𝓼𝓽 𝔀𝓲𝓼𝓱𝓮𝓼",
+              "label": "Best wishes 太い",
+              "tags": [
+                "カード",
+                "Best wishes",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓗𝓪𝓹𝓹𝔂 𝓝𝓮𝔀 𝓨𝓮𝓪𝓻",
+              "label": "Happy New Year 太い",
+              "tags": [
+                "年始",
+                "Happy New Year",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓕𝓸𝓻 𝔂𝓸𝓾",
+              "label": "For you 太い",
+              "tags": [
+                "カード",
+                "For you",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "𝓖𝓸𝓸𝓭 𝓵𝓾𝓬𝓴",
+              "label": "Good luck 太い",
+              "tags": [
+                "カード",
+                "Good luck",
+                "太い"
+              ],
+              "wide": true
+            },
+            {
+              "value": "♡ ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 ♡",
+              "label": "飾り Happy Birthday",
+              "tags": [
+                "誕生日",
+                "Happy Birthday",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "🎂 ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🎂",
+              "label": "飾り Happy Birthday",
+              "tags": [
+                "誕生日",
+                "Happy Birthday",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "♡ 𝒯𝒽𝒶𝓃𝓀 𝓎ℴ𝓊 ♡",
+              "label": "飾り Thank you",
+              "tags": [
+                "ありがとう",
+                "Thank you",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "🎀 𝒯𝒽𝒶𝓃𝓀 𝓎ℴ𝓊 🎀",
+              "label": "飾り Thank you",
+              "tags": [
+                "ありがとう",
+                "Thank you",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "🎄 ℳℯ𝓇𝓇𝓎 𝒞𝒽𝓇𝒾𝓈𝓉𝓂𝒶𝓈 🎄",
+              "label": "飾り Merry Christmas",
+              "tags": [
+                "クリスマス",
+                "Merry Christmas",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "🎁 ℱℴ𝓇 𝓎ℴ𝓊 🎁",
+              "label": "飾り For you",
+              "tags": [
+                "カード",
+                "For you",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "💌 𝒲𝒾𝓉𝒽 𝓁ℴ𝓋ℯ 💌",
+              "label": "飾り With love",
+              "tags": [
+                "ラブ",
+                "With love",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "✨ 𝒞ℴ𝓃ℊ𝓇𝒶𝓉𝓊𝓁𝒶𝓉𝒾ℴ𝓃𝓈 ✨",
+              "label": "飾り Congratulations",
+              "tags": [
+                "お祝い",
+                "Congratulations",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "🌸 ℱℴ𝓇 𝓎ℴ𝓊 🌸",
+              "label": "飾り For you",
+              "tags": [
+                "カード",
+                "For you",
+                "飾り"
+              ],
+              "wide": true
+            },
+            {
+              "value": "⭐ ℬℯ𝓈𝓉 𝓌𝒾𝓈𝒽ℯ𝓈 ⭐",
+              "label": "飾り Best wishes",
+              "tags": [
+                "カード",
+                "Best wishes",
+                "飾り"
+              ],
+              "wide": true
+            }
+          ]
         }
       ]
     }

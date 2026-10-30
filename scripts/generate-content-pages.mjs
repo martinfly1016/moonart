@@ -35,28 +35,38 @@ async function main() {
   const sitemapPages = pages.filter(shouldIncludeInSitemap);
   await validateUniqueTargets(pages);
 
-  const outputs = pages.flatMap((page) => [
-    {
-      kind: 'html',
-      file: page.htmlFile,
-      content: renderPage(page)
-    },
-    {
+  const outputs = pages.flatMap((page) => {
+    const list = [];
+    if (page.renderMode !== 'embed') {
+      list.push({
+        kind: 'html',
+        file: page.htmlFile,
+        content: renderPage(page)
+      });
+    }
+    list.push({
       kind: 'data',
       file: page.dataFile,
       content: renderDataFile(page)
-    }
-  ]);
+    });
+    return list;
+  });
   outputs.push({
     kind: 'sitemap',
     file: sitemapFile,
-    content: await renderUpdatedSitemap(sitemapPages)
+    content: await renderUpdatedSitemap(sitemapPages, pages)
   });
 
   const stale = [];
   for (const output of outputs) {
     const changed = await writeGeneratedFile(output, checkOnly);
     if (changed) stale.push(path.relative(rootDir, output.file));
+  }
+
+  for (const page of pages.filter((item) => item.renderMode === 'embed')) {
+    if (await writeEmbeddedPage(page, checkOnly)) {
+      stale.push(path.relative(rootDir, page.htmlFile));
+    }
   }
 
   stale.push(...await syncHandwrittenGrids(checkOnly));
@@ -432,7 +442,7 @@ function normalizePage(page, defaults, updated) {
   if (!['priority', 'standard', 'internal'].includes(indexing)) {
     throw new Error(`Unsupported indexing "${indexing}" for ${page.slug}.`);
   }
-  if (!navTargets[navCurrent]) {
+  if (page.renderMode !== 'embed' && !navTargets[navCurrent]) {
     throw new Error(`Unsupported navCurrent "${navCurrent}" for ${page.slug}.`);
   }
 
@@ -461,6 +471,7 @@ function normalizePage(page, defaults, updated) {
 }
 
 function shouldIncludeInSitemap(page) {
+  if (page.renderMode === 'embed') return false;
   return page.indexing !== 'internal' && page.sitemap !== false;
 }
 
@@ -854,7 +865,7 @@ function renderDataFile(page) {
   return `${dataMarker} slug="${page.slug}" source="_content/ja-copy-pages.json"\nwindow.MojiMoonToolData = ${JSON.stringify(payload, null, 2)};\n`;
 }
 
-async function renderUpdatedSitemap(pages) {
+async function renderUpdatedSitemap(pages, allPages = pages) {
   const sitemap = await fs.readFile(sitemapFile, 'utf8');
   const section = renderSitemapSection(pages);
   const startIndex = sitemap.indexOf(sitemapStart);
@@ -872,10 +883,81 @@ async function renderUpdatedSitemap(pages) {
       throw new Error(`Generated URL already exists outside generated sitemap block: ${page.canonical}`);
     }
   }
-  if (startIndex >= 0) {
-    return `${sitemap.slice(0, startIndex)}${section}${sitemap.slice(endIndex + sitemapEnd.length).replace(/^\s+/u, '')}`;
+  const rebuilt = startIndex >= 0
+    ? `${sitemap.slice(0, startIndex)}${section}${sitemap.slice(endIndex + sitemapEnd.length).replace(/^\s+/u, '')}`
+    : sitemap.replace(/<\/urlset>\s*$/u, `${section}</urlset>\n`);
+  return patchEmbedSitemap(rebuilt, allPages);
+}
+
+function patchEmbedSitemap(sitemap, pages) {
+  let next = sitemap;
+  for (const page of pages.filter((item) => item.renderMode === 'embed')) {
+    const needle = `<loc>${page.canonical}</loc>`;
+    const index = next.indexOf(needle);
+    if (index < 0) throw new Error(`Embed page missing from sitemap: ${page.canonical}`);
+    const urlEnd = next.indexOf('</url>', index);
+    if (urlEnd < 0) throw new Error(`Embed sitemap entry is truncated: ${page.canonical}`);
+    const block = next.slice(index, urlEnd);
+    if (!/<lastmod>[^<]*<\/lastmod>/u.test(block)) {
+      throw new Error(`Embed sitemap entry has no lastmod: ${page.canonical}`);
+    }
+    const replaced = block.replace(/<lastmod>[^<]*<\/lastmod>/u, `<lastmod>${page.updated}</lastmod>`);
+    next = next.slice(0, index) + replaced + next.slice(urlEnd);
   }
-  return sitemap.replace(/<\/urlset>\s*$/u, `${section}</urlset>\n`);
+  return next;
+}
+
+async function writeEmbeddedPage(page, dryRun) {
+  const existing = await fs.readFile(page.htmlFile, 'utf8');
+  const content = renderEmbeddedHtml(existing, page);
+  if (content === existing) return false;
+  if (!dryRun) await fs.writeFile(page.htmlFile, content);
+  return true;
+}
+
+function renderEmbeddedHtml(html, page) {
+  let next = replaceOnce(html, /<title>[^<]*<\/title>/u, `<title>${escapeHtml(page.title)}</title>`, 'title');
+  next = replaceMetaContent(next, 'name', 'description', page.description);
+  next = replaceMetaContent(next, 'property', 'og:title', page.ogTitle || page.title);
+  next = replaceMetaContent(next, 'property', 'og:description', page.ogDescription || page.description);
+  next = replaceOnce(next, /<h1>[^<]*<\/h1>/u, `<h1>${escapeHtml(page.h1)}</h1>`, 'h1');
+  next = replaceOnce(next, /<p class="hero-copy">[^<]*<\/p>/u, `<p class="hero-copy">${escapeHtml(page.hero)}</p>`, 'hero');
+  if (next.includes('<section class="seo-section">')) {
+    next = next.replace('<section class="seo-section">', '<section class="seo-section" data-seo-static>');
+  }
+  const catalog = `<!-- mojimoon:static-grid:start -->\n${renderEmbedCatalog(page)}\n<!-- mojimoon:static-grid:end -->`;
+  if (next.includes('<!-- mojimoon:static-grid:start -->')) {
+    next = next.replace(/<!-- mojimoon:static-grid:start -->[\s\S]*?<!-- mojimoon:static-grid:end -->/u, catalog);
+  } else if (next.includes('<section class="seo-section"')) {
+    next = next.replace('<section class="seo-section"', `${catalog}\n    <section class="seo-section"`);
+  } else {
+    throw new Error(`No place to embed the copy grid in ${page.path}`);
+  }
+  if (!next.includes(page.dataUrl)) {
+    const script = `  <script src="${escapeAttr(page.dataUrl)}"></script>\n  <script src="/assets/js/text-tools.js"></script>\n`;
+    if (!next.includes('</body>')) throw new Error(`No </body> in ${page.path}`);
+    next = next.replace('</body>', `${script}</body>`);
+  }
+  return next;
+}
+
+function renderEmbedCatalog(page) {
+  const heading = page.catalogHeading || page.h1;
+  return `<section class="cursive-catalog tool-wrap" aria-label="${escapeAttr(page.toolLabel)}"><h2 class="catalog-title">${escapeHtml(heading)}</h2><div class="tool-app"><section class="workspace" aria-label="${escapeAttr(page.toolLabel)}"><div class="tool-tabs" data-tabs></div><div class="search-row"><input class="search-input" type="search" data-search placeholder="${escapeAttr(page.searchPlaceholder || 'キーワードで検索')}"><button class="clear-search" type="button" data-clear-search>クリア</button></div>${renderItemGrid(page)}</section><aside class="composer" aria-label="コピー草稿"><h2>コピー草稿</h2><textarea class="draft-input" data-draft placeholder="${escapeAttr(page.draftPlaceholder || 'クリックするとここに追加されます')}"></textarea><div class="button-row"><button class="primary-btn" type="button" data-copy-draft>コピー</button><button class="secondary-btn" type="button" data-clear-draft>消去</button></div><p class="hint">${escapeHtml(page.composerHint || 'クリックした素材を草稿で組み合わせてコピーできます。')}</p><div class="recent-list" data-recent aria-label="${escapeAttr(page.recentLabel || '最近使ったもの')}"></div></aside></div></section>`;
+}
+
+function replaceOnce(value, pattern, replacement, label) {
+  if (!pattern.test(value)) throw new Error(`Missing ${label} while embedding a copy page.`);
+  return value.replace(pattern, replacement);
+}
+
+function replaceMetaContent(html, attrName, attrValue, content) {
+  const pattern = new RegExp(`(<meta ${attrName}="${escapeRegExp(attrValue)}" content=")[^"]*(")`, 'u');
+  return replaceOnce(html, pattern, `$1${escapeAttr(content)}$2`, `meta ${attrName}=${attrValue}`);
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function renderSitemapSection(pages) {
