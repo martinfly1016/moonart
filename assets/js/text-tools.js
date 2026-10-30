@@ -503,7 +503,7 @@
 
   function setupCollapsibleSeo() {
     const section = document.querySelector('.seo-section');
-    if (!section || section.dataset.collapsibleReady === 'true') return;
+    if (!section || section.dataset.collapsibleReady === 'true' || section.hasAttribute('data-seo-static')) return;
     section.dataset.collapsibleReady = 'true';
     const firstHeading = section.querySelector('h2');
     const summaryText = firstHeading?.textContent?.trim() || 'このページの詳しい説明';
