@@ -22,6 +22,22 @@ window.MojiMoonToolData = {
     {
       "label": "推し活",
       "query": "推し"
+    },
+    {
+      "label": "単体",
+      "query": "単体"
+    },
+    {
+      "label": "ケーキ",
+      "query": "ケーキ"
+    },
+    {
+      "label": "イルミネーション",
+      "query": "イルミネーション"
+    },
+    {
+      "label": "トナカイ",
+      "query": "トナカイ"
     }
   ],
   "categories": [
@@ -56,10 +72,238 @@ window.MojiMoonToolData = {
     {
       "id": "oshi",
       "label": "推し活"
+    },
+    {
+      "id": "single",
+      "label": "単体"
+    },
+    {
+      "id": "party",
+      "label": "パーティー"
+    },
+    {
+      "id": "illumination",
+      "label": "イルミネーション"
+    },
+    {
+      "id": "reindeer",
+      "label": "トナカイ"
+    },
+    {
+      "id": "eve",
+      "label": "イブ"
     }
   ],
   "pageSize": 160,
   "items": [
+    {
+      "value": "🌲",
+      "label": "もみの木",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎅",
+      "label": "サンタクロース",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🤶",
+      "label": "ミセス・クロース",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧑‍🎄",
+      "label": "サンタ（性別なし）",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦌",
+      "label": "トナカイ",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⛄",
+      "label": "雪だるま（雪なし）",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "☃️",
+      "label": "雪だるま（雪あり）",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎁",
+      "label": "プレゼント",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🔔",
+      "label": "ベル",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🕯️",
+      "label": "キャンドル",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧦",
+      "label": "靴下",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🛷",
+      "label": "そり",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍗",
+      "label": "チキン",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂",
+      "label": "ケーキ",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌟",
+      "label": "光る星",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🤍",
+      "label": "白いハート（ホワイトクリスマス）",
+      "category": "single",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "単体",
+        "コピペ"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
     {
       "value": "🎄⭐",
       "label": "ツリーと星",
@@ -646,6 +890,538 @@ window.MojiMoonToolData = {
         "プレゼント"
       ],
       "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "🍗🎄",
+      "label": "チキンとツリー",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎂🎄✨",
+      "label": "ケーキとツリー",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍰🕯️",
+      "label": "ケーキとキャンドル",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥂🎄",
+      "label": "乾杯クリスマス",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍗🥂🎂",
+      "label": "ごちそう3点",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍓🍰🎄",
+      "label": "いちごケーキ",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍾🎉🎄",
+      "label": "パーティー開始",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧁🎄",
+      "label": "カップケーキ",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍗🍗🍗",
+      "label": "チキン祭り",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥧🕯️",
+      "label": "パイとキャンドル",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍷🕯️✨",
+      "label": "大人のクリスマス",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍫☕🎄",
+      "label": "おうちカフェ",
+      "category": "party",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "ケーキ",
+        "チキン",
+        "パーティー"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💡🎄✨",
+      "label": "イルミネーション",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✨🌃🎄",
+      "label": "夜景とツリー",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧣🤝🎄",
+      "label": "手をつないでツリーへ",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎄💑",
+      "label": "ふたりのクリスマス",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "☕🧣❄️",
+      "label": "あったかデート",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌃✨💫",
+      "label": "きらきら夜景",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎡✨",
+      "label": "観覧車イルミ",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎄📸",
+      "label": "ツリーの前で写真",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧤❄️🤍",
+      "label": "手袋と雪",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💫🎄💫",
+      "label": "光るツリー",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌉✨🎄",
+      "label": "橋のイルミネーション",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎄🫶",
+      "label": "ツリーにハート",
+      "category": "illumination",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦌🛷🎁",
+      "label": "トナカイのそり",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦌🦌🦌🛷",
+      "label": "トナカイ隊",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🛷❄️",
+      "label": "雪の中のそり",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦌✨",
+      "label": "光るトナカイ",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦌🔔",
+      "label": "鈴のトナカイ",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🛷🎅🎁",
+      "label": "サンタ出発",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌙🛷",
+      "label": "夜空を飛ぶそり",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦌🎄🦌",
+      "label": "ツリーとトナカイ",
+      "category": "reindeer",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "トナカイ",
+        "そり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌙🎄",
+      "label": "イブの夜",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🕯️🕯️🎄",
+      "label": "キャンドルナイト",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎄⭐🌙",
+      "label": "星と月のツリー",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌟🌙❄️",
+      "label": "聖夜の空",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🛌🎁",
+      "label": "サンタ待ち",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧦🌙",
+      "label": "靴下を吊るして",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎶🕯️",
+      "label": "聖歌とキャンドル",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌃🔔",
+      "label": "夜のベル",
+      "category": "eve",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イブ",
+        "夜"
+      ],
+      "wide": false,
       "beadHref": ""
     },
     {
