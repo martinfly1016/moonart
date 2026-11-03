@@ -123,7 +123,11 @@ window.MojiMoonToolData = {
     { value: '推し ♡ 𝑙𝑜𝑣𝑒', label: '推し活短文', category: 'combo', tags: ['推し活', '量産型'] },
     { value: '𝘮𝘺 𝘧𝘢𝘷 𓂃♡', label: 'お気に入りプロフィール', category: 'combo', tags: ['プロフィール', '推し活'] },
     { value: 'thank you ୨୧', label: '英字メッセージ', category: 'combo', tags: ['プロフィール', '可愛い'] },
-    { value: 'good night ☾⋆｡˚', label: 'おやすみ英字', category: 'combo', tags: ['おやすみ', 'キラキラ'] }
+    { value: 'good night ☾⋆｡˚', label: 'おやすみ英字', category: 'combo', tags: ['おやすみ', 'キラキラ'] },
+    { value: '⋆𓂃𓈒𓏸', label: '星を添えた飾り', category: 'line', tags: ['区切り線', '象形文字', 'おしゃれ'] },
+    { value: '𓂃 ˚｡ ♡', label: 'ハートの余白', category: 'line', tags: ['区切り線', '象形文字', 'おしゃれ'] },
+    { value: '♡𓂃𓈒𓏸♡', label: 'ハートで挟んだ飾り', category: 'line', tags: ['区切り線', '象形文字', 'おしゃれ'] },
+    { value: '⋆˚｡ 𓂃 𓈒𓏸', label: '星ドットの飾り', category: 'line', tags: ['区切り線', '象形文字', 'おしゃれ'] }
   ]
 };
 
