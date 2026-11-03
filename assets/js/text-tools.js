@@ -339,6 +339,7 @@
     }
   }
 
+  const leadValues = new Set();
   const staticItems = Boolean(grid?.hasAttribute('data-static-items'));
   const staticCards = staticItems ? Array.from(grid.querySelectorAll('[data-copy]')) : [];
   let preferStatic = staticItems;
@@ -364,7 +365,7 @@
 
   function filteredItems() {
     const query = normalize(searchInput.value);
-    return data.items.filter((item) => categoryMatches(item) && itemMatches(item, query));
+    return data.items.filter((item) => !leadValues.has(item.value) && categoryMatches(item) && itemMatches(item, query));
   }
 
   function renderPagination(totalItems) {
@@ -651,6 +652,23 @@
     draft.value = storedDraft;
     updateComposerState();
   }
+  const leadRoot = document.querySelector('[data-static-lead]');
+  if (leadRoot) {
+    leadRoot.querySelectorAll('[data-copy]').forEach((card) => {
+      leadValues.add(safeDecode(card.dataset.copy));
+    });
+    leadRoot.addEventListener('click', async (event) => {
+      const button = event.target.closest('[data-copy]');
+      if (!button) return;
+      await copyItem(safeDecode(button.dataset.copy), {
+        label: button.dataset.label || '',
+        category: button.dataset.category || activeCategory,
+        source: 'lead',
+        button
+      });
+    });
+  }
+
   renderQuickFilters();
   quickFilterWrap?.addEventListener('click', (event) => {
     const button = event.target.closest('[data-quick-query]');

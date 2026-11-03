@@ -165,6 +165,32 @@ async function syncHandwrittenGrids(checkOnly) {
   return stale;
 }
 
+const kawaiiHieroglyphLead = {
+  heading: '𓂃𓈒𓏸 象形文字の飾り',
+  intro: 'プロフィールの余白に足す 𓂃𓈒𓏸 です。文字の形は象形文字、余白の置き方はおしゃれ記号です。',
+  markerStart: '<!-- mojimoon:hieroglyph-lead:start -->',
+  markerEnd: '<!-- mojimoon:hieroglyph-lead:end -->',
+  match: (item) => /[𓂃𓈒𓏸]/u.test(item.value),
+  order: [
+    '𓂃',
+    '𓈒𓏸',
+    '𓂃𓈒𓏸',
+    '⋆𓂃𓈒𓏸',
+    '𓂃 ˚｡ ♡',
+    '♡𓂃𓈒𓏸♡',
+    '⋆˚｡ 𓂃 𓈒𓏸',
+    '꒰ঌ 𓂃 ໒꒱',
+    '𓂃 favorite 𓈒𓏸',
+    '🍓 𓂃 ♡',
+    '𝘮𝘺 𝘧𝘢𝘷 𓂃♡',
+    '🪽 🤍 𓂃'
+  ],
+  links: [
+    { href: '/special-characters/hieroglyph/', label: '象形文字・ヒエログリフ' },
+    { href: '/special-characters/aesthetic/', label: '𓂃𓈒𓏸 おしゃれ記号' }
+  ]
+};
+
 const legacyListTargets = [
   { html: 'emoji-combinations/index.html', data: 'assets/data/emoji-combinations.js', reserve: true },
   { html: 'emoji-combinations/kawaii/index.html', data: 'assets/data/emoji-combinations.js', category: 'kawaii' },
@@ -173,7 +199,7 @@ const legacyListTargets = [
   { html: 'kaomoji/love/index.html', data: 'assets/data/kaomoji.js', category: 'love' },
   { html: 'kaomoji/rabbit/index.html', data: 'assets/data/kaomoji.js', category: 'rabbit' },
   { html: 'special-characters/arrow/index.html', data: 'assets/data/special-characters.js', category: 'arrow' },
-  { html: 'kawaii-copy/index.html', data: 'assets/data/kawaii-copy.js' },
+  { html: 'kawaii-copy/index.html', data: 'assets/data/kawaii-copy.js', lead: kawaiiHieroglyphLead },
   { html: 'kawaii-copy/yumekawa/index.html', data: 'assets/data/kawaii-copy.js', query: 'ゆめかわ' },
   { html: 'kawaii-copy/name-frame/index.html', data: 'assets/data/kawaii-copy.js', category: 'name' },
   { html: 'kawaii-copy/ryosangata-otaku/index.html', data: 'assets/data/kawaii-copy.js', query: '量産型' },
@@ -230,16 +256,55 @@ function renderStaticQuickFilters(data) {
   return `<div class="quick-filter-row">${buttons}</div>`;
 }
 
+function partitionLead(items, lead) {
+  if (!lead) return { leadItems: [], rest: items };
+  const matched = [];
+  const rest = [];
+  for (const item of items) {
+    if (lead.match(item)) matched.push(item);
+    else rest.push(item);
+  }
+  const order = lead.order || [];
+  const rank = new Map(order.map((value, index) => [value, index]));
+  matched.sort((a, b) => {
+    const left = rank.has(a.value) ? rank.get(a.value) : order.length;
+    const right = rank.has(b.value) ? rank.get(b.value) : order.length;
+    return left - right;
+  });
+  if (matched.length < 10 || matched.length > 12) {
+    throw new Error(`Hieroglyph lead block needs 10-12 items, got ${matched.length}.`);
+  }
+  return { leadItems: matched, rest };
+}
+
+function renderHieroglyphLead(lead, items) {
+  const cards = items.map((item) => renderLegacyCopyCard(item, false)).join('');
+  const links = (lead.links || []).map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('');
+  return `    <section class="hieroglyph-lead" data-static-lead aria-label="${escapeAttr(lead.heading)}">
+      <h2>${escapeHtml(lead.heading)}</h2>
+      <p>${escapeHtml(lead.intro || '')}</p>
+      <div class="category-links">${links}</div>
+      <div class="item-grid">${cards}</div>
+    </section>`;
+}
+
 function renderLegacyItemGrid(data, target) {
   const activeCategory = resolveActiveCategory(data, target.category);
   const query = String(target.query || '').toLowerCase().trim();
-  const items = (data.items || []).filter((item) => matchesToolItem(item, activeCategory, query));
+  let items = (data.items || []).filter((item) => matchesToolItem(item, activeCategory, query));
+  let leadItems = [];
+  if (target.lead) {
+    const parts = partitionLead(items, target.lead);
+    leadItems = parts.leadItems;
+    items = parts.rest;
+  }
   if (!items.length) throw new Error(`No static items for ${target.html}`);
   const pageSize = Number(data.pageSize || 48);
   const gridClass = target.reserve ? 'item-grid item-grid-stable' : 'item-grid';
   const cards = items.map((item, index) => renderLegacyCopyCard(item, index >= pageSize)).join('');
   return {
-    count: items.length,
+    count: items.length + leadItems.length,
+    leadItems,
     activeCategory,
     grid: `<div class="${gridClass}" data-grid data-static-items>${cards}</div>`,
     tabs: renderStaticTabs(data, activeCategory),
@@ -310,6 +375,15 @@ async function syncLegacyListGrids(checkOnly) {
       const replaced = replaceMarkedGrid(html, replacement, '<div class="item-grid" data-grid></div>');
       if (!replaced) throw new Error(`No item grid placeholder in ${target.html}`);
       next = replaced;
+      if (target.lead) {
+        const leadHtml = renderHieroglyphLead(target.lead, rendered.leadItems);
+        const { markerStart, markerEnd } = target.lead;
+        if (!next.includes(markerStart) || !next.includes(markerEnd)) {
+          throw new Error(`Missing hieroglyph lead markers in ${target.html}`);
+        }
+        const leadPattern = new RegExp(`${escapeRegExp(markerStart)}[\\s\\S]*?${escapeRegExp(markerEnd)}`, 'u');
+        next = next.replace(leadPattern, `${markerStart}\n${leadHtml}\n    ${markerEnd}`);
+      }
       if (next.includes('<div class="tool-tabs" data-tabs></div>')) {
         next = next.replace('<div class="tool-tabs" data-tabs></div>', `<div class="tool-tabs" data-tabs>${rendered.tabs}</div>`);
       }

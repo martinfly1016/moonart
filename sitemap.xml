@@ -1011,5 +1011,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/pekori/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
   <!-- mojimoon:generated-pages:end -->
 </urlset>

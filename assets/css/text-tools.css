@@ -588,11 +588,34 @@ a {
 }
 
 .seo-section,
-.related-tools {
+.related-tools,
+.hieroglyph-lead {
   max-width: 1180px;
   margin: 22px auto 0;
   padding: 24px;
   box-shadow: none;
+}
+
+.hieroglyph-lead {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.hieroglyph-lead h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.35;
+}
+
+.hieroglyph-lead p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hieroglyph-lead .item-grid {
+  padding: 14px 0 0;
 }
 
 .seo-section[data-collapsible-ready="true"] {
@@ -1141,7 +1164,8 @@ a {
   }
 
   .seo-section,
-  .related-tools {
+  .related-tools,
+  .hieroglyph-lead {
     margin-top: 16px;
     padding: 18px;
   }
