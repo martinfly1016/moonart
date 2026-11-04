@@ -100,7 +100,8 @@ const handwrittenTargets = [
   { html: 'kaomoji/happy/index.html', data: 'assets/data/pages/kaomoji-happy.js', headings: true },
   { html: 'kaomoji/sad/index.html', data: 'assets/data/pages/crying.js', headings: true },
   { html: 'emoji-copy/tear/index.html', data: 'assets/data/pages/tear-emoji.js', headings: true },
-  { html: 'kaomoji/angry/index.html', data: 'assets/data/pages/angry.js', headings: true }
+  { html: 'kaomoji/angry/index.html', data: 'assets/data/pages/angry.js', headings: true },
+  { html: 'kawaii-copy/food/index.html', data: 'assets/data/pages/kawaii-food.js', headings: true }
 ];
 
 async function loadWindowData(file, key) {
@@ -203,7 +204,6 @@ const legacyListTargets = [
   { html: 'kawaii-copy/yumekawa/index.html', data: 'assets/data/kawaii-copy.js', query: 'ゆめかわ' },
   { html: 'kawaii-copy/name-frame/index.html', data: 'assets/data/kawaii-copy.js', category: 'name' },
   { html: 'kawaii-copy/ryosangata-otaku/index.html', data: 'assets/data/kawaii-copy.js', query: '量産型' },
-  { html: 'kawaii-copy/food/index.html', data: 'assets/data/kawaii-copy.js', query: '食べ物' },
   { html: 'emoji-copy/index.html', data: 'assets/data/emoji-copy.js' },
   { html: 'emoji-copy/kawaii/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii' },
   { html: 'emoji-copy/heart/index.html', data: 'assets/data/emoji-copy.js', category: 'heart' },
@@ -397,6 +397,16 @@ async function syncLegacyListGrids(checkOnly) {
 }
 
 const siteFooterPattern = /<footer class="site-footer">\s*<p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。(\s*<a href="\/guide\.html">月文字ガイド<\/a>)?<\/p>\s*<\/footer>/u;
+const beadFooterBlock = '<div class="footer-block"><strong>図案</strong><a href="https://beads.mojimoon.com/" target="_blank" rel="noopener">アイロンビーズ図案（無料）</a></div>';
+
+function injectBeadFooter(html) {
+  const match = html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/u);
+  if (!match) return html;
+  const footer = match[0];
+  if (!footer.includes('class="footer-blocks"') || footer.includes('https://beads.mojimoon.com/')) return html;
+  if (!footer.includes('</nav>')) return html;
+  return html.replace(footer, footer.replace('</nav>', `${beadFooterBlock}</nav>`));
+}
 
 async function listHtmlFiles(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -415,9 +425,12 @@ async function syncSiteFooters(checkOnly) {
   const files = await listHtmlFiles(rootDir);
   for (const file of files) {
     const html = await fs.readFile(file, 'utf8');
-    if (html.includes('class="footer-blocks"') || !siteFooterPattern.test(html)) continue;
-    siteFooterPattern.lastIndex = 0;
-    const next = html.replace(siteFooterPattern, (_match, guide) => renderSiteFooter({ guide: Boolean(guide) }));
+    let next = html;
+    if (!html.includes('class="footer-blocks"') && siteFooterPattern.test(html)) {
+      siteFooterPattern.lastIndex = 0;
+      next = html.replace(siteFooterPattern, (_match, guide) => renderSiteFooter({ guide: Boolean(guide) }));
+    }
+    next = injectBeadFooter(next);
     if (next === html) continue;
     stale.push(path.relative(rootDir, file));
     if (!checkOnly) await fs.writeFile(file, next);
@@ -710,19 +723,19 @@ function renderHeroLinks(page) {
     }
   }
   if (!links.length) return '';
-  return `<div class="category-links">${links.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>`;
+  return `<div class="category-links">${links.map((link) => `<a href="${escapeAttr(link.href)}"${externalAttrs(link.href)}>${escapeHtml(link.label)}</a>`).join('')}</div>`;
 }
 
 function renderSiteFooter(options = {}) {
   const guide = options.guide ? ' <a href="/guide.html">月文字ガイド</a>' : '';
-  return `<footer class="site-footer"><nav class="footer-blocks" aria-label="関連ページ"><div class="footer-block"><strong>季節・イベント</strong><a href="/emoji-combinations/halloween/">ハロウィン</a><a href="/kaomoji/halloween/">ハロウィン顔文字</a><a href="/emoji-combinations/christmas/">クリスマス</a><a href="/emoji-combinations/new-year/">あけおめ</a><a href="/emoji-combinations/new-year-message/">あけおめメッセージ</a><a href="/emoji-combinations/love/">バレンタイン</a></div><div class="footer-block"><strong>推し活</strong><a href="/emoji-combinations/oshi/">推し活絵文字</a><a href="/kaomoji/oshi/">推し活顔文字</a><a href="/uchiwa-moji/">うちわ文字</a><a href="/led-banner/">電光掲示板</a></div></nav><p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。${guide}</p></footer>`;
+  return `<footer class="site-footer"><nav class="footer-blocks" aria-label="関連ページ"><div class="footer-block"><strong>季節・イベント</strong><a href="/emoji-combinations/halloween/">ハロウィン</a><a href="/kaomoji/halloween/">ハロウィン顔文字</a><a href="/emoji-combinations/christmas/">クリスマス</a><a href="/emoji-combinations/new-year/">あけおめ</a><a href="/emoji-combinations/new-year-message/">あけおめメッセージ</a><a href="/emoji-combinations/love/">バレンタイン</a></div><div class="footer-block"><strong>推し活</strong><a href="/emoji-combinations/oshi/">推し活絵文字</a><a href="/kaomoji/oshi/">推し活顔文字</a><a href="/uchiwa-moji/">うちわ文字</a><a href="/led-banner/">電光掲示板</a></div>${beadFooterBlock}</nav><p>MojiMoon - 文字と絵文字を楽しく使うための無料ツール集。${guide}</p></footer>`;
 }
 
 function renderSeoSection(page) {
   const seo = page.seo || {};
   const paragraphs = (seo.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('');
   const sections = (seo.sections || []).map(renderSeoSubsection).join('');
-  const links = seo.links?.length ? `<div class="category-links">${seo.links.map((link) => `<a href="${escapeAttr(link.href)}">${escapeHtml(link.label)}</a>`).join('')}</div>` : '';
+  const links = seo.links?.length ? `<div class="category-links">${seo.links.map((link) => `<a href="${escapeAttr(link.href)}"${externalAttrs(link.href)}>${escapeHtml(link.label)}</a>`).join('')}</div>` : '';
   const enrichment = page.skipGeneratedEnrichment ? '' : renderGeneratedEnrichment(page);
   const faq = page.faq?.length ? `<h2>FAQ</h2>${page.faq.map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join('')}` : '';
   return `<section class="seo-section"><h2>${escapeHtml(seo.heading || `${page.h1}の使い方`)}</h2>${paragraphs}${sections}${enrichment}${links}${faq}</section>`;
@@ -902,13 +915,17 @@ function searchBody(page, label) {
 function renderRelatedGuide(page) {
   const related = (page.related || []).slice(0, 3);
   if (!related.length) return '';
-  return `<h2>似た素材との使い分け</h2><div class="seo-grid">${related.map((item) => `<div class="seo-card"><strong><a href="${escapeAttr(item.href)}">${escapeHtml(item.title)}</a></strong><p>${escapeHtml(relatedBody(page, item))}</p></div>`).join('')}</div>`;
+  return `<h2>似た素材との使い分け</h2><div class="seo-grid">${related.map((item) => `<div class="seo-card"><strong><a href="${escapeAttr(item.href)}"${externalAttrs(item.href)}>${escapeHtml(item.title)}</a></strong><p>${escapeHtml(relatedBody(page, item))}</p></div>`).join('')}</div>`;
 }
 
 function relatedBody(page, item) {
   const currentUnit = familyUnit(page.family);
   const description = item.description ? `${item.description} ` : '';
   return `${description}${page.h1}で合う${currentUnit}が見つからない時や、少し違う雰囲気に寄せたい時に使えます。`;
+}
+
+function externalAttrs(href) {
+  return /^https?:/i.test(String(href || '')) ? ' target="_blank" rel="noopener"' : '';
 }
 
 function familyUnit(family) {
@@ -924,7 +941,7 @@ function familyUnit(family) {
 function renderRelated(page) {
   const related = page.related || [];
   if (!related.length) return '';
-  return `<section class="related-tools"><h2>関連ツール</h2><div class="related-grid">${related.map((item) => `<a class="related-card" href="${escapeAttr(item.href)}"><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.description || '')}</span></a>`).join('')}</div></section>`;
+  return `<section class="related-tools"><h2>関連ツール</h2><div class="related-grid">${related.map((item) => `<a class="related-card" href="${escapeAttr(item.href)}"${externalAttrs(item.href)}><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.description || '')}</span></a>`).join('')}</div></section>`;
 }
 
 function renderDataFile(page) {

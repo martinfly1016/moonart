@@ -31,7 +31,7 @@ const CORE_PAGES = [
   { path: '/special-characters/line/', label: 'Divider line copy', locale: 'ja', group: 'kawaii-copy' },
   { path: '/special-characters/ribbon/', label: 'Ribbon copy', locale: 'ja', group: 'kawaii-copy' },
   { path: '/kawaii-copy/ryosangata-otaku/', label: 'Ryosangata otaku copy', locale: 'ja', group: 'kawaii-copy' },
-  { path: '/kawaii-copy/food/', label: 'Food kaomoji copy', locale: 'ja', group: 'kawaii-copy' },
+  { path: '/kawaii-copy/food/', label: 'Food kawaii copy', locale: 'ja', group: 'kawaii-copy' },
   { path: '/emoji-copy/heart/', label: 'Heart emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/kawaii/', label: 'Kawaii emoji', locale: 'ja', group: 'emoji-copy-topic' },
   { path: '/emoji-copy/sparkle/', label: 'Sparkle emoji', locale: 'ja', group: 'emoji-copy-topic' },
