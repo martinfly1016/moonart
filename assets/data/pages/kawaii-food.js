@@ -1,0 +1,71 @@
+window.MojiMoonToolData = {
+  slug: 'kawaii-food',
+  draftMaxLength: 240,
+  pageSize: 80,
+  quickFilters: [
+    { label: 'ごはん', query: 'ごはん' },
+    { label: 'カフェ', query: 'カフェ' },
+    { label: 'スイーツ', query: 'スイーツ' },
+    { label: '飲み物', query: '飲み物' },
+    { label: '飯テロ', query: '飯テロ' }
+  ],
+  categories: [
+    { id: 'all', label: 'すべて' },
+    { id: 'rice', label: 'ごはん', heading: 'ごはん' },
+    { id: 'cafe', label: 'カフェ', heading: 'カフェ' },
+    { id: 'sweets', label: 'スイーツ', heading: 'スイーツ' },
+    { id: 'drink', label: '飲み物', heading: '飲み物' },
+    { id: 'post', label: '飯テロ投稿用', heading: '飯テロ投稿用' }
+  ],
+  items: [
+    { value: '🍚 今日のごはん', label: '白ごはんの一言', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍙 ♡ おむすび', label: 'ハートのおむすび', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍱 ✧ お弁当', label: 'きらきら弁当', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍛 ₊˚ カレー', label: '小さな光のカレー', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍜 あったか麺', label: '湯気のラーメン', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍝 ♡ ぱすた', label: 'ハートのパスタ', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🥗 𓂃 サラダ', label: '余白のあるサラダ', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍳 あさごはん', label: '朝の目玉焼き', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+    { value: '🍚 🤍 白米', label: '白いごはん', category: 'rice', tags: ['食べ物', 'ごはん', '絵文字'] },
+
+    { value: '☕️ ♡ カフェ', label: 'ハートのカフェ', category: 'cafe', tags: ['食べ物', 'カフェ', '絵文字'] },
+    { value: '🥐 ✧ 朝パン', label: '朝のクロワッサン', category: 'cafe', tags: ['食べ物', 'カフェ', '絵文字'] },
+    { value: '🍰 ☕️ ケーキセット', label: 'ケーキとコーヒー', category: 'cafe', tags: ['食べ物', 'カフェ', 'スイーツ', '絵文字'] },
+    { value: '☕️ 𓂃 𓈒 ラテ', label: '余白のラテ', category: 'cafe', tags: ['食べ物', 'カフェ', '絵文字'] },
+    { value: '🫖 🤍 ティー', label: '白いティー', category: 'cafe', tags: ['食べ物', 'カフェ', '飲み物', '絵文字'] },
+    { value: '🍪 ♡ 焼きたて', label: '焼きたてクッキー', category: 'cafe', tags: ['食べ物', 'カフェ', 'スイーツ', '絵文字'] },
+    { value: '☕️ ₊˚ ブレイク', label: '小さな休憩', category: 'cafe', tags: ['食べ物', 'カフェ', '絵文字'] },
+    { value: '🥐 𓂃 パン屋', label: 'パン屋の飾り', category: 'cafe', tags: ['食べ物', 'カフェ', '絵文字'] },
+    { value: '☕️ ✧ 午後のカフェ', label: '午後の一杯', category: 'cafe', tags: ['食べ物', 'カフェ', '絵文字'] },
+
+    { value: '🍓 𓂃 ♡', label: 'いちごの飾り', category: 'sweets', tags: ['食べ物', 'スイーツ', '絵文字'] },
+    { value: '🍰 ✧ ♡', label: 'ケーキの飾り', category: 'sweets', tags: ['食べ物', 'スイーツ', '絵文字'] },
+    { value: '🍩 ♡ ドーナツ', label: 'ハートのドーナツ', category: 'sweets', tags: ['食べ物', 'スイーツ', 'おやつ', '絵文字'] },
+    { value: '🍪 ✧ クッキー', label: '星のクッキー', category: 'sweets', tags: ['食べ物', 'スイーツ', 'おやつ', '絵文字'] },
+    { value: '🍫 ₊˚ チョコ', label: '小さなチョコ', category: 'sweets', tags: ['食べ物', 'スイーツ', 'おやつ', '絵文字'] },
+    { value: '🍮 ♡ プリン', label: 'ハートのプリン', category: 'sweets', tags: ['食べ物', 'スイーツ', 'おやつ', '絵文字'] },
+    { value: '🍨 𓂃 アイス', label: '余白のアイス', category: 'sweets', tags: ['食べ物', 'スイーツ', 'おやつ', '絵文字'] },
+    { value: '🧁 ✧ カップケーキ', label: '星のカップケーキ', category: 'sweets', tags: ['食べ物', 'スイーツ', '絵文字'] },
+    { value: '🍦 ♡ ソフト', label: 'ハートのソフト', category: 'sweets', tags: ['食べ物', 'スイーツ', 'おやつ', '絵文字'] },
+
+    { value: '🧋 ♡ タピオカ', label: 'ハートのタピオカ', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '🥤 ✧ ごくごく', label: '星のソフトドリンク', category: 'drink', tags: ['食べ物', '飲み物', 'ごくごく', '絵文字'] },
+    { value: '🍵 𓂃 お茶', label: '余白のお茶', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '🧃 ♡ ジュース', label: 'ハートのジュース', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '🥛 ₊˚ ミルク', label: '小さなミルク', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '🧋 ✧ タピ', label: '星のタピ', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '🥤 🤍 ドリンク', label: '白いドリンク', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '🍵 ♡ ほっとお茶', label: 'ほっとするお茶', category: 'drink', tags: ['食べ物', '飲み物', '絵文字'] },
+    { value: '☕️ ごくごく', label: 'コーヒーを飲み干す', category: 'drink', tags: ['食べ物', '飲み物', 'ごくごく', 'カフェ', '絵文字'] },
+
+    { value: '🍽️ ✧ 本日のご飯', label: '今日の食レポ', category: 'post', tags: ['食べ物', '飯テロ', 'ごはん', '絵文字'] },
+    { value: '📸 ♡ ごはん記録', label: '写真の一言', category: 'post', tags: ['食べ物', '飯テロ', 'ごはん', '絵文字'] },
+    { value: '✨ 今日のごはん', label: 'きらきら食レポ', category: 'post', tags: ['食べ物', '飯テロ', 'ごはん', '絵文字'] },
+    { value: '🍜 ₊˚⊹', label: '麺の投稿飾り', category: 'post', tags: ['食べ物', '飯テロ', 'ごはん', '絵文字'] },
+    { value: '🍰 ✨ 飯テロ', label: 'ケーキの飯テロ', category: 'post', tags: ['食べ物', '飯テロ', 'スイーツ', '絵文字'] },
+    { value: '☕️ 📷 カフェ記録', label: 'カフェ投稿', category: 'post', tags: ['食べ物', '飯テロ', 'カフェ', '絵文字'] },
+    { value: '🍓 🍰 今日のおやつ', label: 'おやつの並び', category: 'post', tags: ['食べ物', '飯テロ', 'スイーツ', 'おやつ', '絵文字'] },
+    { value: '🍙 📝 お弁当記録', label: '弁当のメモ', category: 'post', tags: ['食べ物', '飯テロ', 'ごはん', '絵文字'] },
+    { value: '🍽️ 🤍 食レポ', label: '白い食レポ', category: 'post', tags: ['食べ物', '飯テロ', 'ごはん', '絵文字'] }
+  ]
+};
