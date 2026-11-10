@@ -27934,7 +27934,7 @@
       ]
     },
     {
-      "lastmod": "2026-11-02",
+      "lastmod": "2026-11-10",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -27943,10 +27943,10 @@
       "slug": "emoji-combinations-christmas",
       "path": "/emoji-combinations/christmas/",
       "family": "emoji-combinations",
-      "title": "クリスマス 絵文字 コピペ・組み合わせ｜ツリー🎄サンタ🎅雪・プレゼント - MojiMoon",
-      "description": "クリスマス絵文字を、単体と組み合わせの両方でコピーできます。単体は 🎄🎅🦌⛄🎁 です。ケーキとチキン、イルミネーション、トナカイに加え、ツリー、サンタ、雪、プレゼント、LINE一言、インスタ、推し活の並びも、このページで分けています。",
-      "ogTitle": "クリスマス絵文字 コピペ・組み合わせ｜🎄🎅❄️🎁",
-      "ogDescription": "単体の 🎄🎅🦌⛄🎁 と、ケーキ、イルミネーション、トナカイ、ツリーの組み合わせをコピーできます。",
+      "title": "クリスマス 絵文字 組み合わせ142種｜可愛いコピペ 2026 - MojiMoon",
+      "description": "可愛いクリスマス絵文字の組み合わせが142種あります。ツリー、雪、サンタを短い並びにしたものを、ワンクリックでコピペできます。LINEの一言や投稿の一行に使えます。2026年のクリスマス向けです。",
+      "ogTitle": "クリスマス 絵文字 組み合わせ142種｜可愛いコピペ 2026",
+      "ogDescription": "可愛いクリスマス絵文字の組み合わせが142種あります。ツリー、雪、サンタを短い並びにしたものを、ワンクリックでコピペできます。LINEの一言や投稿の一行に使えます。2026年のクリスマス向けです。",
       "eyebrow": "Christmas Emoji",
       "h1": "クリスマス 絵文字・組み合わせ",
       "hero": "単体の絵文字と、並べた組み合わせの両方を、このページに置いています。チャットの一言、インスタの一行、推し活の現場メモも同じページです。色を全部入れた一行は作りません。",
@@ -28852,7 +28852,7 @@
       ]
     },
     {
-      "lastmod": "2026-11-02",
+      "lastmod": "2026-11-10",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -29528,6 +29528,10 @@
         {
           "href": "/emoji-combinations/new-year-message/",
           "label": "年賀状一言・あけおめメッセージ"
+        },
+        {
+          "href": "/emoji-combinations/christmas/",
+          "label": "クリスマス絵文字"
         },
         {
           "href": "/kaomoji/hello/",
