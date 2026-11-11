@@ -671,9 +671,9 @@
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/ok/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.84</priority>
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/no/</loc>
@@ -1026,6 +1026,12 @@
   <url>
     <loc>https://mojimoon.com/kaomoji/yoshiyoshi/</loc>
     <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/kaomoji/ganbare/</loc>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>
