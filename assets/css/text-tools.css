@@ -387,6 +387,16 @@ a {
   grid-column: 1 / -1;
 }
 
+.copy-value-wrap {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  white-space: normal;
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
 .copy-value-pre {
   font-family: "Noto Sans Egyptian Hieroglyphs", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 13px;
