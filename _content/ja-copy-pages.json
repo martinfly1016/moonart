@@ -15410,6 +15410,10 @@
           {
             "label": "ピンク絵文字組み合わせ",
             "href": "/emoji-combinations/pink/"
+          },
+          {
+            "href": "/emoji-combinations/oshi-birthday/",
+            "label": "推しの誕生日メッセージ"
           }
         ]
       },
@@ -15442,6 +15446,11 @@
           "title": "ピンク絵文字組み合わせ",
           "href": "/emoji-combinations/pink/",
           "description": "甘いお祝いテンプレ。"
+        },
+        {
+          "href": "/emoji-combinations/oshi-birthday/",
+          "title": "推しの誕生日メッセージ",
+          "description": "0時のポスト、手紙、生誕祭の例文。"
         }
       ]
     },
@@ -22947,6 +22956,10 @@
           {
             "label": "恋愛絵文字組み合わせ",
             "href": "/emoji-combinations/love/"
+          },
+          {
+            "href": "/emoji-combinations/oshi-birthday/",
+            "label": "推しの誕生日メッセージ"
           }
         ]
       },
@@ -22989,6 +23002,11 @@
           "title": "恋愛絵文字組み合わせ",
           "href": "/emoji-combinations/love/",
           "description": "好きの気持ちを添える。"
+        },
+        {
+          "href": "/emoji-combinations/oshi-birthday/",
+          "title": "推しの誕生日メッセージ",
+          "description": "0時のポスト、手紙、生誕祭の例文。"
         }
       ],
       "itemGroups": [
@@ -32776,6 +32794,10 @@
           {
             "href": "/kawaii-copy/oshi-profile/",
             "label": "推し活プロフィール"
+          },
+          {
+            "href": "/emoji-combinations/oshi-birthday/",
+            "label": "推しの誕生日メッセージ"
           }
         ]
       },
@@ -32813,6 +32835,11 @@
           "href": "/kawaii-copy/oshi-profile/",
           "title": "推し活プロフィール",
           "description": "自己紹介と担当の短文。"
+        },
+        {
+          "href": "/emoji-combinations/oshi-birthday/",
+          "title": "推しの誕生日メッセージ",
+          "description": "0時のポスト、手紙、生誕祭の例文。"
         }
       ]
     },
@@ -33077,6 +33104,10 @@
           {
             "href": "/kaomoji/ganbare/",
             "label": "頑張って・ファイト顔文字"
+          },
+          {
+            "href": "/emoji-combinations/oshi-birthday/",
+            "label": "推しの誕生日メッセージ"
           }
         ]
       },
@@ -33119,6 +33150,11 @@
           "href": "/kaomoji/ganbare/",
           "title": "頑張って・ファイト顔文字",
           "description": "試験や仕事、推しへの気合い。"
+        },
+        {
+          "href": "/emoji-combinations/oshi-birthday/",
+          "title": "推しの誕生日メッセージ",
+          "description": "0時のポスト、手紙、生誕祭の例文。"
         }
       ]
     },
@@ -39882,6 +39918,642 @@
           "href": "/kaomoji/ok/",
           "title": "了解・OK顔文字",
           "description": "依頼を受けたあとの返事。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-11-13",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 200,
+      "changefreq": "weekly",
+      "priority": "0.84",
+      "slug": "emoji-combinations-oshi-birthday",
+      "path": "/emoji-combinations/oshi-birthday/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "推しの誕生日 メッセージ 例文 × 絵文字｜コピペ66種 2026-2027 - MojiMoon",
+      "description": "推しの誕生日に送るメッセージ例文を66種、絵文字と顔文字つきでコピペできます。0時のポスト、ハッシュタグ、ファンレター、生誕祭と推し祭壇、メンカラのハート、LINEの一言まで。2026年から2027年の生誕祭に使えます。",
+      "ogTitle": "推しの誕生日 メッセージ 例文 × 絵文字｜コピペ66種 2026-2027",
+      "ogDescription": "0時のポスト、手紙の書き出し、生誕祭と推し祭壇、メンカラのハート。推しの誕生日にそのまま貼る例文です。",
+      "eyebrow": "Oshi Birthday Message",
+      "h1": "推しの誕生日 メッセージ 例文 × 絵文字",
+      "hero": "推しの誕生日は、相手の誕生日とは文の向きが違います。0時のポストは短く、日付が変わったことだけを書きます。Xのハッシュタグは二つまでにし、ファンレターは書き出しの一行だけ先に送ります。生誕祭と推し祭壇は、花とペンライトの色を先に決めてから文を足します。メンカラのハートは一色。LINEのアイコン用は、文ではなく一言です。2026年から2027年の生誕祭に、そのまま貼れます。",
+      "toolLabel": "推しの誕生日メッセージ",
+      "searchPlaceholder": "0時、ハッシュタグ、手紙、生誕祭、祭壇、メンカラ、LINE",
+      "draftPlaceholder": "例文をクリックするとここに入ります",
+      "composerHint": "名前は先頭に一つ。ハートの色は、推しのメンカラに合わせてからコピーしてください。",
+      "recentLabel": "最近使った推しの誕生日メッセージ",
+      "categories": [
+        {
+          "id": "midnight",
+          "label": "0時"
+        },
+        {
+          "id": "hashtag",
+          "label": "タグ"
+        },
+        {
+          "id": "letter",
+          "label": "手紙"
+        },
+        {
+          "id": "event",
+          "label": "生誕祭"
+        },
+        {
+          "id": "color",
+          "label": "メンカラ"
+        },
+        {
+          "id": "short",
+          "label": "一言"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "0時",
+          "query": "0時"
+        },
+        {
+          "label": "ハッシュタグ",
+          "query": "ハッシュタグ"
+        },
+        {
+          "label": "手紙",
+          "query": "手紙"
+        },
+        {
+          "label": "生誕祭",
+          "query": "生誕祭"
+        },
+        {
+          "label": "メンカラ",
+          "query": "メンカラ"
+        },
+        {
+          "label": "LINE",
+          "query": "LINE"
+        }
+      ],
+      "heroLinks": [
+        {
+          "href": "/emoji-combinations/oshi/",
+          "label": "推し活の絵文字"
+        },
+        {
+          "href": "/kaomoji/oshi/",
+          "label": "推し活の顔文字"
+        },
+        {
+          "href": "/kawaii-copy/oshi-profile/",
+          "label": "推し活プロフィール"
+        },
+        {
+          "href": "/emoji-combinations/birthday/",
+          "label": "誕生日絵文字の組み合わせ"
+        },
+        {
+          "href": "/emoji-combinations/",
+          "label": "絵文字組み合わせ一覧"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "midnight",
+          "heading": "0時ちょうどのお祝いポスト",
+          "tags": [
+            "推し",
+            "誕生日",
+            "0時",
+            "ポスト"
+          ],
+          "items": [
+            {
+              "value": "0時です。今年も、最初の言葉を推しに渡します 🕛🎂",
+              "label": "最初の言葉",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "日付が変わった音で、ろうそくを一つ点てました 🕯️💗",
+              "label": "ろうそくを点てる",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "アラームを0時にしたので、寝落ちせずに祝えます ⏰✨",
+              "label": "アラーム",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "まだ暗い街で、おめでとうだけ先に置いていきます 🌃💌",
+              "label": "暗い街",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "0時0分。ケーキより先に、この一行を送ります 🎂",
+              "label": "ケーキより先",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "新しい一日の主語は、推しの名前にします 🕛💗",
+              "label": "一日の主語",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "寝てない組の先頭で、生誕祭の火をつけます (｡•́ω•̀｡)🕯️",
+              "label": "寝てない組",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "昨日の終わりと今日の始まりを、同じハートでつなぎます 💗🕛",
+              "label": "日付の境",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "時計の針が重なったので、毎年どおり一番に祝います 🕛🎂",
+              "label": "針が重なる",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "0時のポストは短く。好き、は本文の外に残します ✨💌",
+              "label": "短いポスト",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "日付が変わっても、推しへの列の場所は変わりません 🎂🤍",
+              "label": "列の場所",
+              "tags": [],
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "category": "hashtag",
+          "heading": "X(SNS)・ハッシュタグ用の一言",
+          "tags": [
+            "推し",
+            "誕生日",
+            "ハッシュタグ",
+            "SNS"
+          ],
+          "items": [
+            {
+              "value": "#推し生誕祭 タグの一番上に、短い祝福を置きます 🎂💗",
+              "label": "タグの一番上",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "トレンドを願うより、自分のタイムラインを推し色にします 💖",
+              "label": "タイムライン",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "固定ポストを、今日だけケーキの一行に替えました 📌🎂",
+              "label": "固定ポスト",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "引用はあとで。まずは、まっすぐのお祝いを残します 💌✨",
+              "label": "引用の前",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "#誕生日 のタグに、推しの名前を添えて流します 🎂",
+              "label": "名前を添える",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "リプライ欄が花になる前に、先頭の一輪を置きます 💐💗",
+              "label": "先頭の一輪",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "今日のアイコンはケーキ、名前欄はおめでとうだけ 🎂✨",
+              "label": "アイコン",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "ハッシュタグは二つまで。文は、生まれてきてくれて 🎂💌",
+              "label": "タグは二つ",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "拡散用の文は作りません。届く距離の一言にします ✨",
+              "label": "届く距離",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "#生誕祭 の下に、ペンライトの色だけ書いておきます 🕯️💗",
+              "label": "ペンライトの色",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "タイムラインを遡らなくても、この一行で今日がわかります 🎉",
+              "label": "今日がわかる",
+              "tags": [],
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "category": "letter",
+          "heading": "ファンレター・手紙の書き出し",
+          "tags": [
+            "推し",
+            "誕生日",
+            "手紙",
+            "ファンレター"
+          ],
+          "items": [
+            {
+              "value": "便箋の一行目は、毎年「生まれてきてくれて」にしています 💌",
+              "label": "便箋の一行目",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "宛名を書いてから、おめでとうをその次に置きます ✉️🎂",
+              "label": "宛名の次",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "長い手紙の前に、この挨拶だけ先にポストします 💌✨",
+              "label": "挨拶だけ先に",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "ファンレターの書き出しで、手が止まる日です (´；ω；`)💗",
+              "label": "手が止まる",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "読んでくれるかは別にして、最初の文は祝いにします ✉️",
+              "label": "最初の文",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "一年分のありがとうを、誕生日の手紙の頭にまとめました 💌🎂",
+              "label": "一年分",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "便箋の余白には、推し色のハートを一つだけ 💖",
+              "label": "余白のハート",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "切手を貼る前に、書き出しをもう一度声に出します ✉️✨",
+              "label": "切手の前",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "手紙の日付は、0時を回った今日にします 📅💗",
+              "label": "手紙の日付",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "言葉が足りないので、最初の一行だけ丁寧に書きました 🖋️💌",
+              "label": "一行だけ丁寧に",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "ファンレターは本題の前に、ただのおめでとうを置きます 🎂💌",
+              "label": "本題の前",
+              "tags": [],
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "category": "event",
+          "heading": "生誕祭・誕生日イベント・祭壇",
+          "tags": [
+            "推し",
+            "誕生日",
+            "生誕祭",
+            "祭壇"
+          ],
+          "items": [
+            {
+              "value": "生誕祭の開場前に、心の中で一度だけ祝います 🎤🎂",
+              "label": "開場前",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "祭壇の中央は名前。ケーキは、その横に置きます 🕯️💗",
+              "label": "祭壇の中央",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "推し祭壇の花は、白と推し色だけに絞りました 💐🤍",
+              "label": "花の色",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "チケットを握ったまま、会場の前でおめでとう 🎫🎂",
+              "label": "チケット",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "ペンライトの色を、今日は誕生日の照明に合わせます 🕯️💖",
+              "label": "照明",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "うちわの文字は「おめでとう」。絵は足しません 📣🎂",
+              "label": "うちわ",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "祭壇の写真を撮る前に、キャプションはこの一文 📸💗",
+              "label": "キャプション",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "集合より早く着いて、花の向きを揃えています 💐",
+              "label": "花の向き",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "ぬいぐるみの前に、今年の一言を添えました 🧸💌",
+              "label": "ぬいぐるみ",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "暗転の前の一瞬を、生誕祭の本体だと思っています ✨🎤",
+              "label": "暗転の前",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "終わりのコールのあとに、もう一度だけおめでとう ＼(≧▽≦)／🎂",
+              "label": "コールのあと",
+              "tags": [],
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "category": "color",
+          "heading": "メンカラ別ハート組み合わせ",
+          "tags": [
+            "推し",
+            "誕生日",
+            "メンカラ",
+            "ハート"
+          ],
+          "items": [
+            {
+              "value": "赤のメンカラへ。ろうそくの芯みたいに、今年も真ん中で光って ❤️🎂",
+              "label": "赤",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "ピンクの推しへ。クリームの角を、最初に残しておきます 💗🍰",
+              "label": "ピンク",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "オレンジのメンカラ。夕焼けの時間に、誕生日が来ました 🧡🌅",
+              "label": "オレンジ",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "黄色の推しへ。ひまわりの種を、文章の端に一粒 💛🌻",
+              "label": "黄色",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "緑のメンカラ。新しい葉の数だけ、好きが増えた一年です 💚🌿",
+              "label": "緑",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "水色の推しへ。朝の空の色で、おめでとうを書きます 🩵🌤️",
+              "label": "水色",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "青のメンカラ。深いところから、静かに祝っています 💙🌊",
+              "label": "青",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "紫の推しへ。夜の舞台照明に似た色で、開演を待ちます 💜✨",
+              "label": "紫",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "黒のメンカラ。白い便箋に、濃いインクだけで名前を 🖤🤍",
+              "label": "黒",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "白の推しへ。花束の包装は透明のまま持っていきます 🤍💐",
+              "label": "白",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "茶色のメンカラ。湯気の立つコーヒーを、祭壇の脇に 🤎☕️",
+              "label": "茶色",
+              "tags": [],
+              "wrap": true
+            },
+            {
+              "value": "グレーの推しへ。主張しない色のまま、隣で祝っています 🩶🌙",
+              "label": "グレー",
+              "tags": [],
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "category": "short",
+          "heading": "短い一言・LINEアイコン用",
+          "tags": [
+            "推し",
+            "誕生日",
+            "LINE",
+            "一言"
+          ],
+          "items": [
+            {
+              "value": "推し、誕生日🎂",
+              "label": "名前の横",
+              "tags": []
+            },
+            {
+              "value": "0時、着いたよ🕛",
+              "label": "0時の着いた",
+              "tags": []
+            },
+            {
+              "value": "生まれてくれて💗",
+              "label": "生まれてくれて",
+              "tags": []
+            },
+            {
+              "value": "生誕祭、行ってくる🎤",
+              "label": "行ってくる",
+              "tags": []
+            },
+            {
+              "value": "手紙、出した💌",
+              "label": "手紙を出した",
+              "tags": []
+            },
+            {
+              "value": "祭壇、できた💐",
+              "label": "祭壇ができた",
+              "tags": []
+            },
+            {
+              "value": "推し色で祝う💖",
+              "label": "推し色",
+              "tags": []
+            },
+            {
+              "value": "いちばん好きな日🎉",
+              "label": "好きな日",
+              "tags": []
+            },
+            {
+              "value": "うちわ完成📣",
+              "label": "うちわ完成",
+              "tags": []
+            },
+            {
+              "value": "また一年、好きです (♡˙︶˙♡)",
+              "label": "また一年",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "送る場所で、文の長さが変わる",
+        "paragraphs": [
+          "0時のポストは、日付が変わった事実とおめでとうだけで足ります。ハッシュタグを三つ以上足すと、お祝いではなく告知に見えます。Xではタグを先に置き、本文は一行で終えます。",
+          "ファンレターは書き出しだけをこのページから取り、続きは自分の言葉にします。生誕祭と推し祭壇は、花・ペンライト・うちわのどれか一つを先に書いてから気持ちを足します。メンカラが決まっているときは、その色のハート以外を混ぜません。LINEのアイコン横は、文ではなく一言です。"
+        ],
+        "sections": [
+          {
+            "heading": "どの文をどこへ",
+            "cards": [
+              {
+                "title": "0時のポスト",
+                "body": "日付が変わった瞬間。ケーキの話より、一番に祝ったことを残します。"
+              },
+              {
+                "title": "ハッシュタグ",
+                "body": "タグは二つまで。名前と生誕祭。本文は祝福の一行です。"
+              },
+              {
+                "title": "手紙",
+                "body": "便箋の最初の一行。長い近況は、このあとに自分で続けます。"
+              },
+              {
+                "title": "生誕祭・祭壇",
+                "body": "花、ペンライト、うちわ。会場と部屋で使う言葉を分けます。"
+              },
+              {
+                "title": "メンカラ",
+                "body": "赤からグレーまで、色は一つ。対の色があるときだけ二色にします。"
+              },
+              {
+                "title": "一言",
+                "body": "LINEのアイコン横や、名前のうしろ。文にはしません。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/emoji-combinations/oshi/",
+            "label": "推し活の絵文字"
+          },
+          {
+            "href": "/kaomoji/oshi/",
+            "label": "推し活の顔文字"
+          },
+          {
+            "href": "/kawaii-copy/oshi-profile/",
+            "label": "推し活プロフィール"
+          },
+          {
+            "href": "/emoji-combinations/birthday/",
+            "label": "誕生日絵文字の組み合わせ"
+          }
+        ]
+      },
+      "related": [
+        {
+          "href": "/emoji-combinations/oshi/",
+          "title": "推し活の絵文字",
+          "description": "ハートの色、マイク、切符。"
+        },
+        {
+          "href": "/kaomoji/oshi/",
+          "title": "推し活の顔文字",
+          "description": "参戦報告に添える顔。"
+        },
+        {
+          "href": "/kawaii-copy/oshi-profile/",
+          "title": "推し活プロフィール",
+          "description": "担当や記念日の短文。"
+        },
+        {
+          "href": "/emoji-combinations/birthday/",
+          "title": "誕生日絵文字の組み合わせ",
+          "description": "ケーキやクラッカーの並び。"
         }
       ]
     }

@@ -206,7 +206,7 @@ const legacyListTargets = [
   { html: 'kawaii-copy/ryosangata-otaku/index.html', data: 'assets/data/kawaii-copy.js', query: '量産型' },
   { html: 'emoji-copy/index.html', data: 'assets/data/emoji-copy.js' },
   { html: 'emoji-copy/kawaii/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii' },
-  { html: 'emoji-copy/heart/index.html', data: 'assets/data/emoji-copy.js', category: 'heart' },
+  { html: 'emoji-copy/heart/index.html', data: 'assets/data/emoji-copy.js', category: 'heart', heartCatalog: 'assets/data/emoji-copy-heart-groups.js', pageSize: 120 },
   { html: 'emoji-copy/smile/index.html', data: 'assets/data/emoji-copy.js', category: 'face', query: '笑顔' },
   { html: 'emoji-copy/hand-sign/index.html', data: 'assets/data/emoji-copy.js', query: '手' },
   { html: 'emoji-copy/flower/index.html', data: 'assets/data/emoji-copy.js', category: 'kawaii', query: '花' },
@@ -288,6 +288,79 @@ function renderHieroglyphLead(lead, items) {
     </section>`;
 }
 
+function heartCardTags(entry, base) {
+  const tags = new Set([...(base?.tags || []), ...(entry.tags || [])]);
+  tags.add('ハート');
+  tags.add('絵文字 コピペ');
+  tags.add('絵文字コピペ');
+  tags.add('line');
+  return [...tags];
+}
+
+function buildHeartGroups(data, catalog) {
+  if (!catalog?.groups?.length) throw new Error('Heart catalog has no groups.');
+  const hearts = (data.items || []).filter((item) => item.category === 'heart');
+  const byValue = new Map(hearts.map((item) => [item.value, item]));
+  const seen = new Set();
+  const groups = catalog.groups.map((group) => {
+    if (!group.id || !group.heading) throw new Error('Heart catalog group needs id and heading.');
+    if (!Array.isArray(group.items) || !group.items.length) {
+      throw new Error(`Heart catalog group "${group.id}" has no items.`);
+    }
+    const items = group.items.map((entry) => {
+      if (!entry?.value) throw new Error(`Heart catalog group "${group.id}" has an empty item.`);
+      if (seen.has(entry.value)) throw new Error(`Duplicate heart catalog value: ${entry.value}`);
+      seen.add(entry.value);
+      const base = byValue.get(entry.value);
+      const elsewhere = (data.items || []).find((item) => item.value === entry.value && item.category !== 'heart');
+      if (!base && elsewhere) {
+        throw new Error(`Heart catalog value already belongs to ${elsewhere.category}: ${entry.value}`);
+      }
+      return {
+        value: entry.value,
+        label: base?.label || entry.label,
+        category: 'heart',
+        tags: heartCardTags(entry, base),
+        wide: Boolean(entry.wide || base?.wide)
+      };
+    });
+    return { id: group.id, heading: group.heading, items };
+  });
+  for (const item of hearts) {
+    if (!seen.has(item.value)) {
+      throw new Error(`Existing heart item missing from catalog: ${item.label} ${item.value}`);
+    }
+  }
+  return groups;
+}
+
+function renderHeartCatalogGrid(data, catalog, target) {
+  const groups = buildHeartGroups(data, catalog);
+  const activeCategory = resolveActiveCategory(data, target.category);
+  const pageSize = Number(target.pageSize || data.pageSize || 48);
+  return {
+    count: groups.reduce((sum, group) => sum + group.items.length, 0),
+    leadItems: [],
+    activeCategory,
+    grid: renderGroupedLegacyGrid(groups, pageSize),
+    tabs: renderStaticTabs(data, activeCategory),
+    quick: renderStaticQuickFilters(data)
+  };
+}
+
+function renderGroupedLegacyGrid(groups, pageSize) {
+  let index = 0;
+  const sections = groups.map((group) => {
+    const cards = group.items.map((item) => {
+      const hidden = index >= pageSize;
+      index += 1;
+      return renderLegacyCopyCard(item, hidden);
+    }).join('');
+    return `<section class="grid-group" data-grid-group="${escapeAttr(group.id)}"><h2 class="grid-group-title">${escapeHtml(group.heading)}</h2><div class="grid-group-cards">${cards}</div></section>`;
+  }).join('');
+  return `<div class="item-grid has-groups" data-grid data-static-items>${sections}</div>`;
+}
+
 function renderLegacyItemGrid(data, target) {
   const activeCategory = resolveActiveCategory(data, target.category);
   const query = String(target.query || '').toLowerCase().trim();
@@ -367,7 +440,9 @@ async function syncLegacyListGrids(checkOnly) {
       }
     } else {
       const data = await loadToolData(path.join(rootDir, target.data));
-      const rendered = renderLegacyItemGrid(data, target);
+      const rendered = target.heartCatalog
+        ? renderHeartCatalogGrid(data, await loadWindowData(path.join(rootDir, target.heartCatalog), 'MojiMoonHeartCatalog'), target)
+        : renderLegacyItemGrid(data, target);
       count = rendered.count;
       const block = markedGrid(rendered.grid);
       const first = !html.includes('<!-- mojimoon:static-grid:start -->');
@@ -619,7 +694,8 @@ function normalizeItems(page, categoryIds) {
           ...(group.tags || []),
           ...(item.tags || [])
         ]),
-        wide: Boolean(item.wide || String(item.value).includes('\n')),
+        wide: Boolean(item.wide || item.wrap || String(item.value).includes('\n')),
+        ...(item.wrap ? { wrap: true } : {}),
         beadHref: item.beadHref || group.beadHref || ''
       });
     }
@@ -839,7 +915,7 @@ function renderCopyCard(item) {
   const label = item.label && !placeholderLabel(item.label) && item.label !== item.value ? item.label : '';
   const classes = ['copy-card'];
   if (item.wide) classes.push('copy-card-wide');
-  const valueClass = item.wide ? 'copy-value copy-value-pre' : 'copy-value';
+  const valueClass = item.wrap ? 'copy-value copy-value-wrap' : item.wide ? 'copy-value copy-value-pre' : 'copy-value';
   const labelHtml = label ? `<span class="copy-label">${escapeHtml(label)}</span>` : '';
   const beadHtml = item.beadHref ? `<a class="bead-cta" href="${escapeAttr(item.beadHref)}" target="_blank" rel="noopener">アイロンビーズ図案にする</a>` : '';
   const card = `<button class="${classes.join(' ')}" type="button" data-copy="${escapeAttr(encodeURIComponent(item.value))}" data-label="${escapeAttr(label)}" data-category="${escapeAttr(item.category)}" data-tags="${escapeAttr((item.tags || []).join(','))}"><span class="${valueClass}">${escapeHtml(item.value)}</span>${labelHtml}</button>`;
