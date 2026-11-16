@@ -4,6 +4,7 @@ window.MojiMoonToolData = {
   pageSize: 200,
   quickFilters: [
     { label: '星', query: '星' },
+    { label: 'かわいい', query: 'かわいい' },
     { label: '流れ星', query: '流れ星' },
     { label: 'ライン', query: 'ライン' },
     { label: 'ドット', query: 'ドット' },
@@ -13,6 +14,7 @@ window.MojiMoonToolData = {
   categories: [
     { id: 'all', label: 'すべて' },
     { id: 'star', label: '星', heading: '星 コピペ' },
+    { id: 'cute', label: 'かわいい', heading: 'かわいい星コピペ' },
     { id: 'shooting', label: '流れ星', heading: '流れ星・光の尾' },
     { id: 'line', label: '星ライン', heading: '星で作る区切り線' },
     { id: 'dot', label: '星ドット', heading: '星のドット' },
@@ -80,6 +82,21 @@ window.MojiMoonToolData = {
     { value: '⭐', label: '黄色い星', category: 'star', tags: ['星', '絵文字'] },
     { value: '🌟', label: '光る星', category: 'star', tags: ['星', 'キラキラ'] },
     { value: '✨', label: 'きらめき', category: 'star', tags: ['キラキラ'] },
+    { value: '✴', label: '黒く開いた八芒星', category: 'star', tags: ['星', '星特殊文字', '星 コピペ'] },
+    { value: '❋', label: '花びらの星', category: 'star', tags: ['星', '星特殊文字', 'かわいい'] },
+    { value: '❂', label: '円の中の八芒星', category: 'star', tags: ['星', '星特殊文字'] },
+    { value: '✳', label: '細い八本の星', category: 'star', tags: ['星', '星特殊文字', '星 絵文字'] },
+    { value: '✽', label: '開いた花星', category: 'star', tags: ['星', 'かわいい', '星 コピペ'] },
+    { value: '✾', label: '輪郭の花星', category: 'star', tags: ['星', '星特殊文字', 'かわいい'] },
+    { value: '♡⋆♡', label: 'ハートで小さい星を挟む', category: 'cute', tags: ['かわいい', '星 コピペ', '星'] },
+    { value: '⋆♡⋆', label: '星でハートを挟む', category: 'cute', tags: ['かわいい', '星 コピペ', '星'] },
+    { value: '✧･ﾟ✧', label: '点を置いた白い星', category: 'cute', tags: ['かわいい', 'キラキラ', '星 コピペ'] },
+    { value: '｡☆｡', label: '丸で囲んだ白星', category: 'cute', tags: ['かわいい', '星', '星 コピペ'] },
+    { value: '✦.✦.✦', label: '点でつないだ四芒星', category: 'cute', tags: ['かわいい', '星', 'ドット'] },
+    { value: '⋆｡⋆', label: '点を一つ置いた星', category: 'cute', tags: ['かわいい', '星', '小さい'] },
+    { value: '☆ ┈ ☆ ┈ ☆', label: '白星で区切る', category: 'line', tags: ['ライン', '星', '星 コピペ'] },
+    { value: '✦┈✧┈✦', label: '四芒星を往復する', category: 'line', tags: ['ライン', '星', 'かわいい'] },
+    { value: '·⋆·⋆·', label: '点と星を交互に', category: 'dot', tags: ['ドット', '星', '小さい'], beadHref: 'https://beads.mojimoon.com/?utm_source=mojimoon&utm_medium=referral&utm_campaign=star-dot' },
     { value: '🌃', label: '星空の街', category: 'moon', tags: ['夜', '星'] },
     { value: '⋆☾⋆', label: '月を星で挟む', category: 'moon', tags: ['月', '星', '名前'] }
   ]

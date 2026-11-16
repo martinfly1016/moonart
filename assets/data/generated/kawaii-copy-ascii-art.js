@@ -8,6 +8,10 @@ window.MojiMoonToolData = {
       "query": "ハート"
     },
     {
+      "label": "星",
+      "query": "星"
+    },
+    {
       "label": "リボン",
       "query": "リボン"
     },
@@ -38,6 +42,10 @@ window.MojiMoonToolData = {
       "label": "ハート"
     },
     {
+      "id": "star",
+      "label": "星"
+    },
+    {
       "id": "ribbon",
       "label": "リボン"
     },
@@ -58,7 +66,7 @@ window.MojiMoonToolData = {
       "label": "おもしろ"
     }
   ],
-  "pageSize": 160,
+  "pageSize": 240,
   "items": [
     {
       "value": " .  .\n/    \\\n\\    /\n \\  /\n  \\/",
@@ -254,6 +262,262 @@ window.MojiMoonToolData = {
       "tags": [
         "ハート",
         "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": ". .\n\\ /\n v",
+      "label": "三行の小さいハート",
+      "category": "heart",
+      "tags": [
+        "ハート",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "()\n\\/",
+      "label": "極小ハート",
+      "category": "heart",
+      "tags": [
+        "ハート",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "..\n\\/",
+      "label": "点の小さいハート",
+      "category": "heart",
+      "tags": [
+        "ハート",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "<3<3",
+      "label": "一行の小さいハート",
+      "category": "heart",
+      "tags": [
+        "ハート",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "/\\/\\\n\\  /\n \\/",
+      "label": "横に広がる小さいハート",
+      "category": "heart",
+      "tags": [
+        "ハート",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "   *\n* * * *\n *   *\n  * *\n   *",
+      "label": "小さい五芒星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": " *\n***\n *",
+      "label": "極小の星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  *\n*****\n  *\n * *",
+      "label": "願い星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "*~~~\n  ~~\n   *",
+      "label": "尾の長い流れ星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい",
+        "流れ星"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "*..\n .*",
+      "label": "点の尾の流れ星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい",
+        "流れ星"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "* . *\n .*.\n* . *",
+      "label": "点の夜空",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "*---*\n| * |\n*---*",
+      "label": "枠の中の星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "+ * +\n*   *\n+ * +",
+      "label": "きらめく星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "* * *\n * *\n* * *",
+      "label": "三つの小さい星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "*\n \\\n  *",
+      "label": "斜めに落ちる星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい",
+        "流れ星"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "* * * *",
+      "label": "一行の星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  *\n * *\n*   *\n * *\n  *",
+      "label": "ひし形の星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "*  *\n** **\n*  *",
+      "label": "並ぶ二つの星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": ". * .\n* . *\n. * .",
+      "label": "ドットの星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい",
+        "ドット"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  *\n ( )",
+      "label": "月の上の星",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "* *\n *\n* *",
+      "label": "星の雨",
+      "category": "star",
+      "tags": [
+        "星",
+        "アスキーアート",
+        "小さい"
       ],
       "wide": true,
       "beadHref": ""

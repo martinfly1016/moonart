@@ -26,6 +26,22 @@ window.MojiMoonToolData = {
     {
       "label": "推し",
       "query": "推し"
+    },
+    {
+      "label": "年賀状",
+      "query": "年賀状"
+    },
+    {
+      "label": "おせち",
+      "query": "おせち"
+    },
+    {
+      "label": "顔文字",
+      "query": "顔文字"
+    },
+    {
+      "label": "年越し",
+      "query": "年越し"
     }
   ],
   "categories": [
@@ -56,9 +72,25 @@ window.MojiMoonToolData = {
     {
       "id": "oshi",
       "label": "推し活"
+    },
+    {
+      "id": "nenga",
+      "label": "年賀状"
+    },
+    {
+      "id": "festive",
+      "label": "お正月"
+    },
+    {
+      "id": "faces",
+      "label": "顔文字"
+    },
+    {
+      "id": "countdown",
+      "label": "年越し"
     }
   ],
-  "pageSize": 160,
+  "pageSize": 240,
   "items": [
     {
       "value": "🎍",
@@ -1288,6 +1320,738 @@ window.MojiMoonToolData = {
         "推し",
         "推し活",
         "お正月",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✉️🎍",
+      "label": "封筒に門松",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✉️🌅",
+      "label": "封筒に朝日",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "📮🎍",
+      "label": "ポストの前の門松",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "📱🎍✨",
+      "label": "画面の中の門松",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🖼️🗻",
+      "label": "富士を絵柄にする",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💌🐑",
+      "label": "未年の手紙",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✉️🍊🤍",
+      "label": "白地にみかん",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "📬🧧",
+      "label": "届いたお年玉",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✉️⛩️",
+      "label": "鳥居を描いた年賀",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎴✉️✨",
+      "label": "花札柄を光らせる",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎍✉️🎍",
+      "label": "門松で年賀を挟む",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "📱🌅🗻",
+      "label": "画面に初日の出",
+      "category": "nenga",
+      "tags": [
+        "年賀状",
+        "絵文字",
+        "デジタル年賀状",
+        "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🍥",
+      "label": "おせちのかまぼこ",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🦐🍊",
+      "label": "海老とみかん",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥣🎍",
+      "label": "お雑煮と門松",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍲🤍",
+      "label": "白いお雑煮",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⛩️🙏",
+      "label": "初詣で手を合わせる",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🏮⛩️",
+      "label": "提灯のついた鳥居",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🧧🍊✨",
+      "label": "お年玉とみかん",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✍️🎍",
+      "label": "書き初めと門松",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🖌️🐑",
+      "label": "未年の筆",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🏸🎀",
+      "label": "羽子板のリボン",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🏸🎍",
+      "label": "羽子板と門松",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🛍️✨",
+      "label": "福袋の中の光",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🛍️🧧",
+      "label": "福袋とお年玉",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🥣⛩️",
+      "label": "おせち、雑煮、初詣",
+      "category": "festive",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "初詣",
+        "お年玉",
+        "書き初め",
+        "羽子板",
+        "福袋"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(´∀｀)🎍",
+      "label": "にこにこと門松",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(*´꒳`*)🌅",
+      "label": "朝日に目を細める",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ヽ(・ω・)ﾉ🧧",
+      "label": "お年玉に手を振る",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "( ˘ω˘)🐑",
+      "label": "ひつじと一緒にまったり",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(｡•̀ᴗ-)✧🎍",
+      "label": "ウインクして門松",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(´・ω・`)⛩️",
+      "label": "初詣の前で一息",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(≧▽≦)🧧",
+      "label": "お年玉で顔がほどける",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🐑(´∀｀*)",
+      "label": "ひつじの横でにこ",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✧(ˊᗜˋ)✧🎍",
+      "label": "きらきらの門松",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(๑˃̵ᴗ˂̵)🌅",
+      "label": "初日の出を待つ",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "(・∀・)🍜",
+      "label": "年越しそばの前",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🔔( ˘ω˘)",
+      "label": "鐘を聞きながら目を閉じる",
+      "category": "faces",
+      "tags": [
+        "あけおめ",
+        "顔文字",
+        "絵文字",
+        "新年"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍜🔔",
+      "label": "そばと除夜の鐘",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🔔🕛",
+      "label": "鐘が鳴って0時",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎆🕛",
+      "label": "0時の花火",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🕛🎍",
+      "label": "0時に門松",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌃🍜",
+      "label": "大晦日のそば",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⏳🎆",
+      "label": "残り時間と花火",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌙🍜✨",
+      "label": "夜のそばに光",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🔔✨🎍",
+      "label": "鐘のあと門松",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🕛🐑",
+      "label": "0時のひつじ",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎆🔔🌅",
+      "label": "花火、鐘、朝",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⏰🎆",
+      "label": "時計と花火",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
+        "絵文字"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍜🕛🎍",
+      "label": "そばを食べて門松",
+      "category": "countdown",
+      "tags": [
+        "年越し",
+        "カウントダウン",
+        "年越しそば",
+        "除夜の鐘",
         "絵文字"
       ],
       "wide": false,
