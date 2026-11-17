@@ -4,6 +4,7 @@ window.MojiMoonToolData = {
   pageSize: 240,
   quickFilters: [
     { label: '嬉しい', query: '嬉しい' },
+    { label: 'わーい', query: 'わーい' },
     { label: 'ワクワク', query: 'ワクワク' },
     { label: 'やったー', query: 'やったー' },
     { label: '幸せ', query: '幸せ' }
@@ -11,6 +12,7 @@ window.MojiMoonToolData = {
   categories: [
     { id: 'all', label: 'すべて' },
     { id: 'glad', label: '嬉しい', heading: '嬉しい' },
+    { id: 'wai', label: 'わーい', heading: 'わーい 顔文字' },
     { id: 'waku', label: 'ワクワク', heading: 'ワクワク' },
     { id: 'yatta', label: 'やったー', heading: 'やったー' },
     { id: 'bliss', label: '幸せ', heading: '幸せ' }
@@ -38,6 +40,21 @@ window.MojiMoonToolData = {
     { value: '(ᵕᴗᵕ)', label: '短い', category: 'glad', tags: ['嬉しい', '顔文字'] },
     { value: '(ˊᗜˋ*)', label: '満足', category: 'glad', tags: ['嬉しい', '顔文字'] },
     { value: '(｡˃ ᵕ ˂｡)', label: 'ほっぺ', category: 'glad', tags: ['嬉しい', '顔文字'] },
+
+    { value: 'わーい(ﾉ´꒳`)ﾉ', label: '両手を振る', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい＼(˶ˆᗜˆ˵)／', label: '大きく開く', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい٩(˶ᵔ ᵕ ᵔ˶)و', label: 'ガッツ', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(ﾉ>ᴗ<)ﾉ', label: '目を細めて', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーいヽ(˶>ᗜ<˶)ノ', label: 'ばんざい', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(*ˊ꒳ˋ*)', label: '小さい声', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(≧ᴗ≦)ﾉ', label: '片手が上がる', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい⸜( ˶ˆ꒳ˆ˶ )⸝', label: '頬が上がる', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(˶˃ ᵕ ˂˶)✧', label: '光を添える', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(๑>◡<๑)✧', label: 'にこにこ', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(ﾉ´꒳`)ﾉ*:･ﾟ', label: '星を投げる', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(˘꒳˘)♡', label: '幸せ寄りの声', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーいꉂꉂ(ᵔᗜᵔ)', label: '笑いがこぼれる', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
+    { value: 'わーい(۶ᵔᴗᵔ)۶', label: '両腕を上げる', category: 'wai', tags: ['わーい', '顔文字'], wide: true },
 
     { value: '٩(๑❛ᴗ❛๑)۶', label: 'わくわく', category: 'waku', tags: ['ワクワク', '顔文字'] },
     { value: '(ง ˙˘˙ )ว', label: 'るんるん', category: 'waku', tags: ['ワクワク', '顔文字'] },

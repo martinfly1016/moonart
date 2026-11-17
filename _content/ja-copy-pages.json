@@ -28394,7 +28394,7 @@
       ]
     },
     {
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-17",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -29261,6 +29261,10 @@
           {
             "href": "/emoji-combinations/new-year-message/",
             "label": "next: お正月メッセージ"
+          },
+          {
+            "href": "/emoji-combinations/winter/",
+            "label": "冬の絵文字"
           }
         ]
       },
@@ -29303,6 +29307,11 @@
           "href": "/emoji-combinations/new-year-message/",
           "title": "next: お正月メッセージ",
           "description": "年賀状やLINEへ送る、相手別の一言。"
+        },
+        {
+          "href": "/emoji-combinations/winter/",
+          "title": "冬の絵文字",
+          "description": "雪、寒い顔、雪だるま。ツリーのない冬の列。"
         }
       ],
       "heroLinks": [
@@ -29325,11 +29334,15 @@
         {
           "href": "/emoji-combinations/new-year-message/",
           "label": "next: お正月メッセージ"
+        },
+        {
+          "href": "/emoji-combinations/winter/",
+          "label": "冬の絵文字"
         }
       ]
     },
     {
-      "lastmod": "2026-11-16",
+      "lastmod": "2026-11-17",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 240,
@@ -30312,6 +30325,10 @@
           {
             "href": "/emoji-combinations/christmas/",
             "label": "クリスマス絵文字"
+          },
+          {
+            "href": "/emoji-combinations/winter/",
+            "label": "冬の絵文字"
           }
         ]
       },
@@ -30344,6 +30361,11 @@
           "href": "/emoji-combinations/christmas/",
           "title": "クリスマス絵文字",
           "description": "年の瀬の列。年が明けたら門松に替える。"
+        },
+        {
+          "href": "/emoji-combinations/winter/",
+          "title": "冬の絵文字",
+          "description": "年が明ける前の、雪と寒い顔の列。"
         }
       ],
       "heroLinks": [
@@ -30358,6 +30380,10 @@
         {
           "href": "/kaomoji/hello/",
           "label": "挨拶の顔文字"
+        },
+        {
+          "href": "/emoji-combinations/winter/",
+          "label": "冬の絵文字"
         }
       ]
     },
@@ -34896,7 +34922,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-28",
+      "lastmod": "2026-11-17",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 200,
@@ -34907,14 +34933,14 @@
       "family": "kaomoji",
       "navCurrent": "kaomoji",
       "title": "チラ見 顔文字 コピペ｜壁から│ω･) こっそり・隠れる・ズサー - MojiMoon",
-      "description": "チラ見の顔文字をコピペできます。壁から出す │ω･)、扉の角の ┌│ω･)、既読だけの │ω･)、床を滑る ε=ε=ε=┌(･ω･)┘、猫の ฅ│ω･) を、壁・物陰・こっそり・動物に分けています。",
+      "description": "チラ見の顔文字をコピペできます。壁から出す │ω･)、扉の角の ┌│ω･)、既読だけの │ω･)、床を滑る ε=ε=ε=┌(･ω･)┘、猫の ฅ│ω･)、素早く隠れるさっの顔を、壁・物陰・こっそり・動物に分けています。",
       "ogTitle": "チラ見 顔文字 コピペ｜壁から│ω･)",
-      "ogDescription": "│ω･) や ┌│ω･)、ズサーの ε=ε=ε=┌(･ω･)┘。壁から、こっそり、動物のチラ見顔文字をコピーできます。",
+      "ogDescription": "│ω･) や ┌│ω･)、ズサーの ε=ε=ε=┌(･ω･)┘、さっ隠れる顔。壁から、こっそり、動物のチラ見顔文字をコピーできます。",
       "eyebrow": "Peek Kaomoji",
       "h1": "チラ見 顔文字 コピペ｜│ω･)",
       "hero": "チラ見の顔文字は、顔の横に │ があるかどうかで見分けます。│ω･) は壁のこちら側に目と口だけが出ている形です。顔が全部見えている (´・ω・`) は、覗いていません。既読をつけてまだ返事を書かないときにも、この隠れ方を使います。",
       "toolLabel": "チラ見の顔文字",
-      "searchPlaceholder": "チラ見、壁、こっそり、ドア、ズサー、猫、既読",
+      "searchPlaceholder": "チラ見、壁、こっそり、ドア、ズサー、猫、既読、さっ",
       "draftPlaceholder": "顔文字をクリックするとここに入ります",
       "composerHint": "文の後ろに一つだけ置いてください。壁の線を二種類混ぜると、隠れている場所が分からなくなります。",
       "recentLabel": "最近使ったチラ見顔文字",
@@ -34942,6 +34968,10 @@
         {
           "id": "cute",
           "label": "かわいい"
+        },
+        {
+          "id": "dash",
+          "label": "さっ"
         }
       ],
       "quickFilters": [
@@ -34968,6 +34998,10 @@
         {
           "label": "既読",
           "query": "既読"
+        },
+        {
+          "label": "さっ",
+          "query": "さっ"
         }
       ],
       "heroLinks": [
@@ -35583,13 +35617,152 @@
               ]
             }
           ]
+        },
+        {
+          "category": "dash",
+          "heading": "さっ（素早く隠れる・逃げる）顔文字",
+          "tags": [
+            "さっ",
+            "隠れる",
+            "逃げる",
+            "顔文字",
+            "チラ見"
+          ],
+          "items": [
+            {
+              "value": "さっ(／･ω･)／",
+              "label": "横へ跳ぶ",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっと隠れた(ﾉ)ω･)",
+              "label": "壁へ戻る",
+              "tags": [
+                "さっ",
+                "隠れる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっ…(っ˘ω˘)っ",
+              "label": "しゃがんで隠れる",
+              "tags": [
+                "さっ",
+                "隠れる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "サッ(ﾉω･)ﾉ",
+              "label": "半角で逃げる",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっ、消えます(ﾉ･ω･)ﾉ",
+              "label": "退場",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっと右へ(･ω･)／",
+              "label": "右へ抜ける",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっ(／_･ω･)／",
+              "label": "低い姿勢",
+              "tags": [
+                "さっ",
+                "隠れる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "逃げるさっ(ﾉ>ω<)ﾉ",
+              "label": "走り出す",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっ…( ･ω･)つ",
+              "label": "指だけ残す",
+              "tags": [
+                "さっ",
+                "隠れる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっとしゃがむ(っ´ω`)っ",
+              "label": "その場に沈む",
+              "tags": [
+                "さっ",
+                "隠れる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっ！(／･∀･)／",
+              "label": "明るく逃げる",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "見つからないさっ(ﾉω･ﾉ)",
+              "label": "背中を向ける",
+              "tags": [
+                "さっ",
+                "隠れる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さっ──(ﾉ･ω･)ﾉ",
+              "label": "一直線",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            },
+            {
+              "value": "一目散(ﾉ`ω´)ﾉさっ",
+              "label": "一目散",
+              "tags": [
+                "さっ",
+                "逃げる"
+              ],
+              "wide": true
+            }
+          ]
         }
       ],
       "seo": {
         "heading": "壁の線が、チラ見かどうか",
         "paragraphs": [
           "チラ見の顔文字は、顔の横に │ や ┃ があるかどうかで見分けます。│ω･) は壁のこちら側に目と口だけが出ている形で、顔が全部見えている (´・ω・`) は覗いていません。既読をつけて返事をまだ書かないとき、会話に遅れて入るとき、扉や柱の陰から様子を見るときに使います。",
-          "ズサーは壁から出る動きではなく、ε の線を床にして部屋に滑り込む形です。ε=ε=ε=┌(･ω･)┘ は入室、部屋の端まで滑る形は参加しすぎない合図です。照れて赤くなる顔は照れる顔文字のページで、こちらは隠れている側の顔だけを置いています。"
+          "ズサーは壁から出る動きではなく、ε の線を床にして部屋に滑り込む形です。ε=ε=ε=┌(･ω･)┘ は入室、部屋の端まで滑る形は参加しすぎない合図です。照れて赤くなる顔は照れる顔文字のページで、こちらは隠れている側の顔だけを置いています。素早く隠れるとき、逃げるときは、さっ、を顔の前に置きます。壁からゆっくり出す │ω･) とは、速度が違います。"
         ],
         "sections": [
           {
@@ -35606,6 +35779,10 @@
               {
                 "title": "動物に見せる",
                 "body": "ฅ│ω･) は猫の耳が先に出ます。耳のない │ω･) に猫の絵文字を足しても、猫が覗いているようには見えません。"
+              },
+              {
+                "title": "さっ隠れる",
+                "body": "さっ(／･ω･)／ は横へ跳ぶ顔です。しゃがむなら さっ…(っ˘ω˘)っ。床を滑る ε の線は、ズサーのときに残してください。"
               }
             ]
           }
@@ -41147,6 +41324,613 @@
           "href": "/emoji-combinations/birthday/",
           "title": "誕生日絵文字の組み合わせ",
           "description": "ケーキやクラッカーの並び。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-11-17",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 200,
+      "changefreq": "weekly",
+      "priority": "0.84",
+      "slug": "emoji-combinations-winter",
+      "path": "/emoji-combinations/winter/",
+      "family": "emoji-combinations",
+      "navCurrent": "emoji-combinations",
+      "title": "冬 絵文字 組み合わせ｜雪・寒い・雪だるま かわいいコピペ - MojiMoon",
+      "description": "寒い絵文字、雪の絵文字、雪の結晶、雪だるまを、かわいく並べてコピーできます。ぶるぶるの寒い顔文字、雪の顔文字、冬の顔文字、こたつのみかん、イルミネーションのデートも、冬の絵文字のページです。",
+      "ogTitle": "冬 絵文字 組み合わせ｜雪・寒い・雪だるま かわいいコピペ",
+      "ogDescription": "雪の結晶、寒い顔文字、雪だるま、こたつのみかん。冬の絵文字を、かわいい並びにしたものをコピーできます。",
+      "eyebrow": "Winter Emoji",
+      "h1": "冬 絵文字 組み合わせ",
+      "hero": "雪の絵文字は、結晶を一つ決めてから足します。寒いときのぶるぶる、こたつのみかん、雪だるま、夜のイルミネーションは、別の行に置いています。顔を添えるのは、寒い、雪、雪だるまのときだけです。",
+      "toolLabel": "冬の絵文字の組み合わせ",
+      "searchPlaceholder": "冬、雪、結晶、寒い、雪だるま、こたつ、推し",
+      "draftPlaceholder": "組み合わせをクリックするとここに入ります",
+      "composerHint": "結晶は一つ。ツリーや門松は、別のページの列です。",
+      "recentLabel": "最近使った冬の組み合わせ",
+      "categories": [
+        {
+          "id": "cute",
+          "label": "かわいい"
+        },
+        {
+          "id": "snow",
+          "label": "雪"
+        },
+        {
+          "id": "cold",
+          "label": "寒い"
+        },
+        {
+          "id": "snowman",
+          "label": "雪だるま"
+        },
+        {
+          "id": "home",
+          "label": "おうち"
+        },
+        {
+          "id": "date",
+          "label": "デート"
+        },
+        {
+          "id": "oshi",
+          "label": "推し活"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "冬",
+          "query": "冬"
+        },
+        {
+          "label": "雪",
+          "query": "雪"
+        },
+        {
+          "label": "結晶",
+          "query": "結晶"
+        },
+        {
+          "label": "寒い",
+          "query": "寒い"
+        },
+        {
+          "label": "雪だるま",
+          "query": "雪だるま"
+        },
+        {
+          "label": "こたつ",
+          "query": "こたつ"
+        },
+        {
+          "label": "推し",
+          "query": "推し"
+        }
+      ],
+      "heroLinks": [
+        {
+          "href": "/emoji-combinations/christmas/",
+          "label": "クリスマス絵文字"
+        },
+        {
+          "href": "/emoji-combinations/new-year/",
+          "label": "お正月・あけおめ"
+        },
+        {
+          "href": "/emoji-combinations/",
+          "label": "絵文字組み合わせ一覧"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "cute",
+          "heading": "冬の絵文字 組み合わせ（かわいい）",
+          "tags": [
+            "冬",
+            "絵文字",
+            "かわいい",
+            "組み合わせ"
+          ],
+          "items": [
+            {
+              "value": "❄️🐰🤍",
+              "label": "雪うさぎ"
+            },
+            {
+              "value": "🌨️🧸🎀",
+              "label": "吹雪のくま"
+            },
+            {
+              "value": "⋆⸜❄️⸝⋆",
+              "label": "雪を真ん中に"
+            },
+            {
+              "value": "🤍🌨️𓂃",
+              "label": "余白の吹雪"
+            },
+            {
+              "value": "❄️₊˚⊹",
+              "label": "細い光の雪"
+            },
+            {
+              "value": "☁️❄️🥛",
+              "label": "雪のミルク"
+            },
+            {
+              "value": "❄🎀🤍",
+              "label": "結晶と白いリボン"
+            },
+            {
+              "value": "❄️🦢𓈒",
+              "label": "白鳥の雪"
+            },
+            {
+              "value": "冬です(˶ᵔ ᵕ ᵔ˶)❄️",
+              "label": "冬の顔文字",
+              "tags": [
+                "冬",
+                "顔文字"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "snow",
+          "heading": "雪・雪の結晶 ❄️",
+          "tags": [
+            "雪",
+            "雪の結晶",
+            "結晶",
+            "絵文字",
+            "顔文字"
+          ],
+          "items": [
+            {
+              "value": "❄️",
+              "label": "雪の絵文字"
+            },
+            {
+              "value": "❄",
+              "label": "雪の結晶"
+            },
+            {
+              "value": "❅",
+              "label": "枝のある結晶"
+            },
+            {
+              "value": "❆",
+              "label": "六角の結晶"
+            },
+            {
+              "value": "🌨️",
+              "label": "吹雪の絵文字"
+            },
+            {
+              "value": "❅❄️❅",
+              "label": "結晶で雪を挟む"
+            },
+            {
+              "value": "🌨️･ﾟ",
+              "label": "粉雪"
+            },
+            {
+              "value": "✧❄✧",
+              "label": "結晶を光で挟む"
+            },
+            {
+              "value": "雪(｡˘ ˘｡)❄️",
+              "label": "雪の顔文字",
+              "tags": [
+                "雪",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ふりました(∩˶ᵔ ᵕ ᵔ˶∩)❄",
+              "label": "降った報告",
+              "tags": [
+                "雪",
+                "顔文字"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "cold",
+          "heading": "寒い 絵文字・寒い 顔文字（ぶるぶる、こたつ）",
+          "tags": [
+            "寒い",
+            "顔文字",
+            "絵文字",
+            "ぶるぶる",
+            "冬"
+          ],
+          "items": [
+            {
+              "value": "🥶",
+              "label": "寒い絵文字"
+            },
+            {
+              "value": "🥶🌬️",
+              "label": "冷たい風"
+            },
+            {
+              "value": "🧥❄️",
+              "label": "コートの日"
+            },
+            {
+              "value": "🌬️🧤",
+              "label": "風と手袋"
+            },
+            {
+              "value": "🥶🧣☕️",
+              "label": "温かいものを足す"
+            },
+            {
+              "value": "さむっ(›´ω`‹ )",
+              "label": "寒い顔文字",
+              "tags": [
+                "寒い",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "ぶるぶる(´;ω;`)ﾌﾞﾙ",
+              "label": "ぶるぶる",
+              "tags": [
+                "寒い",
+                "ぶるぶる",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "こたつから出ない(っ˘ω˘)っ♨",
+              "label": "こたつ",
+              "tags": [
+                "寒い",
+                "こたつ",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "冬だ(｡•́︵•̀｡)",
+              "label": "冬の顔文字",
+              "tags": [
+                "冬",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さむい…(っ´;ω;`)っ",
+              "label": "縮こまる",
+              "tags": [
+                "寒い",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "さむい(ﾉ ˘ω˘)ﾉ ｺﾀﾂ",
+              "label": "こたつへ走る",
+              "tags": [
+                "寒い",
+                "こたつ",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "こごえた(>﹏<)❄",
+              "label": "こごえた顔",
+              "tags": [
+                "寒い",
+                "顔文字"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "snowman",
+          "heading": "雪だるま ☃️",
+          "tags": [
+            "雪だるま",
+            "顔文字",
+            "絵文字",
+            "雪"
+          ],
+          "items": [
+            {
+              "value": "☃️🥕",
+              "label": "にんじんの鼻"
+            },
+            {
+              "value": "⛄🧣🤍",
+              "label": "マフラーを巻く"
+            },
+            {
+              "value": "☃️⋆",
+              "label": "頭に星"
+            },
+            {
+              "value": "☃️🍊",
+              "label": "みかんを渡す"
+            },
+            {
+              "value": "✧⛄️✧",
+              "label": "光で挟む"
+            },
+            {
+              "value": "⛄️(˶> ᵕ <˶)",
+              "label": "にっこり雪だるま",
+              "tags": [
+                "雪だるま",
+                "顔文字"
+              ]
+            },
+            {
+              "value": "雪だるま(∩´ω`∩)☃️",
+              "label": "雪だるまの顔文字",
+              "tags": [
+                "雪だるま",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "(雪だるま)(っ˘ω˘)っ",
+              "label": "ころころ",
+              "tags": [
+                "雪だるま",
+                "顔文字"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "home",
+          "heading": "冬のおうち時間（こたつ・みかん・ホットココア・鍋）",
+          "tags": [
+            "冬",
+            "こたつ",
+            "みかん",
+            "おうち"
+          ],
+          "items": [
+            {
+              "value": "🍊🔥📖",
+              "label": "こたつでみかん"
+            },
+            {
+              "value": "🍲🤍❄️",
+              "label": "鍋の湯気"
+            },
+            {
+              "value": "☕️🤍📖",
+              "label": "ホットココアと本"
+            },
+            {
+              "value": "🫖❄️",
+              "label": "ポットを火に"
+            },
+            {
+              "value": "🍫🤍🔥",
+              "label": "板チョコを溶かす"
+            },
+            {
+              "value": "こたつ(˘꒳˘)🍊",
+              "label": "こたつの顔",
+              "tags": [
+                "こたつ",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "鍋やこう( ˘ω˘ )🍲",
+              "label": "鍋の夜",
+              "tags": [
+                "鍋",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "みかんの皮(っ˘ ˘ς )🍊",
+              "label": "皮をむく",
+              "tags": [
+                "みかん",
+                "顔文字"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "date",
+          "heading": "冬デート・イルミネーション",
+          "tags": [
+            "冬",
+            "デート",
+            "イルミネーション"
+          ],
+          "items": [
+            {
+              "value": "🌃✨🧤",
+              "label": "夜の電飾"
+            },
+            {
+              "value": "💡🤍❄️",
+              "label": "白いイルミネーション"
+            },
+            {
+              "value": "🌉✧",
+              "label": "橋の光"
+            },
+            {
+              "value": "🤝🧣",
+              "label": "マフラーを半分こ"
+            },
+            {
+              "value": "🌌☕️",
+              "label": "夜のあと温かいもの"
+            },
+            {
+              "value": "📸❄️🤍",
+              "label": "雪を撮る"
+            },
+            {
+              "value": "デート(˶>ᗜ<˶)❄️",
+              "label": "冬デート",
+              "tags": [
+                "デート",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "帰り道( ˘ω˘ )🌃",
+              "label": "夜の帰り道",
+              "tags": [
+                "デート",
+                "顔文字"
+              ],
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "oshi",
+          "heading": "冬の推し活（メンカラ×雪）",
+          "tags": [
+            "冬",
+            "推し",
+            "メンカラ",
+            "雪"
+          ],
+          "items": [
+            {
+              "value": "青のメンカラに、雪を一粒 💙❄️",
+              "label": "青",
+              "wide": true
+            },
+            {
+              "value": "ピンク担の手袋、今日は白い 💗🧤",
+              "label": "ピンク",
+              "wide": true
+            },
+            {
+              "value": "紫のペンライトが雪に反射した 💜✨",
+              "label": "紫",
+              "wide": true
+            },
+            {
+              "value": "緑のサイリウム、吐息が白い 💚🌬️",
+              "label": "緑",
+              "wide": true
+            },
+            {
+              "value": "黄色担当のマフラー、同じ色 💛🧣",
+              "label": "黄色",
+              "wide": true
+            },
+            {
+              "value": "雪の日も最前で待つ ❄️🎤",
+              "label": "最前",
+              "wide": true
+            },
+            {
+              "value": "メンカラのハートは一色、雪は白 💗❄️",
+              "label": "一色",
+              "wide": true
+            },
+            {
+              "value": "冬の特典会、指先だけ赤い (´;ω;`)🎤",
+              "label": "特典会",
+              "tags": [
+                "推し",
+                "顔文字"
+              ],
+              "wide": true
+            },
+            {
+              "value": "現場のカイロ、隣の担に半分 ❄️🤝",
+              "label": "カイロ",
+              "wide": true
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "結晶を一つ、あとは温度",
+        "paragraphs": [
+          "雪の絵文字は ❄️、止まった結晶は ❄ ❅ ❆、降っている雪は 🌨️ です。雪だるまは、雪がついた ☃️ と、雪のない ⛄ を分けています。",
+          "寒い顔文字は、ぶるぶると、こたつから出ない顔です。ツリーの列はクリスマス、門松の列はお正月のページに置いています。"
+        ],
+        "sections": [
+          {
+            "heading": "どれを一行にするか",
+            "cards": [
+              {
+                "title": "雪",
+                "body": "❄️ を一つ。両脇を同じ記号にすると、結晶が真ん中に残ります。"
+              },
+              {
+                "title": "寒い",
+                "body": "顔文字を足すなら一つ。こたつの ♨ と風の 🌬️ は同じ行に置きません。"
+              },
+              {
+                "title": "おうち",
+                "body": "みかん、ココア、鍋は別の夜です。全部足すとメニューになります。"
+              },
+              {
+                "title": "推し活",
+                "body": "メンカラは一色。雪は白のまま残します。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/emoji-combinations/christmas/",
+            "label": "クリスマス絵文字"
+          },
+          {
+            "href": "/emoji-combinations/new-year/",
+            "label": "お正月・あけおめ"
+          },
+          {
+            "href": "/emoji-combinations/",
+            "label": "絵文字組み合わせ一覧"
+          }
+        ]
+      },
+      "related": [
+        {
+          "href": "/emoji-combinations/christmas/",
+          "title": "クリスマス絵文字",
+          "description": "ツリー、サンタ、雪。12月の列。"
+        },
+        {
+          "href": "/emoji-combinations/new-year/",
+          "title": "お正月・あけおめ",
+          "description": "門松、初日の出、年越しの列。"
+        },
+        {
+          "href": "/emoji-combinations/",
+          "title": "絵文字組み合わせ",
+          "description": "季節以外の並びも、同じ道具でコピーする。"
         }
       ]
     }
