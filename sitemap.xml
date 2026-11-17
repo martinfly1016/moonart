@@ -376,7 +376,7 @@
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/happy/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -923,13 +923,13 @@
   </url>
   <url>
     <loc>https://mojimoon.com/emoji-combinations/christmas/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>
   <url>
     <loc>https://mojimoon.com/emoji-combinations/new-year/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>
@@ -995,7 +995,7 @@
   </url>
   <url>
     <loc>https://mojimoon.com/kaomoji/peek/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>
@@ -1038,6 +1038,12 @@
   <url>
     <loc>https://mojimoon.com/emoji-combinations/oshi-birthday/</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://mojimoon.com/emoji-combinations/winter/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
   </url>

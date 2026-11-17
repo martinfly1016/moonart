@@ -26,6 +26,10 @@ window.MojiMoonToolData = {
     {
       "label": "既読",
       "query": "既読"
+    },
+    {
+      "label": "さっ",
+      "query": "さっ"
     }
   ],
   "categories": [
@@ -56,6 +60,10 @@ window.MojiMoonToolData = {
     {
       "id": "cute",
       "label": "かわいい"
+    },
+    {
+      "id": "dash",
+      "label": "さっ"
     }
   ],
   "pageSize": 200,
@@ -1000,6 +1008,202 @@ window.MojiMoonToolData = {
         "顔文字"
       ],
       "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ(／･ω･)／",
+      "label": "横へ跳ぶ",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっと隠れた(ﾉ)ω･)",
+      "label": "壁へ戻る",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ…(っ˘ω˘)っ",
+      "label": "しゃがんで隠れる",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "サッ(ﾉω･)ﾉ",
+      "label": "半角で逃げる",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ、消えます(ﾉ･ω･)ﾉ",
+      "label": "退場",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっと右へ(･ω･)／",
+      "label": "右へ抜ける",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ(／_･ω･)／",
+      "label": "低い姿勢",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "逃げるさっ(ﾉ>ω<)ﾉ",
+      "label": "走り出す",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ…( ･ω･)つ",
+      "label": "指だけ残す",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっとしゃがむ(っ´ω`)っ",
+      "label": "その場に沈む",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ！(／･∀･)／",
+      "label": "明るく逃げる",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "見つからないさっ(ﾉω･ﾉ)",
+      "label": "背中を向ける",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "さっ──(ﾉ･ω･)ﾉ",
+      "label": "一直線",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "一目散(ﾉ`ω´)ﾉさっ",
+      "label": "一目散",
+      "category": "dash",
+      "tags": [
+        "さっ",
+        "隠れる",
+        "逃げる",
+        "顔文字",
+        "チラ見"
+      ],
+      "wide": true,
       "beadHref": ""
     }
   ]
