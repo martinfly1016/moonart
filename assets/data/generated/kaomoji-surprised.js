@@ -22,6 +22,14 @@ window.MojiMoonToolData = {
     {
       "label": "まじ",
       "query": "まじ"
+    },
+    {
+      "label": "絵文字",
+      "query": "絵文字"
+    },
+    {
+      "label": "ビックリ",
+      "query": "ビックリ"
     }
   ],
   "categories": [
@@ -51,7 +59,15 @@ window.MojiMoonToolData = {
     },
     {
       "id": "more",
-      "label": "ほか"
+      "label": "文末"
+    },
+    {
+      "id": "bikkuri",
+      "label": "ビックリ"
+    },
+    {
+      "id": "emoji",
+      "label": "絵文字"
     }
   ],
   "pageSize": 160,
@@ -834,7 +850,9 @@ window.MojiMoonToolData = {
       "label": "(๑°ㅁ°๑)‼",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -844,7 +862,9 @@ window.MojiMoonToolData = {
       "label": "Σ( °o°)",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -854,7 +874,9 @@ window.MojiMoonToolData = {
       "label": "(°ロ°) !",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -864,7 +886,9 @@ window.MojiMoonToolData = {
       "label": "(੭ ᐕ)੭",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -874,7 +898,9 @@ window.MojiMoonToolData = {
       "label": "( ﾟдﾟ)",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -884,7 +910,9 @@ window.MojiMoonToolData = {
       "label": "えっの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -894,7 +922,9 @@ window.MojiMoonToolData = {
       "label": "びっくりの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -904,7 +934,9 @@ window.MojiMoonToolData = {
       "label": "まじでの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -914,7 +946,9 @@ window.MojiMoonToolData = {
       "label": "知らなかったの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -924,7 +958,9 @@ window.MojiMoonToolData = {
       "label": "すごいの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -934,7 +970,9 @@ window.MojiMoonToolData = {
       "label": "ほんとにの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -944,7 +982,9 @@ window.MojiMoonToolData = {
       "label": "衝撃の返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -954,7 +994,9 @@ window.MojiMoonToolData = {
       "label": "急すぎるの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -964,7 +1006,9 @@ window.MojiMoonToolData = {
       "label": "びっくりしたの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -974,7 +1018,9 @@ window.MojiMoonToolData = {
       "label": "そんなことあるの返信",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -984,7 +1030,9 @@ window.MojiMoonToolData = {
       "label": "まじでの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -994,7 +1042,9 @@ window.MojiMoonToolData = {
       "label": "知らなかったの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1004,7 +1054,9 @@ window.MojiMoonToolData = {
       "label": "すごいの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1014,7 +1066,9 @@ window.MojiMoonToolData = {
       "label": "ほんとにの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1024,7 +1078,9 @@ window.MojiMoonToolData = {
       "label": "衝撃の短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1034,7 +1090,9 @@ window.MojiMoonToolData = {
       "label": "急すぎるの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1044,7 +1102,9 @@ window.MojiMoonToolData = {
       "label": "びっくりしたの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1054,7 +1114,9 @@ window.MojiMoonToolData = {
       "label": "そんなことあるの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1064,7 +1126,9 @@ window.MojiMoonToolData = {
       "label": "びっくりしたの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1074,7 +1138,9 @@ window.MojiMoonToolData = {
       "label": "すごいねの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1084,7 +1150,9 @@ window.MojiMoonToolData = {
       "label": "まさかの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1094,7 +1162,9 @@ window.MojiMoonToolData = {
       "label": "えっ本当の短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1104,7 +1174,9 @@ window.MojiMoonToolData = {
       "label": "予想外の短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
@@ -1114,7 +1186,300 @@ window.MojiMoonToolData = {
       "label": "驚いたの短文",
       "category": "more",
       "tags": [
-        "その他"
+        "びっくり",
+        "文末",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ(｡•́ω•̀｡)",
+      "label": "口が小さいえっ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ！(๑°ᗜ°๑)",
+      "label": "笑ってえっ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ビックリ(⊙ω⊙)",
+      "label": "丸い目のビックリ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ(ﾟ∀ﾟ)",
+      "label": "口が開いたえっ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ビックリ！(✧□✧)",
+      "label": "きらきらした口",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ！(｡>﹏<｡)",
+      "label": "眉が寄るえっ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "ビックリ(｡°□°｡)",
+      "label": "四角い口のビックリ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "えっ(°口°)",
+      "label": "短い口のえっ",
+      "category": "bikkuri",
+      "tags": [
+        "えっ",
+        "ビックリ",
+        "びっくり"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😳💦",
+      "label": "顔が赤い",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😳‼️",
+      "label": "声が出る",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "⁉️😳",
+      "label": "えっの絵文字",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😲✨",
+      "label": "きらっと驚く",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😦💦",
+      "label": "口が開いたまま",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😯⭐",
+      "label": "星が飛ぶ",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🫢💦",
+      "label": "口を押さえる",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🤯💦",
+      "label": "頭が追いつかない",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😮🫧",
+      "label": "泡が出る",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😵💫",
+      "label": "目が回る",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🙀💦",
+      "label": "猫が驚く",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥹💦",
+      "label": "うるっと驚く",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😳🌸",
+      "label": "かわいいびっくり",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "❗😲❗",
+      "label": "両側にびっくり",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "😱✨",
+      "label": "きらきら叫び",
+      "category": "emoji",
+      "tags": [
+        "絵文字",
+        "びっくり",
+        "かわいい",
+        "驚き"
       ],
       "wide": false,
       "beadHref": ""
