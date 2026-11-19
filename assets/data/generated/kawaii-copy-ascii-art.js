@@ -1581,8 +1581,8 @@ window.MojiMoonToolData = {
       "beadHref": ""
     },
     {
-      "value": "  __\n /\n |\n |",
-      "label": "キャンディ",
+      "value": "  ___\n /   )\n|   /\n|  |",
+      "label": "キャンディケイン",
       "category": "christmas",
       "tags": [
         "クリスマス",
