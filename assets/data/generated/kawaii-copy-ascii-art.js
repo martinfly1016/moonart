@@ -30,6 +30,10 @@ window.MojiMoonToolData = {
     {
       "label": "おもしろ",
       "query": "おもしろ"
+    },
+    {
+      "label": "クリスマス",
+      "query": "クリスマス"
     }
   ],
   "categories": [
@@ -64,6 +68,10 @@ window.MojiMoonToolData = {
     {
       "id": "funny",
       "label": "おもしろ"
+    },
+    {
+      "id": "christmas",
+      "label": "クリスマス"
     }
   ],
   "pageSize": 240,
@@ -1459,6 +1467,150 @@ window.MojiMoonToolData = {
       "category": "funny",
       "tags": [
         "おもしろ",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  *\n /|\\\n/_|_\\\n  |",
+      "label": "小さいツリー",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  *\n ***\n*****\n  |",
+      "label": "星を載せたツリー",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": " ( )\n(o.o)\n(_^_)",
+      "label": "雪だるま",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": " o\n( )\n|_|",
+      "label": "ちび雪だるま",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": ".---.\n|-+-|\n'---'",
+      "label": "プレゼント",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  ><\n[====]\n  ||",
+      "label": "リボンの箱",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": " /|\\\n*-+-*\n \\|/",
+      "label": "雪の結晶",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  *\n /**\\\n|____|",
+      "label": "サンタ帽",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  .\n ( )\n--^--",
+      "label": "鈴",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": "  __\n /\n |\n |",
+      "label": "キャンディ",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": " .--.\n( * )\n '--'",
+      "label": "リース",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
+        "アスキーアート"
+      ],
+      "wide": true,
+      "beadHref": ""
+    },
+    {
+      "value": " \\ /\n(o.o)\n / \\",
+      "label": "トナカイ",
+      "category": "christmas",
+      "tags": [
+        "クリスマス",
+        "冬",
         "アスキーアート"
       ],
       "wide": true,
