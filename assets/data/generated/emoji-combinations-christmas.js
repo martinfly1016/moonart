@@ -86,6 +86,10 @@ window.MojiMoonToolData = {
       "label": "イルミネーション"
     },
     {
+      "id": "lights",
+      "label": "イルミネーション絵文字"
+    },
+    {
       "id": "reindeer",
       "label": "トナカイ"
     },
@@ -1212,6 +1216,314 @@ window.MojiMoonToolData = {
         "絵文字",
         "イルミネーション",
         "デート"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💡✨💡",
+      "label": "電球の列",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✨💡🎄",
+      "label": "電球とツリー",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💙💡✨",
+      "label": "青いイルミネーション",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💛✨🎄",
+      "label": "金色のツリーの光",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💜💡🌃",
+      "label": "紫の夜景",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💖✨💡",
+      "label": "ピンクの電飾",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🤍💡✨",
+      "label": "白い電飾",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌟💡🌟",
+      "label": "星と電球",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌠✨🎄",
+      "label": "流れ星とツリーの光",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌌🌃✨",
+      "label": "星空の夜景",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🏙️💡✨",
+      "label": "街のイルミネーション",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🏰✨💡",
+      "label": "城のイルミネーション",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎠💡✨",
+      "label": "メリーゴーランドの光",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎆💡🎄",
+      "label": "花火と電飾",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎇✨🌃",
+      "label": "線香花火の夜景",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🔦🎄✨",
+      "label": "スポットライトのツリー",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🪔✨🎄",
+      "label": "ランプのツリー",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "💎💡✨",
+      "label": "宝石みたいな光",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🪩✨🌃",
+      "label": "ミラーボールの夜",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌈💡🎄",
+      "label": "虹色のイルミネーション",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "❄️💡✨",
+      "label": "雪の中の電飾",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🌙💡🌃",
+      "label": "月夜のイルミネーション",
+      "category": "lights",
+      "tags": [
+        "クリスマス",
+        "絵文字",
+        "イルミネーション",
+        "キラキラ",
+        "夜景"
       ],
       "wide": false,
       "beadHref": ""
