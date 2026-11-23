@@ -78,6 +78,10 @@ window.MojiMoonToolData = {
       "label": "年賀状"
     },
     {
+      "id": "osechi",
+      "label": "おせち"
+    },
+    {
       "id": "festive",
       "label": "お正月"
     },
@@ -1477,6 +1481,174 @@ window.MojiMoonToolData = {
         "絵文字",
         "デジタル年賀状",
         "お正月"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🦐",
+      "label": "おせちの海老",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🌰",
+      "label": "栗きんとん",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🫘",
+      "label": "黒豆",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🍳",
+      "label": "伊達巻",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🐟",
+      "label": "おせちの鯛",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍱🍄",
+      "label": "焼き椎茸",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🥣🍡",
+      "label": "お雑煮の餅",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍲🍊",
+      "label": "お雑煮とみかん",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍡🤍🍊",
+      "label": "白い鏡餅",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🎍🍡🍊",
+      "label": "門松と鏡餅",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "🍶🥣",
+      "label": "屠蘇とお雑煮",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
+      ],
+      "wide": false,
+      "beadHref": ""
+    },
+    {
+      "value": "✨🍱🌰",
+      "label": "きらきらのおせち",
+      "category": "osechi",
+      "tags": [
+        "お正月",
+        "絵文字",
+        "おせち",
+        "お雑煮",
+        "鏡餅"
       ],
       "wide": false,
       "beadHref": ""

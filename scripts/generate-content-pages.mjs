@@ -741,7 +741,7 @@ ${hreflang ? `${hreflang}\n` : ''}  <link rel="icon" href="/favicon.ico" type="i
   <meta property="og:description" content="${escapeAttr(page.ogDescription || page.description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${escapeAttr(page.canonical)}">
-  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">${faqSchema}
+  <meta property="og:image" content="https://mojimoon.com/moon_icon.png">${renderTwitterMeta(page)}${faqSchema}
   <script src="/assets/js/analytics.js" defer></script>
   <link rel="stylesheet" href="/assets/css/text-tools.css">
   <link rel="stylesheet" href="/assets/css/site-navigation.css">
@@ -815,6 +815,18 @@ function renderSeoSection(page) {
   const enrichment = page.skipGeneratedEnrichment ? '' : renderGeneratedEnrichment(page);
   const faq = page.faq?.length ? `<h2>FAQ</h2>${page.faq.map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join('')}` : '';
   return `<section class="seo-section"><h2>${escapeHtml(seo.heading || `${page.h1}の使い方`)}</h2>${paragraphs}${sections}${enrichment}${links}${faq}</section>`;
+}
+
+function renderTwitterMeta(page) {
+  const title = page.twitterTitle;
+  if (!title) return '';
+  const description = page.twitterDescription || page.ogDescription || page.description;
+  return `
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@mojimoon">
+  <meta name="twitter:title" content="${escapeAttr(title)}">
+  <meta name="twitter:description" content="${escapeAttr(description)}">
+  <meta name="twitter:image" content="https://mojimoon.com/moon_icon.png">`;
 }
 
 function renderFaqSchema(page) {
