@@ -27268,7 +27268,7 @@
       ]
     },
     {
-      "lastmod": "2026-11-19",
+      "lastmod": "2026-11-23",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 240,
@@ -27277,9 +27277,9 @@
       "slug": "kawaii-copy-ascii-art",
       "path": "/kawaii-copy/ascii-art/",
       "family": "kawaii-copy",
-      "title": "アスキーアート コピペ かわいい｜ハート・リボン・動物の小さいAA - MojiMoon",
+      "title": "アスキーアート コピペ かわいい｜ハート・星・リボン・動物の小さいAA - MojiMoon",
       "description": "スマホで崩れない小さいアスキーアートをコピペできます。かわいいハート、リボン、猫やうさぎの動物、クリスマスのツリーや雪だるまなど3〜4行のAAを集めました。",
-      "ogTitle": "アスキーアート コピペ かわいい｜ハート・リボン・動物の小さいAA",
+      "ogTitle": "アスキーアート コピペ かわいい｜ハート・星・リボン・動物の小さいAA",
       "ogDescription": "スマホで崩れない小さいアスキーアートをコピペできます。かわいいハート、リボン、猫やうさぎ、クリスマスのツリーや雪だるまなど3〜4行のAAです。",
       "eyebrow": "Kawaii ASCII",
       "h1": "かわいいアスキーアート コピペ",
@@ -33745,7 +33745,7 @@
       ]
     },
     {
-      "lastmod": "2026-10-15",
+      "lastmod": "2026-11-23",
       "skipGeneratedEnrichment": true,
       "showGroupHeadings": true,
       "pageSize": 160,
@@ -34051,6 +34051,11 @@
           "href": "/kaomoji/ganbare/",
           "title": "頑張って・ファイト顔文字",
           "description": "試験や仕事、推しへの気合い。"
+        },
+        {
+          "href": "/kaomoji/dance/",
+          "title": "踊る・ダンス顔文字",
+          "description": "ペンライトを振って踊る顔。"
         },
         {
           "href": "/emoji-combinations/oshi-birthday/",
@@ -43244,6 +43249,519 @@
           "href": "/kaomoji/ganbare/",
           "title": "頑張って・ファイト顔文字",
           "description": "拳を上げる応援。額への手とは別です。"
+        }
+      ]
+    },
+    {
+      "lastmod": "2026-11-23",
+      "skipGeneratedEnrichment": true,
+      "showGroupHeadings": true,
+      "pageSize": 200,
+      "changefreq": "weekly",
+      "priority": "0.84",
+      "slug": "kaomoji-dance",
+      "path": "/kaomoji/dance/",
+      "family": "kaomoji",
+      "navCurrent": "kaomoji",
+      "title": "踊る 顔文字 コピペ｜かわいいダンス 顔文字・ノリノリ💃 ダンス 絵文字 - MojiMoon",
+      "description": "踊る顔文字とダンス絵文字をコピペできます。♪(｡ᵕᴗᵕ｡)♪、ルンルン〜(꒪꒳꒪)〜、💃🎶。かわいい踊り、ノリノリ、推し活のペンライトまで、動きで分けています。",
+      "ogTitle": "踊る 顔文字 コピペ｜かわいいダンス 顔文字・ノリノリ💃 ダンス 絵文字",
+      "ogDescription": "♪(｡ᵕᴗᵕ｡)♪、ルンルン〜(꒪꒳꒪)〜、💃🎶。かわいいダンスとノリノリをコピーできます。",
+      "eyebrow": "Dance Kaomoji",
+      "h1": "踊る 顔文字・ダンス 絵文字",
+      "hero": "踊る顔文字は、手が上がって体が揺れている顔です。かわいい踊りは小さく手を振る顔、ノリノリとルンルンは音符が付いた顔、💃 は絵文字だけのダンスです。推し活のペンライトや、文末に一つ足す短い踊りも、同じページに分けています。",
+      "toolLabel": "踊る顔文字",
+      "searchPlaceholder": "踊る、ダンス、ノリノリ、ルンルン、絵文字、ペンライト",
+      "draftPlaceholder": "顔文字をクリックするとここに入ります",
+      "composerHint": "踊りは文末に一つ。嬉しいだけの笑顔と、拳の応援は同じ文に並べないでください。",
+      "recentLabel": "最近使った踊る顔文字",
+      "categories": [
+        {
+          "id": "cute",
+          "label": "かわいい"
+        },
+        {
+          "id": "groove",
+          "label": "ノリノリ"
+        },
+        {
+          "id": "emoji",
+          "label": "絵文字"
+        },
+        {
+          "id": "oshi",
+          "label": "推し"
+        },
+        {
+          "id": "joy",
+          "label": "喜びの舞"
+        },
+        {
+          "id": "short",
+          "label": "文末"
+        }
+      ],
+      "quickFilters": [
+        {
+          "label": "踊る",
+          "query": "踊る"
+        },
+        {
+          "label": "ノリノリ",
+          "query": "ノリノリ"
+        },
+        {
+          "label": "ルンルン",
+          "query": "ルンルン"
+        },
+        {
+          "label": "絵文字",
+          "query": "絵文字"
+        },
+        {
+          "label": "ペンライト",
+          "query": "ペンライト"
+        }
+      ],
+      "heroLinks": [
+        {
+          "href": "/kaomoji/happy/",
+          "label": "嬉しい顔文字"
+        },
+        {
+          "href": "/kaomoji/oshi/",
+          "label": "推し活顔文字"
+        },
+        {
+          "href": "/kaomoji/",
+          "label": "顔文字一覧"
+        }
+      ],
+      "itemGroups": [
+        {
+          "category": "cute",
+          "heading": "かわいく踊る",
+          "tags": [
+            "顔文字",
+            "踊る",
+            "かわいい",
+            "ダンス"
+          ],
+          "items": [
+            {
+              "value": "♪(｡ᵕᴗᵕ｡)♪",
+              "label": "音符の小さい踊り"
+            },
+            {
+              "value": "(∗ᵕᴗᵕ∗)〜♪",
+              "label": "ほっぺを揺らす"
+            },
+            {
+              "value": "♪(˶˘ᵕ˘˶)♪",
+              "label": "やわらかいステップ"
+            },
+            {
+              "value": "〜(っ˘꒳˘c)〜",
+              "label": "肉球の踊り"
+            },
+            {
+              "value": "♪(๑˘ᵕ˘๑)♪",
+              "label": "小さなステップ"
+            },
+            {
+              "value": "(ᐢ⸝⸝ᴗ ̫ ᴗ⸝⸝ᐢ)〜♪",
+              "label": "うさの踊り",
+              "wide": true
+            },
+            {
+              "value": "♪(ฅ˶˙ᵕ˙˶ฅ)♪",
+              "label": "猫の踊り",
+              "wide": true
+            },
+            {
+              "value": "踊る(｡•ᴗ•｡)〜",
+              "label": "言葉つきの踊り"
+            },
+            {
+              "value": "(⸝⸝ᵕᴗᵕ⸝⸝)〜♪",
+              "label": "照れながらの踊り"
+            },
+            {
+              "value": "♪(✿˘‿˘✿)♪",
+              "label": "花丸の踊り"
+            }
+          ]
+        },
+        {
+          "category": "groove",
+          "heading": "ノリノリ・ルンルン",
+          "tags": [
+            "顔文字",
+            "踊る",
+            "ノリノリ",
+            "ルンルン",
+            "ダンス"
+          ],
+          "items": [
+            {
+              "value": "ノリノリ♪(ﾉ´∀｀*)ﾉ",
+              "label": "ノリノリ",
+              "wide": true
+            },
+            {
+              "value": "ルンルン〜(꒪꒳꒪)〜",
+              "label": "ルンルン",
+              "wide": true
+            },
+            {
+              "value": "♪ルンルン(˶ˆᗜˆ˵)〜",
+              "label": "頬が上がるルンルン",
+              "wide": true
+            },
+            {
+              "value": "ノリノリ(ง ˙꒳˙ )ว",
+              "label": "体を揺らす",
+              "wide": true
+            },
+            {
+              "value": "ルンルン(ﾉ´꒳`*)ﾉ",
+              "label": "手を振るルンルン",
+              "wide": true
+            },
+            {
+              "value": "♪〜(´ε｀ )〜♪",
+              "label": "口を開けてノリノリ"
+            },
+            {
+              "value": "ノリノリヾ(≧∇≦)ﾉ",
+              "label": "大きく開く",
+              "wide": true
+            },
+            {
+              "value": "ルンルン(ﾉ´▽｀*)ﾉ♪",
+              "label": "笑顔のルンルン",
+              "wide": true
+            },
+            {
+              "value": "踊ろ♪(ﾉ≧∇≦)ﾉ",
+              "label": "声を出した踊り"
+            },
+            {
+              "value": "ノリノリ(۶˶ᵔ ᵕ ᵔ˶)۶♪",
+              "label": "両腕のノリノリ",
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "emoji",
+          "heading": "ダンス 絵文字の組み合わせ",
+          "tags": [
+            "顔文字",
+            "踊る",
+            "ダンス",
+            "絵文字",
+            "💃"
+          ],
+          "items": [
+            {
+              "value": "💃",
+              "label": "踊る人"
+            },
+            {
+              "value": "🕺",
+              "label": "踊る人の絵文字"
+            },
+            {
+              "value": "💃🎶",
+              "label": "音符つきのダンス"
+            },
+            {
+              "value": "🕺🎶",
+              "label": "ステップの絵文字"
+            },
+            {
+              "value": "🎶💃🎶",
+              "label": "両側の音符"
+            },
+            {
+              "value": "踊る💃",
+              "label": "言葉と絵文字"
+            },
+            {
+              "value": "ダンス🕺",
+              "label": "ダンスの絵文字"
+            },
+            {
+              "value": "💃✨",
+              "label": "きらめくダンス"
+            },
+            {
+              "value": "♪💃♪",
+              "label": "音符で挟む"
+            },
+            {
+              "value": "ノリノリ💃",
+              "label": "ノリノリの絵文字"
+            },
+            {
+              "value": "ルンルン🕺🎶",
+              "label": "ルンルンの絵文字",
+              "wide": true
+            },
+            {
+              "value": "💃🪩✨",
+              "label": "ミラーボールのきらめき"
+            }
+          ]
+        },
+        {
+          "category": "oshi",
+          "heading": "推し活・ライブで踊る",
+          "tags": [
+            "顔文字",
+            "踊る",
+            "ダンス",
+            "推し",
+            "ペンライト",
+            "ライブ"
+          ],
+          "items": [
+            {
+              "value": "ペンライト💃",
+              "label": "ペンライトのダンス"
+            },
+            {
+              "value": "ライブで踊る(ﾉ´∀｀*)ﾉ",
+              "label": "ライブで踊る",
+              "wide": true
+            },
+            {
+              "value": "サイリウム♪(˶ˆ꒳ˆ˶)〜",
+              "label": "サイリウム",
+              "wide": true
+            },
+            {
+              "value": "推しと踊る💃",
+              "label": "推しと踊る"
+            },
+            {
+              "value": "参戦ダンス🕺",
+              "label": "参戦のダンス"
+            },
+            {
+              "value": "ペンラ♪(｡•ᴗ•｡)〜",
+              "label": "ペンラを振る"
+            },
+            {
+              "value": "ライブノリノリ💃🎶",
+              "label": "ライブのノリノリ",
+              "wide": true
+            },
+            {
+              "value": "推しの曲〜(꒪꒳꒪)〜",
+              "label": "推しの曲",
+              "wide": true
+            },
+            {
+              "value": "コール💃",
+              "label": "コールの踊り"
+            },
+            {
+              "value": "会場でルンルン🕺",
+              "label": "会場のルンルン",
+              "wide": true
+            },
+            {
+              "value": "ペンライト両手(ﾉ≧∇≦)ﾉ",
+              "label": "両手のペンライト",
+              "wide": true
+            },
+            {
+              "value": "生誕祭💃✨",
+              "label": "生誕祭の踊り"
+            }
+          ]
+        },
+        {
+          "category": "joy",
+          "heading": "喜びの舞・うれしい踊り",
+          "tags": [
+            "顔文字",
+            "踊る",
+            "ダンス",
+            "喜び",
+            "うれしい"
+          ],
+          "items": [
+            {
+              "value": "喜びの舞(ﾉ´∀｀*)ﾉ♪",
+              "label": "喜びの舞",
+              "wide": true
+            },
+            {
+              "value": "うれしくて踊る〜(˶ᵔ ᵕ ᵔ˶)〜",
+              "label": "うれしくて踊る",
+              "wide": true
+            },
+            {
+              "value": "小躍り(っ˘꒳˘c)",
+              "label": "小躍り"
+            },
+            {
+              "value": "舞う(˶ˆᗜˆ˵)〜",
+              "label": "舞う"
+            },
+            {
+              "value": "うれしい踊り💃",
+              "label": "うれしい踊り"
+            },
+            {
+              "value": "跳ねて踊る(ﾉ´꒳`*)ﾉ",
+              "label": "跳ねて踊る",
+              "wide": true
+            },
+            {
+              "value": "幸せの舞♪(˘꒳˘)〜",
+              "label": "幸せの舞"
+            },
+            {
+              "value": "お祝いの踊り🕺🎶",
+              "label": "お祝いの踊り",
+              "wide": true
+            },
+            {
+              "value": "舞い上がる(ﾉ≧∇≦)ﾉ♪",
+              "label": "舞い上がる",
+              "wide": true
+            },
+            {
+              "value": "やった、踊る♪(｡ᵕᴗᵕ｡)♪",
+              "label": "やった、踊る",
+              "wide": true
+            }
+          ]
+        },
+        {
+          "category": "short",
+          "heading": "文末に添える短いダンス",
+          "tags": [
+            "顔文字",
+            "踊る",
+            "ダンス",
+            "文末"
+          ],
+          "items": [
+            {
+              "value": "(ﾉ´∀｀*)ﾉ",
+              "label": "短い手の踊り"
+            },
+            {
+              "value": "(˶ˆ꒳ˆ˶)〜",
+              "label": "体を傾ける"
+            },
+            {
+              "value": "♪(˙꒳˙)♪",
+              "label": "小さい音符"
+            },
+            {
+              "value": "(ᵕᴗᵕ)〜",
+              "label": "短いステップ"
+            },
+            {
+              "value": "(´ε｀ )♪",
+              "label": "口を開けた短い踊り"
+            },
+            {
+              "value": "♪(ω)♪",
+              "label": "最小の踊り"
+            },
+            {
+              "value": "(꒪꒳꒪)〜",
+              "label": "まるい揺れ"
+            },
+            {
+              "value": "〜(˙ᵕ˙)〜",
+              "label": "左右に揺れる"
+            },
+            {
+              "value": "踊る〜",
+              "label": "一言の踊り"
+            },
+            {
+              "value": "(｡-ω-｡)〜♪",
+              "label": "目を閉じた短い踊り"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "heading": "揺れ方で、踊りの種類が変わる",
+        "paragraphs": [
+          "踊る顔文字は、手の位置と音符で読み分けます。かわいく踊るは丸い顔を左右に揺らした顔、ノリノリとルンルンは声に出したテンションです。絵文字だけにするなら 💃 を一つ、曲を足すなら 💃🎶 です。",
+          "嬉しいだけの笑顔や、拳を上げた応援は別のページです。推し活ではペンライトかサイリウムを一つ足し、文末の短いダンスは文章の最後に一つだけ置きます。"
+        ],
+        "sections": [
+          {
+            "heading": "どの踊りをどこで",
+            "cards": [
+              {
+                "title": "かわいい",
+                "body": "丸い顔に ♪ を一つ。友達のLINEの文末に足します。"
+              },
+              {
+                "title": "ノリノリ",
+                "body": "ルンルンは体が揺れる顔。テンションの高い返事向きです。"
+              },
+              {
+                "title": "絵文字",
+                "body": "💃 を一つ。曲を足すなら 💃🎶 です。"
+              },
+              {
+                "title": "推し",
+                "body": "ペンライトかサイリウムを一つ。ライブの返事向きです。"
+              },
+              {
+                "title": "喜びの舞",
+                "body": "うれしいのあとに、手が動く踊りを一つ足します。"
+              },
+              {
+                "title": "文末",
+                "body": "(ﾉ´∀｀*)ﾉ のように、短い手を文の最後に置きます。"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "href": "/kaomoji/happy/",
+            "label": "嬉しい顔文字"
+          },
+          {
+            "href": "/kaomoji/oshi/",
+            "label": "推し活顔文字"
+          },
+          {
+            "href": "/kaomoji/",
+            "label": "顔文字一覧"
+          }
+        ]
+      },
+      "related": [
+        {
+          "href": "/kaomoji/happy/",
+          "title": "嬉しい顔文字",
+          "description": "口が上がった喜び。踊りは手が動きます。"
+        },
+        {
+          "href": "/kaomoji/oshi/",
+          "title": "推し活の顔文字",
+          "description": "ライブの応援。ペンライトで踊る顔はこちら。"
+        },
+        {
+          "href": "/kaomoji/ganbare/",
+          "title": "頑張って・ファイト顔文字",
+          "description": "拳を上げる応援。ステップとは別です。"
         }
       ]
     }
